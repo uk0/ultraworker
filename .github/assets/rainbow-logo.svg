@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 100" width="620" height="100">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .letter { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif; font-size: 58px; font-weight: 700; }
+  </style>
+
+  <g filter="url(#glow)">
+    <text x="50%" y="65" text-anchor="middle" class="letter">
+      <tspan fill="#FF6B6B">U<animate attributeName="fill" values="#FF6B6B;#FFA06B;#FFD93D;#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#FFA06B">l<animate attributeName="fill" values="#FFA06B;#FFD93D;#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B;#FFA06B" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#FFD93D">t<animate attributeName="fill" values="#FFD93D;#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B;#FFA06B;#FFD93D" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#6BCB77">r<animate attributeName="fill" values="#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B;#FFA06B;#FFD93D;#6BCB77" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#4D96FF">a<animate attributeName="fill" values="#4D96FF;#6B5BFF;#C56BFF;#FF6B6B;#FFA06B;#FFD93D;#6BCB77;#4D96FF" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#6B5BFF">w<animate attributeName="fill" values="#6B5BFF;#C56BFF;#FF6B6B;#FFA06B;#FFD93D;#6BCB77;#4D96FF;#6B5BFF" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#C56BFF">o<animate attributeName="fill" values="#C56BFF;#FF6B6B;#FFA06B;#FFD93D;#6BCB77;#4D96FF;#6B5BFF;#C56BFF" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#FF6B6B">r<animate attributeName="fill" values="#FF6B6B;#FFA06B;#FFD93D;#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#FFA06B">k<animate attributeName="fill" values="#FFA06B;#FFD93D;#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B;#FFA06B" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#FFD93D">e<animate attributeName="fill" values="#FFD93D;#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B;#FFA06B;#FFD93D" dur="3s" repeatCount="indefinite"/></tspan><tspan fill="#6BCB77">r<animate attributeName="fill" values="#6BCB77;#4D96FF;#6B5BFF;#C56BFF;#FF6B6B;#FFA06B;#FFD93D;#6BCB77" dur="3s" repeatCount="indefinite"/></tspan>
+    </text>
+  </g>
+</svg>

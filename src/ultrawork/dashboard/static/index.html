@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google" content="notranslate" />
+    <title>Ultrawork Agent Worktree</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <div class="app-shell notranslate" translate="no">
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+      <aside class="sidebar" id="threadSidebar">
+        <header class="sidebar-head">
+          <div class="brand-row">
+            <span class="brand-icon">
+              <iconify-icon icon="solar:branching-paths-up-bold" width="13"></iconify-icon>
+            </span>
+            <span class="brand-title">Worktree</span>
+          </div>
+          <div class="sidebar-head-actions">
+            <div class="live-chip" id="connectionBadge">LIVE</div>
+            <button type="button" class="sidebar-close" id="mobileThreadsClose" aria-label="Close threads">
+              <iconify-icon icon="solar:close-circle-linear" width="18"></iconify-icon>
+            </button>
+          </div>
+        </header>
+
+        <div class="sidebar-section-label">Threads (<span id="threadsTotal">0</span>)</div>
+        <div class="thread-list custom-scroll notranslate" id="threadList" translate="no"></div>
+        <div class="thread-pagination">
+          <button type="button" id="threadsPrev">Prev</button>
+          <span id="threadsPageLabel">Page 1/0</span>
+          <button type="button" id="threadsNext">Next</button>
+        </div>
+      </aside>
+
+      <main class="main-pane">
+        <header class="main-head">
+          <div class="head-left">
+            <button type="button" class="mobile-threads-btn" id="mobileThreadsOpen">
+              <iconify-icon icon="solar:hamburger-menu-linear" width="14"></iconify-icon>
+              Threads
+            </button>
+            <div class="crumbs">
+              <iconify-icon icon="solar:hashtag-square-linear" width="16" class="crumb-icon"></iconify-icon>
+              <span id="breadcrumbThread">-</span>
+              <span class="crumb-sep">/</span>
+              <span class="crumb-session" id="breadcrumbSession">-</span>
+            </div>
+          </div>
+          <div class="head-meta">
+            <button type="button" class="terminate-btn" id="terminateSessionBtn">Terminate</button>
+            <span class="status-badge" id="sessionStatusBadge">pending</span>
+            <span class="meta-time" id="sessionUpdatedAt">-</span>
+          </div>
+        </header>
+
+        <section class="topology-pane">
+          <div class="pane-head">
+            <div class="pane-title-wrap">
+              <iconify-icon icon="solar:diagram-up-linear" width="15" class="pane-title-icon"></iconify-icon>
+              <h2 class="pane-title">Session Topology</h2>
+            </div>
+            <span class="pane-meta" id="topologyMeta">0 sessions</span>
+          </div>
+          <div class="topology-track custom-scroll notranslate" id="sessionTopology" translate="no"></div>
+        </section>
+
+        <section class="stream-pane custom-scroll notranslate" id="streamPane" translate="no">
+          <div class="session-chip" id="sessionStartChip">Session -</div>
+          <div class="stream-controls" id="streamControls">
+            <button type="button" class="stream-toggle" data-action="toggle-thinking-tools" id="toggleThinkingTools">
+              Collapse Thinking + Tools
+            </button>
+            <button type="button" class="stream-toggle" data-action="toggle-tools-only" id="toggleToolsOnly">
+              Collapse Tools Only
+            </button>
+            <span class="stream-hidden-meta" id="streamHiddenMeta"></span>
+          </div>
+          <div class="stream-loading" id="streamLoading" style="display: none"></div>
+
+          <div class="stream-list notranslate" id="streamList" translate="no"></div>
+
+          <div class="empty-state" id="emptyState">Select a thread to view the session flow.</div>
+        </section>
+
+        <footer class="input-shell">
+          <div class="input-wrap">
+            <iconify-icon icon="solar:magic-stick-3-linear" width="16" class="input-icon"></iconify-icon>
+            <textarea
+              id="composerInput"
+              placeholder="Enter a message to start a new parallel session within this thread. (Enter to send, Shift+Enter for newline)"
+              rows="1"
+            ></textarea>
+            <button type="button" aria-label="send" id="composerSend">
+              <iconify-icon icon="solar:arrow-right-linear" width="14"></iconify-icon>
+            </button>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

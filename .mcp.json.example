@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "slack": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@jtalk22/slack-mcp"
+      ],
+      "env": {
+        "SLACK_TOKEN": "xoxc-your-personal-token-here",
+        "SLACK_COOKIE": "xoxd-your-cookie-here"
+      }
+    },
+    "slack-bot-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@slackapi/slack-bot-mcp"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-your-bot-token-here"
+      }
+    }
+  }
+}

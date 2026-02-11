@@ -1,0 +1,32 @@
+data_dir: data
+executor:
+  claude_command: claude
+  codex_command: codex
+  default_executor: claude
+  timeout_seconds: 6000
+polling:
+  enabled: false
+  explore_depth: 2
+  max_consecutive_errors: 5
+  max_messages_per_poll: 50
+  max_processed_cache: 10000
+  max_thread_history: 100
+  poll_interval_seconds: 10
+response:
+  auto_respond: true
+  auto_types:
+  - acknowledge
+  - simple_query
+  - action
+  - complex
+  - defer
+  confidence_threshold: 0.8
+  manual_types:
+slack:
+  bot_user_id: 
+  default_channel: ""
+  trigger_pattern: "<@>"
+workflow:
+  auto_approve_simple_tasks: false
+  default_workflow_type: full
+  require_tech_spec_for_code: true
