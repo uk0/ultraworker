@@ -71,11 +71,13 @@ cp .mcp.json.example .mcp.json
 ### Running
 
 ```bash
-# Start the polling daemon (monitors Slack mentions)
-uv run python -m ultrawork.slack.sdk_poller --agentic
+# Start polling daemon + dashboard together
+uv run ultrawork start --agentic
+# --agentic is enabled by default
+uv run ultrawork start
 
-# Start the dashboard (optional)
-uv run ultrawork dashboard
+# Stop everything started by start/end
+uv run ultrawork end
 ```
 
 ---
@@ -201,6 +203,9 @@ claude mcp add context7 -- npx -y @upstash/context7-mcp@latest
 uv run ultrawork --help              # Show available commands
 uv run ultrawork setup               # Run setup wizard
 uv run ultrawork dashboard           # Start web dashboard
+uv run ultrawork dashboard:stop       # Stop web dashboard
+uv run ultrawork end                 # Stop all background daemons (poll + sdk daemon)
+uv run ultrawork start                # Start poller daemon + dashboard together (agentic mode by default)
 uv run ultrawork slack:sync          # Sync channels/users
 uv run ultrawork task:list           # List all tasks
 ```

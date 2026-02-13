@@ -1411,12 +1411,26 @@ def _build_session_worktree(
     )
 
     sorted_events = sorted(events, key=lambda event: int(event.get("seq") or 0))
-    last_seq = max((int(event.get("seq") or 0) for event in sorted_events), default=0)
-    min_seq = min((int(event.get("seq") or 0) for event in sorted_events), default=0)
+
+    # Synthetic "interaction" events are useful to render, but they must not affect the
+    # streaming cursor; otherwise the cursor can advance ahead of the real log stream and
+    # cause subsequent worktree events to be skipped.
+    base_events = [
+        event
+        for event in sorted_events
+        if ":interaction:" not in str(event.get("event_id") or "")
+    ]
+    last_seq = max((int(event.get("seq") or 0) for event in base_events), default=0)
+    min_seq = min((int(event.get("seq") or 0) for event in base_events), default=0)
 
     filtered: list[dict[str, Any]]
     if cursor > 0:
-        filtered = [event for event in sorted_events if int(event.get("seq") or 0) > cursor]
+        filtered = [
+            event
+            for event in sorted_events
+            if ":interaction:" not in str(event.get("event_id") or "")
+            and int(event.get("seq") or 0) > cursor
+        ]
     elif before_seq > 0:
         older_events = [event for event in sorted_events if int(event.get("seq") or 0) < before_seq]
         if limit > 0:

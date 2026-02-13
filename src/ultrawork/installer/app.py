@@ -3,35 +3,53 @@
 from __future__ import annotations
 
 import json
+import select
+import shutil
+import shlex
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 
-def copy_to_clipboard(text: str) -> bool:
-    """Copy text to system clipboard. Returns True on success."""
-    try:
-        if sys.platform == "darwin":
-            subprocess.run(["pbcopy"], input=text.encode(), check=True)
-        elif sys.platform == "win32":
-            subprocess.run(["clip"], input=text.encode(), check=True)
-        else:
-            # Linux - try xclip or xsel
-            try:
-                subprocess.run(
-                    ["xclip", "-selection", "clipboard"],
-                    input=text.encode(),
-                    check=True,
-                )
-            except FileNotFoundError:
-                subprocess.run(["xsel", "--clipboard", "--input"], input=text.encode(), check=True)
-        return True
-    except Exception:
-        return False
+def copy_to_clipboard(text: str) -> tuple[bool, str]:
+    """Copy text to system clipboard. Returns (success, detail)."""
+    commands: list[list[str]] = []
+
+    if sys.platform == "darwin":
+        commands = [["pbcopy"]]
+    elif sys.platform == "win32":
+        commands = [["clip"]]
+    else:
+        # Linux/WSL: try Windows clipboard bridge first, then native tools.
+        commands = [
+            ["clip.exe"],
+            ["wl-copy"],
+            ["xclip", "-selection", "clipboard"],
+            ["xsel", "--clipboard", "--input"],
+        ]
+
+    attempted: list[str] = []
+    for cmd in commands:
+        if shutil.which(cmd[0]) is None:
+            continue
+        attempted.append(cmd[0])
+        try:
+            subprocess.run(cmd, input=text.encode(), check=True)
+            return True, f"Copied via {cmd[0]}"
+        except Exception:
+            continue
+
+    if attempted:
+        return False, f"Clipboard command failed ({', '.join(attempted)})"
+    return False, "No clipboard command found (clip.exe, wl-copy, xclip, xsel)"
 
 
 # JavaScript for extracting xoxc token
-XOXC_SCRIPT = """JSON.parse(localStorage.localConfig_v2).teams[Object.keys(JSON.parse(localStorage.localConfig_v2).teams)[0]].token"""
+XOXC_SCRIPT = (
+    "JSON.parse(localStorage.localConfig_v2).teams"
+    "[Object.keys(JSON.parse(localStorage.localConfig_v2).teams)[0]].token"
+)
 
 from textual import on, work
 from textual.app import App, ComposeResult
@@ -265,14 +283,19 @@ class Step2SlackTokens(Screen):
                 yield RadioButton("Personal token only (xoxc- + xoxd-)", id="radio-personal")
                 yield RadioButton("Both (recommended)", id="radio-both", value=True)
 
-            yield Rule()
+            yield Rule(id="rule-token-sections-start")
 
             # Bot token section
             yield Label("🤖 Bot Token (xoxb-...)", id="lbl-bot")
             yield Static(
                 "1. Create an app at https://api.slack.com/apps\n"
-                "2. Go to OAuth & Permissions → Add Bot Token Scopes\n"
-                "3. Install app to workspace → Copy Bot User OAuth Token",
+                "2. Go to OAuth & Permissions → Bot Token Scopes\n"
+                "3. Add ALL required scopes:\n"
+                "   channels:history, channels:read, chat:write,\n"
+                "   groups:history, groups:read, im:history, im:read,\n"
+                "   mpim:history, mpim:read, users:read,\n"
+                "   files:write, files:read, reactions:write\n"
+                "4. Install app to workspace → Copy Bot User OAuth Token",
                 id="guide-bot",
                 classes="guide-text",
             )
@@ -283,14 +306,16 @@ class Step2SlackTokens(Screen):
             )
             yield Static("", id="status-bot-token")
 
-            yield Rule()
+            yield Rule(id="rule-token-sections-middle")
 
             # Personal token section
             yield Label("👤 Personal Token (xoxc-...)", id="lbl-personal")
             yield Static(
-                "1. Open https://app.slack.com in Chrome\n"
+                "1. Open https://app.slack.com/client/... in Chrome and log in to your workspace\n"
+                "   (Must be logged in and on a workspace channel page)\n"
                 "2. Press F12 (Mac: Cmd+Opt+I) → Console tab\n"
-                "3. Type 'allow pasting' and press Enter\n"
+                "3. If self-XSS warning appears, type 'allow pasting' and press Enter\n"
+                "   (If it shows syntax error immediately, ignore and continue)\n"
                 "4. Paste the script below into Console and press Enter\n"
                 "5. Copy the output xoxc-... token",
                 id="guide-personal",
@@ -302,8 +327,13 @@ class Step2SlackTokens(Screen):
                 classes="guide-text",
             )
             with Center():
-                yield Button("[ Copy Script ]", id="btn-copy-script", variant="warning")
+                yield Button("Copy Script", id="btn-copy-script", variant="warning")
             yield Static("", id="copy-status")
+            yield Static("", id="manual-script", classes="guide-text")
+            yield Input(
+                placeholder="Copy script will appear here if automatic copy fails",
+                id="manual-script-input",
+            )
             yield Input(
                 placeholder="xoxc-xxxx-xxxx",
                 password=True,
@@ -343,6 +373,65 @@ class Step2SlackTokens(Screen):
             if state.slack_personal_cookie:
                 self.query_one("#input-cookie", Input).value = state.slack_personal_cookie
 
+            token_type = state.slack_token_type
+            if not token_type:
+                if state.slack_bot_token and state.slack_personal_token:
+                    token_type = "both"
+                elif state.slack_bot_token:
+                    token_type = "bot"
+                elif state.slack_personal_token:
+                    token_type = "personal"
+                else:
+                    token_type = "both"
+            self._set_token_type(token_type)
+
+        self.query_one("#manual-script", Static).display = False
+        self.query_one("#manual-script-input", Input).display = False
+
+    @on(RadioSet.Changed, "#token-type")
+    def on_token_type_change(self, event: RadioSet.Changed) -> None:
+        selected_id = event.pressed.id if event.pressed else None
+        self._update_token_visibility(selected_id)
+
+    def _set_token_type(self, token_type: str) -> None:
+        if token_type == "bot":
+            self.query_one("#radio-bot", RadioButton).value = True
+            self._update_token_visibility("radio-bot")
+        elif token_type == "personal":
+            self.query_one("#radio-personal", RadioButton).value = True
+            self._update_token_visibility("radio-personal")
+        else:
+            self.query_one("#radio-both", RadioButton).value = True
+            self._update_token_visibility("radio-both")
+
+    def _update_token_visibility(self, selected_id: str | None) -> None:
+        show_bot = selected_id in ("radio-bot", "radio-both")
+        show_personal = selected_id in ("radio-personal", "radio-both")
+
+        # Bot token fields
+        self.query_one("#lbl-bot", Label).display = show_bot
+        self.query_one("#guide-bot", Static).display = show_bot
+        self.query_one("#input-bot-token", Input).display = show_bot
+        self.query_one("#status-bot-token", Static).display = show_bot
+
+        # Personal token + cookie fields
+        self.query_one("#lbl-personal", Label).display = show_personal
+        self.query_one("#guide-personal", Static).display = show_personal
+        self.query_one("#script-preview", Static).display = show_personal
+        self.query_one("#btn-copy-script", Button).display = show_personal
+        self.query_one("#copy-status", Static).display = show_personal
+        self.query_one("#manual-script", Static).display = False
+        self.query_one("#manual-script-input", Input).display = False
+        self.query_one("#input-personal-token", Input).display = show_personal
+        self.query_one("#status-personal-token", Static).display = show_personal
+        self.query_one("#lbl-cookie", Label).display = show_personal
+        self.query_one("#guide-cookie", Static).display = show_personal
+        self.query_one("#input-cookie", Input).display = show_personal
+        self.query_one("#status-cookie", Static).display = show_personal
+
+        # Divider between sections should appear only in "both" mode.
+        self.query_one("#rule-token-sections-middle", Rule).display = show_bot and show_personal
+
     @on(Input.Changed, "#input-bot-token")
     def validate_bot(self, event: Input.Changed) -> None:
         if event.value:
@@ -377,30 +466,53 @@ class Step2SlackTokens(Screen):
         elif event.button.id == "btn-back":
             self.app.action_prev_step()
         elif event.button.id == "btn-copy-script":
-            if copy_to_clipboard(XOXC_SCRIPT):
+            copied, detail = copy_to_clipboard(XOXC_SCRIPT)
+            manual = self.query_one("#manual-script", Static)
+            manual_input = self.query_one("#manual-script-input", Input)
+            if copied:
                 self.query_one("#copy-status", Static).update("✅ Copied to clipboard!")
+                manual.update("")
+                manual.display = False
+                manual_input.value = ""
+                manual_input.display = False
             else:
-                self.query_one("#copy-status", Static).update("❌ Copy failed - please copy manually")
+                self.query_one("#copy-status", Static).update(
+                    f"❌ Copy failed ({detail}) - showing full script below"
+                )
+                manual.update("Full Script (select and copy):")
+                manual.display = True
+                manual_input.value = XOXC_SCRIPT
+                manual_input.display = True
 
     def _save_tokens(self) -> None:
         app = self.app
         if not isinstance(app, SetupWizardApp):
             return
 
+        selected_token_type = "both"
+        token_set = self.query_one("#token-type", RadioSet)
+        if token_set.pressed_button and token_set.pressed_button.id == "radio-bot":
+            selected_token_type = "bot"
+        elif token_set.pressed_button and token_set.pressed_button.id == "radio-personal":
+            selected_token_type = "personal"
+
         bot = self.query_one("#input-bot-token", Input).value.strip()
         personal = self.query_one("#input-personal-token", Input).value.strip()
         cookie = self.query_one("#input-cookie", Input).value.strip()
 
-        app.state.slack_bot_token = bot
-        app.state.slack_personal_token = personal
-        app.state.slack_personal_cookie = cookie
-
-        if bot and personal:
-            app.state.slack_token_type = "both"
-        elif bot:
-            app.state.slack_token_type = "bot"
-        elif personal:
-            app.state.slack_token_type = "personal"
+        app.state.slack_token_type = selected_token_type
+        if selected_token_type == "bot":
+            app.state.slack_bot_token = bot
+            app.state.slack_personal_token = ""
+            app.state.slack_personal_cookie = ""
+        elif selected_token_type == "personal":
+            app.state.slack_bot_token = ""
+            app.state.slack_personal_token = personal
+            app.state.slack_personal_cookie = cookie
+        else:
+            app.state.slack_bot_token = bot
+            app.state.slack_personal_token = personal
+            app.state.slack_personal_cookie = cookie
 
 
 class Step3BasicSettings(Screen):
@@ -698,12 +810,96 @@ class Step7Finish(Screen):
         state = app.state
         project_dir = state.project_dir
         status_lines = []
+        install_timeout_seconds = 1800  # 30 minutes
 
         def update_status(msg: str) -> None:
             status_lines.append(msg)
             self.app.call_from_thread(
                 self.query_one("#apply-status", Static).update, "\n".join(status_lines)
             )
+
+        def run_with_progress(
+            cmd: list[str],
+            *,
+            cwd: Path | None = None,
+            heartbeat_label: str = "Installing...",
+        ) -> tuple[bool, str]:
+            """Run command with periodic progress updates and live output."""
+            def _append_output(raw_output: str) -> None:
+                if not raw_output:
+                    return
+                for line in raw_output.replace("\r", "\n").split("\n"):
+                    text_line = line.strip()
+                    if text_line:
+                        update_status(f"  ⏳ {text_line}")
+
+            try:
+                process = subprocess.Popen(
+                    cmd,
+                    cwd=str(cwd) if cwd else None,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=False,
+                    bufsize=0,
+                )
+            except Exception as e:
+                return False, str(e)
+
+            start = time.monotonic()
+            last_heartbeat = -1
+            output_buffer = ""
+            try:
+                while True:
+                    if process.stdout:
+                        ready, _, _ = select.select([process.stdout], [], [], 1.0)
+                        if ready:
+                            read_chunk = (
+                                process.stdout.read1(4096)
+                                if hasattr(process.stdout, "read1")
+                                else process.stdout.read(4096)
+                            )
+                            if read_chunk:
+                                chunk = (
+                                    read_chunk.decode("utf-8", errors="replace")
+                                    if isinstance(read_chunk, (bytes, bytearray))
+                                    else str(read_chunk)
+                                )
+                                output_buffer += chunk.replace("\r", "\n")
+                                lines = output_buffer.split("\n")
+                                if output_buffer.endswith("\n"):
+                                    output_buffer = ""
+                                    complete_lines = lines
+                                else:
+                                    complete_lines = lines[:-1]
+                                    output_buffer = lines[-1]
+                                _append_output("\n".join(complete_lines))
+                            elif process.poll() is not None:
+                                break
+                    else:
+                        time.sleep(1)
+
+                    if process.poll() is not None:
+                        break
+
+                    elapsed = int(time.monotonic() - start)
+                    if elapsed // 15 > last_heartbeat:
+                        last_heartbeat = elapsed // 15
+                        update_status(f"  ⏳ {heartbeat_label} ({elapsed}s elapsed)")
+
+                    if elapsed > install_timeout_seconds:
+                        process.kill()
+                        return False, f"Exceeded {install_timeout_seconds}s limit"
+
+                if output_buffer.strip():
+                    _append_output(output_buffer)
+
+                returncode = process.wait()
+                if returncode == 0:
+                    return True, ""
+                return False, f"Command exited with code {returncode}"
+            finally:
+                if process.stdout:
+                    process.stdout.close()
 
         try:
             # 1. Create data directories
@@ -751,16 +947,15 @@ class Step7Finish(Screen):
 
             # 6. Install dependencies
             update_status("📦 Installing dependencies...")
-            try:
-                subprocess.run(
-                    ["uv", "sync"],
-                    cwd=str(project_dir),
-                    capture_output=True,
-                    timeout=120,
-                )
+            ok, err = run_with_progress(
+                ["uv", "sync"],
+                cwd=project_dir,
+                heartbeat_label="Installing Python dependencies...",
+            )
+            if ok:
                 update_status("  ✅ Python dependencies installed")
-            except Exception as e:
-                update_status(f"  ⚠️ Dependency installation warning: {e}")
+            else:
+                update_status(f"  ⚠️ Dependency installation warning: {err}")
 
             # 7. Install selected MCPs
             for mcp_id in state.mcps_to_install:
@@ -768,15 +963,14 @@ class Step7Finish(Screen):
                 install_cmd = defn.get("install_cmd")
                 if install_cmd:
                     update_status(f"📦 Installing {defn.get('name', mcp_id)}...")
-                    try:
-                        subprocess.run(
-                            install_cmd.split(),
-                            capture_output=True,
-                            timeout=120,
-                        )
+                    ok, err = run_with_progress(
+                        shlex.split(install_cmd),
+                        heartbeat_label=f"Installing {defn.get('name', mcp_id)}...",
+                    )
+                    if ok:
                         update_status(f"  ✅ {defn.get('name', mcp_id)} installed")
-                    except Exception as e:
-                        update_status(f"  ⚠️ {defn.get('name', mcp_id)} installation failed: {e}")
+                    else:
+                        update_status(f"  ⚠️ {defn.get('name', mcp_id)} installation failed: {err}")
 
             update_status("\n🎉 Setup complete! You can now start the dashboard.")
             self.app.call_from_thread(self._enable_dashboard)

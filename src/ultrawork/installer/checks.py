@@ -258,12 +258,13 @@ MCP_DEFINITIONS = {
         "env_vars": ["SLACK_TOKEN", "SLACK_COOKIE"],
         "mcp_config": {
             "command": "npx",
-            "args": ["-y", "@jtalk22/slack-mcp"],
+            "args": ["-y", "--package", "@jtalk22/slack-mcp", "slack-mcp-server"],
         },
         "guide": (
             "## Extracting from Browser DevTools\n\n"
             "### Step 1: Open Slack Web\n"
-            "Go to https://app.slack.com in Chrome and log into your workspace\n\n"
+            "Go to https://app.slack.com/client/... in Chrome and log into your workspace\n"
+            "(Must be logged in and on a workspace channel page)\n\n"
             "### Step 2: Open Developer Tools\n"
             "- Windows/Linux: F12 or Ctrl+Shift+I\n"
             "- macOS: Cmd+Option+I\n"
@@ -272,14 +273,12 @@ MCP_DEFINITIONS = {
             "- Edge: Menu(...) -> More tools -> Developer tools\n\n"
             "### Step 3: Extract xoxc Token (SLACK_TOKEN)\n"
             "1. Go to Console tab\n"
-            "2. If you see a warning, type 'allow pasting' and press Enter\n"
-            "   (Chrome security feature - allows pasting)\n"
+            "2. If you see a self-XSS warning, type 'allow pasting' and press Enter\n"
+            "   (If it immediately shows a syntax error, ignore and continue)\n"
             "3. Paste the following command and press Enter:\n"
-            "   ┌─────────────────────────────────────────────────┐\n"
-            "   │ JSON.parse(localStorage.localConfig_v2).teams[  │\n"
-            "   │   Object.keys(JSON.parse(localStorage           │\n"
-            "   │   .localConfig_v2).teams)[0]].token             │\n"
-            "   └─────────────────────────────────────────────────┘\n"
+            "   JSON.parse(localStorage.localConfig_v2).teams[\n"
+            "     Object.keys(JSON.parse(localStorage.localConfig_v2).teams)[0]\n"
+            "   ].token\n"
             "4. Copy the output xoxc-... token\n\n"
             "### Step 4: Extract xoxd Cookie (SLACK_COOKIE)\n"
             "1. Click Application tab (Firefox: Storage tab)\n"

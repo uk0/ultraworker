@@ -741,6 +741,22 @@ body.sidebar-open {
   max-width: 100%;
 }
 
+.pinned-list {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #dbe3f0;
+}
+
+.pinned-list:empty {
+  display: none;
+}
+
+.pinned-list .timeline-item::before {
+  display: none;
+}
+
 .timeline-item {
   position: relative;
   padding-left: 42px;

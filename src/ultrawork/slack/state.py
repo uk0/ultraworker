@@ -118,6 +118,20 @@ class PollingStateManager:
         state.daemon_started_at = None
         self.save_state(state)
 
+    def set_dashboard_running(self, pid: int) -> None:
+        """Mark the dashboard as running."""
+        state = self.load_state()
+        state.dashboard_pid = pid
+        state.dashboard_started_at = datetime.now()
+        self.save_state(state)
+
+    def clear_dashboard(self) -> None:
+        """Clear dashboard status."""
+        state = self.load_state()
+        state.dashboard_pid = None
+        state.dashboard_started_at = None
+        self.save_state(state)
+
     def is_daemon_running(self) -> bool:
         """Check if daemon is running."""
         state = self.load_state()

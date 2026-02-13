@@ -789,8 +789,13 @@ def dashboard_start(
     ),
 ) -> None:
     """Start the local dashboard server."""
+    import os
+    import signal
+    import errno
+
     from ultrawork.config import find_config_path
     from ultrawork.dashboard import serve_dashboard
+    from ultrawork.slack import PollingStateManager
 
     config = get_config()
     resolved_data_dir = data_dir.expanduser() if data_dir else config.data_dir
@@ -801,8 +806,67 @@ def dashboard_start(
         else:
             resolved_data_dir = (Path.cwd() / resolved_data_dir).resolve()
     log_dir = claude_log_dir or Path("~/.claude/projects").expanduser()
+    state_manager = PollingStateManager(resolved_data_dir)
+    state = state_manager.load_state()
 
-    serve_dashboard(data_dir=resolved_data_dir, log_root=log_dir, host=host, port=port)
+    # If a previous dashboard process is still recorded, stop it first.
+    if state.dashboard_pid is not None:
+        try:
+            os.kill(state.dashboard_pid, 0)
+            console.print(
+                f"[yellow]Stopping existing dashboard process (PID: {state.dashboard_pid})[/yellow]"
+            )
+            os.kill(state.dashboard_pid, signal.SIGTERM)
+            state_manager.clear_dashboard()
+        except (ProcessLookupError, OSError):
+            state_manager.clear_dashboard()
+
+    state_manager.set_dashboard_running(os.getpid())
+    try:
+        serve_dashboard(data_dir=resolved_data_dir, log_root=log_dir, host=host, port=port)
+    except OSError as exc:
+        if exc.errno == errno.EADDRINUSE:
+            state_manager.clear_dashboard()
+            console.print(f"[red]Address already in use:[/red] http://{host}:{port}")
+            console.print("[yellow]Hint:[/yellow] Stop the existing dashboard first:")
+            console.print("  uv run ultrawork dashboard:stop")
+            console.print("  or run with a different port using --port")
+            raise typer.Exit(1)
+        raise
+    finally:
+        state_manager.clear_dashboard()
+
+
+@app.command("dashboard:stop")
+def dashboard_stop() -> None:
+    """Stop the local dashboard server."""
+    import os
+    import signal
+
+    from ultrawork.slack import PollingStateManager
+
+    config = get_config()
+    state_manager = PollingStateManager(config.data_dir)
+    state = state_manager.load_state()
+
+    if state.dashboard_pid is None:
+        console.print("[yellow]No dashboard running[/yellow]")
+        return
+
+    try:
+        os.kill(state.dashboard_pid, signal.SIGTERM)
+        console.print(
+            f"[green]Sent stop signal to dashboard (PID: {state.dashboard_pid})[/green]"
+        )
+        state_manager.clear_dashboard()
+        console.print("[dim]Dashboard should stop within a few seconds[/dim]")
+    except ProcessLookupError:
+        state_manager.clear_dashboard()
+        console.print("[yellow]Dashboard was not running (cleaned up stale state)[/yellow]")
+    except PermissionError:
+        console.print(
+            f"[red]Permission denied to stop dashboard (PID: {state.dashboard_pid})[/red]"
+        )
 
 
 # --- Daemon Commands (SDK-based) ---
@@ -834,8 +898,11 @@ def daemon_start(
 
     config = get_config()
 
-    if not config.slack.bot_user_id:
-        console.print("[red]Error:[/red] bot_user_id not configured in ultrawork.yaml")
+    if not config.slack.bot_user_id and not config.slack.trigger_pattern:
+        console.print(
+            "[red]Error:[/red] Set either slack.bot_user_id (mention mode)"
+            " or slack.trigger_pattern (keyword mode) in ultrawork.yaml"
+        )
         raise typer.Exit(1)
 
     import os
@@ -847,7 +914,10 @@ def daemon_start(
 
     if foreground:
         console.print("[green]Starting SDK poller daemon...[/green]")
-        console.print(f"[dim]Bot User ID:[/dim] {config.slack.bot_user_id}")
+        if config.slack.bot_user_id:
+            console.print(f"[dim]Bot User ID:[/dim] {config.slack.bot_user_id}")
+        if config.slack.trigger_pattern:
+            console.print(f"[dim]Trigger Pattern:[/dim] {config.slack.trigger_pattern}")
         console.print(f"[dim]Poll Interval:[/dim] {config.polling.poll_interval_seconds}s")
         if agentic:
             console.print("[cyan]Agentic Mode:[/cyan] ENABLED (claude -p)")
@@ -910,6 +980,59 @@ def daemon_stop() -> None:
         console.print("[yellow]Daemon was not running (cleaned up stale state)[/yellow]")
     except PermissionError:
         console.print(f"[red]Permission denied to stop daemon (PID: {state.daemon_pid})[/red]")
+
+
+# --- Start Commands ---
+
+
+@app.command("start")
+def start(
+    host: str = typer.Option("127.0.0.1", "--host", help="Dashboard host"),
+    port: int = typer.Option(7878, "--port", help="Dashboard port"),
+    claude_log_dir: Optional[Path] = typer.Option(  # noqa: UP007
+        None,
+        "--claude-log-dir",
+        help="Claude Code log directory (default: ~/.claude/projects)",
+    ),
+    data_dir: Optional[Path] = typer.Option(  # noqa: UP007
+        None,
+        "--data-dir",
+        help="Ultrawork data directory (default: from ultrawork.yaml)",
+    ),
+    agentic: bool = typer.Option(
+        True,
+        "--agentic/--no-agentic",
+        help="Enable agentic mode for the polling daemon",
+    ),
+) -> None:
+    """Start polling daemon and dashboard together."""
+    daemon_started = False
+    try:
+        daemon_start(foreground=False, agentic=agentic)
+        daemon_started = True
+        console.print("[green]Starting dashboard...[/green]")
+        dashboard_start(
+            host=host,
+            port=port,
+            claude_log_dir=claude_log_dir,
+            data_dir=data_dir,
+        )
+    finally:
+        if daemon_started:
+            poll_stop()
+            daemon_stop()
+
+
+@app.command("end")
+def end() -> None:
+    """Stop all background polling daemons.
+
+    Stops SDK daemon, legacy poll daemon, and dashboard, if running.
+    """
+    console.print("[yellow]Stopping all Ultrawork background daemons...[/yellow]")
+    poll_stop()
+    daemon_stop()
+    dashboard_stop()
 
 
 # --- Config Commands ---

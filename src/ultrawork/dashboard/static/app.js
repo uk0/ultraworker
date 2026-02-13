@@ -55,9 +55,9 @@ const el = {
   streamPane: document.getElementById("streamPane"),
   sessionStartChip: document.getElementById("sessionStartChip"),
   streamControls: document.getElementById("streamControls"),
-  toggleThinkingTools: document.getElementById("toggleThinkingTools"),
   toggleToolsOnly: document.getElementById("toggleToolsOnly"),
   streamHiddenMeta: document.getElementById("streamHiddenMeta"),
+  pinnedList: document.getElementById("pinnedList"),
   streamList: document.getElementById("streamList"),
   emptyState: document.getElementById("emptyState"),
   streamLoading: document.getElementById("streamLoading"),
@@ -174,14 +174,6 @@ function bindEvents() {
     el.streamPane.addEventListener("click", (event) => {
       const sessionId = state.selectedSessionId;
       if (!sessionId) return;
-
-      const toggleThinkingTools = event.target.closest("[data-action='toggle-thinking-tools']");
-      if (toggleThinkingTools) {
-        const ui = getSessionUiState(sessionId);
-        ui.collapseThinkingTools = !ui.collapseThinkingTools;
-        renderStreamFull({ progressive: false });
-        return;
-      }
 
       const toggleToolsOnly = event.target.closest("[data-action='toggle-tools-only']");
       if (toggleToolsOnly) {
@@ -984,6 +976,7 @@ function renderStreamLoadingSkeleton() {
   el.streamLoading.style.display = "block";
   el.emptyState.style.display = "none";
   renderStreamControls([], null);
+  if (el.pinnedList) el.pinnedList.innerHTML = "";
 
   const skeleton = new Array(5)
     .fill(0)
@@ -1004,6 +997,71 @@ function renderStreamLoadingSkeleton() {
   el.streamList.innerHTML = skeleton;
 }
 
+function getPinnedEvents(events) {
+  const list = Array.isArray(events) ? events : [];
+  const pinned = [];
+
+  const commandCandidates = list.filter(
+    (event) =>
+      String(event.kind || "") === "user_command" &&
+      (String(event.event_id || "").endsWith(":command") ||
+        String(event.raw?.type || "") === "user_input"),
+  );
+
+  const commandPreferred =
+    commandCandidates.find((event) => String(event.event_id || "").endsWith(":command")) ||
+    commandCandidates[0] ||
+    null;
+
+  if (commandPreferred) pinned.push(commandPreferred);
+
+  const startedCandidates = list.filter(
+    (event) =>
+      String(event.kind || "") === "assistant_observation" &&
+      String(event.raw?.type || "") === "processing_started",
+  );
+
+  if (startedCandidates.length) {
+    startedCandidates.sort((a, b) => toTimeValue(a.ts) - toTimeValue(b.ts));
+    pinned.push(startedCandidates[startedCandidates.length - 1]);
+  }
+
+  const pinnedIds = new Set(
+    [...commandCandidates, ...startedCandidates]
+      .map((event) => String(event.event_id || ""))
+      .filter(Boolean),
+  );
+
+  return { pinned, pinnedIds };
+}
+
+function renderPinnedEvents(sessionId, events) {
+  if (!el.pinnedList) return;
+
+  if (!sessionId) {
+    el.pinnedList.innerHTML = "";
+    return;
+  }
+
+  const { pinned } = getPinnedEvents(events);
+
+  if (!pinned.length) {
+    el.pinnedList.innerHTML = "";
+    return;
+  }
+
+  const html = pinned
+    .map((event, index) =>
+      renderEventCard(event, {
+        animate: false,
+        last: index === pinned.length - 1,
+      }),
+    )
+    .join("");
+
+  el.pinnedList.innerHTML = html;
+}
+
 function renderStreamFull({ progressive }) {
   const sessionId = state.selectedSessionId;
   const session = getSelectedSession();
@@ -1012,6 +1070,7 @@ function renderStreamFull({ progressive }) {
     el.sessionStartChip.textContent = "Session -";
     el.streamList.innerHTML = "";
     renderStreamControls([], null);
+    if (el.pinnedList) el.pinnedList.innerHTML = "";
     el.emptyState.style.display = "block";
     if (el.streamLoading) el.streamLoading.style.display = "none";
     if (el.streamPane) el.streamPane.setAttribute("aria-busy", "false");
@@ -1019,12 +1078,15 @@ function renderStreamFull({ progressive }) {
   }
 
   const events = state.eventsBySession.get(sessionId) || [];
-  const blocks = buildStreamBlocks(sessionId, events);
+  const { pinnedIds } = getPinnedEvents(events);
+  const mainEvents = events.filter((event) => !pinnedIds.has(String(event.event_id || "")));
+  renderPinnedEvents(sessionId, events);
+  const blocks = buildStreamBlocks(sessionId, mainEvents);
 
   el.sessionStartChip.textContent = `${shortSession(sessionId)} started ${formatDateTime(
     session.created_at,
   )}`;
-  renderStreamControls(events, sessionId);
+  renderStreamControls(mainEvents, sessionId);
 
   if (!blocks.length) {
     el.streamList.innerHTML = "";
@@ -1097,7 +1159,7 @@ async function progressiveRenderBlockList(sessionId, blocks) {
 }
 
 function renderStreamControls(events, sessionId) {
-  if (!el.streamControls || !el.toggleThinkingTools || !el.toggleToolsOnly || !el.streamHiddenMeta) {
+  if (!el.streamControls || !el.toggleToolsOnly || !el.streamHiddenMeta) {
     return;
   }
 
@@ -1110,26 +1172,17 @@ function renderStreamControls(events, sessionId) {
   const ui = getSessionUiState(sessionId);
   const thinkingCount = events.filter((event) => event.kind === "assistant_thinking").length;
   const toolCount = events.filter((event) => isToolEvent(event.kind)).length;
-  let hiddenThinking = 0;
   let hiddenTools = 0;
 
-  if (ui.collapseThinkingTools) {
-    hiddenThinking = thinkingCount;
-    hiddenTools = toolCount;
-  } else if (ui.collapseToolsOnly) {
+  if (ui.collapseToolsOnly) {
     hiddenTools = toolCount;
   }
 
-  el.toggleThinkingTools.classList.toggle("active", ui.collapseThinkingTools);
-  el.toggleToolsOnly.classList.toggle("active", !ui.collapseThinkingTools && ui.collapseToolsOnly);
-  el.toggleThinkingTools.textContent = ui.collapseThinkingTools
-    ? `Expand Thinking + Tools (${hiddenThinking + hiddenTools})`
-    : "Collapse Thinking + Tools";
+  el.toggleToolsOnly.classList.toggle("active", ui.collapseToolsOnly);
   el.toggleToolsOnly.textContent = ui.collapseToolsOnly ? `Expand Tools (${hiddenTools})` : "Collapse Tools Only";
-  el.streamHiddenMeta.textContent =
-    hiddenThinking || hiddenTools
-      ? `hidden: thinking ${hiddenThinking}, tools ${hiddenTools}`
-      : `thinking ${thinkingCount}, tools ${toolCount}`;
+  el.streamHiddenMeta.textContent = hiddenTools
+    ? `hidden: tools ${hiddenTools}`
+    : `thinking ${thinkingCount}, tools ${toolCount}`;
 }
 
 function buildStreamBlocks(sessionId, events) {
@@ -1152,12 +1205,8 @@ function buildStreamBlocks(sessionId, events) {
     const kind = String(event.kind || "");
     const seq = Number(event.seq || 0);
 
-    if (kind === "assistant_thinking" && ui.collapseThinkingTools) {
-      return;
-    }
-
     if (isToolEvent(kind)) {
-      if (ui.collapseThinkingTools || ui.collapseToolsOnly) {
+      if (ui.collapseToolsOnly) {
         return;
       }
 
@@ -1498,12 +1547,21 @@ function buildToolGroups(events) {
 function appendEventToUi(sessionId, event) {
   const nearBottom = isNearBottom(el.streamPane);
   const events = state.eventsBySession.get(sessionId) || [];
+  const { pinnedIds } = getPinnedEvents(events);
+
+  if (sessionId === state.selectedSessionId) {
+    renderPinnedEvents(sessionId, events);
+  }
+
+  if (pinnedIds.has(String(event.event_id || ""))) {
+    return;
+  }
+
   renderStreamControls(events, sessionId);
   const ui = getSessionUiState(sessionId);
 
   if (
-    (event.kind === "assistant_thinking" && ui.collapseThinkingTools) ||
-    (isToolEvent(event.kind) && (ui.collapseToolsOnly || ui.collapseThinkingTools))
+    isToolEvent(event.kind) && ui.collapseToolsOnly
   ) {
     return;
   }
@@ -1831,7 +1889,6 @@ function getSessionUiState(sessionId) {
   let item = state.streamUiBySession.get(sessionId);
   if (!item) {
     item = {
-      collapseThinkingTools: false,
       collapseToolsOnly: false,
       expandedResultIds: new Set(),
     };

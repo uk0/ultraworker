@@ -974,6 +974,6 @@ terminology:
 ## Token Configuration Note
 
 Only personal token is configured in this installation.
-- `mcp__slack-bot-mcp__` related tools are not available
+- `mcp__slack-bot-mcp__` tools are not available
 - Only `mcp__slack__` tools are available
-- Bot-only features like adding reactions (`slack_add_reaction`) cannot be used
+- Bot-only features like `slack_add_reaction` are not available

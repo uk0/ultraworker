@@ -298,23 +298,47 @@ class SlackSDKPoller:
             oldest_ts: Only return mentions newer than this timestamp
         """
         try:
-            # Search for mentions or trigger pattern
+            queries: list[str] = []
             if self.bot_user_id:
-                query = f"<@{self.bot_user_id}>"
-            else:
-                query = self.trigger_pattern
-            result = self.client.search_messages(
-                query=query,
-                sort="timestamp",
-                sort_dir="desc",
-                count=50,
-            )
+                queries.append(f"<@{self.bot_user_id}>")
+            if self.trigger_pattern:
+                queries.append(self.trigger_pattern)
 
-            matches = result.get("messages", {}).get("matches", [])
+            if not queries:
+                return []
+
+            matches_by_ts = {}
+            for query in queries:
+                result = self.client.search_messages(
+                    query=query,
+                    sort="timestamp",
+                    sort_dir="desc",
+                    count=50,
+                )
+
+                for message in result.get("messages", {}).get("matches", []):
+                    message_ts = message.get("ts", "")
+                    if not message_ts:
+                        continue
+
+                    existing = matches_by_ts.get(message_ts)
+                    if existing is None or self._ts_to_float(message.get("ts")) > self._ts_to_float(
+                        existing.get("ts", "")
+                    ):
+                        matches_by_ts[message_ts] = message
+
+            matches = list(matches_by_ts.values())
 
             # Filter by timestamp if oldest_ts is provided
             if oldest_ts:
-                matches = [m for m in matches if m.get("ts", "0") > oldest_ts]
+                matches = [
+                    m
+                    for m in matches
+                    if self._ts_to_float(m.get("ts", "0")) > self._ts_to_float(oldest_ts)
+                ]
+
+            matches = [m for m in matches if self._is_mention_to_me(m)]
+            matches.sort(key=lambda message: self._ts_to_float(message.get("ts", "0")), reverse=True)
 
             logger.info(f"Found {len(matches)} new mentions via search")
             return matches

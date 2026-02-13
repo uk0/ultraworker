@@ -39,6 +39,8 @@ class PollingState(BaseModel):
     last_error: str | None = None
     daemon_pid: int | None = None  # PID of running daemon
     daemon_started_at: datetime | None = None
+    dashboard_pid: int | None = None  # PID of running dashboard
+    dashboard_started_at: datetime | None = None
 
     class Config:
         """Pydantic configuration."""
