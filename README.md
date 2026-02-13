@@ -35,7 +35,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/sionic-ai/ultraworker.git
+git clone https://github.com/DolbonIn/ultraworker.git
 cd ultraworker
 
 # Install dependencies
