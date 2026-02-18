@@ -4,6 +4,10 @@ description: Reject the current stage and request revisions. Records the rejecti
 
 # /reject - Stage Rejection
 
+## Language
+
+All output, Slack messages, and user-facing text from this skill MUST follow the language setting in `ultrawork.yaml` (`language.default`). Check the `## Language Configuration` section in CLAUDE.md for the current language. Technical terms, code, file paths, and commands remain in their original form.
+
 Reject the current workflow stage and request revisions.
 
 ## Usage

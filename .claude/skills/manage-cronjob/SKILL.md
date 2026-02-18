@@ -4,6 +4,10 @@ description: Create, list, pause, resume, or delete cron jobs for scheduled task
 
 # /manage-cronjob - Cron Job Management
 
+## Language
+
+All output, Slack messages, and user-facing text from this skill MUST follow the language setting in `ultrawork.yaml` (`language.default`). Check the `## Language Configuration` section in CLAUDE.md for the current language. Technical terms, code, file paths, and commands remain in their original form.
+
 Manage scheduled cron jobs that periodically monitor threads, check reactions, scan mentions, and notify via DM.
 
 ## Usage

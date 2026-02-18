@@ -1055,6 +1055,21 @@ terminology:
 - **Trigger**: At new quarter start or after major project completion
 
 
+## Language Configuration
+
+System language is set to **한국어** (`ko`).
+
+**IMPORTANT**: All the following MUST be in 한국어:
+- All Slack messages and responses
+- All thinking and reasoning output
+- All skill execution output (TODO items, specs, reports, approval messages)
+- All error messages and status updates sent to Slack
+- All user-facing CLI output
+- All exploration summaries and context analysis
+
+Technical terms, code identifiers, file paths, and command names should remain in their original form.
+
+
 ## Token Configuration Note
 
 Only personal token is configured in this installation.

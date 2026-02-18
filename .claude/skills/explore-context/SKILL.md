@@ -4,6 +4,10 @@ description: Agentically explore context based on Slack threads or keywords. Rec
 
 # /explore-context - Context Exploration
 
+## Language
+
+All output, Slack messages, and user-facing text from this skill MUST follow the language setting in `ultrawork.yaml` (`language.default`). Check the `## Language Configuration` section in CLAUDE.md for the current language. Technical terms, code, file paths, and commands remain in their original form.
+
 Recursively explore Slack conversations to deeply understand the situation.
 
 ## Usage

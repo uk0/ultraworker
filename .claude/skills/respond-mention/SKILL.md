@@ -4,6 +4,10 @@ description: Respond to Slack mentions by performing deep context search. Trigge
 
 # /respond-mention - Slack Mention Response
 
+## Language
+
+All output, Slack messages, and user-facing text from this skill MUST follow the language setting in `ultrawork.yaml` (`language.default`). Check the `## Language Configuration` section in CLAUDE.md for the current language. Technical terms, code, file paths, and commands remain in their original form.
+
 Detect Slack mentions, perform deep context search, and **always** respond.
 
 ## Important: Message Sending Required

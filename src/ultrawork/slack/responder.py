@@ -4,10 +4,100 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
-from ultrawork.config import ResponseConfig
+from ultrawork.config import ResponseConfig, get_config
 from ultrawork.models.polling import PendingResponse, ResponseIntent, ResponseType
 from ultrawork.models.thread import ThreadRecord
 from ultrawork.slack.state import PollingStateManager
+
+# Localized response templates
+RESPONSE_TEMPLATES: dict[str, dict[str, str]] = {
+    "en": {
+        "greeting": "Hello! How can I help you?",
+        "acknowledge": "Got it. I'll take a look.",
+        "issue": "Issue received. I'm analyzing the details.\nI'll update you on the progress shortly.",
+        "status": "Checking the current status. I'll share the details shortly.",
+        "simple_query": "Got your question. I'll look into it and get back to you.",
+        "action": "Request received. I'll register this as a task and work on it.\nI'll post progress updates in this thread.",
+        "default": "Message received. I'll analyze the context and prepare an appropriate response.",
+    },
+    "ko": {
+        "greeting": "안녕하세요! 무엇을 도와드릴까요?",
+        "acknowledge": "확인했습니다. 살펴볼게요.",
+        "issue": "이슈를 접수했습니다. 세부 사항을 분석 중입니다.\n진행 상황을 곧 업데이트해 드리겠습니다.",
+        "status": "현재 상태를 확인 중입니다. 곧 자세한 내용을 공유드리겠습니다.",
+        "simple_query": "질문 확인했습니다. 확인 후 답변드리겠습니다.",
+        "action": "요청을 접수했습니다. 작업으로 등록하고 진행하겠습니다.\n이 스레드에 진행 상황을 업데이트하겠습니다.",
+        "default": "메시지를 확인했습니다. 컨텍스트를 분석하고 적절한 응답을 준비하겠습니다.",
+    },
+    "ja": {
+        "greeting": "こんにちは！何かお手伝いできますか？",
+        "acknowledge": "了解しました。確認いたします。",
+        "issue": "問題を受け付けました。詳細を分析中です。\n進捗状況をすぐにお知らせします。",
+        "status": "現在の状況を確認中です。詳細をすぐに共有いたします。",
+        "simple_query": "ご質問を確認しました。調べてご返答いたします。",
+        "action": "リクエストを受け付けました。タスクとして登録し、作業を進めます。\nこのスレッドで進捗を更新いたします。",
+        "default": "メッセージを受け付けました。コンテキストを分析し、適切な回答を準備いたします。",
+    },
+    "zh": {
+        "greeting": "你好！有什么可以帮助你的吗？",
+        "acknowledge": "收到，我来看看。",
+        "issue": "已收到问题报告。正在分析详细信息。\n稍后会更新进展。",
+        "status": "正在检查当前状态。稍后会分享详细信息。",
+        "simple_query": "收到你的问题。我查看后会回复你。",
+        "action": "已收到请求。我会将此注册为任务并开始处理。\n会在此线程中发布进展更新。",
+        "default": "已收到消息。我会分析上下文并准备适当的回复。",
+    },
+    "es": {
+        "greeting": "¡Hola! ¿En qué puedo ayudarte?",
+        "acknowledge": "Entendido. Lo revisaré.",
+        "issue": "Problema recibido. Estoy analizando los detalles.\nTe actualizaré sobre el progreso pronto.",
+        "status": "Verificando el estado actual. Compartiré los detalles pronto.",
+        "simple_query": "Recibí tu pregunta. Lo revisaré y te responderé.",
+        "action": "Solicitud recibida. Registraré esto como tarea y trabajaré en ello.\nPublicaré actualizaciones en este hilo.",
+        "default": "Mensaje recibido. Analizaré el contexto y prepararé una respuesta adecuada.",
+    },
+    "fr": {
+        "greeting": "Bonjour ! Comment puis-je vous aider ?",
+        "acknowledge": "Bien reçu. Je vais regarder.",
+        "issue": "Problème reçu. J'analyse les détails.\nJe vous tiendrai informé de l'avancement.",
+        "status": "Vérification de l'état actuel. Je partagerai les détails bientôt.",
+        "simple_query": "J'ai reçu votre question. Je vais vérifier et vous répondre.",
+        "action": "Demande reçue. Je vais enregistrer cela comme tâche et y travailler.\nJe publierai les mises à jour dans ce fil.",
+        "default": "Message reçu. Je vais analyser le contexte et préparer une réponse appropriée.",
+    },
+    "de": {
+        "greeting": "Hallo! Wie kann ich Ihnen helfen?",
+        "acknowledge": "Verstanden. Ich schaue mir das an.",
+        "issue": "Problem erhalten. Ich analysiere die Details.\nIch werde Sie bald über den Fortschritt informieren.",
+        "status": "Überprüfe den aktuellen Status. Ich teile die Details bald mit.",
+        "simple_query": "Ihre Frage erhalten. Ich werde es prüfen und mich melden.",
+        "action": "Anfrage erhalten. Ich registriere dies als Aufgabe und arbeite daran.\nIch poste Updates in diesem Thread.",
+        "default": "Nachricht erhalten. Ich analysiere den Kontext und bereite eine passende Antwort vor.",
+    },
+    "pt": {
+        "greeting": "Olá! Como posso ajudar?",
+        "acknowledge": "Entendido. Vou dar uma olhada.",
+        "issue": "Problema recebido. Estou analisando os detalhes.\nAtualizarei sobre o progresso em breve.",
+        "status": "Verificando o status atual. Compartilharei os detalhes em breve.",
+        "simple_query": "Recebi sua pergunta. Vou verificar e retornar.",
+        "action": "Solicitação recebida. Vou registrar isso como tarefa e trabalhar nela.\nPostarei atualizações nesta thread.",
+        "default": "Mensagem recebida. Vou analisar o contexto e preparar uma resposta adequada.",
+    },
+}
+
+
+def _get_response_lang() -> str:
+    """Get the configured response language code."""
+    try:
+        return get_config().language.default
+    except Exception:
+        return "en"
+
+
+def _get_templates(lang: str | None = None) -> dict[str, str]:
+    """Get response templates for the configured language."""
+    lang = lang or _get_response_lang()
+    return RESPONSE_TEMPLATES.get(lang, RESPONSE_TEMPLATES["en"])
 
 
 @dataclass
@@ -232,36 +322,32 @@ class SlackResponder:
         Returns:
             Response text
         """
+        templates = _get_templates()
+
         # Simple acknowledgments
         if response_type == ResponseType.ACKNOWLEDGE:
             if intent == ResponseIntent.GREETING:
-                return "Hello! How can I help you?"
-            return "Got it. I'll take a look."
+                return templates["greeting"]
+            return templates["acknowledge"]
 
         # Issue reports
         if intent == ResponseIntent.ISSUE_REPORT:
-            return (
-                "Issue received. I'm analyzing the details.\n"
-                "I'll update you on the progress shortly."
-            )
+            return templates["issue"]
 
         # Status queries
         if intent == ResponseIntent.STATUS_QUERY:
-            return "Checking the current status. I'll share the details shortly."
+            return templates["status"]
 
         # Simple questions
         if response_type == ResponseType.SIMPLE_QUERY:
-            return "Got your question. I'll look into it and get back to you."
+            return templates["simple_query"]
 
         # Action required (will create task)
         if response_type == ResponseType.ACTION:
-            return (
-                "Request received. I'll register this as a task and work on it.\n"
-                "I'll post progress updates in this thread."
-            )
+            return templates["action"]
 
         # Complex or defer
-        return "Message received. I'll analyze the context and prepare an appropriate response."
+        return templates["default"]
 
     def _calculate_confidence(
         self,

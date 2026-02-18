@@ -97,6 +97,7 @@ Configure your Slack mention-based automated task processing system.
 
 | Step | Description |
 |------|-------------|
+| 0 | Select language |
 | 1 | Verify Claude Code login |
 | 2 | Configure Slack tokens |
 | 3 | Basic settings (mention detection/permissions) |
@@ -107,6 +108,18 @@ Configure your Slack mention-based automated task processing system.
 
 **Press the Next button to begin.**
 """
+
+# Language options for setup wizard
+LANGUAGE_OPTIONS = {
+    "en": "English",
+    "ko": "한국어 (Korean)",
+    "ja": "日本語 (Japanese)",
+    "zh": "中文 (Chinese)",
+    "es": "Español (Spanish)",
+    "fr": "Français (French)",
+    "de": "Deutsch (German)",
+    "pt": "Português (Portuguese)",
+}
 
 TUTORIAL_MD = """\
 # 📖 How to Use Ultraworker
@@ -183,6 +196,98 @@ class WelcomeScreen(Screen):
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "btn-next":
             self.app.action_next_step()
+
+
+class Step0LanguageSelect(Screen):
+    """Step 0: Language selection."""
+
+    def compose(self) -> ComposeResult:
+        yield Header()
+        with VerticalScroll():
+            yield Label("Step 0/7: Select Language / 언어 선택", classes="step-title")
+            yield Rule()
+            yield Static(
+                "Select the language for Ultraworker.\n"
+                "This affects all Slack responses, thinking output, and system messages.\n\n"
+                "Ultraworker의 언어를 선택하세요.\n"
+                "Slack 응답, thinking 출력, 시스템 메시지 등에 반영됩니다."
+            )
+            yield Rule()
+            with RadioSet(id="language-select"):
+                for code, label in LANGUAGE_OPTIONS.items():
+                    is_default = code == "en"
+                    yield RadioButton(label, id=f"radio-lang-{code}", value=is_default)
+                yield RadioButton("Custom (type your own)", id="radio-lang-custom")
+            yield Static(
+                "Enter a language code (e.g. vi, th, ar) or name:",
+                id="custom-lang-label",
+            )
+            yield Input(
+                placeholder="e.g. vi, th, ar, Tiếng Việt, ภาษาไทย ...",
+                id="custom-lang-input",
+            )
+
+        with Center():
+            with Horizontal(classes="button-row"):
+                yield Button("← Back", id="btn-back")
+                yield Button("Next →", variant="primary", id="btn-next")
+        yield Footer()
+
+    def on_mount(self) -> None:
+        app = self.app
+        if isinstance(app, SetupWizardApp):
+            lang = app.state.language or "en"
+            if lang in LANGUAGE_OPTIONS:
+                radio_id = f"radio-lang-{lang}"
+                try:
+                    self.query_one(f"#{radio_id}", RadioButton).value = True
+                except Exception:
+                    pass
+            else:
+                # Custom language was previously set
+                try:
+                    self.query_one("#radio-lang-custom", RadioButton).value = True
+                    self.query_one("#custom-lang-input", Input).value = lang
+                except Exception:
+                    pass
+        self._toggle_custom_input()
+
+    def on_radio_set_changed(self, event: RadioSet.Changed) -> None:
+        self._toggle_custom_input()
+
+    def _toggle_custom_input(self) -> None:
+        """Show/hide custom language input based on radio selection."""
+        lang_set = self.query_one("#language-select", RadioSet)
+        is_custom = (
+            lang_set.pressed_button is not None
+            and lang_set.pressed_button.id == "radio-lang-custom"
+        )
+        self.query_one("#custom-lang-label", Static).display = is_custom
+        self.query_one("#custom-lang-input", Input).display = is_custom
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        if event.button.id == "btn-next":
+            self._save_language()
+            self.app.action_next_step()
+        elif event.button.id == "btn-back":
+            self.app.action_prev_step()
+
+    def _save_language(self) -> None:
+        app = self.app
+        if not isinstance(app, SetupWizardApp):
+            return
+
+        lang_set = self.query_one("#language-select", RadioSet)
+        if lang_set.pressed_button and lang_set.pressed_button.id:
+            if lang_set.pressed_button.id == "radio-lang-custom":
+                custom_value = self.query_one("#custom-lang-input", Input).value.strip()
+                app.state.language = custom_value if custom_value else "en"
+            else:
+                # Extract language code from radio button id: "radio-lang-en" -> "en"
+                lang_code = lang_set.pressed_button.id.replace("radio-lang-", "")
+                app.state.language = lang_code
+        else:
+            app.state.language = "en"
 
 
 class Step1ClaudeCheck(Screen):
@@ -774,6 +879,8 @@ class Step7Finish(Screen):
 
         state = app.state
         lines = ["📋 Configuration Summary\n"]
+        lang_label = LANGUAGE_OPTIONS.get(state.language, f"{state.language} (Custom)")
+        lines.append(f"  Language: {lang_label}")
         lines.append(f"  Token Type: {state.slack_token_type or '(not set)'}")
         if state.trigger_mode == "mention":
             lines.append(f"  Trigger Mode: @Mention detection")
@@ -1129,6 +1236,7 @@ class SetupWizardApp(App):
         self.current_step = 0
         self.screens_list: list[type[Screen]] = [
             WelcomeScreen,
+            Step0LanguageSelect,
             Step1ClaudeCheck,
             Step2SlackTokens,
             Step3BasicSettings,

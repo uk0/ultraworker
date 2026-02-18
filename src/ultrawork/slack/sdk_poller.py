@@ -79,6 +79,34 @@ Bad: "I shall proceed to utilize the aforementioned information to provide you w
 Good: "Based on what I found, here's my answer."
 """
 
+
+def _get_language_prompt() -> str:
+    """Get language instruction prompt based on configured language."""
+    from ultrawork.config import SUPPORTED_LANGUAGES
+
+    try:
+        config = get_config()
+        lang_code = config.language.default
+    except Exception:
+        lang_code = "en"
+
+    if lang_code == "en":
+        return ""
+
+    lang_name = SUPPORTED_LANGUAGES.get(lang_code, lang_code)
+    return (
+        f"\n## Language Requirement\n\n"
+        f"**CRITICAL**: You MUST write ALL responses, thinking, and Slack messages in **{lang_name}** (`{lang_code}`).\n"
+        f"This includes:\n"
+        f"- All Slack messages and thread replies\n"
+        f"- All analysis and reasoning output\n"
+        f"- All TODO items, spec content, report content\n"
+        f"- All approval request messages\n"
+        f"- All error messages and status updates\n"
+        f"- All exploration summaries\n\n"
+        f"Technical terms, code identifiers, file paths, and command names should remain in their original form.\n"
+    )
+
 # Complexity keywords for classification
 COMPLEX_KEYWORDS = [
     "implement",
@@ -824,10 +852,12 @@ class SlackSDKPoller:
             if files_context:
                 logger.info(f"[Agentic] Thread files context added ({len(files_context)} chars)")
 
+            lang_prompt = _get_language_prompt()
+
             if is_workflow_task:
                 # Complex task: Start workflow (explore → todo → spec → report)
                 prompt = f"""{HUMAN_RESPONSE_GUIDE}
-
+{lang_prompt}
 ## 🔄 Complex Task Detected - Starting Workflow
 
 This request has been classified as complex and will proceed through a step-by-step workflow.
@@ -888,7 +918,7 @@ mcp__slack__slack_post_message(
             else:
                 # Simple task: Use respond-mention skill
                 prompt = f"""{HUMAN_RESPONSE_GUIDE}
-
+{lang_prompt}
 ## Mention Response (/respond-mention skill execution)
 
 ## Mention Info

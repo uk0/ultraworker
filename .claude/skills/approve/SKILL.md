@@ -4,6 +4,10 @@ description: Approve the current stage and proceed to the next step. Records app
 
 # /approve - Stage Approval
 
+## Language
+
+All output, Slack messages, and user-facing text from this skill MUST follow the language setting in `ultrawork.yaml` (`language.default`). Check the `## Language Configuration` section in CLAUDE.md for the current language. Technical terms, code, file paths, and commands remain in their original form.
+
 Approve the current workflow stage and proceed to the next step.
 
 ## Usage

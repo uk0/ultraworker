@@ -24,6 +24,8 @@ class SetupState:
     """Tracks the entire setup wizard state."""
 
     project_dir: Path = field(default_factory=Path.cwd)
+    # Step 0: Language selection
+    language: str = "en"  # Language code (en, ko, ja, zh, es, fr, de, pt)
     # Step 1: Claude Code
     claude_logged_in: bool = False
     claude_version: str = ""
@@ -60,6 +62,7 @@ class SetupState:
         """Save state to file for recovery."""
         state_file = self.project_dir / SETUP_STATE_FILE
         data = {
+            "language": self.language,
             "slack_bot_token": self.slack_bot_token,
             "slack_personal_token": self.slack_personal_token,
             "slack_personal_cookie": self.slack_personal_cookie,
@@ -86,6 +89,7 @@ class SetupState:
             try:
                 with open(state_file) as f:
                     data = json.load(f)
+                state.language = data.get("language", "en")
                 state.slack_bot_token = data.get("slack_bot_token", "")
                 state.slack_personal_token = data.get("slack_personal_token", "")
                 state.slack_personal_cookie = data.get("slack_personal_cookie", "")
@@ -416,6 +420,8 @@ executor:
   codex_command: codex
   default_executor: claude
   timeout_seconds: 6000
+language:
+  default: "{state.language}"
 polling:
   enabled: false
   explore_depth: 2
@@ -476,11 +482,17 @@ def generate_mcp_json(state: SetupState) -> dict:
     return config
 
 
-def update_claude_md_for_tokens(project_dir: Path, state: SetupState) -> None:
-    """Update CLAUDE.md to reflect available token types.
+def _get_language_name(code: str) -> str:
+    """Get full language name from code."""
+    from ultrawork.config import SUPPORTED_LANGUAGES
+    return SUPPORTED_LANGUAGES.get(code, code)
 
-    Always replaces existing Token Configuration Note section to ensure
-    it reflects the current token settings.
+
+def update_claude_md_for_tokens(project_dir: Path, state: SetupState) -> None:
+    """Update CLAUDE.md to reflect available token types and language settings.
+
+    Always replaces existing Token Configuration Note and Language Configuration
+    sections to ensure they reflect the current settings.
     """
     claude_md = project_dir / "CLAUDE.md"
     if not claude_md.exists():
@@ -496,7 +508,34 @@ def update_claude_md_for_tokens(project_dir: Path, state: SetupState) -> None:
         content,
         flags=re.DOTALL
     )
+
+    # Remove existing Language Configuration section if present
+    content = re.sub(
+        r'\n*## Language Configuration\n.*?(?=\n## |\Z)',
+        '',
+        content,
+        flags=re.DOTALL
+    )
     content = content.rstrip()
+
+    # Add Language Configuration section
+    lang_code = state.language or "en"
+    lang_name = _get_language_name(lang_code)
+
+    lang_note = (
+        f"\n\n\n## Language Configuration\n\n"
+        f"System language is set to **{lang_name}** (`{lang_code}`).\n\n"
+        f"**IMPORTANT**: All the following MUST be in {lang_name}:\n"
+        f"- All Slack messages and responses\n"
+        f"- All thinking and reasoning output\n"
+        f"- All skill execution output (TODO items, specs, reports, approval messages)\n"
+        f"- All error messages and status updates sent to Slack\n"
+        f"- All user-facing CLI output\n"
+        f"- All exploration summaries and context analysis\n\n"
+        f"Technical terms, code identifiers, file paths, and command names should remain in their original form.\n"
+    )
+
+    content += lang_note
 
     # Determine token configuration and create appropriate note
     has_bot = bool(state.slack_bot_token)

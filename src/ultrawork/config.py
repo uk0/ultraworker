@@ -77,6 +77,40 @@ class CronjobConfig(BaseModel):
     max_error_pause: int = 3  # Auto-pause job after N consecutive failures
 
 
+# Supported languages for the system
+SUPPORTED_LANGUAGES = {
+    "en": "English",
+    "ko": "한국어",
+    "ja": "日本語",
+    "zh": "中文",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+}
+
+
+class LanguageConfig(BaseModel):
+    """Language configuration for all system outputs."""
+
+    default: str = "en"  # Language code or custom language string
+
+    @field_validator("default", mode="before")
+    @classmethod
+    def validate_language(cls, v: str | None) -> str:
+        """Validate language code. Accepts both predefined codes and custom values."""
+        if v is None:
+            return "en"
+        v = v.strip()
+        if not v:
+            return "en"
+        # Accept predefined codes (case-insensitive) and any custom value
+        lower = v.lower()
+        if lower in SUPPORTED_LANGUAGES:
+            return lower
+        return v
+
+
 class UltraworkConfig(BaseModel):
     """Main configuration for Ultrawork."""
 
@@ -87,6 +121,7 @@ class UltraworkConfig(BaseModel):
     executor: ExecutorConfig = Field(default_factory=ExecutorConfig)
     workflow: WorkflowConfig = Field(default_factory=WorkflowConfig)
     cronjob: CronjobConfig = Field(default_factory=CronjobConfig)
+    language: LanguageConfig = Field(default_factory=LanguageConfig)
 
     @classmethod
     def load(cls, config_path: Path | None = None) -> "UltraworkConfig":

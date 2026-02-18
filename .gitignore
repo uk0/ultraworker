@@ -41,23 +41,8 @@ ENV/
 *.log
 logs/
 
-# Data (keep structure but ignore contents)
-data/mentions/pending/*.yaml
-data/mentions/completed/*.yaml
-data/mentions/failed/*.yaml
-data/mentions/*/
-data/threads/
-data/explorations/*.md
-data/tasks/*.md
-data/specs/*.md
-data/logs/
-
-# Keep data directories with .gitkeep
-!data/mentions/pending/.gitkeep
-!data/mentions/completed/.gitkeep
-!data/mentions/failed/.gitkeep
-!data/registry/.gitkeep
-!data/logs/.gitkeep
+# Data directory (all runtime data excluded from repo)
+data/
 
 # OS
 .DS_Store
@@ -70,23 +55,9 @@ credentials.json
 .mcp.json
 .ultrawork-setup-state.json
 
-# Sensitive data directories
-data/sessions/
-data/workflows/
-data/memory/
-data/context/
-data/index/
-data/state/
-
-# User-specific registry data
-data/registry/channels.yaml
-data/registry/users.yaml
-
 # Private/unrelated files
 slack-channel.csv
 *.pdf
 
-# Assets and scripts (not part of core package)
-data/assets/
-data/parsing_results/
+# Scripts (not part of core package)
 scripts/

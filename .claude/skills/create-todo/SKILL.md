@@ -4,6 +4,10 @@ description: Create an actionable TODO list based on exploration results (EXP-*)
 
 # /create-todo - Create TODO
 
+## Language
+
+All output, Slack messages, and user-facing text from this skill MUST follow the language setting in `ultrawork.yaml` (`language.default`). Check the `## Language Configuration` section in CLAUDE.md for the current language. Technical terms, code, file paths, and commands remain in their original form.
+
 Create a TODO list based on exploration results and request approval.
 
 ## Usage

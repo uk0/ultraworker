@@ -4,6 +4,8 @@ executor:
   codex_command: codex
   default_executor: claude
   timeout_seconds: 600000
+language:
+  default: "ko"
 polling:
   enabled: false
   explore_depth: 2

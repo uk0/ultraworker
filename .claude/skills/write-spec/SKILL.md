@@ -4,6 +4,10 @@ description: Write detailed tech spec based on approved TODO and send second app
 
 # /write-spec - Write Tech Spec
 
+## Language
+
+All output, Slack messages, and user-facing text from this skill MUST follow the language setting in `ultrawork.yaml` (`language.default`). Check the `## Language Configuration` section in CLAUDE.md for the current language. Technical terms, code, file paths, and commands remain in their original form.
+
 Write detailed technical specification based on approved TODO.
 
 ## Usage
