@@ -1055,6 +1055,308 @@ def config_init(
     console.print(f"[green]Configuration saved to:[/green] {config_path}")
 
 
+# --- Cron Job Commands ---
+
+
+@app.command("cron:list")
+def cron_list(
+    all_jobs: bool = typer.Option(False, "--all", "-a", help="Show all jobs including deleted/completed"),
+) -> None:
+    """List cron jobs."""
+    from ultrawork.scheduler import CronJobManager
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    jobs = manager.list_jobs(active_only=not all_jobs)
+
+    if not jobs:
+        console.print("[dim]No cron jobs found.[/dim]")
+        console.print("[dim]Create one with: ultrawork cron:create[/dim]")
+        return
+
+    table = Table(title="Cron Jobs")
+    table.add_column("ID", style="cyan")
+    table.add_column("Name", style="white")
+    table.add_column("Schedule", style="yellow")
+    table.add_column("Action", style="green")
+    table.add_column("Status", style="white")
+    table.add_column("Last Run", style="dim")
+    table.add_column("Runs", style="dim")
+
+    for job in jobs:
+        status_color = {
+            "active": "green",
+            "paused": "yellow",
+            "completed": "dim",
+            "failed": "red",
+            "deleted": "dim",
+        }.get(job.status.value, "white")
+
+        last_run = ""
+        if job.last_run_at:
+            lr = job.last_run_at
+            if isinstance(lr, str):
+                last_run = lr[:16]
+            else:
+                last_run = lr.strftime("%Y-%m-%d %H:%M")
+
+        table.add_row(
+            job.job_id,
+            job.name[:30] + "..." if len(job.name) > 30 else job.name,
+            job.schedule.get_description(),
+            job.action.value,
+            f"[{status_color}]{job.status.value}[/{status_color}]",
+            last_run or "Never",
+            str(job.run_count),
+        )
+
+    console.print(table)
+
+
+@app.command("cron:show")
+def cron_show(
+    job_id: str = typer.Argument(..., help="Cron job ID"),
+) -> None:
+    """Show cron job details."""
+    from ultrawork.scheduler import CronJobManager
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    job = manager.load_job(job_id)
+    if not job:
+        console.print(f"[red]Job not found:[/red] {job_id}")
+        raise typer.Exit(1)
+
+    console.print(f"\n[bold cyan]{job.job_id}[/bold cyan] - {job.name}")
+    console.print(f"[dim]Description:[/dim] {job.description}")
+    console.print(f"[dim]Schedule:[/dim] {job.schedule.get_description()}")
+    console.print(f"[dim]Action:[/dim] {job.action.value}")
+    console.print(f"[dim]Status:[/dim] {job.status.value}")
+    console.print(f"[dim]Created:[/dim] {job.created_at}")
+    console.print(f"[dim]Created by:[/dim] {job.created_by}")
+    console.print(f"[dim]Run count:[/dim] {job.run_count}")
+    console.print(f"[dim]Error count:[/dim] {job.error_count}")
+
+    if job.last_run_at:
+        console.print(f"[dim]Last run:[/dim] {job.last_run_at}")
+    if job.last_error:
+        console.print(f"[red]Last error:[/red] {job.last_error}")
+
+    if job.notify_user_id:
+        console.print(f"[dim]Notify user:[/dim] {job.notify_user_id}")
+    if job.notify_channel_id:
+        console.print(f"[dim]Notify channel:[/dim] {job.notify_channel_id}")
+
+    if job.thread_targets:
+        console.print("\n[bold]Thread Targets:[/bold]")
+        for t in job.thread_targets:
+            desc = f" - {t.description}" if t.description else ""
+            ch = f"#{t.channel_name}" if t.channel_name else t.channel_id
+            console.print(f"  {ch}/{t.thread_ts}{desc}")
+
+    if job.channel_targets:
+        console.print("\n[bold]Channel Targets:[/bold]")
+        for ch_id in job.channel_targets:
+            console.print(f"  {ch_id}")
+
+
+@app.command("cron:create")
+def cron_create(
+    name: str = typer.Argument(..., help="Job name"),
+    schedule: str = typer.Option("weekday", "--schedule", "-s", help="Schedule type: interval|daily|weekday|weekly|cron"),
+    at: Optional[str] = typer.Option(None, "--at", help="Time in HH:MM format (for daily/weekday/weekly)"),  # noqa: UP007
+    hours: Optional[int] = typer.Option(None, "--hours", help="Hours between runs (for interval)"),  # noqa: UP007
+    minutes: Optional[int] = typer.Option(None, "--minutes", help="Minutes between runs (for interval)"),  # noqa: UP007
+    day: Optional[str] = typer.Option(None, "--day", help="Day of week (for weekly)"),  # noqa: UP007
+    expression: Optional[str] = typer.Option(None, "--expression", help="Cron expression (for cron type)"),  # noqa: UP007
+    action: str = typer.Option("check_thread_reactions", "--action", "-a", help="Action type"),
+    notify_user: Optional[str] = typer.Option(None, "--notify-user", help="User ID to notify via DM"),  # noqa: UP007
+    notify_channel: Optional[str] = typer.Option(None, "--notify-channel", help="DM channel ID for notifications"),  # noqa: UP007
+    description: str = typer.Option("", "--description", "-d", help="Job description"),
+) -> None:
+    """Create a new cron job."""
+    from ultrawork.models.cronjob import CronJobAction, CronSchedule, CronScheduleType
+    from ultrawork.scheduler import CronJobManager
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    cron_schedule = CronSchedule(
+        type=CronScheduleType(schedule),
+        at=at,
+        hours=hours,
+        minutes=minutes,
+        day=day,
+        expression=expression,
+    )
+
+    job = manager.create_job(
+        name=name,
+        description=description,
+        schedule=cron_schedule,
+        action=CronJobAction(action),
+        notify_user_id=notify_user or "",
+        notify_channel_id=notify_channel or "",
+    )
+
+    console.print(f"[green]Created cron job:[/green] {job.job_id}")
+    console.print(f"[dim]Name:[/dim] {job.name}")
+    console.print(f"[dim]Schedule:[/dim] {job.schedule.get_description()}")
+    console.print(f"[dim]Action:[/dim] {job.action.value}")
+
+
+@app.command("cron:pause")
+def cron_pause(
+    job_id: str = typer.Argument(..., help="Cron job ID"),
+) -> None:
+    """Pause a cron job."""
+    from ultrawork.scheduler import CronJobManager
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    if manager.pause_job(job_id):
+        console.print(f"[yellow]Paused:[/yellow] {job_id}")
+    else:
+        console.print(f"[red]Job not found:[/red] {job_id}")
+        raise typer.Exit(1)
+
+
+@app.command("cron:resume")
+def cron_resume(
+    job_id: str = typer.Argument(..., help="Cron job ID"),
+) -> None:
+    """Resume a paused cron job."""
+    from ultrawork.scheduler import CronJobManager
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    if manager.resume_job(job_id):
+        console.print(f"[green]Resumed:[/green] {job_id}")
+    else:
+        console.print(f"[red]Job not found:[/red] {job_id}")
+        raise typer.Exit(1)
+
+
+@app.command("cron:delete")
+def cron_delete(
+    job_id: str = typer.Argument(..., help="Cron job ID"),
+) -> None:
+    """Delete a cron job."""
+    from ultrawork.scheduler import CronJobManager
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    if manager.delete_job(job_id):
+        console.print(f"[red]Deleted:[/red] {job_id}")
+    else:
+        console.print(f"[red]Job not found:[/red] {job_id}")
+        raise typer.Exit(1)
+
+
+@app.command("cron:run")
+def cron_run(
+    job_id: str = typer.Argument(..., help="Cron job ID"),
+) -> None:
+    """Manually trigger a cron job execution."""
+    import os
+
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
+    from ultrawork.scheduler import CronJobManager
+    from ultrawork.scheduler.runner import CronRunner
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    job = manager.load_job(job_id)
+    if not job:
+        console.print(f"[red]Job not found:[/red] {job_id}")
+        raise typer.Exit(1)
+
+    console.print(f"[yellow]Running:[/yellow] {job.name} ({job.job_id})")
+
+    runner = CronRunner(
+        data_dir=config.data_dir,
+        slack_token=os.environ.get("SLACK_TOKEN"),
+        slack_cookie=os.environ.get("SLACK_COOKIE"),
+    )
+
+    log = runner.execute_job(job)
+
+    if log.success:
+        console.print("[green]Execution successful[/green]")
+    else:
+        console.print(f"[red]Execution failed:[/red] {log.error}")
+
+    console.print(f"[dim]Duration:[/dim] {log.duration_ms}ms")
+    console.print(f"[dim]Threads checked:[/dim] {log.threads_checked}")
+    console.print(f"[dim]New replies:[/dim] {log.new_replies_found}")
+    console.print(f"[dim]New reactions:[/dim] {log.new_reactions_found}")
+    console.print(f"[dim]DM sent:[/dim] {log.dm_sent}")
+
+
+@app.command("cron:logs")
+def cron_logs(
+    job_id: str = typer.Argument(..., help="Cron job ID"),
+    limit: int = typer.Option(10, "--limit", "-n", help="Number of logs to show"),
+) -> None:
+    """View execution logs for a cron job."""
+    import yaml as _yaml
+
+    from ultrawork.scheduler import CronJobManager
+
+    config = get_config()
+    manager = CronJobManager(config.data_dir)
+
+    job = manager.load_job(job_id)
+    if not job:
+        console.print(f"[red]Job not found:[/red] {job_id}")
+        raise typer.Exit(1)
+
+    log_files = sorted(
+        manager.logs_dir.glob(f"{job_id}_*.yaml"),
+        reverse=True,
+    )[:limit]
+
+    if not log_files:
+        console.print("[dim]No execution logs found.[/dim]")
+        return
+
+    table = Table(title=f"Execution Logs: {job_id}")
+    table.add_column("Time", style="dim")
+    table.add_column("Success", style="white")
+    table.add_column("Duration", style="dim")
+    table.add_column("Threads", style="dim")
+    table.add_column("Replies", style="dim")
+    table.add_column("DM", style="dim")
+    table.add_column("Error", style="red")
+
+    for log_file in log_files:
+        data = _yaml.safe_load(log_file.read_text(encoding="utf-8"))
+        if not data:
+            continue
+
+        success = "[green]Yes[/green]" if data.get("success") else "[red]No[/red]"
+        table.add_row(
+            str(data.get("executed_at", ""))[:16],
+            success,
+            f"{data.get('duration_ms', 0)}ms",
+            str(data.get("threads_checked", 0)),
+            str(data.get("new_replies_found", 0)),
+            "Yes" if data.get("dm_sent") else "No",
+            (data.get("error", "") or "")[:40],
+        )
+
+    console.print(table)
+
+
 # --- Setup Wizard ---
 
 

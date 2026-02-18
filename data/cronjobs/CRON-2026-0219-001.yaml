@@ -1,0 +1,28 @@
+action: check_thread_reactions
+action_config: {}
+auto_process: false
+channel_targets: []
+created_at: '2026-02-19T01:38:47.289211'
+created_by: user
+description: Morning thread activity check
+error_count: 0
+job_id: CRON-2026-0219-001
+last_error: null
+last_run_at: null
+name: Test Morning Check
+next_run_at: null
+notify_channel_id: ''
+notify_user_id: U06CLS6E694
+require_approval: true
+run_count: 0
+schedule:
+  at: 09:00
+  day: null
+  expression: null
+  hours: null
+  minutes: null
+  type: weekday
+source_session_id: null
+status: deleted
+thread_targets: []
+updated_at: '2026-02-19T01:39:06.129220'

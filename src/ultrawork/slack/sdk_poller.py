@@ -1253,6 +1253,22 @@ mcp__slack__slack_post_message(
         self._prime_new_only_baseline()
         logger.info(f"Daemon started (PID: {os.getpid()})")
 
+        # Initialize cron runner
+        cron_runner = None
+        try:
+            from ultrawork.scheduler.runner import CronRunner
+
+            token = os.environ.get("SLACK_TOKEN")
+            cookie = os.environ.get("SLACK_COOKIE")
+            cron_runner = CronRunner(
+                data_dir=self.data_dir,
+                slack_token=token,
+                slack_cookie=cookie,
+            )
+            logger.info("Cron runner initialized")
+        except Exception as e:
+            logger.warning(f"Cron runner initialization failed (non-fatal): {e}")
+
         # Set up signal handlers
         def handle_signal(signum: int, frame) -> None:  # noqa: ARG001
             logger.info(f"Received signal {signum}, stopping...")
@@ -1275,6 +1291,15 @@ mcp__slack__slack_post_message(
                     if state.consecutive_errors >= 5:
                         logger.error("Too many consecutive errors, stopping")
                         break
+
+                # Run cron jobs check
+                if cron_runner:
+                    try:
+                        executed = await cron_runner.run_tick()
+                        if executed > 0:
+                            logger.info(f"Cron: executed {executed} jobs")
+                    except Exception as e:
+                        logger.error(f"Cron tick error: {e}")
 
                 # Wait for next poll or stop signal
                 try:

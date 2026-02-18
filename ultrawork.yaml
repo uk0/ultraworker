@@ -23,9 +23,9 @@ response:
   confidence_threshold: 0.8
   manual_types:
 slack:
-  bot_user_id: 
+  bot_user_id: U087YTEKH8Q
   default_channel: ""
-  trigger_pattern: "!ulw"
+  trigger_pattern: "!uw"
 workflow:
   auto_approve_simple_tasks: false
   default_workflow_type: full

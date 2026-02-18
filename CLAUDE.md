@@ -36,6 +36,7 @@ Claude should automatically invoke the appropriate skill/agent in the following 
 | "Reject" | `/reject` | "Request revision for TASK-001" |
 | "Create report" | `/report` | "Generate final report for TASK-001" |
 | "Create image with Gemini and post to X" | `/gemini-x-image-post` | "Generate image with Gemini and post to X" |
+| "Create/manage cron job" | `/manage-cronjob` | "Create a cronjob to check threads every morning" |
 
 ### Automatic Workflow Progression
 
@@ -657,6 +658,9 @@ data/
 │   └── TASK-YYYY-MMDD-NNN.md
 ├── specs/              # Tech specs
 │   └── TASK-YYYY-MMDD-NNN_spec.md
+├── cronjobs/           # Cron job definitions
+│   ├── CRON-YYYY-MMDD-NNN.yaml
+│   └── logs/           # Execution logs
 └── logs/               # Logs
 ```
 
@@ -884,6 +888,31 @@ claude -p "Implement according to data/specs/TASK-2026-0129-001_spec.md"
 
 # 8. Final approval
 /approve TASK-2026-0129-001
+
+# 9. (Optional) Set up follow-up cron job
+/manage-cronjob create "Thread Monitor" --schedule weekday --at 09:00 --action check_thread_reactions
+```
+
+### Cron Job Examples
+
+```bash
+# Create a weekday morning thread checker
+ultrawork cron:create "Morning Check" --schedule weekday --at 09:00 \
+  --action check_thread_reactions --notify-user U06CLS6E694
+
+# Create an hourly mention scanner
+ultrawork cron:create "Mention Scan" --schedule interval --hours 2 \
+  --action scan_mentions --notify-channel D06CVUV964C
+
+# Create a daily pending tasks reminder
+ultrawork cron:create "Daily Reminder" --schedule daily --at 10:00 \
+  --action dm_pending_tasks --notify-channel D06CVUV964C
+
+# Manage jobs
+ultrawork cron:list            # List all active jobs
+ultrawork cron:pause CRON-ID   # Pause a job
+ultrawork cron:run CRON-ID     # Manually trigger
+ultrawork cron:logs CRON-ID    # View execution history
 ```
 
 ### CLI Commands
@@ -895,6 +924,14 @@ ultrawork slack:status           # Slack status
 ultrawork slack:channels         # Channel list
 ultrawork slack:users            # User list
 ultrawork index:pending          # Pending approval list
+ultrawork cron:list              # Cron job list
+ultrawork cron:show CRON-ID      # Cron job details
+ultrawork cron:create "Name"     # Create cron job
+ultrawork cron:pause CRON-ID     # Pause cron job
+ultrawork cron:resume CRON-ID    # Resume cron job
+ultrawork cron:delete CRON-ID    # Delete cron job
+ultrawork cron:run CRON-ID       # Manually trigger cron job
+ultrawork cron:logs CRON-ID      # View execution logs
 ```
 
 ---

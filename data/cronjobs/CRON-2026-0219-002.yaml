@@ -1,0 +1,54 @@
+action: custom
+action_config:
+  prompt: |
+    You are monitoring active threads for user U06CLS6E694 (hm).
+
+    Instructions:
+    1. Check the ultraworker channel (C0ABW2TFGCE) for recent threads involving the user
+    2. Look for new reactions (thumbsup, eyes, white_check_mark, heavy_check_mark, raised_hands) on threads the user participated in
+    3. Scan for new @mentions of the user across monitored channels
+    4. Identify actionable items from reactions or mentions (e.g., approval requests, task assignments, review requests)
+    5. Compile a summary of findings
+    6. DM the user (D06CVUV964C) with:
+       - List of threads with new activity
+       - Identified actionable tasks
+       - Ask for confirmation before taking any action
+    7. Only execute actions that the user explicitly approves
+
+    Report format:
+    📊 Thread Monitor Report ({time})
+
+    🔔 New Activity:
+    - [thread link/description]: [reaction/mention details]
+
+    📋 Actionable Items:
+    - [task description]: [proposed action]
+
+    ✅ Reply with the item numbers you'd like me to act on, or "skip" to dismiss.
+auto_process: false
+channel_targets:
+  - C0ABW2TFGCE
+created_at: '2026-02-19T12:48:00'
+created_by: skill
+description: Weekday 3x daily monitor of active threads for reactions, mentions, and actionable tasks. DMs user for confirmation before executing any action.
+error_count: 0
+job_id: CRON-2026-0219-002
+last_error: null
+last_run_at: null
+name: Active Thread Monitor (3x Daily)
+next_run_at: null
+notify_channel_id: D06CVUV964C
+notify_user_id: U06CLS6E694
+require_approval: true
+run_count: 0
+schedule:
+  at: null
+  day: null
+  expression: 0 9,13,17 * * 1-5
+  hours: null
+  minutes: null
+  type: cron
+source_session_id: null
+status: active
+thread_targets: []
+updated_at: '2026-02-19T12:48:00'

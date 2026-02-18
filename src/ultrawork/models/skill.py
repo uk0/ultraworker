@@ -204,6 +204,7 @@ SKILL_ROLE_TRANSITIONS: dict[str, tuple[str | None, str | None]] = {
     "report": ("implementer", "reporter"),  # IMPLEMENTER -> REPORTER
     "sync-slack": (None, None),  # Utility, no transition
     "respond-mention": (None, None),  # Initial response
+    "manage-cronjob": (None, None),  # Utility, no transition
 }
 
 # Approve skill transitions based on current stage

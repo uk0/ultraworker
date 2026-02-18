@@ -69,6 +69,14 @@ class WorkflowConfig(BaseModel):
     default_workflow_type: str = "full"  # "full" or "simple"
 
 
+class CronjobConfig(BaseModel):
+    """Cron job scheduler configuration."""
+
+    enabled: bool = True  # Enable cron job scheduler in daemon
+    check_interval_seconds: int = 60  # How often to check for due jobs
+    max_error_pause: int = 3  # Auto-pause job after N consecutive failures
+
+
 class UltraworkConfig(BaseModel):
     """Main configuration for Ultrawork."""
 
@@ -78,6 +86,7 @@ class UltraworkConfig(BaseModel):
     response: ResponseConfig = Field(default_factory=ResponseConfig)
     executor: ExecutorConfig = Field(default_factory=ExecutorConfig)
     workflow: WorkflowConfig = Field(default_factory=WorkflowConfig)
+    cronjob: CronjobConfig = Field(default_factory=CronjobConfig)
 
     @classmethod
     def load(cls, config_path: Path | None = None) -> "UltraworkConfig":
