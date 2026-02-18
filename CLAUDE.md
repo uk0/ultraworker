@@ -299,6 +299,53 @@ result = upload_to_slack(
 
 **Required Bot permissions**: `files:write`, `files:read`
 
+### Slack File Download
+
+Download and process files/images from Slack threads for Claude consumption.
+
+**Module location**: `src/ultrawork/slack/downloader.py`
+
+**Class**: `SlackFileDownloader`
+
+```python
+from ultrawork.slack import SlackFileDownloader, download_thread_files
+
+# Method 1: Use class
+downloader = SlackFileDownloader(
+    token="xoxc-...",  # Or uses SLACK_TOKEN env var
+    cookie="xoxd-...",  # Or uses SLACK_COOKIE env var (required for xoxc tokens)
+    download_dir="/path/to/save/files",  # Optional, uses temp dir if not set
+)
+
+# Get all files from a thread
+files = downloader.get_thread_files(channel_id="C0123456789", thread_ts="1706500000.000000")
+
+# Download and process all files
+processed = downloader.download_all(files)
+
+# Format for Claude prompt context
+formatted_text = downloader.format_for_claude(processed)
+
+# Method 2: Convenience function
+processed, formatted_text = download_thread_files(
+    channel_id="C0123456789",
+    thread_ts="1706500000.000000",
+)
+```
+
+**Supported file types**:
+
+| Category | Extensions | Processing |
+|----------|-----------|------------|
+| Images | PNG, JPG, GIF, WEBP, BMP | Saved locally, use Read tool to view |
+| PDFs | PDF | Saved locally, use Read tool to read |
+| Text | CSV, TXT, JSON, YAML, MD, code files | Content included inline |
+| Archives | ZIP | Extracted, each file processed |
+| Binary | Others | Metadata only |
+
+**Integration**: Thread files are automatically downloaded during mention processing (SDK poller).
+File content is included in the prompt context under `## Thread Attachments`.
+
 ### Available Primary Tools (mcp__slack__)
 
 | Tool | Purpose | Call Example |

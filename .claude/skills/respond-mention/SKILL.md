@@ -136,6 +136,25 @@ mcp__slack-bot-mcp__slack_get_thread_replies(channel_id, thread_ts)
 - Identify participants
 - Previous discussion context
 
+### Step 3.5: Process Thread Attachments (if any)
+
+If the thread contains files or images, they are automatically downloaded by the SDK poller
+and included in the prompt as `## Thread Attachments`. The following file types are supported:
+
+| Category | File Types | Processing |
+|----------|-----------|------------|
+| Images | PNG, JPG, GIF, WEBP | Downloaded to local path, use Read tool to view |
+| PDFs | PDF | Downloaded to local path, use Read tool to view |
+| Text | CSV, TXT, JSON, YAML, MD, code files | Content included inline in prompt |
+| Archives | ZIP | Extracted, each file processed individually |
+| Binary | Other | Metadata only (file name, size, type) |
+
+**When thread attachments are present:**
+- Text file contents are already included inline in the prompt
+- For images: Use `Read` tool with the provided local path to view
+- For PDFs: Use `Read` tool with the provided local path to read
+- Reference files in your response when relevant to the user's question
+
 ### Step 4: Get Channel History
 ```
 mcp__slack__slack_conversations_history(channel_id, limit: 50)

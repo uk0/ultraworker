@@ -3,7 +3,7 @@ executor:
   claude_command: claude
   codex_command: codex
   default_executor: claude
-  timeout_seconds: 6000
+  timeout_seconds: 600000
 polling:
   enabled: false
   explore_depth: 2
@@ -25,7 +25,7 @@ response:
 slack:
   bot_user_id: 
   default_channel: ""
-  trigger_pattern: "<@>"
+  trigger_pattern: "!ulw"
 workflow:
   auto_approve_simple_tasks: false
   default_workflow_type: full
