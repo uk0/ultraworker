@@ -1,5 +1,6 @@
 """Slack integration for Ultrawork."""
 
+from ultrawork.slack.downloader import SlackFileDownloader, download_thread_files
 from ultrawork.slack.explorer import SlackExplorer
 from ultrawork.slack.monitor import SlackMonitor
 from ultrawork.slack.poller import InteractivePoller, SlackPoller
@@ -21,11 +22,13 @@ __all__ = [
     "RateLimitError",
     "ResilientClient",
     "SlackExplorer",
+    "SlackFileDownloader",
     "SlackMonitor",
     "SlackPoller",
     "SlackRateLimiter",
     "SlackRegistry",
     "SlackResponder",
     "SlackUploader",
+    "download_thread_files",
     "upload_to_slack",
 ]

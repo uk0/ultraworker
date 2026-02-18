@@ -38,6 +38,7 @@ from ultrawork.agent.session_manager import SessionManager
 from ultrawork.config import get_config
 from ultrawork.events.interaction_logger import InteractionLogger
 from ultrawork.models.agent import AgentRole
+from ultrawork.slack.downloader import SlackFileDownloader
 from ultrawork.slack.state import PollingStateManager
 
 # Configure logging
@@ -673,6 +674,61 @@ class SlackSDKPoller:
 
         return mention_dir, mention_data
 
+    def _download_thread_files(
+        self,
+        channel_id: str,
+        thread_ts: str,
+        mention_dir: Path,
+    ) -> str:
+        """Download files from a Slack thread and format for Claude.
+
+        Args:
+            channel_id: Slack channel ID
+            thread_ts: Thread timestamp
+            mention_dir: Directory to save downloaded files
+
+        Returns:
+            Formatted text describing thread files for Claude prompt context.
+        """
+        try:
+            download_dir = mention_dir / "files"
+            download_dir.mkdir(exist_ok=True)
+
+            downloader = SlackFileDownloader(
+                token=self.client.token,
+                cookie=os.environ.get("SLACK_COOKIE"),
+                download_dir=download_dir,
+            )
+
+            files = downloader.get_thread_files(channel_id, thread_ts)
+            if not files:
+                return ""
+
+            logger.info(f"[Files] Found {len(files)} files in thread {thread_ts}")
+
+            processed = downloader.download_all(files)
+            formatted = downloader.format_for_claude(processed)
+
+            # Save file manifest
+            manifest = {
+                "thread_ts": thread_ts,
+                "channel_id": channel_id,
+                "files": [pf.to_dict() for pf in processed],
+                "downloaded_at": datetime.now().isoformat(),
+            }
+            manifest_file = mention_dir / "files_manifest.yaml"
+            with open(manifest_file, "w", encoding="utf-8") as f:
+                yaml.dump(manifest, f, allow_unicode=True, default_flow_style=False)
+
+            logger.info(
+                f"[Files] Downloaded {sum(1 for pf in processed if pf.is_success)}/{len(processed)} files"
+            )
+            return formatted
+
+        except Exception as e:
+            logger.error(f"[Files] Failed to download thread files: {e}")
+            return ""
+
     def _process_mention_agentic_sync(self, message: dict, channel_id: str) -> bool:
         """Process a mention using claude -p with session support (synchronous worker)."""
         message_ts = message.get("ts", "")
@@ -763,6 +819,11 @@ class SlackSDKPoller:
             with open(session_file, "w", encoding="utf-8") as f:
                 yaml.dump(session_data, f, allow_unicode=True)
 
+            # Download files from the thread (if any)
+            files_context = self._download_thread_files(channel_id, thread_ts, mention_dir)
+            if files_context:
+                logger.info(f"[Agentic] Thread files context added ({len(files_context)} chars)")
+
             if is_workflow_task:
                 # Complex task: Start workflow (explore → todo → spec → report)
                 prompt = f"""{HUMAN_RESPONSE_GUIDE}
@@ -777,7 +838,10 @@ This request has been classified as complex and will proceed through a step-by-s
 - thread_ts: {thread_ts}
 - text: {mention_data["text"]}
 - user: {mention_data["user"]}
-
+{f'''
+## Thread Attachments
+{files_context}
+''' if files_context else ''}
 ## 📌 Required Execution Order
 
 ### Step 1: Initial Response (MUST send)
@@ -834,7 +898,10 @@ mcp__slack__slack_post_message(
 - text: {mention_data["text"]}
 - user: {mention_data["user"]}
 - input_file: {input_file}
-
+{f'''
+## Thread Attachments
+{files_context}
+''' if files_context else ''}
 ## 📌 Required Execution Order
 
 ### Step 1: Load Slack tools
