@@ -722,79 +722,81 @@ workflow:
 
 ---
 
-## Slack Message Templates
+## Slack Message Templates (Block Kit)
+
+All Slack messages use **Block Kit** format for interactive, rich messages. The `BlockKitBuilder` class in `src/ultrawork/slack/block_kit.py` provides builders for all message types.
+
+### How to Send Block Kit Messages
+
+When sending via MCP tools, pass both `text` (fallback) and `blocks` (JSON string):
+
+```python
+mcp__slack__slack_send_message(
+  channel_id: "C0123",
+  thread_ts: "1706500000",
+  text: "Fallback text for notifications",
+  blocks: '[{"type": "header", ...}, {"type": "section", ...}, {"type": "actions", ...}]'
+)
+```
+
+When sending via Python SDK:
+
+```python
+from ultrawork.slack.block_kit import BlockKitBuilder, send_block_message
+
+message = BlockKitBuilder.build_todo_approval(task_id=..., title=..., ...)
+send_block_message(client, channel_id, message, thread_ts=thread_ts)
+```
 
 ### Stage 1 Approval Request (TODO)
 
-```
-📋 *TODO List Review Request*
-
-*Task*: {title}
-*Type*: {workflow_type} Workflow
-
-*TODO Items*:
-{todo_list}
-
-*Estimated Effort*: {effort}
-
-✅ Approve: :+1:
-❌ Needs Revision: :-1: + comments
-
-_Task ID: {task_id}_
-```
+Uses `BlockKitBuilder.build_todo_approval()`. Includes:
+- Header: `:clipboard: TODO List Review Request`
+- Fields: Task, Type, Task ID, Based on
+- TODO items list
+- Already Decided section (if applicable)
+- Estimated Effort
+- **Reaction guide**: :+1: = Approve / :-1: = Request Changes
+- Context footer with task ID and stage number
 
 ### Stage 2 Approval Request (Tech Spec)
 
-```
-📄 *Tech Spec Review Request*
-
-*Task*: {title}
-
-*Key Changes*:
-{file_changes}
-
-*Test Plan*:
-{test_plan}
-
-✅ Approve: :+1:
-❌ Needs Revision: :-1: + comments
-
-_Spec: {spec_file}_
-```
+Uses `BlockKitBuilder.build_spec_approval()`. Includes:
+- Header: `:page_facing_up: Tech Spec Review Request`
+- Fields: Task, Task ID, Spec File, Stage
+- Key Changes list
+- Test Plan
+- **Reaction guide**: :+1: = Approve / :-1: = Request Changes
+- Context footer
 
 ### Final Approval Request
 
-```
-📋 *Final Report - {task_id}*
-
-*Title*: {title}
-
-### Summary
-{summary}
-
-### Key Results
-{results}
-
-🎉 Final Approval: :+1:
-🔄 Needs Revision: :-1: + comments
-
-_This is the final approval stage_
-```
+Uses `BlockKitBuilder.build_final_report_approval()`. Includes:
+- Header: `:clipboard: Final Report`
+- Fields: Task, Task ID, Stage
+- Summary, Key Results, Changes, Verification sections
+- **Reaction guide**: :+1: = Final Approval / :-1: = Request Changes
+- Context footer
 
 ### Completion Notification
 
-```
-🏁 *Task Complete*
+Uses `BlockKitBuilder.build_completion_notification()`. Includes:
+- Header: `:checkered_flag: Task Complete`
+- Task name and ID
+- Duration and Approval count fields
+- Context footer with timestamp
 
-{task_id} - {title}
+### Approval via Reactions (No Interactivity URL Required)
 
-All stages approved!
+Approval and rejection are handled entirely via Slack emoji reactions.
+No Slack app Interactivity Request URL configuration is needed.
 
-*Duration*: {duration}
-*Approvals*: {approval_count}/{total_stages}
-
-Thank you! 🙏
-```
+The SDK poller daemon (`src/ultrawork/slack/reaction_approval.py`) automatically:
+- Monitors pending approval messages for reactions every poll cycle
+- :+1: / :white_check_mark: reactions trigger approval
+- :-1: / :x: reactions trigger rejection
+- Sends Block Kit notification after processing
+- Triggers next workflow stage automatically
 
 ---
 

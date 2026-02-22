@@ -80,7 +80,7 @@ class SetupState:
             json.dump(data, f, indent=2, ensure_ascii=False)
 
     @classmethod
-    def load(cls, project_dir: Path | None = None) -> "SetupState":
+    def load(cls, project_dir: Path | None = None) -> SetupState:
         """Load state from file if exists, otherwise create new."""
         project_dir = project_dir or Path.cwd()
         state = cls(project_dir=project_dir)
@@ -485,6 +485,7 @@ def generate_mcp_json(state: SetupState) -> dict:
 def _get_language_name(code: str) -> str:
     """Get full language name from code."""
     from ultrawork.config import SUPPORTED_LANGUAGES
+
     return SUPPORTED_LANGUAGES.get(code, code)
 
 
@@ -502,20 +503,13 @@ def update_claude_md_for_tokens(project_dir: Path, state: SetupState) -> None:
 
     # Remove existing Token Configuration Note section if present
     import re
+
     content = re.sub(
-        r'\n*## Token Configuration Note\n.*?(?=\n## |\Z)',
-        '',
-        content,
-        flags=re.DOTALL
+        r"\n*## Token Configuration Note\n.*?(?=\n## |\Z)", "", content, flags=re.DOTALL
     )
 
     # Remove existing Language Configuration section if present
-    content = re.sub(
-        r'\n*## Language Configuration\n.*?(?=\n## |\Z)',
-        '',
-        content,
-        flags=re.DOTALL
-    )
+    content = re.sub(r"\n*## Language Configuration\n.*?(?=\n## |\Z)", "", content, flags=re.DOTALL)
     content = content.rstrip()
 
     # Add Language Configuration section

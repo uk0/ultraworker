@@ -65,7 +65,24 @@ trace:
       revision: 1
 ```
 
-### Step 3: Send Slack Notification
+### Step 3: Send Slack Notification (Block Kit)
+
+Build the message using `BlockKitBuilder.build_rejection_notification()` from `src/ultrawork/slack/block_kit.py`:
+
+```python
+from ultrawork.slack.block_kit import BlockKitBuilder
+
+msg = BlockKitBuilder.build_rejection_notification(
+    task_id="TASK-2026-0129-001",
+    stage="Tech Spec",
+    user_id="U06CLS6E694",
+    reason="Error handling logic is missing. Fallback handling is needed for Redis connection failures.",
+    revision_count=1,
+)
+# msg = {"blocks": [...], "text": "fallback text"}
+```
+
+Send via MCP tools:
 
 ```
 ToolSearch: "slack"
@@ -75,9 +92,12 @@ ToolSearch: "slack"
 mcp__slack__slack_send_message(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: rejection_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
+
+> **Note**: The `blocks` parameter must be a JSON string of the blocks array. The `text` field serves as the fallback for notifications and clients that do not support Block Kit.
 
 **Fallback on failure:**
 ```
@@ -87,7 +107,8 @@ ToolSearch: "+slack-bot"
 mcp__slack-bot-mcp__slack_reply_to_thread(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: rejection_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
@@ -95,26 +116,31 @@ Or:
 ```
 mcp__slack-bot-mcp__slack_post_message(
   channel_id: "C0123456789",
-  text: rejection_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
-Message:
-```
-*Revision Requested*
+Block Kit rejection notification structure:
 
-*Task*: Implement API Response Caching
-*Stage*: Tech Spec
-*Rejected by*: @hm (U06CLS6E694)
-
-*Rejection Reason*:
-> Error handling logic is missing. Fallback handling is needed for Redis connection failures.
-
-*Revision Count*: 1
-
-Please incorporate the feedback and resubmit.
-
-_Task ID: TASK-2026-0129-001_
+```json
+{
+  "blocks": [
+    {"type": "header", "text": {"type": "plain_text", "text": ":x:  Revision Requested", "emoji": true}},
+    {"type": "section", "fields": [
+      {"type": "mrkdwn", "text": "*Task*\n`TASK-2026-0129-001`"},
+      {"type": "mrkdwn", "text": "*Rejected Stage*\nTech Spec"},
+      {"type": "mrkdwn", "text": "*Rejected By*\n<@U06CLS6E694> (reaction)"},
+      {"type": "mrkdwn", "text": "*Revision Count*\n1"}
+    ]},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":speech_balloon: *Reason*\n> Error handling logic is missing. Fallback handling is needed for Redis connection failures."}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":pencil2: Please incorporate the feedback and resubmit."}},
+    {"type": "context", "elements": [{"type": "mrkdwn", "text": "_Task: TASK-2026-0129-001 | Revision limit: 3_"}]}
+  ],
+  "text": ":x: Revision Requested - TASK-2026-0129-001 (Tech Spec)"
+}
 ```
 
 ### Step 4: Stage-specific Revision Guidance

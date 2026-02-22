@@ -221,7 +221,25 @@ Generate the final report:
 Sending completion notification to Slack...
 ```
 
-Completion notification message:
+Completion notification message (Block Kit):
+
+Build the message using `BlockKitBuilder.build_completion_notification()` from `src/ultrawork/slack/block_kit.py`:
+
+```python
+from ultrawork.slack.block_kit import BlockKitBuilder
+
+msg = BlockKitBuilder.build_completion_notification(
+    task_id="TASK-2026-0129-001",
+    title="Implement API Response Caching",
+    duration="5 hours 30 minutes",
+    approval_count=4,
+    total_stages=4,
+)
+# msg = {"blocks": [...], "text": "fallback text"}
+```
+
+Send via MCP tools:
+
 ```
 ToolSearch: "slack"
 ```
@@ -230,9 +248,12 @@ ToolSearch: "slack"
 mcp__slack__slack_send_message(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: completion_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
+
+> **Note**: The `blocks` parameter must be a JSON string of the blocks array. The `text` field serves as the fallback for notifications and clients that do not support Block Kit.
 
 **Fallback on failure:**
 ```
@@ -242,21 +263,29 @@ ToolSearch: "+slack-bot"
 mcp__slack-bot-mcp__slack_reply_to_thread(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: completion_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
-```
-*Task Complete*
+Block Kit completion notification structure:
 
-TASK-2026-0129-001 - Implement API Response Caching
-
-All 4 stages have been approved!
-
-*Time Spent*: 5 hours 30 minutes
-*Approvals*: 4/4
-
-Thank you!
+```json
+{
+  "blocks": [
+    {"type": "header", "text": {"type": "plain_text", "text": ":checkered_flag:  Task Complete", "emoji": true}},
+    {"type": "section", "text": {"type": "mrkdwn", "text": "*TASK-2026-0129-001* - Implement API Response Caching"}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":white_check_mark: All stages approved!"}},
+    {"type": "section", "fields": [
+      {"type": "mrkdwn", "text": "*Duration*\n5 hours 30 minutes"},
+      {"type": "mrkdwn", "text": "*Approvals*\n4/4"}
+    ]},
+    {"type": "divider"},
+    {"type": "context", "elements": [{"type": "mrkdwn", "text": "_Completed at 2026-01-29 16:00 | Thank you! :pray:_"}]}
+  ],
+  "text": ":checkered_flag: Task Complete - TASK-2026-0129-001 - Implement API Response Caching"
+}
 ```
 
 ## Workflow Transition Table

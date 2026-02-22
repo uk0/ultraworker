@@ -1,7 +1,6 @@
 """CLI entrypoint for Ultrawork."""
 
 from pathlib import Path
-from typing import Optional
 
 import typer
 from rich.console import Console
@@ -20,7 +19,7 @@ console = Console()
 
 @app.callback()
 def main(
-    data_dir: Optional[Path] = typer.Option(  # noqa: UP007
+    data_dir: Path | None = typer.Option(  # noqa: UP007
         None, "--data-dir", "-d", help="Data directory path"
     ),
 ) -> None:
@@ -37,7 +36,7 @@ def main(
 @app.command("task:list")
 def task_list(
     active_only: bool = typer.Option(True, "--active/--all", help="Show only active tasks"),
-    stage: Optional[str] = typer.Option(None, "--stage", "-s", help="Filter by stage"),  # noqa: UP007
+    stage: str | None = typer.Option(None, "--stage", "-s", help="Filter by stage"),  # noqa: UP007
 ) -> None:
     """List tasks."""
     config = get_config()
@@ -309,9 +308,9 @@ def slack_set_approver(
 def slack_upload(
     file_path: Path = typer.Argument(..., help="Path to file to upload"),
     channel: str = typer.Argument(..., help="Channel ID or name"),
-    thread_ts: Optional[str] = typer.Option(None, "--thread", "-t", help="Thread timestamp"),  # noqa: UP007
-    title: Optional[str] = typer.Option(None, "--title", help="File title"),  # noqa: UP007
-    comment: Optional[str] = typer.Option(None, "--comment", "-c", help="Initial comment"),  # noqa: UP007
+    thread_ts: str | None = typer.Option(None, "--thread", "-t", help="Thread timestamp"),  # noqa: UP007
+    title: str | None = typer.Option(None, "--title", help="File title"),  # noqa: UP007
+    comment: str | None = typer.Option(None, "--comment", "-c", help="Initial comment"),  # noqa: UP007
 ) -> None:
     """Upload a file to Slack channel or thread."""
     from ultrawork.slack import SlackRegistry, SlackUploader
@@ -362,8 +361,8 @@ def slack_upload(
 def slack_upload_multiple(
     files: list[Path] = typer.Argument(..., help="Paths to files to upload"),
     channel: str = typer.Option(..., "--channel", "-ch", help="Channel ID or name"),
-    thread_ts: Optional[str] = typer.Option(None, "--thread", "-t", help="Thread timestamp"),  # noqa: UP007
-    comment: Optional[str] = typer.Option(None, "--comment", "-c", help="Initial comment"),  # noqa: UP007
+    thread_ts: str | None = typer.Option(None, "--thread", "-t", help="Thread timestamp"),  # noqa: UP007
+    comment: str | None = typer.Option(None, "--comment", "-c", help="Initial comment"),  # noqa: UP007
 ) -> None:
     """Upload multiple files to Slack channel or thread."""
     from ultrawork.slack import SlackRegistry, SlackUploader
@@ -777,21 +776,21 @@ def response_reject(
 def dashboard_start(
     host: str = typer.Option("127.0.0.1", "--host", help="Dashboard host"),
     port: int = typer.Option(7878, "--port", help="Dashboard port"),
-    claude_log_dir: Optional[Path] = typer.Option(  # noqa: UP007
+    claude_log_dir: Path | None = typer.Option(  # noqa: UP007
         None,
         "--claude-log-dir",
         help="Claude Code log directory (default: ~/.claude/projects)",
     ),
-    data_dir: Optional[Path] = typer.Option(  # noqa: UP007
+    data_dir: Path | None = typer.Option(  # noqa: UP007
         None,
         "--data-dir",
         help="Ultrawork data directory (default: from ultrawork.yaml)",
     ),
 ) -> None:
     """Start the local dashboard server."""
+    import errno
     import os
     import signal
-    import errno
 
     from ultrawork.config import find_config_path
     from ultrawork.dashboard import serve_dashboard
@@ -855,9 +854,7 @@ def dashboard_stop() -> None:
 
     try:
         os.kill(state.dashboard_pid, signal.SIGTERM)
-        console.print(
-            f"[green]Sent stop signal to dashboard (PID: {state.dashboard_pid})[/green]"
-        )
+        console.print(f"[green]Sent stop signal to dashboard (PID: {state.dashboard_pid})[/green]")
         state_manager.clear_dashboard()
         console.print("[dim]Dashboard should stop within a few seconds[/dim]")
     except ProcessLookupError:
@@ -989,12 +986,12 @@ def daemon_stop() -> None:
 def start(
     host: str = typer.Option("127.0.0.1", "--host", help="Dashboard host"),
     port: int = typer.Option(7878, "--port", help="Dashboard port"),
-    claude_log_dir: Optional[Path] = typer.Option(  # noqa: UP007
+    claude_log_dir: Path | None = typer.Option(  # noqa: UP007
         None,
         "--claude-log-dir",
         help="Claude Code log directory (default: ~/.claude/projects)",
     ),
-    data_dir: Optional[Path] = typer.Option(  # noqa: UP007
+    data_dir: Path | None = typer.Option(  # noqa: UP007
         None,
         "--data-dir",
         help="Ultrawork data directory (default: from ultrawork.yaml)",
@@ -1060,7 +1057,9 @@ def config_init(
 
 @app.command("cron:list")
 def cron_list(
-    all_jobs: bool = typer.Option(False, "--all", "-a", help="Show all jobs including deleted/completed"),
+    all_jobs: bool = typer.Option(
+        False, "--all", "-a", help="Show all jobs including deleted/completed"
+    ),
 ) -> None:
     """List cron jobs."""
     from ultrawork.scheduler import CronJobManager
@@ -1165,15 +1164,27 @@ def cron_show(
 @app.command("cron:create")
 def cron_create(
     name: str = typer.Argument(..., help="Job name"),
-    schedule: str = typer.Option("weekday", "--schedule", "-s", help="Schedule type: interval|daily|weekday|weekly|cron"),
-    at: Optional[str] = typer.Option(None, "--at", help="Time in HH:MM format (for daily/weekday/weekly)"),  # noqa: UP007
-    hours: Optional[int] = typer.Option(None, "--hours", help="Hours between runs (for interval)"),  # noqa: UP007
-    minutes: Optional[int] = typer.Option(None, "--minutes", help="Minutes between runs (for interval)"),  # noqa: UP007
-    day: Optional[str] = typer.Option(None, "--day", help="Day of week (for weekly)"),  # noqa: UP007
-    expression: Optional[str] = typer.Option(None, "--expression", help="Cron expression (for cron type)"),  # noqa: UP007
+    schedule: str = typer.Option(
+        "weekday", "--schedule", "-s", help="Schedule type: interval|daily|weekday|weekly|cron"
+    ),
+    at: str | None = typer.Option(
+        None, "--at", help="Time in HH:MM format (for daily/weekday/weekly)"
+    ),  # noqa: UP007
+    hours: int | None = typer.Option(None, "--hours", help="Hours between runs (for interval)"),  # noqa: UP007
+    minutes: int | None = typer.Option(
+        None, "--minutes", help="Minutes between runs (for interval)"
+    ),  # noqa: UP007
+    day: str | None = typer.Option(None, "--day", help="Day of week (for weekly)"),  # noqa: UP007
+    expression: str | None = typer.Option(
+        None, "--expression", help="Cron expression (for cron type)"
+    ),  # noqa: UP007
     action: str = typer.Option("check_thread_reactions", "--action", "-a", help="Action type"),
-    notify_user: Optional[str] = typer.Option(None, "--notify-user", help="User ID to notify via DM"),  # noqa: UP007
-    notify_channel: Optional[str] = typer.Option(None, "--notify-channel", help="DM channel ID for notifications"),  # noqa: UP007
+    notify_user: str | None = typer.Option(
+        None, "--notify-user", help="User ID to notify via DM"
+    ),  # noqa: UP007
+    notify_channel: str | None = typer.Option(
+        None, "--notify-channel", help="DM channel ID for notifications"
+    ),  # noqa: UP007
     description: str = typer.Option("", "--description", "-d", help="Job description"),
 ) -> None:
     """Create a new cron job."""

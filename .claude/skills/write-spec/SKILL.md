@@ -109,7 +109,30 @@ workflow:
       approval_requested_at: "2026-01-29T11:00:00"
 ```
 
-### Step 6: Send Slack Second Approval Request
+### Step 6: Send Slack Second Approval Request (Block Kit)
+
+Build the message using `BlockKitBuilder.build_spec_approval()` from `src/ultrawork/slack/block_kit.py`:
+
+```python
+from ultrawork.slack.block_kit import BlockKitBuilder
+
+msg = BlockKitBuilder.build_spec_approval(
+    task_id="TASK-2026-0129-001",
+    title="Implement API Response Caching",
+    file_changes=[
+        "Create `src/cache/` package (4 files)",
+        "Modify `src/api/routes.py` (apply decorator)",
+        "Modify `src/config.py` (Redis settings)",
+    ],
+    test_plan="• 8 unit tests\n• 2 integration tests",
+    spec_file="data/specs/TASK-2026-0129-001_spec.md",
+    channel_id="C0123456789",
+    thread_ts="1706500000.000000",
+)
+# msg = {"blocks": [...], "text": "fallback text"}
+```
+
+Send via MCP tools:
 
 ```
 ToolSearch: "slack"
@@ -119,9 +142,12 @@ ToolSearch: "slack"
 mcp__slack__slack_send_message(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: spec_approval_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
+
+> **Note**: The `blocks` parameter must be a JSON string of the blocks array. The `text` field serves as the fallback for notifications and clients that do not support Block Kit.
 
 **Fallback on failure:**
 ```
@@ -131,7 +157,8 @@ ToolSearch: "+slack-bot"
 mcp__slack-bot-mcp__slack_reply_to_thread(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: spec_approval_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
@@ -139,35 +166,37 @@ Or:
 ```
 mcp__slack-bot-mcp__slack_post_message(
   channel_id: "C0123456789",
-  text: spec_approval_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
-Message:
+Block Kit spec approval message structure:
 
-```
-*Tech Spec Review Request*
-
-*Task*: Implement API Response Caching
-*Spec ID*: SPEC-TASK-2026-0129-001
-
-*Key Changes*:
-- Create `src/cache/` package (4 files)
-- Modify `src/api/routes.py` (apply decorator)
-- Modify `src/config.py` (Redis settings)
-
-*Test Plan*:
-- 8 unit tests
-- 2 integration tests
-
-*Risks*:
-- Cache inconsistency -> Mitigated with write-through + invalidation
-- Redis failure -> Mitigated with DB fallback
-
-Approve: :+1:
-Request changes: :-1: + comment
-
-_Spec file: data/specs/TASK-2026-0129-001_spec.md_
+```json
+{
+  "blocks": [
+    {"type": "header", "text": {"type": "plain_text", "text": ":page_facing_up:  Tech Spec Review Request", "emoji": true}},
+    {"type": "section", "fields": [
+      {"type": "mrkdwn", "text": "*Task*\nImplement API Response Caching"},
+      {"type": "mrkdwn", "text": "*Task ID*\n`TASK-2026-0129-001`"},
+      {"type": "mrkdwn", "text": "*Spec File*\n`data/specs/TASK-2026-0129-001_spec.md`"},
+      {"type": "mrkdwn", "text": "*Stage*\nTech Spec (2/4)"}
+    ]},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":file_folder: *Key Changes*"}},
+    {"type": "section", "text": {"type": "mrkdwn", "text": "• Create `src/cache/` package (4 files)\n• Modify `src/api/routes.py` (apply decorator)\n• Modify `src/config.py` (Redis settings)"}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":test_tube: *Test Plan*\n• 8 unit tests\n• 2 integration tests"}},
+    {"type": "divider"},
+    {"type": "actions", "block_id": "approval_TASK-2026-0129-001_tech_spec", "elements": [
+      {"type": "button", "text": {"type": "plain_text", "text": ":white_check_mark: Approve", "emoji": true}, "style": "primary", "action_id": "uw_approve_tech_spec", "value": "{\"task_id\":\"TASK-2026-0129-001\",\"stage\":\"tech_spec\",\"channel_id\":\"C0123456789\",\"thread_ts\":\"1706500000.000000\"}"},
+      {"type": "button", "text": {"type": "plain_text", "text": ":x: Request Changes", "emoji": true}, "style": "danger", "action_id": "uw_reject_tech_spec", "value": "{\"task_id\":\"TASK-2026-0129-001\",\"stage\":\"tech_spec\",\"channel_id\":\"C0123456789\",\"thread_ts\":\"1706500000.000000\"}"}
+    ]},
+    {"type": "context", "elements": [{"type": "mrkdwn", "text": "_Spec: data/specs/TASK-2026-0129-001_spec.md | Task: TASK-2026-0129-001_"}]}
+  ],
+  "text": ":page_facing_up: Tech Spec Review - Implement API Response Caching (TASK-2026-0129-001)"
+}
 ```
 
 ## Output Example

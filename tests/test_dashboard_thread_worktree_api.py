@@ -242,7 +242,9 @@ def test_build_session_worktree_supports_tail_and_before_seq_chunking(tmp_path: 
     assert cursor_payload["events"] == []
 
 
-def test_handle_create_thread_session_creates_manual_session(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+def test_handle_create_thread_session_creates_manual_session(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
     cfg = _cfg(tmp_path)
 
     def _fake_start_executor(**kwargs):  # noqa: ANN003
@@ -310,8 +312,13 @@ def test_build_thread_sessions_includes_request_full(tmp_path: Path) -> None:
     payload = _build_thread_sessions(cfg, "CFULL", "1700.900")
     by_id = {item["session_id"]: item for item in payload["sessions"]}
 
-    assert by_id[session_with_mention.session_id]["request_full"] == "<@U123ABCD> mention priority message"
-    assert by_id[session_without_mention.session_id]["request_full"] == "original session message only"
+    assert (
+        by_id[session_with_mention.session_id]["request_full"]
+        == "<@U123ABCD> mention priority message"
+    )
+    assert (
+        by_id[session_without_mention.session_id]["request_full"] == "original session message only"
+    )
 
 
 def test_handle_create_thread_session_injects_context_into_executor_prompt(

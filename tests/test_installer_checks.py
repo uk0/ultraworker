@@ -104,7 +104,7 @@ class TestGenerateUltraworkYaml:
         state = SetupState(bot_user_id="U123ABC", trigger_mode="mention")
         content = generate_ultrawork_yaml(state)
         assert "bot_user_id: U123ABC" in content
-        assert "trigger_pattern: \"<@U123ABC>\"" in content
+        assert 'trigger_pattern: "<@U123ABC>"' in content
 
     def test_keyword_mode(self) -> None:
         state = SetupState(
@@ -113,7 +113,7 @@ class TestGenerateUltraworkYaml:
             custom_keyword="!ultra",
         )
         content = generate_ultrawork_yaml(state)
-        assert "trigger_pattern: \"!ultra\"" in content
+        assert 'trigger_pattern: "!ultra"' in content
 
 
 class TestGenerateMcpJson:

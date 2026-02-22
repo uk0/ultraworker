@@ -287,7 +287,7 @@ class WorkflowGraph(BaseModel):
         """Compute node levels for layout using BFS."""
         levels: list[list[str]] = []
         visited: set[str] = set()
-        in_degree: dict[str, int] = {nid: 0 for nid in self.nodes}
+        in_degree: dict[str, int] = dict.fromkeys(self.nodes, 0)
 
         # Compute in-degrees
         for node in self.nodes.values():

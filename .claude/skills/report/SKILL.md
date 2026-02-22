@@ -79,7 +79,32 @@ Add Final Report section to task file
 
 (See existing documentation for detailed report template)
 
-### Step 5: Send Slack Final Approval Request
+### Step 5: Send Slack Final Approval Request (Block Kit)
+
+Build the message using `BlockKitBuilder.build_final_report_approval()` from `src/ultrawork/slack/block_kit.py`:
+
+```python
+from ultrawork.slack.block_kit import BlockKitBuilder
+
+msg = BlockKitBuilder.build_final_report_approval(
+    task_id="TASK-2026-0129-001",
+    title="Implement API Response Caching",
+    summary="Added write-through Redis cache layer, improving API response time by 88%.",
+    results=[
+        "Response time: 800ms -> 95ms (88% improvement)",
+        "Cache hit rate: 85%",
+    ],
+    changes_summary="• New files: 4 (src/cache/*)\n• Modified files: 2\n• Tests: 10 added (92% coverage)",
+    verification="Tests passed (18/18)\nCode review complete (PR #42)\nStaging deployment complete",
+    stage_num=4,
+    total_stages=4,
+    channel_id="C0123456789",
+    thread_ts="1706500000.000000",
+)
+# msg = {"blocks": [...], "text": "fallback text"}
+```
+
+Send via MCP tools:
 
 ```
 ToolSearch: "slack"
@@ -89,9 +114,12 @@ ToolSearch: "slack"
 mcp__slack__slack_send_message(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: final_report_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
+
+> **Note**: The `blocks` parameter must be a JSON string of the blocks array. The `text` field serves as the fallback for notifications and clients that do not support Block Kit.
 
 **Fallback on failure:**
 ```
@@ -101,7 +129,8 @@ ToolSearch: "+slack-bot"
 mcp__slack-bot-mcp__slack_reply_to_thread(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: final_report_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
@@ -109,39 +138,40 @@ Or:
 ```
 mcp__slack-bot-mcp__slack_post_message(
   channel_id: "C0123456789",
-  text: final_report_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
-Message:
-```
-*Final Report - TASK-2026-0129-001*
+Block Kit final report approval message structure:
 
-*Title*: Implement API Response Caching
-
-### Summary
-Added write-through Redis cache layer, improving API response time by 88%.
-
-### Key Results
-| Metric | Before | After |
-|--------|--------|-------|
-| Response time | 800ms | 95ms |
-| Cache hit rate | - | 85% |
-
-### Changes
-- New files: 4 (src/cache/*)
-- Modified files: 2
-- Tests: 10 added (92% coverage)
-
-### Verification
-Tests passed (18/18)
-Code review complete (PR #42)
-Staging deployment complete
-
-Final approval: :+1:
-Request changes: :-1: + comment
-
-_This is the final approval stage (4/4)_
+```json
+{
+  "blocks": [
+    {"type": "header", "text": {"type": "plain_text", "text": ":clipboard:  Final Report", "emoji": true}},
+    {"type": "section", "fields": [
+      {"type": "mrkdwn", "text": "*Task*\nImplement API Response Caching"},
+      {"type": "mrkdwn", "text": "*Task ID*\n`TASK-2026-0129-001`"},
+      {"type": "mrkdwn", "text": "*Stage*\nFinal Report (4/4)"}
+    ]},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":page_with_curl: *Summary*\nAdded write-through Redis cache layer, improving API response time by 88%."}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":trophy: *Key Results*"}},
+    {"type": "section", "text": {"type": "mrkdwn", "text": "• Response time: 800ms -> 95ms (88% improvement)\n• Cache hit rate: 85%"}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":hammer_and_wrench: *Changes*\n• New files: 4 (src/cache/*)\n• Modified files: 2\n• Tests: 10 added (92% coverage)"}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":white_check_mark: *Verification*\nTests passed (18/18)\nCode review complete (PR #42)\nStaging deployment complete"}},
+    {"type": "divider"},
+    {"type": "actions", "block_id": "approval_TASK-2026-0129-001_final_report", "elements": [
+      {"type": "button", "text": {"type": "plain_text", "text": ":tada: Final Approval", "emoji": true}, "style": "primary", "action_id": "uw_approve_final_report", "value": "{\"task_id\":\"TASK-2026-0129-001\",\"stage\":\"final_report\",\"channel_id\":\"C0123456789\",\"thread_ts\":\"1706500000.000000\"}"},
+      {"type": "button", "text": {"type": "plain_text", "text": ":x: Request Changes", "emoji": true}, "style": "danger", "action_id": "uw_reject_final_report", "value": "{\"task_id\":\"TASK-2026-0129-001\",\"stage\":\"final_report\",\"channel_id\":\"C0123456789\",\"thread_ts\":\"1706500000.000000\"}"}
+    ]},
+    {"type": "context", "elements": [{"type": "mrkdwn", "text": "_This is the final approval stage | Task: TASK-2026-0129-001_"}]}
+  ],
+  "text": ":clipboard: Final Report - Implement API Response Caching (TASK-2026-0129-001)"
+}
 ```
 
 ## Simple Workflow Report
@@ -216,23 +246,38 @@ Performance benchmarks complete
 
 ## Completion After Approval
 
-On final approval (after `/approve` execution):
+On final approval (after `/approve` execution), build the completion message using `BlockKitBuilder.build_completion_notification()`:
 
+```python
+from ultrawork.slack.block_kit import BlockKitBuilder
+
+msg = BlockKitBuilder.build_completion_notification(
+    task_id="TASK-2026-0129-001",
+    title="Implement API Response Caching",
+    duration="5 hours 30 minutes",
+    approval_count=4,
+    total_stages=4,
+)
 ```
-*Task Complete*
 
-TASK-2026-0129-001 - Implement API Response Caching
+Block Kit completion message structure:
 
-All stages approved!
-
-*Time Spent*: 5 hours 30 minutes
-*Approvals*: 4/4
-
-*Results*:
-- 88% response time improvement
-- SLA compliance achieved
-
-Thank you!
+```json
+{
+  "blocks": [
+    {"type": "header", "text": {"type": "plain_text", "text": ":checkered_flag:  Task Complete", "emoji": true}},
+    {"type": "section", "text": {"type": "mrkdwn", "text": "*TASK-2026-0129-001* - Implement API Response Caching"}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":white_check_mark: All stages approved!"}},
+    {"type": "section", "fields": [
+      {"type": "mrkdwn", "text": "*Duration*\n5 hours 30 minutes"},
+      {"type": "mrkdwn", "text": "*Approvals*\n4/4"}
+    ]},
+    {"type": "divider"},
+    {"type": "context", "elements": [{"type": "mrkdwn", "text": "_Completed at 2026-01-29 16:00 | Thank you! :pray:_"}]}
+  ],
+  "text": ":checkered_flag: Task Complete - TASK-2026-0129-001 - Implement API Response Caching"
+}
 ```
 
 Final task file status:

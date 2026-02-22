@@ -39,6 +39,7 @@ from ultrawork.config import get_config
 from ultrawork.events.interaction_logger import InteractionLogger
 from ultrawork.models.agent import AgentRole
 from ultrawork.slack.downloader import SlackFileDownloader
+from ultrawork.slack.reaction_approval import ReactionApprovalHandler
 from ultrawork.slack.state import PollingStateManager
 
 # Configure logging
@@ -106,6 +107,7 @@ def _get_language_prompt() -> str:
         f"- All exploration summaries\n\n"
         f"Technical terms, code identifiers, file paths, and command names should remain in their original form.\n"
     )
+
 
 # Complexity keywords for classification
 COMPLEX_KEYWORDS = [
@@ -367,7 +369,9 @@ class SlackSDKPoller:
                 ]
 
             matches = [m for m in matches if self._is_mention_to_me(m)]
-            matches.sort(key=lambda message: self._ts_to_float(message.get("ts", "0")), reverse=True)
+            matches.sort(
+                key=lambda message: self._ts_to_float(message.get("ts", "0")), reverse=True
+            )
 
             logger.info(f"Found {len(matches)} new mentions via search")
             return matches
@@ -868,21 +872,26 @@ This request has been classified as complex and will proceed through a step-by-s
 - thread_ts: {thread_ts}
 - text: {mention_data["text"]}
 - user: {mention_data["user"]}
-{f'''
+{
+                    f'''
 ## Thread Attachments
 {files_context}
-''' if files_context else ''}
+'''
+                    if files_context
+                    else ""
+                }
 ## 📌 Required Execution Order
 
-### Step 1: Initial Response (MUST send)
-First, send a message to notify the user that work is starting:
+### Step 1: Initial Response (MUST send - Block Kit)
+First, send a Block Kit message to notify the user that work is starting:
 
 ```
 ToolSearch: "slack"
-mcp__slack__slack_post_message(
+mcp__slack__slack_send_message(
   channel_id: "{channel_id}",
-  text: "Got it! 🔍\\n\\nThis appears to be a complex task, so I'll proceed step by step:\\n1️⃣ Analyzing context...\\n2️⃣ TODO creation pending\\n3️⃣ Work proceeds after approval\\n\\nI'll share detailed analysis results shortly.",
-  thread_ts: "{thread_ts}"
+  thread_ts: "{thread_ts}",
+  text: "Got it! Processing your request...",
+  blocks: '[{{"type":"section","text":{{"type":"mrkdwn","text":":mag: *Got it!*"}}}},{{"type":"divider"}},{{"type":"section","text":{{"type":"mrkdwn","text":"This appears to be a complex task, so I\\'ll proceed step by step:\\n1️⃣ Analyzing context...\\n2️⃣ TODO creation pending\\n3️⃣ Work proceeds after approval"}}}},{{"type":"context","elements":[{{"type":"mrkdwn","text":"_I\\'ll share detailed analysis results shortly._"}}]}}]'
 )
 ```
 
@@ -900,19 +909,22 @@ Skill: create-todo
 Args: [exploration result ID]
 ```
 
-Once the TODO is created, an approval request will be automatically sent to Slack.
+Once the TODO is created, an approval request with reaction guide will be automatically sent to Slack via Block Kit.
+The user can approve by adding :+1: reaction or reject by adding :-1: reaction on the approval message.
 
-### Step 4: Completion Notice
+### Step 4: Completion Notice (Block Kit)
 ```
-mcp__slack__slack_post_message(
+mcp__slack__slack_send_message(
   channel_id: "{channel_id}",
-  text: "📋 Analysis complete!\\n\\nPlease review and approve the TODO list in this thread.\\n✅ Approve: :+1: reaction\\n❌ Needs revision: :-1: reaction + feedback",
-  thread_ts: "{thread_ts}"
+  thread_ts: "{thread_ts}",
+  text: "Analysis complete! Please review the TODO list.",
+  blocks: '[{{"type":"section","text":{{"type":"mrkdwn","text":":clipboard: *Analysis complete!*"}}}},{{"type":"divider"}},{{"type":"section","text":{{"type":"mrkdwn","text":"Please review and approve the TODO list above."}}}},{{"type":"context","elements":[{{"type":"mrkdwn","text":"_위의 TODO 메시지에 :+1: (승인) 또는 :-1: (수정 요청) 리액션을 달아주세요._"}}]}}]'
 )
 ```
 
 ## ⚠️ Important: Slack Message Required
-- Send progress updates to Slack at **every** step
+- Send progress updates to Slack at **every** step using Block Kit format
+- All approval request messages MUST include reaction guide (:+1: = approve, :-1: = reject)
 - If message sending fails, use slack-bot MCP: mcp__slack-bot__slack_reply_to_thread
 - NEVER end work without sending a message"""
             else:
@@ -928,10 +940,14 @@ mcp__slack__slack_post_message(
 - text: {mention_data["text"]}
 - user: {mention_data["user"]}
 - input_file: {input_file}
-{f'''
+{
+                    f'''
 ## Thread Attachments
 {files_context}
-''' if files_context else ''}
+'''
+                    if files_context
+                    else ""
+                }
 ## 📌 Required Execution Order
 
 ### Step 1: Load Slack tools
@@ -950,27 +966,39 @@ Extract key terms from the message and search:
 mcp__slack__slack_get_channel_history(channel_id: "{channel_id}", limit: 30)
 ```
 
-### Step 4: Generate and send response (⚠️ Required)
-Based on context, write a natural response and **MUST** send it:
+### Step 4: Generate and send response (⚠️ Required - Block Kit)
+Based on context, write a natural response and **MUST** send it using Block Kit format:
 
 ```
-mcp__slack__slack_post_message(
+mcp__slack__slack_send_message(
   channel_id: "{channel_id}",
-  text: [generated response],
-  thread_ts: "{thread_ts}"
+  thread_ts: "{thread_ts}",
+  text: [generated response as plain text fallback],
+  blocks: [Block Kit blocks JSON string - use section blocks for content, context blocks for metadata]
 )
+```
+
+Example Block Kit structure for a response:
+```json
+[
+  {{"type": "section", "text": {{"type": "mrkdwn", "text": ":wave: *Response Title*\\n\\nYour detailed answer here..."}}}},
+  {{"type": "divider"}},
+  {{"type": "context", "elements": [{{"type": "mrkdwn", "text": "_Searched N related conversations_"}}]}}
+]
 ```
 
 ## ⚠️ Important: Slack Message Required
 
 1. **NEVER end without sending a message**
-2. If slack MCP fails, use slack-bot MCP:
+2. If Block Kit `blocks` parameter is not supported by the MCP tool, fall back to plain `text` only
+3. If slack MCP fails, use slack-bot MCP:
    - mcp__slack-bot__slack_reply_to_thread(channel_id, thread_ts, text)
-3. Write responses naturally following Human Framework rules
-4. Even if no context found, send a response like "I couldn't find related information"
+4. Write responses naturally following Human Framework rules
+5. Even if no context found, send a response like "I couldn't find related information"
 
 ## Response Style
 - Friendly and natural language
+- Use Block Kit sections for structured information
 - Use emojis appropriately
 - Be honest if uncertain
 - Keep it short and clear"""
@@ -1299,6 +1327,21 @@ mcp__slack__slack_post_message(
         except Exception as e:
             logger.warning(f"Cron runner initialization failed (non-fatal): {e}")
 
+        # Initialize reaction approval handler
+        reaction_handler = None
+        try:
+            token = os.environ.get("SLACK_TOKEN")
+            cookie = os.environ.get("SLACK_COOKIE")
+            if token:
+                reaction_handler = ReactionApprovalHandler(
+                    slack_token=token,
+                    data_dir=self.data_dir,
+                    slack_cookie=cookie,
+                )
+                logger.info("Reaction approval handler initialized")
+        except Exception as e:
+            logger.warning(f"Reaction approval handler init failed (non-fatal): {e}")
+
         # Set up signal handlers
         def handle_signal(signum: int, frame) -> None:  # noqa: ARG001
             logger.info(f"Received signal {signum}, stopping...")
@@ -1330,6 +1373,19 @@ mcp__slack__slack_post_message(
                             logger.info(f"Cron: executed {executed} jobs")
                     except Exception as e:
                         logger.error(f"Cron tick error: {e}")
+
+                # Check for reaction-based approvals
+                if reaction_handler:
+                    try:
+                        results = await reaction_handler.check_and_process()
+                        processed = [r for r in results if r.action in ("approved", "rejected")]
+                        if processed:
+                            logger.info(
+                                f"Reaction approvals: {len(processed)} processed "
+                                f"({', '.join(f'{r.task_id}={r.action}' for r in processed)})"
+                            )
+                    except Exception as e:
+                        logger.error(f"Reaction approval check error: {e}")
 
                 # Wait for next poll or stop signal
                 try:

@@ -195,9 +195,7 @@ class CronJobManager:
         self._save_job(job)
         return True
 
-    def record_execution(
-        self, job_id: str, success: bool = True, error: str | None = None
-    ) -> bool:
+    def record_execution(self, job_id: str, success: bool = True, error: str | None = None) -> bool:
         """Record a job execution result."""
         job = self.load_job(job_id)
         if not job:

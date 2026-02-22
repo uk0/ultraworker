@@ -165,7 +165,37 @@ API response time averages 800ms, approaching SLA violation. Target 200ms or les
 - Main work: Cache layer implementation and testing
 ```
 
-### Step 5: Send Slack Approval Request
+### Step 5: Send Slack Approval Request (Block Kit)
+
+Build the message using `BlockKitBuilder.build_todo_approval()` from `src/ultrawork/slack/block_kit.py`:
+
+```python
+from ultrawork.slack.block_kit import BlockKitBuilder
+
+msg = BlockKitBuilder.build_todo_approval(
+    task_id="TASK-2026-0129-001",
+    title="Implement API Response Caching",
+    workflow_type="full",
+    todo_items=[
+        "Install Redis client library",
+        "Create cache utility module",
+        "Implement write-through cache decorator",
+        "Apply cache to API endpoints",
+        "Implement cache invalidation logic",
+        "Write unit tests",
+        "Write integration tests",
+        "Run performance benchmarks",
+    ],
+    exploration_id="EXP-2026-0129-001",
+    estimated_effort="Medium (2-3 days)",
+    decisions=["Write-through approach (decided 1/27)", "TTL 5 minutes (decided 1/28)"],
+    channel_id="C0123456789",
+    thread_ts="1706500000.000000",
+)
+# msg = {"blocks": [...], "text": "fallback text"}
+```
+
+Send via MCP tools:
 
 ```
 ToolSearch: "slack"
@@ -175,9 +205,12 @@ ToolSearch: "slack"
 mcp__slack__slack_send_message(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: approval_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
+
+> **Note**: The `blocks` parameter must be a JSON string of the blocks array. The `text` field serves as the fallback for notifications and clients that do not support Block Kit.
 
 **Fallback on failure:**
 ```
@@ -187,7 +220,8 @@ ToolSearch: "+slack-bot"
 mcp__slack-bot-mcp__slack_reply_to_thread(
   channel_id: "C0123456789",
   thread_ts: "1706500000.000000",
-  text: approval_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
@@ -195,39 +229,40 @@ Or:
 ```
 mcp__slack-bot-mcp__slack_post_message(
   channel_id: "C0123456789",
-  text: approval_message
+  text: msg["text"],
+  blocks: json.dumps(msg["blocks"])
 )
 ```
 
-Approval request message:
+Block Kit approval message structure:
 
-```
-*TODO List Review Request*
-
-*Task*: Implement API Response Caching
-*Type*: Full Workflow (4-stage approval)
-*Based on*: EXP-2026-0129-001
-
-*TODO Items*:
-1. Install Redis client library
-2. Create cache utility module
-3. Implement write-through cache decorator
-4. Apply cache to API endpoints
-5. Implement cache invalidation logic
-6. Write unit tests
-7. Write integration tests
-8. Run performance benchmarks
-
-*Already Decided*:
-- Write-through approach (decided 1/27)
-- TTL 5 minutes (decided 1/28)
-
-*Estimated Effort*: Medium (2-3 days)
-
-Approve: :+1: reaction
-Request changes: :-1: reaction + comment
-
-_Task ID: TASK-2026-0129-001_
+```json
+{
+  "blocks": [
+    {"type": "header", "text": {"type": "plain_text", "text": ":clipboard:  TODO List Review Request", "emoji": true}},
+    {"type": "section", "fields": [
+      {"type": "mrkdwn", "text": "*Task*\nImplement API Response Caching"},
+      {"type": "mrkdwn", "text": "*Type*\nFull Workflow (4-stage)"},
+      {"type": "mrkdwn", "text": "*Task ID*\n`TASK-2026-0129-001`"},
+      {"type": "mrkdwn", "text": "*Based on*\n`EXP-2026-0129-001`"}
+    ]},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":memo: *TODO Items*"}},
+    {"type": "section", "text": {"type": "mrkdwn", "text": "1. Install Redis client library\n2. Create cache utility module\n3. Implement write-through cache decorator\n4. Apply cache to API endpoints\n5. Implement cache invalidation logic\n6. Write unit tests\n7. Write integration tests\n8. Run performance benchmarks"}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":bulb: *Already Decided*"}},
+    {"type": "section", "text": {"type": "mrkdwn", "text": "• Write-through approach (decided 1/27)\n• TTL 5 minutes (decided 1/28)"}},
+    {"type": "divider"},
+    {"type": "section", "text": {"type": "mrkdwn", "text": ":bar_chart: *Estimated Effort*: Medium (2-3 days)"}},
+    {"type": "divider"},
+    {"type": "actions", "block_id": "approval_TASK-2026-0129-001_todo", "elements": [
+      {"type": "button", "text": {"type": "plain_text", "text": ":white_check_mark: Approve", "emoji": true}, "style": "primary", "action_id": "uw_approve_todo", "value": "{\"task_id\":\"TASK-2026-0129-001\",\"stage\":\"todo\",\"channel_id\":\"C0123456789\",\"thread_ts\":\"1706500000.000000\"}"},
+      {"type": "button", "text": {"type": "plain_text", "text": ":x: Request Changes", "emoji": true}, "style": "danger", "action_id": "uw_reject_todo", "value": "{\"task_id\":\"TASK-2026-0129-001\",\"stage\":\"todo\",\"channel_id\":\"C0123456789\",\"thread_ts\":\"1706500000.000000\"}"}
+    ]},
+    {"type": "context", "elements": [{"type": "mrkdwn", "text": "_Task ID: TASK-2026-0129-001 | Stage 1/4_"}]}
+  ],
+  "text": ":clipboard: TODO Review Request - Implement API Response Caching (TASK-2026-0129-001)"
+}
 ```
 
 ## Output Example

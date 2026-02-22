@@ -21,6 +21,7 @@ from ultrawork.models.cronjob import (
     CronJobAction,
     CronJobStatus,
     CronScheduleType,
+    ThreadTarget,
 )
 from ultrawork.scheduler.manager import CronJobManager
 
@@ -124,16 +125,17 @@ class CronRunner:
 
         return False
 
-    def _match_cron_expression(
-        self, expression: str, now: datetime, last_run: datetime
-    ) -> bool:
+    def _match_cron_expression(self, expression: str, now: datetime, last_run: datetime) -> bool:
         """Basic cron expression matcher.
 
         Supports: minute hour day_of_month month day_of_week
-        Only handles simple patterns (no ranges, steps, etc.)
+        Handles ranges (1-5), comma-separated values (9,13,17), and wildcards (*).
+
+        Note: day_of_week uses standard cron convention: 0=Sunday, 1-6=Mon-Sat.
+        Python's weekday() returns 0=Monday, 6=Sunday, so we convert.
 
         Args:
-            expression: Cron expression (e.g., "0 9 * * 1-5")
+            expression: Cron expression (e.g., "0 9,13,17 * * 1-5")
             now: Current time
             last_run: Last execution time
         """
@@ -146,13 +148,21 @@ class CronRunner:
         def _matches(field: str, value: int) -> bool:
             if field == "*":
                 return True
+            # Handle comma-separated values (may contain ranges)
+            if "," in field:
+                for part in field.split(","):
+                    part = part.strip()
+                    if "-" in part:
+                        start, end = map(int, part.split("-"))
+                        if start <= value <= end:
+                            return True
+                    elif value == int(part):
+                        return True
+                return False
             # Handle ranges like "1-5"
             if "-" in field:
                 start, end = map(int, field.split("-"))
                 return start <= value <= end
-            # Handle comma-separated values
-            if "," in field:
-                return value in [int(x) for x in field.split(",")]
             return value == int(field)
 
         if not _matches(minute, now.minute):
@@ -163,13 +173,14 @@ class CronRunner:
             return False
         if not _matches(month, now.month):
             return False
-        if not _matches(dow, now.weekday()):
+
+        # Convert Python weekday (0=Mon, 6=Sun) to cron weekday (0=Sun, 1-6=Mon-Sat)
+        cron_dow = (now.weekday() + 1) % 7
+        if not _matches(dow, cron_dow):
             return False
 
         # Ensure we haven't already run this minute
-        return last_run.replace(second=0, microsecond=0) < now.replace(
-            second=0, microsecond=0
-        )
+        return last_run.replace(second=0, microsecond=0) < now.replace(second=0, microsecond=0)
 
     def _get_slack_client(self):
         """Create a Slack WebClient if token is available."""
@@ -183,8 +194,62 @@ class CronRunner:
             headers["Cookie"] = f"d={self.slack_cookie}"
         return WebClient(token=self.slack_token, headers=headers)
 
+    def _discover_threads_from_channels(
+        self,
+        client,
+        channel_ids: list[str],
+    ) -> list[ThreadTarget]:
+        """Discover recent active threads from channel_targets.
+
+        When thread_targets is empty, fetches channel history and extracts
+        threads (messages with replies) to monitor.
+
+        Args:
+            client: Slack WebClient
+            channel_ids: Channel IDs to search for threads
+
+        Returns:
+            List of discovered ThreadTarget objects
+        """
+        discovered = []
+
+        for channel_id in channel_ids:
+            try:
+                result = client.conversations_history(
+                    channel=channel_id,
+                    limit=50,
+                )
+                messages = result.get("messages", [])
+
+                for msg in messages:
+                    reply_count = msg.get("reply_count", 0)
+                    if reply_count == 0:
+                        continue
+
+                    thread_ts = msg.get("thread_ts") or msg.get("ts")
+                    if not thread_ts:
+                        continue
+
+                    discovered.append(
+                        ThreadTarget(
+                            channel_id=channel_id,
+                            thread_ts=thread_ts,
+                            description=msg.get("text", "")[:80],
+                        )
+                    )
+
+            except Exception as e:
+                logger.error(f"Failed to discover threads in {channel_id}: {e}")
+
+        return discovered
+
     def _execute_check_thread_reactions(self, job: CronJob) -> CronExecutionLog:
-        """Execute a thread reaction checking job."""
+        """Execute a thread reaction checking job.
+
+        In addition to the original notification behavior, this now also
+        triggers automatic approval/rejection when approval-related reactions
+        are detected on threads associated with pending tasks.
+        """
         log = CronExecutionLog(
             log_id=str(uuid.uuid4())[:8],
             job_id=job.job_id,
@@ -197,8 +262,31 @@ class CronRunner:
             log.error = "No Slack token available"
             return log
 
+        # Determine thread list: use thread_targets if available,
+        # otherwise discover from channel_targets
+        thread_targets = list(job.thread_targets)
+        if not thread_targets and job.channel_targets:
+            thread_targets = self._discover_threads_from_channels(
+                client, job.channel_targets
+            )
+
+        # Initialize reaction approval handler for auto-processing
+        reaction_handler = None
+        if self.slack_token:
+            try:
+                from ultrawork.slack.reaction_approval import ReactionApprovalHandler
+
+                reaction_handler = ReactionApprovalHandler(
+                    slack_token=self.slack_token,
+                    data_dir=self.data_dir,
+                    slack_cookie=self.slack_cookie,
+                )
+            except Exception as e:
+                logger.debug(f"Reaction approval handler not available: {e}")
+
         findings = []
-        for target in job.thread_targets:
+        auto_approvals = []
+        for target in thread_targets:
             try:
                 result = client.conversations_replies(
                     channel=target.channel_id,
@@ -223,17 +311,40 @@ class CronRunner:
                 ]
                 log.new_replies_found += len(new_replies)
 
-                # Check for reactions on thread parent
+                # Check for reactions on all messages (not just parent)
                 parent = messages[0] if messages else {}
-                reactions = parent.get("reactions", [])
-                for reaction in reactions:
-                    if reaction.get("name") in ("thumbsup", "+1", "white_check_mark"):
-                        log.new_reactions_found += 1
+                all_reactions = parent.get("reactions", [])
+                approval_detected = False
+                rejection_detected = False
+                reactor_user = ""
+
+                for msg in messages:
+                    for reaction in msg.get("reactions", []):
+                        name = reaction.get("name", "")
+                        users = reaction.get("users", [])
+                        if name in ("thumbsup", "+1", "white_check_mark", "heavy_check_mark"):
+                            log.new_reactions_found += 1
+                            if not approval_detected and users:
+                                approval_detected = True
+                                reactor_user = users[0]
+                        elif name in ("thumbsdown", "-1", "x", "heavy_multiplication_x"):
+                            if not rejection_detected and users:
+                                rejection_detected = True
+                                reactor_user = users[0]
+
+                # Try auto-approval if reaction handler available
+                if reaction_handler and (approval_detected or rejection_detected):
+                    auto_approvals.append({
+                        "channel_id": target.channel_id,
+                        "thread_ts": target.thread_ts,
+                        "action": "approved" if approval_detected else "rejected",
+                        "user_id": reactor_user,
+                    })
 
                 if new_replies:
                     reply_summaries = []
                     for reply in new_replies[:5]:  # Max 5 for summary
-                        text = reply.get("text", "")[:100]
+                        text = reply.get("text", "").replace("\n", " ")[:30]
                         user = reply.get("user", "unknown")
                         reply_summaries.append(f"<@{user}>: {text}")
 
@@ -244,29 +355,52 @@ class CronRunner:
                             "description": target.description,
                             "new_replies": len(new_replies),
                             "reply_summaries": reply_summaries,
-                            "reactions": [r.get("name", "") for r in reactions],
+                            "reactions": [r.get("name", "") for r in all_reactions],
                         }
                     )
 
             except Exception as e:
-                logger.error(
-                    f"Failed to check thread {target.channel_id}/{target.thread_ts}: {e}"
-                )
+                logger.error(f"Failed to check thread {target.channel_id}/{target.thread_ts}: {e}")
                 log.error = str(e)
+
+        # Process auto-approvals via reaction handler
+        if reaction_handler and auto_approvals:
+            try:
+                import asyncio
+
+                results = asyncio.get_event_loop().run_until_complete(
+                    reaction_handler.check_and_process()
+                )
+                processed = [r for r in results if r.action in ("approved", "rejected")]
+                if processed:
+                    logger.info(
+                        f"Cron auto-approval: {len(processed)} tasks processed via reactions"
+                    )
+            except Exception as e:
+                logger.error(f"Auto-approval processing failed: {e}")
 
         # Send DM if there are findings and notification is configured
         if findings and job.notify_channel_id:
-            dm_text = self._format_thread_check_dm(job, findings)
-            log.dm_content = dm_text
-            try:
-                client.chat_postMessage(
-                    channel=job.notify_channel_id,
-                    text=dm_text,
-                )
+            from ultrawork.slack.block_kit import BlockKitBuilder, send_block_message
+
+            message = BlockKitBuilder.build_thread_check_dm(job.name, findings)
+            log.dm_content = message.get("text", "")
+            result = send_block_message(client, job.notify_channel_id, message)
+            if result:
                 log.dm_sent = True
-            except Exception as e:
-                logger.error(f"Failed to send DM: {e}")
-                log.error = f"DM send failed: {e}"
+            else:
+                # Fallback to plain text
+                dm_text = self._format_thread_check_dm(job, findings)
+                log.dm_content = dm_text
+                try:
+                    client.chat_postMessage(
+                        channel=job.notify_channel_id,
+                        text=dm_text,
+                    )
+                    log.dm_sent = True
+                except Exception as e:
+                    logger.error(f"Failed to send DM: {e}")
+                    log.error = f"DM send failed: {e}"
 
         log.duration_ms = int((time.time() - start_time) * 1000)
         return log
@@ -324,11 +458,7 @@ class CronRunner:
                         last_run_dt = datetime.fromisoformat(last_run_dt)
                     last_run_ts = str(last_run_dt.timestamp())
 
-                new_matches = [
-                    m
-                    for m in matches
-                    if float(m.get("ts", "0")) > float(last_run_ts)
-                ]
+                new_matches = [m for m in matches if float(m.get("ts", "0")) > float(last_run_ts)]
 
                 for m in new_matches:
                     findings.append(
@@ -344,16 +474,25 @@ class CronRunner:
                 logger.error(f"Mention scan failed for query '{query}': {e}")
 
         if findings and job.notify_channel_id:
-            dm_text = self._format_mention_scan_dm(job, findings)
-            log.dm_content = dm_text
-            try:
-                client.chat_postMessage(
-                    channel=job.notify_channel_id,
-                    text=dm_text,
-                )
+            from ultrawork.slack.block_kit import BlockKitBuilder, send_block_message
+
+            message = BlockKitBuilder.build_mention_scan_dm(job.name, findings)
+            log.dm_content = message.get("text", "")
+            result = send_block_message(client, job.notify_channel_id, message)
+            if result:
                 log.dm_sent = True
-            except Exception as e:
-                logger.error(f"Failed to send DM: {e}")
+            else:
+                # Fallback to plain text
+                dm_text = self._format_mention_scan_dm(job, findings)
+                log.dm_content = dm_text
+                try:
+                    client.chat_postMessage(
+                        channel=job.notify_channel_id,
+                        text=dm_text,
+                    )
+                    log.dm_sent = True
+                except Exception as e:
+                    logger.error(f"Failed to send DM: {e}")
 
         log.pending_tasks_found = len(findings)
         log.duration_ms = int((time.time() - start_time) * 1000)
@@ -377,16 +516,25 @@ class CronRunner:
         if pending and job.notify_channel_id:
             client = self._get_slack_client()
             if client:
-                dm_text = self._format_pending_tasks_dm(job, pending)
-                log.dm_content = dm_text
-                try:
-                    client.chat_postMessage(
-                        channel=job.notify_channel_id,
-                        text=dm_text,
-                    )
+                from ultrawork.slack.block_kit import BlockKitBuilder, send_block_message
+
+                message = BlockKitBuilder.build_pending_tasks_dm(job.name, pending)
+                log.dm_content = message.get("text", "")
+                result = send_block_message(client, job.notify_channel_id, message)
+                if result:
                     log.dm_sent = True
-                except Exception as e:
-                    logger.error(f"Failed to send DM: {e}")
+                else:
+                    # Fallback to plain text
+                    dm_text = self._format_pending_tasks_dm(job, pending)
+                    log.dm_content = dm_text
+                    try:
+                        client.chat_postMessage(
+                            channel=job.notify_channel_id,
+                            text=dm_text,
+                        )
+                        log.dm_sent = True
+                    except Exception as e:
+                        logger.error(f"Failed to send DM: {e}")
 
         log.duration_ms = int((time.time() - start_time) * 1000)
         return log
@@ -474,73 +622,83 @@ class CronRunner:
         )
 
         logger.info(
-            f"Cron job {job.job_id} completed: success={log.success}, "
-            f"duration={log.duration_ms}ms"
+            f"Cron job {job.job_id} completed: success={log.success}, duration={log.duration_ms}ms"
         )
         return log
 
     def _format_thread_check_dm(self, job: CronJob, findings: list[dict]) -> str:
         """Format a DM message for thread check results."""
-        lines = [f"*{job.name}* - Thread Update Summary\n"]
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+        lines = [f":bar_chart: *{job.name}* - {now_str}\n"]
 
         for f in findings:
             desc = f.get("description", "")
+            if len(desc) > 40:
+                desc = desc[:40] + "..."
             ch_name = f.get("channel_name", "")
-            header = f"*#{ch_name}*" if ch_name else f"`{f['thread']}`"
-            if desc:
-                header += f" - {desc}"
+            new_replies = f.get("new_replies", 0)
+            reactions = f.get("reactions", [])
+            emoji_str = " ".join(f":{r}:" for r in reactions) if reactions else ""
+
+            lines.append("━━━━━━━━━━━━━━━━━━━━")
+            header = f":pushpin: *#{ch_name}*" if ch_name else f":pushpin: `{f['thread']}`"
+            header += f" | {new_replies} new"
+            if emoji_str:
+                header += f" | {emoji_str}"
             lines.append(header)
 
-            if f.get("new_replies", 0) > 0:
-                lines.append(f"  New replies: {f['new_replies']}")
+            if desc:
+                lines.append(f"> {desc}")
+
+            if new_replies > 0:
+                lines.append("")
                 for summary in f.get("reply_summaries", []):
-                    lines.append(f"  > {summary}")
+                    lines.append(f"• {summary}")
 
-            reactions = f.get("reactions", [])
-            if reactions:
-                emoji_str = " ".join(f":{r}:" for r in reactions)
-                lines.append(f"  Reactions: {emoji_str}")
-
-            lines.append("")
-
-        lines.append(
-            "Reply with the thread link to process, or ignore to skip."
-        )
+        lines.append("━━━━━━━━━━━━━━━━━━━━")
+        lines.append("")
+        lines.append(":bulb: 처리: 스레드 링크로 답장 | 무시: 건너뜀")
         return "\n".join(lines)
 
     def _format_mention_scan_dm(self, job: CronJob, findings: list[dict]) -> str:
         """Format a DM message for mention scan results."""
-        lines = [
-            f"*{job.name}* - Unhandled Mentions Found: {len(findings)}\n"
-        ]
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+        lines = [f":bell: *{job.name}* - {now_str}"]
+        lines.append(f"미처리 멘션 {len(findings)}건\n")
 
         for f in findings[:10]:
-            lines.append(f"*#{f['channel']}* - <@{f['user']}>")
-            lines.append(f"  > {f['text'][:150]}")
-            lines.append("")
+            text = f.get("text", "").replace("\n", " ")
+            if len(text) > 40:
+                text = text[:40] + "..."
+            lines.append("━━━━━━━━━━━━━━━━━━━━")
+            lines.append(f":speech_balloon: *#{f['channel']}* | <@{f['user']}>")
+            lines.append(f"> {text}")
 
         if len(findings) > 10:
-            lines.append(f"...and {len(findings) - 10} more")
+            lines.append(f"\n...외 {len(findings) - 10}건")
 
-        lines.append(
-            "\nReply with 'process [number]' to handle, or 'skip' to ignore all."
-        )
+        lines.append("━━━━━━━━━━━━━━━━━━━━")
+        lines.append("")
+        lines.append(":bulb: 'process [번호]'로 처리 | 'skip'으로 전체 건너뜀")
         return "\n".join(lines)
 
     def _format_pending_tasks_dm(self, job: CronJob, pending: list[dict]) -> str:
         """Format a DM message for pending tasks summary."""
-        lines = [
-            f"*{job.name}* - Pending Approvals: {len(pending)}\n"
-        ]
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
+        lines = [f":clipboard: *{job.name}* - {now_str}"]
+        lines.append(f"대기 중인 승인 {len(pending)}건\n")
 
         for p in pending:
-            lines.append(f"*{p['task_id']}* - {p['title']}")
-            lines.append(f"  Stage: {p['stage']}")
-            lines.append("")
+            title = p.get("title", "")
+            if len(title) > 40:
+                title = title[:40] + "..."
+            lines.append("━━━━━━━━━━━━━━━━━━━━")
+            lines.append(f":hourglass_flowing_sand: *{p['task_id']}* | {p['stage']}")
+            lines.append(f"> {title}")
 
-        lines.append(
-            "Use `/approve <task_id>` or `/reject <task_id>` to process."
-        )
+        lines.append("━━━━━━━━━━━━━━━━━━━━")
+        lines.append("")
+        lines.append(":bulb: `/approve <task_id>` 또는 `/reject <task_id>`로 처리")
         return "\n".join(lines)
 
     async def run_tick(self) -> int:
@@ -560,9 +718,7 @@ class CronRunner:
                     executed += 1
                 except Exception as e:
                     logger.error(f"Failed to execute job {job.job_id}: {e}")
-                    self.manager.record_execution(
-                        job.job_id, success=False, error=str(e)
-                    )
+                    self.manager.record_execution(job.job_id, success=False, error=str(e))
 
         return executed
 

@@ -359,6 +359,11 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
                 self._send_json(payload)
                 return
 
+            # Slack interactivity endpoint (deprecated - using reaction-based approval)
+            if parsed.path == "/api/slack/interactions":
+                self._send_json({"ok": True, "message": "Interactivity endpoint deprecated. Use reaction-based approval."})
+                return
+
             self.send_response(404)
             self.end_headers()
 
@@ -388,6 +393,39 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
             self.send_header("Content-Length", str(len(data)))
             self.end_headers()
             self.wfile.write(data)
+
+        def _handle_slack_interaction(self, cfg: DashboardConfig) -> None:
+            """Handle Slack interactivity webhook (Block Kit button clicks)."""
+            try:
+                content_length = int(self.headers.get("Content-Length", 0))
+                raw_body = self.rfile.read(content_length).decode("utf-8")
+
+                from ultrawork.slack.interactions import (
+                    InteractionHandler,
+                    parse_interaction_payload,
+                )
+
+                payload = parse_interaction_payload(raw_body)
+                if not payload:
+                    self.send_response(400)
+                    self.end_headers()
+                    return
+
+                handler = InteractionHandler(data_dir=cfg.data_dir)
+                response = handler.handle_payload(payload)
+
+                # Slack expects 200 OK within 3 seconds
+                resp_data = json.dumps(response, ensure_ascii=False).encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Content-Length", str(len(resp_data)))
+                self.end_headers()
+                self.wfile.write(resp_data)
+            except Exception as e:
+                import logging
+                logging.getLogger("dashboard").error(f"Slack interaction error: {e}")
+                self.send_response(200)  # Always return 200 to Slack
+                self.end_headers()
 
         def _stream_logs(self, cfg: DashboardConfig, session: str | None) -> None:
             self.send_response(200)
@@ -747,9 +785,7 @@ def _build_threads(
                     else str(mention_for_session.get("created_at") or "")
                 )
                 updated_at = (
-                    session_obj.updated_at.isoformat()
-                    if session_obj.updated_at
-                    else created_at
+                    session_obj.updated_at.isoformat() if session_obj.updated_at else created_at
                 )
 
                 if session_obj.original_message:
@@ -902,10 +938,7 @@ def _iter_mention_records(data_dir: Path) -> list[dict[str, Any]]:
 
     records: list[dict[str, Any]] = []
     for mention_dir in mentions_root.iterdir():
-        if (
-            not mention_dir.is_dir()
-            or mention_dir.name in {"pending", "completed", "failed"}
-        ):
+        if not mention_dir.is_dir() or mention_dir.name in {"pending", "completed", "failed"}:
             continue
 
         input_data = _read_yaml(mention_dir / "input.yaml")
@@ -1293,9 +1326,7 @@ def _build_thread_sessions(
         )
         command_text = str(mention_for_session.get("text") or "") if mention_for_session else None
         command_ts = (
-            str(mention_for_session.get("created_at") or "")
-            if mention_for_session
-            else None
+            str(mention_for_session.get("created_at") or "") if mention_for_session else None
         )
 
         events = _get_session_worktree_events(
@@ -1319,7 +1350,11 @@ def _build_thread_sessions(
                 session_obj.updated_at.isoformat() if session_obj.updated_at else created_at
             )
         else:
-            model_status = str(mention_for_session.get("status") or "pending") if mention_for_session else "pending"
+            model_status = (
+                str(mention_for_session.get("status") or "pending")
+                if mention_for_session
+                else "pending"
+            )
             created_at = command_ts or ""
             updated_at = created_at
 
@@ -1341,9 +1376,7 @@ def _build_thread_sessions(
             or ""
         )
         request_preview = (
-            command_text
-            or (str(session_obj.original_message or "") if session_obj else "")
-            or ""
+            command_text or (str(session_obj.original_message or "") if session_obj else "") or ""
         )
 
         sessions.append(
@@ -1416,9 +1449,7 @@ def _build_session_worktree(
     # streaming cursor; otherwise the cursor can advance ahead of the real log stream and
     # cause subsequent worktree events to be skipped.
     base_events = [
-        event
-        for event in sorted_events
-        if ":interaction:" not in str(event.get("event_id") or "")
+        event for event in sorted_events if ":interaction:" not in str(event.get("event_id") or "")
     ]
     last_seq = max((int(event.get("seq") or 0) for event in base_events), default=0)
     min_seq = min((int(event.get("seq") or 0) for event in base_events), default=0)
@@ -1715,10 +1746,7 @@ def _stream_thread(
 
 
 def _emit_sse_event(handler: Any, event: str, payload: dict[str, Any]) -> None:
-    message = (
-        f"event: {event}\n"
-        f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
-    )
+    message = f"event: {event}\ndata: {json.dumps(payload, ensure_ascii=False)}\n\n"
     handler.wfile.write(message.encode("utf-8"))
     handler.wfile.flush()
 
@@ -2151,7 +2179,9 @@ def _collect_thread_context_for_manual_run(
 
     try:
         session_mgr = _get_session_manager(config)
-        sessions = session_mgr.get_sessions_by_thread(channel_id, thread_ts)[-max(1, session_limit) :]
+        sessions = session_mgr.get_sessions_by_thread(channel_id, thread_ts)[
+            -max(1, session_limit) :
+        ]
         recent_sessions: list[dict[str, str]] = []
         for session in sessions:
             status = (

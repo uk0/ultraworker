@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import json
 import select
-import shutil
 import shlex
+import shutil
 import subprocess
 import sys
 import time
@@ -186,7 +186,15 @@ class WelcomeScreen(Screen):
         if state_file.exists():
             app = self.app
             if isinstance(app, SetupWizardApp) and app.state.last_completed_step > 0:
-                step_names = ["Start", "Claude Check", "Slack Tokens", "Basic Settings", "MCP Install", "Channels", "Tutorial"]
+                step_names = [
+                    "Start",
+                    "Claude Check",
+                    "Slack Tokens",
+                    "Basic Settings",
+                    "MCP Install",
+                    "Channels",
+                    "Tutorial",
+                ]
                 last_step = min(app.state.last_completed_step, len(step_names) - 1)
                 self.query_one("#resume-notice", Static).update(
                     f"💾 Previous settings found (last step: {step_names[last_step]})\n"
@@ -632,7 +640,9 @@ class Step3BasicSettings(Screen):
             yield Label("Trigger Mode")
             with RadioSet(id="trigger-mode"):
                 yield RadioButton(
-                    "@Mention detection (responds when bot is @mentioned)", id="radio-mention", value=True
+                    "@Mention detection (responds when bot is @mentioned)",
+                    id="radio-mention",
+                    value=True,
                 )
                 yield RadioButton("Custom keyword detection", id="radio-keyword")
 
@@ -658,7 +668,9 @@ class Step3BasicSettings(Screen):
             yield Label("Permission Mode")
             with RadioSet(id="permission-mode"):
                 yield RadioButton(
-                    "Default mode (approval required for tool execution)", id="radio-default-perm", value=True
+                    "Default mode (approval required for tool execution)",
+                    id="radio-default-perm",
+                    value=True,
                 )
                 yield RadioButton(
                     "🚀 YOLO mode (all tools auto-approved)",
@@ -748,7 +760,9 @@ class Step4MCPInstall(Screen):
         with VerticalScroll():
             yield Label("Step 4/7: Additional MCP Installation", classes="step-title")
             yield Rule()
-            yield Static("Slack MCP is automatically configured based on token settings.\nSelect additional MCPs to install:")
+            yield Static(
+                "Slack MCP is automatically configured based on token settings.\nSelect additional MCPs to install:"
+            )
 
             yield Rule()
             # Non-Slack MCPs
@@ -883,12 +897,16 @@ class Step7Finish(Screen):
         lines.append(f"  Language: {lang_label}")
         lines.append(f"  Token Type: {state.slack_token_type or '(not set)'}")
         if state.trigger_mode == "mention":
-            lines.append(f"  Trigger Mode: @Mention detection")
+            lines.append("  Trigger Mode: @Mention detection")
             lines.append(f"  Bot User ID: {state.bot_user_id or '(not set)'}")
         else:
-            lines.append(f"  Trigger Mode: Custom keyword")
+            lines.append("  Trigger Mode: Custom keyword")
             lines.append(f"  Custom Keyword: {state.custom_keyword or '(not set)'}")
-        perm_display = "🚀 YOLO Mode" if state.permission_mode == "dangerously-skip-permissions" else "Default Mode"
+        perm_display = (
+            "🚀 YOLO Mode"
+            if state.permission_mode == "dangerously-skip-permissions"
+            else "Default Mode"
+        )
         lines.append(f"  Permission Mode: {perm_display}")
         lines.append(f"  Additional MCPs: {', '.join(state.mcps_to_install) or 'None'}")
 
@@ -932,6 +950,7 @@ class Step7Finish(Screen):
             heartbeat_label: str = "Installing...",
         ) -> tuple[bool, str]:
             """Run command with periodic progress updates and live output."""
+
             def _append_output(raw_output: str) -> None:
                 if not raw_output:
                     return
@@ -1095,8 +1114,8 @@ class Step7Finish(Screen):
             app.state.save()
 
     def launch_dashboard(self) -> None:
-        import webbrowser
         import time
+        import webbrowser
 
         app = self.app
         if not isinstance(app, SetupWizardApp):
