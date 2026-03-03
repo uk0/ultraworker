@@ -15,11 +15,19 @@
       "command": "npx",
       "args": [
         "-y",
-        "@slackapi/slack-bot-mcp"
+        "slack-bot-mcp"
       ],
       "env": {
         "SLACK_BOT_TOKEN": "xoxb-your-bot-token-here"
       }
+    },
+    "memory-search": {
+      "command": "/Users/your-user/memory-search/target/release/memory-search",
+      "args": [
+        "serve",
+        "--data-dir",
+        "/absolute/path/to/ultraworker/data"
+      ]
     }
   }
 }

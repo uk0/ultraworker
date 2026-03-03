@@ -82,6 +82,12 @@ class TestSetupState:
         assert "SLACK_BOT_TOKEN" in env
         assert "SLACK_TOKEN" in env
 
+    def test_env_vars_include_memory_search_bin_when_selected(self) -> None:
+        state = SetupState(mcps_to_install=["memory-search"])
+        env = state.get_env_vars()
+        assert "MEMORY_SEARCH_BIN" in env
+        assert env["MEMORY_SEARCH_BIN"].endswith("/memory-search/target/release/memory-search")
+
 
 class TestGenerateEnvFile:
     def test_bot_token_env(self) -> None:
@@ -105,6 +111,8 @@ class TestGenerateUltraworkYaml:
         content = generate_ultrawork_yaml(state)
         assert "bot_user_id: U123ABC" in content
         assert 'trigger_pattern: "<@U123ABC>"' in content
+        assert "memory:" in content
+        assert 'search_binary: "' in content
 
     def test_keyword_mode(self) -> None:
         state = SetupState(
@@ -114,6 +122,7 @@ class TestGenerateUltraworkYaml:
         )
         content = generate_ultrawork_yaml(state)
         assert 'trigger_pattern: "!ultra"' in content
+        assert "auto_index_on_save: true" in content
 
 
 class TestGenerateMcpJson:
@@ -146,6 +155,20 @@ class TestGenerateMcpJson:
         config = generate_mcp_json(state)
         assert "playwright" in config["mcpServers"]
         assert "context7" in config["mcpServers"]
+
+    def test_memory_search_mcp(self) -> None:
+        state = SetupState(mcps_to_install=["memory-search"])
+        config = generate_mcp_json(state)
+        assert "memory-search" in config["mcpServers"]
+        entry = config["mcpServers"]["memory-search"]
+        assert entry["command"].endswith("/memory-search/target/release/memory-search")
+        assert entry["args"][0] == "serve"
+        assert "--data-dir" in entry["args"]
+
+    def test_agent_browser_is_install_only(self) -> None:
+        state = SetupState(mcps_to_install=["agent-browser"])
+        config = generate_mcp_json(state)
+        assert "agent-browser" not in config["mcpServers"]
 
     def test_no_tokens(self) -> None:
         state = SetupState()

@@ -49,7 +49,7 @@ The setup wizard guides you through:
 1. Claude Code authentication
 2. Slack token configuration
 3. Trigger mode selection (mention vs. keyword)
-4. MCP server installation
+4. MCP server installation (including one-shot install for `memory-search` and `agent-browser`)
 5. Dashboard launch
 
 ### Manual Configuration
@@ -193,6 +193,12 @@ claude mcp add playwright -- npx -y @playwright/mcp@latest
 
 # Context7 (Library docs)
 claude mcp add context7 -- npx -y @upstash/context7-mcp@latest
+
+# Memory Search (Graph Hybrid, binary path may differ)
+claude mcp add memory-search -- /Users/$USER/memory-search/target/release/memory-search serve --data-dir /path/to/ultraworker/data
+
+# agent-browser CLI install (used by electron skill/workflows)
+npm install -g agent-browser
 ```
 
 ---

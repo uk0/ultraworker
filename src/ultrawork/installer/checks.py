@@ -19,6 +19,16 @@ class CheckResult:
 SETUP_STATE_FILE = ".ultrawork-setup-state.json"
 
 
+def _default_memory_search_repo_dir() -> Path:
+    """Default location for local memory-search repository."""
+    return Path.home() / "memory-search"
+
+
+def _default_memory_search_bin() -> str:
+    """Default memory-search binary path used by setup outputs."""
+    return str(_default_memory_search_repo_dir() / "target" / "release" / "memory-search")
+
+
 @dataclass
 class SetupState:
     """Tracks the entire setup wizard state."""
@@ -56,6 +66,8 @@ class SetupState:
             env["SLACK_TOKEN"] = self.slack_personal_token
         if self.slack_personal_cookie:
             env["SLACK_COOKIE"] = self.slack_personal_cookie
+        if "memory-search" in self.mcps_to_install:
+            env["MEMORY_SEARCH_BIN"] = _default_memory_search_bin()
         return env
 
     def save(self) -> None:
@@ -357,6 +369,57 @@ MCP_DEFINITIONS = {
             "Reference: https://github.com/upstash/context7"
         ),
     },
+    "agent-browser": {
+        "name": "agent-browser CLI",
+        "description": "Vercel browser automation CLI (web + Electron automation)",
+        "install_cmd": "npm install -g agent-browser",
+        "requires": ["node"],
+        "env_vars": [],
+        "include_in_mcp_json": False,
+        "guide": (
+            "## Install\n"
+            "Installs the latest `agent-browser` CLI globally.\n\n"
+            "## Verify\n"
+            "agent-browser --version\n\n"
+            "Reference: https://github.com/vercel-labs/agent-browser"
+        ),
+    },
+    "memory-search": {
+        "name": "Memory Search (Graph Hybrid)",
+        "description": "Build Rust memory-search binary and connect as MCP server",
+        "install_cmd": (
+            "bash -lc \"set -euo pipefail; "
+            "REPO_DIR=\\\"${MEMORY_SEARCH_REPO_DIR:-$HOME/memory-search}\\\"; "
+            "REPO_URL=\\\"${MEMORY_SEARCH_REPO_URL:-}\\\"; "
+            "if [ -d \\\"$REPO_DIR/.git\\\" ]; then "
+            "git -C \\\"$REPO_DIR\\\" pull --ff-only; "
+            "elif [ -n \\\"$REPO_URL\\\" ]; then "
+            "git clone \\\"$REPO_URL\\\" \\\"$REPO_DIR\\\"; "
+            "else "
+            "echo 'memory-search repo not found. Set MEMORY_SEARCH_REPO_URL or clone to ~/memory-search.' >&2; "
+            "exit 1; "
+            "fi; "
+            "cargo build --release --manifest-path \\\"$REPO_DIR/Cargo.toml\\\"\""
+        ),
+        "requires": ["git", "rust"],
+        "env_vars": ["MEMORY_SEARCH_REPO_URL", "MEMORY_SEARCH_REPO_DIR", "MEMORY_SEARCH_BIN"],
+        "mcp_config": {
+            "command": _default_memory_search_bin(),
+            "args": ["serve", "--data-dir", "data"],
+        },
+        "guide": (
+            "## Prerequisites\n"
+            "1. Install Rust toolchain: https://rustup.rs\n"
+            "2. Install Git\n\n"
+            "## Source Resolution\n"
+            "1. If `~/memory-search` exists, setup updates and builds it\n"
+            "2. Otherwise set `MEMORY_SEARCH_REPO_URL` before running setup\n"
+            "   Example: export MEMORY_SEARCH_REPO_URL=https://github.com/<org>/memory-search.git\n\n"
+            "## Output\n"
+            f"- Binary path default: {_default_memory_search_bin()}\n"
+            "- Setup writes `MEMORY_SEARCH_BIN` into `.env` when selected"
+        ),
+    },
     "sequential-thinking": {
         "name": "Sequential Thinking MCP",
         "description": "Step-by-step thinking process support",
@@ -413,6 +476,7 @@ def generate_env_file(state: SetupState) -> str:
 def generate_ultrawork_yaml(state: SetupState) -> str:
     """Generate ultrawork.yaml content."""
     trigger = f"<@{state.bot_user_id}>" if state.trigger_mode == "mention" else state.custom_keyword
+    memory_search_bin = _default_memory_search_bin()
 
     yaml_content = f"""data_dir: data
 executor:
@@ -448,6 +512,9 @@ workflow:
   auto_approve_simple_tasks: false
   default_workflow_type: full
   require_tech_spec_for_code: true
+memory:
+  search_binary: "{memory_search_bin}"
+  auto_index_on_save: true
 """
     return yaml_content
 
@@ -477,7 +544,23 @@ def generate_mcp_json(state: SetupState) -> dict:
     for mcp_id in state.mcps_to_install:
         if mcp_id in MCP_DEFINITIONS and mcp_id not in ("slack-personal", "slack-bot"):
             defn = MCP_DEFINITIONS[mcp_id]
-            config["mcpServers"][mcp_id] = defn["mcp_config"].copy()
+            if not defn.get("include_in_mcp_json", True):
+                continue
+
+            if mcp_id == "memory-search":
+                config["mcpServers"][mcp_id] = {
+                    "command": _default_memory_search_bin(),
+                    "args": [
+                        "serve",
+                        "--data-dir",
+                        str((state.project_dir / "data").resolve()),
+                    ],
+                }
+                continue
+
+            mcp_config = defn.get("mcp_config")
+            if mcp_config:
+                config["mcpServers"][mcp_id] = mcp_config.copy()
 
     return config
 
