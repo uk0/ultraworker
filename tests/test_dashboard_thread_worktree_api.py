@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pytest
@@ -450,3 +451,108 @@ def test_handle_terminate_thread_session_marks_cancelled(tmp_path: Path) -> None
     refreshed = SessionManager(cfg.data_dir).get_session(session.session_id)
     assert refreshed is not None
     assert refreshed.status.value == "cancelled"
+
+
+def test_build_thread_sessions_marks_stalled_without_heartbeat(tmp_path: Path) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CSTALL",
+        thread_ts="1999.001",
+        user_id="U1",
+        message="stalled request",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CSTALL", "1999.001", session.session_id)
+    _create_mention(
+        cfg.data_dir,
+        "m-stalled",
+        channel_id="CSTALL",
+        thread_ts="1999.001",
+        message_ts="1999.001",
+        text="run long task",
+        session_id=session.session_id,
+        created_at="2026-02-06T12:00:00Z",
+    )
+
+    started_at = (datetime.now(timezone.utc) - timedelta(minutes=20)).isoformat()
+    _write_jsonl(
+        cfg.data_dir / "logs" / "interactions.jsonl",
+        [
+            {
+                "timestamp": started_at,
+                "type": "processing_started",
+                "session_id": session.session_id,
+                "channel_id": "CSTALL",
+                "thread_ts": "1999.001",
+                "content": f"Starting new session {session.session_id}",
+                "metadata": {},
+            }
+        ],
+    )
+
+    payload = _build_thread_sessions(cfg, "CSTALL", "1999.001")
+    by_id = {item["session_id"]: item for item in payload["sessions"]}
+    stalled = by_id[session.session_id]
+
+    assert stalled["status"] == "stalled"
+    assert int(stalled["elapsed_seconds"]) >= 1000
+
+
+def test_build_thread_sessions_uses_heartbeat_runtime_metadata(tmp_path: Path) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CHEART",
+        thread_ts="1999.002",
+        user_id="U1",
+        message="heartbeat request",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CHEART", "1999.002", session.session_id)
+    _create_mention(
+        cfg.data_dir,
+        "m-heartbeat",
+        channel_id="CHEART",
+        thread_ts="1999.002",
+        message_ts="1999.002",
+        text="run long task with heartbeat",
+        session_id=session.session_id,
+        created_at="2026-02-06T12:00:00Z",
+    )
+
+    started_at = (datetime.now(timezone.utc) - timedelta(seconds=90)).isoformat()
+    heartbeat_at = (datetime.now(timezone.utc) - timedelta(seconds=15)).isoformat()
+    _write_jsonl(
+        cfg.data_dir / "logs" / "interactions.jsonl",
+        [
+            {
+                "timestamp": started_at,
+                "type": "processing_started",
+                "session_id": session.session_id,
+                "channel_id": "CHEART",
+                "thread_ts": "1999.002",
+                "content": f"Starting new session {session.session_id}",
+                "metadata": {},
+            },
+            {
+                "timestamp": heartbeat_at,
+                "type": "processing_heartbeat",
+                "session_id": session.session_id,
+                "channel_id": "CHEART",
+                "thread_ts": "1999.002",
+                "content": "Still running",
+                "metadata": {"elapsed_seconds": 75, "pid": 4242},
+            },
+        ],
+    )
+
+    payload = _build_thread_sessions(cfg, "CHEART", "1999.002")
+    by_id = {item["session_id"]: item for item in payload["sessions"]}
+    active = by_id[session.session_id]
+
+    assert active["status"] == "active"
+    assert int(active["elapsed_seconds"]) >= 75
+    assert active["runner_pid"] == 4242

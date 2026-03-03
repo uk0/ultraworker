@@ -4,6 +4,7 @@ const TOOL_PREVIEW_LIMIT = 360;
 const INITIAL_EVENT_LIMIT = 120;
 const OLDER_EVENT_LIMIT = 120;
 const RENDER_CHUNK_SIZE = 28;
+const SESSION_STALLED_SECONDS = 600;
 
 const state = {
   threadsById: new Map(),
@@ -678,6 +679,11 @@ function renderThreadSessionItem(threadId, session) {
   const active = session.session_id === state.selectedSessionId;
   const status = normalizeStatus(session.status);
   const counts = session.event_counts || {};
+  const elapsed = Number(session.elapsed_seconds || 0);
+  const runtimeLabel =
+    (status === "active" || status === "stalled") && elapsed > 0
+      ? `run ${formatDuration(elapsed)}`
+      : formatRelativeTime(session.updated_at);
 
   return `
     <div class="thread-session-item ${active ? "active" : ""}" data-thread-id="${escapeHtml(
@@ -690,7 +696,7 @@ function renderThreadSessionItem(threadId, session) {
       <div class="thread-meta">
         <span>tools ${Number(counts.tool_call || 0)}</span>
         <span>events ${Number(session.event_count || 0)}</span>
-        <span>${escapeHtml(formatRelativeTime(session.updated_at))}</span>
+        <span>${escapeHtml(runtimeLabel)}</span>
       </div>
     </div>
   `;
@@ -939,6 +945,12 @@ function renderTopology() {
       const fullTitle = cleanTopologyText(
         session.request_full || session.request_preview || session.summary || "Session",
       );
+      const runtimeBits = [];
+      if (session.external_session_id) runtimeBits.push(`ext ${shortSession(session.external_session_id)}`);
+      if (session.runner_pid) runtimeBits.push(`pid ${session.runner_pid}`);
+      if ((status === "active" || status === "stalled") && Number(session.elapsed_seconds || 0) > 0) {
+        runtimeBits.push(`run ${formatDuration(Number(session.elapsed_seconds || 0))}`);
+      }
       const tooltipText = fullTitle || "Session";
 
       return `
@@ -953,8 +965,9 @@ function renderTopology() {
           <div class="topology-node-meta">
             <span>${escapeHtml(status)}</span>
             <span>tool ${Number(counts.tool_call || 0)}</span>
-            <span>${escapeHtml(formatRelativeTime(session.updated_at))}</span>
+            <span>${escapeHtml(runtimeBits[0] || formatRelativeTime(session.updated_at))}</span>
           </div>
+          ${runtimeBits.length > 1 ? `<div class="topology-node-meta">${escapeHtml(runtimeBits.slice(1).join(" · "))}</div>` : ""}
           ${index < sessions.length - 1 ? '<div class="topology-link"></div>' : ""}
         </article>
       `;
@@ -1886,7 +1899,7 @@ function touchSessionCountsByIncomingEvent(threadId, sessionId, event) {
 
 function deriveSessionStatusFromEvents(currentStatus, events) {
   const normalized = normalizeStatus(currentStatus);
-  if (normalized && normalized !== "pending") {
+  if (normalized && normalized !== "pending" && normalized !== "active") {
     return normalized;
   }
   if (!events.length) return "pending";
@@ -1895,8 +1908,30 @@ function deriveSessionStatusFromEvents(currentStatus, events) {
     return "failed";
   }
 
+  let lastStartedTs = 0;
+  let lastHeartbeatTs = 0;
+  let lastTerminalTs = 0;
+  for (const event of events) {
+    const rawType = String(event?.raw?.type || "");
+    const eventTs = toTimeValue(event.ts || event?.raw?.timestamp);
+    if (rawType === "processing_started") lastStartedTs = Math.max(lastStartedTs, eventTs);
+    if (rawType === "processing_heartbeat") lastHeartbeatTs = Math.max(lastHeartbeatTs, eventTs);
+    if (rawType === "processing_completed" || rawType === "processing_failed") {
+      lastTerminalTs = Math.max(lastTerminalTs, eventTs);
+    }
+  }
+
   const last = events[events.length - 1];
   if (last.kind === "tool_call" || normalizeStatus(last.status) === "active") {
+    const progressTs = lastHeartbeatTs || lastStartedTs;
+    const staleMs = SESSION_STALLED_SECONDS * 1000;
+    if (
+      progressTs > 0 &&
+      lastTerminalTs < lastStartedTs &&
+      Date.now() - progressTs > staleMs
+    ) {
+      return "stalled";
+    }
     return "active";
   }
   if (last.kind === "assistant_output") {
@@ -1987,7 +2022,7 @@ function isToolEvent(kind) {
 
 function isLiveStatus(status) {
   const normalized = normalizeStatus(status);
-  return normalized === "active" || normalized === "waiting";
+  return normalized === "active" || normalized === "waiting" || normalized === "stalled";
 }
 
 function normalizeStatus(status) {
@@ -1995,6 +2030,7 @@ function normalizeStatus(status) {
   if (!value) return "pending";
   if (value.includes("cancel")) return "cancelled";
   if (value.includes("fail") || value.includes("error")) return "failed";
+  if (value.includes("stall")) return "stalled";
   if (value.includes("wait") || value.includes("pause")) return "waiting";
   if (value.includes("active") || value.includes("running") || value.includes("init")) return "active";
   if (value.includes("complete") || value.includes("done") || value.includes("success")) return "completed";
@@ -2016,6 +2052,7 @@ function statusClass(status) {
   if (raw === "ok") return "status-completed";
   if (raw === "running") return "status-active";
   if (raw === "error") return "status-failed";
+  if (raw === "stalled") return "status-stalled";
   if (raw === "cancelled") return "status-cancelled";
   const value = normalizeStatus(raw);
   return `status-${value}`;
@@ -2056,6 +2093,7 @@ function iconForStatus(status) {
   if (value === "completed") return "solar:check-circle-bold";
   if (value === "failed") return "solar:close-circle-bold";
   if (value === "cancelled") return "solar:stop-circle-bold";
+  if (value === "stalled") return "solar:danger-triangle-bold";
   if (value === "active") return "solar:play-circle-bold";
   if (value === "waiting") return "solar:pause-circle-bold";
   return "solar:clock-circle-bold";
@@ -2297,6 +2335,17 @@ function formatRelativeTime(value) {
   if (hr < 24) return `${hr}h ago`;
   const day = Math.floor(hr / 24);
   return `${day}d ago`;
+}
+
+function formatDuration(totalSeconds) {
+  const value = Math.max(0, Number(totalSeconds || 0));
+  if (!value) return "0s";
+  const sec = Math.floor(value % 60);
+  const min = Math.floor((value / 60) % 60);
+  const hr = Math.floor(value / 3600);
+  if (hr > 0) return `${hr}h ${min}m`;
+  if (min > 0) return `${min}m ${sec}s`;
+  return `${sec}s`;
 }
 
 function shortSession(sessionId) {

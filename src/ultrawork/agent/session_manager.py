@@ -262,7 +262,10 @@ class SessionManager:
         return None
 
     def get_forkable_session_for_thread(
-        self, channel_id: str, thread_ts: str
+        self,
+        channel_id: str,
+        thread_ts: str,
+        max_age_seconds: int | None = None,
     ) -> AgentSession | None:
         """Get the most recent completed/failed session for forking.
 
@@ -284,7 +287,15 @@ class SessionManager:
 
         for session_id in reversed(session_ids):
             session = self.get_session(session_id)
-            if session and session.status in forkable:
+            if not session or session.status not in forkable:
+                continue
+            if max_age_seconds is not None and max_age_seconds > 0:
+                terminal_ts = session.completed_at or session.updated_at or session.created_at
+                if terminal_ts is None:
+                    continue
+                age_seconds = (datetime.now() - terminal_ts).total_seconds()
+                if age_seconds > max_age_seconds:
+                    continue
                 return session
         return None
 
@@ -1171,6 +1182,25 @@ class SessionManager:
         if not session:
             return False
         session.update_stage(stage)
+        self._save_session(session)
+        return True
+
+    def update_runtime_metadata(
+        self,
+        session_id: str,
+        *,
+        runner_pid: int | None = None,
+        external_session_id: str | None = None,
+    ) -> bool:
+        """Update runtime metadata used for process/session tracking."""
+        session = self.get_session(session_id)
+        if not session:
+            return False
+
+        session.runner_pid = runner_pid
+        if external_session_id:
+            session.external_session_id = external_session_id
+        session.updated_at = datetime.now()
         self._save_session(session)
         return True
 

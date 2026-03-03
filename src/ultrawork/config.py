@@ -59,6 +59,15 @@ class ExecutorConfig(BaseModel):
     agentic_timeout_seconds: int = Field(
         default_factory=lambda: int(os.environ.get("ULTRAWORK_AGENTIC_TIMEOUT", "86400"))
     )  # 24 hours default for agentic tasks
+    heartbeat_interval_seconds: int = Field(
+        default_factory=lambda: int(os.environ.get("ULTRAWORK_HEARTBEAT_INTERVAL_SECONDS", "15"))
+    )
+    fork_max_age_seconds: int = Field(
+        default_factory=lambda: int(os.environ.get("ULTRAWORK_FORK_MAX_AGE_SECONDS", "1800"))
+    )
+    stalled_threshold_seconds: int = Field(
+        default_factory=lambda: int(os.environ.get("ULTRAWORK_STALLED_THRESHOLD_SECONDS", "600"))
+    )
 
 
 class WorkflowConfig(BaseModel):

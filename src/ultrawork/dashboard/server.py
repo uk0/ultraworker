@@ -1117,7 +1117,7 @@ def _derive_thread_status(
     request_statuses: list[str],
 ) -> str:
     statuses = [str(status or "").lower() for status in session_statuses + request_statuses]
-    if any(status in {"active", "initializing", "running"} for status in statuses):
+    if any(status in {"active", "initializing", "running", "stalled"} for status in statuses):
         return "active"
     if any(status in {"waiting_feedback", "waiting", "paused"} for status in statuses):
         return "waiting"
@@ -1133,31 +1133,34 @@ def _derive_thread_status(
 def _resolve_session_status(
     primary_status: str | None,
     events: list[dict[str, Any]],
+    *,
+    now_ts: float,
+    stalled_threshold_seconds: int,
 ) -> str:
     normalized = str(primary_status or "").strip().lower()
     if normalized:
         if normalized in {"cancelled"}:
             return "cancelled"
-        if normalized in {"error"}:
+        if normalized in {"error", "failed"}:
             return "failed"
-        if normalized in {"running", "initializing"}:
-            return "active"
         if normalized in {"waiting_feedback"}:
             return "waiting"
         if normalized in {"success", "done"}:
             return "completed"
+        if normalized == "stalled":
+            return "stalled"
         if normalized in {
-            "active",
             "waiting",
             "completed",
-            "failed",
             "pending",
             "paused",
-            "cancelled",
+            "waiting_feedback",
         }:
             return normalized
 
     if not events:
+        if normalized in {"active", "running", "initializing"}:
+            return "active"
         return "pending"
 
     has_error = any(
@@ -1168,10 +1171,34 @@ def _resolve_session_status(
     if has_error:
         return "failed"
 
+    runtime = _extract_runtime_markers(events, now_ts)
+    last_terminal_type = str(runtime.get("last_terminal_type") or "")
+    if last_terminal_type == "processing_failed":
+        return "failed"
+    if last_terminal_type == "processing_completed":
+        return "completed"
+
     last_event = events[-1]
     last_kind = str(last_event.get("kind") or "")
     last_status = str(last_event.get("status") or "").lower()
-    if last_status in {"running"} or last_kind == "tool_call":
+
+    has_running_signal = (
+        last_status in {"running"}
+        or last_kind == "tool_call"
+        or bool(runtime["last_started_ts"])
+        or bool(runtime["last_heartbeat_ts"])
+    )
+    if has_running_signal:
+        last_started = float(runtime["last_started_ts"] or 0.0)
+        last_progress = float(runtime["last_heartbeat_ts"] or 0.0) or last_started
+        has_terminal_after_start = bool(runtime["has_terminal_after_start"])
+        if (
+            last_started > 0.0
+            and not has_terminal_after_start
+            and last_progress > 0.0
+            and (now_ts - last_progress) > stalled_threshold_seconds
+        ):
+            return "stalled"
         return "active"
     if last_kind == "assistant_output":
         return "completed"
@@ -1181,6 +1208,54 @@ def _resolve_session_status(
     ):
         return "active"
     return "pending"
+
+
+def _extract_runtime_markers(events: list[dict[str, Any]], now_ts: float) -> dict[str, Any]:
+    """Extract running-state timestamps from session events."""
+    last_started_ts = 0.0
+    last_heartbeat_ts = 0.0
+    last_terminal_ts = 0.0
+    last_terminal_type = ""
+    elapsed_seconds = 0
+    heartbeat_pid: int | None = None
+
+    for event in events:
+        raw = event.get("raw")
+        if not isinstance(raw, dict):
+            continue
+        interaction_type = str(raw.get("type") or "")
+        event_ts = _to_time_value(event.get("ts") or raw.get("timestamp"))
+        metadata = raw.get("metadata")
+        metadata_dict = metadata if isinstance(metadata, dict) else {}
+
+        if interaction_type == "processing_started":
+            last_started_ts = max(last_started_ts, event_ts)
+        elif interaction_type == "processing_heartbeat":
+            last_heartbeat_ts = max(last_heartbeat_ts, event_ts)
+            if isinstance(metadata_dict.get("elapsed_seconds"), int | float):
+                elapsed_seconds = max(elapsed_seconds, int(metadata_dict.get("elapsed_seconds") or 0))
+            pid_val = metadata_dict.get("pid")
+            if isinstance(pid_val, int):
+                heartbeat_pid = pid_val
+        elif interaction_type in {"processing_completed", "processing_failed"}:
+            if event_ts >= last_terminal_ts:
+                last_terminal_ts = event_ts
+                last_terminal_type = interaction_type
+
+    if elapsed_seconds <= 0:
+        reference = last_heartbeat_ts or last_started_ts
+        if reference > 0.0 and now_ts >= reference:
+            elapsed_seconds = int(now_ts - reference)
+
+    return {
+        "last_started_ts": last_started_ts,
+        "last_heartbeat_ts": last_heartbeat_ts,
+        "last_terminal_ts": last_terminal_ts,
+        "last_terminal_type": last_terminal_type,
+        "has_terminal_after_start": last_terminal_ts >= last_started_ts and last_started_ts > 0.0,
+        "elapsed_seconds": max(0, elapsed_seconds),
+        "heartbeat_pid": heartbeat_pid,
+    }
 
 
 def _build_thread_title(text: str, fallback: str) -> str:
@@ -1206,7 +1281,7 @@ def _is_valid_thread_key(value: str | None) -> bool:
 
 def _is_live_session_status(value: str | None) -> bool:
     status = str(value or "").strip().lower()
-    return status in {"active", "initializing", "running", "waiting_feedback"}
+    return status in {"active", "initializing", "running", "waiting_feedback", "stalled"}
 
 
 def _to_time_value(value: Any) -> float:
@@ -1351,6 +1426,9 @@ def _build_thread_sessions(
     ]
     index_session_ids = _normalize_session_ids(index_map.get(thread_key))
     session_ids = _unique_preserve(mention_session_ids + index_session_ids)
+    runtime_cfg = get_config().executor
+    stalled_threshold_seconds = max(60, int(runtime_cfg.stalled_threshold_seconds or 600))
+    now_ts = time.time()
 
     sessions: list[dict[str, Any]] = []
     for session_id in session_ids:
@@ -1375,6 +1453,8 @@ def _build_thread_sessions(
 
         model_status = None
         session_obj = session_mgr.get_session(session_id)
+        external_session_id = ""
+        runner_pid: int | None = None
         if session_obj:
             model_status = str(session_obj.status.value)
             created_at = (
@@ -1383,6 +1463,8 @@ def _build_thread_sessions(
             updated_at = (
                 session_obj.updated_at.isoformat() if session_obj.updated_at else created_at
             )
+            external_session_id = str(getattr(session_obj, "external_session_id", "") or "")
+            runner_pid = getattr(session_obj, "runner_pid", None)
         else:
             model_status = (
                 str(mention_for_session.get("status") or "pending")
@@ -1392,7 +1474,15 @@ def _build_thread_sessions(
             created_at = command_ts or ""
             updated_at = created_at
 
-        status = _resolve_session_status(model_status, events)
+        runtime_markers = _extract_runtime_markers(events, now_ts)
+        if runner_pid is None and isinstance(runtime_markers.get("heartbeat_pid"), int):
+            runner_pid = int(runtime_markers.get("heartbeat_pid"))
+        status = _resolve_session_status(
+            model_status,
+            events,
+            now_ts=now_ts,
+            stalled_threshold_seconds=stalled_threshold_seconds,
+        )
 
         summary_source = next(
             (
@@ -1425,6 +1515,9 @@ def _build_thread_sessions(
                 "request_full": request_full,
                 "request_preview": _trim(request_preview, 220),
                 "is_live": _is_live_session_status(status),
+                "external_session_id": external_session_id,
+                "runner_pid": runner_pid,
+                "elapsed_seconds": int(runtime_markers.get("elapsed_seconds") or 0),
             }
         )
 
@@ -1627,6 +1720,10 @@ def _append_interaction_fallback_events(
                 elif interaction_type == "processing_started":
                     kind = "assistant_observation"
                     title = "Processing Started"
+                    status = "running"
+                elif interaction_type == "processing_heartbeat":
+                    kind = "assistant_observation"
+                    title = "Processing Heartbeat"
                     status = "running"
                 elif interaction_type == "processing_completed":
                     kind = "assistant_observation"
@@ -2747,6 +2844,8 @@ def _build_agent_sessions(
                 "transition_count": len(session.role_transitions),
                 "exploration_id": session.exploration_id,
                 "task_id": session.task_id,
+                "external_session_id": getattr(session, "external_session_id", None),
+                "runner_pid": getattr(session, "runner_pid", None),
             }
         )
 
@@ -2803,6 +2902,8 @@ def _build_agent_session_detail(
         "context_memory_id": session.context_memory_id,
         "pending_feedback": session.pending_feedback,
         "forked_from": session.forked_from,
+        "external_session_id": getattr(session, "external_session_id", None),
+        "runner_pid": getattr(session, "runner_pid", None),
     }
 
 
