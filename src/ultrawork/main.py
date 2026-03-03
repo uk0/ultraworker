@@ -909,6 +909,14 @@ def daemon_start(
         console.print("[dim]Set it with: export SLACK_TOKEN='xoxc-...'[/dim]")
         raise typer.Exit(1)
 
+    # Kill any existing sdk_poller processes to prevent zombie accumulation
+    killed = _kill_all_sdk_pollers(quiet=True)
+    if killed:
+        console.print(f"[yellow]Stopped {killed} existing daemon(s)[/yellow]")
+        import time
+
+        time.sleep(1)  # Let old processes clean up
+
     if foreground:
         console.print("[green]Starting SDK poller daemon...[/green]")
         if config.slack.bot_user_id:
@@ -952,31 +960,61 @@ def daemon_start(
         console.print(f"[dim]Logs: {config.data_dir}/logs/sdk_poller.log[/dim]")
 
 
+def _kill_all_sdk_pollers(*, quiet: bool = False) -> int:
+    """Kill ALL running sdk_poller processes to prevent zombie accumulation.
+
+    Returns the number of processes killed.
+    """
+    import os
+    import signal
+    import subprocess as sp
+
+    killed = 0
+    my_pid = os.getpid()
+    try:
+        # Find all sdk_poller processes
+        result = sp.run(
+            ["pgrep", "-f", "ultrawork.slack.sdk_poller"],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            return 0
+
+        for line in result.stdout.strip().split("\n"):
+            if not line.strip():
+                continue
+            pid = int(line.strip())
+            if pid == my_pid:
+                continue
+            try:
+                os.kill(pid, signal.SIGTERM)
+                killed += 1
+                if not quiet:
+                    console.print(f"[dim]Killed sdk_poller PID {pid}[/dim]")
+            except (ProcessLookupError, PermissionError):
+                pass
+    except Exception:
+        pass
+    return killed
+
+
 @app.command("daemon:stop")
 def daemon_stop() -> None:
     """Stop the SDK-based polling daemon."""
-    import os
-    import signal
-
     from ultrawork.slack import PollingStateManager
 
     config = get_config()
     state_manager = PollingStateManager(config.data_dir)
-    state = state_manager.load_state()
 
-    if state.daemon_pid is None:
+    # Kill ALL sdk_poller processes (not just the state-tracked one)
+    killed = _kill_all_sdk_pollers()
+    if killed:
+        console.print(f"[green]Stopped {killed} daemon process(es)[/green]")
+    else:
         console.print("[yellow]No daemon running[/yellow]")
-        return
 
-    try:
-        os.kill(state.daemon_pid, signal.SIGTERM)
-        console.print(f"[green]Sent stop signal to daemon (PID: {state.daemon_pid})[/green]")
-        console.print("[dim]Daemon should stop within a few seconds[/dim]")
-    except ProcessLookupError:
-        state_manager.clear_daemon()
-        console.print("[yellow]Daemon was not running (cleaned up stale state)[/yellow]")
-    except PermissionError:
-        console.print(f"[red]Permission denied to stop daemon (PID: {state.daemon_pid})[/red]")
+    state_manager.clear_daemon()
 
 
 # --- Start Commands ---

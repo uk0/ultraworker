@@ -778,16 +778,27 @@ class SlackSDKPoller:
             complexity = mention_data.get("complexity", "simple")
             logger.info(f"[Agentic] Complexity: {complexity}")
 
-            # Policy: create a new session for every mention event (same thread can have many sessions).
+            # Check for a previous completed session in the same thread for fork
+            is_thread_reply = thread_ts != message_ts
+            fork_source = None
+            if is_thread_reply:
+                fork_source = self.session_manager.get_forkable_session_for_thread(
+                    channel_id, thread_ts
+                )
+                if fork_source:
+                    logger.info(f"[Agentic] Fork source: {fork_source.session_id}")
+
+            # Create a new session for every mention event.
             agent_session = self.session_manager.create_session(
                 channel_id=channel_id,
                 thread_ts=thread_ts,
                 user_id=user_id,
                 message=text,
                 trigger_type="mention",
+                forked_from=fork_source.session_id if fork_source else None,
             )
             session_id = agent_session.session_id
-            is_resuming = False
+            is_forking = fork_source is not None
 
             # Register thread-session mapping for thread-level history view.
             self.session_manager.register_thread_session(channel_id, thread_ts, session_id)
@@ -802,8 +813,9 @@ class SlackSDKPoller:
                 user_id=user_id,
                 metadata={
                     "complexity": complexity,
-                    "is_resuming": is_resuming,
-                    "is_new_thread": thread_ts == message_ts,
+                    "is_forking": is_forking,
+                    "forked_from": fork_source.session_id if fork_source else None,
+                    "is_new_thread": not is_thread_reply,
                 },
             )
 
@@ -812,8 +824,12 @@ class SlackSDKPoller:
                 session_id=session_id,
                 channel_id=channel_id,
                 thread_ts=thread_ts,
-                is_resuming=is_resuming,
-                metadata={"complexity": complexity},
+                is_resuming=False,
+                metadata={
+                    "complexity": complexity,
+                    "is_forking": is_forking,
+                    "forked_from": fork_source.session_id if fork_source else None,
+                },
             )
 
             # Store initial context in memory
@@ -832,6 +848,8 @@ class SlackSDKPoller:
                 "thread_ts": thread_ts,
                 "complexity": complexity,
                 "status": "started",
+                "is_forking": is_forking,
+                "forked_from": fork_source.session_id if fork_source else None,
                 "created_at": datetime.now().isoformat(),
             }
             session_file = mention_dir / "session.yaml"
@@ -880,6 +898,19 @@ This request has been classified as complex and will proceed through a step-by-s
                     if files_context
                     else ""
                 }
+## Long-Term Memory
+
+You MUST use `/remember` and `/recall` to manage long-term memory at each major step:
+
+- **Before exploration**: `/recall --what "relevant keywords"` to find related past requests/work
+- **After exploration**: `/remember req --who "{mention_data["user"]}" --where "{
+                    channel_id
+                }" --what "exploration summary" --topics "topic1,topic2"`
+- **After TODO creation**: `/remember work --purpose "TODO creation for task" --action create_todo`
+- **After any skill completion**: `/remember work --purpose "skill result summary" --action "skill_name"`
+
+This ensures all work is recorded in long-term memory for future reference.
+
 ## 📌 Required Execution Order
 
 ### Step 1: Initial Response (MUST send - Block Kit)
@@ -1039,6 +1070,9 @@ Example Block Kit structure for a response:
                 "Read",
                 "Write",
                 "Glob",
+                # Bash/Grep needed for /remember skill Python execution
+                "Bash",
+                "Grep",
             ]
             base_cmd = [
                 "claude",
@@ -1047,19 +1081,19 @@ Example Block Kit structure for a response:
             ] + allowed_tools
 
             # Build command based on session mode
-            if is_resuming:
-                # Resume existing session: claude -r <session_id> "query"
-                # This preserves conversation context from previous interactions
-                cmd = base_cmd + ["-r", session_id, prompt]
-                logger.info(f"[Agentic] Resuming session {session_id} with claude -r")
+            if is_forking:
+                # Fork from previous session: inherits conversation context
+                fork_from_id = fork_source.session_id
+                cmd = base_cmd + ["--resume", fork_from_id, "--fork-session", prompt]
+                logger.info(f"[Agentic] Forking {fork_from_id} → {session_id}")
             else:
-                # New session: claude --session-id <uuid> -p "prompt"
+                # Fresh session: no prior context
                 cmd = base_cmd + ["--session-id", session_id, "-p", prompt]
-                logger.info(f"[Agentic] Starting new session {session_id}")
+                logger.info(f"[Agentic] Starting fresh session {session_id}")
 
             logger.info(f"[Agentic] Running claude (complexity={complexity}): {mention_dir}")
 
-            # Get timeout from config (default 30 minutes, configurable via ULTRAWORK_AGENTIC_TIMEOUT env)
+            # Get timeout from config (default 24 hours, configurable via ULTRAWORK_AGENTIC_TIMEOUT env)
             agentic_timeout = get_config().executor.agentic_timeout_seconds
 
             # Set IS_SANDBOX=1 to allow --dangerously-skip-permissions with root/sudo
@@ -1075,18 +1109,26 @@ Example Block Kit structure for a response:
                 env=env,
             )
 
-            # Handle "Prompt is too long" error with /compact or /clear
-            prompt_too_long = (
-                result.returncode != 0
-                and result.stderr
-                and "prompt is too long" in result.stderr.lower()
-            )
-            if prompt_too_long and is_resuming:
+            # Handle fork failure: fall back to fresh start
+            fork_failed = False
+            if is_forking and result.returncode != 0:
                 logger.warning(
-                    f"[Agentic] Prompt too long for session {session_id}, trying /compact..."
+                    f"[Agentic] Fork failed (exit={result.returncode}), "
+                    f"falling back to fresh start. stderr: {(result.stderr or '')[:200]}"
                 )
-                result = self._try_context_recovery(
-                    base_cmd, session_id, prompt, agentic_timeout, env, mention_dir
+                self._save_execution_result(mention_dir, result, "fork_failed")
+                fork_failed = True
+
+                # Retry as a fresh session without fork
+                cmd = base_cmd + ["--session-id", session_id, "-p", prompt]
+                logger.info(f"[Agentic] Retrying as fresh session {session_id}")
+                result = subprocess.run(
+                    cmd,
+                    timeout=agentic_timeout,
+                    capture_output=True,
+                    text=True,
+                    cwd=str(self.data_dir.parent),
+                    env=env,
                 )
 
             # Save execution result
@@ -1100,6 +1142,9 @@ Example Block Kit structure for a response:
 
             # Update session status via SessionManager
             if result.returncode == 0:
+                # Save LTM records directly (safety net independent of complete_session)
+                self._save_mention_ltm(mention_data, session_id)
+
                 # Transition role based on workflow type
                 if is_workflow_task:
                     self.session_manager.transition_role(
@@ -1122,7 +1167,9 @@ Example Block Kit structure for a response:
                 metadata={
                     "complexity": complexity,
                     "is_workflow_task": is_workflow_task,
-                    "is_resuming": is_resuming,
+                    "is_forking": is_forking,
+                    "fork_failed": fork_failed,
+                    "forked_from": fork_source.session_id if fork_source else None,
                 },
             )
 
@@ -1141,7 +1188,9 @@ Example Block Kit structure for a response:
                 "complexity": complexity,
                 "session_id": session_id,
                 "workflow_task": is_workflow_task,
-                "is_resuming": is_resuming,
+                "is_forking": is_forking,
+                "fork_failed": fork_failed,
+                "forked_from": fork_source.session_id if fork_source else None,
                 "response_length": len(result.stdout) if result.stdout else 0,
                 "completed_at": datetime.now().isoformat(),
             }
@@ -1189,6 +1238,36 @@ Example Block Kit structure for a response:
             self._remove_reaction(channel_id, message_ts, EMOJI_PROCESSING)
             self._add_reaction(channel_id, message_ts, EMOJI_ERROR)
             return False
+
+    def _save_mention_ltm(self, mention_data: dict, session_id: str) -> None:
+        """Save a RequestRecord to LTM directly from the SDK poller.
+
+        This acts as a safety net independent of complete_session()'s own
+        LTM save, ensuring at least one record is created per mention.
+        """
+        try:
+            from ultrawork.agent.memory_manager import MemoryManager
+            from ultrawork.memory.save_policy import SaveContext
+
+            mm = MemoryManager(self.data_dir)
+
+            req = mm.create_request_record(
+                who=mention_data.get("user", "unknown"),
+                where=mention_data.get("channel_id", "unknown"),
+                what=mention_data.get("text", "")[:200],
+            )
+            req_ctx = SaveContext(
+                record_type="request",
+                content_summary=mention_data.get("text", "")[:200],
+                is_novel=True,
+                led_to_decision=True,
+                scope="cross_session",
+            )
+            mm.commit_record(req, req_ctx)
+            logger.info(f"[LTM] Saved RequestRecord {req.id} for session {session_id}")
+
+        except Exception:
+            logger.debug("[LTM] Mention LTM save failed", exc_info=True)
 
     def _process_mention_agentic(self, message: dict, channel_id: str) -> bool:
         """Process a mention using claude -p skill (non-blocking)."""

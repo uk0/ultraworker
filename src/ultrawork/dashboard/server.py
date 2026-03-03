@@ -307,6 +307,40 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
                 self._send_json(payload)
                 return
 
+            # === LTM (Long-Term Memory) Endpoints ===
+            if parsed.path == "/api/ltm/records":
+                query = parse_qs(parsed.query)
+                type_filter = _first(query.get("type"))
+                topic_filter = _first(query.get("topic"))
+                payload = _build_ltm_records(config, type_filter, topic_filter)
+                self._send_json(payload)
+                return
+
+            ltm_record_match = re.match(r"^/api/ltm/records/([^/]+)$", parsed.path)
+            if ltm_record_match:
+                record_id = ltm_record_match.group(1)
+                payload = _build_ltm_record_detail(config, record_id)
+                self._send_json(payload)
+                return
+
+            if parsed.path == "/api/ltm/graph":
+                payload = _build_ltm_graph(config)
+                self._send_json(payload)
+                return
+
+            if parsed.path == "/api/ltm/search":
+                query = parse_qs(parsed.query)
+                q = _first(query.get("q")) or ""
+                top_k = _parse_int(_first(query.get("top_k")), default=20)
+                payload = _build_ltm_search(config, q, top_k)
+                self._send_json(payload)
+                return
+
+            if parsed.path == "/api/ltm/stats":
+                payload = _build_ltm_stats(config)
+                self._send_json(payload)
+                return
+
             self.send_response(404)
             self.end_headers()
 
@@ -2550,10 +2584,10 @@ def _start_manual_session_executor(
     try:
         runtime_cfg = get_config()
         claude_cmd = str(runtime_cfg.executor.claude_command or "claude")
-        timeout_seconds = int(runtime_cfg.executor.agentic_timeout_seconds or 1800)
+        timeout_seconds = int(runtime_cfg.executor.agentic_timeout_seconds or 86400)
     except Exception:
         claude_cmd = "claude"
-        timeout_seconds = 1800
+        timeout_seconds = 86400
 
     command = [
         claude_cmd,
@@ -2768,6 +2802,7 @@ def _build_agent_session_detail(
         ],
         "context_memory_id": session.context_memory_id,
         "pending_feedback": session.pending_feedback,
+        "forked_from": session.forked_from,
     }
 
 
@@ -3516,4 +3551,469 @@ def _build_memory_context(
         "entries": entries_data,
         "total": len(entries_data),
         "by_key": list(memory.by_key.keys()),
+    }
+
+
+# === LTM (Long-Term Memory) API Helpers ===
+
+
+def _get_ltm_store(config: DashboardConfig) -> Any:
+    """Lazily create a RecordStore for LTM access."""
+    from ultrawork.memory.record_store import RecordStore
+
+    return RecordStore(config.data_dir)
+
+
+def _serialize_request_record(rec: Any) -> dict[str, Any]:
+    """Serialize a RequestRecord to a JSON-friendly dict."""
+    return {
+        "id": rec.id,
+        "type": "request",
+        "who": rec.who,
+        "when": rec.when.isoformat() if rec.when else "",
+        "where": rec.where,
+        "what": rec.what,
+        "topics": rec.topics,
+        "how_steps": len(rec.how),
+        "links_count": len(rec.links),
+        "causality_count": len(rec.causality),
+        "created_at": rec.created_at.isoformat() if rec.created_at else "",
+        "updated_at": rec.updated_at.isoformat() if rec.updated_at else "",
+    }
+
+
+def _serialize_work_record(rec: Any) -> dict[str, Any]:
+    """Serialize a WorkRecord to a JSON-friendly dict."""
+    actions_summary = ", ".join(a.action for a in rec.what[:3]) if rec.what else ""
+    return {
+        "id": rec.id,
+        "type": "work",
+        "who": rec.who,
+        "when": rec.when.isoformat() if rec.when else "",
+        "what_summary": actions_summary,
+        "request_ref": rec.request_ref or "",
+        "step_ref": rec.why.step_ref or "",
+        "purpose": rec.why.immediate_goal,
+        "topics": rec.topics,
+        "inputs": rec.where.inputs,
+        "outputs": rec.where.outputs,
+        "links_count": len(rec.links),
+        "causality_count": len(rec.why.causality),
+        "created_at": rec.created_at.isoformat() if rec.created_at else "",
+        "updated_at": rec.updated_at.isoformat() if rec.updated_at else "",
+    }
+
+
+def _serialize_semantic_record(rec: Any) -> dict[str, Any]:
+    """Serialize a semantic record (knowledge/decision/insight/event) for the API."""
+    return {
+        "id": rec.id,
+        "type": rec.type,
+        "who": rec.who,
+        "when": rec.when.isoformat() if rec.when else "",
+        "where": rec.where if hasattr(rec, "where") else "",
+        "what": rec.what or "",
+        "topics": rec.topics,
+        "links_count": len(rec.links),
+        "causality_count": 0,
+        "created_at": rec.created_at.isoformat() if rec.created_at else "",
+        "updated_at": rec.updated_at.isoformat() if rec.updated_at else "",
+    }
+
+
+# Semantic types to iterate when loading all records
+_SEMANTIC_TYPES = ("knowledge", "decision", "insight", "event")
+
+
+def _build_ltm_records(
+    config: DashboardConfig,
+    type_filter: str | None = None,
+    topic_filter: str | None = None,
+) -> dict[str, Any]:
+    """Build a list of all LTM records."""
+    store = _get_ltm_store(config)
+    records: list[dict[str, Any]] = []
+
+    if not type_filter or type_filter == "request":
+        for req in store.list_requests():
+            if topic_filter and topic_filter not in req.topics:
+                continue
+            records.append(_serialize_request_record(req))
+
+    if not type_filter or type_filter == "work":
+        for wrk in store.list_works():
+            if topic_filter and topic_filter not in wrk.topics:
+                continue
+            records.append(_serialize_work_record(wrk))
+
+    for sem_type in _SEMANTIC_TYPES:
+        if type_filter and type_filter != sem_type:
+            continue
+        for rec in store.list_semantic(sem_type):
+            if topic_filter and topic_filter not in rec.topics:
+                continue
+            records.append(_serialize_semantic_record(rec))
+
+    # Sort by created_at descending
+    records.sort(key=lambda r: r.get("created_at", ""), reverse=True)
+
+    return {
+        "records": records,
+        "total": len(records),
+    }
+
+
+def _build_ltm_record_detail(
+    config: DashboardConfig,
+    record_id: str,
+) -> dict[str, Any]:
+    """Build detailed view of a single LTM record."""
+    import frontmatter as fm
+
+    store = _get_ltm_store(config)
+
+    # Try loading as request first, then work, then semantic
+    req = store.load_request(record_id)
+    if req:
+        data = _serialize_request_record(req)
+        data["why"] = [{"hypothesis": h.hypothesis, "confidence": h.confidence} for h in req.why]
+        data["how"] = [
+            {
+                "step_id": s.step_id,
+                "goal": s.goal,
+                "done": s.done,
+                "expected_artifacts": s.expected_artifacts,
+            }
+            for s in req.how
+        ]
+        data["links"] = [
+            {"target_id": ln.target_id, "relation": ln.relation.value, "weight": ln.weight}
+            for ln in req.links
+        ]
+        data["causality"] = [
+            {"target_id": cl.target_id, "relation": cl.relation.value, "reason": cl.reason}
+            for cl in req.causality
+        ]
+        data["facet_keys"] = req.facet_keys
+        data["touched_uris"] = req.touched_uris
+        data["produced_uris"] = req.produced_uris
+        data["save_signals"] = (
+            {
+                "novelty": req.save_signals.novelty,
+                "actionability": req.save_signals.actionability,
+                "persistence": req.save_signals.persistence,
+                "connectedness": req.save_signals.connectedness,
+                "score": req.save_signals.score,
+            }
+            if req.save_signals
+            else None
+        )
+        # Read raw body from file
+        file_path = store.requests_dir / f"{record_id}.md"
+        if file_path.exists():
+            post = fm.load(str(file_path))
+            data["body"] = post.content
+        else:
+            data["body"] = ""
+        return data
+
+    wrk = store.load_work(record_id)
+    if wrk:
+        data = _serialize_work_record(wrk)
+        data["what_actions"] = [{"action": a.action, "output": a.output} for a in wrk.what]
+        data["why_detail"] = {
+            "kind": wrk.why.kind.value,
+            "step_ref": wrk.why.step_ref or "",
+            "immediate_goal": wrk.why.immediate_goal,
+            "causality": [
+                {"target_id": cl.target_id, "relation": cl.relation.value, "reason": cl.reason}
+                for cl in wrk.why.causality
+            ],
+        }
+        data["links"] = [
+            {"target_id": ln.target_id, "relation": ln.relation.value, "weight": ln.weight}
+            for ln in wrk.links
+        ]
+        data["facet_keys"] = wrk.facet_keys
+        data["evidence"] = wrk.evidence
+        data["touched_uris"] = wrk.touched_uris
+        data["produced_uris"] = wrk.produced_uris
+        data["save_signals"] = (
+            {
+                "novelty": wrk.save_signals.novelty,
+                "actionability": wrk.save_signals.actionability,
+                "persistence": wrk.save_signals.persistence,
+                "connectedness": wrk.save_signals.connectedness,
+                "score": wrk.save_signals.score,
+            }
+            if wrk.save_signals
+            else None
+        )
+        file_path = store.works_dir / f"{record_id}.md"
+        if file_path.exists():
+            post = fm.load(str(file_path))
+            data["body"] = post.content
+        else:
+            data["body"] = ""
+        return data
+
+    # Try semantic record types
+    sem = store.load_semantic(record_id)
+    if sem:
+        data = _serialize_semantic_record(sem)
+        data["links"] = [
+            {"target_id": ln.target_id, "relation": ln.relation.value, "weight": ln.weight}
+            for ln in sem.links
+        ]
+        data["facet_keys"] = sem.facet_keys
+        data["save_signals"] = (
+            {
+                "novelty": sem.save_signals.novelty,
+                "actionability": sem.save_signals.actionability,
+                "persistence": sem.save_signals.persistence,
+                "connectedness": sem.save_signals.connectedness,
+                "score": sem.save_signals.score,
+            }
+            if sem.save_signals
+            else None
+        )
+        # Type-specific extra fields
+        for field in (
+            "summary", "source", "period", "context", "alternatives",
+            "rationale", "outcome", "pattern", "evidence", "implication",
+            "severity", "impact", "resolution",
+        ):
+            val = getattr(sem, field, None)
+            if val:
+                data[field] = val
+        # Read raw body from file
+        type_name = store._detect_type(record_id)
+        if type_name and type_name in store._type_registry:
+            dir_path = store._type_registry[type_name][0]
+            file_path = dir_path / f"{record_id}.md"
+            if file_path.exists():
+                post = fm.load(str(file_path))
+                data["body"] = post.content
+            else:
+                data["body"] = ""
+        else:
+            data["body"] = ""
+        return data
+
+    return {"error": "Record not found", "record_id": record_id}
+
+
+def _build_ltm_graph(config: DashboardConfig) -> dict[str, Any]:
+    """Build graph data (nodes + edges) for D3 visualization."""
+    store = _get_ltm_store(config)
+    nodes: list[dict[str, Any]] = []
+    edges: list[dict[str, Any]] = []
+    node_ids: set[str] = set()
+
+    for req in store.list_requests():
+        nodes.append(
+            {
+                "id": req.id,
+                "type": "request",
+                "label": req.what[:50] if req.what else req.id,
+                "topics": req.topics,
+                "created_at": req.created_at.isoformat() if req.created_at else "",
+            }
+        )
+        node_ids.add(req.id)
+
+    for wrk in store.list_works():
+        label = wrk.why.immediate_goal[:50] if wrk.why.immediate_goal else wrk.id
+        nodes.append(
+            {
+                "id": wrk.id,
+                "type": "work",
+                "label": label,
+                "topics": wrk.topics,
+                "request_ref": wrk.request_ref or "",
+                "created_at": wrk.created_at.isoformat() if wrk.created_at else "",
+            }
+        )
+        node_ids.add(wrk.id)
+
+    for sem_type in _SEMANTIC_TYPES:
+        for rec in store.list_semantic(sem_type):
+            nodes.append(
+                {
+                    "id": rec.id,
+                    "type": rec.type,
+                    "label": (rec.what[:50] if rec.what else rec.id),
+                    "topics": rec.topics,
+                    "created_at": rec.created_at.isoformat() if rec.created_at else "",
+                }
+            )
+            node_ids.add(rec.id)
+
+    # Build edges from all link types
+    for req in store.list_requests():
+        # ShallowLinks
+        for ln in req.links:
+            if ln.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": req.id,
+                        "target": ln.target_id,
+                        "type": "shallow",
+                        "relation": ln.relation.value,
+                        "weight": ln.weight,
+                    }
+                )
+        # CausalLinks
+        for cl in req.causality:
+            if cl.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": req.id,
+                        "target": cl.target_id,
+                        "type": "causal",
+                        "relation": cl.relation.value,
+                        "reason": cl.reason,
+                    }
+                )
+
+    for wrk in store.list_works():
+        # request_ref edge
+        if wrk.request_ref and wrk.request_ref in node_ids:
+            edges.append(
+                {
+                    "source": wrk.id,
+                    "target": wrk.request_ref,
+                    "type": "request_ref",
+                    "relation": "implements",
+                }
+            )
+        # ShallowLinks
+        for ln in wrk.links:
+            if ln.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": wrk.id,
+                        "target": ln.target_id,
+                        "type": "shallow",
+                        "relation": ln.relation.value,
+                        "weight": ln.weight,
+                    }
+                )
+        # CausalLinks from why
+        for cl in wrk.why.causality:
+            if cl.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": wrk.id,
+                        "target": cl.target_id,
+                        "type": "causal",
+                        "relation": cl.relation.value,
+                        "reason": cl.reason,
+                    }
+                )
+
+    # Semantic record links
+    for sem_type in _SEMANTIC_TYPES:
+        for rec in store.list_semantic(sem_type):
+            for ln in rec.links:
+                if ln.target_id in node_ids:
+                    edges.append(
+                        {
+                            "source": rec.id,
+                            "target": ln.target_id,
+                            "type": "shallow",
+                            "relation": ln.relation.value,
+                            "weight": ln.weight,
+                        }
+                    )
+
+    return {
+        "nodes": nodes,
+        "edges": edges,
+        "node_count": len(nodes),
+        "edge_count": len(edges),
+    }
+
+
+def _build_ltm_search(
+    config: DashboardConfig,
+    query: str,
+    top_k: int = 20,
+) -> dict[str, Any]:
+    """Search LTM records with weighted facet matching."""
+    if not query.strip():
+        return {"results": [], "total": 0, "query": query}
+
+    from ultrawork.memory.search import MemorySearchEngine
+
+    store = _get_ltm_store(config)
+    engine = MemorySearchEngine(store, store.facet_index)
+    results = engine.search(query, top_k=top_k)
+
+    return {
+        "results": [
+            {
+                "record_id": r.record_id,
+                "record_type": r.record_type,
+                "score": round(r.score, 3),
+                "matched_facets": r.matched_facets,
+                "snippet": r.snippet,
+            }
+            for r in results
+        ],
+        "total": len(results),
+        "query": query,
+    }
+
+
+def _build_ltm_stats(config: DashboardConfig) -> dict[str, Any]:
+    """Build LTM system statistics."""
+    store = _get_ltm_store(config)
+    requests = store.list_requests()
+    works = store.list_works()
+
+    # Collect all topics
+    topic_counts: dict[str, int] = {}
+    for req in requests:
+        for t in req.topics:
+            topic_counts[t] = topic_counts.get(t, 0) + 1
+    for wrk in works:
+        for t in wrk.topics:
+            topic_counts[t] = topic_counts.get(t, 0) + 1
+
+    # Count causal links
+    causal_count = sum(len(r.causality) for r in requests) + sum(
+        len(w.why.causality) for w in works
+    )
+
+    # Count shallow links
+    shallow_count = sum(len(r.links) for r in requests) + sum(len(w.links) for w in works)
+
+    # Semantic type counts
+    semantic_counts: dict[str, int] = {}
+    total_semantic = 0
+    for sem_type in _SEMANTIC_TYPES:
+        sem_records = store.list_semantic(sem_type)
+        semantic_counts[sem_type] = len(sem_records)
+        total_semantic += len(sem_records)
+        for rec in sem_records:
+            for t in rec.topics:
+                topic_counts[t] = topic_counts.get(t, 0) + 1
+            shallow_count += len(rec.links)
+
+    # Sort topics by count
+    sorted_topics = sorted(topic_counts.items(), key=lambda x: x[1], reverse=True)
+
+    return {
+        "request_count": len(requests),
+        "work_count": len(works),
+        "knowledge_count": semantic_counts.get("knowledge", 0),
+        "decision_count": semantic_counts.get("decision", 0),
+        "insight_count": semantic_counts.get("insight", 0),
+        "event_count": semantic_counts.get("event", 0),
+        "total_count": len(requests) + len(works) + total_semantic,
+        "causal_link_count": causal_count,
+        "shallow_link_count": shallow_count,
+        "topics": [{"name": name, "count": count} for name, count in sorted_topics],
+        "topic_count": len(topic_counts),
     }

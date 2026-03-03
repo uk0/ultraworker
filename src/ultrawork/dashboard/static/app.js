@@ -32,6 +32,8 @@ const state = {
   drawerOpen: false,
   composerBusy: false,
   terminatingSessionId: null,
+  currentView: "worktree", // "worktree" | "memory"
+  ltmBooted: false,
 };
 
 const el = {
@@ -79,7 +81,40 @@ async function boot() {
   startThreadPolling();
 }
 
+function _switchMainView(view) {
+  const worktreeView = document.getElementById("worktreeView");
+  const memoryView = document.getElementById("memoryView");
+  const sidebarWorktree = document.getElementById("sidebarWorktreeContent");
+
+  if (view === "memory") {
+    if (worktreeView) worktreeView.style.display = "none";
+    if (memoryView) memoryView.style.display = "";
+    if (sidebarWorktree) sidebarWorktree.style.display = "none";
+    // Boot LTM module on first activation
+    if (!state.ltmBooted && typeof ltmBoot === "function") {
+      state.ltmBooted = true;
+      ltmBoot();
+    }
+  } else {
+    if (worktreeView) worktreeView.style.display = "";
+    if (memoryView) memoryView.style.display = "none";
+    if (sidebarWorktree) sidebarWorktree.style.display = "";
+  }
+}
+
 function bindEvents() {
+  // Sidebar view tab switching (Worktree / Memory)
+  document.querySelectorAll(".sidebar-view-tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const view = tab.getAttribute("data-view");
+      if (view === state.currentView) return;
+      state.currentView = view;
+      document.querySelectorAll(".sidebar-view-tab").forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      _switchMainView(view);
+    });
+  });
+
   if (el.mobileThreadsOpen) {
     el.mobileThreadsOpen.addEventListener("click", () => {
       setMobileDrawerOpen(true);

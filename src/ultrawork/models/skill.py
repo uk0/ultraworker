@@ -205,6 +205,8 @@ SKILL_ROLE_TRANSITIONS: dict[str, tuple[str | None, str | None]] = {
     "sync-slack": (None, None),  # Utility, no transition
     "respond-mention": (None, None),  # Initial response
     "manage-cronjob": (None, None),  # Utility, no transition
+    "remember": (None, None),  # LTM save, no role transition
+    "recall": (None, None),  # LTM search, no role transition
 }
 
 # Approve skill transitions based on current stage

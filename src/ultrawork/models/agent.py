@@ -80,6 +80,7 @@ class AgentSession(BaseModel):
     exploration_id: str | None = None
     task_id: str | None = None
     spec_file: str | None = None
+    forked_from: str | None = None  # session_id of fork source
 
     # Workflow tracking
     workflow_type: Literal["simple", "full"] | None = None
