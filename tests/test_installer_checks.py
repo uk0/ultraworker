@@ -1,6 +1,7 @@
 """Tests for installer checks module."""
 
 from ultrawork.installer.checks import (
+    MCP_DEFINITIONS,
     SetupState,
     generate_env_file,
     generate_mcp_json,
@@ -88,6 +89,17 @@ class TestSetupState:
         assert "MEMORY_SEARCH_BIN" in env
         assert env["MEMORY_SEARCH_BIN"].endswith("/memory-search/target/release/memory-search")
 
+    def test_env_vars_memory_search_prefers_project_vendored_source(self, tmp_path) -> None:
+        vendored = tmp_path / "vendor" / "memory-search"
+        vendored.mkdir(parents=True)
+        (vendored / "Cargo.toml").write_text('[package]\nname="memory-search"\nversion="0.1.0"\n')
+
+        state = SetupState(project_dir=tmp_path, mcps_to_install=["memory-search"])
+        env = state.get_env_vars()
+
+        expected = vendored / "target" / "release" / "memory-search"
+        assert env["MEMORY_SEARCH_BIN"] == str(expected)
+
 
 class TestGenerateEnvFile:
     def test_bot_token_env(self) -> None:
@@ -165,6 +177,19 @@ class TestGenerateMcpJson:
         assert entry["args"][0] == "serve"
         assert "--data-dir" in entry["args"]
 
+    def test_memory_search_mcp_uses_project_vendored_path(self, tmp_path) -> None:
+        vendored = tmp_path / "vendor" / "memory-search"
+        vendored.mkdir(parents=True)
+        (vendored / "Cargo.toml").write_text('[package]\nname="memory-search"\nversion="0.1.0"\n')
+
+        state = SetupState(project_dir=tmp_path, mcps_to_install=["memory-search"])
+        config = generate_mcp_json(state)
+        entry = config["mcpServers"]["memory-search"]
+
+        expected_bin = vendored / "target" / "release" / "memory-search"
+        assert entry["command"] == str(expected_bin)
+        assert entry["args"][-1] == str((tmp_path / "data").resolve())
+
     def test_agent_browser_is_install_only(self) -> None:
         state = SetupState(mcps_to_install=["agent-browser"])
         config = generate_mcp_json(state)
@@ -174,3 +199,11 @@ class TestGenerateMcpJson:
         state = SetupState()
         config = generate_mcp_json(state)
         assert len(config["mcpServers"]) == 0
+
+
+class TestMcpDefinitions:
+    def test_memory_search_install_cmd_bootstraps_rust(self) -> None:
+        cmd = MCP_DEFINITIONS["memory-search"]["install_cmd"]
+        assert "command -v cargo" in cmd
+        assert "https://sh.rustup.rs" in cmd
+        assert "--profile minimal" in cmd

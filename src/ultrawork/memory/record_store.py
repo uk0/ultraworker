@@ -106,13 +106,26 @@ class RecordStore:
             self._search_binary = env_bin
             return self._search_binary
 
-        # 2. Well-known location
+        # 2. Project vendored location
+        vendored_bin = (
+            self.data_dir.parent
+            / "vendor"
+            / "memory-search"
+            / "target"
+            / "release"
+            / "memory-search"
+        )
+        if vendored_bin.is_file():
+            self._search_binary = str(vendored_bin)
+            return self._search_binary
+
+        # 3. Well-known location
         home_bin = Path.home() / "memory-search" / "target" / "release" / "memory-search"
         if home_bin.is_file():
             self._search_binary = str(home_bin)
             return self._search_binary
 
-        # 3. PATH lookup
+        # 4. PATH lookup
         which = shutil.which("memory-search")
         if which:
             self._search_binary = which

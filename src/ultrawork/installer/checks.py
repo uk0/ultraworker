@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 import subprocess
 from dataclasses import dataclass, field
@@ -19,14 +20,23 @@ class CheckResult:
 SETUP_STATE_FILE = ".ultrawork-setup-state.json"
 
 
-def _default_memory_search_repo_dir() -> Path:
-    """Default location for local memory-search repository."""
+def _default_memory_search_repo_dir(project_dir: Path | None = None) -> Path:
+    """Resolve default location for memory-search source."""
+    env_repo_dir = os.environ.get("MEMORY_SEARCH_REPO_DIR")
+    if env_repo_dir:
+        return Path(env_repo_dir).expanduser()
+
+    project_base = (project_dir or Path.cwd()).resolve()
+    vendored_repo = project_base / "vendor" / "memory-search"
+    if (vendored_repo / "Cargo.toml").exists():
+        return vendored_repo
+
     return Path.home() / "memory-search"
 
 
-def _default_memory_search_bin() -> str:
+def _default_memory_search_bin(project_dir: Path | None = None) -> str:
     """Default memory-search binary path used by setup outputs."""
-    return str(_default_memory_search_repo_dir() / "target" / "release" / "memory-search")
+    return str(_default_memory_search_repo_dir(project_dir) / "target" / "release" / "memory-search")
 
 
 @dataclass
@@ -67,7 +77,7 @@ class SetupState:
         if self.slack_personal_cookie:
             env["SLACK_COOKIE"] = self.slack_personal_cookie
         if "memory-search" in self.mcps_to_install:
-            env["MEMORY_SEARCH_BIN"] = _default_memory_search_bin()
+            env["MEMORY_SEARCH_BIN"] = _default_memory_search_bin(self.project_dir)
         return env
 
     def save(self) -> None:
@@ -386,34 +396,118 @@ MCP_DEFINITIONS = {
     },
     "memory-search": {
         "name": "Memory Search (Graph Hybrid)",
-        "description": "Build Rust memory-search binary and connect as MCP server",
+        "description": "Build Rust memory-search binary (bb25 + BGE-M3 + local Qdrant) and connect as MCP server",
         "install_cmd": (
             "bash -lc \"set -euo pipefail; "
-            "REPO_DIR=\\\"${MEMORY_SEARCH_REPO_DIR:-$HOME/memory-search}\\\"; "
+            "PROJECT_DIR=\\\"${ULTRAWORK_PROJECT_DIR:-$PWD}\\\"; "
+            "REPO_DIR=\\\"${MEMORY_SEARCH_REPO_DIR:-$PROJECT_DIR/vendor/memory-search}\\\"; "
+            "FALLBACK_REPO=\\\"$HOME/memory-search\\\"; "
             "REPO_URL=\\\"${MEMORY_SEARCH_REPO_URL:-}\\\"; "
-            "if [ -d \\\"$REPO_DIR/.git\\\" ]; then "
+            "if [ ! -f \\\"$REPO_DIR/Cargo.toml\\\" ] && [ -f \\\"$FALLBACK_REPO/Cargo.toml\\\" ]; then "
+            "REPO_DIR=\\\"$FALLBACK_REPO\\\"; "
+            "fi; "
+            "if [ -f \\\"$REPO_DIR/Cargo.toml\\\" ]; then "
+            "if [ -d \\\"$REPO_DIR/.git\\\" ] && git -C \\\"$REPO_DIR\\\" remote get-url origin >/dev/null 2>&1; then "
             "git -C \\\"$REPO_DIR\\\" pull --ff-only; "
+            "fi; "
             "elif [ -n \\\"$REPO_URL\\\" ]; then "
             "git clone \\\"$REPO_URL\\\" \\\"$REPO_DIR\\\"; "
             "else "
-            "echo 'memory-search repo not found. Set MEMORY_SEARCH_REPO_URL or clone to ~/memory-search.' >&2; "
+            "echo 'memory-search source not found. Expected ./vendor/memory-search or set MEMORY_SEARCH_REPO_URL.' >&2; "
             "exit 1; "
+            "fi; "
+            "if ! command -v cargo >/dev/null 2>&1; then "
+            "echo 'Rust toolchain not found. Installing via rustup...'; "
+            "if command -v curl >/dev/null 2>&1; then "
+            "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal; "
+            "elif command -v wget >/dev/null 2>&1; then "
+            "wget -qO- https://sh.rustup.rs | sh -s -- -y --profile minimal; "
+            "else "
+            "echo 'Rust install failed: neither curl nor wget is available.' >&2; "
+            "exit 1; "
+            "fi; "
+            "fi; "
+            "if [ -f \\\"$HOME/.cargo/env\\\" ]; then . \\\"$HOME/.cargo/env\\\"; fi; "
+            "if ! command -v cargo >/dev/null 2>&1; then "
+            "echo 'cargo not found after rustup installation. Restart shell and retry setup.' >&2; "
+            "exit 1; "
+            "fi; "
+            "if ! command -v text-embeddings-router >/dev/null 2>&1; then "
+            "if [ \\\"$(uname -s)\\\" = \\\"Darwin\\\" ] && [ \\\"$(uname -m)\\\" = \\\"arm64\\\" ] && command -v brew >/dev/null 2>&1; then "
+            "echo 'Installing text-embeddings-inference via Homebrew (Apple Silicon)...'; "
+            "brew install text-embeddings-inference || echo 'Homebrew install failed (continuing with Docker/local endpoint fallback).'; "
+            "fi; "
+            "fi; "
+            "if ! command -v qdrant >/dev/null 2>&1; then "
+            "if [ \\\"$(uname -s)\\\" = \\\"Darwin\\\" ] && [ \\\"$(uname -m)\\\" = \\\"arm64\\\" ]; then "
+            "echo 'Installing qdrant binary for Apple Silicon...'; "
+            "QDRANT_VER=\\\"${MEMORY_SEARCH_QDRANT_VERSION:-v1.17.0}\\\"; "
+            "QDRANT_ASSET=\\\"qdrant-aarch64-apple-darwin.tar.gz\\\"; "
+            "QDRANT_URL=\\\"https://github.com/qdrant/qdrant/releases/download/$QDRANT_VER/$QDRANT_ASSET\\\"; "
+            "QDRANT_TMP=\\\"$(mktemp -d)\\\"; "
+            "if command -v curl >/dev/null 2>&1; then "
+            "curl -L \\\"$QDRANT_URL\\\" -o \\\"$QDRANT_TMP/$QDRANT_ASSET\\\"; "
+            "elif command -v wget >/dev/null 2>&1; then "
+            "wget -O \\\"$QDRANT_TMP/$QDRANT_ASSET\\\" \\\"$QDRANT_URL\\\"; "
+            "else "
+            "echo 'qdrant install failed: neither curl nor wget is available.' >&2; "
+            "exit 1; "
+            "fi; "
+            "mkdir -p \\\"$HOME/.local/bin\\\"; "
+            "tar -xzf \\\"$QDRANT_TMP/$QDRANT_ASSET\\\" -C \\\"$QDRANT_TMP\\\"; "
+            "install -m 0755 \\\"$QDRANT_TMP/qdrant\\\" \\\"$HOME/.local/bin/qdrant\\\"; "
+            "rm -rf \\\"$QDRANT_TMP\\\"; "
+            "else "
+            "echo 'qdrant binary not found. Install manually or keep Docker fallback enabled.'; "
+            "fi; "
             "fi; "
             "cargo build --release --manifest-path \\\"$REPO_DIR/Cargo.toml\\\"\""
         ),
-        "requires": ["git", "rust"],
-        "env_vars": ["MEMORY_SEARCH_REPO_URL", "MEMORY_SEARCH_REPO_DIR", "MEMORY_SEARCH_BIN"],
+        "requires": [],
+        "env_vars": [
+            "MEMORY_SEARCH_REPO_URL",
+            "MEMORY_SEARCH_REPO_DIR",
+            "MEMORY_SEARCH_BIN",
+            "MEMORY_SEARCH_TEI_ENDPOINT",
+            "MEMORY_SEARCH_TEI_MODEL",
+            "MEMORY_SEARCH_TEI_BIN",
+            "MEMORY_SEARCH_TEI_LOCAL_AUTOSTART",
+            "MEMORY_SEARCH_TEI_DOCKER_AUTOSTART",
+            "MEMORY_SEARCH_QDRANT_ENDPOINT",
+            "MEMORY_SEARCH_QDRANT_BIN",
+            "MEMORY_SEARCH_QDRANT_VERSION",
+            "MEMORY_SEARCH_QDRANT_LOCAL_AUTOSTART",
+            "MEMORY_SEARCH_QDRANT_DOCKER_AUTOSTART",
+            "MEMORY_SEARCH_QDRANT_PATH",
+        ],
         "mcp_config": {
             "command": _default_memory_search_bin(),
             "args": ["serve", "--data-dir", "data"],
         },
         "guide": (
             "## Prerequisites\n"
-            "1. Install Rust toolchain: https://rustup.rs\n"
-            "2. Install Git\n\n"
+            "1. Setup auto-installs Rust via rustup when `cargo` is missing\n"
+            "2. `curl` or `wget` is required for automatic Rust installation\n"
+            "3. Git is only required when cloning from `MEMORY_SEARCH_REPO_URL`\n\n"
+            "## Runtime Notes\n"
+            "- Embeddings: BGE-M3 via local TEI runtime\n"
+            "- Vector index: local Qdrant\n"
+            "- TEI autostart order: local `text-embeddings-router` -> Docker fallback\n"
+            "- Qdrant autostart order: local `qdrant` binary -> Docker fallback\n\n"
+            "## TEI Local Install (Apple Silicon)\n"
+            "1. `brew install text-embeddings-inference`\n"
+            "2. `text-embeddings-router --model-id BAAI/bge-m3 --port 8080`\n"
+            "3. Setup tries Homebrew install automatically on Apple Silicon when router is missing\n"
+            "4. (Optional) disable Docker fallback: `MEMORY_SEARCH_TEI_DOCKER_AUTOSTART=false`\n\n"
+            "## Qdrant Local Install (Apple Silicon)\n"
+            "1. Download release binary: `qdrant-aarch64-apple-darwin.tar.gz`\n"
+            "2. `QDRANT__STORAGE__STORAGE_PATH=... QDRANT__SERVICE__HTTP_PORT=6333 qdrant`\n"
+            "3. Setup auto-downloads qdrant binary on Apple Silicon when qdrant is missing\n"
+            "4. (Optional) disable Docker fallback: `MEMORY_SEARCH_QDRANT_DOCKER_AUTOSTART=false`\n\n"
             "## Source Resolution\n"
-            "1. If `~/memory-search` exists, setup updates and builds it\n"
-            "2. Otherwise set `MEMORY_SEARCH_REPO_URL` before running setup\n"
+            "1. Uses vendored source at `./vendor/memory-search` by default\n"
+            "2. Falls back to `~/memory-search` if vendored source is absent\n"
+            "3. If neither exists, set `MEMORY_SEARCH_REPO_URL` before running setup\n"
             "   Example: export MEMORY_SEARCH_REPO_URL=https://github.com/<org>/memory-search.git\n\n"
             "## Output\n"
             f"- Binary path default: {_default_memory_search_bin()}\n"
@@ -476,7 +570,7 @@ def generate_env_file(state: SetupState) -> str:
 def generate_ultrawork_yaml(state: SetupState) -> str:
     """Generate ultrawork.yaml content."""
     trigger = f"<@{state.bot_user_id}>" if state.trigger_mode == "mention" else state.custom_keyword
-    memory_search_bin = _default_memory_search_bin()
+    memory_search_bin = _default_memory_search_bin(state.project_dir)
 
     yaml_content = f"""data_dir: data
 executor:
@@ -549,7 +643,7 @@ def generate_mcp_json(state: SetupState) -> dict:
 
             if mcp_id == "memory-search":
                 config["mcpServers"][mcp_id] = {
-                    "command": _default_memory_search_bin(),
+                    "command": _default_memory_search_bin(state.project_dir),
                     "args": [
                         "serve",
                         "--data-dir",

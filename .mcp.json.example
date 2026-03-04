@@ -22,7 +22,7 @@
       }
     },
     "memory-search": {
-      "command": "/Users/your-user/memory-search/target/release/memory-search",
+      "command": "/absolute/path/to/ultraworker/vendor/memory-search/target/release/memory-search",
       "args": [
         "serve",
         "--data-dir",
