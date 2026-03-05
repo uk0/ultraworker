@@ -1,0 +1,88 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 40
+  total_threads: 37
+  active_users: 11
+  avg_messages_per_day: 1.4
+summary: |
+  2024년 3분기 qna 채널에서는 스톰 플랫폼 기능 관련 기술적 질문과 사내 인프라/비품 문의가 주를 이루었다.
+  stargate-pylon 대규모 문서(1만~10만개) 통신 문제, 중복 파일 처리 로직, 문서 업로드 드래그 UX 이슈, 기업은행
+  문서 학습 실패 등 제품 기술 이슈가 다수 논의되었다. xionic 모델 파라미터 문서화 요청, 하이퍼클로바 API 지원,
+  openLLM 테스트, GUI 그래프 도구 등 AI/LLM 관련 질문도 활발했다. 사내에서는 4090 서버 구매 거래명세서,
+  디자인권 등록, 병특 일정, 법무검토 등 행정/법무 관련 질문이 있었다.
+topics:
+  - stargate-pylon 대규모 문서 처리
+  - 문서 업로드 UX 이슈
+  - xionic 모델
+  - 하이퍼클로바(HyperCLOVA) API
+  - openLLM 테스트
+  - GUI 워크플로우 도구
+  - 디자인권 등록
+  - 병역특례 일정
+  - 4090 서버 구매
+  - 피그마 권한
+  - 이미지 합성/프로필 생성
+key_discussions:
+  - thread_ts: '1724153989.659749'
+    date: '2024-08-20'
+    reply_count: 43
+    text_preview: openLLM 관련 테스트 진행 여부 확인
+  - thread_ts: '1721292052.596079'
+    date: '2024-07-18'
+    reply_count: 19
+    text_preview: GUI 그래프 도구(JSON 내보내기 가능) 추천 요청
+  - thread_ts: '1720743316.089829'
+    date: '2024-07-12'
+    reply_count: 18
+    text_preview: 아이엔지스토리 개발자 기술 문의 대응
+  - thread_ts: '1721878970.935209'
+    date: '2024-07-25'
+    reply_count: 17
+    text_preview: xionic 모델 지원 파라미터 문서 요청
+  - thread_ts: '1723016661.609589'
+    date: '2024-08-07'
+    reply_count: 13
+    text_preview: 한컴 독스/한글 계정 공유 요청
+  - thread_ts: '1723437430.430069'
+    date: '2024-08-12'
+    reply_count: 12
+    text_preview: stargate-pylon 대규모 문서(1만~10만개) 통신 문제 논의
+  - thread_ts: '1724125953.724899'
+    date: '2024-08-20'
+    reply_count: 12
+    text_preview: 업로드 실패 문서 재저장 시 0 캐릭터 표시 버그
+  - thread_ts: '1721975645.961689'
+    date: '2024-07-26'
+    reply_count: 12
+    text_preview: 4090 서버 구매 거래명세서 요청
+terminology:
+  - term: stargate-pylon
+    definition: 사이오닉 검색 엔진의 핵심 컴포넌트, 문서 저장 및 벡터 검색 담당
+    aliases:
+      - pylon
+      - SG
+    context: 대규모 문서 처리 성능 논의에서 사용
+  - term: xionic
+    definition: 사이오닉이 개발한 자체 LLM 모델
+    aliases:
+      - xionic-1-72b
+    context: 모델 파라미터, 에이전트 적용 등에서 언급
+  - term: Parsr
+    definition: 문서 파싱 서버 (PDF 등을 처리)
+    aliases: []
+    context: worker 서버에 배포 관련 질문에서 언급
+  - term: theVC
+    definition: 벤처캐피탈/스타트업 데이터 플랫폼
+    aliases: []
+    context: 사이오닉 프로플랜 사용 여부 질문에서 언급
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

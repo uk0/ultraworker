@@ -1,0 +1,78 @@
+channel:
+  id: C08LV1WBEGP
+  name: research-inging
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 70
+  total_threads: 57
+  active_users: 10
+  avg_messages_per_day: 1.6
+summary: |
+  2025-Q4 research-inging 채널에서는 Dense Retrieval 위치 편향(position bias) 해결을 위한 연구와 한국어 Retrieval 데이터셋 구축이 핵심 활동이었다. BGE-m3, Qwen3 Reranker 등 리랭커 증류(distillation), AutoML 임베딩 실험, ColBERT 증류 등 다양한 모델 최적화 실험이 진행되었다. 허깅페이스에 한국어 retrieval 데이터셋과 NanoBEIR-ko 평가 셋을 공개하였으며, ACL 논문 제출을 위한 실험도 병행되었다.
+topics:
+  - name: "Dense Retrieval 위치 편향 연구"
+    mention_count: 12
+    description: "문서 내 정보 위치에 따른 검색 성능 저하 문제 분석 및 합성 데이터로 해결"
+  - name: "한국어 Retrieval 데이터셋 구축"
+    mention_count: 8
+    description: "aihub 데이터 기반 합성 쿼리 생성, false negative 필터링한 hard negative 데이터셋 허깅페이스 공개"
+  - name: "리랭커 증류 (Reranker Distillation)"
+    mention_count: 6
+    description: "Qwen3-Reranker-8B → 0.6B 증류, BGE-m3-Reranker 활용 실험"
+  - name: "NanoBEIR-ko 평가 벤치마크"
+    mention_count: 5
+    description: "한국어 NanoBEIR 평가셋 수정 및 주요 모델 비교 평가, 허깅페이스 블로그 게시"
+  - name: "ACL 논문 작성"
+    mention_count: 4
+    description: "Dense Retriever 위치 편향 해결 방법론 논문 실험 및 작성"
+  - name: "ColBERT 및 임베딩 모델 실험"
+    mention_count: 4
+    description: "ColBERT distillation(skt/A.X-Encoder-base, bge-m3), Qwen3 Embedding 차원 축소 실험"
+key_discussions:
+  - thread_ts: '1762578048.000000'
+    date: '2025-11-19'
+    reply_count: 32
+    text_preview: "스톰 출처 문서 하이라이팅 정확도 향상을 위한 모델/로직 개발 논의"
+  - thread_ts: '1762578539.000000'
+    date: '2025-11-19'
+    reply_count: 36
+    text_preview: "Reranker Distillation: Qwen3-Reranker-8B → 0.6B 증류 계획 및 Loss function 설계"
+  - thread_ts: '1764821583.000000'
+    date: '2025-12-03'
+    reply_count: 35
+    text_preview: "Dense retrieval 위치 편향 해결을 위한 합성 데이터(v1) 생성 및 학습"
+  - thread_ts: '1764822600.000000'
+    date: '2025-12-03'
+    reply_count: 6
+    text_preview: "Gemini 2.5 flash 사용하여 50만원 예산으로 한국어 합성 질의 데이터 생성 계획"
+  - thread_ts: '1765339200.000000'
+    date: '2025-12-11'
+    reply_count: 39
+    text_preview: "NanoBEIR-ko 데이터셋 품질 이슈 수정 및 허깅페이스 블로그 어그로용 글감 계획"
+  - thread_ts: '1765943400.000000'
+    date: '2025-12-16'
+    reply_count: 33
+    text_preview: "opendataXAI 챌린지 시스템 아키텍처 구상"
+terminology:
+  - term: "Dense Retrieval"
+    definition: "벡터 임베딩 기반 문서 검색 방식, 키워드 검색 대비 의미적 유사성 활용"
+  - term: "위치 편향 (Position Bias)"
+    definition: "문서 내 정보의 위치(앞/뒤)에 따라 검색 성능이 달라지는 현상"
+  - term: "NanoBEIR-ko"
+    definition: "BEIR 벤치마크의 한국어 소형 버전, 사이오닉AI가 품질 개선하여 공개"
+  - term: "BGE-m3"
+    definition: "BAAI에서 개발한 다국어 임베딩 모델, 리랭킹과 임베딩 모두 활용"
+  - term: "ColBERT"
+    definition: "Late Interaction 방식의 다중 벡터 검색 모델"
+  - term: "ACL"
+    definition: "Association for Computational Linguistics, 자연어처리 최상위 학회"
+  - term: "GISTEmbedLoss"
+    definition: "배치 내 false negative를 필터링하는 임베딩 손실 함수"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,76 @@
+channel:
+  id: C08N0JJRPUM
+  name: research-graph
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 54
+  total_threads: 18
+  active_users: 9
+  avg_messages_per_day: 2.1
+summary: |
+  2025년 2분기는 research-graph 채널이 처음 개설된 시기로, Graph RAG에 대한 팀 전반의 관심이 집중되었다.
+  HiRAG, Microsoft GraphRAG, LightRAG 등 주요 논문과 구현체를 리뷰하였으며, 테크세미나에서 그래프 주제를 다루고
+  Graph User Group(GUG) 정이태님과의 협업 및 멘토링을 통해 온톨로지 설계, GraphRAG 쿼리 전략, 다중 팀 스터디가 진행되었다.
+  공급망(Supply Chain) + USTR 데이터를 활용한 multi-hop 질의 데이터셋 구축도 기획되었다.
+topics:
+  - name: "Graph RAG 논문 리뷰"
+    mention_count: 20
+    description: "HiRAG, GraphRAG+agent(Thoughts), 의료 추론 지식 그래프(MedReason) 등 다양한 논문 공유 및 토론"
+  - name: "LightRAG"
+    mention_count: 10
+    description: "LightRAG 구조 분석, Docker 설정, from scratch 구현 검토, 평가 포인트 논의"
+  - name: "온톨로지 설계"
+    mention_count: 8
+    description: "온톨로지 taxonomy, 룰 빌드, 팔란티어 적용 사례, GUG 멘토링 내용 공유"
+  - name: "Graph User Group (GUG)"
+    mention_count: 7
+    description: "정이태님 뉴스레터, 세미나 자료, 온라인 세미나 일정 공유"
+  - name: "multi-hop 데이터셋"
+    mention_count: 5
+    description: "Supply Chain + USTR 데이터 조합, Speech/Facts 비즈니스 임팩트 분석"
+key_discussions:
+  - thread_ts: '1744639769.000000'
+    date: '2025-04-14'
+    reply_count: 28
+    text_preview: "대세민 언제오나, Graph RAG 공부 채널 개설 환영 및 HiRAG 소개"
+  - thread_ts: '1744683060.000000'
+    date: '2025-04-15'
+    reply_count: 5
+    text_preview: "이번주 테크세미나 Graph 주제 자원자 모집"
+  - thread_ts: '1745143980.000000'
+    date: '2025-04-20'
+    reply_count: 26
+    text_preview: "정이태님 그래프 오마카세 뉴스레터 공유 및 GraphRAG 패턴 논의"
+  - thread_ts: '1745807640.000000'
+    date: '2025-04-27'
+    reply_count: 4
+    text_preview: "GUG 멘토링: 온톨로지 설계, LightRAG 리뷰, Supply Chain 데이터셋 기획"
+  - thread_ts: '1748779200.000000'
+    date: '2025-06-01'
+    reply_count: 3
+    text_preview: "아이티센엔텍 최종 결과물 보고서 작성 완료 공유"
+terminology:
+  - term: "HiRAG"
+    definition: "LightRAG보다 2배 더 좋다는 성능을 주장하는 계층적 지식 그래프 기반 RAG"
+    aliases: ["hi-KG RAG"]
+    context: "채널 개설 초기에 공유된 주요 대안 Graph RAG 구현체"
+  - term: "LightRAG"
+    definition: "Key-Value 기반의 빠른 적응성을 강조하는 경량 Graph RAG 구현체"
+    aliases: []
+    context: "MS GraphRAG 대안으로 검토, from scratch 구현 논의"
+  - term: "GUG"
+    definition: "Graph User Group, 정이태님이 운영하는 그래프 기술 커뮤니티"
+    aliases: ["Graph User Group"]
+    context: "세미나 자료 공유, 멘토링, 온라인 세미나 진행"
+  - term: "온톨로지"
+    definition: "도메인 지식을 형식적으로 표현하는 지식 표현 체계로, 개념과 관계를 정의"
+    aliases: ["Ontology"]
+    context: "그래프 구축의 기반으로 활용, GUG 멘토링 주요 주제"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

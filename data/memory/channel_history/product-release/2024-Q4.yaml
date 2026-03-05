@@ -1,0 +1,68 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 52
+  total_threads: 30
+  active_users: 8
+  avg_messages_per_day: 1.7
+summary: |
+  2024-Q4에는 Stargate API가 v0.29.1에서 v0.33.5까지, WEB이 v1.13.4에서 v1.15.5까지 발전했다.
+  핵심 기능으로는 팀 관리 시스템(Admin/Manager/Worker 초대, 권한 설정, 삭제),
+  트라이얼(Trial) 기능, 콘솔 대시보드, 사이드바 shadcn 컴포넌트 리뉴얼, 에이전트 사용량 집계,
+  문서 뷰어(chat table style), 원터치 제보 슬랙 알람이 출시되었다.
+  Pylon은 v1.5.0에서 v1.5.5로 업데이트되며, Cohere API의 AWS Bedrock(일본 리전) 전환,
+  Qdrant 검색 batch operation 개선, HNSW 근사 검색, 청크 머징 로직 개선,
+  Organize V2(Document AI), 뉴렐릭 상세 에러 리포트, DI 적용 등이 이루어졌다.
+  GitHub Actions 릴리즈 봇의 버그로 "No changes" 빈 릴리즈가 반복 발생하는 이슈가 있었다.
+  WEB에서는 디자인 시스템 고도화(shadcn 도입), JSON 로그 뷰어, 마크다운/LaTeX 뷰어,
+  파일 업로드 용량 제한 완화(50MB) 등이 적용되었다.
+topics:
+  - 팀 관리 시스템 (Admin/Manager/Worker)
+  - 트라이얼(Trial) 기능 출시
+  - 콘솔 대시보드 구현
+  - Cohere API -> AWS Bedrock 전환
+  - Pylon Organize V2 (Document AI)
+  - 사이드바 shadcn 컴포넌트 리뉴얼
+  - 에이전트 사용량 집계
+  - 뉴렐릭 에러 리포트
+  - 파일 업로드 용량 확대 (50MB)
+  - GitHub Actions 릴리즈 봇 이슈
+key_discussions:
+  - thread_ts: '1729847425.737309'
+    date: '2024-10-25'
+    topic: Stargate API v0.30.0 - 팀 관리 대규모 업데이트 (27개 댓글)
+  - thread_ts: '1730189339.495569'
+    date: '2024-10-29'
+    topic: Pylon v1.5.2 - Organize V2, Qdrant 최적화, 엔드포인트 정리 (19개 댓글)
+  - thread_ts: '1730780711.399859'
+    date: '2024-11-05'
+    topic: Stargate API v0.30.4 - 파일 업로드 50MB 확대, 로그 개선 (5개 댓글)
+  - thread_ts: '1731642247.555479'
+    date: '2024-11-15'
+    topic: Stargate WEB v1.15.0 - 트라이얼 기능 통합, 대시보드 출시
+terminology:
+  - term: "Trial"
+    definition: "신규 고객의 무료 체험 기능"
+    aliases: ["트라이얼"]
+  - term: "shadcn"
+    definition: "Radix UI 기반의 React 컴포넌트 라이브러리"
+    aliases: ["shadcn/ui"]
+  - term: "Document AI"
+    definition: "Storm Organize V2의 명칭, 문서 구조화 및 분석 기능"
+    aliases: ["Organize V2"]
+  - term: "Bedrock"
+    definition: "AWS의 생성형 AI 서비스, Cohere reranker가 이관됨"
+    aliases: ["AWS Bedrock"]
+  - term: "NewRelic"
+    definition: "APM(Application Performance Monitoring) 도구"
+    aliases: ["뉴렐릭"]
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

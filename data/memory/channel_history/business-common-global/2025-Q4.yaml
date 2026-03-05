@@ -1,0 +1,77 @@
+channel:
+  id: C06814P5L5D
+  name: business-common-global
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 50
+  total_threads: 38
+  active_users: 12
+  avg_messages_per_day: 2.0
+summary: |
+  2025년 4분기 글로벌 비즈니스 채널에서는 일본 사업의 본격적인 확장과 함께 동남아, 미국, 유럽 등 다방면의 글로벌 진출 논의가 활발히 이루어졌다. 주요 이정표로는 CEATEC 전시회 참가(일본 최대 IT 전시회), K-AI 얼라이언스 출장(11월 17-19일), OpenAI 오픈 이노베이션 최종 선발, SBI 인베스트먼트 투자 문의, Siam AI(태국) 관련 협업 준비, NVIDIA GTC 2026 스타트업 피치 준비 등이 있었다. Dirbato, Recruit, DATT Japan 등 일본 파트너사와의 미팅 결과가 상세하게 공유되었으며, 기업 소개 PR 영상 제작(한국어·영어·일본어)이 완료되었다.
+topics:
+  - name: "일본 사업 확장"
+    mention_count: 20
+    description: "CEATEC 전시회, K-AI 얼라이언스, Dirbato/Recruit/DATT Japan 미팅, 일본 제품소개서 업데이트, KSC 도쿄 협업"
+  - name: "OpenAI 오픈 이노베이션"
+    mention_count: 8
+    description: "글로벌 유니콘 대상 오픈 이노베이션 지원사업 지원 및 최종 선발 성공(11월)"
+  - name: "동남아 사업 준비"
+    mention_count: 5
+    description: "Siam AI(태국) 관련 협업 논의, 동남아 리서치, KSC 싱가포르 지원 검토"
+  - name: "글로벌 투자 유치"
+    mention_count: 5
+    description: "SBI 인베스트먼트 투자 문의, Future Back Ventures 투자 논의, NVIDIA GTC 스타트업 피치 준비"
+  - name: "기업 PR 영상 제작"
+    mention_count: 4
+    description: "한국어, 영어, 일본어 버전 기업 소개 PR 영상 제작 및 최종 완료"
+key_discussions:
+  - thread_ts: '1729037700.000000'
+    date: '2025-10-16'
+    reply_count: 11
+    text_preview: "JP 주재원 채용 관련 - 전직 VCAT AI 일본 지사장 레쥬메 공유 및 검토"
+  - thread_ts: '1730238000.000000'
+    date: '2025-10-30'
+    reply_count: 94
+    text_preview: "글로벌 유니콘기업 대상 오픈 이노베이션(OpenAI) 지원 논의 - 최종 선발"
+  - thread_ts: '1730297400.000000'
+    date: '2025-10-31'
+    reply_count: 15
+    text_preview: "디캠프 Cento Ventures(싱가포르 VC) 미팅 논의"
+  - thread_ts: '1732244940.000000'
+    date: '2025-11-22'
+    reply_count: 15
+    text_preview: "KSC 싱가포르 지원 관련 논의"
+  - thread_ts: '1733910000.000000'
+    date: '2025-12-11'
+    reply_count: 25
+    text_preview: "2026 서비스 BM 해외진출 지원사업 지원 관련 논의"
+  - thread_ts: '1734218400.000000'
+    date: '2025-12-15'
+    reply_count: 60
+    text_preview: "NVIDIA GTC 2026 스타트업 피치 지원 준비 스레드"
+terminology:
+  - term: "K-AI 얼라이언스"
+    definition: "한국 AI 스타트업의 일본 진출을 지원하는 얼라이언스 프로그램. 11월 도쿄 출장"
+    aliases: ["K-AI Alliance Program"]
+    context: "2025-Q4 주요 글로벌 사업 활동"
+  - term: "CEATEC"
+    definition: "일본 최대 IT 전시회. 2025년 10월 14-18일 개최. Sionic AI 부스 참가"
+    aliases: []
+    context: "일본 현지 파트너사/잠재고객 발굴 목적 참가"
+  - term: "Siam AI"
+    definition: "태국 파트너사. STORM 플랫폼 도입 협력 논의"
+    aliases: ["SiamAI"]
+    context: "동남아 시장 진출의 핵심 파트너"
+  - term: "오픈 이노베이션"
+    definition: "글로벌 유니콘 기업(OpenAI 등) 대상 스타트업 액셀러레이션 프로그램"
+    aliases: ["Open Innovation"]
+    context: "2025-Q4 최종 선발되어 해외 확장 지원 기대"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

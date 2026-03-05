@@ -1,0 +1,80 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:26:54'
+statistics:
+  total_messages: 14
+  total_threads: 10
+  active_users: 9
+  avg_messages_per_day: 0.3
+key_discussions:
+- thread_ts: '1768355406.279659'
+  date: '2026-01-14'
+  reply_count: 37
+  text_preview: 네이버 정상혁님 강연 문의가 들어왔습니다. ( 웨비나 )
+- thread_ts: '1768369498.373359'
+  date: '2026-01-14'
+  reply_count: 35
+  text_preview: 머여 29일에 제가 발표한다는데요? 머임?
+- thread_ts: '1769500742.257869'
+  date: '2026-01-27'
+  reply_count: 34
+  text_preview: '돌아온 스프링캠프
+
+
+    <https://www.linkedin.com/feed/update/urn:li:activity:7421423597480701952?utm_source=shar'
+- thread_ts: '1767667265.007699'
+  date: '2026-01-06'
+  reply_count: 33
+  text_preview: 'Oracle AI summit 에서 사이오닉 30분 기술세션을 요청드린다고 연락이 왔습니다.
+
+    행사 운영간 부스를 운영할 수 있다고 합니다.
+
+
+    큰 기업은 삼성 SDS, 포스코 + ('
+- thread_ts: '1769243294.716879'
+  date: '2026-01-24'
+  reply_count: 27
+  text_preview: '<@U095L163Q5Q>
+
+    2/4 일 (수) 19시 ~ 21시에 양재 오피스에서 작은 세미나를 하려고 하고 싶습니다.
+
+    장소 활용이 가능할까요? 10인 수준으로 예상합니다.
+
+    아직 정'
+- thread_ts: '1769306656.628279'
+  date: '2026-01-25'
+  reply_count: 15
+  text_preview: '<@U057PR1ADCL> <@U057MCDJHDY>
+
+    지난 11월 일본쪽 행사에서 만난 분으로부터 아래와 같은 메일을 받았습니다.
+
+    2/26 KOSA 에서 진행하는 일본 IT 관계자'
+- thread_ts: '1769771657.006639'
+  date: '2026-01-30'
+  reply_count: 12
+  text_preview: OCI AI Summit 발표 준비 스레드 &gt;&gt;
+- thread_ts: '1769136681.544169'
+  date: '2026-01-23'
+  reply_count: 6
+  text_preview: '*에디토리움(Editorium)*이라는 에디터 개발자 커뮤니티 밋업에서 제가 발표를 진행합니다.
+
+    02월 01일(일) 17:00 ~ 19:30에 진행하며
+
+    준비는 이전부터 하고 있었지'
+- thread_ts: '1770786323.916169'
+  date: '2026-02-11'
+  reply_count: 3
+  text_preview: 네이버 기술조직 워크샵
+- thread_ts: '1768548601.086969'
+  date: '2026-01-16'
+  reply_count: 2
+  text_preview: 구글 스타트업 행사?
+metadata:
+  created_at: '2026-02-13T16:26:54'
+  synced_by: sync_fast.py

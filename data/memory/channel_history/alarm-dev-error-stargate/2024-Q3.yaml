@@ -1,0 +1,47 @@
+channel:
+  id: C07GDDBPGJU
+  name: alarm-dev-error-stargate
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 15903
+  total_threads: 11
+  active_users: 12
+  avg_messages_per_day: 513.0
+summary: |
+  2024-Q3 기간 동안 Stargate 검색 엔진의 개발 환경 오류 모니터링 채널이 운영되었으며, 하루 평균 513건의 에러 알림이 발생하는 높은 오류 빈도를 기록했다. 주요 오류 유형은 데이터베이스 연결 불가(localhost:5432), UNRECOGNIZED_FILE(미등록 MIME 타입), INTERNAL_SERVER_ERROR 등이며, Prisma ORM을 통한 DB 접근 실패가 반복적으로 나타났다. 채널 시작 초기에는 Sionic Monitoring 봇을 통한 자동화 알림 시스템이 구축되었으며, 개발팀 12명이 오류를 모니터링하는 체계가 마련되었다.
+topics:
+  - name: "데이터베이스 연결 오류"
+    mention_count: 45
+    description: "Prisma를 통해 localhost:5432 PostgreSQL 서버에 연결할 수 없는 오류가 반복적으로 발생"
+  - name: "파일 파싱 오류"
+    mention_count: 30
+    description: "unstructured-io를 통한 PDF 파싱 실패 및 미등록 MIME 타입(image/png) 오류"
+  - name: "INTERNAL_SERVER_ERROR"
+    mention_count: 25
+    description: "Stargate API에서 발생한 내부 서버 오류, 주로 에이전트 문서 처리 중 발생"
+key_discussions:
+  - thread_ts: '1722939300.000000'
+    date: '2024-08-06'
+    reply_count: 1
+    text_preview: "Sionic Monitoring 봇 채널 연동 및 DB 연결 오류(localhost:5432) 첫 발생"
+terminology:
+  - term: "Stargate"
+    definition: "Sionic AI의 검색 엔진 서비스로, Google Cloud Run 기반으로 운영되는 API 서버"
+    aliases: ["stargate-api"]
+    context: "개발 환경 오류 모니터링 채널에서 주로 언급"
+  - term: "Pylon"
+    definition: "Stargate와 연동되는 백엔드 서비스로, 문서 파싱 및 피드백 처리를 담당"
+    aliases: ["FROM_PYLON"]
+    context: "PYLON으로부터 전달되는 에러 콜백 처리"
+  - term: "unstructured-io"
+    definition: "PDF 등 비정형 문서를 파싱하는 외부 서비스(usio)"
+    aliases: ["usio"]
+    context: "문서 업로드 시 파싱 오류 발생 원인"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

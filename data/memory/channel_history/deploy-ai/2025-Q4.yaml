@@ -1,0 +1,31 @@
+channel:
+  id: C080LE2ACNM
+  name: deploy-ai
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 2.5
+summary: |
+  2025-Q4에 deploy-ai 채널이 "deploy-test"에서 "deploy-ai"로 이름이 변경되었으며, 채널 초기 배포 명령어 테스트(voicerag-go, dev-shuttle 등) 및 신규 멤버 초대가 이루어졌다. 활동량이 매우 적은 채널로 AI 서비스 배포 자동화를 위한 슬랙봇 명령어 기반 배포 채널로 운영되기 시작했다.
+topics:
+  - name: "채널 명칭 변경 및 초기 설정"
+    mention_count: 3
+    description: "deploy-test에서 deploy-ai로 채널명 변경, voicerag-go·dev-shuttle 배포 명령어 테스트"
+key_discussions: []
+terminology:
+  - term: "sionic-deploy-new"
+    definition: "사이오닉의 슬랙봇 기반 배포 자동화 명령어 시스템으로 서비스명·환경·커밋 해시를 파라미터로 받아 배포 수행"
+  - term: "voicerag-go"
+    definition: "음성 RAG 관련 서비스로 deploy-ai 채널에서 배포 테스트 대상으로 언급된 서비스명"
+  - term: "dev-shuttle"
+    definition: "개발 환경용 셔틀 서비스로 deploy-ai 채널에서 배포 명령어 테스트에 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

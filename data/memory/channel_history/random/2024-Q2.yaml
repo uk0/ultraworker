@@ -1,0 +1,103 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 422
+  total_threads: 237
+  active_users: 20
+  avg_messages_per_day: 5.2
+summary: |
+  2024년 2분기 random 채널은 STORM 제품의 사실상 첫 계약 체결이 핵심 이정표였다.
+  Claude 3.5 Sonnet 출시, OpenAI의 RockSet 인수 등 AI 업계 주요 뉴스가 활발히 공유되었고,
+  BE Developer(신희수) 합류 결정, 프리다이빙 자격증 강습 등 팀 빌딩 활동이 두드러졌다.
+  Databricks 행사, WWDC, Figma Config 2024, 디캠프 발표 등 외부 컨퍼런스 참여가 활발했다.
+  웹사이트 다국어(한국어·일본어·영어) 페이지 정리, 블로그 구축이 진행되었고,
+  RunPod Head of Growth의 한국 방문, 중국 출장 지인 방문 등 글로벌 네트워킹도 이루어졌다.
+  디스코드에서의 영업 활동, 뤼튼에 STORM RAG 영업, Elasticsearch+LangChain 통합 등
+  사업 확대 관련 활동이 활발했다. 팀 문화로는 환영 파티, 미라클 출근 챌린지, 간식 나눔이 계속되었다.
+  Zapier 기반 채널 일일 요약 봇이 운영되어 매일 자동 요약이 제공되었다.
+topics:
+  - name: "STORM 첫 계약 체결"
+    count: 3
+    description: "STORM 제품 사실상 첫 정식 계약 성사. 매출 인식 시작."
+  - name: "AI 모델 출시/인수"
+    count: 8
+    description: "Claude 3.5 Sonnet(Anthropic), OpenAI RockSet 인수, GPT 빌더 종료 등."
+  - name: "외부 컨퍼런스 참여"
+    count: 10
+    description: "Databricks, WWDC, Figma Config 2024, 디캠프 발표, IGM 행사, 디지털금융포럼."
+  - name: "팀 빌딩/채용"
+    count: 8
+    description: "BE Developer 신희수 합류 결정, 환영회, 프리다이빙 Lv.1 강습, 미라클 출근 챌린지."
+  - name: "글로벌 네트워킹"
+    count: 5
+    description: "RunPod Head of Growth 한국 방문, 중국 출장 지인 방문, axolotl 커미터 미팅."
+  - name: "웹사이트/마케팅"
+    count: 5
+    description: "한국어·일본어·영어 홈페이지 정리, 블로그 구축, 팜플렛·스티커 배포."
+  - name: "개밥먹기(Dogfooding)"
+    count: 3
+    description: "Apple 팀 쿡의 버그 리포트 사례 공유, 제품 사용 경험 중시 문화."
+key_discussions:
+  - thread_ts: '1719299420.084589'
+    date: '2024-06-25'
+    reply_count: 3
+    text_preview: "스톰 사실상 첫계약 체결. 인증 완료."
+  - thread_ts: '1718893100.216099'
+    date: '2024-06-20'
+    reply_count: 20
+    text_preview: "Claude 3.5 Sonnet 출시. 3 Opus 대비 1/5 가격, 2배 빠르고 강력."
+  - thread_ts: '1718770494.388039'
+    date: '2024-06-19'
+    reply_count: 43
+    text_preview: "신입 환영 파티 날짜 조율. 전원 참여 독려."
+  - thread_ts: '1718774020.730309'
+    date: '2024-06-19'
+    reply_count: 12
+    text_preview: "앤서 프롬프트 contexts 용어 개선 투표 - retrieved contexts, knowledge chunks 등."
+  - thread_ts: '1718898094.431329'
+    date: '2024-06-20'
+    reply_count: 20
+    text_preview: "미라클 출근 챌린지 - 09:30/11:30 기준 벌금제."
+  - thread_ts: '1717568766.887389'
+    date: '2024-06-05'
+    reply_count: 25
+    text_preview: "프리다이빙 Lv.1 자격증 강습 모집 - 용인 딥스테이션."
+  - thread_ts: '1718598313.353109'
+    date: '2024-06-17'
+    reply_count: 3
+    text_preview: "Apple Park 방문기 - 팀 쿡 버그 리포트 프로세스, 개밥먹기 문화."
+  - thread_ts: '1718099799.870789'
+    date: '2024-06-11'
+    reply_count: 7
+    text_preview: "포티파이 과제 발표 완료. 11개 기관 참여, 28억 원 수준."
+terminology:
+  - term: "STORM"
+    definition: "사이오닉에이아이의 기업용 생성형 AI 솔루션 (STORM Answer 등)"
+    aliases: ["스톰"]
+    context: "2분기에 사실상 첫 정식 계약 체결."
+  - term: "RockSet"
+    definition: "RocksDB를 만든 회사. Vector DB + 인프라 서빙. OpenAI에 인수됨."
+    aliases: ["록셋"]
+    context: "OpenAI의 검색 인프라 강화 목적 인수."
+  - term: "axolotl"
+    definition: "오픈소스 파인튜닝 라이브러리의 1등 주자 (OpenAccess-AI-Collective 소속)"
+    aliases: []
+    context: "메인 커미터와 커피 미팅 진행."
+  - term: "포티파이"
+    definition: "NIPA/정부 과제명. GPT 빌더 관련 과제로 11개 기관 참여."
+    aliases: []
+    context: "28억 원 수준 지분, 과제 발표 성공적 완료."
+  - term: "노을AI"
+    definition: "뤼튼(Wrtn)의 대시보드상 표시명."
+    aliases: ["뤼튼"]
+    context: "대시보드에 노을ai로 나오는 항목이 뤼튼임이 확인됨."
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

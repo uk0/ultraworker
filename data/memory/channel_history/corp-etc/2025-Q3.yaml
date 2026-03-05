@@ -1,0 +1,53 @@
+channel:
+  id: C05801FL29F
+  name: corp-etc
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 6
+  active_users: 5
+  avg_messages_per_day: 1.2
+summary: |
+  2025년 3분기 corp-etc 채널에서 채용, 서비스 권한 관리, 법카 분실 등 다양한 주제가
+  논의되었다. 오승희가 디캠프 인재채용 job posting 기회를 공유했고(7/2), 원성준이
+  디캠프 주최 개발자 채용 및 스톰플랫폼 홍보 행사 정보를 공유했다(7/24). 김혜원이
+  신규 입사자(안진혁)에게 피그마, 슬랙, 노션, 리니어 등 인터널 서비스 권한 부여를
+  제안했다(7/24). 법카(2번 세민푸딩) 분실 사건이 2건 발생했는데, 조하담이 바지
+  주머니에 넣고 귀가(8/19)하고 이강욱도 같은 실수를 반복(8/22)하여 활발한 스레드가
+  달렸다. 원성준이 디캠프 인턴 채용 지원 프로그램도 공유했다(8/28).
+topics:
+  - 디캠프 인재채용 job posting
+  - 디캠프 채용 행사 및 스톰플랫폼 홍보
+  - 신규 입사자 서비스 권한 관리
+  - 법카(세민푸딩) 분실 사건 (2건)
+  - 디캠프 인턴 채용 지원 프로그램
+key_discussions:
+  - thread_ts: '1755844140.418459'
+    date: '2025-08-22'
+    reply_count: 11
+    text_preview: '이강욱 법카(세민푸딩) 주머니에 넣고 귀가 사건'
+  - thread_ts: '1753347199.145359'
+    date: '2025-07-24'
+    reply_count: 6
+    text_preview: '안진혁 서비스 권한 부여 논의 (피그마/슬랙/노션/리니어)'
+  - thread_ts: '1751458569.549279'
+    date: '2025-07-02'
+    reply_count: 3
+    text_preview: '디캠프 인재채용 job posting 정보 공유'
+  - thread_ts: '1756350164.940859'
+    date: '2025-08-28'
+    reply_count: 3
+    text_preview: '디캠프 인턴 채용 지원 프로그램 공유'
+terminology:
+  - term: "세민푸딩"
+    definition: "사이오닉 AI 내부에서 2번 법인카드를 부르는 별칭."
+    aliases: ["2번 법카", "2번 세민푸딩"]
+    context: "법카 분실 사건에서 반복적으로 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

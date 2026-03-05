@@ -1,0 +1,36 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 2
+  active_users: 7
+  avg_messages_per_day: 1.6
+summary: |
+  2024년 1분기는 채널 초기 활성화 시기로, 구글 DevRel 팀으로부터 Gemini 관련 발표 요청이 접수되었다. 진형님이 3월 22일 외부 발표를 성공적으로 마쳤으며, 삼성 발표를 위해 랭콘 자료를 활용한 발표자료 작업이 진행되었다. 외부 발표 자료를 B2B 영업 플레이북 형태로 공용화하자는 아이디어도 제안되었다.
+topics:
+  - name: "외부 발표 활동"
+    mention_count: 5
+    description: "구글 DevRel 팀 발표 요청, 삼성 발표 준비, 랭콘 자료 활용"
+  - name: "발표 자료 공용화"
+    mention_count: 3
+    description: "외부 B2B 플레이북 형태로 발표자료 공용 활용 방안 논의"
+key_discussions:
+  - thread_ts: '1711346340.000000'
+    date: '2024-03-22'
+    reply_count: 0
+    text_preview: "발표 반응이 좋네요. 잘 끝났습니다 - 외부 발표 성공 완료 보고"
+  - thread_ts: '1711598460.000000'
+    date: '2024-03-28'
+    reply_count: 1
+    text_preview: "랭콘 자료 활용하여 삼성쪽 발표에 사용하기 위한 발표자료 편집 요청"
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

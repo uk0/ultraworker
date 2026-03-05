@@ -1,0 +1,45 @@
+channel:
+  id: C05TNDBU38X
+  name: product-storm-analyze
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 0.01
+summary: >
+  2024년 4분기는 채널 활동이 거의 없었던 시기로, 유일한 활동은 최윤정이 한국펀드평가 고객 대응을 위한
+  도움 요청이었다. 한국펀드평가가 한국자산평가와 유사하게 여러 문서에서 정보를 추출하여 하나의 템플릿으로
+  정규화하는 기능을 원했으나, 문서가 긁히지 않아 Document AI로 변환 후 처리한 상태에서 프롬프트 기반
+  추출이 제대로 동작하지 않는 이슈가 있었다.
+topics:
+  - name: "한국펀드평가 고객 대응"
+    count: 1
+    summary: "최윤정이 한국펀드평가 고객의 문서 정보 추출/정규화 요구사항 대응. Document AI 변환 후 에이전트 기반 추출 시도 중 답이 제대로 안 뽑히는 이슈."
+key_discussions:
+  - thread_ts: '1730443448.279749'
+    date: '2024-11-01'
+    title: "한국펀드평가 문서 정보 추출 지원 요청"
+    summary: "최윤정이 한국펀드평가 고객 대응 도움 요청. 한국자산평가와 유사하게 여러 문서에서 정보를 추출하여 하나의 템플릿으로 정규화하려 함. 문서가 긁히지 않아 Document AI로 변환 후 에이전트에 프롬프트 작성했으나 답이 제대로 안 뽑히는 상태."
+    participants: ["U067AL7NWHE"]
+    decisions: []
+    action_items: ["프롬프트 기반 추출 이슈 해결"]
+    keywords: ["한국펀드평가", "Document AI", "정보 추출", "정규화"]
+    relevance_score: 0.7
+terminology:
+  - term: "한국펀드평가"
+    definition: "Analyze 고객사. 문서 정보 추출 및 정규화 요구."
+    aliases: []
+    context: "한국자산평가와 유사한 요구사항. Document AI 활용."
+  - term: "한국자산평가"
+    definition: "기존 고객사. 문서 정보 추출 사례."
+    aliases: []
+    context: "한국펀드평가의 레퍼런스 사례."
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual

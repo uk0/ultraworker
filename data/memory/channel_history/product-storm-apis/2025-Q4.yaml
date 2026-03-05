@@ -1,0 +1,63 @@
+channel:
+  id: C07RCDTGW9E
+  name: product-storm-apis
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 121
+  total_threads: 94
+  active_users: 13
+  avg_messages_per_day: 2.4
+summary: |
+  2025-Q4에는 Storm APIs Phase 3 개발 및 라이브 배포가 핵심 활동이었다. parse-router 기능 확장(HWP 지원, 엑셀 4000자 과금 정책, 다국어 분기 처리, LlamaParse 호환 API), 크레딧 결제 시스템 QA 및 데이터 마이그레이션이 이루어졌다. 10월 말 Phase 3 라이브 배포 완료 후 결제 정합성 모니터링 대시보드 구축과 삼성 E&A API 연동 지원이 병행되었으며, 폴라리스 솔루션을 통한 HWP 지원 논의와 캐리어 storm-parse에서 parse-router로의 전환 작업도 진행되었다.
+topics:
+  - name: "Phase 3 라이브 배포"
+    mention_count: 20
+    description: "크레딧 결제, API Key 발급, 사용 기록 조회 기능 포함 Phase 3 라이브 배포 완료"
+  - name: "parse-router 기능 확장"
+    mention_count: 25
+    description: "HWP 지원, 엑셀 과금 정책, 다국어 모델 분기, LlamaParse 호환 API 추가"
+  - name: "크레딧 결제 시스템"
+    mention_count: 18
+    description: "토스페이먼츠 결제 연동, 크레딧 정합성 검증, 데이터 마이그레이션 및 클렌징"
+  - name: "삼성 E&A 연동 지원"
+    mention_count: 10
+    description: "삼성 E&A API 메타데이터 필드 추가 요청 및 Grafana 대시보드 지원"
+  - name: "폴라리스 HWP 지원"
+    mention_count: 8
+    description: "HWP 파일 처리를 위한 폴라리스 솔루션 도입 논의 및 비용 협상"
+key_discussions:
+  - thread_ts: '1761274462.000000'
+    date: '2025-10-10'
+    reply_count: 30
+    text_preview: "parse-router Phase 3 작업 논의"
+  - thread_ts: '1761609006.000000'
+    date: '2025-10-14'
+    reply_count: 61
+    text_preview: "폴라리스 테스트 라이선스 및 모듈 수령본 공유, HWP 지원 방안 논의"
+  - thread_ts: '1761649200.000000'
+    date: '2025-10-14'
+    reply_count: 19
+    text_preview: "월 사용 기록 크레딧 필드 관련 프론트 작업 논의"
+  - thread_ts: '1762918200.000000'
+    date: '2025-10-29'
+    reply_count: 70
+    text_preview: "HWP 파일명 50자 제한 정책 도입 논의"
+terminology:
+  - term: "parse-router"
+    definition: "Storm Parse API 백엔드 서비스명. PDF·이미지·오피스·HWP 문서 파싱 요청을 처리"
+  - term: "크레딧"
+    definition: "Storm APIs 사용량 과금 단위. 팀 단위로 충전하고 API 호출 시 페이지 수만큼 차감"
+  - term: "폴라리스"
+    definition: "HWP 파일 처리를 위한 외부 솔루션. parse-router에 연동하여 한글 문서 지원에 활용"
+  - term: "TA(Templar Archives)"
+    definition: "Storm APIs의 크레딧 이력 및 예약 정보를 관리하는 내부 서비스"
+  - term: "LlamaParse 호환 API"
+    definition: "기존 LlamaParse 사용 고객이 쉽게 마이그레이션할 수 있도록 동일 인터페이스를 제공하는 API"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

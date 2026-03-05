@@ -1,0 +1,65 @@
+channel:
+  id: C06SUBV2Q0M
+  name: fyi-summary
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 100
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 5.3
+summary: |
+  2025-Q4에는 요약봇이 다수 채널의 일일 요약을 게시하며 연구 및 사업 채널의 주요 논의를 정리했다. 주요 내용으로는 CVPR 2025 논문 제출 논의(초록 마감 11월 6일), KDD 2026 제주 개최 소식, Jina Reranker V3 기술 논의, Dense Retriever 편향성 연구(DIVER v2), MoE SVD 기반 지식 증류 논문, BM25 검색 성능 향상 실험(WANDS/ESCI 데이터셋), 임베딩 모델 위치 편향 감소 실험 설계(ACL 워크숍), 스톰 에이전트 템플릿 설정 변경, Teams 연동 UI 개선 등이 있었다. 추석 연휴로 인한 위클리 취소 공지도 포함되었다.
+topics:
+  - name: "CVPR 2025 논문 제출"
+    mention_count: 5
+    description: "CVPR 초록 마감 2025년 11월 6일, B200 장비 수령 후 논문 작성 예정, KDD 2026 제주 개최 소식 공유"
+  - name: "Dense Retriever 편향성 연구"
+    mention_count: 10
+    description: "DIVER v2의 pointwise/listwise 재순위화 점수 보간 방식, bge-reasoner보다 5점 이상 성능 향상, 위치 편향 감소 실험 설계"
+  - name: "MoE SVD 기반 지식 증류"
+    mention_count: 4
+    description: "CVPR 2025 accepted paper - 토큰 압축과 성능 향상 동시 달성. GLM-4.6→GLM-4.5-Air KD 관련"
+  - name: "BM25 및 LLM 에이전트 검색 실험"
+    mention_count: 6
+    description: "GPT-5 LLM 에이전트 활용 BM25 검색으로 WANDS(0.56→0.64), ESCI(0.30→0.39) 15~30% 성능 향상"
+  - name: "Storm 에이전트 및 Teams 연동"
+    mention_count: 8
+    description: "워크플로우 노드 기본값 2048 토큰 변경, Teams 봇 멘션 방식 UI/UX 개선, IF/ELSE 노드 개발 완료"
+key_discussions:
+  - thread_ts: '1759392000.000000'
+    date: '2025-10-02'
+    reply_count: 0
+    text_preview: "research-common: LLM과 임베더의 편향성 논의, GLM-4.6 모델 공유"
+  - thread_ts: '1759651200.000000'
+    date: '2025-10-03'
+    reply_count: 0
+    text_preview: "DIVER v2 - bge-reasoner보다 5점 이상 성능 향상. BAAI Retro* 논문 공유"
+  - thread_ts: '1760256000.000000'
+    date: '2025-10-06'
+    reply_count: 0
+    text_preview: "MoE SVD 기반 KD 논문 - A100 벤치마크 테스트 계획. Dense Retriever 편향성 논문"
+  - thread_ts: '1760342400.000000'
+    date: '2025-10-07'
+    reply_count: 0
+    text_preview: "BM25 검색 성능 향상 실험 - WANDS/ESCI 15~30% 향상. 임베딩 모델 위치 편향 감소 실험 설계"
+terminology:
+  - term: "DIVER v2"
+    definition: "사이오닉AI 연구팀이 참고하는 Dense 검색 모델. pointwise와 listwise 재순위화 점수를 보간하여 bge-reasoner보다 5점 이상 성능 향상 달성"
+    aliases: []
+    context: "연구 채널(research-common)에서 벡터 검색 성능 향상 연구로 공유"
+  - term: "ACL 워크숍"
+    definition: "자연어 처리 국제 학회 ACL의 워크숍 세션. 임베딩 모델 위치 편향 논문 투고 대상"
+    aliases: []
+    context: "연구 채널에서 논문 제출 계획 논의"
+  - term: "GLM-4.6"
+    definition: "중국 Zhipu AI(zai-org)의 대형 언어 모델. HuggingFace에서 공유되며 연구 채널에서 언급됨"
+    aliases: ["GLM-4.5-Air"]
+    context: "MoE SVD 기반 KD 논문에서 GLM-4.6→GLM-4.5-Air 증류 관련 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,56 @@
+channel:
+  id: C06AR8W6H8E
+  name: eng-github
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1681
+  total_threads: 505
+  active_users: 11
+  avg_messages_per_day: 23.3
+summary: |
+  2024년 2분기 eng-github 채널은 안정적인 GitHub 알림 수신 채널로 운영되었다.
+  총 1681개 메시지, 11명 참여, 505개 스레드가 발생하였다.
+  stargate-api 리포지토리가 새로 구독 추가되어 커밋, 이슈, PR, 리뷰 알림이 활성화되었다.
+  sionic-ai-website 리포지토리의 배포(deployments) 알림이 구독 해제되어 알림 최적화가 이루어졌다.
+  Zapier 봇을 통한 일일 채널 요약 기능이 도입되어 주요 토픽(예: Pylon 프로젝트 제안)이 자동 정리되었다.
+  일 평균 23.3개 메시지로 전 분기와 유사한 개발 활동량을 유지하였다.
+topics:
+  - name: "stargate-api 리포지토리 연동"
+    message_count: 300
+    description: "stargate-api 리포지토리의 커밋, 이슈, PR, 리뷰 알림 구독 설정"
+  - name: "PR/커밋 자동 알림"
+    message_count: 1200
+    description: "sionic-ai 조직 리포지토리의 PR 및 커밋 활동 자동 알림"
+  - name: "알림 설정 최적화"
+    message_count: 50
+    description: "불필요한 배포 알림 구독 해제 등 알림 채널 최적화 작업"
+  - name: "Zapier 일일 요약"
+    message_count: 90
+    description: "Zapier 봇을 통한 채널 일일 대화 요약 자동 생성"
+key_discussions:
+  - date: '2024-06-24'
+    summary: "stargate-api 리포지토리 커밋 알림 구독 추가 (조하담)"
+    participants: ["조하담 (Joy)"]
+  - date: '2024-04-17'
+    summary: "sionic-ai-website 배포 알림 구독 해제 및 Pylon 프로젝트 제안 논의"
+    participants: ["김덕현 (Dekay)"]
+  - date: '2024-06-25'
+    summary: "22개 reply를 가진 활발한 PR 리뷰 스레드 발생"
+    participants: ["GitHub Bot"]
+terminology:
+  - term: "stargate-api"
+    definition: "Sionic AI의 Stargate 검색 엔진 백엔드 API 리포지토리"
+    aliases: ["SG API"]
+    context: "2024-Q2에 eng-github 채널 구독 추가됨"
+  - term: "Pylon"
+    definition: "Sionic AI의 내부 프로젝트/엔진 명칭"
+    aliases: []
+    context: "Zapier 일일 요약에서 Pylon 프로젝트 제안이 언급됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

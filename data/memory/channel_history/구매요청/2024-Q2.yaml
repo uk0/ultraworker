@@ -1,0 +1,71 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 75
+  total_threads: 68
+  active_users: 7
+  avg_messages_per_day: 1.9
+summary: |
+  2024-Q2는 전시회 준비와 사무실 안정화 기간이었다. 전시회용 스티커(1000장), 종이백(500개, 62만원), 달고나(1000개), 반팔티(105벌)
+  등 대규모 홍보물 제작이 이루어졌다. 신규 SaaS로 Claude Team 플랜(월 $30), Zapier(채널별 daily 요약봇), ngrok, Shutterstock,
+  deepinfra, Vrew(영상 편집) 구독이 시작되었다. 서버실 UPS-분전함 고전력선 공사(93.5만원)와 에어컨 구매가 진행되었다.
+  기숙사 신규 입주(보증금/월세, 중계수수료, 입주청소비, 생활용품)가 완료되었고, 런드리고 세탁 서비스 카드 자동이체가 등록되었다.
+  한국일보 대상 선정 비용(440만원), 홍보용 브로셔(115.5만원) 등 마케팅 비용도 집행되었다. 표준 장비 목록이 공식 발표되어
+  맥북프로(M3 Max), 씽크패드, 그램, 로지텍 MX Master 3S, DELL 울트라샤프 모니터가 기준으로 정해졌다.
+topics:
+  - 전시회 용품 제작 (스티커, 종이백, 달고나, 반팔티)
+  - SaaS 구독 (Claude Team, Zapier, ngrok, Shutterstock, deepinfra, Vrew)
+  - 서버실 인프라 (UPS 고전력선 공사, 에어컨)
+  - 기숙사 신규 입주 (보증금, 청소, 생활용품)
+  - 마케팅/홍보 (한국일보 대상, 브로셔)
+  - 표준 장비 목록 공식화
+  - 도서 구매 (TDD, 인스파이어드, 함께 자라기 등)
+  - 사무비품 (캐비넷, 책장, 갤럭시탭 키보드)
+key_discussions:
+  - thread_ts: '1713157618.998099'
+    date: '2024-04-15'
+    reply_count: 41
+    text_preview: 긱사 입주청소비 25만원 - 퍼스트클린 파트너 예약 프로세스
+  - thread_ts: '1712128775.514449'
+    date: '2024-04-03'
+    reply_count: 23
+    text_preview: 회의실A 에어컨 구매(대여?) 프로세스 논의
+  - thread_ts: '1715083918.131109'
+    date: '2024-05-07'
+    reply_count: 17
+    text_preview: 클로드 팀 플랜 업그레이드 - 기존보다 10$/month 증가
+  - thread_ts: '1713331877.949529'
+    date: '2024-04-17'
+    reply_count: 11
+    text_preview: 긱사 관련 입금 3종 세트 - 보증금/월세, 중계수수료, 입주청소비
+  - thread_ts: '1712661177.154669'
+    date: '2024-04-09'
+    reply_count: 11
+    text_preview: 전시회용 사이오닉 종이백 500개 - 629,100원
+terminology:
+  - term: "표준 장비"
+    definition: "사이오닉AI 직원 기본 지급 장비 목록"
+    aliases: ["표준장비목록"]
+    context: "맥북프로 M3 Max, 씽크패드, LG그램, 로지텍 MX Master 3S, DELL 울트라샤프 모니터"
+  - term: "deepinfra"
+    definition: "AI 모델 호스팅/추론 서비스 플랫폼"
+    aliases: []
+    context: "WizardLM 8x22B 등 오픈소스 모델 API 호출에 사용"
+  - term: "런드리고"
+    definition: "세탁물 수거/배달 서비스"
+    aliases: []
+    context: "기숙사 세탁 서비스로 월 129,000원 카드 자동이체"
+  - term: "Zapier"
+    definition: "워크플로우 자동화 SaaS"
+    aliases: []
+    context: "채널별 daily 요약봇 제작용으로 월 $19.99 구독"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

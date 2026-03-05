@@ -1,0 +1,27 @@
+channel:
+  id: C083SBRRCKH
+  name: project-유진
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 4분기 project-유진 채널은 신규 멤버 한 명의 참여 메시지만 기록되어 실질적인 활동이 없었다.
+  유진투자증권 프로젝트 관련 논의는 이 기간에 해당 채널에서 발생하지 않았다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "유진투자증권"
+    definition: "Sionic AI와 회의록 자동화 에이전트 협업 프로젝트를 진행한 금융 기관"
+    aliases: ["유진", "project-유진"]
+    context: "2024년 Q4에 프로젝트가 활발히 진행되었으며 2025년에는 활동 감소"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

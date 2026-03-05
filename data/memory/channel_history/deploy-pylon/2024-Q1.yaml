@@ -1,0 +1,49 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 258
+  total_threads: 1
+  active_users: 5
+  avg_messages_per_day: 64.5
+summary: |
+  2024-Q1 deploy-pylon 채널 데이터 수집 완료. 258개 메시지, 5명 참여, 1개 스레드.
+  2024년 3월 28일에 deploy-pylon 채널이 생성되며 EKS Deploy 앱이 연동되었다. /eks-deploy pylon
+  명령어를 사용하여 dev, staging, live 환경에 대한 초기 배포가 같은 날 모두 수행되었다.
+  Sigrid Jin이 주요 배포자로 790063a, 22dca64 등의 커밋을 배포하였다. kozistr833이 GKE와 EKS
+  간 설정 차이(pylon PR#250)와 deploy-bot 레포지토리 마이그레이션에 대해 논의하였다.
+  staging 배포 실패 후 재시도하는 사례가 있었으며, GKE에서 EKS로의 전환 과도기에 양쪽
+  인프라를 동시에 운영하는 상황이었다.
+topics:
+  - deploy-pylon 채널 생성 및 EKS Deploy 연동
+  - /eks-deploy pylon 초기 배포 (dev/staging/live)
+  - GKE-EKS 설정 마이그레이션
+  - deploy-bot 레포지토리 이전 논의
+  - staging 배포 실패 및 재시도
+key_discussions:
+  - thread_ts: '1711639000.000000'
+    date: '2024-03-28'
+    reply_count: 1
+    text_preview: GKE vs EKS 설정 차이 논의 - pylon PR#250 및 deploy-bot 마이그레이션 (kozistr833)
+terminology:
+  - term: "Pylon"
+    definition: "Sionic AI의 임베딩 및 리랭킹 서비스"
+    aliases: []
+    context: "Stargate 검색 엔진의 벡터 처리를 담당, dev/staging/live 환경으로 배포"
+  - term: "/eks-deploy pylon"
+    definition: "Pylon 서비스를 EKS 클러스터에 배포하는 명령어"
+    aliases: ["eks-deploy pylon"]
+    context: "/eks-deploy pylon {env} {commit-hash} 형식으로 사용"
+  - term: "deploy-bot"
+    definition: "Slack 배포 명령어를 처리하는 봇 애플리케이션 레포지토리"
+    aliases: []
+    context: "GKE에서 EKS로의 전환에 따라 레포지토리 마이그레이션 논의"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

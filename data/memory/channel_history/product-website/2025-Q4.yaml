@@ -1,0 +1,61 @@
+channel:
+  id: C06PS33807Q
+  name: product-website
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 14
+  total_threads: 10
+  active_users: 10
+  avg_messages_per_day: 1.6
+summary: |
+  홈페이지 개편 마무리 및 유지보수, NEWS 업데이트가 주요 활동이었던 분기(14건 메시지).
+  10월 중순에 홈페이지 개편 프로젝트의 마지막 이슈가 해결되어 공식 완료되었다. Stripe 결제 심사를 위해 일본법 상 필요한 '특정 상거래법에 근거한 표기' 페이지가 추가되었으며, 일본어(ja) 설정 시에만 메뉴가 노출되도록 설정했다.
+  11월~12월에는 NEWS 업데이트 작업이 집중적으로 이루어졌다(투자 유치 성공, 기업가치 4배 성장 등 언론기사 반영). 홈페이지 버튼 오류 제보, 배경 이미지 활용 요청(PPT 디자인) 등 내부 이용 관련 논의도 있었다.
+  12월 말에는 언어별 시연 영상 교체 작업이 요청되었고, 일본어 설정에서 Contact Us 클릭 시 한국어로 전환되는 버그가 제보되었다. Parse 페이지의 일본어 버튼 링크 오류(/ja/contact 대신 /ko/contact로 이동)도 발견되어 기획 확인이 필요했다.
+topics:
+  - 홈페이지 개편 최종 완료
+  - 특정 상거래법 표기 페이지 추가 (일본 Stripe 심사)
+  - NEWS 업데이트 (투자 유치 기사)
+  - 다국어 버그 수정 (일본어 Contact Us)
+  - 언어별 시연 영상 교체
+  - 홈페이지 배경이미지 활용
+key_discussions:
+  - thread_ts: '1763353102.618279'
+    date: '2025-11-17'
+    reply_count: 22
+    text_preview: '안진혁 - 홈페이지 NEWS 업데이트 스레드'
+  - thread_ts: '1764564469.242819'
+    date: '2025-12-24'
+    reply_count: 7
+    text_preview: '김부교 - 자사 홈페이지 언어별 영상 교체 요청'
+  - thread_ts: '1765265436.921429'
+    date: '2025-12-09'
+    reply_count: 7
+    text_preview: '김혜원 - 완성된 영상 홈페이지 반영 요청'
+  - thread_ts: '1761727971.656119'
+    date: '2025-10-29'
+    reply_count: 6
+    text_preview: '오승희 - 홈페이지 배경이미지 다운로드 요청 (PPT 활용)'
+  - thread_ts: '1761727863.798189'
+    date: '2025-10-29'
+    reply_count: 6
+    text_preview: '오승희 - 홈페이지 버튼 관련 오류 제보'
+  - thread_ts: '1766366727.737069'
+    date: '2025-12-22'
+    reply_count: 3
+    text_preview: '김주원 - Parse 페이지 일본어 버튼 링크 오류 (/ja -> /ko 전환 버그)'
+terminology:
+  - term: '特定商取引法に基づく表記'
+    definition: '일본 특정 상거래법에 근거한 표기 페이지'
+    context: 'Stripe 결제 심사를 위해 필수적으로 추가된 법적 페이지'
+  - term: 'Stripe'
+    definition: '온라인 결제 플랫폼'
+    context: '일본 시장 결제 심사를 위해 법적 표기 페이지가 필요했음'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

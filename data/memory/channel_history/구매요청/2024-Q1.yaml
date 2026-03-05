@@ -1,0 +1,75 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 72
+  total_threads: 53
+  active_users: 17
+  avg_messages_per_day: 1.7
+summary: |
+  2024-Q1은 사이오닉AI의 새 사무실 이전 및 초기 세팅 기간으로, 사무실 비품(휴지통, 철제스툴, 화이트보드, 전자렌지, 냉장고 등)과
+  인프라 장비(DELL 4K 모니터, 워크스테이션 5대, 멀티탭, 서버용 고전력 멀티탭, 100G 광케이블, 네트워크 테스터기) 구매가 집중되었다.
+  SaaS 구독으로는 Azure, OpenRouter, JIRA, oopy(블로그), Linear가 등록되었고, Claude3 공용 계정 추가와 DeepL API 구독이 시작되었다.
+  도메인(sionic.im, sionic.jp, psionicstorm.dev 등) 대량 구매가 이루어졌다. 회사 단체티 제작(136벌, 260만원)과 전시회용 스티커/현수막
+  제작도 진행되었다. 기숙사(긱사) 생활용품 및 공과금 납부 체계가 처음 수립되었으며, 월간 간식 담기 프로세스(쿠팡 장바구니)가 운영되기 시작했다.
+  애플비전프로 구매 요청(28개 댓글로 활발한 논의)도 있었다.
+topics:
+  - 사무실 이전 및 비품 구매
+  - 서버/인프라 장비 (워크스테이션, 네트워크 케이블, 멀티탭)
+  - SaaS 구독 (Azure, OpenRouter, JIRA, oopy, DeepL, Claude3)
+  - 도메인 구매 (sionic.im, sionic.jp, psionicstorm.dev)
+  - 회사 단체티/굿즈 제작
+  - 기숙사(긱사) 생활용품 및 공과금
+  - 월간 간식/음료 구매
+  - 전시회 용품 (스티커, 현수막)
+key_discussions:
+  - thread_ts: '1709885364.741789'
+    date: '2024-03-08'
+    reply_count: 19
+    text_preview: Claude3 opus 공용 계정 추가 요청 - GPT4보다 성능이 좋은 Claude3
+  - thread_ts: '1709636859.218649'
+    date: '2024-03-05'
+    reply_count: 20
+    text_preview: 이케아 휴지통 10L 20개, 철제 스툴 10개 등 사무실 비품 대량 구매
+  - thread_ts: '1707223189.013929'
+    date: '2024-02-06'
+    reply_count: 28
+    text_preview: 애플비전프로 구매 요청 - 회사 성장 두배 가능, 비전 앱 개발 가능성
+  - thread_ts: '1710337604.779409'
+    date: '2024-03-13'
+    reply_count: 18
+    text_preview: 트롤리 구매 - 사무실 이동용 장비
+  - thread_ts: '1709784015.176099'
+    date: '2024-03-07'
+    reply_count: 14
+    text_preview: 사무실 비품 주문 (네이버 스마트스토어)
+  - thread_ts: '1710749756.837679'
+    date: '2024-03-18'
+    reply_count: 13
+    text_preview: 전자렌지 선정 논의
+terminology:
+  - term: "긱사"
+    definition: "사이오닉AI 직원용 기숙사 (역삼동 소재)"
+    aliases: ["기숙사"]
+    context: "직원 숙소로 공과금, 생활용품 등을 회사에서 지원"
+  - term: "oopy"
+    definition: "Notion 기반 블로그/웹사이트 관리 SaaS"
+    aliases: []
+    context: "한국/일본 블로그 운영에 사용"
+  - term: "OpenRouter"
+    definition: "여러 AI 모델을 통합 접근할 수 있는 API 라우팅 서비스"
+    aliases: []
+    context: "AI 모델 API 사용을 위한 크레딧 충전"
+  - term: "푸딩"
+    definition: "사무실 간식/음료 정기 배송 서비스"
+    aliases: []
+    context: "월간 대금 지급 형태로 운영"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,109 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 188
+  total_threads: 126
+  active_users: 13
+  avg_messages_per_day: 3.0
+summary: |
+  2024-Q3에는 NewRelic 모니터링 강화와 서비스 status check 자동화가 핵심 과제였다.
+  GoCD 배포 파이프라인의 이미지 태깅 개선, sglang/vllm 기반 LLM 서빙 비교, istio 레벨 task-id 발급 등 인프라 고도화가 진행되었다.
+  USIO 문서 파서 개선, 웹훅 retry 이슈 해결, Stargate 엔티티/레포지토리 리팩토링 등 제품 안정성 향상 작업이 활발했다.
+  Claude Enterprise 도입 검토, 인프런 강의 구매, 헬스체크봇 구상 등 개발 생산성과 팀 역량 강화 논의도 이루어졌다.
+topics:
+  - NewRelic 모니터링 강화
+  - 서비스 status check 자동화
+  - GoCD 배포 파이프라인 개선
+  - sglang/vllm LLM 서빙
+  - istio task-id 발급
+  - USIO 문서 파서 개선
+  - 웹훅 retry 이슈
+  - Stargate 엔티티 리팩토링
+  - Claude Enterprise 검토
+  - 헬스체크봇 구상
+  - Kubernetes startupProbe
+  - IntelliJ HTTP Client CLI
+key_discussions:
+  - thread_ts: '1723879756.334849'
+    date: '2024-08-17'
+    reply_count: 35
+    text_preview: 'sglang으로 gemma 7b 서빙 - vllm 대비 throughput 비교 (32.67t/s vs 28.1t/s)'
+  - thread_ts: '1726046534.943869'
+    date: '2024-09-11'
+    reply_count: 35
+    text_preview: '인프런 강의 구매 추진 - 팀 역량 강화를 위한 교육 투자 논의'
+  - thread_ts: '1727084672.133629'
+    date: '2024-09-23'
+    reply_count: 29
+    text_preview: 'Linear 알림을 Slack으로 받는 방법 - 슬랙 연동 가이드'
+  - thread_ts: '1723083406.610569'
+    date: '2024-08-08'
+    reply_count: 28
+    text_preview: '제품 관련 기술 논의 스레드'
+  - thread_ts: '1723085100.894749'
+    date: '2024-08-08'
+    reply_count: 27
+    text_preview: '인프라/서비스 관련 기술 논의'
+  - thread_ts: '1724734016.818199'
+    date: '2024-08-27'
+    reply_count: 27
+    text_preview: 'QSPM NewRelic 추가 - 모니터링 서비스 확대 적용'
+  - thread_ts: '1727182231.196139'
+    date: '2024-09-24'
+    reply_count: 25
+    text_preview: 'Stargate slow query 이슈 - NewRelic 모니터링 중 발견된 DB 성능 문제'
+  - thread_ts: '1726722219.722969'
+    date: '2024-09-19'
+    reply_count: 21
+    text_preview: '헬스체크봇 구상 - 배포 후 자동 서비스 정상 여부 체크 시스템'
+  - thread_ts: '1726805585.529939'
+    date: '2024-09-20'
+    reply_count: 19
+    text_preview: '뤼튼 reranker 모델 서빙 - embedding 3090, reranker L40s 배포'
+  - thread_ts: '1723792269.147489'
+    date: '2024-08-16'
+    reply_count: 18
+    text_preview: 'istio 레벨 x-sionic-task-id 발급 - 인프라 레벨 요청 추적 구현'
+terminology:
+  - term: "NewRelic"
+    definition: "APM(Application Performance Monitoring) 서비스"
+    aliases: ["뉴렐릭"]
+    context: "Datadog에서 전환, 메가존 서포트 플랜 상향 논의, stargate-api 우선 적용"
+  - term: "sglang"
+    definition: "LLM 서빙 프레임워크 (lmsys 개발)"
+    aliases: ["SGLang"]
+    context: "vllm 대비 throughput 비교 테스트에서 활용"
+  - term: "vllm"
+    definition: "고성능 LLM 서빙 엔진"
+    aliases: ["vLLM"]
+    context: "기존 LLM 서빙에 사용, sglang과 성능 비교"
+  - term: "istio"
+    definition: "Kubernetes 서비스 메시 프레임워크"
+    aliases: []
+    context: "x-sionic-task-id 발급을 위해 pylon에 sidecar 적용"
+  - term: "USIO"
+    definition: "Unstructured IO 기반 문서 파싱 서비스"
+    aliases: ["Unstructured"]
+    context: "서버리스 API 활용, 인프라 관점 개선 작업 진행"
+  - term: "GoCD"
+    definition: "CI/CD 파이프라인 도구"
+    aliases: []
+    context: "이미지 태깅 개선, status check 파이프라인 추가, 배포 자동화"
+  - term: "QSPM"
+    definition: "Query-Search Performance Monitor (검색 성능 모니터)"
+    aliases: []
+    context: "NewRelic 모니터링 대상으로 추가"
+  - term: "Fargate"
+    definition: "AWS 서버리스 컨테이너 실행 서비스"
+    aliases: []
+    context: "Pylon + Qdrant 배포 타겟으로 논의"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

@@ -1,0 +1,36 @@
+channel:
+  id: C06SQS126NM
+  name: project-military-service-vendor
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 2
+  active_users: 4
+  avg_messages_per_day: 1.2
+summary: |
+  기업부설연구소 이전 및 산기능 현역 TO 관리가 주요 이슈였던 분기.
+  천안 오피스 계약 만료가 임박하여 기업부설연구소 이전을 추진했으며, 정기연(Kay)이 콘탁 측과 협의를 진행했다.
+  산기능 현역 TO 반납 건에 대한 논의가 있었고(17건 스레드), 전문연 1차 발표가 10월 중순으로 예상되었다.
+  연구소 이전 관련 50건의 상세 논의가 진행되었다.
+topics:
+  - 기업부설연구소 이전
+  - 산기능 TO 관리
+  - 전문연 1차 발표 대기
+key_discussions:
+  - thread_ts: '1755225743.816249'
+    date: '2025-08-15'
+    summary: '천안 기업부설연구소 이전 추진 (계약 만료 임박, 콘탁 측 협의)'
+  - thread_ts: '1755743650.681649'
+    date: '2025-08-21'
+    summary: '산기능 현역 TO 반납 건 논의 (17건 스레드)'
+terminology:
+  - term: 'TO'
+    definition: '정원(Table of Organization). 병역특례 배정 인원수'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

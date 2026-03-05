@@ -1,0 +1,57 @@
+channel:
+  id: C09M02NJC79
+  name: alarm-live-error-vercel
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 95
+  total_threads: 1
+  active_users: 9
+  avg_messages_per_day: 4.3
+summary: |
+  2025-Q4 기간 동안 Vercel 서비스 상태 알림 채널이 새로 개설되어 Vercel Statuspage 통합이 연동되었다. 채널 개설 당일인 2025년 10월 20일에 Vercel IAD1 리전의 대규모 장애가 발생하여 라우팅 미들웨어, Vercel 함수, 대시보드, Edge Config, 빌드 서비스 등 전반에 걸친 장애가 수 시간에 걸쳐 진행되었다. 이후 빌드 큐 멈춤(11월 11일, 16일), Edge Config 오류(11월 4일), 도메인 등록 오류(12월 2일), Speed Insights 오류(12월 7일) 등 주기적인 서비스 장애 알림이 자동으로 수집되었다.
+topics:
+  - name: "IAD1 리전 대규모 장애"
+    mention_count: 30
+    description: "2025-10-20 Vercel IAD1 리전에서 발생한 대규모 장애 - 라우팅 미들웨어, 함수, 대시보드, Edge Config, 빌드 등 영향"
+  - name: "빌드 큐 멈춤 이슈"
+    mention_count: 10
+    description: "모든 빌드가 queued 상태에서 멈추는 반복적 이슈(11월 11일, 16일 발생)"
+  - name: "Edge Config 오류"
+    mention_count: 8
+    description: "Edge Config 스토리지 성능 저하 및 HTTP 오류율 증가"
+  - name: "도메인 등록 오류"
+    mention_count: 5
+    description: "도메인 등록 시 오류율 증가 이슈(12월 2일)"
+  - name: "Speed Insights 오류"
+    mention_count: 4
+    description: "Speed Insights 데이터 로딩 오류 및 트래픽 분류 오류(12월 7일, 12일)"
+key_discussions:
+  - thread_ts: '1761033000.000000'
+    date: '2025-10-20'
+    reply_count: 6
+    text_preview: "빌드 정상화된 것으로 보임 - IAD1 리전 장애 복구 진행 중 확인"
+terminology:
+  - term: "IAD1"
+    definition: "Vercel의 미국 동부(Washington D.C.) 데이터센터 리전 코드"
+    aliases: []
+    context: "2025년 10월 20일 대규모 장애 발생 리전"
+  - term: "Edge Config"
+    definition: "Vercel의 초저지연 글로벌 데이터 스토리지 서비스"
+    aliases: []
+    context: "Edge Config 오류 및 성능 저하 알림이 다수 발생"
+  - term: "Routing Middleware"
+    definition: "Vercel의 엣지 네트워크에서 요청을 처리하는 미들웨어 레이어"
+    aliases: ["라우팅 미들웨어"]
+    context: "IAD1 장애 시 라우팅 미들웨어 및 함수 배포 실패"
+  - term: "Statuspage"
+    definition: "Vercel의 서비스 상태 페이지(vercel-status.com) 통합 봇"
+    aliases: []
+    context: "채널에 연동된 Vercel 상태 자동 알림 봇"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

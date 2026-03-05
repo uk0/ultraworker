@@ -1,0 +1,51 @@
+channel:
+  id: C076888QFD0
+  name: pytorch-learning
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 37
+  total_threads: 8
+  active_users: 11
+  avg_messages_per_day: 6.2
+summary: |
+  2024년 2분기에 Sigrid Jin(진형)님 주도로 PyTorch/ML 학습 채널이 개설되었다. 채널명은 learn-pytorch에서
+  pytorch-learning으로 변경되었다. 선형대수학 기초(행렬, orthogonal matrix, 내적 등)에 대한 활발한 토론이
+  이루어졌으며, CS231n(Stanford), LLMs-from-scratch, GenAI Handbook 등 학습 자료가 공유되었다.
+  kozistr833님이 ML/DL 학습 로드맵을 상세히 안내하였고(CS231n, Deep Learning 교재, Kaggle 추천),
+  Jeonghwan Park님이 행렬 연산과 선형대수 개념에 대한 깊은 질문과 토론을 이끌었다.
+topics:
+  - PyTorch 스터디 채널 개설
+  - 선형대수학 기초 (행렬, orthogonal matrix)
+  - ML/DL 학습 자료 공유
+  - CS231n 강의
+  - LLMs-from-scratch
+key_discussions:
+  - thread_ts: '1718255614.187059'
+    date: '2024-06-13'
+    topic: Orthogonal matrix 개념 토론 (17개 답글) - 정사각형, orthonormal 조건, AT=A-1 관계
+  - thread_ts: '1718668040.807229'
+    date: '2024-06-17'
+    topic: LLMs-from-scratch 교재 및 YouTube 학습 자료 모집
+  - thread_ts: '1717935970.954299'
+    date: '2024-06-09'
+    topic: ML/DL 학습 로드맵 추천 - CS231n, Deep Learning 교재, Kaggle
+  - thread_ts: '1717404143.543049'
+    date: '2024-06-03'
+    topic: 채널 소개 - PyTorch를 공부하고자 하는 자들을 위한 스터디 채널
+terminology:
+  - term: CS231n
+    definition: Stanford 대학의 컴퓨터 비전 딥러닝 강의, numpy로 직접 구현하는 것이 핵심
+  - term: orthogonal matrix
+    definition: 직교 행렬, 행/열 벡터가 모두 orthonormal하며 전치행렬이 역행렬과 같은 행렬
+  - term: LLMs-from-scratch
+    definition: Sebastian Raschka의 LLM 처음부터 구현하기 교재/GitHub 레포지토리
+  - term: Kaggle
+    definition: 데이터 사이언스 경진대회 플랫폼, 실습 학습에 적합
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

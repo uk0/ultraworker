@@ -1,0 +1,77 @@
+channel:
+  id: C05801FL29F
+  name: corp-etc
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 18
+  total_threads: 9
+  active_users: 13
+  avg_messages_per_day: 1.3
+summary: |
+  2024년 1분기 corp-etc 채널에서는 PoC 크레딧 신청, 서울 AI Hub 관련 공지, 회사 이름 유래 문의, 이메일 서명 표준화, 노트북 자산 관리 라벨링, 명함 제작, 홈페이지 및 브로셔용 자기소개 작성 등 다양한 회사 운영 업무가 논의되었다.
+  특히 sionic, stargate, storm 등 주요 서비스명의 유래에 대한 질문과 답변이 이루어졌으며, 전 직원 대상 이메일 서명 통일 및 브로셔 컨텐츠 정리 작업이 진행되었다.
+  분기 내 13명이 활발하게 참여하였으며, 신규 입사자들의 채널 합류와 함께 명함 제작 및 소개서 작성 등 온보딩 관련 업무가 처리되었다.
+topics:
+  - name: "자산 관리"
+    mention_count: 3
+    description: "노트북 자산 관리 번호 라벨링 작업"
+  - name: "브랜딩 및 홍보"
+    mention_count: 4
+    description: "이메일 서명 통일, 브로셔 컨텐츠 정리, 홈페이지 자기소개 작성"
+  - name: "신입 온보딩"
+    mention_count: 3
+    description: "명함 제작 및 온보딩 관련 행정 업무"
+  - name: "회사 이름 유래"
+    mention_count: 2
+    description: "Sionic, Stargate, Storm 서비스명 유래 문의 및 답변"
+  - name: "PoC 크레딧"
+    mention_count: 2
+    description: "AI 서비스 PoC 크레딧 신청 (최대 300만원)"
+key_discussions:
+  - thread_ts: '1704448500.000000'
+    date: '2024-01-05'
+    reply_count: 2
+    text_preview: "PoC 크레딧 추가 신청 - 최대금액 300만원으로 신청"
+  - thread_ts: '1706846400.000000'
+    date: '2024-01-29'
+    reply_count: 3
+    text_preview: "서울 AI Hub 관련 링크 공유 및 논의"
+  - thread_ts: '1707127200.000000'
+    date: '2024-02-05'
+    reply_count: 9
+    text_preview: "sionic, stargate, storm 이름 유래 문의"
+  - thread_ts: '1707912000.000000'
+    date: '2024-02-14'
+    reply_count: 2
+    text_preview: "이메일 서명 포맷 공유 및 Gmail 설정 방법 안내"
+  - thread_ts: '1707998400.000000'
+    date: '2024-02-15'
+    reply_count: 7
+    text_preview: "노트북 자산 관리번호 라벨링 요청"
+  - thread_ts: '1708401600.000000'
+    date: '2024-02-20'
+    reply_count: 4
+    text_preview: "신규 입사자 명함 제작 요청 및 담당자 지정"
+  - thread_ts: '1708402800.000000'
+    date: '2024-02-20'
+    reply_count: 7
+    text_preview: "홈페이지 및 브로셔용 자기소개 작성 요청"
+terminology:
+  - term: "Sionic"
+    definition: "회사명 Sionic AI의 서비스 브랜드"
+  - term: "Stargate"
+    definition: "Sionic AI의 검색 엔진 서비스"
+  - term: "Storm"
+    definition: "Sionic AI의 AI 플랫폼 서비스 (STORM Platform, STORM Answer)"
+  - term: "PoC"
+    definition: "Proof of Concept, 개념 검증 프로젝트"
+  - term: "서울 AI Hub"
+    definition: "서울특별시가 운영하는 AI 기업 지원 허브"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

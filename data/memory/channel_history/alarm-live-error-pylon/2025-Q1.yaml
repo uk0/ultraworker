@@ -1,0 +1,34 @@
+channel:
+  id: C066D0B9WKC
+  name: alarm-live-error-pylon
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 186
+  total_threads: 4
+  active_users: 6
+  avg_messages_per_day: 6.0
+summary: |
+  Pylon 운영 에러 알림 채널. 186개 메시지로 에러가 크게 감소한 분기.
+  주요 에러는 unstructured-io 문서 파싱 실패가 지속되었으며, 빈 응답과 예상치 못한 에러 두 유형이 발생했다.
+  HTTPError 형태의 에러(TaskStatus.ERROR)도 등장하여 에러 형식이 변경된 것이 확인되었다.
+  NewRelic에서 DocumentAlreadyExistsError, FileParserAPIError 등의 예외가 자동 감지 및 알림되었다.
+  전반적으로 안정적인 분기로, 에러 빈도와 스레드 수 모두 이전 분기 대비 대폭 감소했다.
+topics:
+  - unstructured-io 문서 파싱 실패 지속
+  - HTTPError (TaskStatus.ERROR) 에러 형식 변경
+  - NewRelic 자동 감지 (FileParserAPIError)
+  - 에러 빈도 대폭 감소
+key_discussions: []
+terminology:
+  - term: "TaskStatus.ERROR"
+    definition: "Pylon 작업 상태 에러 코드, HTTPError 형태로 에러 상세 전달"
+  - term: "FileParserAPIError"
+    definition: "파일 파서 API 호출 실패 시 발생하는 Pylon 커스텀 예외"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,45 @@
+channel:
+  id: C072ZMLPG3A
+  name: project-logic-ja
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 4
+  active_users: 4
+  avg_messages_per_day: 1.6
+summary: |
+  2024-Q4에는 인턴 dasolchoi(최다솔)가 합류하며 LogicJa 프로젝트가 본격적으로 재가동되었다. 박우명이 일본어 LLM 벤치마크 조사,
+  주요 일본어 LLM 리스트업, logicJa 데이터 검토, 평가 수행 등의 과제를 dasolchoi에게 할당했다. dasolchoi는 일본어 LLM 평가
+  벤치마크 및 모델 리서치 결과를 Google Docs로 정리하여 공유했다. 기존 logicJa 데이터(LogicKor 일본어 번역)와 한국어 평가 코드
+  확인 작업도 진행되었다. 김덕현(Dekay)이 프론트엔드 추진 방향을 확인하고 실습생 활용 방안을 논의했다.
+topics:
+  - dasolchoi 인턴 합류
+  - 일본어 LLM 벤치마크 리서치
+  - 주요 일본어 LLM 리스트업
+  - LogicJa 데이터 검토
+  - 프론트엔드 화면 개발 논의
+key_discussions:
+  - title: "LogicJa 과제 할당"
+    date: "2024-12-24"
+    participants: ["박우명", "dasolchoi"]
+    summary: "일본어 LLM 벤치마크 조사, 주요 LLM 리스트업, logicJa 데이터 검토 및 평가 수행 과제 할당."
+  - title: "일본어 LLM 리서치 공유"
+    date: "2024-12-30"
+    participants: ["dasolchoi"]
+    summary: "일본어 LLM 평가 벤치마크 및 모델 리서치 내용을 Google Docs로 정리하여 공유."
+  - title: "프론트엔드 추진 방향 확인"
+    date: "2024-10-16"
+    participants: ["김덕현(Dekay)"]
+    summary: "LogicJa 리더보드 프론트엔드 추진 방향 및 기존 UI 소유권 이슈 논의."
+terminology:
+  - term: "logicJa 데이터"
+    definition: "LogicKor 벤치마크 데이터를 일본어로 번역한 평가 데이터셋"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

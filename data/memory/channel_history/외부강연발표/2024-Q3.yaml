@@ -1,0 +1,47 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 6
+  active_users: 5
+  avg_messages_per_day: 1.4
+summary: |
+  2024년 3분기에는 반도체 산업 관련 외부 강연, GopherCon Korea 연사 참여, 파이콘 스폰서 관련 세션 준비, 사우스서밋코리아 키노트 세션 참여가 이루어졌다. 서울대 반도체 시스템 학과 강의, 외부 기관(랭챗, EOST2024)에서의 발표가 진행되었으며, AI 스타트업의 글로벌 진출 전략을 주제로 한 파이어사이드챗 등 대외 활동이 활발히 전개되었다.
+topics:
+  - name: "컨퍼런스 연사 활동"
+    mention_count: 5
+    description: "GopherCon Korea, EOST2024, 사우스서밋코리아 키노트 등 외부 컨퍼런스 발표"
+  - name: "대학 강의"
+    mention_count: 3
+    description: "서울대 반도체 시스템 학과 강의 등 대학 특강 활동"
+  - name: "파이콘 스폰서"
+    mention_count: 3
+    description: "파이콘 한국 스폰서 세션 발표 준비"
+key_discussions:
+  - thread_ts: '1723117260.000000'
+    date: '2024-08-08'
+    reply_count: 6
+    text_preview: "사우스서밋코리아 AI K-스타트업 세계를 향하다 키노트 세션 참여 - 4개사 CEO 패널"
+  - thread_ts: '1727017077.000000'
+    date: '2024-09-22'
+    reply_count: 9
+    text_preview: "서울대 반도체 시스템 학과 강의 관련 준비"
+terminology:
+  - term: "GopherCon Korea"
+    definition: "Go 언어 개발자 컨퍼런스 - 한국 개최 행사"
+    aliases: []
+    context: "진형님이 연사로 참여"
+  - term: "사우스서밋코리아"
+    definition: "글로벌 스타트업 행사 - 생성AI K-스타트업 세계를 향하다 키노트 세션"
+    aliases: []
+    context: "AI 스타트업 4개사 대표 키노트 발표"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

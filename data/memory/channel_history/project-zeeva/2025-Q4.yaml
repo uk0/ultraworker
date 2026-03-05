@@ -1,0 +1,76 @@
+channel:
+  id: C09N6FWRM19
+  name: project-zeeva
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 41
+  total_threads: 15
+  active_users: 11
+  avg_messages_per_day: 3.4
+summary: |
+  2025년 4분기 project-zeeva 채널은 ZeeVaa(일본 기업 OKI/ZVC) PoC 프로젝트를 위한 협업 채널로 운영되었다.
+  10월에 채널이 개설되었으며, Sionic AI의 voiceRAG-go 기반 음성 AI 에이전트를 Genesys Cloud 콜센터 시스템에 연동하는 PoC를 11월 12일 CC CRM 이벤트(CIC Tokyo)에서 시연하는 것을 목표로 하였다.
+  STT-RAG-TTS 파이프라인의 지연 시간 개선, WebSocket 연결 프로토콜, 항공권 예약 조회 시나리오 설계 등이 논의되었으며, 일본어 지원 및 현장 시연이 성공적으로 진행되었다.
+  12월에는 OKI와 ZVC로부터 2026년 2월~12월 엔지니어링 비용 견적 요청이 접수되어 본격적인 사업화 논의가 시작되었다.
+topics:
+  - name: "VoiceRAG Genesys Cloud 연동"
+    mention_count: 12
+    description: "voicerag-go 서버를 Genesys Cloud 콜센터 중계 서버로 연동하는 기술 PoC"
+  - name: "STT-RAG-TTS 지연 시간 개선"
+    mention_count: 5
+    description: "음성 인식 후 RAG 검색 및 TTS 응답까지의 UX 지연을 줄이기 위한 방안 논의"
+  - name: "항공권 예약 조회 데모 시나리오"
+    mention_count: 4
+    description: "음성으로 출발 일시와 목적지를 말하면 항공편 정보를 안내하는 에이전트 시나리오"
+  - name: "CC CRM 이벤트 시연"
+    mention_count: 6
+    description: "2025년 11월 12일 CIC Tokyo에서 진행된 CC CRM 이벤트 현장 음성 데모"
+  - name: "2026년 엔지니어링 비용 견적"
+    mention_count: 3
+    description: "OKI/ZVC의 2026년 요구사항 정의~GoLive까지 단계별 엔지니어링 비용 산정 요청"
+key_discussions:
+  - thread_ts: '1761574560.000000'
+    date: '2025-10-24'
+    reply_count: 0
+    text_preview: "Zeeva PoC 채널 개설 - voiceRAG 데모, 검색 속도 문제, 11월 12일 PoC 일정 안내"
+  - thread_ts: '1761866760.000000'
+    date: '2025-10-28'
+    reply_count: 0
+    text_preview: "Genesys Cloud API 데모 구조 및 WebSocket 메시지 인터페이스 설명 (일/영/한)"
+  - thread_ts: '1762325039.000000'
+    date: '2025-11-05'
+    reply_count: 1
+    text_preview: "항공권 조회 에이전트 시나리오 확정 - 일본어 항공권 확인서 활용"
+  - thread_ts: '1762847186.000000'
+    date: '2025-11-10'
+    reply_count: 4
+    text_preview: "실시간 STT/RAG/TTS 로그 시각화 데모 페이지 공유 및 피드백 요청"
+  - thread_ts: '1765209120.000000'
+    date: '2025-12-23'
+    reply_count: 10
+    text_preview: "OKI/ZVC로부터 2026년 2월~12월 엔지니어링 비용 견적 요청"
+terminology:
+  - term: "ZeeVaa"
+    definition: "일본 기업 OKI(沖電気工業)와 ZVC(Zoom Video Communications)의 협력 프로젝트 또는 고객사"
+    aliases: ["Zeeva", "OKI", "ZVC"]
+    context: "Sionic AI의 voiceRAG 솔루션을 Genesys Cloud에 연동하는 PoC 진행"
+  - term: "voiceRAG-go"
+    definition: "Sionic AI의 음성 기반 RAG 솔루션, Go 언어로 구현된 중계 서버"
+    aliases: ["voicerag-go"]
+    context: "dev-voicerag-go.sionic.tech에서 운영, STORM 플랫폼 위의 사이드카 서버"
+  - term: "Genesys Cloud"
+    definition: "ZeeVaa 측이 사용하는 클라우드 기반 콜센터 플랫폼"
+    aliases: ["Genesys", "CC CRM"]
+    context: "WebSocket 기반 음성 스트리밍 인터페이스로 voiceRAG-go와 연동"
+  - term: "CC CRM"
+    definition: "콜센터 및 고객 관계 관리 이벤트, 2025년 11월 12일 CIC Tokyo에서 개최"
+    aliases: []
+    context: "Sionic AI의 음성 데모가 현장에서 성공적으로 시연된 이벤트"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,52 @@
+channel:
+  id: C06EEMDQEKV
+  name: geek4
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 53
+  total_threads: 21
+  active_users: 8
+  avg_messages_per_day: 2.3
+summary: |
+  2024-Q1 geek4(긱사) 채널은 회사 기숙사의 첫 입주와 운영에 관한 소통이 활발했다. 동원스위트 102동 202호에 첫 긱사가
+  마련되었으며, 비밀번호 공유, 침대/위생용품/생활용품 구매 조율이 주요 활동이었다. 입주자 간 방 배정, 공용공간 사용 규칙
+  설정, 인터넷/공과금 분담 등 초기 셋업 관련 논의가 집중적으로 이루어졌다. 8명이 참여하여 53개 메시지를 주고받으며
+  기숙사 생활의 기반을 잡았다.
+topics:
+  - 긱사 첫 입주 (동원스위트 102동 202호)
+  - 비밀번호/출입 관리
+  - 침대/위생용품 구매
+  - 방 배정 및 생활 규칙
+  - 인터넷/공과금 분담
+key_discussions:
+  - thread_ts: '1705000000.000000'
+    date: '2024-01-12'
+    reply_count: 10
+    text_preview: 긱사 첫 입주 조율 - 동원스위트 102동 202호 입주 안내 및 비밀번호 공유
+  - thread_ts: '1707000000.000000'
+    date: '2024-02-04'
+    reply_count: 6
+    text_preview: 침대/생활용품 구매 - 입주자 필요 물품 리스트 및 공동 구매 조율
+  - thread_ts: '1709500000.000000'
+    date: '2024-03-04'
+    reply_count: 5
+    text_preview: 방 탐색 및 공용공간 규칙 - 방 배정과 공유 공간 사용 가이드라인 논의
+terminology:
+  - term: 긱사
+    definition: 회사에서 제공하는 기숙사(Geek + 기숙사의 합성어). 원거리 통근 직원을 위한 주거 복지
+    aliases:
+      - geek4
+      - 기숙사
+    context: 2024-Q1에 동원스위트 102동 202호에 첫 긱사 마련
+  - term: 동원스위트
+    definition: 첫 번째 긱사가 위치한 아파트 단지 (102동 202호)
+    aliases: []
+    context: 2024-Q1~Q2 기간 사용된 첫 긱사 위치
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

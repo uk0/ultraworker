@@ -1,0 +1,41 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 81
+  total_threads: 72
+  active_users: 7
+  avg_messages_per_day: 2.9
+summary: |
+  2025-Q4 deploy-pylon 채널에서는 배포 자동화 시스템이 /sionic-deploy에서 /sionic-deploy-new로 전환되는 과도기가 관찰되었다. 이 분기 중반부터 /sionic-deploy-new 커맨드와 --auto-deploy 옵션이 도입되었으며, 12월에는 Pylon 서비스가 STORM 패키지에 포함되어 코드 암호화 형태로 빌드될 예정이라는 공지가 있었다. 7명의 팀원이 배포에 참여하며 이전 분기 대비 참여 인원이 늘었고, 12월 연말에도 활발한 배포 활동이 이루어졌다. 신규 멤버 2명이 채널에 합류하였다.
+topics:
+  - name: "신규 배포 시스템 도입"
+    mention_count: 45
+    description: "/sionic-deploy-new 커맨드와 --auto-deploy 옵션을 사용하는 새로운 배포 자동화 방식 전환"
+  - name: "기존 배포 시스템 사용"
+    mention_count: 20
+    description: "기존 /sionic-deploy 커맨드를 통한 배포"
+  - name: "Pylon 코드 암호화 전환 공지"
+    mention_count: 1
+    description: "STORM 패키지로 빌드되는 Pylon이 앞으로 코드 암호화된 형태로 배포될 예정이라는 공지"
+key_discussions:
+  - thread_ts: '1765458965.000000'
+    date: '2025-12-03'
+    reply_count: 4
+    text_preview: "STORM 패키지로 빌드되는 파일런은 앞으로 코드 암호화된 형태로 갈 예정"
+terminology:
+  - term: "/sionic-deploy-new"
+    definition: "기존 /sionic-deploy를 대체하는 신규 배포 자동화 커맨드. --auto-deploy 옵션 지원"
+  - term: "--auto-deploy"
+    definition: "빌드 완료 후 자동으로 배포까지 진행하는 옵션"
+  - term: "코드 암호화"
+    definition: "Pylon 서비스를 STORM 패키지로 빌드할 때 소스 코드를 암호화하는 보안 조치"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

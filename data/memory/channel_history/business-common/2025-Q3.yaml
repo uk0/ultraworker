@@ -1,0 +1,69 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 357
+  total_threads: 241
+  active_users: 18
+  avg_messages_per_day: 5.0
+summary: |
+  2025년 3분기 비즈니스 공통 채널에서는 준컨설팅, 대흥에코 등 기존 고객 후속 대응과 함께 일본 서비스 운영 준비를 위한 인프라 검토가 이루어졌다. 제품 소개서 및 IR 자료 업데이트, 7월 출시 기능들에 대한 공유가 활발했으며, 초거대 AI 1차 과제조정위원회 등 정부 과제 관련 논의도 병행되었다. 워크플로우 모드와 빠르게 시작 모드 분리, 스톰 일본 리전 데이터 규정 검토 등 글로벌 확장을 위한 준비가 시작된 분기이다.
+topics:
+  - name: "제품 소개서 및 IR 자료 업데이트"
+    mention_count: 30
+    description: "7월 제품소개서 업데이트, IR Deck 갱신, 고객 레퍼런스 자료 정리"
+  - name: "일본 서비스 운영 준비"
+    mention_count: 25
+    description: "일본 리전 RDB/VDB/서비스 로그 위치, GPU API 한국 운영 가능 여부 검토"
+  - name: "고객 관리 및 후속 대응"
+    mention_count: 40
+    description: "준컨설팅 기술 지원, 대흥에코 PoC 종료 및 후속 진행, 고객 리스트 정리"
+  - name: "사업 미팅 및 파트너십"
+    mention_count: 35
+    description: "초거대 AI 과제조정위원회, 디캠프 출입증 발급, 다양한 사업 미팅 정리"
+  - name: "스톰 플랫폼 기능 개발"
+    mention_count: 20
+    description: "워크플로우 모드 분리, 빠르게 시작 모드 논의, 기능 개선 방향 공유"
+key_discussions:
+  - thread_ts: '1751370000.000000'
+    date: '2025-07-01'
+    reply_count: 49
+    text_preview: "준컨설팅 카드결제 문의 - 결제 방식 및 정산 관련 상세 논의"
+  - thread_ts: '1751545200.000000'
+    date: '2025-07-01'
+    reply_count: 8
+    text_preview: "일본 서비스 운영 준비 - RDB, VDB, 서비스 로그 등 일본 리전 요건 검토"
+  - thread_ts: '1751669000.000000'
+    date: '2025-07-02'
+    reply_count: 4
+    text_preview: "대흥에코 PoC 종료 및 이후 진행 내용 정리"
+  - thread_ts: '1751705000.000000'
+    date: '2025-07-02'
+    reply_count: 9
+    text_preview: "워크스테이션 온프렘 환경에서의 모델 기반 패스워드 크랙 건 논의"
+  - thread_ts: '1751781000.000000'
+    date: '2025-07-01'
+    reply_count: 8
+    text_preview: "초거대 AI 1차 과제조정위원회 참석 및 관련 준비 논의"
+terminology:
+  - term: "준컨설팅"
+    definition: "Sionic AI의 기술 자문/컨설팅 서비스 또는 관련 고객사. 카드결제, 기술지원 등이 자주 언급됨"
+    aliases: []
+    context: "비즈니스 공통 채널에서 빈번하게 등장하는 고객/서비스 키워드"
+  - term: "스톰 플랫폼"
+    definition: "Sionic AI의 올인원 AI 에이전트 빌더 플랫폼"
+    aliases: ["STORM Platform", "Storm"]
+    context: "핵심 제품으로 모든 영업 및 기술 논의의 중심"
+  - term: "대흥에코"
+    definition: "Sionic AI의 스톰 플랫폼 PoC를 진행한 고객사"
+    aliases: []
+    context: "2025-Q3에 PoC 종료 및 후속 진행 논의"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

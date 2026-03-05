@@ -1,0 +1,78 @@
+channel:
+  id: C07EJLJSVUG
+  name: product-supply
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 29
+  total_threads: 21
+  active_users: 7
+  avg_messages_per_day: 2.1
+summary: |
+  2025-Q3는 Supply 서비스의 안정화, OTEL 적용, 대규모 벡터 테스트 지속, 그리고 검색 기능 고도화가 진행된 분기이다.
+  IBK 기준 12만 문서/130만 벡터 규모에서의 성능 최적화가 계속되었으며, 20만 문서/220만 벡터 규모 테스트도 계획되었다.
+  OTEL(OpenTelemetry) 적용이 Supply에 시작되어 HTTP 요청 기록 및 외부 연동(ASMR) 추적이 가능해졌으나,
+  코루틴/비동기 환경에서 span 전파 문제가 발견되었다. indexer 완료 후 runner 기동 시 agentIds 전달 개선이 완료되었다.
+  파일 삭제 크론잡 운영, 멀티턴 검색 테스트, 새 에이전트 생성 시 Pylon/Supply 자동 반영 논의,
+  Supply에 쿼리 추가 검색 로직 진행 상황 확인, Qdrant point 증분 처리를 위한 delta lake 방식 검토,
+  MUVERA(Multi-Vector Retrieval) 실험 및 Flasma 프로젝트에서 40GB 벡터 단일 텐서 테스트 등이 있었다.
+  부하테스트를 통한 carrier PR 기반 성능 검증도 진행되었다.
+topics:
+  - IBK 대규모 벡터 성능 최적화 지속 (130만~220만 벡터)
+  - OTEL(OpenTelemetry) Supply 적용 - 코루틴 span 전파 이슈
+  - indexer→runner agentIds 전달 개선
+  - 파일 삭제 크론잡 운영
+  - 멀티턴 검색 테스트
+  - MUVERA 실험 및 Supply 적용 관계 정리
+  - Flasma 프로젝트 - 40GB 벡터 단일 텐서 테스트
+  - Qdrant point 증분 처리 (delta lake 방식 검토)
+  - Supply에 쿼리 추가 검색 로직 개발
+key_discussions:
+  - date: '2025-07-01'
+    summary: Supply OTEL 적용 상황 공유 - HTTP 요청 기록 성공, 코루틴 span 전파 문제 미해결 (5 replies)
+  - date: '2025-07-02'
+    summary: dev 700만 벡터 생성 방법 논의 (58 replies)
+  - date: '2025-07-04'
+    summary: indexer 완료 후 runner agentIds 전달 개선 완료 - 28w 탑승
+  - date: '2025-07-04'
+    summary: Supply 개선 방향 메모장 - 장기 로드맵 논의 (21 replies)
+  - date: '2025-07-06'
+    summary: 파일 삭제 크론잡 운영 및 ops 지원 논의 (31 replies)
+  - date: '2025-07-12'
+    summary: MUVERA 관련 실험 및 Supply 적용 관계 정리 (22 replies)
+  - date: '2025-07-12'
+    summary: Flasma 프로젝트 - 40GB 벡터 단일 텐서 동작 테스트 (5 replies)
+  - date: '2025-07-17'
+    summary: 새 에이전트 생성 시 Pylon/Supply 자동 검색 반영 논의 (17 replies)
+  - date: '2025-07-18'
+    summary: 멀티턴 검색 테스트 - dev 에이전트에서 Supply 호출 로그 확인 (68 replies)
+  - date: '2025-07-30'
+    summary: Qdrant point 증분 처리를 위한 delta lake 방식 검토 (8 replies)
+  - date: '2025-08-12'
+    summary: Supply에 쿼리 추가 검색 로직 진행 상황 확인 (8 replies)
+  - date: '2025-09-19'
+    summary: Supply indexer 관련 궁금한 점 논의 (10 replies)
+terminology:
+  - term: OTEL
+    definition: OpenTelemetry. 분산 추적 및 모니터링 프레임워크. Supply에 적용하여 요청 병목 분석 지원
+    aliases:
+      - OpenTelemetry
+  - term: MUVERA
+    definition: Multi-Vector Retrieval 기법. 멀티벡터 검색을 단일벡터 검색 속도로 수행하는 Google Research 논문
+  - term: Flasma
+    definition: Sionic AI의 실험 프로젝트. 대규모 벡터 연산 최적화 테스트
+  - term: delta lake
+    definition: 데이터 레이크 위의 트랜잭션 레이어. Qdrant 증분 처리에 활용 검토
+  - term: agentIds
+    definition: Supply에서 관리하는 에이전트 식별자. indexer→runner 전달 시 사용
+  - term: Pylon
+    definition: Sionic AI의 검색 서비스. Supply와 함께 문서 검색을 담당
+    aliases:
+      - 파일런
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

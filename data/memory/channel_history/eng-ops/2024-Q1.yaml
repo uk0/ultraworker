@@ -1,0 +1,47 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 12
+  total_threads: 8
+  active_users: 4
+  avg_messages_per_day: 2.0
+summary: |
+  2024년 1분기 eng-ops 채널이 신설되어 초기 인프라 운영 논의가 시작되었다. 김덕현(Dekay)이 채널을 개설하고 AWS/Azure/GCP/알리바바 등 멀티 클라우드 계정 현황을 정리하였다. AWS 비용 분리, Azure 스폰서십 적용, GCP 미팅 등 클라우드 벤더별 크레딧 및 계약 관련 논의가 주로 이루어졌다. 온프레미스 인프라 구축을 위한 통신실 랙 세팅 일정과 CPU 노드 사양 검토(56코어, 768GB~1.5TB 메모리)가 진행되었으며, minio 클러스터 및 qdrant shard 온메모리 배포를 위한 장비 구성이 논의되었다.
+topics:
+  - 멀티 클라우드 계정 관리 (AWS, Azure, GCP, 알리바바)
+  - 온프레미스 서버 사양 검토 및 구매
+  - 통신실 랙 세팅
+  - 클라우드 크레딧 및 스폰서십
+key_discussions:
+  - thread_ts: '1711296575.144099'
+    date: '2024-03-24'
+    title: CPU 노드 사양 검토 및 minio/qdrant 배포 계획
+    participants: [Noah(고석현)]
+    summary: 56코어 Xeon 서버 사양 검토, minio 클러스터 및 100개 이상 qdrant shard 온메모리 배포 목적
+  - thread_ts: '1709544228.081939'
+    date: '2024-03-04'
+    title: Azure 스폰서십 적용 논의
+    participants: [김덕현(Dekay)]
+    summary: Azure 스폰서십 적용 관련 10개 답글의 활발한 논의
+  - thread_ts: '1710825959.401359'
+    date: '2024-03-19'
+    title: OpenAI 빌링 방식 변경
+    participants: [김덕현(Dekay)]
+    summary: OpenAI 빌링 방식 변경 공유
+terminology:
+  - term: minio
+    definition: S3 호환 오브젝트 스토리지 솔루션
+    context: 온프레미스 클러스터 구성 목적
+  - term: qdrant
+    definition: 벡터 데이터베이스
+    context: 100개 이상 shard를 온메모리에 배포하기 위한 인프라 검토
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

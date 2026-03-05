@@ -1,0 +1,95 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:25:54'
+statistics:
+  total_messages: 317
+  total_threads: 252
+  active_users: 37
+  avg_messages_per_day: 7.4
+key_discussions:
+- thread_ts: '1768991234.136829'
+  date: '2026-01-21'
+  reply_count: 75
+  text_preview: '신기..해서 자랑하러 왔습니다.
+
+    <https://live-opendataxai-challenge.sionic.im/|https://live-opendataxai-challenge.'
+- thread_ts: '1770220643.664439'
+  date: '2026-02-05'
+  reply_count: 51
+  text_preview: '리서치팀 카드에 들어갈 인물설명 좀 리플 달아주세요! (3월입사 연규님한테 보낼 용이라 리서치만 먼저)
+
+
+    그리고 6분 외에 어느분꺼를 먼저 만들면 좋을지?! sigrid껄 만들까.'
+- thread_ts: '1769581850.268499'
+  date: '2026-01-28'
+  reply_count: 48
+  text_preview: 템플러분들 중에 석사생(졸)을 찾습니다
+- thread_ts: '1769592298.951819'
+  date: '2026-01-28'
+  reply_count: 39
+  text_preview: '내일 저녁 퇴근 후 승현님과 한잔할 예정인데, 참가하실 분들은 저에게 연락주세욥 ㅎ.ㅎ ~아마 이자카야 갈 듯 합니다!~  장소:
+    양재오피스 지하실'
+- thread_ts: '1770188561.423369'
+  date: '2026-02-04'
+  reply_count: 37
+  text_preview: <https://sionicai.slack.com/archives/C06067P9ZJ7/p1770149960406949?thread_ts=1769243294.716879&amp;c
+- thread_ts: '1769954904.829979'
+  date: '2026-02-01'
+  reply_count: 31
+  text_preview: 혼자있으니좀 썰렁하네요
+- thread_ts: '1769061649.377279'
+  date: '2026-01-22'
+  reply_count: 31
+  text_preview: 커? 커커? 커커커커?(꺼삐뜨레드) >>>>
+- thread_ts: '1769512992.408049'
+  date: '2026-01-27'
+  reply_count: 30
+  text_preview: '첫트로 얻어낸 결과물인데 쉽지 않네요.... 프롬프트 어떻게 써야 더 카드가 예뻐질까요?
+
+    (카드내용은 무시하셔도 됨.)'
+- thread_ts: '1768465125.937429'
+  date: '2026-01-15'
+  reply_count: 30
+  text_preview: '<@U093DG8SMD1>: 내가 좋아하는 것은 고양이상의 예쁜 여자뿐이다
+
+    메기남에 이은 2대 얼빠 등장'
+- thread_ts: '1770275393.898959'
+  date: '2026-02-05'
+  reply_count: 29
+  text_preview: '오늘 혹시 양재 닭집 가보실 분 cc. <@U057MCDJHDY>
+
+    찐노포 치킨집이에요
+
+    없으시다면 패스,,,
+
+
+    <https://naver.me/xBwLrWS2>'
+- thread_ts: '1770693329.887299'
+  date: '2026-02-10'
+  reply_count: 28
+  text_preview: '<@U0A1HUY7NDN> : ENFP는 머리 텅텅이다'
+- thread_ts: '1770067481.646929'
+  date: '2026-02-03'
+  reply_count: 27
+  text_preview: 미뤄오던 Starlink 설치하고 스파크 tailscale로 연결
+- thread_ts: '1769142238.864899'
+  date: '2026-01-23'
+  reply_count: 26
+  text_preview: '진혁님의 고민 '
+- thread_ts: '1769139585.363629'
+  date: '2026-01-23'
+  reply_count: 26
+  text_preview: '<@U0A1HUY7NDN> : 안양이 어디에요? 사대문 밖은 서울로 안칩니다'
+- thread_ts: '1770903277.499469'
+  date: '2026-02-12'
+  reply_count: 23
+  text_preview: 메매 (메기매운탕이라는뜻) 후기 알려주실 분
+metadata:
+  created_at: '2026-02-13T16:25:54'
+  synced_by: sync_fast.py

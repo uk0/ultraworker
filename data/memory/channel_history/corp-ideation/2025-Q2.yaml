@@ -1,0 +1,47 @@
+channel:
+  id: C057EPS43QW
+  name: corp-ideation
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 2분기 corp-ideation 채널에서 오승희가 두 가지 아이디어를 제안하며 활발한
+  논의가 이루어졌다. 첫째, Manus AI Agent를 보고 "AI Agent 템플릿을 서로 공유 또는
+  판매/구매하는 노션 같은 모델"을 제안했으며, 이 스레드에서 94개의 답글이 달리며
+  매우 활발한 토론이 진행되었다. 둘째, "사이오닉 설명을 단 세 문장만 듣고도 투자하고
+  싶게 만들고 싶다"는 주제로 회사 소개 메시지 고도화에 대한 논의가 16개 답글과 함께
+  이루어졌다.
+topics:
+  - AI Agent 템플릿 마켓플레이스 아이디어
+  - Manus AI 분석
+  - 사이오닉 엘리베이터 피치 (3문장 설명)
+  - B2C AI 플랫폼 전략
+key_discussions:
+  - thread_ts: '1744725816.247629'
+    date: '2025-04-15'
+    reply_count: 94
+    text_preview: 'Manus AI Agent 템플릿 공유/판매 아이디어 - 매우 활발한 토론'
+  - thread_ts: '1748416811.977639'
+    date: '2025-05-28'
+    reply_count: 16
+    text_preview: '사이오닉 3문장 설명으로 투자 유치 메시지 논의'
+terminology:
+  - term: "Manus"
+    definition: "AI Agent 서비스. 오승희가 이를 보고 AI Agent 템플릿 마켓플레이스 아이디어를 제안."
+    aliases: []
+    context: "B2C향 AI 플랫폼의 가능성에 대한 논의 촉발"
+  - term: "스톰"
+    definition: "사이오닉 AI의 주력 제품/플랫폼. SaaS 모델로 운영 예정."
+    aliases: ["STORM", "스톰 플랫폼"]
+    context: "스톰이 SaaS할 시기의 시장 환경에 대한 전략적 논의"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

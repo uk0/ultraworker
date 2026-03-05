@@ -1,0 +1,43 @@
+channel:
+  id: C07S9L09BJP
+  name: status-carrier-dev
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1897
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 189.7
+summary: |
+  2024-Q4 기간 동안 Carrier 개발 서비스의 상태 모니터링 채널이 새로 개설되어 운영을 시작하였다. 채널에는 Sionic Monitoring 봇이 연동되어 Carrier API 서버(Kotlin/Spring Boot, Java 17, Tomcat)의 실행 로그와 상태 정보를 자동으로 수집하고 게시하였다. 서버 기동 로그, RAG 서비스 작업 시작 메시지, OpenAI 서비스 연동 로그 등이 하루 평균 190건씩 기록되었으며, 주로 자동화 봇이 메시지를 발행하는 형태로 운영되었다.
+topics:
+  - name: "Carrier API 서버 기동"
+    mention_count: 50
+    description: "Kotlin Spring Boot 기반 Carrier API 서버의 시작 및 초기화 로그(Tomcat, DispatcherServlet 등)"
+  - name: "RAG 서비스 작업 로그"
+    mention_count: 40
+    description: "RagService.ragRequest, OpenAIService.chat 등 Carrier 내 RAG 파이프라인 작업 시작 로그"
+  - name: "모니터링 봇 상태 메시지"
+    mention_count: 100
+    description: "Sionic Monitoring 봇이 자동으로 게시하는 Carrier 서비스 상태 메시지(다수가 빈 메시지)"
+key_discussions: []
+terminology:
+  - term: "Carrier"
+    definition: "Sionic AI의 LLM 추론 및 RAG 처리를 담당하는 내부 서비스, Kotlin/Spring Boot로 구현"
+    aliases: ["carrier-api"]
+    context: "Stargate에서 LLM 채팅 요청을 처리하기 위해 호출하는 서비스"
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation의 약자로, 검색 기반 답변 생성 방식"
+    aliases: ["RagService"]
+    context: "Carrier 내 RagService.ragRequest 메서드로 구현"
+  - term: "CarrierService"
+    definition: "Carrier의 채팅 스트리밍을 담당하는 핵심 서비스 클래스"
+    aliases: []
+    context: "streamChat 메서드로 LLM 응답 스트리밍 처리"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

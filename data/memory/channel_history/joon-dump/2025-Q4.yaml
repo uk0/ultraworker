@@ -1,0 +1,39 @@
+channel:
+  id: C09UDR20Z5K
+  name: joon-dump
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 252
+  total_threads: 59
+  active_users: 21
+  avg_messages_per_day: 6.1
+summary: |
+  2025년 4분기 joon-dump 채널은 Joon(주운)님이 AI/ML 관련 최신 트렌드, 논문, X(트위터) 링크를 팀에 공유하는 개인 덤프 채널로 운영되었다. 주요 내용은 트랜스포머의 self-attention 스케일링, AI 에이전트 관련 최신 연구 동향, 그리고 다양한 AI 기술 소식 링크 공유였다. 11월 21일부터 본격적으로 활동이 시작되었으며 21명의 팀원이 참여해 AI 업계 동향을 함께 공유하고 소통하였다.
+topics:
+  - name: "AI/ML 트렌드 공유"
+    mention_count: 40
+    description: "X(트위터) 링크 및 최신 AI 논문, 기술 동향 공유"
+  - name: "트랜스포머 아키텍처"
+    mention_count: 8
+    description: "self-attention 스케일링, 트랜스포머 관련 기술 자료"
+  - name: "AI 에이전트"
+    mention_count: 12
+    description: "에이전트 기반 AI 시스템 관련 링크 및 토론"
+key_discussions:
+  - thread_ts: '1732183500.000000'
+    date: '2025-11-21'
+    reply_count: 1
+    text_preview: "트랜스포머 self-attention 스케일링 관련 uselessai.in 아티클 공유"
+terminology:
+  - term: "joon-dump"
+    definition: "Joon(주운)님이 AI 관련 최신 정보와 링크를 덤프하는 개인 채널"
+    aliases: []
+    context: "팀 내 AI 트렌드 정보 공유 허브 역할"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

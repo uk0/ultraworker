@@ -1,0 +1,60 @@
+channel:
+  id: C08DKGNJ8P5
+  name: research-daily
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 116
+  total_threads: 12
+  active_users: 10
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 3분기 research-daily 채널에서는 xionic-vl 파서 표 이해 능력 향상을 위한 데이터셋 제작 및 학습, Pylon Late Chunking API 안정화, Overmind 임베딩 모델 성능 평가, Storm Parse 상품화 스켈레톤 작업이 주요 활동이었다. 일본 AI 컨퍼런스·박람회 조사, 정부과제(초거대AI, 엔업, 현대차, WBL, AI 챔피언) 행정 업무가 병행되었다.
+topics:
+  - name: "xionic-vl 파서 학습"
+    mention_count: 20
+    description: "표 관련 데이터셋 생성·추가 학습, 반복 이슈 해결, IBK 운영계 반입, ghostscript 버전 업그레이드"
+  - name: "Storm Parse 상품화"
+    mention_count: 8
+    description: "Storm Parse 데모 API 스켈레톤 구축 — 문서 수신 후 Dragoon→Gemini 연결, demo는 3페이지 파싱 제한"
+  - name: "Pylon 및 Overmind"
+    mention_count: 12
+    description: "Late Chunking API 안정화, Gemini Embedding 테스트, Overmind Late Chunking으로 3%p 성능 향상 확인"
+  - name: "일본 AI 컨퍼런스 조사"
+    mention_count: 6
+    description: "AI 博覧会, 生成AIカンファランス, 東京AI祭 등 일본 AI 행사 가격·일정 비교 및 미팅 예약"
+  - name: "정부과제 행정"
+    mention_count: 30
+    description: "초거대AI·엔업·현대차·WBL·AI 챔피언 과제 보고서, 협약변경, 증빙서류 준비 등 행정 업무"
+  - name: "InternVL 및 VLM 파운데이션 모델"
+    mention_count: 6
+    description: "InternVL 코드베이스 세팅, MLLM pretraining 공개 모델 탐색, instruction tuning 데이터 survey"
+key_discussions:
+  - thread_ts: '1751421000.000000'
+    date: '2025-07-02'
+    reply_count: 0
+    text_preview: "xionic-vl 표 관련 데이터셋 생성 완료, 학습에 활용할 데이터 정리 후 학습 예정"
+  - thread_ts: '1753408800.000000'
+    date: '2025-07-25'
+    reply_count: 1
+    text_preview: "Overmind Late Chunking(앞뒤 4개 청크) 약 3%p 성능 향상 확인, 더 강한 방식 추가 실험 예정"
+  - thread_ts: '1754053800.000000'
+    date: '2025-07-28'
+    reply_count: 0
+    text_preview: "Storm Parse 상품화 스켈레톤 완료 — 데모에서 Dragoon→Gemini 연결, 3페이지 파싱 제한 적용"
+terminology:
+  - term: "xionic-vl"
+    definition: "Sionic AI의 Visual Language Model 파서 — 표·복잡한 레이아웃 문서를 이해하는 VLM 기반 파싱 엔진"
+  - term: "Overmind"
+    definition: "Sionic AI의 임베딩 모델 — Late Chunking 기법을 활용하여 긴 문서 임베딩 성능을 향상시키는 모델"
+  - term: "vllm 부하 테스트"
+    definition: "k6 도구를 사용한 vLLM 서버 동시 요청 처리 한계 테스트 — 아비케(IBK) 운영 환경 반입 전 검증에 활용"
+  - term: "WBL"
+    definition: "신규 정부과제 공고 중 하나 — 사업계획서 작성 및 PMS 제출 진행"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

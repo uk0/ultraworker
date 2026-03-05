@@ -1,0 +1,41 @@
+channel:
+  id: C087Z7CKB0U
+  name: alarm-dev-error-infra
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 3000
+  total_threads: 2714
+  active_users: 4
+  avg_messages_per_day: 100.0
+summary: |
+  개발 환경 인프라 에러 알림 채널. Q3 대비 알림 감소(3000건)했으나 일평균 100건으로 여전히 높은 수준.
+  New Relic(82건/100건 샘플)과 Grafana(18건/100건 샘플) 두 모니터링 소스에서 알림 발생.
+  주요 알림 대상: reranker-copier, pvc-inspector-dev(각각 38건으로 최다), dev-parsr, ex-embedding, dev-langgraph-agents.
+  "Pod has restarted"가 여전히 주요 유형(76%). Grafana 알림이 신규 추가되어 모니터링 범위 확대.
+  reranker-copier와 pvc-inspector-dev의 반복적 재시작이 이 분기의 핵심 이슈.
+topics:
+  - reranker-copier 반복 재시작
+  - pvc-inspector-dev 불안정
+  - Grafana 모니터링 알림 추가
+  - dev-parsr 문서 파싱 서비스 오류
+  - ex-embedding 임베딩 서비스 재시작
+  - 일평균 100건 고빈도 알림
+key_discussions: []
+terminology:
+  - term: "reranker-copier"
+    definition: "검색 결과 재순위화(reranking) 모델 복사 서비스"
+    context: "Q4에서 가장 빈번한 재시작 대상"
+  - term: "pvc-inspector-dev"
+    definition: "PersistentVolumeClaim 상태 검사 도구의 개발 환경 인스턴스"
+    context: "Q4에서 reranker-copier와 동일 빈도로 재시작 발생"
+  - term: "Grafana"
+    definition: "오픈소스 모니터링/대시보드 플랫폼"
+    context: "Q4부터 New Relic과 함께 알림 소스로 추가됨"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

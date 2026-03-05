@@ -1,0 +1,53 @@
+channel:
+  id: C09NZDXQBDJ
+  name: alarm-live-info-drone
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 30
+  total_threads: 10
+  active_users: 18
+  avg_messages_per_day: 2.7
+summary: |
+  2025-Q4 동안 alarm-live-info-drone 채널에서는 드론 서비스 라이브 환경의 결제 승인 및 실패 알림이 주로 기록되었다.
+  notification-bot을 통해 결제 승인 성공과 잔액 부족으로 인한 결제 실패 이벤트가 자동으로 알림되었으며, 10월 말 채널 생성 후 12월까지 다수의 팀원이 참여하였다.
+  결제 금액은 38,500원에서 385,000원 범위로 다양했으며, 일부 결제 실패 후 재시도 성공 패턴도 확인되었다.
+topics:
+  - name: "결제 승인 알림"
+    mention_count: 15
+    description: "드론 서비스 라이브 환경에서 결제 승인 성공 이벤트 자동 알림"
+  - name: "결제 실패 알림"
+    mention_count: 3
+    description: "잔액 부족 등으로 인한 결제 처리 실패 경고 알림"
+  - name: "채널 초기화"
+    mention_count: 5
+    description: "10월 말 채널 생성 및 팀원 초대, notification-bot 연동"
+key_discussions:
+  - thread_ts: '1735030800.000000'
+    date: '2025-12-16'
+    reply_count: 33
+    text_preview: "결제 승인 성공 알림 - Team ID: 7406560075364888576, Amount: 38500 KRW"
+  - thread_ts: '1735175160.000000'
+    date: '2025-12-18'
+    reply_count: 21
+    text_preview: "결제 처리 실패 후 재시도 성공 - 잔액 부족으로 2회 실패 후 결제 완료"
+  - thread_ts: '1735257600.000000'
+    date: '2025-12-30'
+    reply_count: 12
+    text_preview: "결제 승인 성공 - Team ID: 7398614074570027008, Amount: 77000 KRW"
+terminology:
+  - term: "notification-bot"
+    definition: "결제 이벤트 등 시스템 상태를 Slack 채널에 자동으로 알리는 봇"
+    aliases: ["알림봇"]
+    context: "alarm-live-info-drone 채널에 연동되어 결제 승인/실패 이벤트를 실시간 알림"
+  - term: "Payment Key"
+    definition: "결제 트랜잭션을 식별하는 고유 키값 (예: sioni20251028172337m7QX1)"
+    aliases: []
+    context: "각 결제 승인/실패 알림 메시지에 포함되는 식별자"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

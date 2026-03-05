@@ -1,0 +1,66 @@
+channel:
+  id: C06S3EQ9X1T
+  name: sig-지름
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:20'
+statistics:
+  total_messages: 17
+  total_threads: 13
+  active_users: 10
+  avg_messages_per_day: 0.4
+key_discussions:
+- thread_ts: '1767968102.266249'
+  date: '2026-01-09'
+  reply_count: 13
+  text_preview: 생일기념
+- thread_ts: '1770641782.800849'
+  date: '2026-02-09'
+  reply_count: 8
+  text_preview: 맥스튜디오 풀옵션을 살지 spark 를 살지 고민 중인데 추천 받습니다
+- thread_ts: '1770211116.854499'
+  date: '2026-02-04'
+  reply_count: 7
+  text_preview: M1 맥북 에어 하나 살까 고민 중...
+- thread_ts: '1769769607.056349'
+  date: '2026-01-30'
+  reply_count: 6
+  text_preview: 이거 구매했습니다
+- thread_ts: '1768288167.539069'
+  date: '2026-01-13'
+  reply_count: 6
+  text_preview: 회의실 마이크 대상 2
+- thread_ts: '1770641441.691549'
+  date: '2026-02-09'
+  reply_count: 4
+  text_preview: ''
+- thread_ts: '1769848325.728129'
+  date: '2026-01-31'
+  reply_count: 3
+  text_preview: 키캡을 사면 초콜릿이 공짜
+- thread_ts: '1769838416.038739'
+  date: '2026-01-31'
+  reply_count: 3
+  text_preview: "이런거 어떠세요 <@U06CLS6E694> \n\n원형 파노라마 고양이 호텔 원통형 케이지 하우스\n<https://link.coupang.com/a/dC9Eez|https://link"
+- thread_ts: '1768397802.759899'
+  date: '2026-01-14'
+  reply_count: 3
+  text_preview: <https://www.dell.com/ko-kr/shop/dell-ultrasharp-52-thunderbolt-%ED%97%88%EB%B8%8C-%EB%AA%A8%EB%8B%8
+- thread_ts: '1769514990.704159'
+  date: '2026-01-27'
+  reply_count: 2
+  text_preview: 72테라어치 매수
+- thread_ts: '1768288085.672409'
+  date: '2026-01-13'
+  reply_count: 2
+  text_preview: 회의실 마이크 대상 1
+- thread_ts: '1767237927.454329'
+  date: '2026-01-01'
+  reply_count: 2
+  text_preview: 혹시 사무실에 제 허먼밀러 구매하실 의향 있으신분 계신가용?
+metadata:
+  created_at: '2026-02-13T16:28:20'
+  synced_by: sync_fast.py

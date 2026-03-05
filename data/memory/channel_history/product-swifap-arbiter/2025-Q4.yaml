@@ -1,0 +1,82 @@
+channel:
+  id: C09BGC09X0X
+  name: product-swifap-arbiter
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 164
+  total_threads: 113
+  active_users: 11
+  avg_messages_per_day: 3.9
+summary: |
+  2025년 4분기 product-swifap-arbiter 채널(구 research-swfap-ordersheet, research-swap-ordersheet)은 SWIFAP(Storm Workflow As Python) 개발의 핵심 분기였다.
+  Python 코드로 워크플로우를 작성하면 JSON 오더시트로 컴파일되는 SWIFAP 라이브러리를 개발하고, Codex SDK와 연동하여 자연어로 워크플로우를 자동 생성하는 데모를 제작하였다.
+  PLAN-DEV-ASSEMBLE 3단계 에이전트 기반 워크플로우 자동화 파이프라인을 설계하고, OpenAI 에이전트 빌더 구조 분석 및 비교 연구도 활발히 수행되었다.
+topics:
+  - name: "SWIFAP 라이브러리 개발"
+    mention_count: 40
+    description: "Python으로 워크플로우를 선언하면 JSON 오더시트로 컴파일하는 라이브러리 구현 및 리팩토링"
+  - name: "Codex SDK 연동"
+    mention_count: 20
+    description: "Codex 명령 -> MCP 콜 -> 데모 페이지 리얼타임 업데이트 파이프라인 구현"
+  - name: "PLAN-DEV-ASSEMBLE 자동화"
+    mention_count: 15
+    description: "자연어 입력으로 워크플로우 플랜 생성, 노드별 개발, 전체 조립 테스트하는 3단계 파이프라인"
+  - name: "OpenAI 에이전트 빌더 분석"
+    mention_count: 10
+    description: "OpenAI의 그래프 인터페이스, While 블록, 코드 생성 구조 분석 및 SWIFAP 적용 방안 논의"
+  - name: "노드 타입 정의 및 Validation"
+    mention_count: 12
+    description: "노드 타입 빡세게 정의 vs 유연한 선언 방식, 오더시트 명세 기반 validation 구현 논의"
+  - name: "Sequential vs Parallel 실행"
+    mention_count: 8
+    description: "기본 순차 실행 vs 명시적 병렬 스코프, Subgraph 컨셉트 도입 논의"
+key_discussions:
+  - thread_ts: '1727751360.000000'
+    date: '2025-10-01'
+    reply_count: 71
+    text_preview: "노드 타입 정의 방식(유연 vs 엄격) 설계 고민 및 오더시트 명세 validation 논의"
+  - thread_ts: '1727752260.000000'
+    date: '2025-10-01'
+    reply_count: 34
+    text_preview: "채널 이름 스위팹(SWIFAP) 확정 및 발음 논의"
+  - thread_ts: '1728808440.000000'
+    date: '2025-10-13'
+    reply_count: 24
+    text_preview: "Sequential 실행 필요성, Subgraph 컨셉트, ifelse 브랜치 구조 논의"
+  - thread_ts: '1729945680.000000'
+    date: '2025-10-26'
+    reply_count: 22
+    text_preview: "Codex SDK 데모: 명령 -> MCP -> 리얼타임 그래프 빌딩 -> 채팅 실행 성공"
+  - thread_ts: '1730870820.000000'
+    date: '2025-11-06'
+    reply_count: 33
+    text_preview: "Anthropic 제출용 글(엔트로픽을 홀릴 글) 작성 및 리뷰"
+  - thread_ts: '1731067860.000000'
+    date: '2025-11-08'
+    reply_count: 19
+    text_preview: "SWIFAP PLAN 모드 골격 PR 및 DSL 문법 정리, 에이전트 먹이기 작업"
+terminology:
+  - term: "SWIFAP"
+    definition: "Storm Workflow As Python, 파이썬 코드로 STORM 워크플로우를 정의하면 JSON 오더시트로 컴파일하는 라이브러리"
+    aliases: ["스위팹", "SWAP", "swfap"]
+    context: "2025년 Q3에 개발 시작, Q4에 Codex 연동 데모까지 발전"
+  - term: "오더시트"
+    definition: "STORM 워크플로우를 JSON 형식으로 표현한 실행 명세서"
+    aliases: ["ordersheet"]
+    context: "SWIFAP의 최종 컴파일 결과물, 노드와 링크 정보 포함"
+  - term: "PLAN-DEV-ASSEMBLE"
+    definition: "자연어로 워크플로우를 설명하면 PLAN(플로우 추천) -> DEV(노드별 구현/검증) -> ASSEMBLE(전체 조립 테스트) 3단계로 자동 생성하는 파이프라인"
+    aliases: []
+    context: "SWIFAP 에이전트 자동화의 핵심 실행 단계"
+  - term: "CEL"
+    definition: "Common Expression Language, 튜링 불완전한 표현식 언어로 조건 분기 등에 사용"
+    aliases: ["Common Expression Language"]
+    context: "OpenAI 에이전트 빌더가 조건 정의에 사용하는 방식, SWIFAP 설계 참고"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

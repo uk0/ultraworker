@@ -1,0 +1,54 @@
+channel:
+  id: C07KHG3C8N6
+  name: sig-육아
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 52
+  total_threads: 43
+  active_users: 11
+  avg_messages_per_day: 1.6
+summary: |
+  채널 역대 최대 활동량(52개 메시지, 43개 스레드)을 기록한 분기. Noah(고석현)가 아이의 아빠로서 본격적으로 육아 일상을 공유하기 시작했다. "작네요"(40개 답변), "왜안잠"(반복적 고충), "해뜨고 잠듬", "아 빨리 출근하고싶다", "일하게해주세요" 등 초보 아빠의 고군분투가 생생하게 기록되었다. 아이의 손, 얼굴 변화(매일 달라짐), 고양이와의 공존("아직 때리진 않음"), 체중 증가(평균 1.5배 속도) 등이 화제였다. 신희수의 해솔이는 언어 발달("아빠=엄마+아빠+맘마+기분좋음"), 독박육아 흔적, 몰래 설탕 섭취 등을 공유했다. 송명하의 하준이는 서울랜드, 숨바꼭질 30판, 라면 받침대 뺏기기, 캠핑의자 구매(소중해서 안가져감) 등을 공유했다. 해솔이 생일(6월 11일)도 기록되었다.
+topics:
+  - 신생아 육아 (수면 부족, 왜안잠)
+  - 아기 성장 (체중, 얼굴 변화, 언어 발달)
+  - 반려동물과 아기 (고양이)
+  - 어린이 놀이 (서울랜드, 숨바꼭질)
+  - 생일 (해솔이 생일)
+key_discussions:
+  - thread_ts: '1745284899.664719'
+    date: '2025-04-22'
+    topic: Noah 아이 첫 공개(작네요)
+    reply_count: 40
+  - thread_ts: '1743654785.824469'
+    date: '2025-04-03'
+    topic: 라면 받침대 뺏기기
+    reply_count: 20
+  - thread_ts: '1746508694.169539'
+    date: '2025-05-06'
+    topic: 아이의 손 성장
+    reply_count: 16
+  - thread_ts: '1747900295.551659'
+    date: '2025-05-22'
+    topic: 신희수 아이 사진 공유
+    reply_count: 13
+  - thread_ts: '1747888009.906499'
+    date: '2025-05-22'
+    topic: 무민 캐릭터 닮은꼴 아기
+    reply_count: 12
+  - thread_ts: '1746006536.746189'
+    date: '2025-04-30'
+    topic: 매일 달라지는 아기 얼굴
+    reply_count: 11
+terminology:
+  - term: "출아법"
+    definition: "출퇴근이 곧 육아 해결법이라는 의미의 유머"
+    context: "권혜선이 육아 방법으로 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

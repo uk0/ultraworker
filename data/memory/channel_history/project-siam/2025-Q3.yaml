@@ -1,0 +1,63 @@
+channel:
+  id: C094V9K47CL
+  name: project-siam
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 329
+  total_threads: 228
+  active_users: 22
+  avg_messages_per_day: 4.9
+summary: |
+  태국 시암(SIAM) AI 에이전트 프로젝트 본격 개발 및 방콕 현지 교육세션(부트캠프) 진행.
+  호텔/항공/여행 도메인 AI 에이전트 개발 - LangGraph 기반 멀티에이전트 워크플로우 구축,
+  OpenWebUI Pipelines 연동, MCP(Model Context Protocol) 호출 이슈 해결, SerpAPI 레이턴시 최적화.
+  Qwen3 모델 배포 및 테스트, QA 테스트 자동화 진행. 방콕 부트캠프에서 현지 인력 대상 AI 교육 실시.
+  329개 메시지, 22명 참여, 228개 스레드로 매우 활발한 분기.
+topics:
+  - 태국 시암 AI 에이전트
+  - LangGraph 멀티에이전트
+  - OpenWebUI Pipelines
+  - MCP 호출 이슈
+  - SerpAPI 레이턴시
+  - Qwen3 배포
+  - 방콕 부트캠프/교육세션
+  - QA 테스트
+key_discussions:
+  - topic: LangGraph 기반 멀티에이전트 워크플로우 설계
+    participants: [Sigrid Jin, 송명하, 한시형]
+    summary: 호텔/항공/여행 각 도메인별 에이전트를 LangGraph로 오케스트레이션하는 워크플로우 설계 및 구현
+  - topic: OpenWebUI Pipelines 연동
+    participants: [Sigrid Jin, 송명하]
+    summary: OpenWebUI에 커스텀 파이프라인을 연동하여 시암GPT 프론트엔드 구현
+  - topic: MCP 호출 이슈 및 SerpAPI 레이턴시
+    participants: [Sigrid Jin, 김수진]
+    summary: MCP 프로토콜 호출 시 발생하는 이슈 디버깅 및 SerpAPI 검색 레이턴시 최적화
+  - topic: Qwen3 모델 배포
+    participants: [한시형]
+    summary: Qwen3 모델 서버 배포 및 성능 테스트
+  - topic: 방콕 부트캠프 교육세션
+    participants: [Sigrid Jin, 송명하, 한시형, 김수진]
+    summary: 태국 방콕 현지에서 AI 에이전트 개발 교육 실시. 실무자 대상 코딩 부트캠프 진행
+terminology:
+  - term: SIAM(시암)
+    definition: 태국 대상 AI 에이전트 프로젝트. 호텔/항공/여행 도메인의 AI 어시스턴트 개발
+  - term: LangGraph
+    definition: LangChain의 그래프 기반 멀티에이전트 오케스트레이션 프레임워크
+  - term: OpenWebUI
+    definition: 오픈소스 웹 UI 프레임워크. Pipelines 기능으로 커스텀 AI 파이프라인 연동 가능
+  - term: MCP
+    definition: Model Context Protocol. AI 모델과 외부 도구를 연결하는 프로토콜
+  - term: SerpAPI
+    definition: 검색 엔진 결과 페이지(SERP) API. 웹 검색 결과를 프로그래밍으로 가져오는 서비스
+  - term: Qwen3
+    definition: 알리바바의 대규모 언어 모델. 시암 프로젝트에서 대안 모델로 배포 테스트
+  - term: 시암GPT
+    definition: 시암 프로젝트의 GPT 기반 AI 에이전트 서비스명
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

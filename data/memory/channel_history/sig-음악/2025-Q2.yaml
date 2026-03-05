@@ -1,0 +1,56 @@
+channel:
+  id: C08HQET9BGA
+  name: sig-음악
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 46
+  total_threads: 14
+  active_users: 5
+  avg_messages_per_day: 1.5
+summary: |
+  활발한 음악 공유 분기. 이강욱과 권혜선(Jada)이 주요 기여자로 활동. 권혜선은 출근송 시리즈를 지속하며
+  다양한 장르(J-Pop, 밴드음악, TFT 사운드트랙, 키라라 등)를 공유. 이강욱은 걸데모, 결속밴드, 아이오반 등
+  일본 밴드 음악 위주로 공유. Sigrid Jin은 Kazumasa Oda(일본의 조용필) 등 J-Pop과 레포 이름 출처가 된
+  음악도 소개. 이박사 키보디스트 이수일 곡, 공군 음악 등 독특한 음악도 공유됨.
+  양호진이 공유한 곡에 10개 답글이 달리며 큰 반응을 얻음.
+topics:
+  - 출근송 시리즈 지속
+  - J-Pop/일본 밴드 음악 (걸데모, 결속밴드, 아이오반)
+  - 밴드음악 추천
+  - TFT 사운드트랙
+  - 이박사/250프로듀서 음악
+key_discussions:
+  - thread_ts: '1745541271.578819'
+    date: '2025-04-25'
+    reply_count: 10
+    text_preview: '양호진 음악 공유 - 큰 반응'
+  - thread_ts: '1751004280.720979'
+    date: '2025-06-27'
+    reply_count: 6
+    text_preview: '이강욱 - 삐에로가 좋아 (J-Pop 공유)'
+  - thread_ts: '1747463212.798359'
+    date: '2025-05-17'
+    reply_count: 5
+    text_preview: '권혜선 - 밴드음악 좋아하시는지 물어보며 공유'
+  - thread_ts: '1744267090.018969'
+    date: '2025-04-10'
+    reply_count: 10
+    text_preview: 'Sigrid Jin - 권혜선이 좋아할 아티스트 추천'
+terminology:
+  - term: "걸데모"
+    definition: "일본 록 밴드"
+    context: "이강욱이 '걸데모를 모르는 애들이 음악을 알까'라며 열정적으로 추천"
+  - term: "결속밴드"
+    definition: "애니 '봇치 더 록!'의 가상 밴드"
+    context: "이강욱이 '결속밴드는 전설이다'라며 추천"
+  - term: "아이오반"
+    definition: "일본 밴드 YOASOBI"
+    context: "이강욱이 인터넷야메로/천천천국 외에도 좋은 곡이 많다고 소개"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

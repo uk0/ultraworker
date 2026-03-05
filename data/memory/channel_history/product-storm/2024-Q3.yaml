@@ -1,0 +1,97 @@
+channel:
+  id: C05BUTMULMD
+  name: product-storm
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 292
+  total_threads: 249
+  active_users: 18
+  avg_messages_per_day: 4.6
+summary: |
+  2024년 3분기 product-storm 채널에서는 캐리어(Carrier) 연동 개발, 권한 관리 시스템 설계, 대시보드 고도화가 핵심 주제였다.
+  1 bucket 1 collection 구조 재검토, 청크 사이즈 조정 기능 추가, 문서 버킷 이동 로직 개선 등 RAG 파이프라인의 구조적 고도화가 진행되었다.
+  권한 관리 테크스펙 리뷰(admin/manager/worker 체계), 이용약관 법률검토, 플랜 구독 기능 논의 등 엔터프라이즈 기능이 본격적으로 기획되었다.
+  파일 업로드 확장자 허용 변경, 디자인 시스템 적용, API key 재발급 기능 등 플랫폼 성숙도를 높이는 작업이 다수 수행되었다.
+topics:
+  - name: "캐리어(Carrier) 연동"
+    count: 20
+    description: "캐리어-스타게이트 연동 개발, QA, 스트림 수정, 오더시트 관련 작업"
+  - name: "권한 관리 시스템"
+    count: 15
+    description: "admin/manager/worker 체계 설계, 테크스펙 리뷰, 회원가입 플로우"
+  - name: "1 bucket 1 collection 구조"
+    count: 10
+    description: "버킷 구조 재검토, 문서 버킷 이동 로직, GraphRAG 아이디어 비교"
+  - name: "청크 사이즈 조정"
+    count: 8
+    description: "청크 사이즈 커스텀 기능 추가, 최대 +1024글자 확장 가능"
+  - name: "대시보드 고도화"
+    count: 8
+    description: "토큰수 차트, 월 호출수 표시, 콘솔 대시보드 API 작업"
+  - name: "API 채널 연동"
+    count: 10
+    description: "Storm API 연동 기능, API key 재발급, 외부 공개용 API docs"
+  - name: "플랜/구독 기능"
+    count: 6
+    description: "이용기간 연장, 트라이얼 관리, 과금 정책 논의"
+  - name: "라이브 장애 대응"
+    count: 8
+    description: "스톰 전체 장애, 모델 관련 이슈, 에이전트 설정 오류 대응"
+key_discussions:
+  - thread_ts: '1725960418.788909'
+    date: '2024-09-10'
+    reply_count: 56
+    text_preview: "스톰 채널연동 > API 연동 기능 - API 연동 및 인증 방식 설계"
+  - thread_ts: '1724646884.428259'
+    date: '2024-08-26'
+    reply_count: 41
+    text_preview: "에이전트 설정이 뭔가 꼬인 것 같습니다 - rag off 시 프롬프트 혼입 버그"
+  - thread_ts: '1727316948.725769'
+    date: '2024-09-26'
+    reply_count: 43
+    text_preview: "유진투자증권 pdf파일 학습실패 - 문서 파싱 이슈 대응"
+  - thread_ts: '1724211030.995149'
+    date: '2024-08-21'
+    reply_count: 35
+    text_preview: "에이전트 정보 호출 API, SSE연결 등 500에러 빈번 발생 - 서버 안정성"
+  - thread_ts: '1724134758.298269'
+    date: '2024-08-20'
+    reply_count: 33
+    text_preview: "파일론 테스트 결과 궁금쓰 - Pylon RAG 성능 검증"
+  - thread_ts: '1724748665.513309'
+    date: '2024-08-27'
+    reply_count: 31
+    text_preview: "토큰수 차트 관련 씽크 - 대시보드 토큰 사용량 차트 기획"
+  - thread_ts: '1726721333.536249'
+    date: '2024-09-19'
+    reply_count: 31
+    text_preview: "스톰 전체 장애인듯해요 - 라이브 서비스 장애 대응"
+terminology:
+  - term: "Carrier"
+    definition: "Sionic AI의 오더시트 기반 워크플로우 엔진. RAG 노드, LLM 노드 등을 조합하여 파이프라인 구성"
+    aliases: ["캐리어"]
+    context: "Q3부터 본격적으로 Stargate와 연동 개발 시작"
+  - term: "Order Sheet"
+    definition: "캐리어에서 사용하는 워크플로우 정의서. 노드 시퀀스와 파라미터를 정의"
+    aliases: ["오더시트"]
+    context: "Answer API 요청 시 캐리어가 실행하는 파이프라인 설정"
+  - term: "trust score"
+    definition: "답변의 신뢰도를 나타내는 점수. Pylon에서 계산하여 캐리어를 통해 전달"
+    aliases: ["신뢰도 점수"]
+    context: "대시보드 분석 지표 및 답변 품질 모니터링에 사용"
+  - term: "dhash"
+    definition: "문서의 고유 해시값. 파일명 + 버퍼를 조합하여 생성, 중복 파일 감지에 사용"
+    aliases: []
+    context: "문서 업로드 시 중복 처리 로직에서 사용"
+  - term: "NewRelic"
+    definition: "APM(Application Performance Monitoring) 도구. 서버 성능 모니터링에 사용"
+    aliases: ["뉴렐릭"]
+    context: "Stargate API 성능 모니터링 및 장애 트래킹"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

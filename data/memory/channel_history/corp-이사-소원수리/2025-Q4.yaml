@@ -1,0 +1,69 @@
+channel:
+  id: C09TZ587MC1
+  name: corp-이사-소원수리
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 56
+  total_threads: 27
+  active_users: 23
+  avg_messages_per_day: 6.2
+summary: |
+  2025-Q4에 신사옥 이전을 앞두고 직원들의 희망사항과 건의사항을 수집하기 위해 개설된 채널로, 11월 18일 채널 생성 이후 23명이 참여하여 활발한 의견을 제시했다. 새 사무실에 대한 요청사항으로는 화장실 사용중 표시 문고리, 수면실 남녀 구분, 집중 업무 공간, 폰부스, 1층 자유 출입 대기존, 소파, 습도 조절 설비, 탁구대, 주차 지원, 공기청정기, 탄산수 제조기 등 다양한 의견이 개진되었다. 회의실 구성(층별 개수, 이름 선정), 라운지 공간 가구 배치 등 실질적인 인테리어 논의도 이루어졌다.
+topics:
+  - name: "사무실 편의시설 요청"
+    mention_count: 15
+    description: "집중 업무 공간, 폰부스, 소파, 칫솔 살균기, 탄산수 제조기, 탁구대, 수영장(농담), 공기청정기 등 다양한 편의시설 요청"
+  - name: "환경 개선 요청"
+    mention_count: 8
+    description: "습도 조절(제습/가습), 공기질(이산화탄소) 측정기, 음식물 냄새 처리 공간, 화장실 온도 개선, CCTV 설치 요청"
+  - name: "회의실 구성"
+    mention_count: 5
+    description: "층별 회의실 개수 확정 요청, 회의실 이름을 회사 문화와 연관지어 선정하자는 제안"
+  - name: "출입 및 보안"
+    mention_count: 3
+    description: "1층 지문/카드 없이 출입 가능한 대기존 요청, CCTV 설치 요청"
+  - name: "라운지 인테리어"
+    mention_count: 4
+    description: "2층 라운지 공간에 데스커 스툴 배치 제안, 서서 일하는 공간에 공용 모니터 요청"
+key_discussions:
+  - thread_ts: '1763438566.626049'
+    date: '2025-11-18'
+    reply_count: 47
+    text_preview: "회의실이름 의미있는 회사문화와 연관지어주세요"
+  - thread_ts: '1763438567.000000'
+    date: '2025-11-18'
+    reply_count: 9
+    text_preview: "회사 사옥 미드타운처럼 의미있는 이름이 있었으면 좋겠어요"
+  - thread_ts: '1764165576.000000'
+    date: '2025-11-25'
+    reply_count: 16
+    text_preview: "제습, 가습이 잘 되면 좋을듯합니다"
+  - thread_ts: '1764252555.000000'
+    date: '2025-11-26'
+    reply_count: 31
+    text_preview: "혹시 회의실 구성 확정되었나요?(층별 갯수)"
+  - thread_ts: '1765164457.000000'
+    date: '2025-12-04'
+    reply_count: 11
+    text_preview: "탁구대 하나만 놔주실 수 있을지… 가볍게 랠리 주고받으면 머리가 좀 맑아지는 효능이 있그등요"
+terminology:
+  - term: "corp-이사-소원수리"
+    definition: "신사옥 이전 전 직원들의 희망사항과 건의사항을 수집하는 임시 채널. '이사'는 사무실 이전, '소원수리'는 희망사항 접수를 의미"
+    aliases: []
+    context: "2025년 4분기 사이오닉AI 신사옥 이전 관련 직원 의견 수렴"
+  - term: "미드타운"
+    definition: "이전 사이오닉AI 사무실(양재)의 별명. 새 사옥에도 의미 있는 이름을 붙이자는 제안의 비교 대상으로 언급됨"
+    aliases: []
+    context: "새 사옥 이름 선정 논의"
+  - term: "데스커"
+    definition: "사무용 가구 브랜드. 2층 라운지에 스툴 형태 제품 배치를 제안하며 언급됨"
+    aliases: []
+    context: "라운지 공간 인테리어 아이디어 공유"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

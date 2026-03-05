@@ -1,0 +1,109 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 350
+  total_threads: 263
+  active_users: 18
+  avg_messages_per_day: 5.2
+summary: |
+  2025-Q2에는 IBK 부하테스트와 QA존 구축이 핵심 과제였으며, 분산 추적(OpenTelemetry) 도입이 본격화되었다.
+  Zitadel(ID Provider) 셋업, 모니터링 채널 재편(status-→alarm-), Dragoon 문서 파서 테스트, Supply 개선 등 인프라와 제품 양면에서 대규모 작업이 진행되었다.
+  브랜치 네이밍 컨벤션, API Key 관리 체계화, Carrier 413 에러 해결 등 개발 프로세스 표준화도 이루어졌다.
+  주차별 열차(배포 사이클) 운영이 정착되어 체계적인 릴리스 관리가 진행되고 있다.
+topics:
+  - IBK 부하테스트
+  - QA존 구축 (dev/qa/live 분리)
+  - OpenTelemetry 분산 추적
+  - Zitadel (Identity Provider)
+  - 모니터링 채널 재편 (alarm-*)
+  - Dragoon 문서 파서
+  - Supply 개선
+  - Carrier 개선
+  - 브랜치 네이밍 컨벤션
+  - API Key 관리
+  - Stargate Rallypoint
+  - ApiDog 자동화
+key_discussions:
+  - thread_ts: '1751266286.344179'
+    date: '2025-06-30'
+    reply_count: 127
+    text_preview: '27주차 열차 - 주간 배포 사이클 관리 및 이슈 트래킹'
+  - thread_ts: '1750662074.077569'
+    date: '2025-06-23'
+    reply_count: 127
+    text_preview: '26주차 열차 - 주간 배포 사이클'
+  - thread_ts: '1749795269.997779'
+    date: '2025-06-13'
+    reply_count: 115
+    text_preview: 'Qdrant gRPC 메시지 크기 제한 - Supply 개선을 위한 messageSize 최적화'
+  - thread_ts: '1748848295.227679'
+    date: '2025-06-02'
+    reply_count: 83
+    text_preview: '23주차 열차 - IBK 반입 준비 및 주간 배포'
+  - thread_ts: '1750219339.589799'
+    date: '2025-06-18'
+    reply_count: 68
+    text_preview: '로드테스트 환경 Dragoon 배포 - 부하테스트 환경 구성'
+  - thread_ts: '1750058668.949129'
+    date: '2025-06-16'
+    reply_count: 55
+    text_preview: '25주차 열차 - 주간 배포 사이클 관리'
+  - thread_ts: '1748573822.300959'
+    date: '2025-05-30'
+    reply_count: 42
+    text_preview: 'Chat 부하테스트 중간 공유 - 성능 지표 확인'
+  - thread_ts: '1748516375.161319'
+    date: '2025-05-29'
+    reply_count: 42
+    text_preview: 'Stargate Rallypoint 테스트 - 문서 등록 오프로딩 서버'
+  - thread_ts: '1749460208.623919'
+    date: '2025-06-09'
+    reply_count: 40
+    text_preview: 'IBK 내부 부하테스트 준비 - 테스트 시나리오 및 환경 구성'
+  - thread_ts: '1748858616.029009'
+    date: '2025-06-02'
+    reply_count: 36
+    text_preview: '짭비케 문서등록 실패 이슈 - 온프렘 환경 안정성 개선'
+terminology:
+  - term: "Zitadel"
+    definition: "오픈소스 Identity Provider (SSO/인증 관리)"
+    aliases: []
+    context: "ArgoCD, NewRelic 등 내부 도구 SSO 로그인 통합"
+  - term: "OpenTelemetry"
+    definition: "분산 추적/메트릭/로그 표준 프레임워크"
+    aliases: ["OTEL"]
+    context: "Carrier, Dragoon 등에 tracing 적용, log/metric/tracing 일원화 계획"
+  - term: "Dragoon"
+    definition: "차세대 문서 파서 서비스 (Storm Parse 후속)"
+    aliases: ["드라군"]
+    context: "테스트셋 평가, tracing 연동, 표 인식 개선"
+  - term: "QA존"
+    definition: "품질 검증을 위한 별도 배포 환경"
+    aliases: ["qa zone"]
+    context: "dev/qa/live 3단계 환경 분리, 혜원님 테스트 영역"
+  - term: "Carrier"
+    definition: "Qdrant 프록시/검색 서비스"
+    aliases: ["커세어", "Corsair"]
+    context: "413 에러 해결, Supply 연동, distributed tracing 적용"
+  - term: "Supply"
+    definition: "단일 테넌트 검색엔진 서비스 (Scala/JVM)"
+    aliases: []
+    context: "Qdrant 메시지 크기 최적화, 메모리 128GB 요청"
+  - term: "Rallypoint"
+    definition: "Stargate의 문서 등록 오프로딩 서버"
+    aliases: ["stargate-rallypoint"]
+    context: "문서 업로드를 S3 경유로 변경하여 스게API 부하 감소"
+  - term: "열차"
+    definition: "주차별 배포 사이클 (배포 열차에 태울 티켓 관리)"
+    aliases: ["배포 열차"]
+    context: "매주 월요일 열차 출발, 주간 단위 릴리스 관리 체계"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

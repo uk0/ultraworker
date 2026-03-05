@@ -1,0 +1,44 @@
+channel:
+  id: C079AAU6265
+  name: deploy-asmr
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 591
+  total_threads: 32
+  active_users: 12
+  avg_messages_per_day: 15.6
+summary: |
+  2024년 3분기는 배포 활동이 가장 활발했던 시기로, 591개 메시지가 기록되었다. OpenLLM API의 dev/live 배포가
+  지속적으로 이루어졌으며, 배포 메시지 형식이 "open-llm-api Service" 접두사로 변경되었다.
+  9월에는 live 배포 실패가 빈번하게 발생하여 여러 차례 재시도가 필요했다. Sigrid Jin님이 핫픽스 배포를 수행하였고,
+  송명하님이 live 배포 전 디버깅을 위한 조율 과정도 있었다. staging 환경 배포도 시도되었으나
+  파이프라인 미존재(404) 에러가 발생하기도 하였다. 최병현님이 새로 채널에 합류하였다.
+  WRTN 건 관련 긴급 배포도 있었다.
+topics:
+  - OpenLLM 배포 자동화
+  - live 배포 실패 및 핫픽스
+  - staging 환경 구성 시도
+  - 배포 조율 프로세스
+key_discussions:
+  - thread_ts: '1727180068.008439'
+    date: '2024-09-24'
+    topic: live 배포 실패 후 대응 (14개 답글)
+  - thread_ts: '1726030542.015299'
+    date: '2024-09-11'
+    topic: live 배포 전 디버깅 조율 및 수동 배포 (11개 답글)
+  - thread_ts: '1727678150.009959'
+    date: '2024-09-30'
+    topic: 핫픽스 배포 완료 (11개 답글)
+terminology:
+  - term: staging
+    definition: 프로덕션 전 테스트 환경, 3분기에 처음 구성 시도됨
+  - term: 핫픽스
+    definition: 긴급 버그 수정 배포
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

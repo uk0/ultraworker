@@ -1,0 +1,40 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 19
+  total_threads: 14
+  active_users: 6
+  avg_messages_per_day: 1.7
+summary: |
+  활동량 감소한 분기. MoE 모델 프루닝 REAP 방법론 실전 테스트 결과 상세 공유(GLM-4.6 40% 프루닝 모델 HuggingFace 공개). Qdrant Cloud 1개월 사용 후기(RPM 500+, 안정적). Grok 4.1 모델 평가. 나노바나나 Pro 서비스 긍정 평가. 엘린 매출 증가 중단 원인 분석(가입 장애). 휴학 여부 고민 지속. PS갤 구사과 미타 방문 계획.
+topics:
+  - REAP MoE 프루닝 실전 테스트 (GLM-4.6)
+  - Qdrant Cloud 사용 후기
+  - Grok 4.1 평가
+  - 엘린 매출 이슈 (가입 장애)
+  - 나노바나나 Pro 서비스
+  - 디스코드 활동량 Top 3
+key_discussions:
+  - title: "REAP MoE 프루닝 실전 테스트"
+    summary: "H200 8장으로 GLM-4.6 모델 REAP 프루닝 실험. 캘리브레이션 데이터셋/파라미터 최적화로 31% 프루닝에도 arc_challenge 52.56->56.31 성능 향상. 40% 프루닝 모델 HuggingFace 공개. 내부 메타데이터 생성용으로 실용적"
+  - title: "Qdrant Cloud 1개월 사용 후기"
+    summary: "RPM 500+ 환경에서 레이턴시 안정적, 크래시 없음. 컬렉션 관리 문서 부족이 단점"
+terminology:
+  - term: "REAP"
+    definition: "Cerebras Research의 MoE expert 프루닝 방법론. 캘리브레이션 데이터 품질이 성능에 큰 영향"
+  - term: "Qdrant"
+    definition: "Rust 기반 벡터 데이터베이스. 클라우드 서비스도 제공"
+  - term: "나노바나나"
+    definition: "maywell 관련 AI 서비스. Pro 버전 출시"
+  - term: "구사과"
+    definition: "MIT CSAIL 소속 PS(Problem Solving) 분야 유명인. 디시인사이드 PS갤 활동"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,40 @@
+channel:
+  id: C069E8P8N8M
+  name: project-metisx-poc
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 10
+  total_threads: 7
+  active_users: 4
+  avg_messages_per_day: 1.2
+summary: |
+  2024-Q2에는 MetisX와의 공동 국가연구개발사업(R&D 과제) 신청 작업이 주요 활동이었다. song이 과제 계획서 작성을 주도하며
+  첨부서류 제출, 과제번호 변경(RS-2024-00442648), 연구개발 실적 정리 등을 조율했다. MetisX가 핵심 키워드로 '벡터 시멘틱 검색',
+  '벡터 데이터베이스', '검색 증강 생성'을 제시했고, '검색 증강 생성(RAG)'은 Sionic AI가 담당하는 것으로 확인되었다.
+  4월에는 MetisX 정기 미팅이 계속되었으며, Sigrid Jin이 준비사항을 메모하고 미팅을 진행했다.
+topics:
+  - 국가연구개발사업 과제 신청
+  - R&D 과제 계획서 작성
+  - MetisX 정기 미팅 지속
+  - RAG 역할 분담 확인
+key_discussions:
+  - title: "R&D 과제 계획서 작성 및 첨부서류 제출"
+    date: "2024-05-08~22"
+    participants: ["song", "정세민(Sem)", "Sigrid Jin", "박우명", "Noah(고석현)"]
+    summary: "MetisX와 공동 국가연구개발사업 신청. 과제번호 RS-2024-00442648. 최종 제출 목표 5/31. 첨부서류 기한 연장."
+  - title: "MetisX 정기 미팅"
+    date: "2024-04-18~26"
+    participants: ["Sigrid Jin", "박우명", "song"]
+    summary: "정기 미팅 지속. 줌 회의록 작성 및 준비사항 메모."
+terminology:
+  - term: "RS-2024-00442648"
+    definition: "MetisX-Sionic AI 공동 국가연구개발사업 과제 번호"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

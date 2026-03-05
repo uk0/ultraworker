@@ -1,0 +1,68 @@
+channel:
+  id: C09VBN4HE4T
+  name: sig-book
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 43
+  total_threads: 10
+  active_users: 16
+  avg_messages_per_day: 4.3
+summary: |
+  2025년 4분기 sig-book 채널은 Sionic AI 팀이 AI 활용 대중서 집필 프로젝트를 본격적으로 진행한 시기이다.
+  "에이전트 워크플로우 50" 컨셉의 책을 기획하고, AI를 활용한 자동 집필 파이프라인으로 17챕터 초안을 생성하였으며,
+  출판사(인사이트)와의 방향성 조율(개발자 전문서 vs AI 활용 대중서) 논의가 핵심 이슈였다.
+topics:
+  - name: "AI 대중서 집필 기획"
+    mention_count: 15
+    description: "에이전트 워크플로우 50가지를 담은 AI 활용 대중서 기획, 목차 작성 및 방향성 논의"
+  - name: "AI 자동 집필 파이프라인"
+    mention_count: 12
+    description: "Gemini 활용 자동 집필 파이프라인, 17챕터 초안 생성, 챕터당 690쪽 분량 이슈"
+  - name: "출판사와 방향성 조율"
+    mention_count: 8
+    description: "인사이트 출판사와 개발자 전문서 vs AI 활용 대중서 방향 조율, 비즈니스 임팩트 논의"
+  - name: "HUMAN 프레임워크"
+    mention_count: 3
+    description: "AI 활용 방법론으로 HUMAN 프레임워크 개념 제안"
+key_discussions:
+  - thread_ts: '1732674540.000000'
+    date: '2025-11-27'
+    reply_count: 5
+    text_preview: "책 방향: AI 활용 대중서(비개발자도 가능)여야 비즈니스 임팩트 있음, 개발 전문서는 드랍"
+  - thread_ts: '1732795080.000000'
+    date: '2025-11-28'
+    reply_count: 3
+    text_preview: "Gemini로 목차 엑셀 채우기 완료, '에이전트 워크플로우 50' 컨셉 확정"
+  - thread_ts: '1733006160.000000'
+    date: '2025-12-01'
+    reply_count: 15
+    text_preview: "자동 집필 파이프라인 실행 중, 챕터1이 690페이지, 전체 17챕터"
+  - thread_ts: '1733648880.000000'
+    date: '2025-12-08'
+    reply_count: 3
+    text_preview: "AI로 작성했는지 의심 못할 품질 달성"
+  - thread_ts: '1734945480.000000'
+    date: '2025-12-24'
+    reply_count: 21
+    text_preview: "원고 출판사에 보낼지 여부 최종 논의"
+terminology:
+  - term: "에이전트 워크플로우 50"
+    definition: "실제 비즈니스 문제를 해결하는 에이전트 워크플로우 50가지를 패턴·시나리오·플로우차트·코드로 담는 책 컨셉"
+    aliases: []
+    context: "2025년 Q4 sig-book 채널의 핵심 집필 프로젝트"
+  - term: "HUMAN 프레임워크"
+    definition: "AI 활용 방법론 프레임워크로 제안된 개념"
+    aliases: []
+    context: "AI 활용 대중서 집필 과정에서 제안된 방법론"
+  - term: "인사이트"
+    definition: "국내 기술 서적 전문 출판사, sig-book 프로젝트의 협력 출판사"
+    aliases: []
+    context: "개발자 전문서와 AI 활용 대중서 사이 방향성 조율 대상"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,84 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 433
+  total_threads: 125
+  active_users: 15
+  avg_messages_per_day: 5.2
+summary: |
+  2024-Q4에는 CES 2025 참가를 위한 영문 브로셔 제작과 홍보영상 제작이 핵심 마케팅 활동이었으며, QR코드 기반 제품 안내 체계도 구축했다.
+  신규 고객으로 킥더허들(AI 영양제 추천), ZWSOFT(중국 시장 CAD 기업), 퓨리오사AI/서울대 반도체 실증사업 등 다양한 산업군으로 영업이 확대되었다.
+  마크스폰 호출량 모니터링과 뤼튼 오픈게이트웨이 트래킹 등 기존 고객 운영 관리가 진행되었고, 아이엔지스토리 서비스 중단 경고 및 네이버클라우드 비용 정리 등 운영 효율화도 병행되었다.
+topics:
+  - CES 2025 참가 준비 (영문 브로셔, 홍보영상)
+  - QR코드 기반 제품 안내 체계 구축
+  - 킥더허들 AI 영양제 추천 서비스
+  - ZWSOFT 중국 시장 CAD 연동
+  - 퓨리오사AI/서울대 반도체 실증사업
+  - 베슬AI 협업 논의
+  - 네이버 검색 최적화 (SEO)
+  - 아이엔지스토리 최후통첩 및 서비스 중단 경고
+  - 네이버클라우드 비용 정리
+  - 뤼튼 오픈게이트웨이 트래킹
+  - 마크스폰 호출량 다운로드 모니터링
+  - AI 정부사업 대응
+key_discussions:
+  - thread_ts: '1734666364'
+    date: '2024-12-20'
+    reply_count: 23
+    text_preview: CES 2025 홍보영상 로고 배치 및 디자인 검토
+  - thread_ts: '1735277201'
+    date: '2024-12-27'
+    reply_count: 19
+    text_preview: QR코드 기반 제품 안내 페이지 구성 및 디자인 논의
+  - thread_ts: '1735014914'
+    date: '2024-12-24'
+    reply_count: 18
+    text_preview: 마크스폰 API 호출량 다운로드 현황 모니터링 및 과금 분석
+  - thread_ts: '1734599636'
+    date: '2024-12-19'
+    reply_count: 15
+    text_preview: 퓨리오사AI 서울대 반도체 실증사업 참여 - AI 기반 반도체 결함 분석
+  - thread_ts: '1734686277'
+    date: '2024-12-20'
+    reply_count: 9
+    text_preview: 베슬AI 협업 구조 논의 - MLOps 플랫폼 연동 가능성 검토
+  - thread_ts: '1734421648'
+    date: '2024-12-17'
+    reply_count: 9
+    text_preview: 네이버 검색 최적화 전략 - 사이오닉AI 검색 노출 개선 방안
+  - thread_ts: '1735013763'
+    date: '2024-12-24'
+    reply_count: 6
+    text_preview: 뤼튼 오픈게이트웨이 트래킹 시스템 연동 및 모니터링 구축
+  - thread_ts: '1733704449'
+    date: '2024-12-09'
+    reply_count: 2
+    text_preview: CES 2025 영문 브로셔 초안 디자인 검토
+terminology:
+  - term: 킥더허들
+    definition: AI 기반 영양제 추천 서비스를 개발하는 고객사
+    aliases: [KickTheHurdle]
+    context: Storm API를 활용한 개인 맞춤 영양제 추천 엔진 구축 논의
+  - term: ZWSOFT
+    definition: 중국 CAD 소프트웨어 기업으로 AI 문서 처리 연동을 검토한 잠재 고객
+    aliases: [중망소프트웨어]
+    context: 중국 시장 진출을 위한 CAD 도면 분석 AI 연동 가능성 논의
+  - term: 퓨리오사AI
+    definition: AI 반도체 스타트업으로 서울대와 반도체 실증사업에 참여
+    aliases: [FuriosaAI]
+    context: 사이오닉AI와 반도체 결함 분석 AI 실증사업 공동 참여
+  - term: 베슬AI
+    definition: MLOps 플랫폼 기업으로 사이오닉AI와 기술 협업 논의
+    aliases: [Vessl AI]
+    context: AI 모델 배포 및 운영 인프라 연동 협업 검토
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

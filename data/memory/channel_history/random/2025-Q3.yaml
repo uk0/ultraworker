@@ -1,0 +1,112 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 877
+  total_threads: 664
+  active_users: 32
+  avg_messages_per_day: 9.6
+summary: |
+  2025-Q3 random 채널은 여름 시즌 특유의 활발한 오프라인 활동이 두드러졌다.
+  최대 이벤트는 제주 플레이샵(워크샵, 8/22~8/27)으로, 해커톤, 타운홀, 스노클링, 한라산 등반 등 다양한 프로그램이 진행되었다.
+  AI 업계에서는 GPT-5 출시(8/7), GPT-5 Pro 등장, OpenAI 오픈웨이트 모델(gpt-oss-120b) 공개,
+  Claude Haiku 4.5 발표, Claude Sonnet 4.5 발표 등 대형 모델 릴리스가 집중되었다.
+  사이오닉AI 모델 명명 투표(storm-{단어}-{크기}-{modality} 형식 1안 채택, 예: storm-pepper-32B-vl)가 진행되었고,
+  storm-cookbook GitHub 레포 공개, GMT 산학협력 최종보고, Sionic AI 유럽 상표 등록, Open Gateway 미국 상표 등록 등
+  비즈니스 마일스톤이 달성되었다. 미타 빌딩 매각(518억) 소식, IBK 프로젝트 관련 논의,
+  Claude Code 도입 및 활용 논의, 팔란티어 Dev Tier 웨비나 참석, 진형의 입사 2주년 등도 공유되었다.
+  성우 훈련소 입소(3주), 호진 송별회, 달파(Dalfa) AI 경쟁사 분석, Cohere 투자 소식 등도 화제였다.
+topics:
+  - 제주 플레이샵 (워크샵, 해커톤, 타운홀)
+  - GPT-5 / GPT-5 Pro 출시
+  - OpenAI 오픈웨이트 모델 (gpt-oss-120b)
+  - 사이오닉 모델 명명 규칙 투표 (storm-pepper 등)
+  - storm-cookbook GitHub 공개
+  - Claude Code 도입 및 활용
+  - 미타 빌딩 매각 (518억)
+  - IBK 프로젝트 업무
+  - Sionic AI 유럽/미국 상표 등록
+  - GMT 산학협력 최종보고
+  - 팔란티어 Dev Tier 웨비나
+  - 성우 훈련소 입소
+  - 호진 송별회
+  - 진형 입사 2주년
+  - Claude Haiku 4.5 / Sonnet 4.5 발표
+  - Cohere 추가 투자 라운드
+  - 달파(Dalfa) AI 경쟁사 분석
+  - DSL(연세대) 산학협력 제안
+key_discussions:
+  - date: '2025-07-09'
+    text_preview: '카카오 슬랙 도입 소식 공유 및 사내 반응'
+  - date: '2025-07-14'
+    text_preview: 'xionic-vl 모델명 변경 논의 - 중국 모델 느낌 피드백으로 이름 브레인스토밍'
+  - date: '2025-07-15'
+    text_preview: '사이오닉 모델 이름 컨벤션 투표 - 1안(storm-단어-크기-modality) 7표로 채택'
+  - date: '2025-07-21'
+    text_preview: 'GMT 산학협력 최종보고 및 언론 기사 보도'
+  - date: '2025-07-21'
+    text_preview: 'Sionic AI 유럽 상표 출원공고(잠정 등록결정) 소식 공유'
+  - date: '2025-08-05'
+    text_preview: 'OpenAI 오픈웨이트 모델 gpt-oss-120b 공개 소식'
+  - date: '2025-08-06'
+    text_preview: 'storm-cookbook GitHub 레포 핀 프로젝트 추가 논의'
+  - date: '2025-08-07'
+    text_preview: 'GPT-5 출시 속보 공유 - GPT-5 Pro 동시 발표, Opus보다 5배 저렴'
+  - date: '2025-08-14'
+    text_preview: '진형 Claude Code 시연 - PyCon 등 외부 발표 준비'
+  - date: '2025-08-21'
+    text_preview: 'Open Gateway 미국 상표 최종 등록결정 소식'
+  - date: '2025-08-22'
+    text_preview: '제주 플레이샵 출발 - 선발대 공항 집결 및 이동'
+  - date: '2025-08-25'
+    text_preview: '제주 해커톤 진행 - 팀 배정, 스타게이트 API 활용 에이전트 개발'
+  - date: '2025-08-28'
+    text_preview: '성우 3주 훈련소 입소 안내'
+  - date: '2025-09-01'
+    text_preview: '진형 입사 2주년 기념'
+  - date: '2025-09-14'
+    text_preview: '채용보상금 정책 공유 - 진형 300만원, 호진 300만원'
+  - date: '2025-09-25'
+    text_preview: 'Cohere 추가 투자 라운드 소식 공유'
+  - date: '2025-09-29'
+    text_preview: 'Claude Sonnet 4.5 발표 소식 공유'
+terminology:
+  - term: '플레이샵'
+    definition: '사이오닉AI 워크샵의 공식 명칭 - 제주에서 진행된 전사 오프사이트'
+    aliases: ['워크샵', 'playshop']
+  - term: 'storm-pepper'
+    definition: '사이오닉AI VL(Vision-Language) 모델명 - storm-{단어}-{크기}-{modality} 컨벤션의 첫 모델'
+    aliases: ['스톰페퍼', 'storm-pepper-32B-vl']
+  - term: 'storm-cookbook'
+    definition: '사이오닉AI STORM 플랫폼 사용 예제/레시피 모음 GitHub 레포지토리'
+    aliases: ['쿡북']
+  - term: 'Open Gateway'
+    definition: '사이오닉AI의 미국 등록 상표'
+    aliases: ['오픈게이트웨이']
+  - term: 'GMT'
+    definition: '산학협력 프로젝트명 - 대학과의 공동 연구 프로젝트'
+    aliases: []
+  - term: 'Dev Tier'
+    definition: '팔란티어(Palantir)의 개발자용 플랫폼 티어'
+    aliases: ['데브티어']
+  - term: '스타게이트'
+    definition: 'Stargate - 사이오닉AI의 검색엔진/API 서비스'
+    aliases: ['Stargate', 'SG']
+  - term: '아비케'
+    definition: '사무실 근처 식당 - 구성원들이 자주 가는 점심 식사 장소'
+    aliases: []
+  - term: 'IBK'
+    definition: 'IBK기업은행 - 사이오닉AI의 주요 고객사/프로젝트 파트너'
+    aliases: ['기업은행']
+  - term: '달파'
+    definition: 'Dalfa AI - 시맨틱 검색 분야 경쟁사, 컬리 등 고객사 보유'
+    aliases: ['Dalfa']
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,50 @@
+channel:
+  id: C05801FL29F
+  name: corp-etc
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 3
+  active_users: 4
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 4분기 corp-etc 채널에서 사무실 운영 관련 잡무가 주를 이뤘다. 조하담이
+  운동기구 앞 핫데스크 의자 목받이를 부러뜨린 건에 대해 사과했고(11/27, 8개 답글),
+  김덕현이 퀵 서비스를 요청했다(12/11, 12개 답글). 이상호가 IBK 우편물(12/16)과
+  국세청 우편물(12/18)을 고석현 자리에 전달하며 김덕현에게 참고를 요청했다.
+  양호진이 LB인베스트먼트 서류를 마왕님(고석현) 자리에 전달했다(12/23).
+topics:
+  - 사무실 기물 파손 (의자)
+  - 퀵 서비스 요청
+  - 우편물 수령 (IBK, 국세청)
+  - LB인베스트먼트 서류 전달
+key_discussions:
+  - thread_ts: '1765442236.231739'
+    date: '2025-12-11'
+    reply_count: 12
+    text_preview: '김덕현 퀵 서비스 요청'
+  - thread_ts: '1764220535.142299'
+    date: '2025-11-27'
+    reply_count: 8
+    text_preview: '조하담 의자 목받이 파손 사과'
+  - thread_ts: '1765852037.446009'
+    date: '2025-12-16'
+    reply_count: 1
+    text_preview: 'IBK 우편물 전달 안내'
+terminology:
+  - term: "마왕님"
+    definition: "고석현(Noah)을 부르는 내부 별칭."
+    aliases: ["마왕"]
+    context: "양호진이 LB인베스트먼트 서류를 마왕님 자리에 전달"
+  - term: "LB인베스트먼트"
+    definition: "사이오닉 AI의 투자사 중 하나. 서류 전달 건으로 언급."
+    aliases: []
+    context: "12월에 서류가 도착하여 고석현에게 전달"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

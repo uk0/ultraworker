@@ -1,0 +1,60 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 29
+  total_threads: 20
+  active_users: 11
+  avg_messages_per_day: 1.7
+summary: |
+  2024년 3분기에 Organize의 Vision 모델 기반 변환 파이프라인이 집중적으로 테스트되었다. Gemini Flash, Claude Sonnet, Gemini Flash Pro 등 여러 모델을 비교 테스트한 결과, 비용 대비 성능 차이가 크지 않아 SaaS 모델은 Flash로 확정되었다.
+  세민님의 Streamlit 기반 Organize 데모가 제작되었고, 프롬프트 튜닝을 통한 표 인식 개선이 시도되었다. 워크샵을 통해 표를 자연어로 풀어내는 방향이 최종 결정되었으며, export 형식을 md에서 pdf로 변경하기로 했다. Qwen2 VL 72B 모델 배포 테스트도 진행되었고, unstructured.io의 이미지/테이블 추출 기능 활용 가능성도 검토되었다.
+topics:
+  - Gemini Flash vs Sonnet vs Flash Pro 성능/비용 비교
+  - 표 → 자연어 변환 프롬프트 테스트
+  - Organize 워크샵 (변환 방식 확정)
+  - Streamlit 데모 제작 및 테스트
+  - Qwen2 VL 72B 배포 테스트
+  - unstructured.io 이미지/테이블 추출 검토
+  - 파일 확장자 지원 범위 논의
+key_discussions:
+  - thread_ts: '1723543886.600659'
+    date: '2024-08-13'
+    reply_count: 149
+    text_preview: '세민님의 올거나이즈 - Streamlit 데모 테스트'
+  - thread_ts: '1725426359.737239'
+    date: '2024-09-04'
+    reply_count: 117
+    text_preview: 'FLASH로 변환한 파일 Answer 테스트 결과 - 표 밀림/청킹 이슈'
+  - thread_ts: '1725521588.007649'
+    date: '2024-09-05'
+    reply_count: 53
+    text_preview: '프롬프트 테스트 결과 - 표/이미지 변환 성능 평가'
+  - thread_ts: '1727074005.887829'
+    date: '2024-09-23'
+    reply_count: 29
+    text_preview: '오거나이즈 마지막 버전 테스트'
+  - thread_ts: '1727244808.537829'
+    date: '2024-09-25'
+    reply_count: 24
+    text_preview: 'Gemini Flash/Pro 신버전 공개 - 429 에러 없이 사용 가능'
+terminology:
+  - term: Gemini Flash
+    definition: 'Google의 경량 Vision LLM. 비용 효율적이나 표 인식에서 일부 한계 존재'
+    aliases: ['Flash', '플래시']
+  - term: Qwen2 VL
+    definition: 'Alibaba의 Vision Language Model. 72B 파라미터 버전이 공개됨'
+  - term: unstructured.io
+    definition: '문서에서 이미지, 테이블 등을 추출하는 오픈소스 라이브러리'
+    aliases: ['usio', 'USIO']
+  - term: Parsr
+    definition: 'PDF를 구조화된 텍스트로 변환하는 오픈소스 파서. Organize 파이프라인의 전처리 단계에서 사용'
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

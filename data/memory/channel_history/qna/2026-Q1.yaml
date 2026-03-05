@@ -1,0 +1,91 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:52'
+statistics:
+  total_messages: 85
+  total_threads: 80
+  active_users: 30
+  avg_messages_per_day: 2.0
+key_discussions:
+- thread_ts: '1767938350.606949'
+  date: '2026-01-09'
+  reply_count: 84
+  text_preview: DGX Spark 가 어디에 있는지 알고 싶습니다.
+- thread_ts: '1767843217.146209'
+  date: '2026-01-08'
+  reply_count: 80
+  text_preview: 노드 연결선들이 안 보이는데 일시적 오류일까요? cc. <!subteam^S08GZKUS7HR>
+- thread_ts: '1770702800.707639'
+  date: '2026-02-10'
+  reply_count: 37
+  text_preview: '저희 회사 홈페이지의 일본어가 폰트로 인해 일부 한자들 표기 방식이 매우 중국스럽다는 와타나베상의 의견이 있습니다.
+
+    혹시 지금 폰트 수정이 가능할까요?'
+- thread_ts: '1770366102.759939'
+  date: '2026-02-06'
+  reply_count: 36
+  text_preview: '유저로부터 받은 질문) <@U05T2RW7PE2> (또는 적절히 답하실 수 있는분이면 환영합니다.)
+
+    • [가입시 메일 인증] 인증을 하지 않아도 로그인 및 사용이 가능했다고 합니다'
+- thread_ts: '1770101109.181969'
+  date: '2026-02-03'
+  reply_count: 36
+  text_preview: 사업팀 사이오닉 계정을 하나 생성하고 싶은데 어느 분께 부탁드릴 수 있을까요?
+- thread_ts: '1768215189.996839'
+  date: '2026-01-12'
+  reply_count: 34
+  text_preview: '<@U057MCDJHDY> vertex ai bucket 생성 권한을 받을 수 있을까요?
+
+
+    gemini 학습할 때 bucket 이 필요한 것 같습니다.'
+- thread_ts: '1769404862.277249'
+  date: '2026-01-26'
+  reply_count: 30
+  text_preview: 일본 고객을 슬랙에 초대했는데 유료 플랜으로 업그레이드하라고 메세지가 뜨는 것 같습니다. 요고 초대방식이 따로 있을까요?
+- thread_ts: '1770791949.039079'
+  date: '2026-02-11'
+  reply_count: 29
+  text_preview: 혹시 병따개 위치를 알 수 있을까요??
+- thread_ts: '1769501390.763089'
+  date: '2026-01-27'
+  reply_count: 27
+  text_preview: <@U08GLL0SK2S> 우량고객 강성우님. 현재 잔액 $98이나 $99로 찍히고 계신가요
+- thread_ts: '1770618636.140489'
+  date: '2026-02-09'
+  reply_count: 26
+  text_preview: '사업팀 영업관리 에이전트의 워크플로우를 설계중입니다. 근데 gmail api 연동에 어려움을 겪고있습니다.
+
+    어느분께 문의드리면 도움을 받을 수 있을까요?? 스레드에 로그 기록 남깁'
+- thread_ts: '1770361235.413089'
+  date: '2026-02-06'
+  reply_count: 25
+  text_preview: '"임직원 수" 최신 정보 확인 경로'
+- thread_ts: '1770168477.880389'
+  date: '2026-02-04'
+  reply_count: 24
+  text_preview: 쿠버네티스 내 서비스간 모니터링을 할 수 있는 솔루션?
+- thread_ts: '1768782725.601329'
+  date: '2026-01-19'
+  reply_count: 17
+  text_preview: '#4 법인카드로 결제하신 분을 찾습니다...
+
+    • 12월 5일(금) WAVE 751,182원
+
+    엔화결제인 걸로 알고 있는데 혹시 어디에 사용됐는지 아시는 분 계실까요...?'
+- thread_ts: '1770356451.458349'
+  date: '2026-02-06'
+  reply_count: 16
+  text_preview: service repo PR 정책이 따로 있나요? <!subteam^S06VCLT4X6J>
+- thread_ts: '1767590307.846519'
+  date: '2026-01-05'
+  reply_count: 15
+  text_preview: <@U07LV0VA9AM> 마지막으로... <@U0A5FK3E7JT> 님 엥 위클리 초대 부탁드립니다!
+metadata:
+  created_at: '2026-02-13T16:27:52'
+  synced_by: sync_fast.py

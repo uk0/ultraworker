@@ -1,0 +1,119 @@
+channel:
+  id: C058VN1LUKE
+  name: standup
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1580
+  total_threads: 634
+  active_users: 26
+  avg_messages_per_day: 20.3
+summary: |
+  2024년 3분기는 팀 확장, 핵심 고객사 PoC 진행, 제품 고도화가 동시에 이루어진 분기였다.
+  채용 측면에서 ML Backend Engineer, ML/DevOps 포지션 채용 공고를 공개하고 적극적인 리크루팅을 진행했다.
+  강천성(ML 엔지니어), 김수원(Pylon 초기 개발자) 등이 파트타임으로 합류하고, 인턴 taeeunk1208이 3개월 근무 후 퇴사했다.
+  사업 개발에서는 뤼튼과 OpenGateway/LLM 공급 계약을 체결하고, KT와 국외 LLM/AI 프로젝트 협업을 논의했으며,
+  IBK(기업은행) 온프레미스 PoC를 위한 솔루션 반입 및 세팅을 시작했다. 한국은행과도 미팅을 진행했다.
+  기술적으로는 llama-3.1-xionic-ko-70b 한국어 모델을 공개하고, Storm RAG 성능 부스팅을 위한
+  커스텀 검색 엔진(Pylon 연동)을 배포했다. Qwen2 VL 7B 모델 서빙 테스트, Pylon PDF 파서 개선,
+  QSPM 로드테스트, 서버 GPU 모니터링 대시보드 구축 등의 작업이 수행되었다.
+  카카오 NDA 체결(비전+시멘틱 문서 파서), 부산 DX 포럼 발표(우명님), 일본 법인 설립 논의 등이 진행되었다.
+  Sigrid Jin은 미국 출장에서 Databricks/RunPod/AI Engineer 행사 참석 후 귀국하여
+  Pylon PDF 파싱 최적화, IBK 문서 파싱 이슈 해결, allganize RAG 평가 등에 주력했다.
+topics:
+  - 채용 적극 진행 (ML Backend, ML/DevOps, LinkedIn 광고)
+  - 뤼튼 OpenGateway LLM 공급 계약 체결
+  - KT 비즈니스팀 미팅 (국외 동남아 LLM/AI 프로젝트)
+  - IBK(기업은행) 온프레미스 PoC 솔루션 반입 및 세팅
+  - 한국은행 미팅
+  - llama-3.1-xionic-ko-70b 한국어 모델 공개
+  - Storm RAG 커스텀 검색 엔진 배포 (하이브리드 서치)
+  - Qwen2 VL 7B 비전 모델 서빙 테스트
+  - Pylon PDF 파서 개선 (split 용량별 concurrency, 에러 처리)
+  - QSPM 로드테스트 및 Redis/임베딩/리랭커 최적화
+  - 서버 GPU 사용량 모니터링 대시보드 구축
+  - 카카오 NDA 체결 (비전+시멘틱 문서 파서)
+  - 일본 법인 설립 논의 및 투자사 조율
+  - 부산 DX 포럼 발표
+  - RAG 벤치마크 데이터 생성
+  - GEN AI 해커톤 MVP 구현 (Chrome extension)
+key_discussions:
+  - date: '2024-07-08'
+    summary: ML/DevOps 채용 LinkedIn 광고 시작, ML Backend Engineer 포지션 오픈
+    participants:
+      - 김덕현 (Dekay)
+  - date: '2024-07-15'
+    summary: 뤼튼과 OpenGateway LLM 공급 계약 협의 완료, ML 엔지니어 강천성/김수원 파트타임 합류
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-07-16'
+    summary: KT 비즈니스팀 미팅 - 국외 동남아 LLM/AI 프로젝트 수주, RAG/반려동물앱 등 협업 논의
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-07-24'
+    summary: llama-3.1-xionic-ko-70b 한국어 개선 모델 공개, Storm RAG 커스텀 검색엔진 배포
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-08-12'
+    summary: 카카오 NDA 체결 (비전+시멘틱 문서 파서), IBK 온프레미스 PoC 요건 검토
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-08-20'
+    summary: Qwen2 VL 7B 비전 모델 서빙 배포, GPU 모니터링 스크립트 구축
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-08-27'
+    summary: 인턴 taeeunk1208 퇴사 (3개월 근무)
+    participants:
+      - taeeunk1208
+  - date: '2024-08-29'
+    summary: Qwen2 VL 7B Organize 기능 Storm 빌트인 가능성 확인
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-09-06'
+    summary: 재무/dev/ops 파트 각 1명 신규 입사 예정, Cursor AI 활용 탐색
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-09-23'
+    summary: IBK 솔루션 반입 및 체크 완료, 개발센터 세팅 및 PoC 시작
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-09-30'
+    summary: 뤼튼 Open LLM 빠른 도입 재촉, IBK/한국은행 SM 인력 소싱 진행
+    participants:
+      - Noah ( 고석현 )
+terminology:
+  - term: "QSPM"
+    definition: "사이오닉 AI 내부 서비스의 성능 측정/로드 테스트 대상 시스템"
+    aliases: []
+  - term: "Pylon"
+    definition: "사이오닉 AI의 문서 파싱/처리 파이프라인 시스템"
+    aliases: []
+  - term: "OpenGateway"
+    definition: "고객사가 원하는 LLM을 자유롭게 선택하여 사용할 수 있는 사이오닉 신규 서비스"
+    aliases: []
+  - term: "Open LLM"
+    definition: "사이오닉 AI의 오픈소스 LLM 모델 서비스 (뤼튼에 공급)"
+    aliases: []
+  - term: "Organize"
+    definition: "Storm 플랫폼의 문서 구조화/정리 기능"
+    aliases: []
+  - term: "SM"
+    definition: "System Management - 고객사 솔루션 운영 및 유지보수 인력"
+    aliases: ["System Management"]
+  - term: "IBK"
+    definition: "기업은행 - 온프레미스 PoC 핵심 고객사"
+    aliases: ["기업은행"]
+  - term: "supply"
+    definition: "Storm의 RAG 성능 부스팅을 위한 커스텀 검색 엔진 (외장 검색기)"
+    aliases: ["커스텀 검색 엔진"]
+  - term: "미타"
+    definition: "사이오닉 AI의 메인 사무실"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

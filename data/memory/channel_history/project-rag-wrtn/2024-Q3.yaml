@@ -1,0 +1,69 @@
+channel:
+  id: C07CLR2TCRZ
+  name: project-rag-wrtn
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 59
+  total_threads: 32
+  active_users: 14
+  avg_messages_per_day: 2.6
+summary: |
+  2024-Q3에 project-rag-wrtn 채널이 개설되어 뤼튼(Wrtn) 프로젝트가 본격 착수되었다. 뤼튼은 RAG 기반 문서 검색 서비스를 Sionic AI
+  인프라 위에 구축하는 B2B 프로젝트였다. 핵심 개발 내용으로는 QSPM(Queue-based Session Pool Manager) 설계 및 구현, Pylon+Qdrant
+  기반 세션 관리, Stargate 뤼튼 전용 API 개발이 있었다. Sigrid Jin과 송명하가 테크 스펙을 작성하고, jinu가 Stargate API를 개발,
+  Cheonseong Kang이 QSPM을 구현했다. 부하 테스트, SSL/pytz 최적화, dev/live 환경 배포가 진행되었다. 뤼튼 측 라이브 배포 일정이
+  8월 초로 예상되었으나 지연되었다. 약 3000 DAU가 예상되었고, 동접 약 1만 세션 수용 가능한 것으로 확인되었다. S3 버킷
+  분리(storm-answer-wrtn), 문서 학습 후 원본 삭제 기능, cronjob 기반 세션 정리 로직 등이 구현되었다.
+topics:
+  - 뤼튼 RAG 프로젝트 착수
+  - QSPM 설계 및 구현
+  - Pylon+Qdrant 세션 관리
+  - Stargate 뤼튼 전용 API
+  - 부하 테스트 및 최적화
+  - dev/live 환경 배포
+  - S3 버킷 분리
+  - 세션 정리 cronjob
+key_discussions:
+  - title: "뤼튼 RAG 테크 스펙 작성"
+    date: "2024-07-18"
+    participants: ["Sigrid Jin", "송명하"]
+    summary: "뤼튼 서비스를 위한 RAG 테크 스펙 및 Linear 티켓 생성. 세션 풀 관리 아키텍처 설계."
+  - title: "QSPM 아키텍처 및 시나리오 테스트"
+    date: "2024-07-21~08-12"
+    participants: ["송명하", "jinu", "Cheonseong Kang", "Sigrid Jin", "김덕현(Dekay)"]
+    summary: "QSPM 아키텍처 Figma 설계, Sequence diagram 작성, Guest Session 등록-문서학습-RAG-삭제 시나리오 테스트 완료."
+  - title: "Qdrant 인메모리 부하 테스트"
+    date: "2024-07-17"
+    participants: ["Sigrid Jin", "송명하"]
+    summary: "1 instance 300 collections, 50 clients 하드리밋 확인. 동접 약 1만 세션 수용 가능. 1024차원 벡터 2개 기준."
+  - title: "뤼튼 라이브 배포 및 지연"
+    date: "2024-08-19~27"
+    participants: ["김혜원", "Sigrid Jin", "김덕현(Dekay)", "송명하"]
+    summary: "뤼튼 라이브 배포 지연. OpenLLM pod 사망 이슈. dev 환경 클린업 반복. 라이브 롤아웃 시작."
+terminology:
+  - term: "QSPM"
+    definition: "Queue-based Session Pool Manager, 뤼튼 RAG 세션을 관리하는 큐 기반 풀 매니저"
+    aliases: ["세션 풀 매니저"]
+  - term: "Pylon"
+    definition: "Sionic AI의 RAG 엔진/파이프라인 서비스"
+    aliases: ["파일론"]
+  - term: "Qdrant"
+    definition: "인메모리 벡터 데이터베이스"
+    aliases: []
+  - term: "뤼튼"
+    definition: "Wrtn Technologies, AI 서비스 기업. Sionic AI의 B2B RAG 고객사"
+    aliases: ["Wrtn", "WRTN"]
+  - term: "storm-answer-wrtn"
+    definition: "뤼튼 전용 S3 버킷명"
+    aliases: []
+  - term: "OpenLLM"
+    definition: "Sionic AI의 오픈소스 LLM 서빙 서비스"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

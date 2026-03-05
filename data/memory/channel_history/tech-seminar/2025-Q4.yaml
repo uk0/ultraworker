@@ -1,0 +1,61 @@
+channel:
+  id: C08G54E9K8Q
+  name: tech-seminar
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 19
+  active_users: 10
+  avg_messages_per_day: 1.4
+summary: |
+  2025년 4분기 tech-seminar 채널은 주간 기술 세미나를 통해 팀의 기술 역량 강화와 지식 공유가 활발하게 이루어졌다. 모델 파인튜닝, Graph RAG, Spring AI, 프론트엔드 작업 공유 등 다양한 주제가 발표되었으며, 신규 입사자들의 자기소개도 이 채널을 통해 이루어졌다. Apidog CI/CD 관련 기술 공유도 진행되었으며, 10명의 팀원이 참여하여 분기별 기술 세미나 문화를 정착시켰다.
+topics:
+  - name: "모델 파인튜닝"
+    mention_count: 5
+    description: "LLM/임베딩 모델 파인튜닝 기법 및 실무 적용 사례 발표"
+  - name: "Graph RAG"
+    mention_count: 4
+    description: "그래프 기반 RAG(Retrieval-Augmented Generation) 아키텍처 소개"
+  - name: "Spring AI"
+    mention_count: 3
+    description: "Spring 프레임워크 기반 AI 통합 개발 방법론 공유"
+  - name: "신규 멤버 소개"
+    mention_count: 4
+    description: "Q4 신규 입사자 자기소개 및 담당 업무 소개"
+  - name: "Apidog CI/CD"
+    mention_count: 3
+    description: "Apidog 기반 API 테스트 자동화 및 CI/CD 통합 방법 공유"
+key_discussions:
+  - thread_ts: '1727913600.000000'
+    date: '2025-10-03'
+    reply_count: 3
+    text_preview: "Graph RAG 아키텍처 소개 세미나: 노드/엣지 기반 지식 그래프 활용 RAG"
+  - thread_ts: '1730592000.000000'
+    date: '2025-11-03'
+    reply_count: 2
+    text_preview: "모델 파인튜닝 실전 가이드: DPO/RLHF 기법 비교 발표"
+  - thread_ts: '1733270400.000000'
+    date: '2025-12-04'
+    reply_count: 4
+    text_preview: "Spring AI 프레임워크 활용 사례 및 Java 생태계 AI 통합 발표"
+terminology:
+  - term: "Graph RAG"
+    definition: "지식 그래프(Knowledge Graph)를 활용한 RAG 시스템. 노드-엣지 관계를 통해 컨텍스트 검색 강화"
+    aliases: ["GraphRAG", "그래프 RAG"]
+    context: "Q4 tech-seminar 주요 발표 주제"
+  - term: "Spring AI"
+    definition: "Spring 프레임워크 기반의 AI 통합 개발 라이브러리"
+    aliases: ["spring-ai"]
+    context: "Java/Spring 생태계에서 AI 모델 연동을 위한 도구"
+  - term: "파인튜닝"
+    definition: "사전 학습된 모델을 특정 도메인이나 태스크에 맞게 추가 학습하는 기법"
+    aliases: ["fine-tuning", "SFT", "DFT"]
+    context: "Q4 세미나에서 실무 활용 사례 중심으로 발표"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

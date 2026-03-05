@@ -1,0 +1,58 @@
+channel:
+  id: C09TQRVQ6Q4
+  name: corp-marketing-linkedin
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 17
+  total_threads: 7
+  active_users: 7
+  avg_messages_per_day: 2.4
+summary: |
+  2025-Q4에 신규 개설된 LinkedIn 공식 계정 콘텐츠 논의 채널이다. 더벨 선정 밸류업 수상(기업가치 4배 달성), 250억 투자 유치 성공 등 주요 IR 소식을 LinkedIn 포스트로 발행하는 작업이 이루어졌다.
+  OCI 핸즈온 행사, Anthropic OpenAI 행사 관련 홍보 소스 수집, 언론보도 기자 리스트·보도자료 가이드 공유 등 마케팅 실무 협업이 활발하게 진행되었다.
+topics:
+  - name: "LinkedIn 포스트 발행"
+    mention_count: 6
+    description: "더벨 밸류업 수상, 투자유치 성공 등 주요 성과를 LinkedIn 공식 계정에 게시"
+  - name: "IR 및 언론 홍보"
+    mention_count: 5
+    description: "250억 투자유치, 기업가치 4배 달성, 언론보도 기자 리스트 관리 및 보도자료 가이드"
+  - name: "행사 홍보 콘텐츠"
+    mention_count: 3
+    description: "OCI 핸즈온 행사, Anthropic/OpenAI 행사 관련 LinkedIn 포스트 소스 수집"
+key_discussions:
+  - thread_ts: '1763207000.000000'
+    date: '2025-11-18'
+    reply_count: 2
+    text_preview: "LinkedIn 측으로부터 받은 메시지 내용 공유"
+  - thread_ts: '1763300000.000000'
+    date: '2025-11-19'
+    reply_count: 3
+    text_preview: "언론보도 기자 리스트 및 보도자료 작성 가이드 공유"
+  - thread_ts: '1764300000.000000'
+    date: '2025-11-27'
+    reply_count: 2
+    text_preview: "OCI 핸즈온 행사 관련 LinkedIn 포스트 작성"
+  - thread_ts: '1764750000.000000'
+    date: '2025-12-04'
+    reply_count: 1
+    text_preview: "더벨 밸류업 수상 LinkedIn 포스트 발행"
+  - thread_ts: '1764760000.000000'
+    date: '2025-12-04'
+    reply_count: 1
+    text_preview: "250억 투자유치 성공 LinkedIn 포스트 발행"
+  - thread_ts: '1764800000.000000'
+    date: '2025-12-04'
+    reply_count: 5
+    text_preview: "두 개 포스트를 같은 날 동시에 내보낼지 여부 논의"
+terminology:
+  - term: "더벨 밸류업"
+    definition: "더벨 선정 기업가치 향상(밸류업) 우수기업, Sionic AI가 1년 만에 기업가치 4배 달성으로 수상"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

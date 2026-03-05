@@ -1,0 +1,65 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 21
+  total_threads: 13
+  active_users: 7
+  avg_messages_per_day: 1.2
+summary: |
+  2025년 2분기 deploy-gpu 채널에서는 VESSL GPU 서버 사용 조율과 RunPod H100 임시 사용이 주요 활동이었다.
+  4월에 Gemma 3 멀티모달 파이프라인 디버깅 및 학습을 위해 베슬1(8장), 베슬2(4장) GPU를 주말에 집중 사용하였으며, 좀비 프로세스 문제 및 멀티노드 설정 논의가 이루어졌다.
+  5월에는 IBK 관련 H100 RunPod 임시 사용이 있었으며, 6월에는 베슬2 Docker 재설정, vLLM 부하 테스트를 위한 H100 사용, Qwen 임베딩/리랭커 GPU 사용량 확인 등이 진행되었다. Docker 데몬 설정 변경 후 재시작 이슈도 발생하였다.
+topics:
+  - name: "Gemma 3 멀티모달 학습"
+    mention_count: 3
+    description: "Gemma 3 멀티모달 파이프라인 디버깅 및 모델 학습을 위한 베슬 GPU 집중 사용"
+  - name: "RunPod H100 임시 사용"
+    mention_count: 4
+    description: "IBK 환경 테스트 및 vLLM 부하 테스트를 위한 RunPod H100 단기 임대"
+  - name: "멀티노드 학습 설정"
+    mention_count: 2
+    description: "베슬 서버 간 멀티노드 분산 학습을 위한 master addr/port 설정 논의"
+  - name: "베슬 Docker 재설정"
+    mention_count: 3
+    description: "베슬1, 베슬2 Docker 설정 변경 및 재시작 작업, 데몬 꺼짐 이슈 해결"
+  - name: "Qwen 임베딩/리랭커"
+    mention_count: 2
+    description: "qwenembedding, qwenreranker 서비스의 GPU 사용량 확인 및 임시 제거"
+key_discussions:
+  - thread_ts: '1744987200.000000'
+    date: '2025-04-18'
+    reply_count: 34
+    text_preview: "주말 베슬1(8장)+베슬2(4장) Gemma 3 멀티모달 파이프라인 디버깅 및 학습 예고"
+  - thread_ts: '1746601800.000000'
+    date: '2025-05-07'
+    reply_count: 17
+    text_preview: "베슬 서버에서 멀티노드 학습 가능 여부 및 설정 방법 논의"
+  - thread_ts: '1750046400.000000'
+    date: '2025-06-16'
+    reply_count: 7
+    text_preview: "베슬2 Docker 컨테이너 정리 및 재설정 진행"
+  - thread_ts: '1750404000.000000'
+    date: '2025-06-20'
+    reply_count: 14
+    text_preview: "베슬2 Docker 재설정 이후 데몬 꺼짐 이슈 발생 및 해결"
+terminology:
+  - term: "베슬 (VESSL AI)"
+    definition: "사이오닉이 사용하는 AI 인프라 플랫폼. A100 GPU x8 서버 2대 운영"
+  - term: "RunPod"
+    definition: "GPU 클라우드 서비스. 온프렘 자원 부족 시 H100 등을 시간 단위로 임대"
+  - term: "vLLM"
+    definition: "대규모 언어 모델의 고성능 추론을 위한 오픈소스 라이브러리"
+  - term: "Gemma 3"
+    definition: "Google의 멀티모달 언어 모델. 사이오닉에서 파이프라인 구축 및 학습에 활용"
+  - term: "IBK"
+    definition: "IBK기업은행, 사이오닉의 주요 고객사로 동일 환경에서 테스트 필요"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

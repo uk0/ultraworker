@@ -1,0 +1,61 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 56
+  total_threads: 38
+  active_users: 13
+  avg_messages_per_day: 1.9
+summary: |
+  2024년 4분기는 OCI 본격 도입과 인프라 현대화가 핵심 주제였다. OCI Terraform 작업이 시작되어 AWS 형상과 동일한 인프라 구성을 목표로 진행되었고, 오라클과의 계약 및 Provisioning 논의가 지속되었다. IdP 솔루션 검토(Ory Kratos, Casdoor, Kanidm)와 distributed message queue 구현 고민 등 플랫폼 기술 스택 선정 논의가 활발했다. 뉴렐릭 PoC 라이센스 확보, istio 버전 업데이트(1.19.7->1.20.8), Docker 이미지 무결성 보장 방안(IBK 대응), EKS 업그레이드 티켓 생성 등 운영 안정화 작업이 진행되었다. 알리바바 GPU 종료, RunPod 데이터센터 이전, 사내 네트워크망 가이드 작성, AWS 메가존 Managed SP 계약 등 인프라 비용 및 운영 효율화 노력이 계속되었다. worker100 장애 대응, parsr CPU 리소스 증설(2->48코어) 등 서비스 안정성 관련 이슈도 다수 발생했다.
+topics:
+  - OCI Terraform 기반 인프라 구축
+  - IdP 솔루션 검토 (Ory Kratos, Casdoor, Keycloak)
+  - 뉴렐릭 모니터링 도입
+  - istio 업그레이드
+  - Docker 이미지 무결성 (IBK 보안)
+  - 인프라 비용 최적화 (AWS SP, 알리바바 종료)
+  - 장비 장애 대응
+key_discussions:
+  - thread_ts: '1735293529.281789'
+    date: '2024-12-27'
+    title: IdP 솔루션 비교 (Ory Kratos vs Casdoor)
+    participants: [이강욱]
+    summary: IdP 후보 비교 검토 및 Kanidm(Rust 기반) 탐색, 23개 답글
+  - thread_ts: '1734003993.655049'
+    date: '2024-12-12'
+    title: 지티플러스(오라클) 인프라 지원 논의
+    participants: [김덕현(Dekay)]
+    summary: OCI MSP 지원 상황 공유, IaC 접근에 대한 MSP 이해도 부족 이슈
+  - thread_ts: '1733477169.003009'
+    date: '2024-12-06'
+    title: 뉴렐릭 서버 로그 추적 이슈
+    participants: [최병현(Hyune-c)]
+    summary: live-storm-parse-api 서버 로그가 뉴렐릭에서 보이지 않는 이슈, 32개 답글
+  - thread_ts: '1732188343.746659'
+    date: '2024-11-21'
+    title: parsr CPU 리소스 증설 (2->48코어)
+    participants: [정세민(Sem)]
+    summary: 동시 200장 문서 처리를 위한 CPU 증설 요청, 56개 답글
+terminology:
+  - term: Casdoor
+    definition: 오픈소스 Identity Provider 솔루션
+    context: IdP 후보로 검토되었으나 사용성 문제로 이후 Keycloak으로 회귀
+  - term: Kanidm
+    definition: Rust 기반 Identity Management 솔루션
+    context: IdP 후보로 탐색
+  - term: parsr
+    definition: 문서 파싱 서비스
+    context: CPU 리소스 증설로 동시 처리 성능 개선
+  - term: templar-archives
+    definition: 사내 프로젝트명
+    context: develop 환경 배포 준비
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

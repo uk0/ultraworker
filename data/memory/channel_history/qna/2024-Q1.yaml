@@ -1,0 +1,68 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 38
+  total_threads: 12
+  active_users: 23
+  avg_messages_per_day: 2.4
+summary: |
+  2024년 1분기에 qna 채널이 신설되어 운영이 시작되었다. 주로 사내 행정/총무 관련 질문이 다수를 차지했으며,
+  연말정산 관련 중소기업 소득세 감면 문의, 재직증명서 발급, 노션 페이지 잠금 방법, 패스트파이브 초대링크 등
+  실무적인 질문이 이루어졌다. AI 프로필 서비스 데모용 셀카 수집, 네이버클라우드 PoC 진행 방법, 클라우드 인증 관련
+  문의 등 사업 관련 질문도 있었다. 채널 초기답게 참여자 유입(채널 참여) 메시지가 전체의 절반 이상을 차지했다.
+topics:
+  - 연말정산 및 세금감면
+  - 사내 행정(재직증명서, 패스트파이브)
+  - AI 프로필 서비스
+  - 네이버클라우드 PoC
+  - 노션 사용법
+  - AWS IAM 계정 요청
+  - 슬랙 채널 용도 구분
+key_discussions:
+  - thread_ts: '1706157300.829479'
+    date: '2024-01-25'
+    reply_count: 18
+    text_preview: 중소기업 취업자 소득세 감면 해당 여부 질문 및 답변
+  - thread_ts: '1705630607.175989'
+    date: '2024-01-19'
+    reply_count: 12
+    text_preview: 잠재고객사 네이버클라우드 크레딧으로 PoC 진행 방법 문의
+  - thread_ts: '1706601792.498959'
+    date: '2024-01-30'
+    reply_count: 7
+    text_preview: AI 프로필 서비스 데모용 셀카 수집 요청
+  - thread_ts: '1707978174.144069'
+    date: '2024-02-15'
+    reply_count: 6
+    text_preview: (삭제된 메시지 관련 스레드)
+  - thread_ts: '1705649379.907109'
+    date: '2024-01-19'
+    reply_count: 5
+    text_preview: 노션 페이지 타인 편집 잠금 방법 문의
+  - thread_ts: '1710469023.612889'
+    date: '2024-03-15'
+    reply_count: 4
+    text_preview: 재직증명서 발급 방법 문의
+terminology:
+  - term: 패스트파이브
+    definition: 사이오닉이 입주해 있던 공유 오피스
+    aliases: []
+    context: 초대링크, 시설 관련 질문에서 언급
+  - term: PoC
+    definition: Proof of Concept, 개념 증명 단계의 고객 테스트
+    aliases: []
+    context: 잠재고객사 대상 제품 시연/테스트 맥락에서 사용
+  - term: KACI
+    definition: 클라우드 서비스 확인 인증 기관
+    aliases: []
+    context: SaaS 관련 외부 시험/인증 맥락에서 언급
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

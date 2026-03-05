@@ -1,0 +1,80 @@
+channel:
+  id: C057PUSB1S8
+  name: fyi-geeknews
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 805
+  total_threads: 131
+  active_users: 8
+  avg_messages_per_day: 8.8
+summary: |
+  2024년 4분기에는 AI 모델 발전이 급격히 가속화되었다. OpenAI의 "12 Days of OpenAI" 행사, O3 모델의
+  ARC-AGI 벤치마크 고득점(추론비용 30억원 이상), GPT-5 Orion 개발 지연 소식 등이 주요 화제였다.
+  Gemini COT(Chain of Thought) 모드 공개, ModernBERT, QvQ 등 다양한 AI 모델이 출시되었다.
+  개발 도구 측면에서는 Ghostty 1.0(터미널 에뮬레이터), Fish 4.0, MCP(Model Context Protocol) 서버 등이 주목받았다.
+  팀원들의 기술 공유가 매우 활발했는데, 특히 최병현님의 JPA/QueryDSL 보안 이슈, 백오피스 아키텍처 분석,
+  이강욱님의 SSH reverse proxy(sshpiper), CLI 유틸리티(pueue), 포트스캔 무력화 도구 공유,
+  정세민님의 O3 추론 비용 분석, gradio-webRTC 소개 등이 돋보였다.
+  NeurIPS 2024에서 AI PhD 시장 변화에 대한 조경현 교수 글 공유도 화제가 되었다.
+topics:
+  - AI 모델 경쟁 심화 (OpenAI O3, Gemini COT, ModernBERT, QvQ)
+  - AI 연구/산업 동향 (NeurIPS 2024, PhD 시장 변화)
+  - MCP(Model Context Protocol) 등장
+  - 개발 도구 (Ghostty 1.0, Fish 4.0, sshpiper, pueue)
+  - 백엔드 기술 (JPA 보안 이슈, Qdrant, 백오피스 아키텍처)
+  - 데이터베이스 (SQLite, Redis, Bloom 필터)
+  - 보안 도구 (portspoof, SSH reverse proxy)
+  - 2025년 기술 전망
+key_discussions:
+  - thread_ts: '1734670436.740169'
+    date: '2024-12-20'
+    topic: '백오피스 끝판왕 아키텍처'
+    summary: '최병현님의 백오피스 아키텍처 심층 분석. 샤딩, publisher 서버 분리 등 실무 인사이트 (12개 답글)'
+  - thread_ts: '1734735088.747849'
+    date: '2024-12-20'
+    topic: 'OpenAI O3와 ARC-AGI 벤치마크'
+    summary: '정세민님의 O3 추론 비용 분석 (1회 추론 100만원+, 상금 10억 vs 추론비 30억)'
+  - thread_ts: '1735615020.345599'
+    date: '2024-12-31'
+    topic: 'Kent Hendricks의 2024년 교훈 52가지'
+    summary: '연말 회고성 글에 대한 활발한 토론 (8개 답글)'
+  - thread_ts: '1734940489.967869'
+    date: '2024-12-23'
+    topic: 'NeurIPS 2024에서 감지된 AI 인재시장 변화'
+    summary: '조경현 교수의 AI PhD 시장 변화 분석에 대한 깊은 논의'
+  - thread_ts: '1735619767.969429'
+    date: '2024-12-31'
+    topic: 'SSH reverse proxy (sshpiper)'
+    summary: '이강욱님의 SSH 리버스 프록시 도구 소개와 audit 활용 방안 논의 (5개 답글)'
+  - thread_ts: '1734681465.139529'
+    date: '2024-12-20'
+    topic: '프로그래밍 언어 벤치마크에서 Scala Native 3등'
+    summary: '언어별 성능 비교와 Scala Native GC에 대한 기술 토론'
+  - thread_ts: '1734966421.189969'
+    date: '2024-12-23'
+    topic: 'Gradio WebRTC 지원'
+    summary: '정세민님의 gradio-webRTC 소개와 스트리밍 데모 활용 논의 (3개 답글)'
+terminology:
+  - term: "O3"
+    definition: "OpenAI의 추론 모델. ARC-AGI 벤치마크에서 높은 점수를 달성했으나 1회 추론 비용이 100만원 이상"
+    aliases: ["o3"]
+  - term: "MCP"
+    definition: "Model Context Protocol. AI 모델과 외부 도구/데이터 소스를 연결하는 프로토콜"
+    aliases: ["Model Context Protocol"]
+  - term: "Ghostty"
+    definition: "고속, 크로스플랫폼 터미널 에뮬레이터. 2024년 12월 1.0 출시"
+    aliases: []
+  - term: "ModernBERT"
+    definition: "기존 BERT를 대체할 수 있는 새로운 언어 모델"
+    aliases: []
+  - term: "sshpiper"
+    definition: "SSH reverse proxy 도구. 하나의 호스트에서 여러 머신으로 SSH 연결을 라우팅하며 세션 녹화(audit) 가능"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

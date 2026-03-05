@@ -1,0 +1,82 @@
+channel:
+  id: C05TNDBU38X
+  name: product-storm-analyze
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 5
+  total_threads: 5
+  active_users: 4
+  avg_messages_per_day: 0.1
+summary: >
+  2024년 2분기는 고객 대응과 외부 시연이 주요 활동이었다. 김혜원이 고오급 카테고라이징 테스트를 형찬에게
+  요청했고, 진형이 뉴스타파 사례를 참고하여 Google Document AI를 테스트했다. 한시형이 STROM 이슈를
+  공유했으며, 카테고리 분류 데이터 제작이 최윤정에게 요청되었다. 가장 큰 이벤트는 고객사 시연으로,
+  analyze 아웃풋 변경 버전으로 최종 시연시나리오 및 제안서가 제출 완료되었고 박우명, 최윤정이 시연에
+  참석했다.
+topics:
+  - name: "고객사 시연 및 제안서"
+    count: 2
+    summary: "analyze 아웃풋 변경 버전으로 고객사 시연 진행. 최종 시연시나리오 및 제안서 제출 완료. 박우명, 최윤정 참석."
+  - name: "카테고리 분류 데이터 제작"
+    count: 1
+    summary: "김혜원이 카테고리 분류 데이터 포맷을 공유하고 한시형, 최윤정에게 데이터 제작 요청. 101개 답글의 대규모 협업."
+  - name: "Google Document AI 테스트"
+    count: 1
+    summary: "진형이 뉴스타파 사례 참고하여 Google Document AI 테스트."
+  - name: "STROM 이슈 공유"
+    count: 1
+    summary: "한시형이 STROM 관련 이슈를 공유."
+key_discussions:
+  - thread_ts: '1715912777.121249'
+    date: '2024-05-17'
+    title: "고오급 카테고라이징 테스트 요청"
+    summary: "김혜원이 형찬에게 고오급 카테고라이징 테스트 요청. 16개 답글의 논의."
+    participants: ["U05T2RW7PE2", "U061V8PBS9M"]
+    decisions: []
+    action_items: ["고오급 카테고라이징 테스트 진행"]
+    keywords: ["카테고라이징", "테스트"]
+    relevance_score: 0.7
+  - thread_ts: '1717401906.247769'
+    date: '2024-06-03'
+    title: "Google Document AI 테스트"
+    summary: "진형이 뉴스타파가 사용하는 Google Document AI를 테스트. 9개 답글의 논의."
+    participants: ["U05QCA7JTD5"]
+    decisions: []
+    action_items: []
+    keywords: ["Document AI", "Google", "뉴스타파"]
+    relevance_score: 0.6
+  - thread_ts: '1717494755.081799'
+    date: '2024-06-04'
+    title: "카테고리 분류 데이터 제작 요청"
+    summary: "김혜원이 한시형, 최윤정에게 카테고리 분류 데이터 제작 요청. 특정 포맷으로 데이터 제작. 101개 답글의 대규모 협업 스레드."
+    participants: ["U05T2RW7PE2", "U057K0HC9KQ", "U067AL7NWHE"]
+    decisions: ["카테고리 데이터 포맷 확정"]
+    action_items: ["카테고리 분류 데이터 제작"]
+    keywords: ["카테고리", "데이터", "분류"]
+    relevance_score: 0.8
+  - thread_ts: '1717752661.218639'
+    date: '2024-06-07'
+    title: "고객사 최종 시연 및 제안서 제출"
+    summary: "한시형이 급박한 요청에도 빠르게 대응하여 최종 시연시나리오 및 제안서 제출 완료. analyze 아웃풋 변경 버전으로 월요일 오후 시연 예정. 박우명, 최윤정 참석."
+    participants: ["U057K0HC9KQ", "U058A971Z8R", "U067AL7NWHE"]
+    decisions: ["시연시나리오 확정", "제안서 제출 완료"]
+    action_items: ["월요일 오후 3-6시 시연 진행"]
+    keywords: ["시연", "제안서", "고객사", "Analyze"]
+    relevance_score: 0.9
+terminology:
+  - term: "Google Document AI"
+    definition: "Google Cloud의 문서 인식/변환 서비스."
+    aliases: ["Document AI"]
+    context: "뉴스타파 사례 참고하여 진형이 테스트."
+  - term: "고오급 카테고라이징"
+    definition: "임베딩 기반 고급 카테고리 분류 기능. Qdrant 벡터 검색 활용."
+    aliases: []
+    context: "기본 카테고리 분류보다 높은 정확도 목표."
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual

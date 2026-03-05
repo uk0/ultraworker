@@ -1,0 +1,40 @@
+channel:
+  id: C087Z7CKB0U
+  name: alarm-dev-error-infra
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 6742
+  total_threads: 6741
+  active_users: 2
+  avg_messages_per_day: 74.1
+summary: |
+  개발 환경 인프라 에러 알림이 급증한 분기. 메시지 수 6742건으로 Q2 대비 약 4배 증가, 일평균 74.1건.
+  참여자가 2명으로 감소하여 사실상 자동화 알림 전용 채널로 운영됨.
+  주요 알림 대상: dev-drone(최다, CI/CD 빌드 관련), dev-langgraph/dev-langgraph-agents(LangGraph 서비스), storm-apis-parse-router, carrier.
+  "Pod has restarted"(70%), "Pod is in a Pending state"(19%), "Pod status check is required"(11%) 유형.
+  dev-drone의 반복적 재시작이 전체 알림 급증의 주요 원인. LangGraph 관련 신규 서비스 배포에 따른 불안정성도 관찰됨.
+topics:
+  - dev-drone CI/CD Pod 대량 재시작
+  - LangGraph 에이전트 서비스 배포 불안정
+  - storm-apis-parse-router 오류
+  - Pod status check 신규 알림 유형 등장
+  - 알림 볼륨 급증 (Q2 대비 4배)
+key_discussions: []
+terminology:
+  - term: "dev-drone"
+    definition: "Drone CI/CD 파이프라인의 개발 환경 인스턴스"
+    context: "Q3에서 가장 빈번한 재시작 알림 발생, 전체 알림 급증의 주원인"
+  - term: "dev-langgraph"
+    definition: "LangGraph 기반 에이전트 서비스의 개발 환경 배포"
+    context: "Q3에 신규 배포되어 안정화 과정에서 재시작 발생"
+  - term: "storm-apis-parse-router"
+    definition: "STORM 문서 파싱 API의 라우터 컴포넌트"
+    context: "간헐적 Pending/재시작 상태 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

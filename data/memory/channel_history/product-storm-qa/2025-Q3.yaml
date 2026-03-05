@@ -1,0 +1,54 @@
+channel:
+  id: C07DU5YBH50
+  name: product-storm-qa
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 225
+  total_threads: 192
+  active_users: 12
+  avg_messages_per_day: 5.0
+summary: |
+  2025-Q3 product-storm-qa 채널에서는 PDF 하이라이팅 정확도 지속 개선, 캐리어 골든청크 식별 로직, 엑셀 스톰파스 처리 기능, LLM 청크 식별 QA 등이 주요하게 진행되었다. 드라군(Dragoon) 파서 개선 버전과 기존 파서의 변환 결과를 데브/라이브 환경에서 비교하는 작업이 이루어졌다. 12명의 팀원이 참여하여 주차별 릴리즈 QA 체계를 유지하였다.
+topics:
+  - name: "PDF 하이라이팅 정확도 개선"
+    mention_count: 40
+    description: "출처 PDF 청크 하이라이팅의 페이지 매핑 정확도 지속 개선 및 엣지 케이스 발굴"
+  - name: "LLM 청크 식별 로직"
+    mention_count: 30
+    description: "캐리어 골든청크 식별 로직 API 테스트 - 병렬처리, 오더시트 v0 호환성 검증"
+  - name: "드라군 파서 개선"
+    mention_count: 20
+    description: "드라군 파서 신버전 변환 결과를 기존 버전과 데브/라이브 환경에서 비교 검증"
+  - name: "엑셀 스톰파스"
+    mention_count: 15
+    description: "엑셀 파일의 스톰파스 처리 기능 추가 및 병합 셀 처리 품질 테스트"
+key_discussions:
+  - thread_ts: '1751439006.000000'
+    date: '2025-07-02'
+    reply_count: 26
+    text_preview: "PDF 하이라이팅 페이지 랜딩은 되지만 하이라이팅 미동작 이슈 보고"
+  - thread_ts: '1751808457.000000'
+    date: '2025-07-07'
+    reply_count: 18
+    text_preview: "LLM 청크 식별 QA 리스트 - 판단 정확도, 0건 응답, 병렬처리 등 9개 항목 검증"
+  - thread_ts: '1752019485.000000'
+    date: '2025-07-08'
+    reply_count: 58
+    text_preview: "엑셀 스톰파스 학습 실패 이슈 - 병합된 셀의 중복 텍스트 반복 문제 발굴"
+terminology:
+  - term: "드라군 (Dragoon)"
+    definition: "STORM의 문서 파서 버전 중 하나. 개선 버전의 변환 품질을 기존과 비교하는 QA 수행"
+  - term: "골든청크"
+    definition: "LLM이 실제 응답 생성에 활용한 핵심 청크를 식별하는 로직. 출처 표시 정확도 향상에 활용"
+  - term: "캐리어 (Corsair)"
+    definition: "STORM의 최신 문서 파서. 드라군 이후 도입된 파서로 다양한 파일 형식 처리 지원"
+  - term: "스톰파스 엑셀"
+    definition: "STORM의 스톰파스가 엑셀(.xlsx) 파일을 파싱하는 기능. 병합 셀 처리가 주요 과제"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

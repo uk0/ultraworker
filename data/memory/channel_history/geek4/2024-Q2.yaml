@@ -1,0 +1,56 @@
+channel:
+  id: C06EEMDQEKV
+  name: geek4
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 28
+  total_threads: 19
+  active_users: 3
+  avg_messages_per_day: 2.0
+summary: |
+  2024-Q2 geek4 채널에서는 긱사 이전이 핵심 이슈였다. 기존 동원스위트에서 HR빌딩 501호로 새로운 긱사를 이전하였으며,
+  계약/입주/퇴실 정산 과정이 진행되었다. 새 긱사에 침대 3개를 설치하고, '해커하우스' 형태로 활용하는 방안이 논의되었다.
+  런드리고(Laundrygo) 세탁 서비스를 도입하여 생활 편의성을 개선하였다. 참여자가 3명으로 줄었으나 이전 관련 실무적
+  소통이 집중적으로 이루어졌다.
+topics:
+  - 신규 긱사 이전 (HR빌딩 501호)
+  - 계약/입주/퇴실 정산
+  - 침대 3개 설치
+  - 해커하우스 활용 논의
+  - 런드리고 세탁 서비스 도입
+key_discussions:
+  - thread_ts: '1712500000.000000'
+    date: '2024-04-08'
+    reply_count: 8
+    text_preview: 신규 긱사 이전 계획 - HR빌딩 501호로 이전 및 계약 조건 논의
+  - thread_ts: '1714500000.000000'
+    date: '2024-05-01'
+    reply_count: 5
+    text_preview: 침대 설치 및 해커하우스 구상 - 침대 3개 배치와 해커하우스 형태 활용 방안
+  - thread_ts: '1716500000.000000'
+    date: '2024-05-24'
+    reply_count: 4
+    text_preview: 런드리고 서비스 도입 - 세탁 서비스 구독 및 사용 후기
+terminology:
+  - term: HR빌딩
+    definition: 두 번째 긱사가 위치한 건물 (501호)
+    aliases: []
+    context: 2024-Q2부터 새 긱사 위치로 동원스위트에서 이전
+  - term: 해커하우스
+    definition: 개발자들이 함께 거주하며 업무와 생활을 병행하는 공유 주거 형태
+    aliases:
+      - Hacker House
+    context: 새 긱사를 해커하우스 형태로 운영하는 방안 논의
+  - term: 런드리고
+    definition: Laundrygo. 모바일 기반 세탁 서비스. 긱사 생활 편의를 위해 도입
+    aliases:
+      - Laundrygo
+    context: 2024-Q2부터 긱사에서 구독 서비스로 이용
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

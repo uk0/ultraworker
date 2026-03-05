@@ -1,0 +1,39 @@
+channel:
+  id: C097BHPQ5UG
+  name: corp-office-ops
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 43
+  total_threads: 2
+  active_users: 22
+  avg_messages_per_day: 4.3
+summary: |
+  2025-Q3 corp-office-ops 채널은 사무 운영 요청 채널로 이 분기에 신규 개설되었다. 채널명이 it-request에서 operation, office-ops를 거쳐 corp-office-ops로 확정되었으며, 하드웨어, 소프트웨어, IT 지원 관련 요청 접수를 위한 Slack 워크플로우 봇이 도입되었다.
+  22명의 구성원이 참여하였으며, 주로 Slack 양식을 통한 운영 요청 접수 및 처리가 이루어졌다.
+topics:
+  - name: "채널 신규 개설 및 운영 체계 수립"
+    mention_count: 10
+    description: "IT 요청 채널 신규 개설, 채널명 변경(it-request→corp-office-ops), 운영 정책 설정"
+  - name: "IT 장비 및 소프트웨어 요청"
+    mention_count: 15
+    description: "하드웨어, 소프트웨어 관련 운영 요청 접수 및 처리 (Slack 워크플로우 봇 활용)"
+key_discussions:
+  - thread_ts: '1755300000.000000'
+    date: '2025-09-08'
+    reply_count: 10
+    text_preview: "IT 장비 및 운영 요청 처리"
+  - thread_ts: '1755350000.000000'
+    date: '2025-09-08'
+    reply_count: 10
+    text_preview: "운영 요청 Slack 워크플로우 봇을 통한 접수 및 처리"
+terminology:
+  - term: "corp-office-ops"
+    definition: "전반적인 운영 관련 요청사항(시설 고장, 소모품 부족, 청소 요청, 개인 장비 결함 등)을 처리하는 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

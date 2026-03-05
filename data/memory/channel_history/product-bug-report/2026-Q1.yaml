@@ -1,0 +1,141 @@
+channel:
+  id: C08PNQ7QNR2
+  name: product-bug-report
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-26T13:33:33'
+statistics:
+  total_messages: 77
+  total_threads: 76
+  active_users: 30
+  avg_messages_per_day: 1.6
+summary: |
+  2026-Q1 product-bug-report channel recorded 77 bug reports with 1,315 replies across 76 threads,
+  involving 30 active participants. The dominant bug categories were workflow designer UI issues
+  (node editing, canvas zoom, connection drawing, save button activation), API node defects
+  (header persistence, JSON editor save failures), search/retrieval failures, revision/version
+  management problems, and token usage dashboard display bugs. Notable high-impact incidents
+  included a 222-reply thread on search functionality being completely broken (Jan 26), a 59-reply
+  thread on token usage dashboard not displaying (Feb 9), and a 53-reply thread on Japan team
+  partner invitation links not working (Jan 21). Bug reporters were primarily from product/QA
+  (Kim Hyewon, Kim Bugyo/Bekay, Park Sangwook) with contributions from Japan team (Kataoka,
+  Watanabe Masashi) and field engineers (s.baek, Won Sungjun). The quarter saw recurring themes
+  around workflow designer stability after a major refactoring, and several regressions introduced
+  by the checklist feature development.
+topics:
+  - name: "Workflow Designer UI Bugs"
+    message_count: 28
+    description: "Node editing panel issues, canvas zoom broken, connection drawing failures, save button not activating, tooltip position bugs, scroll logic problems, START/END node deletion without re-add capability"
+  - name: "API Node Defects"
+    message_count: 8
+    description: "Header values not persisting after save, JSON editor save failures, API get function errors on AWS Lambda endpoints"
+  - name: "Search & Retrieval Failures"
+    message_count: 5
+    description: "Search completely broken (major incident with 222 replies), folder-scoped search returning wrong folder results, source document/chunk tabs not clickable"
+  - name: "Revision & Version Management"
+    message_count: 5
+    description: "Revision rollback not working (stayed on current workflow), auto-generated duplicate versions when using workflow designer, JSON code direct edit not reflecting in saved versions"
+  - name: "Token & Dashboard Display"
+    message_count: 4
+    description: "Token usage dashboard frozen showing no data, used token count not displayed, console dashboard metrics missing"
+  - name: "Authentication & Access"
+    message_count: 4
+    description: "User registration button not activating, invitation links not working for Japan partner accounts, sample account agent links inaccessible"
+  - name: "LLM Node Issues"
+    message_count: 4
+    description: "Prompt line breaks lost after save, function call properties not showing in form after refactoring, ASMR overloaded error misreported as RAG log, LLM field size too small"
+  - name: "Test Panel Bugs"
+    message_count: 4
+    description: "Send button not activating in test panel, test showing no response while logs show success, unconnected nodes included in test execution, file upload logic errors"
+  - name: "Variable & Custom Variable Issues"
+    message_count: 3
+    description: "Custom variable creation panel expanding vertically, variable editor cursor movement bugs, checklist not detecting non-existent variables"
+  - name: "Internationalization & Localization"
+    message_count: 2
+    description: "Missing multilingual translations, document viewer label still saying PDF-only when other formats now supported"
+key_discussions:
+  - date: '2026-01-26'
+    title: "Search functionality completely broken"
+    participants: ["Kim Hyewon", "Backend team"]
+    reply_count: 222
+    summary: "Major incident where search stopped working entirely. Extensive debugging thread involving backend team investigation. Highest engagement bug report of the quarter."
+  - date: '2026-02-09'
+    title: "Token usage dashboard not displaying"
+    participants: ["Kim Hyewon", "Frontend team", "Backend team"]
+    reply_count: 59
+    summary: "Token usage metrics disappeared from the console dashboard. Required cross-team investigation between frontend and backend."
+  - date: '2026-01-21'
+    title: "Japan team partner invitation links broken"
+    participants: ["s.baek", "Engineering team"]
+    reply_count: 53
+    summary: "Agents created under Japan team POC account (team.jp@sionic.ai) could not be accessed via invitation links by customers, though internal access worked."
+  - date: '2026-01-20'
+    title: "Log page pagination missing - capped at 40 entries"
+    participants: ["Kim Bugyo (Bekay)", "Frontend team"]
+    reply_count: 42
+    summary: "Log page showing maximum 40 entries per day regardless of actual count. Requested pagination implementation to show all logs."
+  - date: '2026-02-25'
+    title: "Seoul National University feedback feature bug"
+    participants: ["Won Sungjun", "Engineering team"]
+    reply_count: 39
+    summary: "Bug reported from Seoul National University deployment affecting the feedback feature."
+  - date: '2026-02-09'
+    title: "API node bugs - multiple reports"
+    participants: ["Kim Suwon", "Kim Sujin", "Frontend team"]
+    reply_count: 67
+    summary: "Multiple simultaneous reports of API node issues: header values not persisting after save, and general API node malfunction. Two separate threads with 36 and 31 replies."
+  - date: '2026-02-20'
+    title: "Workflow nodes cannot be connected (Japan)"
+    participants: ["Watanabe Masashi", "Engineering team"]
+    reply_count: 36
+    summary: "Japanese user reported inability to connect nodes in workflow designer after adding new LLM nodes to an existing workflow."
+  - date: '2026-02-10'
+    title: "Unconnected nodes included in test execution"
+    participants: ["Park Sangwook", "Engineering team"]
+    reply_count: 36
+    summary: "Nodes not connected in the workflow graph were still being executed during tests, causing unexpected behavior."
+  - date: '2026-01-28'
+    title: "Revision rollback and test panel broken (live)"
+    participants: ["Kim Hyewon", "Frontend team", "Backend team"]
+    reply_count: 34
+    summary: "Multiple issues on live environment: revision rollback to v1 showed modification message but kept current workflow, and test panel in workflow page also broken. Suspected impact from checklist feature development."
+  - date: '2026-01-27'
+    title: "Workflow canvas zoom and variable panel overflow"
+    participants: ["Kim Hyewon", "Kim Bugyo (Bekay)", "Frontend team"]
+    reply_count: 47
+    summary: "Canvas zoom-out stopped working in workflow designer. Separately, custom variable creation panel grew unbounded vertically."
+terminology:
+  - term: "Workflow Designer"
+    definition: "Visual node-based editor for building AI agent workflows in STORM platform"
+    aliases: ["WF designer", "canvas"]
+    context: "Primary source of bug reports this quarter; underwent major refactoring causing regressions"
+  - term: "STORM"
+    definition: "Sionic AI's main product platform (sionicstorm.ai)"
+    aliases: ["Storm Platform"]
+    context: "All bug reports relate to this platform's features"
+  - term: "Checklist"
+    definition: "New feature for workflow validation checks before deployment"
+    aliases: []
+    context: "Development of this feature caused several regressions in live environment during late January"
+  - term: "Revision"
+    definition: "Version management system for workflow configurations"
+    aliases: ["version", "리비전"]
+    context: "Multiple bugs with auto-generated duplicate versions and rollback failures"
+  - term: "Order Sheet"
+    definition: "Internal data structure holding node configuration/properties"
+    aliases: ["오더시트"]
+    context: "Sometimes order sheet has correct data but UI form does not display it properly"
+  - term: "ASMR"
+    definition: "Internal service name for an AI response/retrieval system"
+    aliases: []
+    context: "Mentioned in context of carrier returning 'No response result' when actually Anthropic returned overloaded error"
+  - term: "JP Region"
+    definition: "Japan deployment region of STORM platform"
+    aliases: ["일본 리전"]
+    context: "Separate deployment with its own bugs, particularly around partner account access and node connection issues"
+metadata:
+  created_at: '2026-02-26T13:33:33'
+  synced_by: sync-channel-history

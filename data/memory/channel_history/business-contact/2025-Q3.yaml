@@ -1,0 +1,64 @@
+channel:
+  id: C05QCGG1E5V
+  name: business-contact
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 33
+  total_threads: 22
+  active_users: 2
+  avg_messages_per_day: 1.4
+summary: |
+  2025-Q3 business-contact 채널은 봇을 통한 인바운드 문의가 지속적으로 유입된 분기로, 한국과 일본 양쪽에서 다양한 협업·파트너십 요청이 접수되었다.
+  일본 시장 관련 문의로는 일본 경제 신문사 주최 생성 AI 서밋 스타트업 피치 참가 권유, 전시회 출전 제안(ブティックス), 인도 시장 파트너십 제안(PRK Technologies) 등이 있었다.
+  국내에서는 백패커의 STORM Platform PDF 학습 실패 이슈, 노무법인의 문서 검색 에이전트 RAG 문제, Microsoft 파트너 제안, 서울대 RAG 구축 문의, 이데일리 언론 취재 요청 등이 주요 문의였다.
+topics:
+  - name: "일본 시장 이벤트·파트너십"
+    mention_count: 8
+    description: "일경 생성 AI 서밋 스타트업 피치, ブティックス 전시회 출전 권유 등 일본 관련 이니셔티브"
+  - name: "STORM Platform 사용 문의"
+    mention_count: 9
+    description: "PDF 학습 실패, RAG 구축, 가격 플랜, Microsoft Azure 연계 등 플랫폼 실사용 관련 문의"
+  - name: "글로벌 파트너십 제안"
+    mention_count: 4
+    description: "인도 시장 진출 파트너(PRK Technologies), Microsoft 총판 파트너(클루커스) 등 파트너십 제안"
+  - name: "언론 및 홍보 문의"
+    mention_count: 2
+    description: "이데일리 취재 요청 및 언론 담당자 컨택포인트 문의"
+key_discussions:
+  - thread_ts: '1751695800.000000'
+    date: '2025-07-07'
+    reply_count: 5
+    text_preview: "클루커스 Microsoft 총판 파트너 - Azure 기반 STORM Platform 패키징 협업 제안"
+  - thread_ts: '1754574480.000000'
+    date: '2025-08-07'
+    reply_count: 10
+    text_preview: "백패커 - STORM Platform PDF 22.2MB, 342페이지 학습 실패 이슈 문의"
+  - thread_ts: '1754586480.000000'
+    date: '2025-08-08'
+    reply_count: 15
+    text_preview: "백패커 - Team/Professional 플랜 가격 문의"
+  - thread_ts: '1754629680.000000'
+    date: '2025-08-08'
+    reply_count: 43
+    text_preview: "노무법인 창공 - STORM Parse 변환은 성공하나 RAG 기반 문서 답변이 안 되는 이슈 문의"
+  - thread_ts: '1754697600.000000'
+    date: '2025-08-09'
+    reply_count: 3
+    text_preview: "서울대 - RAG 구축 관심, 상세 자료 요청"
+terminology:
+  - term: "생성 AI 서밋(GenAI/SUM)"
+    definition: "일본 경제 신문사 주최 생성 AI 콘퍼런스, 스타트업 피치 참가 요청이 접수됨"
+  - term: "RAG"
+    definition: "Retrieval Augmented Generation, 문서 검색 기반 LLM 답변 생성 방식"
+  - term: "STORM Parse"
+    definition: "사이오닉에이아이의 문서 파싱 AI 서비스, 변환된 문서를 RAG 지식으로 활용 가능"
+  - term: "클루커스"
+    definition: "Microsoft Azure 총판 파트너사, STORM Platform과의 Azure 패키징 협업 제안"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

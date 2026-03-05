@@ -1,0 +1,71 @@
+channel:
+  id: C08CAM2830E
+  name: research-random
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 109
+  total_threads: 48
+  active_users: 19
+  avg_messages_per_day: 2.9
+summary: |
+  2025-Q1에 research-random 채널이 신설되어 AI/ML 연구 관련 자유로운 정보 공유 공간으로 시작되었다.
+  임베딩 모델의 지속 학습(Continual Learning), GRPO를 활용한 한국어 모델 학습, Cross-Encoder의 Semantic BM25 재발견, FlashMLA 커널 최적화, Claude 3.7 Sonnet 출시 등 다양한 연구 토픽이 활발히 논의되었다.
+  2월 초 채널 개설 후 빠르게 19명이 참여하였으며, RTX 5090 확보, 한국어 임베딩 평가, GRPO 실험 결과 공유 등 실용적인 연구 활동이 주를 이루었다.
+topics:
+  - name: "지속 학습(Continual Learning)"
+    mention_count: 15
+    description: "임베딩·LLM의 Catastrophic Forgetting, EWC, Adapter, Replay 기반 기법 정리"
+  - name: "GRPO 한국어 학습"
+    mention_count: 20
+    description: "한국어 COT 데이터로 GRPO 학습, Code Mixing 현상, 보상 함수 설계"
+  - name: "Cross-Encoder 분석"
+    mention_count: 12
+    description: "Cross-Encoder가 Semantic BM25를 내재적으로 계산한다는 mechanistic interpretability 연구"
+  - name: "신규 모델 공유"
+    mention_count: 18
+    description: "FlashMLA, Claude 3.7 Sonnet, QwQ Max, DeepSeek R1, DRAMA-1b 등"
+  - name: "한국어 임베딩 평가"
+    mention_count: 10
+    description: "BGE-M3, KURE-v1, KOE5 비교 평가, 한국어 임베딩 리더보드"
+key_discussions:
+  - thread_ts: '1739152800.000000'
+    date: '2025-02-10'
+    reply_count: 9
+    text_preview: "임베딩·LLM 지속 학습 기법 정리 - EWC, Adapter, Replay, Knowledge Distillation 상세 설명"
+  - thread_ts: '1740200400.000000'
+    date: '2025-02-17'
+    reply_count: 201
+    text_preview: "GRPO로 한국어 잘하는 모델 만들기 - 한국어 COT 데이터 학습 실험 및 결과 공유"
+  - thread_ts: '1741010400.000000'
+    date: '2025-03-04'
+    reply_count: 74
+    text_preview: "RTX 5090 확보 및 QwQ-32B-AWQ 인퍼런스 테스트 - 924 token/sec (동시 100 요청)"
+  - thread_ts: '1740574080.000000'
+    date: '2025-02-26'
+    reply_count: 8
+    text_preview: "한국어 임베딩 리더보드 1위 변경 - KURE-v1, BGE-M3 대비 성능 비교 수치 공유"
+terminology:
+  - term: "GRPO"
+    definition: "Group Relative Policy Optimization - LLM 강화학습 기반 학습 방법으로 추론 능력 향상에 활용"
+    aliases: []
+    context: "한국어 COT 데이터로 GRPO 학습 실험, DeepSeek 공식 코드 공개"
+  - term: "Code Mixing"
+    definition: "LLM이 한국어와 중국어/영어가 섞인 출력을 생성하는 현상"
+    aliases: []
+    context: "GRPO 학습 후 Think 태그 내에서 언어 혼합 현상이 관찰됨"
+  - term: "FlashMLA"
+    definition: "DeepSeek이 공개한 H800용 MLA(Multi-head Latent Attention) 커널 최적화 코드"
+    aliases: []
+    context: "DAY 1 공개로 주목받은 오픈소스 추론 최적화 커널"
+  - term: "One Side Fine-tuning"
+    definition: "Zero-Shot Passage Retrieval을 위한 단방향 파인튜닝 접근법"
+    aliases: []
+    context: "supply 데이터와 함께 활용하여 검색 성능 향상 가능성 실험"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,71 @@
+channel:
+  id: C07LHF65Z6E
+  name: project-ibk
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 24
+  total_threads: 17
+  active_users: 4
+  avg_messages_per_day: 1.4
+summary: |
+  IBK 본사업 종료 후 유지보수 단계 진입. 활동량이 크게 감소(24개 메시지, 4명 참여)하여
+  비정기 방문 지원 체제로 전환됨. 주요 작업으로 서플라이 인덱서 파켓파일 캐시 제거 솔루션
+  적용(carrier-supply-helper), 운영 메뉴얼 보강 및 IBK 내부 PVC 현황 문서 최신화,
+  TXT 파일 학습 속도 개선(스톰파스 우회로 7초->1초), Pylon 파일타입 감지 실패 이슈 수정,
+  피드백 삭제 버그 수정(스톰/플랫폼 배포), EUC-KR 인코딩 문서 학습 불가 이슈 수정(파일런).
+  IBK 측 박상학 과장님과 서플라이 인덱서 배치 운영 관련 지속 소통, IBK 배치시스템 크론잡
+  권한 이슈 확인. 플랫폼 FE EOS 대응, K8s Helm Chart 최신화, 서비스 로그 경로 정비 등
+  인프라 정리 작업 수행. 코드파일럿 요구사항정의서 정리, 청크 주입 기능 히스토리 기록 등
+  프로젝트 산출물 마무리.
+topics:
+  - 유지보수 체제 전환
+  - TXT 파일 학습 속도 개선
+  - 피드백 삭제 버그 수정
+  - EUC-KR 인코딩 이슈 수정
+  - 운영 메뉴얼 보강
+  - 인덱서 캐시 관리 자동화
+  - 플랫폼 FE EOS 대응
+  - 서비스 로그 경로 정비
+key_discussions:
+  - thread_ts: '1760679359.970949'
+    date: '2025-10-17'
+    title: 'IBK 솔루션 버그 수정 스레드'
+    summary: '35개 리플라이. TXT 학습 속도, 파일타입 감지 실패 등 복합 버그 수정'
+  - thread_ts: '1760675123.310739'
+    date: '2025-10-17'
+    title: '운영 메뉴얼 보강 요청 검토'
+    summary: '33개 리플라이. IBK 담당자 인수인계용 운영 메뉴얼 항목 보강'
+  - thread_ts: '1764148391.386779'
+    date: '2025-11-26'
+    title: 'IBK TXT 파일 변환 에러'
+    summary: '26개 리플라이. TXT 파일 학습 시 스톰파스 우회 및 파일타입 감지 개선'
+  - thread_ts: '1761194299.095099'
+    date: '2025-10-23'
+    title: '코드파일럿 요구사항정의서 정리'
+    summary: '15개 리플라이. 프로젝트 산출물로 코드파일럿 요구사항 문서화'
+  - thread_ts: '1762916734.589569'
+    date: '2025-11-12'
+    title: 'IBK 박과장님 인덱서 배치 관련 통화'
+    summary: '12개 리플라이. 배치시스템 크론잡 미동작 이슈, 방문 일정 2일 요청'
+  - thread_ts: '1766133230.319669'
+    date: '2025-12-19'
+    title: 'IBK 차주 방문 이슈 처리 리스트'
+    summary: '6개 리플라이. 피드백 삭제 버그, EUC-KR 인코딩, 로그 경로 등 방문 작업 목록'
+terminology:
+  - term: 'EOS'
+    definition: 'End of Support. 플랫폼 프론트엔드 기술 스택 지원 종료 대응'
+    aliases: []
+  - term: 'EUC-KR'
+    definition: '한국어 문자 인코딩. 일부 IBK 문서가 EUC-KR로 인코딩되어 학습 실패 발생'
+    aliases: []
+  - term: '크론잡'
+    definition: 'CronJob. K8s 스케줄링 작업. IBK 배치시스템에서 인덱서 실행에 사용'
+    aliases: ['CronJob']
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

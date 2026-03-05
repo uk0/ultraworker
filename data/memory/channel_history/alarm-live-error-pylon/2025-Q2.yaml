@@ -1,0 +1,33 @@
+channel:
+  id: C066D0B9WKC
+  name: alarm-live-error-pylon
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 363
+  total_threads: 29
+  active_users: 5
+  avg_messages_per_day: 9.6
+summary: |
+  Pylon 운영 에러 알림 채널. 363개 메시지로 에러가 약간 증가한 분기.
+  CREATE_DOCUMENT_PROCESS_ERROR가 주요 에러로, unstructured-io 파싱 실패가 지속적으로 발생했다.
+  에러 알림 수신자가 팀 멘션(@S08KY8KKE1K)으로 변경되어 개인 멘션에서 팀 기반 대응 체계로 전환되었다.
+  NewRelic에서 FileParserAPIError, DocumentAlreadyExistsError가 주기적으로 감지되었으며,
+  문서 처리 관련 에러가 채널의 대부분을 차지하는 패턴이 유지되었다.
+topics:
+  - CREATE_DOCUMENT_PROCESS_ERROR 지속
+  - unstructured-io 파싱 실패 패턴 유지
+  - 에러 알림 수신자 팀 멘션으로 변경
+  - NewRelic FileParserAPIError 감지
+  - DocumentAlreadyExistsError 발생
+key_discussions: []
+terminology:
+  - term: "@S08KY8KKE1K"
+    definition: "에러 알림 수신 팀 멘션, 개인 멘션에서 팀 기반 대응으로 전환"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,60 @@
+channel:
+  id: C08E19XUF9S
+  name: noah-실험실
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 19
+  total_threads: 4
+  active_users: 9
+  avg_messages_per_day: 2.7
+summary: |
+  2025-Q1에 noah-실험실 채널이 개설되어 석현(노아)의 직관적 아이디어를 팀과 함께 심층 논의하고 실험을 준비하는 공간으로 운영되었다.
+  STORM 라이트 버전 기획, 딥리서치 기능(외부 검색 엔진 연동), LLM 프롬프트 가변 분류기, 글로벌 진출 가능성 탐색 등 제품 방향성과 기술적 아이디어가 논의되었다.
+  석현의 Sparse 임베딩 선호 이유 논의, Perplexity/OO.ai API 연동 검토, LLM 라우터 설계 등 실험적 주제가 다루어졌다.
+topics:
+  - name: "딥리서치 기능"
+    mention_count: 8
+    description: "Perplexity, OO.ai 등 외부 검색 API와 STORM 내부 데이터를 혼합한 추론 기능"
+  - name: "LLM 프롬프트 분류기"
+    mention_count: 5
+    description: "LLM으로 프롬프트를 가변하는 분류기 설계 및 LLM 라우터 논의"
+  - name: "STORM 라이트 버전"
+    mention_count: 4
+    description: "글로벌 사례 창출을 위한 소규모 시도, STORM 라이트 제품 방향 논의"
+  - name: "Sparse 임베딩"
+    mention_count: 3
+    description: "Dense vs Sparse 벡터 비교, 노아의 Sparse 선호 이유 탐색"
+key_discussions:
+  - thread_ts: '1740959490.000000'
+    date: '2025-02-28'
+    reply_count: 12
+    text_preview: "STORM 라이트 버전 논의 - 딥리서치 기능, Perplexity/OO.ai API 연동 아이디어"
+  - thread_ts: '1741082460.000000'
+    date: '2025-03-04'
+    reply_count: 72
+    text_preview: "LLM으로 프롬프트를 가변하는 분류기 설계 논의 - 의도 분류, LLM 라우터"
+  - thread_ts: '1741593300.000000'
+    date: '2025-03-10'
+    reply_count: 0
+    text_preview: "허들 내용 정리 - 의도별 프롬프트 n벌 필요성, STORM 현재 가능 여부, 5월 이후 화면 추가 예정"
+terminology:
+  - term: "noah-실험실"
+    definition: "석현(노아)의 직관적 아이디어를 팀과 함께 심층 논의하고 실험 준비를 하는 채널"
+    aliases: ["노아 실험실"]
+    context: "채널 설명: 석현님의 직관으로 떠오른 아이템들에 대해 같이 심층 고민 및 실험 준비"
+  - term: "딥리서치"
+    definition: "외부 검색 엔진(Perplexity, OO.ai 등)과 내부 데이터를 혼합하여 심층 추론하는 기능"
+    aliases: ["Deep Research"]
+    context: "STORM의 데이터만으로는 한계가 있어 외부 API 연동을 통한 확장 아이디어"
+  - term: "LLM 라우터"
+    definition: "쿼리 의도를 분류하여 적절한 LLM 노드로 라우팅하는 컴포넌트"
+    aliases: ["질문 분류기"]
+    context: "하나의 에이전트에서 여러 태스크를 처리하기 위한 의도 분류 및 프롬프트 분기"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

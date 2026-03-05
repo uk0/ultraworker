@@ -1,0 +1,46 @@
+channel:
+  id: C0A308JHVHS
+  name: sig-touchdesigner
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 0
+  active_users: 6
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 4분기 sig-touchdesigner 채널이 12월 초에 신규 개설되었으며, TouchDesigner, Ableton, Max/MSP를 결합한 제너레이티브 리얼타임 파티클 시뮬레이션 오디오비주얼 공연을 목표로 하는 SIG 채널이다.
+  주로 X(Twitter) 및 Instagram 링크를 통해 국내외 제너레이티브 아트, 파티클 시뮬레이션, 오디오비주얼 작품 레퍼런스가 공유되었다.
+  12월 말에 추가 멤버가 합류하며 채널이 활성화되기 시작하였다.
+topics:
+  - name: "제너레이티브 아트 레퍼런스 공유"
+    mention_count: 20
+    description: "X(Twitter) 및 Instagram에서 파티클 시뮬레이션, 오디오비주얼, 제너레이티브 비주얼 작품 링크 공유"
+  - name: "채널 초기 개설"
+    mention_count: 4
+    description: "sig-touchdesigner 채널 신규 생성, TouchDesigner + Ableton + Max/MSP 결합 오디오비주얼 공연 목표"
+key_discussions: []
+terminology:
+  - term: "TouchDesigner"
+    definition: "노드 기반 비주얼 프로그래밍 환경으로 실시간 인터랙티브 미디어 및 공연 제작에 활용"
+    aliases: ["터치디자이너", "TD"]
+    context: "채널명이자 핵심 도구"
+  - term: "Ableton"
+    definition: "프로페셔널 디지털 오디오 워크스테이션 소프트웨어"
+    aliases: ["에이블톤", "Ableton Live"]
+    context: "TouchDesigner와 결합하여 오디오비주얼 공연에 활용"
+  - term: "Max/MSP"
+    definition: "데이터 플로우 기반 비주얼 프로그래밍 언어로 오디오/미디 처리에 특화"
+    aliases: ["Max MSP", "max/msp"]
+    context: "Ableton과 연동하여 오디오 처리에 활용"
+  - term: "제너레이티브 아트"
+    definition: "알고리즘이나 규칙을 사용해 생성되는 예술 형식, 파티클 시뮬레이션 등 포함"
+    aliases: ["Generative Art", "generative visual"]
+    context: "sig-touchdesigner 채널의 핵심 관심 주제"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

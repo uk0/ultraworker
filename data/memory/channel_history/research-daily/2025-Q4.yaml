@@ -1,0 +1,61 @@
+channel:
+  id: C08DKGNJ8P5
+  name: research-daily
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 149
+  total_threads: 47
+  active_users: 7
+  avg_messages_per_day: 2.7
+summary: |
+  2025년 4분기 research-daily 채널에서는 VLM Parser 성능 개선을 위한 데이터셋 제작·실험, Qwen3-VL 기반 하이퍼파라미터 서치, 영어/한국어 파싱 eval 벤치마크 구축, Graph RAG 스터디 연계 활동이 주를 이루었다. 정부과제(초거대AI, 엔업, 현대차) 행정 업무 관련 일일 업무 기록도 병행되었으며, 총 7명이 매일 업무 진행상황을 공유하였다.
+topics:
+  - name: "VLM Parser 데이터셋 및 학습"
+    mention_count: 32
+    description: "파싱 품질 향상을 위한 데이터셋 제작, Qwen3-VL 8B 하이퍼파라미터 서치, DPO/SFT 학습 실험, eval 벤치마크 구축"
+  - name: "Graph RAG 스터디"
+    mention_count: 12
+    description: "Graph RAG 스터디 그룹 참여 및 발표 준비, FalkorDB/LightRAG 연동 실험"
+  - name: "정부과제 행정"
+    mention_count: 40
+    description: "초거대AI, 엔업, 현대차 등 정부과제 보고서 작성, 증빙서류 준비, PMS 입력 등 행정 업무 일일 기록"
+  - name: "opendataxai 챌린지"
+    mention_count: 8
+    description: "소상공인 맞춤형 컨설팅 AI 과제 기획서 작성, 2026년 정부과제 전략 수립"
+  - name: "Carrier Storm Parse"
+    mention_count: 10
+    description: "엑셀 처리 티켓, e2e 테스트 코드 작성, 아비케(IBK) 대응 및 ghostscript 버전 업그레이드"
+key_discussions:
+  - thread_ts: '1730858400.000000'
+    date: '2025-11-06'
+    reply_count: 2
+    text_preview: "모델 학습 과정 팁·노하우를 채널에 기록하고 주 1회 노션 정리하는 협업 방식 제안"
+  - thread_ts: '1731027600.000000'
+    date: '2025-11-06'
+    reply_count: 15
+    text_preview: "Parser 방향성 공유: VLM parser 데이터 효율성·성능 포화점 실험 설계, Qwen3 8B 기반 학습 계획"
+  - thread_ts: '1731139200.000000'
+    date: '2025-11-07'
+    reply_count: 7
+    text_preview: "2026년 정부과제 목표 노션 정리, opendataxai 챌린지→창업도약패키지 연계 전략 논의"
+  - thread_ts: '1731888000.000000'
+    date: '2025-11-11'
+    reply_count: 0
+    text_preview: "AI 스타트업 LLM 챌린지·인공지능 특화 파운데이션 모델 제안서 기반 opendata X ai 챌린지 초안 작성 공유"
+terminology:
+  - term: "드라군(Dragoon)"
+    definition: "Sionic AI의 문서 파싱 엔진 — VLM 기반 OCR 및 레이아웃 이해를 담당하며, carrier storm parse와 연동됨"
+  - term: "xionic-vl"
+    definition: "Sionic AI가 개발 중인 Visual Language Model — 문서 파싱 특화 VLM으로 표·그래프 이해 능력을 고도화 중"
+  - term: "GRPO"
+    definition: "Group Relative Policy Optimization — 강화학습 기반 모델 학습 방법론; 파싱 품질 향상에 활용"
+  - term: "opendataxai"
+    definition: "개방 데이터 기반 AI 활용 챌린지 과제 — 소상공인 맞춤형 컨설팅 AI 개발을 테마로 기획"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,44 @@
+channel:
+  id: C09A6TCEDE1
+  name: project-siam-focus
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 5
+  active_users: 5
+  avg_messages_per_day: 2.6
+summary: |
+  시암(SIAM) 프로젝트 집중 채널 - 일간 진행상황 공유 및 핵심 의사결정 기록.
+  방콕 교육세션(부트캠프) 상세 기록, OpenWebUI 연동 진행상황, 시암GPT 분석 결과 공유.
+  교육 후기 - 현지 실무자 수준이 대학 1-2학년 코딩 수준으로 기초 교육 필요성 확인.
+  Qwen3 배포 요청 및 네클(NECL) 관련 피드백 처리. 13개 메시지, 5명 참여, 5개 스레드.
+topics:
+  - 방콕 부트캠프 상세 기록
+  - OpenWebUI 연동 진행
+  - 시암GPT 분석
+  - 현지 인력 교육 평가
+  - Qwen3 배포 요청
+  - NECL 피드백
+key_discussions:
+  - topic: 방콕 교육세션 결과 및 현지 인력 평가
+    participants: [Sigrid Jin, 송명하]
+    summary: 방콕 부트캠프 교육 결과 공유. 현지 실무자의 코딩 수준이 대학 1-2학년 수준으로 기초 교육 필요
+  - topic: OpenWebUI 및 시암GPT 연동 진행
+    participants: [Sigrid Jin, 한시형]
+    summary: OpenWebUI 파이프라인과 시암GPT 백엔드 연동 진행상황 및 분석 결과 공유
+  - topic: Qwen3 배포 및 NECL 피드백
+    participants: [한시형]
+    summary: Qwen3 모델 배포 요청 및 네클(NECL) 관련 기술 피드백 처리
+terminology:
+  - term: NECL
+    definition: 시암 프로젝트 관련 태국측 파트너/조직. 기술 피드백 및 요구사항 전달
+  - term: 부트캠프
+    definition: 방콕 현지에서 진행된 AI 에이전트 개발 집중 교육 프로그램
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

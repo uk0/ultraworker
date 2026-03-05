@@ -1,0 +1,25 @@
+channel:
+  id: C07TM7T9LKV
+  name: devops
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q4 devops 채널은 실질적인 논의 없이 채널 참여(join) 메시지만 기록되었다.
+  Noah(고석현)와 이재준(Leo)이 채널에 참여했으며, 기술적 논의나 운영 관련 대화는 없었다.
+  채널이 아직 활성화 초기 단계로 보인다.
+topics:
+  - 채널 초기 구성
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

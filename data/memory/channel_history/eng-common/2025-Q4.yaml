@@ -1,0 +1,111 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 186
+  total_threads: 115
+  active_users: 21
+  avg_messages_per_day: 3.2
+summary: |
+  2025-Q4에는 신 배포 시스템(/sionic-deploy-new)이 공식 도입되어 Slack 기반 빌드/배포/모니터링 워크플로우가 완성되었다.
+  OpenTelemetry 트레이싱이 본격 적용되어 Grafana(Tempo/Loki) 기반 분산 추적 체계가 구축되었으며, NewRelic 탈출이 추진되었다.
+  12월에 라이브 DB UPDATE 쿼리 사고로 전 계정 이메일 일괄 변경 장애가 발생해 수동 복구가 이루어졌고, Carrier 버전 착각으로 인한 라이브 장애도 발생하여 장애 리포트 체계가 강화되었다.
+  일본 리전(jp-oci) 서비스 배포 준비, Qdrant 버전업/VDB 마이그레이션, Stripe 결제 연동, Vercel 장애 대응, 린커피(Lean Coffee) 도입 등 인프라/문화 양면에서 큰 변화가 있었다.
+topics:
+  - 신 배포 시스템 (sionic-deploy-new)
+  - OpenTelemetry 트레이싱 (Tempo/Loki)
+  - Grafana 모니터링 통합 (NewRelic 탈출)
+  - 라이브 DB 장애 및 복구
+  - Carrier 라이브 장애
+  - 일본 리전(jp-oci) 서비스 배포
+  - Qdrant 버전업/VDB 마이그레이션
+  - Stripe 결제 연동 (OpenGateway)
+  - Vercel 장애 대응
+  - 린커피(Lean Coffee) 도입
+  - Apidog E2E 테스트 파이프라인
+  - 오더시트 스키마 개선
+  - 내업공(내 업무 공유) 세션
+  - 연말 회고 (타임라인 방식)
+key_discussions:
+  - thread_ts: '1765461066.380759'
+    date: '2025-12-11'
+    reply_count: 261
+    text_preview: '스게 에러 - 라이브 장애 대응 및 원인 추적'
+  - thread_ts: '1765415471.292829'
+    date: '2025-12-11'
+    reply_count: 198
+    text_preview: '스게 라이브 에러 의심 - 전시 시연 중 긴급 장애 대응'
+  - thread_ts: '1766209657.628229'
+    date: '2025-12-20'
+    reply_count: 111
+    text_preview: '라이브 DB 계정 일괄 변경 장애 복구 쓰레드'
+  - thread_ts: '1766208853.329049'
+    date: '2025-12-20'
+    reply_count: 102
+    text_preview: 'UPDATE 쿼리 실수로 라이브 계정명 일괄 변경 - 긴급 대응'
+  - thread_ts: '1763469227.757109'
+    date: '2025-11-18'
+    reply_count: 94
+    text_preview: 'VDB 마이그레이션 사전 준비 - 비용 절감을 위한 VDB 통합'
+  - thread_ts: '1760947656.658689'
+    date: '2025-10-20'
+    reply_count: 77
+    text_preview: 'Vercel 장애 - 글로벌 CDN 네트워크 문제 대응'
+  - thread_ts: '1765265427.419229'
+    date: '2025-12-09'
+    reply_count: 72
+    text_preview: 'Tempo에서 Parse Router 트레이싱 확인 - OTel span 연결'
+  - thread_ts: '1765417116.754029'
+    date: '2025-12-11'
+    reply_count: 60
+    text_preview: '라이브 장애 원인 찾기 - Carrier 버전 배포 착각'
+  - thread_ts: '1763616395.816839'
+    date: '2025-11-20'
+    reply_count: 47
+    text_preview: 'task id를 알 수 있는 방법 논의 - 에러 추적 개선'
+  - thread_ts: '1765275480.110259'
+    date: '2025-12-09'
+    reply_count: 43
+    text_preview: 'Parse Router SIGTERM 미종료 이슈 - graceful shutdown 개선'
+terminology:
+  - term: "sionic-deploy-new"
+    definition: "Slack 기반 신 배포 시스템 명령어"
+    aliases: ["/sionic-deploy-new"]
+    context: "빌드→쓰레드 진행→Deploy 버튼→배포, --auto-deploy/--skip-build 옵션 지원"
+  - term: "Tempo"
+    definition: "Grafana 분산 추적(Tracing) 백엔드"
+    aliases: []
+    context: "OpenTelemetry trace 저장소, Loki 로그와 연동하여 trace-log 상호 탐색 가능"
+  - term: "Loki"
+    definition: "Grafana 로그 수집/검색 엔진"
+    aliases: []
+    context: "서비스 로그 저장, Patterns 기능으로 유사 패턴 자동 감지"
+  - term: "린커피"
+    definition: "Lean Coffee - 참여자 주도의 민주적 토론 방식"
+    aliases: ["Lean Coffee"]
+    context: "엔지니어링 위클리에서 주제 없을 때 진행, 피그잼으로 온라인 진행"
+  - term: "내업공"
+    definition: "내 업무 공유 - 엔지니어링 위클리 후반 30분 발표 세션"
+    aliases: []
+    context: "아이스버킷 챌린지 방식으로 다음 발표자 지목, 개발/제품팀 외 공유"
+  - term: "Cybros"
+    definition: "신규 데이터플랫폼 프로젝트"
+    aliases: []
+    context: "GitHub 리포 생성, 이름 공모(Nuclear Silo, Battlecruiser, Mothership)"
+  - term: "Stripe"
+    definition: "해외 결제 연동 서비스"
+    aliases: []
+    context: "OpenGateway에 Stripe 연동, 샌드박스→라이브 모드 전환"
+  - term: "ECS 포맷"
+    definition: "Elastic Common Schema - 로그 표준 포맷"
+    aliases: []
+    context: "ECS 포맷 준수 시 Grafana에서 TraceID 링크→Tempo 연동 가능"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

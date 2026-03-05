@@ -1,0 +1,86 @@
+channel:
+  id: C08GN320Q1G
+  name: thanks-sionic
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 20
+  active_users: 12
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 2분기 thanks-sionic 채널은 팀원 간 감사와 칭찬이 활발하게 이루어진 분기였다.
+  4월에는 채널 이름이 "thanks-mate"에서 "thanks-sionic"으로 변경되었으며, 캐리어 프로젝트 기여자들에 대한 감사, GoCD 배포 시스템 도움에 대한 감사가 공유되었다.
+  5월에는 일주일 인턴 체험 참여자의 감사 인사, 어버이날 카네이션 감사, Pylon 라이브 배포 성공, 두산 데모 야간 지원 등 다양한 감사 이벤트가 기록되었다.
+  6월에는 일본 출장(미타) 관련 수고한 팀원들(우명님), IBK 운영 야근을 소화한 덕현님과 재준님에 대한 감사가 이어졌다.
+topics:
+  - name: "프로젝트 기여 감사"
+    mention_count: 8
+    description: "캐리어, Pylon, GoCD, 두산 데모 등 프로젝트별 기여자에 대한 감사"
+  - name: "일본 출장 및 미팅 감사"
+    mention_count: 4
+    description: "일본 미타 출장에서 수고한 우명님 등에 대한 감사"
+  - name: "IBK 현장 야근 감사"
+    mention_count: 3
+    description: "IBK 현장 인프라 대응 야근을 소화한 팀원들에 대한 감사"
+  - name: "인턴/신규 참여자 감사"
+    mention_count: 2
+    description: "일주일 인턴 체험 참여자의 사이오닉 문화 경험 및 감사 인사"
+key_discussions:
+  - thread_ts: '1743607740.000000'
+    date: '2025-04-02'
+    reply_count: 2
+    text_preview: "캐리어 프로젝트에 생명력을 불어넣어 준 팀원들에게 감사"
+  - thread_ts: '1745565240.000000'
+    date: '2025-04-24'
+    reply_count: 8
+    text_preview: "성우님의 Pylon 라이브 배포 성공 감사"
+  - thread_ts: '1746702240.000000'
+    date: '2025-05-08'
+    reply_count: 7
+    text_preview: "어버이날 혜원님과 시형님께 카네이션 감사"
+  - thread_ts: '1748574480.000000'
+    date: '2025-05-30'
+    reply_count: 3
+    text_preview: "두산 데모를 위해 밤낮없이 도움 준 혜원님께 감사"
+  - thread_ts: '1750896000.000000'
+    date: '2025-06-02'
+    reply_count: 19
+    text_preview: "일본 출장 우명님 감사 - I 성향에도 낯선 사람과 계속 미팅하는 수고"
+key_discussions:
+  - thread_ts: '1743607740.000000'
+    date: '2025-04-02'
+    reply_count: 2
+    text_preview: "캐리어 프로젝트에 생명력을 불어넣어 준 팀원들(진형, 하담, 병현, 성찬)께 감사"
+  - thread_ts: '1745844840.000000'
+    date: '2025-04-28'
+    reply_count: 3
+    text_preview: "일본 방문 후 승희님의 하드캐리 감사 - 치밀한 준비와 꼼꼼한 대응"
+  - thread_ts: '1748574480.000000'
+    date: '2025-05-30'
+    reply_count: 3
+    text_preview: "두산 데모 야간 지원 혜원님 감사"
+  - thread_ts: '1751520000.000000'
+    date: '2025-06-25'
+    reply_count: 3
+    text_preview: "에이전트 132개 문서 업로드 파싱 속도 개선 - 강욱님께 감사"
+terminology:
+  - term: "캐리어"
+    definition: "Sionic AI 내부 프로젝트명, 여러 팀원이 PR 기여하며 활성화"
+    aliases: []
+    context: "2025년 4월 기여자들에 의해 활성화된 프로젝트"
+  - term: "Pylon"
+    definition: "Sionic AI의 내부 서비스 또는 플랫폼 컴포넌트"
+    aliases: []
+    context: "성우님이 라이브 배포를 성공적으로 완료한 서비스"
+  - term: "GoCD"
+    definition: "Sionic AI가 사용하는 배포 파이프라인 시스템"
+    aliases: []
+    context: "GoCD 설정을 활용한 새 서버 배포 프로세스 간소화"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

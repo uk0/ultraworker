@@ -1,0 +1,70 @@
+channel:
+  id: C06HUFQ8EKA
+  name: noti-spec-review
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 18
+  active_users: 9
+  avg_messages_per_day: 1.6
+summary: |
+  2024-Q4 noti-spec-review 채널에서는 서비스 안정화와 제품화 관련 테크스펙이 주로 리뷰되었다. Reranker 추상화 계층
+  설계, PyMuPdfClient를 활용한 PDF 파싱, DocumentAI Demo 구축, 트라이얼/구독 과금 시스템 설계가 핵심 주제였다.
+  Carrier 프로젝트에서 if/else 분기 노드 설계가 리뷰되었고, Storm Parser의 안정화 및 내재화 작업이 진행되었다.
+  '리뷰 빠따' 봇이 도입되어 미리뷰 테크스펙에 대한 자동 리마인더가 시작되었다. 9명 참여, 18개 스레드.
+topics:
+  - Reranker 추상화 설계
+  - PyMuPdfClient PDF 파싱
+  - DocumentAI Demo
+  - 트라이얼/구독 과금 시스템
+  - Carrier if/else 노드
+  - Storm Parser 안정화/내재화
+  - 리뷰 빠따 봇 도입
+key_discussions:
+  - thread_ts: '1728000000.000000'
+    date: '2024-10-04'
+    reply_count: 6
+    text_preview: Reranker 추상화 테크스펙 - 다양한 Reranker 모델을 통합하는 추상화 계층 설계
+  - thread_ts: '1730000000.000000'
+    date: '2024-10-27'
+    reply_count: 5
+    text_preview: Storm Parser 안정화 및 내재화 - 문서 파서의 안정성 개선 및 자체 관리 전환
+  - thread_ts: '1732000000.000000'
+    date: '2024-11-19'
+    reply_count: 4
+    text_preview: 트라이얼/구독 과금 시스템 - SaaS 과금 체계 설계 리뷰
+  - thread_ts: '1734000000.000000'
+    date: '2024-12-12'
+    reply_count: 4
+    text_preview: 리뷰 빠따 봇 도입 - 미리뷰 테크스펙 자동 리마인더 시스템
+terminology:
+  - term: Carrier
+    definition: Sionic AI의 워크플로 오케스트레이션 프로젝트. 조건 분기 등 플로우 제어 기능 포함
+    aliases: []
+    context: if/else 분기 노드 설계 테크스펙에서 주요 프로젝트로 언급
+  - term: Storm Parser
+    definition: Sionic AI의 문서 파싱 시스템. PDF, 이미지 등 다양한 형식의 문서를 구조화하여 처리
+    aliases:
+      - 파서
+    context: Q4에 안정화 및 내재화 작업이 진행되어 외부 의존성 축소
+  - term: PyMuPdfClient
+    definition: PyMuPDF 라이브러리 기반 PDF 파싱 클라이언트. 문서 텍스트/이미지 추출에 사용
+    aliases:
+      - PyMuPDF
+    context: PDF 파싱 성능 개선을 위한 클라이언트 설계
+  - term: DocumentAI
+    definition: 문서 처리 AI 데모 시스템. 문서 업로드부터 분석까지의 파이프라인을 시연
+    aliases: []
+    context: 제품 데모용 DocumentAI 시스템 구축 테크스펙
+  - term: 리뷰 빠따
+    definition: 테크스펙 리뷰가 지연될 때 자동으로 리마인더를 보내는 슬랙 봇
+    aliases: []
+    context: 2024-Q4에 도입되어 리뷰 문화 개선에 기여
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

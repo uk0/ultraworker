@@ -1,0 +1,64 @@
+channel:
+  id: C07K034UHNE
+  name: research-parse
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 22
+  total_threads: 12
+  active_users: 9
+  avg_messages_per_day: 1.7
+summary: |
+  2025-Q1 research-parse 채널은 채널 이름이 research-organize에서 research-parse로 변경되고, 팀의 파싱 기술 방향이 재정립된 분기이다.
+  Gemini 2.0을 기준 성능으로 삼고 Qwen2.5-VL 7B 모델로 온몸 비틀기식 최적화를 우선 진행하기로 결정하였으며, Storm Parse 파이프라인에 Qwen 모델을 통합하는 작업이 추진되었다.
+  나라장터 크롤링 파이프라인은 현실적 어려움으로 폐기하고 기존 보유 PDF 1.2TB 기반 전처리 파이프라인으로 전환하였으며, Qwen2.5-VL 32B 출시 및 GRPO 학습 실험 결과도 공유되었다.
+topics:
+  - name: "파싱 모델 방향 재설정"
+    mention_count: 8
+    description: "Gemini 수준을 목표로 Qwen2.5-VL 7B 우선 최적화, 성능 한계 시 72B 검토로 전략 수립"
+  - name: "Qwen 모델 추론 최적화"
+    mention_count: 5
+    description: "Qwen 멀티모달 모델 추론 속도 최적화 작업, Storm Parse 파이프라인 통합"
+  - name: "Qwen2.5-VL 32B 출시 및 GRPO"
+    mention_count: 5
+    description: "Qwen2.5-VL 32B Instruct 공개 및 0.1 epoch Multimodal GRPO 학습 실험 결과"
+  - name: "데이터 파이프라인 전환"
+    mention_count: 4
+    description: "나라장터 크롤링 폐기, 기존 1.2TB PDF 및 HWP 파일 크롤링 파이프라인으로 전환"
+key_discussions:
+  - thread_ts: '1741334880.000000'
+    date: '2025-03-07'
+    reply_count: 9
+    text_preview: "파싱 방향 정리 - Gemini 기준 성능 목표, Qwen2.5-VL 7B 우선 최적화, Storm Parse 현재 Gemini 2.0 사용"
+  - thread_ts: '1741374840.000000'
+    date: '2025-03-07'
+    reply_count: 6
+    text_preview: "IBK 내 리서치 파스 구축 일정 논의"
+  - thread_ts: '1742856720.000000'
+    date: '2025-03-25'
+    reply_count: 33
+    text_preview: "Qwen2.5-VL-32B-Instruct 공개, 파싱 성능 가능성 및 활용 방안 논의"
+  - thread_ts: '1742916000.000000'
+    date: '2025-03-25'
+    reply_count: 12
+    text_preview: "파스 개발 우선순위 정리 논의"
+  - thread_ts: '1743434400.000000'
+    date: '2025-03-31'
+    reply_count: 64
+    text_preview: "Qwen2.5-VL 32B GRPO 0.1 epoch 학습 결과 공유"
+terminology:
+  - term: "GRPO"
+    definition: "Group Relative Policy Optimization, 강화학습 기반 파인튜닝 방법론으로 멀티모달 파싱 학습에 적용"
+  - term: "Qwen2.5-VL 32B"
+    definition: "Qwen에서 2025년 3월 공개한 중형급 VLM 모델, 7B와 72B 사이 규모"
+  - term: "HWP"
+    definition: "한글과컴퓨터 한글 문서 포맷, B2G 분야에서 필수적인 문서 형식으로 파싱 데이터 확보 대상"
+  - term: "나라장터"
+    definition: "공공 조달 포털, 크롤링 제한 강화로 데이터 파이프라인 폐기됨"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

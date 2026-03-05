@@ -1,0 +1,87 @@
+channel:
+  id: C08CAM2830E
+  name: research-random
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 290
+  total_threads: 200
+  active_users: 17
+  avg_messages_per_day: 3.5
+summary: |
+  2025-Q4 research-random 채널에서는 정보 검색, 임베딩, 리랭킹, 멀티모달 등 다양한 AI/ML 연구 논문과 최신 모델 공유가 매우 활발하였다.
+  RAE 기반 k-NN 보존 임베딩, Jina Reranker v3, ColBERT vs Dense 비교, Qwen3-VL, PaddleOCR-VL, MiniMax M2 등 신규 모델과 기법이 활발히 공유되었으며, Anthropic·SKT 공동 주최 Claude Code Hackathon 참가 안내도 있었다.
+  ICML 2026 서울 개최, KDD 2026 제주 개최 등 학회 소식도 공유되었고, 리랭커 학습(CL vs Distillation), 멀티모달 RAG 데모 등 실무 연구 결과도 다수 논의되었다.
+topics:
+  - name: "임베딩 및 리랭킹 모델"
+    mention_count: 40
+    description: "RAE 기반 k-NN 보존, Jina Reranker v3, Cross-Encoder vs BM25, 한국어 리랭커 비교 등"
+  - name: "멀티모달 AI"
+    mention_count: 30
+    description: "PaddleOCR-VL, Qwen3-VL, StreamingVLM, DocVLM, DeepSeek OCR RAG 데모 등"
+  - name: "LLM 및 추론 모델"
+    mention_count: 35
+    description: "MiniMax M2, KORMo-10B, GLM-4.6, SFT vs DFT 평가 비교, ExpandSearch 등"
+  - name: "학회 및 이벤트"
+    mention_count: 10
+    description: "ICML 2026 서울, KDD 2026 제주, ACL 워크샵, Claude Code 해커톤 등"
+  - name: "RAG 및 검색 시스템"
+    mention_count: 20
+    description: "Roaming RAG, ExpandSearch, Needle in a Haystack ColBERT vs Dense, Position Bias 연구"
+key_discussions:
+  - thread_ts: '1762149120.000000'
+    date: '2025-10-02'
+    reply_count: 32
+    text_preview: "ACL workshop 제안 논의 - CVPR 초록 마감 11월, ACL 워크샵 현실성 검토"
+  - thread_ts: '1762608600.000000'
+    date: '2025-10-07'
+    reply_count: 9
+    text_preview: "reasoning으로 검색 품질이 얼마나 향상되는지 블로그 포스트 공유 및 토론"
+  - thread_ts: '1762916400.000000'
+    date: '2025-10-13'
+    reply_count: 14
+    text_preview: "비전 토큰 머징 CVPR 주제 제안 - SFT vs DFT 1epoch 비교 실험 결과 공유"
+  - thread_ts: '1763036400.000000'
+    date: '2025-10-13'
+    reply_count: 27
+    text_preview: "Claude Code Builder Hackathon (Anthropic·SKT 공동) 참가 안내 - 11월 3일 코엑스"
+  - thread_ts: '1763524400.000000'
+    date: '2025-10-16'
+    reply_count: 40
+    text_preview: "PaddleOCR-VL 0.9B SOTA VL 모델 공개 - 성능 및 활용 가능성 토론"
+  - thread_ts: '1761014957.000000'
+    date: '2025-10-28'
+    reply_count: 4
+    text_preview: "Deepseek OCR + Cohere Embed v4 멀티모달 임베딩 RAG 데모 공유"
+  - thread_ts: '1763976540.000000'
+    date: '2025-10-23'
+    reply_count: 24
+    text_preview: "Purpose-built reranker가 LLM(Claude, GPT-5, Gemini)보다 정확도·속도·비용 면에서 우수"
+terminology:
+  - term: "RAE"
+    definition: "Regularized Auto-Encoder - k-NN 관계를 보존하는 신경망 기반 차원 축소 기법"
+    aliases: []
+    context: "고차원 임베딩 벡터를 저차원으로 줄이면서 k-NN 관계를 직접 최적화"
+  - term: "ColBERT"
+    definition: "다중 벡터(multi-vector) 방식의 밀집 검색 모델"
+    aliases: []
+    context: "Needle in a Haystack 비교 실험, LFM2-ColBERT 등에서 언급"
+  - term: "ExpandSearch"
+    definition: "RLVR 기반 LLM 검색 에이전트로 쿼리 확장(expand)과 압축(squeeze)을 수행"
+    aliases: []
+    context: "단일 쿼리 임베딩의 한계를 극복하기 위해 다중 쿼리 변형을 생성"
+  - term: "HUME"
+    definition: "Human-grounded Multilingual Embedding benchmark - 인간 평가 기반 임베딩 벤치마크"
+    aliases: []
+    context: "MTEB 16개 데이터셋에서 인간과 임베딩 모델을 동일 조건으로 비교"
+  - term: "MiniMax M2"
+    definition: "229A10B 파라미터의 MoE 구조 오픈소스 모델로 오픈소스 SOTA 달성"
+    aliases: []
+    context: "10월 가중치 공개, 작문 벤치에서 우수한 성능"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

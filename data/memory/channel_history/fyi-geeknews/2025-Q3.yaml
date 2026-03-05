@@ -1,0 +1,75 @@
+channel:
+  id: C057PUSB1S8
+  name: fyi-geeknews
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 971
+  total_threads: 169
+  active_users: 13
+  avg_messages_per_day: 10.4
+summary: |
+  2025년 3분기에는 AI 모델 발전이 지속되면서 동시에 AI에 대한 비판적 시각도 강화되었다.
+  Claude Sonnet 4.5, Claude Code 2.0, Sora 2, DeepSeek-V3.2, Qwen3-VL, Qwen3-Omni 등
+  다수의 AI 모델이 출시되었다. "이해 부채(Understanding Debt)" 개념이 등장하여 LLM이 생성한 코드의
+  유지보수 문제가 주요 화두로 떠올랐고, "바이브 코딩 청소 서비스"라는 새로운 비즈니스까지 등장했다.
+  보안 분야에서는 PyPI 피싱 공격, Rust crates.io 악성 패키지 등 공급망 보안 이슈가 지속되었다.
+  Sigrid Jin님의 일본 진출 가이드(한일 비즈니스 차이점 11가지), PayPay Java->Rust 전환 사례,
+  Candle(Rust ML 프레임워크) 소개 등이 주목을 받았다. 로컬-퍼스트 앱, 소프트웨어 엔지니어링의
+  "좋은 취향" 등 개발 철학에 대한 깊은 논의도 이루어졌다.
+topics:
+  - AI 모델 대거 출시 (Claude Sonnet 4.5, Claude Code 2.0, Sora 2, Qwen3-VL/Omni)
+  - AI 코딩의 부작용 (이해 부채, 바이브 코딩 청소 서비스)
+  - 공급망 보안 (PyPI 피싱, crates.io 악성 패키지)
+  - 글로벌 비즈니스 (일본 진출 가이드)
+  - 프로그래밍 언어 (Rust 전환 사례, Zig vs Rust, Python 컴파일)
+  - 개발 철학 (로컬-퍼스트, 좋은 취향, 소프트웨어 엔지니어링 문화)
+  - 인프라 (AWS S3 HDD 위 페타바이트 처리, Kubernetes)
+key_discussions:
+  - thread_ts: '1758762654.482249'
+    date: '2025-09-25'
+    topic: '로컬-퍼스트 앱이 대중화되지 않은 이유'
+    summary: '로컬-퍼스트 아키텍처의 한계와 가능성에 대한 심층 토론 (6개 답글)'
+  - thread_ts: '1758682977.201949'
+    date: '2025-09-24'
+    topic: '아흔 살에 깨달은 아홉 가지'
+    summary: '인생과 커리어에 대한 깊은 성찰 공유 (5개 답글)'
+  - thread_ts: '1758854825.835199'
+    date: '2025-09-26'
+    topic: 'Qwen3-VL 모델 공개'
+    summary: '멀티모달 AI 모델의 진화에 대한 기술 토론 (5개 답글)'
+  - thread_ts: '1759027735.234009'
+    date: '2025-09-28'
+    topic: 'Moondream 3 프리뷰'
+    summary: '최첨단 수준의 추론을 혁신적인 속도로 구현한 모델에 대한 논의 (4개 답글)'
+  - thread_ts: '1758683382.751509'
+    date: '2025-09-24'
+    topic: 'Candle - Rust ML 프레임워크'
+    summary: 'Sigrid Jin님의 HuggingFace Candle 소개와 Rust ML 생태계 논의 (3개 답글)'
+  - thread_ts: '1758766737.385129'
+    date: '2025-09-25'
+    topic: '바이브 코딩 청소 서비스의 등장'
+    summary: 'AI 생성 코드의 품질 문제로 인한 새로운 비즈니스 모델 등장에 대한 토론'
+terminology:
+  - term: "이해 부채"
+    definition: "Understanding Debt. LLM이 생성한 코드를 개발자가 충분히 이해하지 못한 채 사용함으로써 발생하는 기술 부채"
+    aliases: ["Understanding Debt"]
+  - term: "Claude Sonnet 4.5"
+    definition: "Anthropic의 2025년 3분기 출시 AI 모델"
+    aliases: []
+  - term: "Claude Code 2.0"
+    definition: "Anthropic의 CLI 기반 AI 코딩 도구 2.0 버전"
+    aliases: []
+  - term: "Sora 2"
+    definition: "OpenAI의 차세대 비디오/오디오 생성 모델"
+    aliases: []
+  - term: "Candle"
+    definition: "HuggingFace에서 개발한 Rust 기반 ML 프레임워크. 경량 추론에 적합"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

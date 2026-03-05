@@ -1,0 +1,30 @@
+channel:
+  id: C072DC93ZV2
+  name: project-logicjp
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 6.0
+summary: |
+  Logic JP(일본) 프로젝트 채널 개설 및 초기 셋업. project-logic-ja 채널 참조 언급.
+  최소한의 활동으로 채널 구성 및 멤버 초대 진행. 6개 메시지, 4명 참여.
+topics:
+  - Logic JP 프로젝트 채널 개설
+  - 일본 프로젝트 협업
+key_discussions:
+  - topic: 채널 개설 및 초기 구성
+    participants: []
+    summary: project-logicjp 채널 생성 및 project-logic-ja 채널과의 관계 설정
+terminology:
+  - term: Logic JP
+    definition: 일본(Japan) 대상 Logic 프로젝트. project-logic-ja 채널과 연관된 일본 시장 프로젝트
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

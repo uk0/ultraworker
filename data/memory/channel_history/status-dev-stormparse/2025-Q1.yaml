@@ -1,0 +1,40 @@
+channel:
+  id: C083RLRDERG
+  name: status-dev-stormparse
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8254
+  total_threads: 2
+  active_users: 7
+  avg_messages_per_day: 412.7
+summary: |
+  2025년 1분기 StormParse 상태 채널에서는 하루 평균 412건에 달하는 대규모 Storm Parse Alert가 연속 발생하였다.
+  특히 1월 초 단 몇 분 사이에 수백 건의 알림이 집중적으로 쏟아지는 이상 현상이 반복되었으며, 팀원이 이모지로 확인 반응을 남기는 상황이 이어졌다.
+  8,254건이라는 압도적인 메시지 수는 StormParse 서비스의 심각한 불안정 상태 또는 모니터링 알림 루프 버그가 발생했음을 강하게 시사한다.
+topics:
+  - name: "Storm Parse Alert 대규모 발생"
+    mention_count: 8247
+    description: "StormParse 서비스 모니터링 알림이 분기 전체에 걸쳐 대량 발생"
+  - name: "알림 이상 현상"
+    mention_count: 5
+    description: "단시간 수백 건 집중 발생하는 알림 루프 또는 서비스 불안정 현상"
+key_discussions:
+  - thread_ts: '1735878000.000000'
+    date: '2025-01-03'
+    reply_count: 1
+    text_preview: "1월 3일 단 1분 내 100건 이상 Storm Parse Alert 집중 발생 - 팀원 이모지 확인"
+terminology:
+  - term: "Storm Parse Alert"
+    definition: "StormParse 서비스 모니터링 이상 감지 시 발송되는 자동 알림"
+  - term: "StormParse"
+    definition: "Sionic AI STORM 플랫폼의 파싱 서비스"
+  - term: "Sionic Monitoring"
+    definition: "Sionic AI 내부 서비스 모니터링 봇 (B083U6XPMUL)"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

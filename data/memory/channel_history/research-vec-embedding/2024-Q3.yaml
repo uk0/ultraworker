@@ -1,0 +1,54 @@
+channel:
+  id: C07MK1QMWV6
+  name: research-vec-embedding
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 29
+  total_threads: 13
+  active_users: 6
+  avg_messages_per_day: 3.6
+summary: |
+  2024-Q3에 research-vec-embedding 채널이 처음 개설되었으며, 벡터 임베딩 성능 향상을 목표로 한국어 특화 임베딩 모델 연구가 시작되었다. 주요 방향으로 임베딩 모델 백본 개선(Hard Negative Mining 기반 한국어 파인튜닝)과 고객 맞춤형 Reranker 파인튜닝 두 가지 축이 정의되었다. 9월에는 Jina Embeddings V3 dev 배포, ANCE·BGE-M3·E5 모델 비교 리뷰, 한국어 RAG 벤치마크 데이터 구축 논의가 이루어졌다.
+topics:
+  - name: "채널 개설 및 연구 방향 정의"
+    mention_count: 5
+    description: "임베딩 모델 백본 개선과 고객 맞춤형 리랭커 파인튜닝 두 축으로 연구 방향 정의"
+  - name: "Hard Negative Mining 초기 설계"
+    mention_count: 8
+    description: "BM25 필터링 후 Dense Retrieval 결합 HNM 방법론 설계, kowiki-tq 데이터셋 기반 실험 계획"
+  - name: "한국어 RAG 벤치마크 구축"
+    mention_count: 5
+    description: "HotpotQA 유사 한국어 멀티홉 평가 데이터셋 구축, 내부 테스트 데이터 활용 방안 논의"
+  - name: "최신 임베딩 모델 리뷰"
+    mention_count: 6
+    description: "Jina Embeddings V3 dev 배포, ANCE·BGE-M3·E5·MiniCPM 임베딩 성능 비교"
+key_discussions:
+  - thread_ts: '1726017600.000000'
+    date: '2024-09-11'
+    reply_count: 24
+    text_preview: "채널 개설 및 연구 방향 논의: 임베딩 백본 개선 vs. 리랭커 파인튜닝 두 축 정의"
+  - thread_ts: '1726019880.000000'
+    date: '2024-09-11'
+    reply_count: 21
+    text_preview: "석현님의 임베딩/리랭커 연구 방향 정리: 한국어 특화 모델 개발 및 고객 맞춤형 리랭커"
+  - thread_ts: '1727666880.000000'
+    date: '2024-09-30'
+    reply_count: 13
+    text_preview: "MiniCPM 한국어 백본 가능성 논의, NV-Retriever HNM 강조 리뷰"
+terminology:
+  - term: "HNM(Hard Negative Mining)"
+    definition: "임베딩 학습 시 모델이 구분하기 어려운 유사 문서를 네거티브 샘플로 선택하는 데이터 구성 기법"
+  - term: "Reranker"
+    definition: "1차 검색 결과를 재정렬하여 정확도를 높이는 모델. 고객 도메인에 맞춰 파인튜닝하여 사용"
+  - term: "bge-m3"
+    definition: "BAAI에서 공개한 다국어 다기능 임베딩 모델. 한국어 임베딩 연구의 주요 베이스라인으로 활용"
+  - term: "solbakk"
+    definition: "사이오닉의 임베딩 연구용 GitHub 레포지토리로 HNM 실험 코드 관리"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

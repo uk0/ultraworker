@@ -1,0 +1,74 @@
+channel:
+  id: C09L4D5N2MU
+  name: storm-guide
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 49
+  total_threads: 27
+  active_users: 18
+  avg_messages_per_day: 2.3
+summary: |
+  2025년 4분기 storm-guide 채널은 STORM 제품의 가이드라인 개편 및 다국어(한국어, 영어, 일본어) 번역 검수를 중심으로 활발히 운영되었다.
+  10월에 STORM 가이드라인 전체 개편이 완료되어 Apidog 기반으로 공개 배포되었으며, 과금 페이지, 채널 연동, 노드 설명, 변수 선언 등 주요 섹션의 보완 작업이 진행되었다.
+  11월과 12월에는 Teams 채널 연동 가이드, 보고서 작성 템플릿 등 신규 콘텐츠의 영어 및 일본어 번역 기계번역 후 검수 작업이 반복적으로 진행되었다.
+topics:
+  - name: "STORM 가이드라인 개편"
+    mention_count: 15
+    description: "전체 제품 가이드 재작성 및 Apidog 기반 공개 배포"
+  - name: "다국어 번역 검수"
+    mention_count: 12
+    description: "영어(en) 및 일본어(ja) 기계번역본 검수 및 수정 요청"
+  - name: "노드 설명 보완"
+    mention_count: 6
+    description: "API 노드, 변수 선언과 할당, 후처리 등 노드별 상세 설명 추가"
+  - name: "채널 연동 가이드"
+    mention_count: 5
+    description: "Teams 채널 연동 가이드 작성 및 다국어 번역"
+  - name: "과금 안내 업데이트"
+    mention_count: 4
+    description: "새 과금 정책에 맞춘 가이드 과금 페이지 수정"
+  - name: "보고서 작성 템플릿"
+    mention_count: 3
+    description: "보고서 작성 템플릿 가이드 및 다국어 번역"
+key_discussions:
+  - thread_ts: '1760425200.000000'
+    date: '2025-10-14'
+    reply_count: 32
+    text_preview: "가이드 과금 페이지 새 버전 교체 논의 - 일본/한국 버전 구분 필요"
+  - thread_ts: '1760481600.000000'
+    date: '2025-10-14'
+    reply_count: 29
+    text_preview: "가이드 전반 피드백 수렴 - 모델 파인튜닝 페이지 포함 여부"
+  - thread_ts: '1760558400.000000'
+    date: '2025-10-15'
+    reply_count: 12
+    text_preview: "STORM 가이드 영어/일본어 번역 담당자 배정 및 데드라인 협의"
+  - thread_ts: '1761816800.000000'
+    date: '2025-10-20'
+    reply_count: 5
+    text_preview: "STORM 콘솔 가이드 링크 업데이트 - 파트너사 가이드에 합산 예정"
+  - thread_ts: '1762416000.000000'
+    date: '2025-10-27'
+    reply_count: 7
+    text_preview: "영어/일본어 번역 검수 현황 체크 - feature guide 노드 설명 보완 예정"
+  - thread_ts: '1762502400.000000'
+    date: '2025-10-27'
+    reply_count: 18
+    text_preview: "일본어 과금 페이지 한국버전 사용 불가 - 일본 버전 별도 작성 요청"
+terminology:
+  - term: "STORM"
+    definition: "사이오닉AI의 AI 워크플로우 플랫폼 제품명"
+  - term: "Apidog"
+    definition: "STORM 가이드 문서를 호스팅하는 API 문서화 플랫폼"
+  - term: "Teams 채널 연동"
+    definition: "Microsoft Teams와 STORM 플랫폼 간의 채널 연동 기능"
+  - term: "노드"
+    definition: "STORM 워크플로우 에디터의 기본 구성 단위"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

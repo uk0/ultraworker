@@ -1,0 +1,61 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 24
+  total_threads: 12
+  active_users: 8
+  avg_messages_per_day: 1.3
+summary: |
+  2024년 2분기에 Organize v1의 구체적인 형상이 피그마 기획으로 정리되었고, Vision LLM을 활용한 표/이미지 변환 테스트가 본격화되었다. 표를 마크다운으로 변환한 뒤 자연어로 재변환하는 2단계 파이프라인이 수립되었으며, 라마 파서를 활용한 버전 개발이 결정되었다.
+  정세민(Sem)이 VisionLLM 기반 Organize 테스트를 수행하여 그래프/표 재구성 가능성을 확인했으나, GPT-4V/Claude 수준에서는 안정적 사용이 어려운 것으로 평가되었다. ClovaOCR의 높은 성능도 확인되었다. Organize v1 토글을 Answer 내부 계정에 넣는 개발이 결정되었고, 스타게이트 연동이 필수적인 것으로 파악되었다.
+topics:
+  - Organize v1 화면 기획 (피그마)
+  - VisionLLM 기반 표/이미지 변환 테스트
+  - 마크다운 표 → 자연어 변환 프롬프트
+  - 라마 파서 활용 개발 결정
+  - Answer 연동 토글 개발
+  - 비용 분석 (장당 비용)
+key_discussions:
+  - thread_ts: '1712656850.415769'
+    date: '2024-04-09'
+    reply_count: 104
+    text_preview: '형찬님과 Organize 파싱 방식 구현 가능성 체크'
+  - thread_ts: '1717995168.487149'
+    date: '2024-06-10'
+    reply_count: 86
+    text_preview: 'Organize 테스트 - 에이전트에 문서 등록 절차 논의'
+  - thread_ts: '1712856438.043159'
+    date: '2024-04-11'
+    reply_count: 52
+    text_preview: 'Vision 모델 활용 표/그래프 재구성 - PDF 텍스트 vs Vision 변환 비교'
+  - thread_ts: '1717052955.361009'
+    date: '2024-05-30'
+    reply_count: 42
+    text_preview: '이미지 영역 구분 모듈 아이디어 - Vision 기반 텍스트 변환'
+  - thread_ts: '1718247483.865609'
+    date: '2024-06-13'
+    reply_count: 33
+    text_preview: '마크다운 표를 자연어로 바꾸는 프롬프트 최종본 정리'
+terminology:
+  - term: VisionLLM
+    definition: '이미지를 입력받아 텍스트로 변환하는 비전 언어 모델. GPT-4V, Claude Vision 등'
+  - term: 라마 파서
+    definition: 'LlamaParse. PDF 문서를 구조화된 텍스트로 변환하는 파서'
+    aliases: ['LlamaParse']
+  - term: 스타게이트
+    definition: 'Sionic의 AI 인프라 플랫폼. 모델 서빙 및 API 관리'
+    aliases: ['Stargate', 'SG']
+  - term: ClovaOCR
+    definition: '네이버 클로바의 OCR 서비스. 비싸지만 한국어 문서 인식 성능이 우수'
+  - term: trOCR
+    definition: 'OCR + 표 파싱 기능을 제공하는 오픈소스 레포지토리. Organize 백본 아키텍처 후보'
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

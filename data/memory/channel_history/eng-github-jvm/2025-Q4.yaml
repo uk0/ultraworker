@@ -1,0 +1,49 @@
+channel:
+  id: C08LAM5H9AT
+  name: eng-github-jvm
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 101
+  total_threads: 46
+  active_users: 2
+  avg_messages_per_day: 2.8
+summary: |
+  2025년 4분기 eng-github-jvm 채널은 JVM 기반 프로젝트(주로 carrier 저장소)의 GitHub Pull Request 및 코드 리뷰 알림을 수신하는 채널로, 주로 한 명의 개발자(U06BLM250QG)가 주도적으로 활동하였다.
+  10월부터 12월까지 꾸준히 PR 생성, 리뷰, 병합 알림이 발생하였으며, 12월 16일에는 30개 답글이 달린 대형 PR 리뷰 스레드가 진행되었다.
+  연말로 갈수록 PR 활동이 지속되었으며, GitHub 봇을 통한 자동 알림 방식으로 운영되었다.
+topics:
+  - name: "Pull Request 알림"
+    mention_count: 46
+    description: "GitHub carrier 저장소의 PR 생성 및 업데이트 알림"
+  - name: "코드 리뷰"
+    mention_count: 20
+    description: "PR에 대한 코드 리뷰 댓글 및 승인 알림"
+  - name: "PR 병합"
+    mention_count: 15
+    description: "PR 병합 완료 알림"
+key_discussions:
+  - thread_ts: '1765000000.000000'
+    date: '2025-12-16'
+    reply_count: 30
+    text_preview: "대규모 PR 리뷰 - 30개 답글이 달린 주요 코드 변경 논의"
+  - thread_ts: '1760400000.000000'
+    date: '2025-10-14'
+    reply_count: 12
+    text_preview: "10월 중순 주요 PR 리뷰 - 12개 답글"
+  - thread_ts: '1764000000.000000'
+    date: '2025-12-26'
+    reply_count: 12
+    text_preview: "연말 PR 리뷰 - 12개 답글"
+terminology:
+  - term: "carrier"
+    definition: "사이오닉AI의 JVM(Kotlin+Spring) 기반 백엔드 서비스 저장소"
+  - term: "eng-github-jvm"
+    definition: "JVM 생태계 GitHub 활동(PR, 코드리뷰)을 모니터링하는 엔지니어링 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

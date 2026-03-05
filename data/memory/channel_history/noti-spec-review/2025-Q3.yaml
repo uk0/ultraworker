@@ -1,0 +1,98 @@
+channel:
+  id: C06HUFQ8EKA
+  name: noti-spec-review
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 10
+  active_users: 2
+  avg_messages_per_day: 1.2
+summary: |
+  2025년 Q3에는 Storm APIs 플랫폼 구축, Carrier 고도화, 결제 시스템 도입이 주요 테마였다.
+  Storm APIs 프로젝트에서 Phase 1 초기 개발 및 데모 교체, Storm APIs 연동 스펙이 등록되어
+  새로운 API 플랫폼 구축이 시작되었다. Carrier에서는 변수 할당 노드 개발, 디버그 기능(노드별
+  실행/에러 정보 구체화) 등 워크플로우 고도화 스펙이 공유되었다. Pylon에서는 Gemini
+  Embedding 추가, 공용버킷 검색 로직 분리, 공용버킷 피드백 지원, 파일런 레시피 처리
+  리팩토링(YAML 구조 개선) 등이 다루어졌다. 결제 인프라로는 토스페이먼츠 기반 결제 서버
+  구축 스펙이 등록되었으며, 드라군 v2 API 명세가 160개 답글로 가장 활발한 논의를 이끌었다.
+  이 시기에는 활동 참여자 수가 감소(2명)하였으나 개별 스레드의 토론 깊이는 유지되었다.
+topics:
+  - Storm APIs Phase 1 초기 개발 및 데모 교체
+  - Storm APIs 연동
+  - Carrier 변수 할당 노드 개발
+  - Carrier 디버그 기능
+  - Pylon Gemini Embedding 추가
+  - 공용버킷 검색 로직 분리 및 피드백 지원
+  - 토스페이먼츠 결제 서버 구축
+  - 드라군 v2 API 명세
+  - 파일런 레시피 처리 리팩토링
+key_discussions:
+  - thread_ts: '1753791079.575879'
+    date: '2025-07-29'
+    title: '드라군 v2 API 명세'
+    summary: '드라군 stateless 요청/응답 및 재시도 기능. 160개 답글.'
+    reply_count: 160
+  - thread_ts: '1755753183.025009'
+    date: '2025-08-21'
+    title: '결제 서버 (토스페이먼츠)'
+    summary: 'Storm 플랫폼 크레딧 충전을 위한 결제 서버 구현. 25개 답글.'
+    reply_count: 25
+  - thread_ts: '1752814668.194639'
+    date: '2025-07-18'
+    title: '[storm-apis] Phase 1 초기 개발 & 데모 교체'
+    summary: 'storm-apis 초기 개발 및 기존 데모 교체. 20개 답글.'
+    reply_count: 20
+  - thread_ts: '1752678927.788459'
+    date: '2025-07-16'
+    title: 'Pylon Gemini Embedding 추가'
+    summary: 'Pylon에 Gemini Embedding 모델 추가. 20개 답글.'
+    reply_count: 20
+  - thread_ts: '1753758484.416699'
+    date: '2025-07-29'
+    title: '변수 할당 노드 개발'
+    summary: '분기 플로우에서 동일 변수를 하나에 할당하여 효율화. 15개 답글.'
+    reply_count: 15
+  - thread_ts: '1751473863.218009'
+    date: '2025-07-02'
+    title: '공용버킷 검색 로직 분리'
+    summary: '공용버킷 검색 로직을 별도 분리. 13개 답글.'
+    reply_count: 13
+  - thread_ts: '1756717234.639639'
+    date: '2025-09-01'
+    title: 'Storm APIs 연동'
+    summary: 'Storm APIs Manager Phase 1 연동 스펙. 6개 답글.'
+    reply_count: 6
+  - thread_ts: '1758001301.511389'
+    date: '2025-09-16'
+    title: '캐리어 디버그 기능'
+    summary: '노드별 실행/에러 정보 구체화. 6개 답글.'
+    reply_count: 6
+  - thread_ts: '1754580405.844919'
+    date: '2025-08-07'
+    title: '파일런 레시피 처리 리팩토링'
+    summary: 'YAML 구조 관련 리팩토링. 6개 답글.'
+    reply_count: 6
+terminology:
+  - term: "Storm APIs"
+    definition: "Sionic AI의 새로운 API 플랫폼. 기존 데모를 대체하는 통합 API 서비스."
+    aliases: ["storm-apis"]
+  - term: "드라군"
+    definition: "Sionic AI의 내부 서비스. v2에서 stateless 구조로 전환."
+    aliases: ["Dragoon"]
+  - term: "토스페이먼츠"
+    definition: "토스 결제 서비스. Storm 플랫폼 크레딧 충전에 사용."
+    aliases: ["TossPayments"]
+  - term: "Gemini Embedding"
+    definition: "Google Gemini의 임베딩 모델. Pylon에 추가 지원."
+    aliases: []
+  - term: "공용버킷"
+    definition: "여러 에이전트가 공유하는 문서 버킷. 검색 로직 분리 및 피드백 지원 논의."
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

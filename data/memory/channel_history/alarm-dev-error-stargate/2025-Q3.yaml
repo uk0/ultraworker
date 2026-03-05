@@ -1,0 +1,40 @@
+channel:
+  id: C07GDDBPGJU
+  name: alarm-dev-error-stargate
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 1228
+  total_threads: 3
+  active_users: 2
+  avg_messages_per_day: 26.7
+summary: |
+  2025-Q3 기간 동안 Stargate 개발 환경 에러 알림 채널의 활동이 크게 감소하여 하루 평균 26.7건으로 줄었으며, 참여 인원도 2명에 불과하였다. 주요 오류 유형으로는 Pylon에서 발생하는 문서 생성 실패(CREATE_DOCUMENT_PROCESS_ERROR)와 PDF 파싱 오류(unstructured-io 관련)가 관측되었으며, GraphRAG 관련 문서 파싱 오류도 포함되어 있었다. 이전 분기 대비 오류 수가 절반 이하로 감소하여 시스템 안정성이 개선된 것으로 보인다.
+topics:
+  - name: "문서 생성 오류"
+    mention_count: 15
+    description: "PDF 파싱 실패로 인한 CREATE_DOCUMENT_PROCESS_ERROR, unstructured-io 파싱 오류 포함"
+  - name: "GraphRAG 관련 오류"
+    mention_count: 5
+    description: "GraphRAG 관련 문서 파싱(Cultural Anthropology 등 대용량 PDF) 처리 중 오류 발생"
+key_discussions:
+  - thread_ts: '1751637600.000000'
+    date: '2025-07-04'
+    reply_count: 0
+    text_preview: "FROM_PYLON 문서 생성 실패 - Cultural_Anthropology PDF unstructured-io 파싱 오류"
+terminology:
+  - term: "CREATE_DOCUMENT_PROCESS_ERROR"
+    definition: "Pylon이 문서를 생성하는 과정에서 파싱 또는 처리 실패 시 반환하는 오류 코드"
+    aliases: []
+    context: "주로 unstructured-io 파싱 실패 또는 파일 형식 오류 시 발생"
+  - term: "unstructured-io"
+    definition: "비정형 문서(PDF 등)를 파싱하는 외부 서비스"
+    aliases: ["usio"]
+    context: "문서 업로드 시 PDF 텍스트 추출에 사용"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

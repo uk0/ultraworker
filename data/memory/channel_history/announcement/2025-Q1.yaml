@@ -1,0 +1,79 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 89
+  total_threads: 61
+  active_users: 11
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 1분기 announcement 채널은 주로 조직 운영, 신규 입사자 온보딩, 연말정산, 테크세미나 일정 공유 등 전사 공지 중심으로 운영되었다.
+  신규 입사자 3명(김수진 PM, 양호진 ML Backend, 강성우 ML Backend)이 합류하였고, 연말정산은 세무기장업체 '리채'를 통해 2월 초~중순에 진행되었다.
+  테크세미나는 매주 목요일 14시에 정기 운영되며, 주제는 자기소개/Research Engineering Tutorial/Late Chunking/Manus·MCP 소개 등 다양하게 진행되었다.
+  사이오닉 배포 시스템 소개, 전략·액션아이템 발표(중기 마일스톤) 등 조직 전략 관련 논의도 활발했다.
+  Claude 팀 플랜 구독 시작, LilysAI 서비스 도입, 1Password 비즈니스 플랜 마이그레이션, 피그마 Seat 정리 등 사내 IT 도구 관련 변경이 다수 있었다.
+  연봉 협상(2024/10 이전 입사자 대상, 3월 소급 적용), 조직건강성 측정 설문, Grafana 개인 계정 배부 등 HR·인프라 이슈도 포함되었다.
+  파일론(Pylon)과 서플라이(Supply) 설명자료가 비전문가용으로 공유되었고, 글로벌(일본) 진출 전략에 대한 전사 논의가 시작되었다.
+topics:
+  - 신규 입사자 온보딩
+  - 연말정산
+  - 테크세미나 운영
+  - Claude 팀 플랜 구독
+  - 1Password 마이그레이션
+  - 피그마 Seat 정리
+  - 중기 전략 및 액션아이템
+  - 글로벌(일본) 진출 전략
+  - 배포 시스템 소개
+  - 조직건강성 측정
+  - 연봉 협상
+  - LilysAI 도입
+key_discussions:
+  - thread_ts: '1742365131.476979'
+    date: '2025-03-19'
+    reply_count: 88
+    text_preview: '환영 회식 날짜 투표 - 혜선님 승희님 환영회 일정 조율'
+  - thread_ts: '1742564630.755189'
+    date: '2025-03-21'
+    reply_count: 15
+    text_preview: 'Claude 팀 플랜 구독 안내 및 초대 요청'
+  - thread_ts: '1742560397.624569'
+    date: '2025-03-21'
+    reply_count: 13
+    text_preview: '파일론과 서플라이 비전문가 버전 설명 공유(Figma 보드)'
+  - thread_ts: '1741669525.150489'
+    date: '2025-03-11'
+    reply_count: 21
+    text_preview: '중기 전략 및 액션아이템 발표 안내 - 석현님 발표 예정'
+  - thread_ts: '1736253048.777889'
+    date: '2025-01-07'
+    reply_count: 16
+    text_preview: 'LilysAI 서비스 구독 안내 - 유튜브/PDF/웹사이트 요약 서비스'
+  - thread_ts: '1735805989.170649'
+    date: '2025-01-02'
+    reply_count: 13
+    text_preview: '2025 조직건강성 측정 설문 안내 (1/2~1/7)'
+terminology:
+  - term: "LilysAI"
+    definition: "유튜브, PDF, 웹사이트 등의 정보를 요약해주는 AI 서비스. 팀 계정으로 구독 중"
+    aliases: ["릴리스AI"]
+  - term: "파일론(Pylon)"
+    definition: "사이오닉의 핵심 제품 중 하나. 문서 처리/파싱 관련 엔진"
+    aliases: ["Pylon"]
+  - term: "서플라이(Supply)"
+    definition: "사이오닉의 핵심 제품 중 하나. RAG/검색 관련 서비스"
+    aliases: ["Supply"]
+  - term: "Steering Embedding"
+    definition: "임베딩 방향을 조정하는 기술. 테크세미나에서 도균님이 발표"
+    aliases: []
+  - term: "Late Chunking"
+    definition: "임베딩을 위한 청킹 전략. CLS chunking과 함께 리서치팀에서 연구 중"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

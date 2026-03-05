@@ -1,0 +1,30 @@
+channel:
+  id: C07KHG3C8N6
+  name: sig-육아
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:30:09'
+statistics:
+  total_messages: 5
+  total_threads: 3
+  active_users: 3
+  avg_messages_per_day: 0.1
+key_discussions:
+- thread_ts: '1770160593.069939'
+  date: '2026-02-04'
+  reply_count: 7
+  text_preview: 9 개월 11.5kg
+- thread_ts: '1770283538.446479'
+  date: '2026-02-05'
+  reply_count: 2
+  text_preview: 코검사받고 한바탕 울은자
+- thread_ts: '1769684243.470129'
+  date: '2026-01-29'
+  reply_count: 2
+  text_preview: 모자 놓고 온 자
+metadata:
+  created_at: '2026-02-13T16:30:09'
+  synced_by: sync_fast.py

@@ -1,0 +1,47 @@
+channel:
+  id: C07GMQK7V8W
+  name: alarm-dev-error-asmr
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 314
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 9.2
+summary: |
+  2025년 3분기 alarm-dev-error-asmr 채널은 ASMR 서비스의 OpenLLM API 오류 알림이 자동으로 기록되었다.
+  7월부터 9월까지 봇(B07GUASCS91)이 지속적으로 "Openllm API Error" 메시지를 전송하였으며, 특히 8월 18일과 9월 10일, 9월 30일에 집중적인 에러 폭발이 발생하였다.
+  9월 15일에는 웹훅 통합의 과부하로 일부 메시지가 Slack에 의해 자동으로 필터링되는 현상도 관측되었다.
+  스레드 수가 2개에 불과해 대부분의 오류가 개별 알림으로 처리되었고 별도 조치 논의는 최소화되었다.
+topics:
+  - name: "OpenLLM API 오류"
+    mention_count: 310
+    description: "ASMR 서비스의 OpenLLM API 호출 실패 알림이 반복적으로 발생"
+  - name: "Slack 웹훅 속도 제한"
+    mention_count: 1
+    description: "과도한 알림 빈도로 Slack 웹훅에서 일부 메시지 필터링 발생"
+key_discussions:
+  - thread_ts: '1757205598.000000'
+    date: '2025-09-10'
+    reply_count: 1
+    text_preview: "Openllm API Error - 9월 10일 대규모 오류 집중 발생"
+  - thread_ts: '1753619368.000000'
+    date: '2025-07-18'
+    reply_count: 8
+    text_preview: "Openllm API Error - 7월 18일 오류 발생 스레드"
+terminology:
+  - term: "ASMR"
+    definition: "Sionic AI의 LLM API 서비스로, OpenLLM 기반의 다중 모델 제공 플랫폼"
+    aliases: ["open-llm-dev", "OpenLLM"]
+    context: "ASMR 서비스의 API 에러 알림 채널"
+  - term: "Openllm API Error"
+    definition: "ASMR 서비스에서 LLM API 요청이 실패했을 때 발생하는 자동화 알림 메시지"
+    aliases: []
+    context: "봇에 의해 자동으로 채널에 포스팅됨"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

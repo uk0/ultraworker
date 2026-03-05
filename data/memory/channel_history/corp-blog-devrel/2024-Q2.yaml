@@ -1,0 +1,76 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 27
+  total_threads: 12
+  active_users: 11
+  avg_messages_per_day: 1.3
+summary: |
+  2024년 2분기 corp-blog-devrel(당시 corp-blog) 채널은 기술 블로그 아티클 작성과 일본어 번역, AI/ML 연구 동향 공유가 활발히 이루어진 분기였다.
+  4월에는 블로그 페이지 리뉴얼(카테고리별 메뉴, 아티클 소스/뷰 분리, YAML 프론트매터 도입), EO 미디어와의 협업 가능성 논의, 블로그 Description 일본어 업데이트 등이 진행되었다.
+  5월에는 LLM 사전학습과 인스트럭션 튜닝 간의 할루시네이션 관계에 관한 논문, 도메인 적응형 사전학습 논문, 트랜스포머 산술 능력 향상 논문 등이 공유되었다.
+  6월에는 CUDA 토크나이저 관련 아티클 일본어 번역 및 GEC(문법 오류 교정) 아티클 발행이 이루어졌다.
+topics:
+  - name: "블로그 페이지 구조 개편"
+    mention_count: 5
+    description: "카테고리별 메뉴, 아티클 소스와 뷰 분리, YAML 프론트매터(cleanUrl, floatFirstTOC) 도입"
+  - name: "일본어 블로그 번역"
+    mention_count: 6
+    description: "CUDA 토크나이저, CICERO 데이터셋 등 기술 아티클의 일본어 번역 및 검수"
+  - name: "AI/ML 논문 및 기술 동향 공유"
+    mention_count: 8
+    description: "LLM 할루시네이션, 도메인 적응형 사전학습, 트랜스포머 산술 능력, RAG 출처 추적 등 최신 연구 공유"
+  - name: "EO 미디어 협업 가능성"
+    mention_count: 2
+    description: "EO 미디어와 기술 블로그 콘텐츠 재가공 협업 가능성 논의"
+  - name: "GEC 아티클 발행"
+    mention_count: 2
+    description: "GPT를 이용한 문법 오류 교정(GEC) 모델 관련 논문 4편 요약 아티클 발행"
+key_discussions:
+  - thread_ts: '1714186620.000000'
+    date: '2024-04-24'
+    reply_count: 4
+    text_preview: "블로그 페이지 카테고리별 메뉴 도입 및 피드백 요청"
+  - thread_ts: '1713566940.000000'
+    date: '2024-04-12'
+    reply_count: 11
+    text_preview: "EO AI 미디어와 기술 블로그 재가공 협업 가능성 논의"
+  - thread_ts: '1714621980.000000'
+    date: '2024-06-10'
+    reply_count: 45
+    text_preview: "CUDA C 토크나이저 아티클 초안 작성 및 일본어 번역 협조 요청"
+  - thread_ts: '1716168000.000000'
+    date: '2024-05-20'
+    reply_count: 1
+    text_preview: "사전학습과 인스트럭션 튜닝 할루시네이션 관련 논문 공유"
+  - thread_ts: '1717033800.000000'
+    date: '2024-05-30'
+    reply_count: 0
+    text_preview: "트랜스포머 산술 능력 향상 논문 - 숫자 위치 임베딩으로 100자리 덧셈 99% 정확도"
+terminology:
+  - term: "CUDA 토크나이저"
+    definition: "CUDA 기반 LLM 토크나이저에 관한 Sionic AI 기술 블로그 아티클"
+    aliases: ["CUDA C 토크나이저"]
+    context: "가장 인기 있는 블로그 포스팅 중 하나, 일본어 번역 진행"
+  - term: "GEC"
+    definition: "Grammar Error Correction, 문법 오류 교정 모델"
+    aliases: ["문법 오류 교정"]
+    context: "GPT를 활용한 GEC 모델 논문 4편 요약 아티클 발행"
+  - term: "EO 미디어"
+    definition: "국내 IT/스타트업 미디어 플랫폼"
+    aliases: ["EO"]
+    context: "Sionic AI 기술 블로그 콘텐츠 재가공 협업 가능성 논의"
+  - term: "RAG"
+    definition: "Retrieval Augmented Generation, 검색 증강 생성 기술"
+    aliases: []
+    context: "Context Cite 논문 - LLM 답변의 출처를 역추적하는 RAG 관련 기술"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

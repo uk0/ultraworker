@@ -1,0 +1,33 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 4
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 1.0
+summary: |
+  2024년 3분기는 채널 활동이 매우 적었던 시기로, 주요 논의는 Culture Amp과 같은 조직문화 평가 솔루션 도입 검토였다.
+  김혜원이 조직 문화 안정성 평가를 데이터 기반으로 수행하자는 제안을 했으며, 해당 스레드에서 13건의 활발한 토론이 이루어졌다.
+  신규 채널 참여자가 3명 있었으나 실질적 컬쳐 활동은 소강 상태였다.
+topics:
+  - 조직문화 평가 솔루션 도입 검토
+  - Culture Amp 플랫폼 논의
+key_discussions:
+  - thread_ts: '1727332886.086129'
+    date: '2024-09-26'
+    reply_count: 13
+    text_preview: Culture Amp 같은 솔루션을 통해 조직 문화 안정성 평가 등을 해보는 것은 어떨까요? 현재 조직의 상황을 데이터로 확인하면 개선이 필요한지 여부를 인지할 수 있을 것 같아서요
+terminology:
+  - term: "Culture Amp"
+    definition: "직원 피드백, 참여도, 성과 관리를 위한 조직문화 평가 SaaS 플랫폼"
+    context: "조직문화 안정성을 데이터 기반으로 평가하기 위한 도구로 검토됨"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

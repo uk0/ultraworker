@@ -1,0 +1,38 @@
+channel:
+  id: C08BX810ULC
+  name: request-for-research
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 1
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 2분기 request-for-research 채널은 활동이 소수였으며, Graph 기반 접근으로 리랭커의 지식 유사쌍과 hard negative를 마이닝하는 연구 아이디어가 제안되었다.
+  GraphRAG 세미나와 연계하여 그래프 구조를 통한 리랭커 학습 데이터 자동 생성 가능성에 대한 논의가 이루어졌다.
+topics:
+  - name: "Graph 기반 리랭커 데이터 마이닝"
+    mention_count: 3
+    description: "그래프 접근으로 리랭커 지식 유사쌍 및 hard negative 마이닝 아이디어 제안"
+key_discussions:
+  - thread_ts: '1745208480.000000'
+    date: '2025-04-21'
+    reply_count: 5
+    text_preview: "리랭커 튜닝의 어려움 언급, Graph RAG를 통한 지식 유사쌍 및 hard negative 마이닝 가능성 제안"
+terminology:
+  - term: "Hard Negative Mining"
+    definition: "임베딩/리랭커 학습 시 구별이 어려운 부정 샘플(hard negative)을 찾아 학습 효과를 높이는 기법"
+    aliases: []
+    context: "그래프 구조를 통해 자동으로 hard negative를 마이닝하는 아이디어"
+  - term: "Continual Learning"
+    definition: "기존 모델 지식을 유지하면서 새로운 데이터로 지속 학습하는 방법론"
+    aliases: []
+    context: "리랭커의 쉬운 continual learning 방법 부재가 연구 동기"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

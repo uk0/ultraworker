@@ -1,0 +1,43 @@
+channel:
+  id: C08HQET9BGA
+  name: sig-음악
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 29
+  total_threads: 4
+  active_users: 11
+  avg_messages_per_day: 2.6
+summary: |
+  2025년 3월 중순에 채널이 개설되어 멤버들이 본격적으로 참여하기 시작한 분기. 주로 유튜브 링크를 통해
+  좋아하는 음악을 공유하는 형태로 활동이 이루어짐. 이강욱, 권혜선(Jada), Sigrid Jin, 신희수, 김덕현(Dekay) 등이
+  출근송, 노동요, 추천곡 등을 활발히 공유함. J-Pop, 인디밴드, 비트박스, AJR 등 다양한 장르가 소개됨.
+  권혜선이 '오늘의 출근송' 시리즈를 시작하며 채널의 분위기를 조성함.
+topics:
+  - 출근송/노동요 공유
+  - 유튜브 음악 추천
+  - J-Pop 및 인디밴드
+  - 비트박스
+key_discussions:
+  - thread_ts: '1743131241.315649'
+    date: '2025-03-28'
+    reply_count: 5
+    text_preview: '권혜선 출근송 공유 - 썸네일은 무시해주세요'
+  - thread_ts: '1742462787.853819'
+    date: '2025-03-20'
+    reply_count: 2
+    text_preview: '정세민 음악 공유'
+terminology:
+  - term: "출근송"
+    definition: "출근길에 듣는 노래를 공유하는 채널 문화"
+    context: "권혜선이 주로 매일 아침 출근송을 공유하며 시작된 전통"
+  - term: "노동요"
+    definition: "업무 중 듣는 배경음악"
+    context: "재택근무나 사무실에서 듣는 음악을 공유할 때 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,69 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 173
+  total_threads: 133
+  active_users: 11
+  avg_messages_per_day: 3.0
+summary: |
+  2025년 1분기는 인프라 현대화와 OCI 마이그레이션이 본격적으로 추진된 시기였다. 이강욱이 합류하면서 배포 시스템 프로포절, corsair(커세어) 설계, ArgoCD 관리 체계화, istio ingress gateway 정비 등 플랫폼 엔지니어링 개선이 집중적으로 이루어졌다. 온프렘 클러스터 인증서 갱신, 노드 백업, velero 백업 솔루션 재설정 등 안정성 확보 작업이 진행되었다. OCI에 istio ingress gateway 설치, VCN 정리, Terraform 기반 인프라 관리가 추진되었다. Keycloak 배포 및 Casdoor에서 Keycloak으로 회귀가 결정되었다. IBK 대응을 위한 EFK 도입, Docker 이미지 레이어 최적화, 모델 파일 빌드 통합이 논의되었다. RabbitMQ 배포 방식 결정, Argo Workflow 도입 검토, 뉴렐릭 비용 관리, harbor 내부 이미지 풀 경로 최적화 등 운영 효율화가 다방면으로 이루어졌다. dev/live RDB를 OCI로 전환 완료하고, 스톰 플랫폼 인프라 스펙 산정이 진행되었다.
+topics:
+  - 배포 시스템 현대화 (ArgoCD, corsair, shuttle)
+  - OCI 마이그레이션 (istio, VCN, Terraform)
+  - 온프렘 클러스터 정비 (인증서, 백업, 포트포워딩 정리)
+  - IdP 전환 (Casdoor -> Keycloak)
+  - IBK 온프레미스 대응 (EFK, 이미지 최적화)
+  - 뉴렐릭 모니터링 운영
+  - RDB OCI 전환
+key_discussions:
+  - thread_ts: '1739369298.471359'
+    date: '2025-02-12'
+    title: harbor 내부 이미지 풀 경로 최적화
+    participants: [Noah(고석현)]
+    summary: 온프렘에서 harbor 이미지 풀 시 외부 공인 IP를 경유하는 문제 발견, 98개 답글
+  - thread_ts: '1741853430.361809'
+    date: '2025-03-13'
+    title: HTTP2 지원하기
+    participants: [이강욱]
+    summary: OCI LB에서 HTTP2 지원을 위한 인프라 구성 논의, 45개 답글
+  - thread_ts: '1739939158.895559'
+    date: '2025-02-19'
+    title: Helm template vs Helm install 방식 논의
+    participants: [이강욱, 송명하, 이재준(Leo)]
+    summary: 서비스 배포에 helm install 대신 template으로 찍어내는 방식의 이유 및 개선 방향, 42개 답글
+  - thread_ts: '1741238129.396019'
+    date: '2025-03-06'
+    title: Cilium 관련 네트워크 이슈 디버깅
+    participants: [이강욱]
+    summary: carrier-supply 무한 재시작 이슈, cilium 네트워크 문제 심층 분석, 104개 답글
+  - thread_ts: '1741670640.857019'
+    date: '2025-03-11'
+    title: 온프렘/OCI 클러스터 정비 계획
+    participants: [송명하]
+    summary: 인증서 갱신, 노드 백업, k8s 백업 등 3월 내 정비 계획 수립, 21개 답글
+terminology:
+  - term: corsair (커세어)
+    definition: 사내 개발 중인 Kubernetes 오퍼레이터/프록시 시스템
+    context: qdrant 관리 및 서비스 메시 역할, 이강욱 주도 설계
+  - term: shuttle
+    definition: 사내 배포 자동화 시스템
+    context: 슬랙 연동 배포 트리거 지원
+  - term: velero
+    definition: Kubernetes 클러스터 백업 솔루션
+    context: 온프렘 클러스터에 설치되어 있으나 미설정 상태 발견
+  - term: chopper
+    definition: 사내 서비스명
+    context: RabbitMQ 도입 첫 서비스, 하루 1회 재시작 이슈 트러블슈팅
+  - term: corsair-operator
+    definition: corsair 시스템의 Kubernetes 오퍼레이터 컴포넌트
+    context: 명세 작성 및 설계 진행
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

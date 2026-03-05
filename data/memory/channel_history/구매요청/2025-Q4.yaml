@@ -1,0 +1,61 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 123
+  total_threads: 120
+  active_users: 5
+  avg_messages_per_day: 2.2
+summary: |
+  2025-Q4 구매요청 채널에서는 AI 구독 서비스(Claude Code Max, Claude Max, ChatGPT Pro, JetBrains 등) 결제 요청이 두드러지게 증가하였다. 디캠프 이전에 따른 모니터 7대, 사무용품, 간식 등 오피스 환경 구축 관련 구매가 대거 이루어졌으며, 일본 행사용 팜플렛 인쇄 및 포스터 제작비 등 마케팅 비용도 처리되었다. 델 32인치 모니터, 코프링/AI 엔지니어링 교육 서비스, 긱사 공과금 등 다양한 유형의 구매가 진행되었다.
+topics:
+  - name: "AI 도구 구독 결제"
+    mention_count: 15
+    description: "Claude Code Max, Claude Max, ChatGPT Pro, JetBrains, Cursor AI 등 AI 개발 도구 구독"
+  - name: "디캠프 오피스 환경 구축"
+    mention_count: 10
+    description: "디캠프 이전에 따른 모니터, 사무용품, 간식 등 대규모 구매"
+  - name: "간식 및 음료"
+    mention_count: 20
+    description: "월별 간식 정기 구매 및 수시 간식/음료 요청"
+  - name: "교육 서비스"
+    mention_count: 5
+    description: "AI 엔지니어링 도서, 코프링 강의 등 기술 교육 구매"
+  - name: "마케팅/행사 비용"
+    mention_count: 3
+    description: "일본 행사용 팜플렛, X배너 인쇄비 및 허니버터아몬드 등 행사 물품"
+key_discussions:
+  - thread_ts: '1727753867.000000'
+    date: '2025-10-02'
+    reply_count: 14
+    text_preview: "일본 행사용 허니버터아몬드 대량팩(129,600원) 구매 요청"
+  - thread_ts: '1729777020.000000'
+    date: '2025-10-24'
+    reply_count: 7
+    text_preview: "ChatGPT Pro $220 구매 요청"
+  - thread_ts: '1729814220.000000'
+    date: '2025-10-28'
+    reply_count: 8
+    text_preview: "델 32인치 모니터(888,400원) 구매 요청"
+  - thread_ts: '1730214000.000000'
+    date: '2025-10-30'
+    reply_count: 24
+    text_preview: "티로(회의 내용 자동 정리 플랫폼) 월 $7 구독 요청"
+terminology:
+  - term: "Claude Code Max"
+    definition: "Anthropic의 Claude Code 최상위 구독 플랜, 월 $200"
+  - term: "긱사"
+    definition: "사이오닉AI가 운영하는 기숙사 시설"
+  - term: "미타"
+    definition: "미드타운 역삼, 사이오닉AI 기존 오피스 위치"
+  - term: "디캠프"
+    definition: "은행권청년창업재단 운영 스타트업 지원 공간, 2025-Q3부터 사이오닉AI 입주"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,29 @@
+channel:
+  id: C06U177SKST
+  name: guest_nurimedia
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 16
+  total_threads: 3
+  active_users: 10
+  avg_messages_per_day: 3.2
+summary: |
+  2024-Q2 guest_nurimedia 채널 데이터 수집 완료. 16개 메시지, 10명 참여, 3개 스레드.
+  사이오닉과 누리미디어 간 협업 채널 개설. 누리미디어 개발운영팀 이장희님, 정황수 과장이 참여. STORM API 연동 관련 기술 문의 시작. 채널명을 sionic_nurimedia에서 guest_nurimedia로 변경.
+topics:
+  - "누리미디어 협업 채널 개설"
+  - "STORM API 연동 문의"
+key_discussions:
+  - title: "누리미디어 API 연동 시작"
+    summary: "누리미디어 개발운영팀과 사이오닉 간 STORM API 연동 관련 기술 문의 및 초기 설정 진행"
+terminology:
+  - term: "누리미디어(Nurimedia)"
+    definition: "사이오닉 STORM API 연동 파트너 기업. 개발운영팀에서 기술 연동 담당"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

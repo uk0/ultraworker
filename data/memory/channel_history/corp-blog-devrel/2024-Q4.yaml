@@ -1,0 +1,110 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 28
+  total_threads: 15
+  active_users: 11
+  avg_messages_per_day: 0.3
+summary: |
+  2024-Q4는 기술 블로그 활동이 크게 활성화된 분기였다. 박우명이 다수의 아티클 초안을 작성했으며
+  (mDPO, Object Hallucination, 데이터 선택, ReSpect 등), song(영숙)이 편집/퍼블리시를 주도했다.
+  Document AI 데모 소개 아티클 기획이 시작되어 38개의 스레드 답글이 달리며 활발히 논의되었다.
+  조하담(Joy)은 Strategy Pattern, SSE 실시간 전송 등 개발 콘텐츠 아티클을 제안했고, 사내 문화
+  콘텐츠(워크샵 후기, 워케이션 후기 등)도 제안했다. 최병현(Hyune-c)은 블로그 댓글 기능 도입을
+  제안하여 23개 답글로 활발한 논의가 이루어졌다. 12월에는 FlagEmbedding/BGE-M3 학습 아티클이
+  퍼블리시되었고, 한국어 문법 교정기(ko-gec) 아티클도 공개되었다. STORM Fooding 관련 아티클
+  작성이 진행되었고, 일본어 번역 확대와 블로그 플랫폼 개선 논의도 이루어졌다. 채널명이
+  research-article에서 project-article로 변경되었다.
+topics:
+  - Document AI demo article planning
+  - blog article drafts (mDPO, Object Hallucination, data selection, ReSpect)
+  - FlagEmbedding BGE-M3 training article
+  - Korean grammar corrector (ko-gec) article
+  - STORM Fooding article
+  - Strategy Pattern article
+  - SSE real-time data transmission article
+  - blog platform improvements (comments feature)
+  - blog visual design improvements
+  - Japanese translation expansion
+  - company culture blog content proposals
+  - channel rename (research-article to project-article)
+  - ModernBERT article
+key_discussions:
+  - thread_ts: '1729665541.242139'
+    date: '2024-10-23'
+    topic: Document AI Demo 아티클 작성 기획 및 구성 논의
+    participants: [박우명, song, 최세민]
+    reply_count: 38
+  - thread_ts: '1734336291.119689'
+    date: '2024-12-16'
+    topic: 노션 블로그 댓글 기능 도입 제안 (배민/카카오페이 사례 참고)
+    participants: [최병현 Hyune-c]
+    reply_count: 23
+  - thread_ts: '1733227985.675349'
+    date: '2024-12-03'
+    topic: Strategy Pattern 및 SSE 아티클 초안 제안 (Development 카테고리 신설)
+    participants: [조하담 (Joy), 박우명, song]
+    reply_count: 16
+  - thread_ts: '1734511617.532699'
+    date: '2024-12-18'
+    topic: STORM Fooding 아티클 작성 및 검토
+    participants: [song, 최세민, 박우명]
+    reply_count: 16
+  - thread_ts: '1735089935.876649'
+    date: '2024-12-25'
+    topic: 1월 블로그 작업 계획 (배너 수정, 굿한글 링크, 블로그 플랫폼 개선)
+    participants: [song, 김덕현 (Dekay), hyunwoo, 최윤정]
+    reply_count: 14
+  - thread_ts: '1733835022.892319'
+    date: '2024-12-10'
+    topic: Strategy Pattern 아티클 일본어 번역 우선순위
+    participants: [song, 최윤정]
+    reply_count: 11
+  - thread_ts: '1734673783.718529'
+    date: '2024-12-20'
+    topic: 사내 문화 블로그 콘텐츠 아이디어 (워크샵, 워케이션, 조직문화 세미나)
+    participants: [조하담 (Joy)]
+    reply_count: 9
+  - thread_ts: '1734933863.117839'
+    date: '2024-12-23'
+    topic: FlagEmbedding BGE-M3 학습 아티클 작성 및 퍼블리시 (한국어+영어)
+    participants: [song]
+    reply_count: 7
+terminology:
+  - term: "Document AI"
+    definition: "Sionic AI의 문서 처리 AI 서비스, 데모 소개 아티클 기획됨"
+    aliases: ["Doc AI"]
+  - term: "STORM Fooding"
+    definition: "스톰 푸딩, AI 기반 식품 관련 서비스 아티클 주제"
+    aliases: ["스톰 푸딩", "STORM 푸딩"]
+  - term: "FlagEmbedding"
+    definition: "BGE-M3 모델 학습을 위한 프레임워크, 기술 블로그 아티클로 작성됨"
+    aliases: ["BGE-M3"]
+  - term: "ko-gec"
+    definition: "한국어 문법 교정기(Korean Grammatical Error Correction) 블로그 아티클"
+    aliases: ["굿한글", "문법 교정기"]
+  - term: "mDPO"
+    definition: "multimodal DPO, 블로그 아티클 초안으로 작성됨"
+    aliases: []
+  - term: "ReSpect"
+    definition: "박우명이 작성한 기술 블로그 아티클 주제"
+    aliases: []
+  - term: "Strategy Pattern"
+    definition: "실무 사례 기반 디자인 패턴 설명 아티클, Development 카테고리 신설 제안과 함께 공유됨"
+    aliases: ["전략 패턴"]
+  - term: "StormParse"
+    definition: "스톰파스, Sionic AI의 문서 파싱 서비스, 별도 블로그 운영"
+    aliases: ["스톰파스", "Atom Parse"]
+  - term: "ModernBERT"
+    definition: "BERT 모델의 현대적 개선 버전, 블로그 아티클로 퍼블리시됨"
+    aliases: []
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: sync-channel-history

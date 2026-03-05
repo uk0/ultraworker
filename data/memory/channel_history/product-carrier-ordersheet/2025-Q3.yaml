@@ -1,0 +1,66 @@
+channel:
+  id: C09B1V03UDD
+  name: product-carrier-ordersheet
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 57
+  total_threads: 34
+  active_users: 15
+  avg_messages_per_day: 2.9
+summary: |
+  2025년 3분기 product-carrier-ordersheet 채널은 2025년 8월 21일에 신규 개설되어 Carrier 워크플로우 플랫폼의 오더시트(주문서) 노드 기능에 관한 제품 피드백과 버그 리포트가 집중된 채널이다. API 노드의 JSON 배열 파싱 이슈와 헤더 지원 문제, 변수 할당 버그, 병렬 실행 정책, 디버깅 기능 요청 등이 주요 논의 사항이었다. 15명의 팀원과 사용자가 참여하여 플랫폼 개선을 위한 구체적인 피드백을 제공하였다.
+topics:
+  - name: "API 노드 이슈"
+    mention_count: 15
+    description: "Carrier API 노드의 JSON 배열 파싱 오류 및 HTTP 헤더 미지원 버그 리포트"
+  - name: "변수 할당 버그"
+    mention_count: 12
+    description: "워크플로우 변수 할당 노드의 데이터 처리 오류 및 수정 요청"
+  - name: "병렬 실행 정책"
+    mention_count: 8
+    description: "워크플로우 내 노드 병렬 실행 순서 및 의존성 관리 정책 논의"
+  - name: "디버깅 기능 요청"
+    mention_count: 7
+    description: "워크플로우 실행 중 중간 값 확인 및 스텝별 디버깅 기능 추가 요청"
+key_discussions:
+  - thread_ts: '1753488000.000000'
+    date: '2025-08-21'
+    reply_count: 4
+    text_preview: "product-carrier-ordersheet 채널 개설 및 Carrier 오더시트 노드 기능 피드백 수집 시작"
+  - thread_ts: '1754352000.000000'
+    date: '2025-08-31'
+    reply_count: 7
+    text_preview: "API 노드 JSON 배열 응답 파싱 실패 버그: 배열 형태 응답 처리 불가 이슈"
+  - thread_ts: '1756944000.000000'
+    date: '2025-09-04'
+    reply_count: 5
+    text_preview: "변수 할당 노드 버그: 이전 스텝 결과값이 다음 스텝에 전달되지 않는 문제"
+  - thread_ts: '1758240000.000000'
+    date: '2025-09-19'
+    reply_count: 6
+    text_preview: "병렬 실행 노드 처리 순서 보장 정책 논의 및 설계 방향 결정"
+terminology:
+  - term: "Carrier"
+    definition: "Sionic AI의 워크플로우 자동화 플랫폼. 노드 기반으로 AI 워크플로우를 시각적으로 구성"
+    aliases: ["캐리어", "carrier platform"]
+    context: "오더시트 채널의 피드백 대상 핵심 플랫폼"
+  - term: "오더시트"
+    definition: "Carrier 플랫폼에서 워크플로우를 구성하는 주문서 형태의 UI/UX 개념"
+    aliases: ["ordersheet", "order sheet"]
+    context: "product-carrier-ordersheet 채널의 핵심 기능 영역"
+  - term: "API 노드"
+    definition: "Carrier 워크플로우에서 외부 API를 호출하는 노드 컴포넌트"
+    aliases: ["API node"]
+    context: "Q3에 JSON 배열 파싱 및 헤더 미지원 버그가 발견"
+  - term: "변수 할당 노드"
+    definition: "Carrier 워크플로우에서 이전 스텝의 결과를 변수에 저장하는 노드"
+    aliases: ["variable assignment", "변수 노드"]
+    context: "Q3에 데이터 전달 버그가 발견되어 수정 요청"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

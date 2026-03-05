@@ -1,0 +1,58 @@
+channel:
+  id: C05RK2SCFD2
+  name: product-planning
+  type: public
+period:
+  quarter: 2023-Q3
+  start_date: '2023-07-01'
+  end_date: '2023-09-30'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 16
+  total_threads: 1
+  active_users: 9
+  avg_messages_per_day: 0.7
+summary: >
+  2023년 3분기(9월)는 product-planning 채널이 개설되어 Storm 제품 초기 기획이 시작된 시기이다.
+  채널은 2023-09-08에 생성되었으며, 한시형이 기획자 합류 전 PPT 초안 작성을 시작했다.
+  김덕현(Dekay)이 Notion으로 회의록을 정리하여 공유했고, 김혜원이 "사이오닉 앤서가 학습을
+  어떻게 시킬지"에 대한 아이디에이션을 시작하며 관련 내용을 Notion에 정리했다.
+  아직 본격적인 기획 단계 이전으로, 팀 구성과 초기 방향성 논의가 주된 활동이었다.
+topics:
+  - name: "Storm 제품 초기 기획"
+    count: 5
+    summary: "Storm Answer 제품의 초기 기획 킥오프. 한시형이 PPT 초안 작성, 김덕현이 Notion 회의록 정리, 김혜원이 학습 방식 아이디에이션 시작."
+  - name: "팀 구성"
+    count: 10
+    summary: "채널 개설과 함께 한시형, 김덕현, Noah(고석현), Sigrid Jin(진형), hhhssw(석원), 송명하 등 핵심 멤버들이 합류."
+key_discussions:
+  - thread_ts: '1695287273.857849'
+    date: '2023-09-21'
+    title: "사이오닉 앤서 학습 방식 아이디에이션"
+    summary: "김혜원이 사이오닉 앤서의 학습 방식에 대한 고민을 공유하고 팀원들과 아이디에이션 논의를 진행. 관련 내용을 Notion에 정리하여 공유."
+    participants: ["U05T2RW7PE2", "U057MCDJHDY", "U057K0HC9KQ", "U05QCA7JTD5"]
+    decisions: ["Notion 기반으로 아이디에이션 내용 정리"]
+    action_items: ["학습 방식 구체화", "기획자 합류 후 본격 논의"]
+    keywords: ["Storm Answer", "학습", "아이디에이션", "Notion"]
+    relevance_score: 0.8
+  - thread_ts: '1694159406.339829'
+    date: '2023-09-08'
+    title: "제품 기획 킥오프"
+    summary: "한시형이 기획자 합류 전 PPT 초안을 먼저 작성하겠다고 공유. 채널 개설과 함께 초기 팀 구성 완료."
+    participants: ["U057K0HC9KQ"]
+    decisions: ["기획자 합류 전 PPT 초안 선행 작성"]
+    action_items: ["PPT 초안 작성"]
+    keywords: ["기획", "킥오프", "PPT", "초안"]
+    relevance_score: 0.7
+terminology:
+  - term: "Storm Answer"
+    definition: "사이오닉의 문서 기반 Q&A 챗봇 제품. 사용자가 업로드한 문서를 학습하여 질문에 답변."
+    aliases: ["사이오닉 앤서", "앤서"]
+    context: "이 채널에서 기획이 시작된 핵심 제품."
+  - term: "Answer Builder"
+    definition: "Storm Answer 에이전트를 생성하고 설정하는 도구."
+    aliases: ["앤서 빌더"]
+    context: "2023-Q4에 본격적으로 기획됨."
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual

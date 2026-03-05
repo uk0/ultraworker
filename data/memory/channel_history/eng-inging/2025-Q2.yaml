@@ -1,0 +1,65 @@
+channel:
+  id: C08CXC8E72A
+  name: eng-inging
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 640
+  total_threads: 471
+  active_users: 16
+  avg_messages_per_day: 8.3
+summary: |
+  2025년 2분기 eng-inging 채널은 carrier-supply와 storm-parse 서비스의 집중 개발 과정에서 팀의 기술적 고민과 해결 과정이 가장 활발하게 공유된 분기였다. Apidog 완전 도입 후 API 테스트 문화가 정착되었으며, PR 리뷰 문화 강화에 대한 논의가 이루어졌다. VLM(Vision Language Model) 크래시 이슈, WASM 기술 검토, 다양한 라이브러리 선택 논의 등 기술적 깊이 있는 대화가 이루어졌다. 16명의 팀원이 하루 평균 8.3건의 스레드를 생성하며 활발한 소통을 이어갔다.
+topics:
+  - name: "carrier-supply 개발"
+    mention_count: 90
+    description: "carrier-supply 벡터 인덱서 서비스 설계 논의 및 개발 과정 공유"
+  - name: "PR 리뷰 문화"
+    mention_count: 40
+    description: "코드 리뷰 문화 강화 및 PR 프로세스 개선 논의"
+  - name: "VLM 이슈"
+    mention_count: 25
+    description: "Vision Language Model 서비스 크래시 및 안정성 문제 해결"
+  - name: "Apidog 활용"
+    mention_count: 45
+    description: "Apidog 정착 후 팀 내 API 테스트 자동화 및 활용 팁 공유"
+  - name: "기술 스택 논의"
+    mention_count: 60
+    description: "WASM, 라이브러리 선택, 아키텍처 패턴 등 기술 선택 관련 토론"
+key_discussions:
+  - thread_ts: '1743984000.000000'
+    date: '2025-04-07'
+    reply_count: 12
+    text_preview: "carrier-supply 인덱서 아키텍처 설계 토론: 배치 처리 vs 스트리밍"
+  - thread_ts: '1746576000.000000'
+    date: '2025-05-07'
+    reply_count: 9
+    text_preview: "PR 리뷰 문화 개선 제안: 리뷰 체크리스트 도입 및 리뷰 시간 할당"
+  - thread_ts: '1749254400.000000'
+    date: '2025-06-07'
+    reply_count: 8
+    text_preview: "VLM 서비스 크래시 원인 분석: CUDA 메모리 초과 및 배치 사이즈 조정"
+  - thread_ts: '1749772800.000000'
+    date: '2025-06-13'
+    reply_count: 6
+    text_preview: "WASM 기술 도입 가능성 검토: 성능 vs 개발 복잡도 분석"
+terminology:
+  - term: "VLM"
+    definition: "Vision Language Model. 이미지와 텍스트를 함께 처리하는 멀티모달 AI 모델"
+    aliases: ["Vision Language Model", "비전 언어 모델"]
+    context: "Q2에 크래시 이슈가 발생하여 안정성 개선 작업 진행"
+  - term: "WASM"
+    definition: "WebAssembly. 웹 브라우저에서 고성능 코드를 실행하기 위한 바이너리 포맷"
+    aliases: ["WebAssembly"]
+    context: "Q2에 기술 도입 가능성 검토가 이루어진 기술"
+  - term: "PR 리뷰"
+    definition: "Pull Request 코드 리뷰. 코드 품질 향상을 위한 팀 코드 검토 프로세스"
+    aliases: ["code review", "코드 리뷰"]
+    context: "Q2에 팀 문화로 강화하기 위한 논의가 활발했던 주제"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

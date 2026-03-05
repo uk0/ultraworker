@@ -1,0 +1,47 @@
+channel:
+  id: C09JC5HQW82
+  name: deploy-ops
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 587
+  total_threads: 0
+  active_users: 6
+  avg_messages_per_day: 9.3
+summary: |
+  2025년 4분기 deploy-ops 채널은 ArgoCD 기반 Kubernetes 애플리케이션 배포 자동화 알림 채널로 운영되었다. shuttle, live-dragoon-server, gocd, parsr, redis, istio, cert-manager 등 다수의 애플리케이션에 대한 sync 성공/실패 알림이 대량 수신되었다. 특히 채널 초기에 대량의 ArgoCD 히스토리 알림이 한꺼번에 유입되었으며, vault-secrets-operator-onprem의 approle 방식 이슈, coredns/redis의 immutable field 오류 등 반복적인 sync 실패도 기록되었다. 6명의 소수 인원이 참여하며 DevOps 인프라 배포 상태를 모니터링하는 채널이다.
+topics:
+  - name: "ArgoCD 배포 알림"
+    mention_count: 500
+    description: "Kubernetes 애플리케이션(shuttle, gocd, parsr, redis, istio 등)의 ArgoCD sync 성공/실패/out-of-sync 알림 대량 수신"
+  - name: "Sync 실패 및 오류"
+    mention_count: 15
+    description: "vault-secrets-operator-onprem(approle 방식 불지원), coredns(immutable selector), redis(resourceVersion 오류), istio(gateway 업데이트 오류) 등 반복적 sync 실패"
+  - name: "배포 파이프라인 관리"
+    mention_count: 10
+    description: "shuttle, live-lightrag, dev-langgraph-agents, qwen3-reranker 등 AI 서비스 배포 추적"
+key_discussions: []
+terminology:
+  - term: "ArgoCD"
+    definition: "Kubernetes용 GitOps 지속적 배포(CD) 도구. 채널의 모든 배포 알림 발원지"
+    aliases: ["argo", "argocd"]
+    context: "배포 상태(out of sync, sync success, sync failed)를 Slack으로 전달"
+  - term: "shuttle"
+    definition: "Sionic AI의 내부 서비스 중 하나로, 가장 빈번하게 배포 알림이 발생한 애플리케이션"
+    aliases: []
+    context: "2025-Q4 기간 중 수십 회 sync 성공/실패 반복"
+  - term: "vault-secrets-operator-onprem"
+    definition: "온프레미스 환경의 Vault 시크릿 관리 오퍼레이터. approle 방식 미지원으로 sync 실패 반복"
+    aliases: []
+    context: "approle -> appRole 케이스 불일치로 인한 반복 오류"
+  - term: "live-lightrag"
+    definition: "LightRAG 기반 라이브 서비스 애플리케이션"
+    aliases: []
+    context: "배포 추적 대상 AI 서비스"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

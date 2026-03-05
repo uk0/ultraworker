@@ -1,0 +1,36 @@
+channel:
+  id: C0A0889PF1C
+  name: sionicai-byteplus
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 0
+  active_users: 5
+  avg_messages_per_day: 9.0
+summary: |
+  2025-Q4 sionicai-byteplus 채널이 개설되어 BytePlus와 Sionic AI 간의 파트너십 채널로 운영되기 시작하였다. 11월 28일 양사 관계자들이 채널에 합류하여 태국 및 일본 비즈니스 관련 협업이 시작되었다. BytePlus 파트너십 매니저와 Sionic AI 전략/사업개발 매니저가 참여하여 향후 비즈니스 논의를 진행하기로 하였다.
+topics:
+  - name: "파트너십 채널 개설"
+    mention_count: 3
+    description: "BytePlus와 Sionic AI 간의 태국·일본 비즈니스 협력을 위한 채널 개설 및 인사"
+  - name: "태국·일본 비즈니스 협업"
+    mention_count: 2
+    description: "태국 및 일본 시장 비즈니스 관련 논의 시작"
+key_discussions:
+  - thread_ts: '1732758001.000000'
+    date: '2025-11-28'
+    reply_count: 0
+    text_preview: "안녕하세요! 앞으로 태국&일본 비즈니스 관련해서 이 방에서 논의드리겠습니다"
+terminology:
+  - term: "BytePlus"
+    definition: "Sionic AI와 파트너십을 맺은 기업으로, 태국·일본 비즈니스 협력을 위해 공동 채널을 운영함"
+  - term: "sionicai-byteplus"
+    definition: "Sionic AI와 BytePlus 간의 비즈니스 파트너십 논의를 위한 공유 Slack 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

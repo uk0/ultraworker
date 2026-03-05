@@ -1,0 +1,41 @@
+channel:
+  id: C082JL1EV71
+  name: alarm-live-error-infra
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 284
+  total_threads: 185
+  active_users: 9
+  avg_messages_per_day: 11.4
+summary: |
+  운영(live) 환경 인프라 에러 알림 채널 초기 운영 분기. 284건 메시지, 9명 참여.
+  New Relic InfraAlert 기반 알림이 대부분이며, dev/staging/live 네임스페이스 혼재.
+  주요 알림 대상: kakao-demo(최다, 36건), stargate(24건), supply(14건), storm-parse-api(7건).
+  dev 네임스페이스 알림이 61건으로 가장 많아 채널 설정 초기 단계임을 시사.
+  이재준(Leo), 김수원, 백은주 등이 간헐적으로 대응 참여.
+topics:
+  - kakao-demo 서비스 불안정
+  - stargate 검색 엔진 재시작
+  - supply 서비스 오류
+  - live/dev/staging 혼재 알림
+  - New Relic InfraAlert 설정 초기
+key_discussions: []
+terminology:
+  - term: "kakao-demo"
+    definition: "카카오 연동 데모 서비스"
+    context: "2024-Q4에서 가장 빈번한 재시작 대상"
+  - term: "stargate"
+    definition: "Sionic AI의 검색 엔진 서비스"
+    aliases: ["SG"]
+    context: "live 환경에서 간헐적 재시작 발생"
+  - term: "InfraAlert"
+    definition: "New Relic 인프라 모니터링 알림 정책"
+    context: "dev/live 환경별로 구분하여 운영"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

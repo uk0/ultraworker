@@ -1,0 +1,102 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 66
+  total_threads: 63
+  active_users: 15
+  avg_messages_per_day: 1.7
+summary: |
+  2024년 4분기 qna 채널은 활동량이 눈에 띄게 증가했다. 스톰 플랫폼 기술 이슈가 주요 화두로, dev 환경 회원가입/로그인
+  오류(42건 답글), Stargate API v1/v2 라우터 표기 문제, webhookUrl 미작동, 비밀번호 찾기 기능 부재 등이 집중 논의되었다.
+  bucket_id와 dhash 관계, document AI 내부 도메인 노출 문제 등 아키텍처 관련 기술 토론도 활발했다. 최병현(Hyune-c)의
+  합류와 함께 chat_engine-vendor 관계 정의, token usage 네이밍(input/output vs prompt/completion), Moderation 필터링
+  정책, Python 프레임워크 비교 등 기술적 깊이 있는 질문이 증가했다. 워케이션 교통비/카풀 조율, 당근봇 사용법,
+  Anthropic 사용량 급증 원인 파악 등 조직 운영 관련 논의도 있었다.
+topics:
+  - 스톰 플랫폼 로그인/회원가입 오류
+  - Stargate API 가이드 업데이트
+  - bucket_id/dhash 아키텍처
+  - chat_engine-vendor 관계 정의
+  - token usage 네이밍 표준
+  - Moderation(유해어 필터링) 정책
+  - Python 프레임워크 비교(Flask/Django/FastAPI)
+  - 워케이션 교통비/카풀
+  - Anthropic 사용량 급증
+  - 뉴렐릭(New Relic) 모니터링
+  - 채용 관련(홈페이지 뉴스, 명함)
+  - 사내 비품/시설(키보드, 노트북 거치대)
+key_discussions:
+  - thread_ts: '1733124544.072469'
+    date: '2024-12-02'
+    reply_count: 42
+    text_preview: dev 환경 회원가입 인증 이메일 미발송 이슈
+  - thread_ts: '1730171693.142539'
+    date: '2024-10-29'
+    reply_count: 37
+    text_preview: document AI에 sionic.im 내부 도메인 포함 문제
+  - thread_ts: '1732259523.973599'
+    date: '2024-11-22'
+    reply_count: 28
+    text_preview: 워케이션 카풀/소카 이동 조율
+  - thread_ts: '1735537942.848889'
+    date: '2024-12-30'
+    reply_count: 26
+    text_preview: 12월 Anthropic 사용량 급증 원인 파악
+  - thread_ts: '1734516287.846259'
+    date: '2024-12-18'
+    reply_count: 24
+    text_preview: chat_engine과 vendor 관계 정의 논의
+  - thread_ts: '1732975583.209919'
+    date: '2024-11-30'
+    reply_count: 24
+    text_preview: bucket_id와 dhash 현재 관계 구조 질문
+  - thread_ts: '1732264351.857549'
+    date: '2024-11-22'
+    reply_count: 19
+    text_preview: 워케이션 교통비/유류비 지원 방법 논의
+  - thread_ts: '1734949337.755159'
+    date: '2024-12-23'
+    reply_count: 16
+    text_preview: 뉴렐릭(New Relic) 모니터링 도구 소개
+  - thread_ts: '1727853398.711799'
+    date: '2024-10-02'
+    reply_count: 13
+    text_preview: 홈페이지 에이전트 가이드 버튼 onclick 미작동 이슈
+  - thread_ts: '1733487661.511139'
+    date: '2024-12-06'
+    reply_count: 14
+    text_preview: Stargate API X-Token 인증 및 v1/v2 라우터 표기 문제
+terminology:
+  - term: 뉴렐릭(New Relic)
+    definition: 애플리케이션 성능 모니터링(APM) SaaS 도구
+    aliases:
+      - NRI
+    context: 사내 모니터링 도입, 비용 관련 논의에서 언급
+  - term: dhash
+    definition: 문서의 해시값, 중복 문서 관리에 사용
+    aliases: []
+    context: bucket_id와의 관계 구조 논의에서 사용
+  - term: 당근봇
+    definition: 사내에서 운영하는 슬랙 봇
+    aliases: []
+    context: 사용법 문의에서 언급
+  - term: 1pwd
+    definition: 1Password, 사내 비밀번호 관리 도구
+    aliases:
+      - 1Password
+      - 원패스워드
+    context: apidog 인증 정보 등록, 계정 관리에서 사용
+  - term: 워케이션
+    definition: 회사에서 진행하는 업무+휴가 형태의 워크샵
+    aliases: []
+    context: 이동수단, 교통비 지원 관련 논의에서 언급
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

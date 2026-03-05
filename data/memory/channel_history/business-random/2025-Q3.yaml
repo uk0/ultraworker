@@ -1,0 +1,48 @@
+channel:
+  id: C099HHQC7B5
+  name: business-random
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 28
+  total_threads: 10
+  active_users: 15
+  avg_messages_per_day: 2.0
+summary: |
+  2025-Q3 business-random 채널에서는 AI 비즈니스 관련 뉴스 및 기술 아티클 공유가 주로 이루어졌다. Windsurf(AI 코딩 도구) 관련 소식, B2B SaaS의 AI Credit 요금제 전환 트렌드 분석, Liquid AI의 일본 사업 확장, 알리바바 클라우드 MoU 계약서 위치 문의 등이 논의되었다.
+  데이터 패브릭, LG CNS DAP MLDL 가격 정책, 2026 AI EXPO 참가 모집, 정부 AI 특화모델 프로젝트 사업 공고 관련 정보도 공유되었다.
+topics:
+  - name: "AI SaaS 요금제 트렌드"
+    mention_count: 4
+    description: "B2B SaaS의 AI Credit 요금제 전환 트렌드 분석 및 고객 가치 연동 모델 논의"
+  - name: "AI 산업 동향"
+    mention_count: 6
+    description: "AI 특화모델 정부 프로젝트, 2026 AI EXPO, LG CNS AI 플랫폼 가격 정책 등"
+  - name: "기술 아티클 공유"
+    mention_count: 5
+    description: "데이터 패브릭, Multi-vector Retrieval, AI 검색 등 기술 레퍼런스 공유"
+key_discussions:
+  - thread_ts: '1756550000.000000'
+    date: '2025-09-03'
+    reply_count: 2
+    text_preview: "B2B 서비스들이 AI Credit 요금제로 전환하는 이유 분석 (원가, 고객 가치, Cursor 사례)"
+  - thread_ts: '1756200000.000000'
+    date: '2025-09-02'
+    reply_count: 3
+    text_preview: "정부 AI 특화모델 프로젝트 사업 공고 및 참여 가능 기업 조건 공유"
+  - thread_ts: '1757200000.000000'
+    date: '2025-09-16'
+    reply_count: 4
+    text_preview: "LG CNS AI 분석 플랫폼 DAP MLDL 가격 정책 공유"
+terminology:
+  - term: "AI Credit"
+    definition: "B2B SaaS의 사용량 기반 요금제 방식, 원가 또는 결과물 중심으로 설계"
+  - term: "DAP MLDL"
+    definition: "LG CNS의 AI 분석 플랫폼"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

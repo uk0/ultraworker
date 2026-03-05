@@ -1,0 +1,37 @@
+channel:
+  id: C080TTP7V0S
+  name: storm-subscription-extend
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 15
+  total_threads: 8
+  active_users: 7
+  avg_messages_per_day: 1.7
+summary: |
+  2025-Q4에는 구독 연장 문의가 8건으로 증가하여 Storm 서비스의 유료 고객 기반이 확대되고 있음을 보여준다. 10월 초에 3건, 11월에 2건(특히 11월 17일에 1건이 7개 답글로 활발히 논의됨), 12월에 1건의 문의가 발생하였다. 최윤정, s.baek, 박우명, 한시형, 오승희 등이 채널에 참여하여 구독 관리 대응 체계가 더욱 확대되었다. 10월 30일에는 22개 답글이 달린 활발한 구독 연장 논의가 있었다.
+topics:
+  - 구독 연장 문의 지속 증가
+  - 유료 고객 기반 확대
+  - 구독 관리 체계 강화
+key_discussions:
+  - thread_ts: '1761788261.181729'
+    date: '2025-10-30'
+    title: 구독 연장 관련 심층 논의
+    summary: 구독 연장 문의에 대한 상세 대응 및 정책 논의 (22개 답글)
+  - thread_ts: '1763367097.024079'
+    date: '2025-11-17'
+    title: 11월 구독 연장 문의
+    summary: 구독 연장 문의에 대한 대응 (7개 답글)
+  - thread_ts: '1765777173.430059'
+    date: '2025-12-15'
+    title: 12월 구독 연장 문의
+    summary: 12월 구독 연장 문의 및 박우명 참여 (6개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,38 @@
+channel:
+  id: C0922U1U1RB
+  name: mmlm-onboarding
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 3분기 mmlm-onboarding 채널은 소수의 메시지만 오갔으며, 멀티모달 LLM 튜닝의 실무 방향성 논의가 진행되었다.
+  외부 협력자(석현님)가 회사의 주요 MMLM 튜닝 태스크를 파악하는 질문을 남겼으며, 참고 논문으로 GQA 관련 arxiv 논문이 공유되었다.
+topics:
+  - name: "MMLM 튜닝 방향성"
+    mention_count: 2
+    description: "회사 내 Multimodal LLM tuning 관련 가장 중요한 태스크 파악 문의 및 관련 논문 공유"
+key_discussions:
+  - thread_ts: '1751507520.000000'
+    date: '2025-07-02'
+    reply_count: 3
+    text_preview: "arxiv 2412.08746 논문 공유 - MMLM 관련 참고 자료"
+  - thread_ts: '1751882132.000000'
+    date: '2025-07-07'
+    reply_count: 4
+    text_preview: "석현님: 현재 회사에서 가장 중요하게 보는 Multimodal LLM tuning 태스크가 무엇인지 문의"
+terminology:
+  - term: "MMLM tuning"
+    definition: "Multimodal Language Model의 파인튜닝, 텍스트-이미지 멀티모달 태스크에 맞게 모델을 조정"
+    aliases: ["Multimodal LLM 튜닝"]
+    context: "SNU 협력자가 회사의 주요 관심 태스크를 파악하기 위해 문의"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,29 @@
+channel:
+  id: C0A09J5U960
+  name: temp-2025townhall
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 0
+  active_users: 7
+  avg_messages_per_day: 11.0
+summary: |
+  2025-Q4 temp-2025townhall 채널은 2025년 말 전사 타운홀 행사 준비를 위해 개설된 임시 채널이다. 장소(디캠프 선릉), 시간(오전 9시), 간식·데코 셋업, 마이크·프로젝터 테스트 등 행사 준비 사항이 공유되었으며, 7명이 참여하여 행사 당일 진행을 지원하기 위한 물품 목록을 정리하였다.
+topics:
+  - name: "전사 타운홀 행사 준비"
+    mention_count: 8
+    description: "2025 연말 전사 타운홀 행사 장소·시간 확정, 간식 및 데코 셋업, 장비 점검 준비"
+key_discussions: []
+terminology:
+  - term: "디캠프 선릉"
+    definition: "2025 연말 전사 타운홀 행사 장소. 스타트업 지원 기관인 디캠프의 선릉 공간"
+  - term: "타운홀(Town Hall)"
+    definition: "전 직원이 참여하는 회사 전체 공유 행사로, 경영진 발표 및 구성원 소통의 장"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

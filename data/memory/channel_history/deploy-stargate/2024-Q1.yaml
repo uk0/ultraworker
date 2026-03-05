@@ -1,0 +1,51 @@
+channel:
+  id: C06S5LBR3K3
+  name: deploy-stargate
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 45
+  total_threads: 0
+  active_users: 9
+  avg_messages_per_day: 22.5
+summary: |
+  2024-Q1 deploy-stargate 채널 데이터 수집 완료. 45개 메시지, 9명 참여, 0개 스레드.
+  2024년 3월 28일 Sigrid Jin이 deploy-stargate 채널을 신규 생성하였다. 기존 deploy-stargate-gke 채널과의
+  convention 유지를 위해 별도 채널을 만들었으며, EKS Deploy 앱을 연동하였다. GKE와 EKS 배포를 분리
+  운영하는 과도기로, Sionic Deploy(GKE)와 EKS Deploy(EKS) 두 개 앱을 동시 운영 후 통합 예정이었다.
+  초기 배포 테스트로 /eks-deploy stargate dev/staging 명령어를 사용하여 dev, staging 환경에 배포를 진행하였고,
+  빌드 실패(asdfasdf 커밋) 및 성공 케이스를 확인하였다. 주요 참여자는 Sigrid Jin, jinu, 김덕현(Dekay), 송명하 등이다.
+topics:
+  - EKS Deploy 연동
+  - Stargate 배포 채널 생성
+  - GKE-EKS 배포 과도기
+  - dev/staging 환경 초기 배포 테스트
+key_discussions:
+  - thread_ts: '1711640265.431199'
+    date: '2024-03-28'
+    reply_count: 0
+    text_preview: deploy-stargate 채널 생성 배경 설명 - GKE/EKS convention 유지 목적
+  - thread_ts: '1711639478.242009'
+    date: '2024-03-28'
+    reply_count: 0
+    text_preview: jinu - 기존 deploy-stargate-gke 채널과의 차이점 질문
+terminology:
+  - term: "EKS Deploy"
+    definition: "AWS EKS 기반 배포를 수행하는 Slack 앱"
+    aliases: ["eks-deploy"]
+    context: "/eks-deploy stargate {env} {commit-hash} 형식으로 배포 명령 실행"
+  - term: "Sionic Deploy"
+    definition: "GKE 기반 배포를 수행하는 기존 Slack 앱"
+    aliases: []
+    context: "GKE 배포 엔드포인트와 연동, EKS Deploy와 통합 예정"
+  - term: "Stargate"
+    definition: "Sionic AI의 검색 엔진 서비스 (Search API)"
+    aliases: ["SG"]
+    context: "dev, staging, live 환경으로 배포 관리"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

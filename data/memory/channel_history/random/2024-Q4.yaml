@@ -1,0 +1,111 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 400
+  total_threads: 278
+  active_users: 25
+  avg_messages_per_day: 5.3
+summary: |
+  2024년 4분기 random 채널은 연말 분위기와 함께 AI 업계 굵직한 뉴스가 집중된 시기였다.
+  Google Gemini 2.0 출시, ChatGPT Apple Intelligence 통합, CES 2025 준비 등 주요 기술 이벤트가 있었다.
+  Claude 3.5 Sonnet 성능 저하 이슈가 논의되었고(GPT4→Turbo3.5 수준으로 떨어졌다는 체감),
+  새 팀원(이강욱 등) 합류, 프로덕트팀 연말 회고(Figma 보드 활용), 크리스마스 파티가 진행되었다.
+  뤼튼 Studio Pro 액션 에이전트, vessel AI dify builder 등 경쟁사/파트너 동향이 공유되었고,
+  Storm Parse 개발 관련 나비효과 스토리(AXA parsr→llamaparse→진형 레시피→세민 storm parse)가 화제였다.
+  사무실 생활로는 난방 이슈, 캐롤 BGM, 붕어빵 탐방, 슈톨렌 나눔, 산타 입간판 등 연말 분위기가 가득했다.
+  24년 연간 요약이 공유되었고, 새해 인사·수학적 2025 표현 등으로 한 해를 마무리했다.
+  고향사랑 기부제 세액공제 정보, Deel(글로벌 급여 서비스), JetBrains 오프라인 AI 플러그인 등 실용 정보도 공유되었다.
+topics:
+  - name: "AI 모델/서비스 업데이트"
+    count: 10
+    description: "Gemini 2.0, ChatGPT Apple Intelligence 통합, Claude 성능 이슈, OpenAI 장애, model2vec/matryoshka."
+  - name: "연말 행사/팀 문화"
+    count: 15
+    description: "크리스마스 파티, 프로덕트팀 회고, 24년 연간 요약, 새해 인사, 눈 소식."
+  - name: "CES 2025 준비"
+    count: 3
+    description: "CES 관련 기사 공유, 전시 준비 논의."
+  - name: "신규 팀원 합류"
+    count: 3
+    description: "이강욱 등 신규 팀원 합류. 테크세미나 자기소개 예고."
+  - name: "경쟁사/파트너 동향"
+    count: 5
+    description: "뤼튼 Studio Pro 액션 에이전트, vessel AI dify builder, Deel 글로벌 급여 서비스."
+  - name: "Storm Parse 개발"
+    count: 3
+    description: "AXA parsr→llamaparse→storm parse로 이어지는 PDF 파싱 기술 계보."
+  - name: "사무실 생활"
+    count: 12
+    description: "난방 이슈, 붕어빵 탐방, 캐롤 BGM, 가습기 추첨, 칫솔 살균기 제안."
+key_discussions:
+  - thread_ts: '1733931878.191099'
+    date: '2024-12-11'
+    reply_count: 10
+    text_preview: "Google Gemini 2.0 출시 관련 논의."
+  - thread_ts: '1734076071.811959'
+    date: '2024-12-13'
+    reply_count: 28
+    text_preview: "Storm Parse 나비효과 - AXA parsr→llamaparse→진형 레시피→세민 storm parse."
+  - thread_ts: '1734337579.318729'
+    date: '2024-12-16'
+    reply_count: 22
+    text_preview: "대정환 강림 - 사내 이벤트."
+  - thread_ts: '1734427860.025939'
+    date: '2024-12-17'
+    reply_count: 20
+    text_preview: "진형님 알리바바 방문 관련 대화."
+  - thread_ts: '1734428971.761999'
+    date: '2024-12-17'
+    reply_count: 16
+    text_preview: "예원님 강아지 '후추' TMI - 팀 소통."
+  - thread_ts: '1734669841.422459'
+    date: '2024-12-20'
+    reply_count: 13
+    text_preview: "MBTI S를 N으로 바꾸는 방법 논의."
+  - thread_ts: '1734570448.207629'
+    date: '2024-12-19'
+    reply_count: 13
+    text_preview: "붕어빵(치즈고구마맛) 탐방기."
+  - thread_ts: '1734059680.348969'
+    date: '2024-12-13'
+    reply_count: 12
+    text_preview: "가습기 추첨 이벤트."
+  - thread_ts: '1734425873.826739'
+    date: '2024-12-17'
+    reply_count: 11
+    text_preview: "Claude 3.5 Sonnet 성능 저하 체감 논의 - 스로틀링 가능성."
+  - thread_ts: '1734494945.723089'
+    date: '2024-12-18'
+    reply_count: 9
+    text_preview: "책 광고 출판 소식."
+terminology:
+  - term: "Storm Parse"
+    definition: "사이오닉에이아이의 PDF 파싱 기술. AXA parsr에서 llamaparse를 거쳐 발전."
+    aliases: ["스톰 파스"]
+    context: "AXA parsr→llamaparse→진형 레시피→세민 storm parse 나비효과 계보."
+  - term: "Deel"
+    definition: "글로벌 팀 구성을 위한 급여·세금 관련 서비스 플랫폼."
+    aliases: []
+    context: "국가별 세금 이슈를 해결해주는 서비스로 소개됨."
+  - term: "Apple Intelligence"
+    definition: "Apple의 AI 기능 통합 플랫폼. ChatGPT가 탑재됨."
+    aliases: []
+    context: "2024년 12월 ChatGPT가 Apple Intelligence에 공식 통합."
+  - term: "vessel AI"
+    definition: "dify builder를 활용한 AI 서비스 빌더."
+    aliases: []
+    context: "경쟁/참고 서비스로 공유됨."
+  - term: "고향사랑기부제"
+    definition: "지자체에 기부하면 세액공제와 답례품을 받을 수 있는 제도."
+    aliases: []
+    context: "연말 세액공제 활용 팁으로 공유."
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

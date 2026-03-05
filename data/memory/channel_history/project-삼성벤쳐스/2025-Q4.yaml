@@ -1,0 +1,72 @@
+channel:
+  id: C09L6ATFKA7
+  name: project-삼성벤쳐스
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 211
+  total_threads: 153
+  active_users: 21
+  avg_messages_per_day: 3.9
+summary: |
+  2025-Q4에 삼성벤쳐스 VC 투자 분석 플랫폼(온톨로지 기반 스타트업 탐색 서비스) 개발이 본격화되었다. 10월 채널 개설 후 킥오프 미팅과 요구사항 정의가 이루어졌으며, Graph DB 기반 키워드·스타트업·투자자 온톨로지 구축, 크롤링·인덱싱 크론잡, 원페이저 자동 생성 기능 등이 개발되었다. 11월 중간보고 및 주간 데모를 거치며 그래프 DB 교체(graphiti), 스코어링 알고리즘 개선, UI 개선이 반복되었고, 12월에는 딥 리서치 기능과 계정 관리 시스템 추가 요청이 논의되었다.
+topics:
+  - name: "온톨로지 기반 키워드·스타트업 그래프 DB"
+    mention_count: 40
+    description: "Graphiti 기반 지식 그래프로 AI 트렌드 키워드, 스타트업, 투자자 간의 관계를 인덱싱"
+  - name: "크롤링 및 인덱싱 파이프라인"
+    mention_count: 25
+    description: "뉴스레터·리포트·팟캐스트 등 다양한 소스에서 키워드 및 스타트업 정보를 크롤링하는 크론잡 개발"
+  - name: "원페이저 자동 생성"
+    mention_count: 20
+    description: "스타트업 엔티티 기반 투자 검토용 원페이저(Word/PPT) 자동 생성 기능"
+  - name: "키워드 스코어링 및 필터링"
+    mention_count: 18
+    description: "유효 키워드 스코어를 높이고 이미 유명한 키워드(OpenAI 등) 스코어를 낮추는 알고리즘 개선"
+  - name: "삼성벤쳐스 미팅 및 계약"
+    mention_count: 22
+    description: "킥오프, 중간보고, 주간 데모 등 고객사 정기 미팅 및 계약서 검토"
+  - name: "스타트업 딥 리서치"
+    mention_count: 10
+    description: "특정 스타트업 소싱을 위한 심층 리서치 자동화 기능 구현"
+key_discussions:
+  - thread_ts: '1760537669.000000'
+    date: '2025-10-14'
+    reply_count: 25
+    text_preview: "삼성벤쳐스 관련 컨텍스트 다운로드 요청, 주요 사항 정리"
+  - thread_ts: '1761216000.000000'
+    date: '2025-10-23'
+    reply_count: 27
+    text_preview: "킥오프 미팅 아젠다 싱크, 개발 범위 및 일정 논의"
+  - thread_ts: '1762503101.000000'
+    date: '2025-11-07'
+    reply_count: 51
+    text_preview: "삼성벤쳐스 인터뷰 스레드, 요구사항 및 데모 계획 논의"
+  - thread_ts: '1763122800.000000'
+    date: '2025-11-18'
+    reply_count: 17
+    text_preview: "중간보고 결과 공유, 키워드·관계도 퀄리티 개선 우선순위 확인"
+  - thread_ts: '1764185600.000000'
+    date: '2025-12-03'
+    reply_count: 55
+    text_preview: "딥 리서치 기능 구현 논의"
+terminology:
+  - term: "온톨로지(Ontology)"
+    definition: "키워드, 스타트업, 투자자 등 엔티티 간의 의미적 관계를 구조화한 지식 표현 체계"
+  - term: "Graphiti"
+    definition: "삼성벤쳐스 프로젝트에 사용된 그래프 DB 라이브러리로 증분 업데이트 기반 지식 그래프 관리"
+  - term: "앵커(Anchor)"
+    definition: "그래프 탐색의 시작점이 되는 시드 키워드. AI 관련 트렌디한 키워드를 앵커로 설정하여 관련 스타트업 발굴"
+  - term: "원페이저"
+    definition: "투자 심사용 스타트업 요약 문서로, 삼성벤쳐스가 요구한 양식에 맞춰 자동 생성"
+  - term: "딥 리서치"
+    definition: "특정 스타트업에 대한 투자자, 기술 스택, 경쟁사, 관련 엔티티를 자동으로 심층 분석하는 기능"
+  - term: "Crunchbase"
+    definition: "스타트업 투자 정보 외부 데이터 소스로 API 연동 논의 대상"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

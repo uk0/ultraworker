@@ -1,0 +1,66 @@
+channel:
+  id: C06FA5KDNKV
+  name: project-mk
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 64
+  total_threads: 56
+  active_users: 9
+  avg_messages_per_day: 2.2
+summary: |
+  매경 Write 기능의 상용화 및 본계약이 이루어진 핵심 분기.
+  4/22 매경 실무진 미팅, 5/9 임원진(부회장 포함) 시연이 성공적으로 진행되었으며 긍정적 반응을 얻었다.
+  견적 협상이 진행되어 크레딧 구매형(10만건 건당 80원)과 구독형(월 300만~1,000만원) 가격 체계가 확정되었다.
+  매경 법무 검토 완료 후 10만건/800만원 규모의 첫 계약이 체결되었다.
+  하클 파인튜닝 데이터 생성, 클로드 하이쿠(Haiku) 연동, Write 재생성 프롬프트 수정, 자동 로그인 기능, 스트리밍 출력 등 기술 개선이 다수 진행되었다.
+  6/14 매경 사내 기자 대상 내부 강연/시연 이후 기자들의 본격 사용이 시작되었다.
+  매경용 화면 분리(Stargate API 연결), Write 로그 DB 구축, 사용량 추적 체계도 마련되었다.
+topics:
+  - 매경 임원 시연 및 계약 체결
+  - 견적 협상 및 가격 체계 수립
+  - 하클 파인튜닝 데이터 생성
+  - 클로드 하이쿠 연동
+  - Write 재생성 프롬프트 수정
+  - 자동 로그인 기능
+  - 스트리밍 출력
+  - 사용량 로그 및 추적
+key_discussions:
+  - thread_ts: '1715240147.743149'
+    date: '2024-05-09'
+    title: 매경 임원진 시연 성공
+    summary: 부회장 포함 고위 임원 참석 시연. 큰 문제 없이 진행, 긍정적 반응. 본계약 추진 기반 마련.
+  - thread_ts: '1714120339.663399'
+    date: '2024-04-26'
+    title: 매경 견적 초안 수립
+    summary: 크레딧 구매형/구독형 이중 가격 체계 수립. 네클 API 할인(20%) 감안 시 마진율 40% 이상 확보 가능.
+  - thread_ts: '1713944244.968709'
+    date: '2024-04-24'
+    title: 하클 파인튜닝 데이터 생성
+    summary: 매경 기사 데이터 기반 파인튜닝 데이터 생성 작업. 비용 대비 효과 분석도 병행.
+  - thread_ts: '1718246221.197199'
+    date: '2024-06-13'
+    title: Write 재생성 프롬프트 수정
+    summary: 부제목, 본문 재생성 프롬프트 품질 개선. 형찬님과 협업하여 수정.
+  - thread_ts: '1717400421.640839'
+    date: '2024-06-03'
+    title: 매경 사내 시연 준비
+    summary: 6/14 사내 기자 대상 강연/시연 준비. 본격 사용 전 준비사항 점검.
+terminology:
+  - term: 하이쿠(Haiku)
+    definition: Anthropic의 Claude 3 Haiku 모델. 2000자 초과 시 하클 대신 사용되는 대안 LLM
+  - term: 네클
+    definition: 네이버클라우드. 하이퍼클로바 API를 제공하는 플랫폼 파트너
+  - term: MAI
+    definition: 매경 AI. 매일경제에서 STORM Write 기능을 부르는 내부 명칭
+  - term: 크레딧
+    definition: Write 서비스 사용 단위. 1회 호출 = 1크레딧 소진
+  - term: PEFT
+    definition: Parameter-Efficient Fine-Tuning. 하클에서 지원하는 효율적 파인튜닝 기법
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

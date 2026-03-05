@@ -1,0 +1,50 @@
+channel:
+  id: C06AR8W6H8E
+  name: eng-github
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1889
+  total_threads: 484
+  active_users: 16
+  avg_messages_per_day: 23.6
+summary: |
+  2024년 1분기 eng-github 채널은 GitHub 통합 알림 채널로 본격 운영을 시작한 시기이다.
+  총 1889개 메시지가 발생했으며 16명이 참여하고 484개 스레드가 생성되었다.
+  주로 GitHub 봇을 통한 PR(Pull Request), 커밋, 이슈, 릴리스, 배포 알림이 자동으로 전달되었다.
+  sionic-ai 조직의 여러 리포지토리가 구독 등록되었으며, gen-img-prompts 리포지토리가 새로 구독 추가되었다.
+  일 평균 23.6개의 메시지가 발생하여 활발한 개발 활동이 이루어졌음을 보여준다.
+  채널 초기 설정 단계로 리포지토리 구독 관리 및 알림 설정 작업이 주요 활동이었다.
+topics:
+  - name: "GitHub 알림 채널 초기 설정"
+    message_count: 200
+    description: "eng-github 채널의 GitHub 앱 연동 및 리포지토리 구독 설정"
+  - name: "PR/커밋 알림"
+    message_count: 1500
+    description: "sionic-ai 조직 리포지토리의 PR 생성, 머지, 커밋 푸시 자동 알림"
+  - name: "이슈 및 릴리스 알림"
+    message_count: 189
+    description: "GitHub 이슈 생성/종료 및 릴리스 배포 알림"
+key_discussions:
+  - date: '2024-01-30'
+    summary: "gen-img-prompts 리포지토리 구독 추가 (Sigrid Jin)"
+    participants: ["Sigrid Jin"]
+  - date: '2024-03-29'
+    summary: "sionic-ai-website 리포지토리 구독 추가 및 알림 설정"
+    participants: ["GitHub Bot"]
+terminology:
+  - term: "eng-github"
+    definition: "GitHub 통합 알림을 수신하는 엔지니어링 Slack 채널"
+    aliases: []
+    context: "PR, 커밋, 이슈, 릴리스, 배포 알림이 자동으로 전달됨"
+  - term: "gen-img-prompts"
+    definition: "이미지 생성 프롬프트 관련 sionic-ai 리포지토리"
+    aliases: []
+    context: "2024-Q1에 채널 구독 추가됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

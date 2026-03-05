@@ -1,0 +1,105 @@
+channel:
+  id: C07BJQDM8BV
+  name: product-asmr
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:32'
+statistics:
+  total_messages: 21
+  total_threads: 17
+  active_users: 7
+  avg_messages_per_day: 0.5
+key_discussions:
+- thread_ts: '1767865336.154919'
+  date: '2026-01-08'
+  reply_count: 24
+  text_preview: '<@U06EG12UUMV> LLM/API 호출 관련해서 질문이 있습니다. cc. <@U07RASZTPFA>
+
+    운영 중에 429나 503에러가 자주 발생하는 편인가요?
+
+    백오프/재시도 '
+- thread_ts: '1770113063.425579'
+  date: '2026-02-03'
+  reply_count: 23
+  text_preview: '<@U057MCDJHDY> <@U06EG12UUMV>
+
+    덕현님 생명연장 프로젝트 : 왜인지 추론토큰이 어떻게 나오는지 보고 싶으신데 안나오신다고함(저도 맥락은 모름)'
+- thread_ts: '1769083588.599499'
+  date: '2026-01-22'
+  reply_count: 21
+  text_preview: '`asmr-v2 펑션콜` QA정리 <@U06EG12UUMV>
+
+    프로바이더:
+
+    • 펑션콜 잘 됨: openai, claude, vertex
+
+    • 펑션콜 안 됨: azure, hypercl'
+- thread_ts: '1767596195.577369'
+  date: '2026-01-05'
+  reply_count: 20
+  text_preview: dev에서 llm 호출 에러가 이렇게 뜨는데, 어떤 케이스일까요?! <@U06EG12UUMV>
+- thread_ts: '1769055826.496919'
+  date: '2026-01-22'
+  reply_count: 13
+  text_preview: <https://sionicai.slack.com/archives/C082JL1EV71/p1769055060990399>
+- thread_ts: '1768801855.176829'
+  date: '2026-01-19'
+  reply_count: 13
+  text_preview: 'Anthropic provider에서 `claude-3-5-sonnet-20241022` 모델도 지원하고 있지않습니다.
+
+    • *2025-10-18*부터 은퇴(?)(retired)되었'
+- thread_ts: '1769083270.921639'
+  date: '2026-01-22'
+  reply_count: 10
+  text_preview: '`asmr-v2 펑션콜`프로바이더: hyperclova 전체 펑션콜 안되네요. HCX-005는 에러로그 봤을때 description관련해서
+    써있는 걸 봤는데 오더시트상에서 desc'
+- thread_ts: '1768808139.361389'
+  date: '2026-01-19'
+  reply_count: 10
+  text_preview: <@U06EG12UUMV> DEV에서 펑션콜 관련해서 QA 중인데, 기존에 펑션콜 작동하던 에이전트에서 똑같은 쿼리로
+    테스트 했을때 안되는것 같아 도움 요청드립니다.
+- thread_ts: '1768211748.707479'
+  date: '2026-01-12'
+  reply_count: 9
+  text_preview: '<@U09GR0CBCCC> 님 제가 확인해본 결과로는 sg에서 지원중인 llm 모델을 asmr-v2에서 전부 지원하고
+    있고
+
+    `/api/v1/provider-models` 리스트에서'
+- thread_ts: '1767700190.621459'
+  date: '2026-01-06'
+  reply_count: 8
+  text_preview: <@U06EG12UUMV> asmr-v2 swagger 에 auth 작업 부탁 드립니다.
+- thread_ts: '1768796273.239809'
+  date: '2026-01-19'
+  reply_count: 5
+  text_preview: 'Anthropic provider에서 `claude-3-opus-20240229` 모델 지원하고 있지않습니다.
+
+    • *2026-01-05*부터 은퇴(?)(retired)되었다고 적혀'
+- thread_ts: '1768207302.975559'
+  date: '2026-01-12'
+  reply_count: 5
+  text_preview: '<@U06EG12UUMV> `dev` asmr-v2 rep 1 로 해도 될까요.
+
+    • 부하테스트를 하기 위해 1대가 좋습니다.
+
+    • 사실 2 core 16 ram 이면 앞으로도 dev'
+- thread_ts: '1767888521.781949'
+  date: '2026-01-09'
+  reply_count: 5
+  text_preview: asmr에 openrouter 모델 호출하는 방법 스레드 >>
+- thread_ts: '1768281084.365579'
+  date: '2026-01-13'
+  reply_count: 4
+  text_preview: '누군가 <https://sionicai.slack.com/archives/C07F2EFA76K/p1768281030539539|live>에서
+    max_tokens 프로퍼티 값 없이 '
+- thread_ts: '1769105560.066469'
+  date: '2026-01-23'
+  reply_count: 3
+  text_preview: '&gt; • Image input, tuning, function calling, structured outputs,
+    and reasoning cannot be used simul'
+metadata:
+  created_at: '2026-02-13T16:29:32'
+  synced_by: sync_fast.py

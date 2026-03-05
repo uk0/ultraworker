@@ -1,0 +1,115 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 40
+  total_threads: 18
+  active_users: 12
+  avg_messages_per_day: 0.7
+summary: >
+  2026 Q1(2월 26일까지)는 대규모 GPU 인프라 투자와 Foundation Model 전략이 핵심 흐름이었다. B300 GPU
+  64장(vram 18TB) 도입이 결정되었고, RTX 6000 Pro 96GB 16장도 이미 발주되었다. 이에 따라 모델 학습
+  계획 시 데이터셋, 모델 구조, fp8 트레이닝 등 선행 조사가 필요해졌다. 퍼듀대학교 MINDS Lab과의 글로벌
+  협력형 R&D 공동연구 협업이 시작되었으며, 아이디어 제출이 완료되었다. GPU 지원 과제로 LLM Forensics
+  (한국어 Foundation Model 5종 분석 + Post-training)가 제출되었다. 모티프와의 독파모 컨소시엄 가능성이
+  검토되었고, 리서처 JD(MultiModal FM, RAG Engine, 인턴)가 작성되었다. Qwen3.5-122B-A10B 등
+  최신 모델의 한국어 능력 조정 및 강원랜드 프로젝트 테스트가 진행되었다. LLM 유사도 분석(트릴리온 랩스),
+  딥리서치 세미나, 초격차/디딤돌 과제 제안서 리뷰 등 활발한 연구 활동이 이어졌다.
+topics:
+  - name: "GPU 인프라 대규모 투자"
+    count: 6
+    summary: "B300 64장(vram 18TB) 도입 결정. B300 8대 최종 발주. RTX 6000 Pro 16장 발주 완료. 냉각장치 도입. GPU 부족 현황 점검."
+  - name: "Foundation Model 컨소시엄"
+    count: 5
+    summary: "모티프와 사이오닉 독파모 컨소시엄 제안 초안 작성. 독파모 패자부활전 지원 검토. AI 미래비전 논의(박우명 커피챗 정리)."
+  - name: "퍼듀 MINDS Lab 협업"
+    count: 4
+    summary: "퍼듀대학교 MINDS Lab과 글로벌 협력형 R&D 공동연구. 아이디어 제출 완료. 2026년 중기부 사업."
+  - name: "LLM Forensics GPU 과제"
+    count: 3
+    summary: "한국어 Foundation Model 5종(A.X K1, K-EXAONE, Solar Open, VAETKI, HyperCLOVA X) 분석. HuRef/REEF 기반 Fingerprinting. Post-training(SFT, DPO, CPT). 논문 투고 계획."
+  - name: "리서처 채용"
+    count: 2
+    summary: "MultiModal FM Researcher, RAG Engine Researcher, AI/ML Research Intern JD 작성."
+  - name: "최신 모델 테스트"
+    count: 3
+    summary: "Qwen3.5-122B-A10B, Qwen3.5-35B-A3B 한국어 능력 조정. 강원랜드 프로젝트 테스트."
+  - name: "딥리서치 및 세미나"
+    count: 3
+    summary: "딥리서치 세미나 진행. 초격차/디딤돌 과제 제안서 기술 리뷰. 임베딩 모델 대외 공개 범위 논의."
+key_discussions:
+  - thread_ts: '1770340550'
+    date: '2026-02-06'
+    title: "B300 64장 GPU 도입 결정"
+    summary: "B300 64장(288GB x 64 = vram 18TB) 도입 예정. 모델 학습 계획 시 모델 구조, 데이터셋, fp8 트레이닝 등 선행 조사 필요."
+    participants: ["U057PR1ADCL"]
+    decisions: ["B300 64장 도입 확정"]
+    action_items: ["모델 구조/데이터셋/fp8 선행 조사"]
+    keywords: ["B300", "GPU", "인프라", "18TB"]
+    relevance_score: 1.0
+  - thread_ts: '1767317517'
+    date: '2026-01-02'
+    title: "퍼듀대학교 MINDS Lab 글로벌 협력 R&D"
+    summary: "퍼듀대학교 MINDS Lab과 2026년 중기부 글로벌협력형 R&D 공동연구 협업 제안. 매우 활발한 논의(57개 답글)."
+    participants: ["U093DG8SMD1"]
+    decisions: ["협업 추진"]
+    action_items: ["아이디어 제출"]
+    keywords: ["퍼듀", "MINDS Lab", "글로벌협력", "R&D"]
+    relevance_score: 0.9
+  - thread_ts: '1769140175'
+    date: '2026-01-23'
+    title: "GPU 지원 과제 - LLM Forensics"
+    summary: "LLM Forensics 과제 제출. Phase 1: 모델 Fingerprinting/계보 추적/토큰 분석. Phase 2: LLM/VLM Post-training. Phase 3: 모델/데이터셋 공개, 논문 투고."
+    participants: ["U09QEFWEQ3W"]
+    decisions: ["LLM Forensics 과제 내용 확정"]
+    action_items: ["과제 제출"]
+    keywords: ["LLM Forensics", "HuRef", "REEF", "Fingerprinting", "Post-training"]
+    relevance_score: 0.9
+  - thread_ts: '1769167892'
+    date: '2026-01-23'
+    title: "모티프-사이오닉 독파모 컨소시엄 제안"
+    summary: "Noah가 모티프와 사이오닉의 독자 Foundation Model 사업 컨소시엄 제안 초안 작성. 금요일 밤 긴급 공유. 노션 페이지에서 직접 수정/메모 요청."
+    participants: ["U057PR1ADCL"]
+    decisions: []
+    action_items: ["제안서 초안 리뷰 및 수정"]
+    keywords: ["모티프", "독파모", "컨소시엄", "Foundation Model"]
+    relevance_score: 0.9
+  - thread_ts: '1768545528'
+    date: '2026-01-16'
+    title: "AI 미래비전 논의"
+    summary: "박우명이 여러 멤버와 커피챗한 내용을 정리. ChatGPT 도움으로 AI 미래비전을 문서화. 매우 활발한 토론(41개 답글)."
+    participants: ["U058A971Z8R"]
+    decisions: []
+    action_items: []
+    keywords: ["AI비전", "미래전략", "커피챗"]
+    relevance_score: 0.8
+terminology:
+  - term: "B300"
+    definition: "NVIDIA Blackwell 아키텍처 기반 GPU. 288GB HBM3e 메모리."
+    aliases: []
+    context: "64장 도입 예정. vram 18TB 기준 모델 학습 계획."
+  - term: "독파모"
+    definition: "독자 파운데이션 모델. 정부 지원 사업의 핵심 키워드."
+    aliases: ["Foundation Model"]
+    context: "모티프와 사이오닉 컨소시엄 검토. 패자부활전 지원 고려."
+  - term: "MINDS Lab"
+    definition: "퍼듀대학교 소속 연구실. 글로벌 협력형 R&D 공동연구 파트너."
+    aliases: []
+    context: "2026년 중기부 글로벌협력형 R&D 사업."
+  - term: "og"
+    definition: "OpenRouter 대체를 목표로 하는 사내 LLM 프록시/게이트웨이 서비스."
+    aliases: []
+    context: "chat completion 구현 완료, response api 개발 중."
+  - term: "Qwen3.5"
+    definition: "Qwen의 최신 MoE(Mixture of Experts) 모델 시리즈. 122B-A10B, 35B-A3B 등."
+    aliases: []
+    context: "한국어 능력 조정 후 강원랜드 프로젝트 테스트."
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

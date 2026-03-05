@@ -1,0 +1,90 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:08'
+statistics:
+  total_messages: 168
+  total_threads: 129
+  active_users: 22
+  avg_messages_per_day: 3.9
+key_discussions:
+- thread_ts: '1770821883.847009'
+  date: '2026-02-11'
+  reply_count: 460
+  text_preview: live qdrant-v2 migration >>> <!subteam^S06VCLT4X6J>
+- thread_ts: '1767777712.329019'
+  date: '2026-01-07'
+  reply_count: 143
+  text_preview: <@U05SJ36FBN2> 오늘 <https://sionicai.slack.com/archives/C094V9K47CL/p1767763108068179|요
+    이슈> 처리하면서 명하님
+- thread_ts: '1770443813.699729'
+  date: '2026-02-07'
+  reply_count: 97
+  text_preview: netbird 셋업 완료. 매우 잘 됨...
+- thread_ts: '1768877452.725169'
+  date: '2026-01-20'
+  reply_count: 92
+  text_preview: qdrant 팟 버전올리기 <@U08GLL0SK2S> <@U05QCA7JTD5>
+- thread_ts: '1767664803.472849'
+  date: '2026-01-06'
+  reply_count: 82
+  text_preview: <!subteam^S06VCLT4X6J> <https://sionicai.slack.com/archives/C06LXJ3GE2D/p1767484920941819>
+    해야함!!!
+- thread_ts: '1768977908.913109'
+  date: '2026-01-21'
+  reply_count: 62
+  text_preview: '<@U085SJW6X63> 강욱님 시간되실때 리뷰 부탁드리겠습니다
+
+
+    <https://www.notion.so/sionic-ai/DP-max-Concurrency-process-2e'
+- thread_ts: '1770020725.086139'
+  date: '2026-02-02'
+  reply_count: 54
+  text_preview: <@U057MCDJHDY> 대 강욱님이 찾아주신 리스트 cc. <!subteam^S06VCLT4X6J> <@U06EG12UUMV>
+    <@U09M73LM65R> <@U07LV0VA9A
+- thread_ts: '1768827190.308739'
+  date: '2026-01-19'
+  reply_count: 52
+  text_preview: <!subteam^S06VCLT4X6J> qdrant 팟 응답 없음
+- thread_ts: '1770697879.354529'
+  date: '2026-02-10'
+  reply_count: 47
+  text_preview: <!subteam^S0A34U50WUF> OOM
+- thread_ts: '1770352066.977829'
+  date: '2026-02-06'
+  reply_count: 42
+  text_preview: <@U05T2RW7PE2> <@U057K0HC9KQ> 일정 타이트하게 요청드려 죄송합니다. onprem 장비 이전을 위해서
+    과거 미타 장비에서 운영중이던 벡터디비의 이관이 필요합니
+- thread_ts: '1770614215.165509'
+  date: '2026-02-09'
+  reply_count: 41
+  text_preview: <@U08GLL0SK2S> 성우님 ! OCI 클러스터의 agent-rag 버전 최신화 한번하고 동작하는지 확인요청 드려도
+    될까요??
+- thread_ts: '1767765203.002389'
+  date: '2026-01-07'
+  reply_count: 41
+  text_preview: '<!subteam^S06VCLT4X6J> 승규님이 asmr-v2 dev에 대해 부하테스트를 진행하셨는데
+
+    `error=ServiceUnavailable, message="503 Se'
+- thread_ts: '1768198305.845829'
+  date: '2026-01-12'
+  reply_count: 39
+  text_preview: 성능테스트를 위한 동국시스템즈 장비렌탈건 &gt;&gt;
+- thread_ts: '1769450043.137309'
+  date: '2026-01-27'
+  reply_count: 38
+  text_preview: 노드이슈
+- thread_ts: '1767943355.783499'
+  date: '2026-01-09'
+  reply_count: 32
+  text_preview: '<!subteam^S06VCLT4X6J> 혹시 이미지 빌드타임에서 ARG 환경변수를 동적으로 주입하는 방법이 있나요?
+
+    아마 없을 것 같아 여쭤봅니다. 이런 유즈케이스가 존재하는데 '
+metadata:
+  created_at: '2026-02-13T16:28:08'
+  synced_by: sync_fast.py

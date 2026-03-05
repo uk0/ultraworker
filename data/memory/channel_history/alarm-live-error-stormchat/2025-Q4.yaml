@@ -1,0 +1,46 @@
+channel:
+  id: C081TUD7MBM
+  name: alarm-live-error-stormchat
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 21
+  total_threads: 9
+  active_users: 8
+  avg_messages_per_day: 1.9
+summary: |
+  STORM Chat 에러 제보가 급증한 분기. 21건 메시지, 9개 스레드로 전 분기 대비 3배 증가.
+  12월에 집중적 에러 발생: 12/10 에러에 114건 답글, 12/20 에러에 38건 답글, 12/24 에러에 25건 답글.
+  11월 13일 에러에도 116건의 대규모 답글 스레드 발생 - 심각한 서비스 장애 대응으로 추정.
+  홍혁준, 강성우(Claude kang), 원성준, 김부교(Bekay), 김주원, 권혜선(Jada) 등 대거 합류.
+  ai-crawler 봇도 11월에 참여. 에러 빈도와 대응 규모 모두 역대 최대.
+topics:
+  - STORM Chat 500 에러 급증
+  - 11월/12월 대규모 장애 대응
+  - 116건/114건 대형 에러 대응 스레드
+  - 대응 인력 대거 확충
+  - ai-crawler 봇 추가
+key_discussions:
+  - thread_ts: '1763003746.511399'
+    date: '2025-11-13'
+    reply_count: 116
+    text_preview: "chat500에러 오류 제보 - 대규모 장애 대응 (116건 답글)"
+  - thread_ts: '1765376578.312919'
+    date: '2025-12-10'
+    reply_count: 114
+    text_preview: "chat500에러 오류 제보 - 대규모 장애 대응 (114건 답글)"
+  - thread_ts: '1766214259.396499'
+    date: '2025-12-20'
+    reply_count: 38
+    text_preview: "chat500에러 오류 제보 - 장애 대응 (38건 답글)"
+terminology:
+  - term: "ai-crawler"
+    definition: "AI 크롤러 봇"
+    context: "2025-Q4에 채널에 합류, 에러 모니터링 관련 추정"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

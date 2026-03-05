@@ -1,0 +1,29 @@
+channel:
+  id: C06USMT72DB
+  name: noti-figma
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 1
+  active_users: 3
+  avg_messages_per_day: 2.5
+summary: |
+  Figma 디자인 파일 변경 알림 채널. 'Storm Answer_기획' 파일의 업데이트가 간헐적으로 발생했다.
+  4월 초, 5월 중순, 5월 하순, 6월에 걸쳐 소규모 편집이 이루어졌다.
+  김부교(Bekay), 권혜선(Jada Gwon) 등 새 멤버가 채널에 합류했다.
+  5월 23일 업데이트에서 6개 답글이 달린 스레드가 발생하여 디자인 관련 토론이 있었던 것으로 보인다.
+topics:
+  - Storm Answer 기획 디자인
+  - Figma 파일 변경 알림
+key_discussions:
+  - title: Storm Answer_기획 디자인 토론
+    summary: 5월 23일 Figma 업데이트 알림에 6개 답글이 달림. 디자인 변경에 대한 피드백 또는 논의가 이루어진 것으로 추정.
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

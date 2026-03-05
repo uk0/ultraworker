@@ -1,0 +1,31 @@
+channel:
+  id: C07NQH3U7SN
+  name: noti-linear
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:30:21'
+statistics:
+  total_messages: 765
+  total_threads: 5
+  active_users: 1
+  avg_messages_per_day: 17.8
+key_discussions:
+- thread_ts: '1769169126.924169'
+  date: '2026-01-23'
+  reply_count: 5
+  text_preview: 김혜원 commented on STM-4266 챗 파일 업로드 기능 추가
+- thread_ts: '1767590055.903409'
+  date: '2026-01-05'
+  reply_count: 5
+  text_preview: 백은주 commented on STM-4365 응답 노드(text 노드) 구현
+- thread_ts: '1769404639.370619'
+  date: '2026-01-26'
+  reply_count: 2
+  text_preview: "*<https://linear.app/sionic-ai/project/체크리스트-e7f1e712ff12/updates#project-update-4b1f4d7a|체크리스트>*\
+    \ \n:"
+metadata:
+  created_at: '2026-02-13T16:30:21'
+  synced_by: sync_fast.py

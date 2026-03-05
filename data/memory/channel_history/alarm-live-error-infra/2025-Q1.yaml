@@ -1,0 +1,42 @@
+channel:
+  id: C082JL1EV71
+  name: alarm-live-error-infra
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 184
+  total_threads: 148
+  active_users: 9
+  avg_messages_per_day: 6.3
+summary: |
+  운영 환경 인프라 에러 알림 채널. 184건으로 Q4 대비 감소, 일평균 6.3건으로 안정화 추세.
+  live 네임스페이스 중심으로 알림 정리됨. New Relic InfraAlert(live) 정책 기반.
+  주요 알림 대상: stargate(16건), pylon(10건), bgem3-reranker(10건), carrier-storm-parse(9건), asmr(6건).
+  이재준(Leo), 송명하, Sigrid Jin 등이 에러 대응에 적극 참여.
+  "Pod has restarted"(58건)가 주요 유형이며, "Pod is in a Pending state"(6건) 간헐 발생.
+topics:
+  - stargate 검색 서비스 재시작
+  - pylon 서비스 불안정
+  - bgem3-reranker 모델 서비스 재시작
+  - carrier-storm-parse 문서 파싱 오류
+  - asmr 서비스 간헐적 재시작
+  - live 환경 중심 모니터링 체계화
+key_discussions: []
+terminology:
+  - term: "bgem3-reranker"
+    definition: "BGE-M3 기반 재순위화(reranking) 모델 서비스"
+    aliases: ["bge-m3-reranker"]
+    context: "검색 결과 정확도 향상을 위한 리랭킹 서비스"
+  - term: "carrier-storm-parse"
+    definition: "Carrier 시스템의 STORM 문서 파싱 컴포넌트"
+    context: "문서 처리 파이프라인의 일부"
+  - term: "pylon"
+    definition: "Sionic AI 핵심 서비스 컴포넌트"
+    context: "live 환경에서 지속적 재시작 이슈 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

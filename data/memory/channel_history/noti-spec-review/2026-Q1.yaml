@@ -1,0 +1,82 @@
+channel:
+  id: C06HUFQ8EKA
+  name: noti-spec-review
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:58'
+statistics:
+  total_messages: 9
+  total_threads: 8
+  active_users: 1
+  avg_messages_per_day: 0.2
+key_discussions:
+- thread_ts: '1768531895.110279'
+  date: '2026-01-16'
+  reply_count: 71
+  text_preview: '테크스펙 Loop 노드
+
+    • 프로젝트 : Stargate
+
+    • <https://www.notion.so/Loop-2e9b25e32acc80289c2efc7b9aac2111?source'
+- thread_ts: '1768798613.033529'
+  date: '2026-01-19'
+  reply_count: 63
+  text_preview: '테크스펙 Carrier에서 넘겨준 복수개의 (익스펜션한) 쿼리를 어떻게 처리할까
+
+    • 프로젝트 : Pylon
+
+    • <https://www.notion.so/sionic-ai/Pylon'
+- thread_ts: '1767660982.189919'
+  date: '2026-01-06'
+  reply_count: 22
+  text_preview: '테크스펙 응답노드 (text 노드) 설계
+
+    • 프로젝트 : STORM-WEB
+
+    • <https://www.notion.so/sionic-ai/2dcb25e32acc8076a054c00'
+- thread_ts: '1770213998.219089'
+  date: '2026-02-04'
+  reply_count: 17
+  text_preview: '테크스펙 워크플로우 초안 기능
+
+    • 프로젝트 : Stargate
+
+    • <https://www.notion.so/sionic-ai/Workflow-Draft-2fcb25e32acc80f'
+- thread_ts: '1769744333.412389'
+  date: '2026-01-30'
+  reply_count: 8
+  text_preview: '테크스펙 워크플로우 복사 붙여넣기 테크스팩
+
+    • 프로젝트 : STORM-WEB
+
+    • <https://www.notion.so/sionic-ai/2f7b25e32acc800eb258da'
+- thread_ts: '1767853022.970409'
+  date: '2026-01-08'
+  reply_count: 6
+  text_preview: '테크스펙 채팅 중 임시 파일 업로드
+
+    • 프로젝트 : Stargate
+
+    • <https://www.notion.so/sionic-ai/SG-Chat-2ceb25e32acc8073b93'
+- thread_ts: '1768281970.483119'
+  date: '2026-01-13'
+  reply_count: 5
+  text_preview: '테크스펙 비밀번호 변경 기능 구현
+
+    • 프로젝트 : Stargate
+
+    • <https://www.notion.so/sionic-ai/SG-2e7b25e32acc80a7a52ed6ccb'
+- thread_ts: '1770777889.660909'
+  date: '2026-02-11'
+  reply_count: 4
+  text_preview: '테크스펙 워크플로우 초안 + 자동저장
+
+    • 프로젝트 : STORM-WEB
+
+    • <https://www.notion.so/sionic-ai/draft-302b25e32acc804e92e'
+metadata:
+  created_at: '2026-02-13T16:27:58'
+  synced_by: sync_fast.py

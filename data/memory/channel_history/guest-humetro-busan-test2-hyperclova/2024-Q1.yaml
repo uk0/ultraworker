@@ -1,0 +1,56 @@
+channel:
+  id: C06MQM9N7UN
+  name: guest-humetro-busan-test2-hyperclova
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 20
+  total_threads: 8
+  active_users: 10
+  avg_messages_per_day: 4.0
+summary: |
+  부산교통공사(Humetro) Storm Answer HyperCLOVA 모델 테스트 채널. 2024년 3월에 채널이 생성되어
+  김혜원 등 내부 인원과 NAVER FRANCE & European Business, Nemosys 등 외부 조직이 참여함.
+  Storm Dev 봇을 통해 문서를 등록한 후, GPT-4 테스트 채널(test1)과 동일한 질문들(PBS, RAMS,
+  교정시스템 가용도, 운행 가용도, 구매 단가, 고장원인 코드 등)을 HyperCLOVA 모델로 테스트하여
+  모델 간 성능을 비교함. cllee 사용자가 "HBS의 의미" 질문으로 19개 답변이 달린 가장 활발한
+  스레드를 생성함. NAVER 측 인원(jiho.hong, minkim, jho.choi, yongjun.park, jykwon, cllee)도
+  참여하여 HyperCLOVA 모델의 도메인 적용 가능성을 함께 검증함.
+topics:
+  - 부산교통공사 HyperCLOVA 테스트
+  - GPT-4 vs HyperCLOVA 모델 비교
+  - 철도 도메인 QA 성능 검증
+  - NAVER 협업 테스트
+key_discussions:
+  - thread_ts: '1710824690.785099'
+    date: '2024-03-19'
+    reply_count: 19
+    text_preview: "HBS의 의미는 뭐야? - HyperCLOVA 모델 도메인 질의 테스트"
+  - thread_ts: '1709701043.373749'
+    date: '2024-03-06'
+    reply_count: 2
+    text_preview: "고장모드를 선별하는 분석 기법이 PBS야? - 전문 용어 질의"
+  - thread_ts: '1709701038.623439'
+    date: '2024-03-06'
+    reply_count: 2
+    text_preview: "RAMS가 뭐야? - 철도 안전성 분석 용어 질의"
+terminology:
+  - term: "HyperCLOVA"
+    definition: "네이버가 개발한 대규모 한국어 언어모델"
+    context: "GPT-4와의 성능 비교 테스트에 사용"
+  - term: "RAMS"
+    definition: "Reliability, Availability, Maintainability, Safety. 철도 시스템 신뢰성 분석 프레임워크"
+    context: "부산교통공사 도메인 질의에서 사용"
+  - term: "HBS"
+    definition: "부산교통공사 관련 용어 (스레드에서 상세 논의)"
+    context: "HyperCLOVA 테스트 중 질의된 용어"
+  - term: "Nemosys"
+    definition: "외부 협력 조직. NAVER 관련 파트너"
+    context: "HyperCLOVA 테스트 채널에 참여"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

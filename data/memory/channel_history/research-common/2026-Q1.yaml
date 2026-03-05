@@ -1,0 +1,101 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:17'
+statistics:
+  total_messages: 33
+  total_threads: 26
+  active_users: 10
+  avg_messages_per_day: 0.8
+key_discussions:
+- thread_ts: '1768284374.398719'
+  date: '2026-01-13'
+  reply_count: 79
+  text_preview: "gpu 수급 계획 (기록용. 확정은 아님. 마왕님 고민 중) <!subteam^S07MRM7NLAC>\n• B300\
+    \ 타겟 -> 본진 + Cloud 운영 목표\n    ◦ 계획은 3월 "
+- thread_ts: '1767317517.343709'
+  date: '2026-01-02'
+  reply_count: 57
+  text_preview: '[협력 제안] 퍼듀대학교 MINDS Lab - 2026년 중기부 글로벌협력형 R&amp;D 공동연구 &gt;&gt;'
+- thread_ts: '1768955004.489429'
+  date: '2026-01-21'
+  reply_count: 46
+  text_preview: oh-my-onpremcode 건에 대해
+- thread_ts: '1768545528.288169'
+  date: '2026-01-16'
+  reply_count: 41
+  text_preview: '<!subteam^S07MRM7NLAC> (cc <@U057PR1ADCL>)
+
+    커피챗 하면서 몇몇 분들과 얘기한 내용을 ChatGPT 도움 받아서 정리해봤습니다, ㅎㅎ
+
+    관련하여 서로'
+- thread_ts: '1768492476.058929'
+  date: '2026-01-16'
+  reply_count: 39
+  text_preview: 아이디어 메모 만약에 독파모 패자부활전을 지원한다면
+- thread_ts: '1769665222.327099'
+  date: '2026-01-29'
+  reply_count: 37
+  text_preview: 퀸즈가드자산운용 관련
+- thread_ts: '1768799916.455019'
+  date: '2026-01-19'
+  reply_count: 36
+  text_preview: <https://www.notion.so/sionic-ai/260119-Research-Meeting-2edb25e32acc80cea281f7fa66f49f48?source=cop
+- thread_ts: '1769140175.539309'
+  date: '2026-01-23'
+  reply_count: 27
+  text_preview: '<!subteam^S07MRM7NLAC> gpu 지원 과제 내용 아래와 같습니다. 혹시 다른 의견 있으시면 알려주세요.
+
+
+    □ 과제 내용
+
+    본 과제는 *국내 주요 한국어 Foundat'
+- thread_ts: '1768872254.699559'
+  date: '2026-01-20'
+  reply_count: 26
+  text_preview: 초격차, 디딤돌 과제 제안서 기술 리뷰 부탁드립니다. <!subteam^S07MRM7NLAC>
+- thread_ts: '1770615141.425009'
+  date: '2026-02-09'
+  reply_count: 17
+  text_preview: '보고 계시죠? <!subteam^S07MRM7NLAC> 주간보고.
+
+    <https://www.notion.so/sionic-ai/260209-Research-Meeting-302b25'
+- thread_ts: '1768973662.351519'
+  date: '2026-01-21'
+  reply_count: 17
+  text_preview: '<https://meet.google.com/oxh-tzjo-bcm>
+
+
+    딥리서치 세미나 시작합니다.'
+- thread_ts: '1769167892.002959'
+  date: '2026-01-23'
+  reply_count: 15
+  text_preview: 'what if... ?
+
+    혹시 모티프와 사이오닉의 독자 파운데이션 모델사업의 컨소시움을 꾸린다면 ?
+
+    <https://www.notion.so/sionic-ai/2f1b25e32acc'
+- thread_ts: '1770269923.077729'
+  date: '2026-02-05'
+  reply_count: 11
+  text_preview: 'graphrag 냄새 나지 않나요?
+
+    <https://habana4.tistory.com/entry/SysML-%EB%8B%A4%EC%9D%B4%EC%96%B4%EA%B7%B8%EB'
+- thread_ts: '1769586611.225759'
+  date: '2026-01-28'
+  reply_count: 9
+  text_preview: '<https://www.scylladb.com/2025/12/01/scylladb-vector-search-1b-benchmark/>
+
+    <@U08GLL0SK2S>'
+- thread_ts: '1768870348.436749'
+  date: '2026-01-20'
+  reply_count: 8
+  text_preview: 퍼듀 협업 아이디어 논의 쓰레드
+metadata:
+  created_at: '2026-02-13T16:29:17'
+  synced_by: sync_fast.py

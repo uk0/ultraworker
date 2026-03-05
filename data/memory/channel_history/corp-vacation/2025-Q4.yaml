@@ -1,0 +1,58 @@
+channel:
+  id: C06UTL9DK6G
+  name: corp-vacation
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 130
+  total_threads: 59
+  active_users: 2
+  avg_messages_per_day: 2.4
+summary: |
+  2025년 4분기 corp-vacation 채널은 130건의 메시지로 연말 휴가 시즌의 활발한 사용을 보였다.
+  12월 크리스마스 전후(12/22~12/26)에 휴가가 집중되었으며, 홍성아(12/22~24), 오승희
+  (12/8~19, 12/22~24), 강성우(12/26~1/2), 송명하(12/23~24) 등이 연말 휴가를 사용했다.
+  양호진은 11/10~11/21 장기 휴가를 신청했다가 취소하기도 했다. 신규 멤버로 이상호,
+  홍혁준, 윤여준, 최소영, 오승희, 윤주운, 박상욱 등이 새로 등장했다. 고석현(Noah)이
+  박진형 휴가에 "<@U06CLS6E694> 또 어디감.."이라는 유머러스한 코멘트를 남겼다.
+  김혜원은 2026년 2월 6일 휴가를 미리 신청하기도 했으며, 김덕현도 1월 2일~6일
+  연초 휴가를 미리 등록했다. 휴가 취소·변경이 빈번하게 발생했다.
+topics:
+  - 연말 크리스마스 휴가
+  - 장기 휴가 신청 및 취소
+  - 신규 멤버 휴가 사용
+  - 연초 휴가 사전 신청
+  - 휴가 취소 및 변경
+key_discussions:
+  - thread_ts: '1764575341.503379'
+    date: '2025-12-01'
+    reply_count: 43
+    text_preview: '[김혜원] 12월 12일 휴가 - 매우 활발한 스레드'
+  - thread_ts: '1764138502.011129'
+    date: '2025-11-26'
+    reply_count: 15
+    text_preview: '[강성우] 11월 27일 휴가 - 활발한 스레드'
+  - thread_ts: '1760973287.829649'
+    date: '2025-10-20'
+    reply_count: 13
+    text_preview: '고석현(Noah) "또 어디감.." - 유머러스한 코멘트 스레드'
+  - thread_ts: '1761781014.051189'
+    date: '2025-10-29'
+    reply_count: 11
+    text_preview: '[박진형] 10월 30일 휴가 취소 - 스레드 논의'
+  - thread_ts: '1765169335.853499'
+    date: '2025-12-08'
+    reply_count: 8
+    text_preview: '[오승희] 12/8~19 장기 휴가 - 스레드 논의'
+terminology:
+  - term: "연말 휴가"
+    definition: "12월 크리스마스 전후 기간에 집중적으로 사용되는 휴가. 사이오닉 AI 구성원들 사이에서 일반적인 패턴."
+    aliases: ["크리스마스 휴가"]
+    context: "12/22~12/26 기간에 다수 구성원이 휴가를 집중 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,61 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 74
+  total_threads: 49
+  active_users: 8
+  avg_messages_per_day: 1.7
+summary: |
+  2024년 3분기는 인프라 확장 및 안정화 시기였다. GPU 서버(worker15, worker101) 세팅 및 랙 장착, k8s 마스터 노드 2대 추가 구매 등 온프레미스 인프라가 확대되었다. 통신실 전력 구성 정비, 에어컨 추가 설치(냉방 이중화), 온습도계 설치 및 Grafana 모니터링 연동이 이루어졌다. WAF rate limit 이슈 해결(5분간 2,000->10,000), Elasticsearch 볼륨 증설(50Gi->500Gi), ECR refresh 파이프라인 추가, Cilium rate limit 설정 등 서비스 운영 안정화 작업이 진행되었다. 뤼튼 협업 POC를 위한 모델 배포, GCP 프로젝트 정리, OCI 테스트 계정 공유, PaaS 견적 비용 산출, Datadog 비용 체크 등 비용 및 서비스 최적화 논의가 활발했다. 보안 관련으로 외부 노출 SSH 포트 삭제 및 VPN 접근 체계 개선이 이루어졌다.
+topics:
+  - GPU 서버 확장 (worker15, worker101)
+  - 통신실 전력/냉방 인프라 이중화
+  - 서비스 안정화 (WAF rate limit, ES 볼륨, ECR)
+  - 모니터링 (온습도계, Grafana, Datadog)
+  - 뤼튼 협업 POC
+  - 보안 강화 (SSH 포트 정리, VPN)
+  - 비용 최적화 (GPU 가격, PaaS 견적)
+key_discussions:
+  - thread_ts: '1721721997.097349'
+    date: '2024-07-23'
+    title: k8s 마스터 노드 추가 구매
+    participants: [Noah(고석현)]
+    summary: 마스터 노드 2대(여분 포함 3대) 추가 구매, 대회의실 쪽 배치 검토
+  - thread_ts: '1721631362.381399'
+    date: '2024-07-22'
+    title: 통신실 전원 구조 정비
+    participants: [Noah(고석현)]
+    summary: 전기공사 연락 및 전력구성 검토, 17개 답글
+  - thread_ts: '1723013163.280609'
+    date: '2024-08-07'
+    title: Datadog 비용 체크
+    participants: [김덕현(Dekay)]
+    summary: 모니터링 비용 검토 및 대안 논의, 18개 답글
+  - thread_ts: '1725598586.633869'
+    date: '2024-09-06'
+    title: GCP 프로젝트 정리
+    participants: [김덕현(Dekay)]
+    summary: GCP 리소스 정리 및 비용 최적화, 18개 답글
+terminology:
+  - term: WAF
+    definition: Web Application Firewall
+    context: rate limit 설정으로 인한 403 에러 발생, 임계값 조정
+  - term: Cilium
+    definition: eBPF 기반 Kubernetes CNI 플러그인
+    context: 온프렘 클러스터 네트워크 관리에 활용
+  - term: Karpenter
+    definition: Kubernetes 노드 오토스케일러
+    context: EKS에서 Argo Workflows와 함께 사용 검토
+  - term: coroot
+    definition: eBPF 기반 오픈소스 모니터링 도구
+    context: Datadog 대안으로 검토
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

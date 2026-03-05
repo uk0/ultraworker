@@ -1,0 +1,78 @@
+channel:
+  id: C09HS621PV2
+  name: project-국세청
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 7
+  active_users: 8
+  avg_messages_per_day: 8.3
+summary: |
+  2025-Q3 기간 동안 국세청 PoC 프로젝트 채널이 개설되어 현장 방문 및 초기 설치 작업이 진행되었다. 국세청 세종 청사 현장에서 Helm, MinIO, Harbor, GraphRAG(griffths) 등의 인프라 바이너리와 컨테이너 이미지를 반입하는 작업이 이루어졌으며, Qdrant 배포 오류 및 파일 반입 지연 등의 이슈가 발생하였다. Pylon까지 서비스 스택이 구동되는 데 성공하였으며, graphrag-sionic에 TEI/ASMR 지원이 추가되었다.
+topics:
+  - name: "인프라 반입 및 설치"
+    mention_count: 10
+    description: "Helm, MinIO, Harbor, Qdrant, griffths 등 국세청 내부망 반입 및 설치 작업"
+  - name: "Qdrant 배포 오류"
+    mention_count: 3
+    description: "Qdrant StatefulSet semverCompare 오류 - 이미지 태그 형식 불일치로 인한 배포 실패"
+  - name: "GraphRAG 지원 추가"
+    mention_count: 2
+    description: "graphrag-sionic에 TEI/ASMR 지원 추가(PR #2), 국세청 PoC용 이미지 준비"
+  - name: "파일 반입 지연"
+    mention_count: 5
+    description: "국세청 보안 정책상 파일 반입 절차 지연, 외부 반입 승인 대기 이슈"
+key_discussions:
+  - thread_ts: '1759176240.000000'
+    date: '2025-09-29'
+    reply_count: 10
+    text_preview: "해야 하는 일: helm 바이너리, MinIO 차트, Harbor, graphRAG, grips 차트 - 역할 분담"
+  - thread_ts: '1759199880.000000'
+    date: '2025-09-29'
+    reply_count: 7
+    text_preview: "국세청 파일 반입 불가 - 내일 오전 재방문 예정, 현장 철수 및 카페 작업 전환"
+  - thread_ts: '1759230060.000000'
+    date: '2025-09-29'
+    reply_count: 3
+    text_preview: "중요 카페 와이파이 정보 공유"
+  - thread_ts: '1759272000.000000'
+    date: '2025-09-29'
+    reply_count: 3
+    text_preview: "graphrag-sionic TEI/ASMR 지원 추가 완료 및 PR 공유"
+  - thread_ts: '1759293720.000000'
+    date: '2025-09-30'
+    reply_count: 2
+    text_preview: "Qdrant 배포 오류 기록 - semverCompare 오류, 이미지 태그 형식 불일치"
+  - thread_ts: '1759336800.000000'
+    date: '2025-09-30'
+    reply_count: 0
+    text_preview: "베슬 K8S 이미지레포: zarf, docker.io 경로 전부 zarf로 변경 작업"
+terminology:
+  - term: "국세청"
+    definition: "대한민국 국세청(National Tax Service)으로, Sionic AI의 STORM 플랫폼을 도입하는 PoC 고객사"
+    aliases: ["NTS"]
+    context: "세종 청사에 On-Premise 형태로 STORM 플랫폼 반입 및 설치"
+  - term: "griffths"
+    definition: "Sionic AI의 GraphRAG 엔진으로, 그래프 기반 검색 기능을 제공"
+    aliases: ["graphrag-sionic", "그래프 래그", "Griffths"]
+    context: "국세청 PoC에서 GraphDB 연동을 위해 사용"
+  - term: "베슬"
+    definition: "국세청 내부 쿠버네티스 클러스터 플랫폼으로 추정되는 인프라 서비스"
+    aliases: ["Vessel"]
+    context: "국세청 AI 클러스터 운영에 사용되는 플랫폼"
+  - term: "zarf"
+    definition: "에어갭(Air-gap) 환경에서 K8S 애플리케이션을 패키징하고 배포하는 도구"
+    aliases: []
+    context: "국세청 내부망(폐쇄망) 환경에서 이미지 반입 및 배포에 사용"
+  - term: "아이티센"
+    definition: "국세청 PoC 사업의 SI 파트너사로, 솔루션 통합 및 연동을 담당"
+    aliases: ["ITcen"]
+    context: "Sionic AI 솔루션과 국세청 내부 시스템 통합 담당"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

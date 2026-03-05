@@ -1,0 +1,120 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 183
+  total_threads: 165
+  active_users: 27
+  avg_messages_per_day: 2.6
+summary: |
+  2025년 3분기 qna 채널은 사업 확장과 조직 성장이 뚜렷이 반영되었다. 신규 합류자(안진혁, 원성준, 정석현, 윤주운 등)의
+  온보딩 관련 질문이 증가하며 명함 제작, 출입카드, GitHub/HuggingFace 초대, JetBrain/1Password 설정, 사무실 장비
+  요청 등이 활발했다. 사업적으로는 IBK 에이전트 관련 질문, 서울대 정보화본부 워크플로우 오류, 두산 데모 에이전트,
+  마크스폰 에이전트 설계 자료 요청 등 고객 프로젝트 대응이 주요 화두였다. 제품 관련으로는 SEO 최적화, 웹사이트
+  도메인 이슈, 오더시트 v0 지원 중단, 워크플로우 노드 라이브 반영 타임라인, query param list 형태 표준 등 기술 논의가
+  깊어졌다. 대외 PR 활동(Claude Seoul 발표 영상, 사이오닉 유튜브 채널, 인터넷대상 신청서, 채용 페이지 개선, 고객
+  테스티모니얼 수집)이 강화되었으며, 채용/HR(ATS/TRM 도입, FLEX 플랜, 단기 계약직 관리) 관련 논의도 활발했다.
+topics:
+  - 신규 입사자 온보딩
+  - IBK 에이전트/프로젝트
+  - 서울대 정보화본부
+  - 두산 데모 에이전트
+  - SEO 최적화
+  - 웹사이트 도메인 이슈
+  - 오더시트 v0 지원 중단
+  - 워크플로우 노드 라이브 반영
+  - query param list 표준
+  - Claude Seoul 발표 영상
+  - 사이오닉 유튜브 채널
+  - 채용/HR(ATS/TRM, FLEX)
+  - 대외 PR/테스티모니얼
+  - VPN/DataGrip DB 접근
+  - 병무청 가점사항 제출
+  - frasco.ai 경쟁사 분석
+  - kopring-starter 프레임워크
+  - sionic-ai 로고/BI 리소스
+  - 일본 시장(일본어 소개 영상, 일어 명함)
+key_discussions:
+  - thread_ts: '1756891173.380959'
+    date: '2025-09-03'
+    reply_count: 52
+    text_preview: query param list 형태(status 동어반복) 표준 논의
+  - thread_ts: '1758699184.693449'
+    date: '2025-09-24'
+    reply_count: 40
+    text_preview: DataGrip DB 접속 터널링 PEM 파일 요청
+  - thread_ts: '1756803057.635609'
+    date: '2025-09-02'
+    reply_count: 23
+    text_preview: SEO 최적화 담당자 및 현황 확인
+  - thread_ts: '1756344089.988989'
+    date: '2025-08-28'
+    reply_count: 31
+    text_preview: 스톰 워크플로우 LLM 노드 설정 페이지 변경 일정 문의
+  - thread_ts: '1757575164.534009'
+    date: '2025-09-11'
+    reply_count: 16
+    text_preview: kopring-starter에서 JPA 대신 Exposed 채택 이유 질문
+  - thread_ts: '1756798918.500719'
+    date: '2025-09-02'
+    reply_count: 16
+    text_preview: 웹사이트 유입 경로 및 페이지별 체류시간 데이터 확인
+  - thread_ts: '1756792397.860049'
+    date: '2025-09-02'
+    reply_count: 16
+    text_preview: 코프링 서버 kopring-starter 사용 요청
+  - thread_ts: '1758208031.281059'
+    date: '2025-09-30'
+    reply_count: 15
+    text_preview: 오더시트 v0 프론트 지원 중단 여부 확인
+  - thread_ts: '1757044403.859849'
+    date: '2025-09-05'
+    reply_count: 15
+    text_preview: 면접 질의/의견 공유 노션 공간 문의
+  - thread_ts: '1757322232.881469'
+    date: '2025-09-08'
+    reply_count: 15
+    text_preview: IBK 기업은행 에이전트 관련 기술 질문
+  - thread_ts: '1758812135.168489'
+    date: '2025-09-25'
+    reply_count: 13
+    text_preview: Canvas/Json editor와 Test/Checklist 위치 변경 확인
+terminology:
+  - term: 오더시트(Order Sheet)
+    definition: 스톰 에이전트의 설정을 JSON 형태로 관리하는 문서
+    aliases: []
+    context: v0 지원 중단, IBK 오더시트 조절 어려움 등에서 언급
+  - term: kopring-starter
+    definition: 최병현이 개발한 코틀린+스프링 기반 서버 스타터 템플릿
+    aliases:
+      - sionic-kopring-starter
+    context: 새 코프링 서버 생성, Exposed vs JPA 논의에서 언급
+  - term: frasco.ai
+    definition: 일본 ACCESS사의 AI 플랫폼 (경쟁사)
+    aliases: []
+    context: 트라이얼 계정 테스트 및 성능 비교 요청에서 언급
+  - term: ATS
+    definition: Applicant Tracking System, 지원자 추적 시스템
+    aliases: []
+    context: 채용 프로세스 도입 검토에서 언급
+  - term: TRM
+    definition: Talent Relationship Management, 인재 관계 관리
+    aliases: []
+    context: ATS와 함께 채용 도구 도입 검토에서 언급
+  - term: Claude Seoul
+    definition: Anthropic 주최 한국 커뮤니티 행사
+    aliases: []
+    context: 박진형 발표 영상 사이오닉 유튜브 업로드 논의에서 언급
+  - term: vessel
+    definition: 사이오닉의 온프레미스 GPU 서버
+    aliases: []
+    context: A100 외부 접속 VPN, supply 테스트 등에서 언급
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

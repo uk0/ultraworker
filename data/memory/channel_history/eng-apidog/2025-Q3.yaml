@@ -1,0 +1,33 @@
+channel:
+  id: C08Q4GPSPAR
+  name: eng-apidog
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3 eng-apidog 채널은 활동이 적었다. 김부교(Bekay)가 apidog 멤버 초대 권한 요청
+  (번역 작업을 위한 김수진, s.baek 초대)과 apidog 브랜치 정리(노션 제품 가이드라인을
+  apidog로 이전 작업 중 브랜치 5개 제한에 도달) 관련 논의가 있었다.
+topics:
+  - apidog 멤버 관리
+  - apidog 브랜치 정리
+  - 노션-apidog 문서 이전
+key_discussions:
+  - thread_ts: '1758510807.135639'
+    date: '2025-09-22'
+    topic: apidog 멤버 초대 권한 요청 (번역 담당자 추가)
+  - thread_ts: '1759285354.177849'
+    date: '2025-10-01'
+    topic: apidog 브랜치 정리 (5개 제한 도달)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

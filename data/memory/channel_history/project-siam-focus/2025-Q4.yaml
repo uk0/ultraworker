@@ -1,0 +1,23 @@
+channel:
+  id: C09A6TCEDE1
+  name: project-siam-focus
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q4 해당 분기에는 실질적인 활동이 없었음. 채널 참여 알림 1건만 기록됨.
+  시암 프로젝트 집중 채널이 Q3 교육세션 종료 후 비활성 상태로 전환됨.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,60 @@
+channel:
+  id: C06SQS126NM
+  name: project-military-service-vendor
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 51
+  total_threads: 17
+  active_users: 7
+  avg_messages_per_day: 3.9
+summary: |
+  병역특례(산업기능요원/전문연구요원) 지정업체 신청을 위한 본격적인 준비가 진행된 분기.
+  병특 컨설팅 업체와 계약을 체결하고(약 500만원), 산기능/전문연 동시 신청 방향을 결정했다.
+  지방 오피스(익산) 확보를 위해 월드비즈타운 등 공유오피스를 검토하고, 실사 지원이 가능한 업체를 선정했다.
+  부설연구소 설립이 인정되었으며, 위험성평가 우수사업장 인정도 획득했다.
+  광주소마고/대덕마이스터고 산학협력 면접을 진행하여 FE/BE 인력 채용을 검토했다.
+  내일채움 공제 관련 논의와 병특 관련 외부 기관 대응 체계도 정비했다.
+topics:
+  - 병역특례 신청
+  - 부설연구소 설립
+  - 지방 오피스 확보
+  - 산학협력 채용
+  - 위험성평가 인정
+key_discussions:
+  - thread_ts: '1712045750.599059'
+    date: '2024-04-02'
+    summary: '병특 컨설팅 업체 계약 논의 (약 500만원, 산기능/전문연 동시 신청)'
+  - thread_ts: '1712548545.314659'
+    date: '2024-04-08'
+    summary: '익산 지방 오피스 후보지 검토 (월드비즈타운, 실사 지원 가능)'
+  - thread_ts: '1714379330.126139'
+    date: '2024-04-29'
+    summary: '위험성평가 인정심사 준비 및 진행 (24건 스레드)'
+  - thread_ts: '1714010634.678589'
+    date: '2024-04-25'
+    summary: '광주마이스터고 산학협력 면접 대상자 검토 (FE 5명)'
+  - thread_ts: '1715932129.891449'
+    date: '2024-05-17'
+    summary: '부설연구소 설립 인정 완료'
+  - thread_ts: '1716354384.579939'
+    date: '2024-05-22'
+    summary: '광주소마고 현장실습 대상기업 관련 논의'
+terminology:
+  - term: '병특'
+    definition: '병역특례 제도의 줄임말. 산업기능요원/전문연구요원으로 복무하는 제도'
+  - term: '산기능'
+    definition: '산업기능요원. 병역특례 복무 형태 중 하나'
+  - term: '전문연'
+    definition: '전문연구요원. 석사 이상 학위 소지자 대상 병역특례 복무 형태'
+  - term: '콘탁'
+    definition: '병특 컨설팅 업체. 실사 지원 및 가점 확보 지원'
+  - term: '내일채움'
+    definition: '내일채움공제. 중소기업 재직자 자산형성 지원 제도'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,90 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 130
+  total_threads: 91
+  active_users: 12
+  avg_messages_per_day: 2.3
+summary: |
+  2025년 1분기 research-common 채널은 연구팀 최대 활동 분기로, 청킹 전략 고도화, 임베딩 생성 개선, 피드백 시스템 재설계, DeepSeek-R1 관련 논의 등 다양한 기술 주제가 심도 있게 다루어졌다.
+  BGE-M3 기반 ModernBERT GTE 모델 컨버터 개발, BERT 청킹 모델 구현, 검색에서 O1 모델의 필요성, Concat is All You Need 실험 등 연구 성과가 공유되었다.
+  CVPR 논문 리뷰 결과 발표, RAG Evaluation 데이터셋 구축, STORM Parse 데이터 제작 등 핵심 프로젝트들이 동시에 진행되었다.
+topics:
+  - name: "청킹 전략 고도화"
+    mention_count: 15
+    description: "의미적 청킹 모델 개발(BERT-chunker), Late Chunking 실험, 고정길이 청킹 대비 성능 분석"
+  - name: "임베딩/검색 개선"
+    mention_count: 18
+    description: "Concat Is All You Need 실험, Late CLS Chunking, 피드백 시스템 재설계, 질의확장"
+  - name: "STORM Parse 데이터 구축"
+    mention_count: 10
+    description: "기록원 데이터 기반 Qwen 학습용 150만개 데이터 구축, OmniDocBench 평가"
+  - name: "DeepSeek-R1 논의"
+    mention_count: 8
+    description: "DeepSeek-R1 및 증류 버전 공개, IBK 환경에서의 활용 가능성 검토"
+  - name: "RAG Evaluation 데이터셋"
+    mention_count: 6
+    description: "RAG Hard 데이터셋 구축, StrategyQA 포함 멀티홉 QA 제작"
+  - name: "ModernBERT GTE 모델"
+    mention_count: 5
+    description: "Alibaba-NLP의 gte-modernbert-base 타겟으로 모델 컨버터 개발, 블로그 아티클 예정"
+key_discussions:
+  - thread_ts: '1736313720.000000'
+    date: '2025-01-08'
+    reply_count: 45
+    text_preview: "레이어 복제 기반 모델 구조 제안 - BGE-M3 같은 모델의 추가 튜닝 성능 저하 문제 해결"
+  - thread_ts: '1737283680.000000'
+    date: '2025-01-19'
+    reply_count: 10
+    text_preview: "피드백 시스템 근본 개선 방안 - 크로스 인코더 기반 하드/소프트 버전 제안"
+  - thread_ts: '1737375000.000000'
+    date: '2025-01-20'
+    reply_count: 6
+    text_preview: "O1으로만 답변 가능한 RAG task - IBK 이자율 계산 문제에서 4o 실패, O1 성공"
+  - thread_ts: '1738153200.000000'
+    date: '2025-01-30'
+    reply_count: 26
+    text_preview: "ModernBERT GTE 모델 컨버터 개발 완료 - MosaicML SOTA 구현체 기반"
+  - thread_ts: '1738844400.000000'
+    date: '2025-02-06'
+    reply_count: 23
+    text_preview: "Concat Is All You Need - BGE-M3으로 2000~4000 토큰 광역 인코딩으로 Qwen 7B 임베딩 능가"
+  - thread_ts: '1738844400.000100'
+    date: '2025-02-06'
+    reply_count: 13
+    text_preview: "New STORM vs Old STORM 검색 성능 비교 - LLM 최종 점수 0.97 vs 0.75"
+terminology:
+  - term: "BERT-chunker"
+    definition: "인코더 기반 의미적 청킹 모델, 토큰별 청크 경계를 2클래스 분류로 예측"
+    aliases: ["bert-chunker"]
+    context: "github.com/sionic-ai/bert-chunker, 청킹 고도화 연구의 핵심 모델"
+  - term: "Late CLS Chunking"
+    definition: "전체 문서 히든을 구한 후 CLS 풀링과 Late Chunking 풀링을 결합하는 임베딩 기법, 특허 출원 예정"
+    aliases: []
+    context: "사이오닉 리서치팀이 개발한 청킹 임베딩 방법론"
+  - term: "Concat Is All You Need"
+    definition: "BGE-M3 모델을 n배 이어붙여 내적하는 방식으로 Qwen 7B 임베딩을 능가하는 실험적 기법"
+    aliases: []
+    context: "임베딩 성능 개선 실험에서 제안된 방법"
+  - term: "DeepSeek-R1"
+    definition: "중국 DeepSeek의 추론 특화 대형 언어 모델, 증류 버전도 공개"
+    aliases: ["R1", "R1-zero"]
+    context: "IBK H100 환경에서의 활용 가능성 검토 대상"
+  - term: "ModernBERT"
+    definition: "MosaicML의 최신 BERT 계열 모델로 flash_attention2, unpadding 등 최신 최적화 기법 적용"
+    aliases: ["gte-modernbert-base"]
+    context: "리랭커 주력 모델로 고려 중인 Alibaba-NLP/gte-modernbert-base의 기반 모델"
+  - term: "IBK"
+    definition: "IBK투자증권, 리서치팀의 주요 고객사로 RAG 기반 금융 QA 시스템 구축 대상"
+    aliases: ["IBK투자", "IBK투자증권"]
+    context: "이자율 계산 등 복잡한 금융 RAG 태스크 테스트베드"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

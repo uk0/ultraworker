@@ -1,0 +1,90 @@
+channel:
+  id: C07LHF65Z6E
+  name: project-ibk
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 297
+  total_threads: 249
+  active_users: 15
+  avg_messages_per_day: 5.1
+summary: |
+  IBK 본사업 운영 안정화 및 종료 단계 진입. 캐리어/서플라이/스톰파스/파일런 등 솔루션 컴포넌트의
+  지속적 버전 업그레이드 및 반입 작업이 핵심. 쿼리 익스펜션 프롬프트 최적화('당행'을 'IBK기업은행'
+  으로 변환하는 프롬프트 추가), 엑셀 파싱 개선, PDF 뷰어 CJK 글자 미출력 이슈 해결(psi-lense
+  4.3.0 배포). 서플라이 인덱서 파켓파일 스토리지 용량 초과(300GB->64GB 정리) 문제 해결,
+  Helm Chart 형상 정리 및 최신화, 불필요한 PVC 제거(720Gi 확보). 운영 메뉴얼 작성(노션),
+  검수용 에이전트 생성, 부하테스트(VUS 스크립트), 서플라이 쿼드란트 연동 기능 추가.
+  9월 말 종료보고 예정으로 인수인계 준비 시작. 이재준(Leo)이 현장 주요 담당자로 활동하며
+  박상학 과장님/박재현 대리님과 직접 소통. 커스텀 프롬프트 유출 방지 조치, 배치 서비스
+  서플라이 인덱서 직접 운영 이관, 출입증 반납 등 프로젝트 마무리 작업 진행.
+topics:
+  - 쿼리 익스펜션 프롬프트 최적화
+  - 엑셀 파싱 개선
+  - PDF 뷰어 CJK 폰트 수정
+  - 서플라이 인덱서 스토리지 관리
+  - Helm Chart 형상 정리
+  - 운영 메뉴얼 작성
+  - 검수용 에이전트 생성
+  - 부하테스트 (VUS)
+  - 캐리어 반입 및 버전 관리
+  - 종료보고 및 인수인계 준비
+key_discussions:
+  - thread_ts: '1757401257.902059'
+    date: '2025-09-09'
+    title: '쿼리 익스펜션 당행 처리 이슈'
+    summary: '127개 리플라이. 당행->IBK기업은행 변환 프롬프트 추가 후에도 정답 청크 미검색 이슈'
+  - thread_ts: '1757407881.034349'
+    date: '2025-09-09'
+    title: '엑셀 파싱 관련 스레드'
+    summary: '56개 리플라이. 엑셀 파일 파싱 품질 개선 및 IBK 담당자 요청 대응'
+  - thread_ts: '1756773723.768509'
+    date: '2025-09-02'
+    title: '캐리어 새 버전 반입'
+    summary: '49개 리플라이. 캐리어 솔루션 컴포넌트 버전 업그레이드 반입 작업'
+  - thread_ts: '1755505645.847709'
+    date: '2025-08-18'
+    title: '서플라이 반입 및 이슈 대응'
+    summary: '71개 리플라이. 서플라이 버전 업그레이드, 인덱서 관련 다수 이슈 해결'
+  - thread_ts: '1754961844.770419'
+    date: '2025-08-12'
+    title: 'Top K 변경 관련 논의'
+    summary: '51개 리플라이. 검색 결과 수(Top K) 조정에 따른 성능 영향 분석'
+  - thread_ts: '1754923685.386649'
+    date: '2025-08-11'
+    title: '불필요한 청크 검색 원인 분석'
+    summary: '48개 리플라이. 고객 신뢰도 이슈: 관련 없는 청크가 결과에 포함되는 문제'
+  - thread_ts: '1758202253.069739'
+    date: '2025-09-18'
+    title: 'PDF 뷰어 CJK 글자 미출력 해결'
+    summary: '37개 리플라이. psi-lense 4.3.0 버전 배포로 CJK 폰트 이슈 해결'
+  - thread_ts: '1763349817.103249'
+    date: '2025-11-17'
+    title: 'IBK 방문 보고 (인덱서 스토리지, Helm Chart 정리)'
+    summary: '서플라이 인덱서 용량 372GB->64GB 정리, PVC 720Gi 확보, Helm 최신화'
+terminology:
+  - term: 'VUS'
+    definition: 'Virtual User Script. 부하테스트 시나리오 스크립트'
+    aliases: []
+  - term: 'Helm Chart'
+    definition: 'Kubernetes 패키지 매니저 설정. IBK 온프렘 K8s 환경 배포에 사용'
+    aliases: ['헬름차트']
+  - term: 'PVC'
+    definition: 'Persistent Volume Claim. K8s 스토리지 요청. 불필요 PVC 정리로 720Gi 확보'
+    aliases: []
+  - term: 'psi-lense'
+    definition: '사이오닉 AI의 PDF 뷰어 라이브러리. CJK 폰트 이슈 수정 (v4.3.0)'
+    aliases: ['PDF 뷰어']
+  - term: 'carrier-supply-helper'
+    definition: '서플라이 인덱서 오퍼레이션 서비스. 파켓파일 주기적 제거 기능 추가'
+    aliases: []
+  - term: '지캠프'
+    definition: 'G-CAMP. IBK 내부 교육/연수 관련 서비스. 시행문 검색 에이전트 운영'
+    aliases: ['G-CAMP']
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

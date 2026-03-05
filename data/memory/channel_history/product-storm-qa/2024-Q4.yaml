@@ -1,0 +1,78 @@
+channel:
+  id: C07DU5YBH50
+  name: product-storm-qa
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 153
+  total_threads: 128
+  active_users: 16
+  avg_messages_per_day: 4.4
+summary: |
+  2024-Q4는 권한관리 시스템, 트라이얼 플랜, 캐리어 if/else 노드, 후처리 노드, Document AI 등
+  다수의 신규 기능이 QA를 통과한 분기이다. 10월에는 admin 회원가입(이메일 인증), 권한설정(초대링크, 작업자/관리자 역할),
+  팀 간 이동 등의 복잡한 인증/권한 체계 QA가 집중적으로 수행되었다. 무한로딩, 인증 링크 오류, 권한 삭제 미반영 등
+  다수의 메이저 이슈가 발견 및 수정되었다. 11월에는 트라이얼 플랜 기능(에이전트/문서/호출수 제한, 이용연장 신청),
+  토큰수 대시보드, 캐리어 if/else 조건 분기 노드 QA가 진행되었다. 12월에는 사이드바 UI 개선, 후처리 노드(텍스트 필터, 정규식),
+  LLM 모델 전수 테스트(Azure/Vertex/Anthropic), 대시보드 토큰수 API 구조 변경이 이루어졌다.
+  주요 참여자는 김혜원, 백은주, 신희수, 조하담, 최병현, hyunwoo, 정세민 등이다.
+topics:
+  - 권한관리 (admin 가입, 초대링크, 작업자/관리자 역할)
+  - 트라이얼 플랜 (에이전트/문서/호출수 제한)
+  - 캐리어 if/else 분기 노드
+  - 후처리 노드 (텍스트 필터, 정규식)
+  - Document AI (PDF 마크다운 변환)
+  - 대시보드 토큰수 차트
+  - 마크다운/LaTeX 렌더링
+  - 상세로그 JSON 뷰어
+  - 사이드바 UI 개선
+  - LLM 모델 전수 테스트
+key_discussions:
+  - date: '2024-10-07'
+    topic: admin 회원가입 및 이메일 인증 QA
+    summary: 회원가입 플로우(sign up, 이메일 검증) API 개발 후 QA 진행. 메일 발송 실패, 인증 링크 클릭 오류, 이메일 디자인 미적용 등 다수 이슈 발견
+    participants: [김혜원, 백은주, 신희수]
+  - date: '2024-10-17'
+    topic: Document AI QA
+    summary: PDF 마크다운 변환 서비스 Document AI 기능 테스트. 변환 결과 셀 깨짐, 순서 섞임, 고객 문서 예시 교체 필요 등 피드백
+    participants: [김혜원, hyunwoo, jinu]
+  - date: '2024-10-24'
+    topic: 권한설정 종합 QA
+    summary: 초대링크 발급, 작업자/관리자 가입, 팀 간 이동, 에이전트 접근 권한 등 종합 QA. 무한로딩, 팀 이동 미지원, 권한 삭제 미반영 등 다수 메이저 이슈
+    participants: [김혜원, 백은주, 조하담, 최병현]
+  - date: '2024-11-13'
+    topic: 트라이얼 플랜 기능 QA
+    summary: 에이전트 3개 제한, 문서 30개 제한, 호출수 제한, 이용연장 신청 기능 테스트. 제한 초과 시 에러처리 및 슬랙 알림 미동작 이슈
+    participants: [김혜원, 백은주, 신희수]
+  - date: '2024-11-18'
+    topic: 캐리어 if/else 노드 QA
+    summary: if/else 조건 분기(and/or, 비교연산, 포함 여부), 에러 전파 테스트, 무한루프 방지 등 캐리어 구조 변경 종합 QA
+    participants: [김혜원]
+  - date: '2024-12-16'
+    topic: 후처리 노드 QA (텍스트 필터, 정규식)
+    summary: 후처리 노드의 텍스트 필터(대소문자, 특수문자, 글자수, 순서)와 정규식 필터 기능 테스트. 정규식 미적용 이슈 발견
+    participants: [김혜원]
+terminology:
+  - term: Document AI
+    definition: Vision LLM 기술을 이용한 PDF -> 마크다운 변환 서비스
+    aliases: [Unstured]
+    context: 복잡한 PDF 문서를 구조화된 마크다운으로 변환하여 RAG에 활용
+  - term: 트라이얼 플랜
+    definition: 신규 가입 팀에 적용되는 무료 체험 요금제. 에이전트/문서/호출수에 제한 있음
+    context: 에이전트 3개, 문서 30개 등 제한이 있으며 초과 시 생성 차단
+  - term: if/else 노드
+    definition: 캐리어 워크플로우에서 조건 분기를 처리하는 노드. and/or 조건, 비교연산 지원
+    context: 오더시트 내에서 LLM 결과에 따라 다른 처리 경로로 분기
+  - term: 후처리 노드
+    definition: LLM 응답 후 텍스트 필터링이나 정규식 치환을 수행하는 캐리어 노드
+    context: 민감정보 마스킹, 특정 텍스트 제거 등에 활용
+  - term: 원터치
+    definition: 사용자가 한 번의 클릭으로 문의/작업을 수행할 수 있는 UI 기능
+    context: 에러 발생 시 원터치 제보 버튼을 통해 쉽게 문제를 리포트
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

@@ -1,0 +1,27 @@
+channel:
+  id: C093ML01X98
+  name: alarm-live-info-asmr
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  ASMR 서비스 라이브 알림 채널로, 2025년 4분기에는 신규 멤버 채널 참여 메시지만 기록되어 실질적인 알림 활동은 없었다.
+  이 채널은 ASMR Live Apidog 테스트 시나리오 실행 결과를 수신하기 위해 만들어졌으나, 2025년 Q3에 기존 info 채널과 통합 결정 이후 사실상 비활성 상태로 유지되고 있다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "ASMR"
+    definition: "Sionic AI의 AI Search & Match Results 서비스 (AI 검색 및 매칭 결과 서비스)"
+  - term: "Apidog"
+    definition: "API 테스트 자동화 도구로, ASMR 서비스 Live 환경 시나리오 테스트에 활용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

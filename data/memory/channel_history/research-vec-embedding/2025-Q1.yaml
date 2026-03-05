@@ -1,0 +1,59 @@
+channel:
+  id: C07MK1QMWV6
+  name: research-vec-embedding
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 37
+  total_threads: 16
+  active_users: 11
+  avg_messages_per_day: 1.4
+summary: |
+  2025-Q1 research-vec-embedding 채널에서는 percpos-hnm 방식의 HNM 실험 성과를 이어 받아 한국어 금융 임베딩, 평가 데이터셋 구축, 청킹 전략 평가, LLM 리랭킹 등 폭넓은 연구가 진행되었다. 1월에는 EXAONE 기반 LLM2Vec 시도와 LENS 8000(Splade 계열 어휘 임베딩), Nomic MoE 임베딩 모델이 공유되었고, 2~3월에는 내부 평가 데이터셋 제작, Late CLS Chunking 실험, Kanana 임베딩 공개 등이 이루어졌다.
+topics:
+  - name: "평가 데이터셋 구축"
+    mention_count: 10
+    description: "내부 RAG 평가용 한국어 데이터셋 제작 및 청킹 전략별 성능 평가"
+  - name: "Late CLS Chunking 실험"
+    mention_count: 8
+    description: "Late CLS Chunking 레이어 인덱스(k) 영향 분석, sionic-ai/late-cls 모델 공개"
+  - name: "최신 임베딩 모델 리뷰"
+    mention_count: 8
+    description: "LENS 8000, Nomic MoE 임베딩, mmE5(멀티모달), Kanana-nano 2.1B 임베딩 등 공유"
+  - name: "LLM 리랭킹"
+    mention_count: 5
+    description: "LLM을 리랭커로 활용하는 방법론 논의 및 mxbai-rerank 성능 검증"
+  - name: "한국어 금융 임베딩"
+    mention_count: 4
+    description: "NV-Retriever 기반 한국어 금융 HNM 실험 결과 공유 및 도메인 특화 성능 한계 분석"
+key_discussions:
+  - thread_ts: '1735779600.000000'
+    date: '2025-01-02'
+    reply_count: 0
+    text_preview: "percpos-hnm 1에폭 결과: NDCG@10 84.478, FlagEmbedding 82.635 대비 우수"
+  - thread_ts: '1739276280.000000'
+    date: '2025-02-18'
+    reply_count: 56
+    text_preview: "평가 데이터셋 제작 진행 상황 공유, 150개씩 제작 예정"
+  - thread_ts: '1743293400.000000'
+    date: '2025-03-30'
+    reply_count: 15
+    text_preview: "Late CLS Chunking 레이어 인덱스 k 영향 분석 실험 공유"
+terminology:
+  - term: "percpos-hnm"
+    definition: "Positive 샘플의 유사도 점수 분포 기반 Hard Negative 선택 방식. bge-m3 대비 NDCG 약 3% 향상"
+  - term: "LENS 8000"
+    definition: "SPLADE 계열 어휘 임베딩 모델로 k=8000 어휘 차원에서 MTEB 3위를 기록한 모델"
+  - term: "Late CLS Chunking"
+    definition: "문서를 모델 레이어 중간에서 청킹하여 앞선 레이어의 컨텍스트를 청크에 반영하는 임베딩 기법"
+  - term: "Kanana"
+    definition: "카카오코퍼레이션이 공개한 한국어 특화 임베딩 모델(kanana-nano-2.1b-embedding)"
+  - term: "LLM2Vec"
+    definition: "사전학습된 LLM을 양방향 attention 구조로 변환하여 임베딩 모델로 활용하는 방법론"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

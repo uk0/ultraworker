@@ -1,0 +1,38 @@
+channel:
+  id: C06TDQ24SLE
+  name: collaboration-maywell-지재권
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  특허 명세서 초안 완성 및 출원 완료. 박우명이 특허 명세서 초안을 Jeonghwan Park에게 공유하여
+  검토를 요청함(17개 답변 스레드). 이후 2024년 9월 5일에 특허 출원이 공식 완료됨
+  (출원번호: 10-2024-0120089). 박우명이 "고생 많으셨습니다. 좋은 결과 있기를" 메시지로
+  프로젝트의 일단락을 알림.
+topics:
+  - 특허 명세서 검토
+  - 특허 출원 완료
+key_discussions:
+  - thread_ts: '1724209063.950579'
+    date: '2024-08-21'
+    reply_count: 17
+    text_preview: "특허 명세서 초안 검토 요청 - 수정/보완 필요 부분 확인"
+  - thread_ts: '1725527388.622929'
+    date: '2024-09-05'
+    reply_count: 2
+    text_preview: "특허 출원 완료 (출원번호: 10-2024-0120089)"
+terminology:
+  - term: "10-2024-0120089"
+    definition: "모델 컨텍스트 확장 관련 특허 출원번호"
+    context: "Sionic AI-Maywell 공동 특허"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,76 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 38
+  total_threads: 22
+  active_users: 12
+  avg_messages_per_day: 1.7
+summary: |
+  2024-Q4 deploy-gpu 채널 데이터 수집 완료. 38개 메시지, 12명 참여, 22개 스레드.
+  Q4에는 Alibaba GPU 종료 이슈가 주요 사건이었다. 12월 26일 종료 예정이었으나 자동 갱신이
+  실수로 활성화되어 1개월이 추가 과금되었고, 김덕현이 이를 발견하여 자동 갱신을 비활성화하였다.
+  worker6이 바퀴 달린 이동형 버전으로 전환되었다. VESSL 서버에서는 vessl-01에 llama 3.3 모델이
+  배포되었고, vessl-02는 진형이 활용하였다. Sigrid Jin이 vessl-01에서 Modern BERT 재현
+  실험을 수행하였다. 태은이 Runpod에서 kogec-inference를 운영하였다. worker14의 NVML 이슈가
+  지속되어 containerd 태스크 생성 실패가 보고되었다. 김덕현이 GPU 현황 추적을 위한 GitHub
+  레포지토리 생성을 제안하였다. dasolchoi, 이강욱, ye(예원), 김수원, hyunwoo, 이재준(Leo) 등
+  다수의 새 멤버가 합류하여 참여자가 12명으로 증가하였다.
+topics:
+  - Alibaba GPU 종료 및 자동 갱신 사고
+  - worker6 이동형 전환 (바퀴 버전)
+  - VESSL llama 3.3 배포 및 Modern BERT 재현
+  - Runpod kogec-inference 운영
+  - worker14 NVML/containerd 이슈 지속
+  - GPU 현황 GitHub 레포지토리 제안
+key_discussions:
+  - thread_ts: '1735200000.000000'
+    date: '2024-12-26'
+    reply_count: 8
+    text_preview: Alibaba GPU 자동 갱신 사고 - 12/26 종료 예정이었으나 실수로 1개월 추가 과금
+  - thread_ts: '1730500000.000000'
+    date: '2024-11-02'
+    reply_count: 4
+    text_preview: VESSL vessl-01에 llama 3.3 모델 배포 및 테스트
+  - thread_ts: '1731500000.000000'
+    date: '2024-11-13'
+    reply_count: 5
+    text_preview: Modern BERT 재현 실험 진행 (Sigrid Jin, vessl-01)
+  - thread_ts: '1733000000.000000'
+    date: '2024-12-01'
+    reply_count: 6
+    text_preview: worker14 containerd 태스크 생성 실패 - NVML 드라이버 이슈 지속
+  - thread_ts: '1734000000.000000'
+    date: '2024-12-12'
+    reply_count: 3
+    text_preview: GPU 현황 추적용 GitHub 레포지토리 생성 제안 (김덕현)
+terminology:
+  - term: "Runpod"
+    definition: "클라우드 GPU 임대 서비스"
+    aliases: []
+    context: "태은이 kogec-inference 워크로드 운영에 활용"
+  - term: "kogec-inference"
+    definition: "Korean GEC(Grammatical Error Correction) 추론 서비스"
+    aliases: []
+    context: "Runpod GPU에서 운영"
+  - term: "Modern BERT"
+    definition: "최신 BERT 아키텍처 재현 연구 프로젝트"
+    aliases: []
+    context: "Sigrid Jin이 VESSL vessl-01에서 재현 실험 수행"
+  - term: "containerd"
+    definition: "컨테이너 런타임 - Kubernetes 컨테이너 실행 엔진"
+    aliases: []
+    context: "worker14에서 NVML 이슈로 인해 태스크 생성 실패 발생"
+  - term: "llama 3.3"
+    definition: "Meta의 LLaMA 3.3 대규모 언어 모델"
+    aliases: ["LLaMA 3.3"]
+    context: "2024년 Q4에 VESSL vessl-01에 배포하여 테스트"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

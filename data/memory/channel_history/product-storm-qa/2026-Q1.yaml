@@ -1,0 +1,104 @@
+channel:
+  id: C07DU5YBH50
+  name: product-storm-qa
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:37'
+statistics:
+  total_messages: 180
+  total_threads: 140
+  active_users: 12
+  avg_messages_per_day: 4.2
+key_discussions:
+- thread_ts: '1769490373.684009'
+  date: '2026-01-27'
+  reply_count: 60
+  text_preview: '<@U0789L45ULV> <@U06LJTDQREE> (<@U09M73LM65R>)
+
+    [마이너] 채팅 파일 업로드로 넘어간 파일명이 깨지는것같은데
+
+    이것은 파스라우터에서부터 깨져서 온'
+- thread_ts: '1768892316.926539'
+  date: '2026-01-20'
+  reply_count: 45
+  text_preview: '<!subteam^S094T0270JF> <@U0A2GEL4FPZ> 워크플로우 페이지 레이아웃 변경 작업 QA 링크
+    전달드립니다.
+
+
+    <https://stargate-web-git-'
+- thread_ts: '1767952730.615889'
+  date: '2026-01-09'
+  reply_count: 44
+  text_preview: 'IfElse 실행로그 완료되어 공유드립니다 <!subteam^S094T0270JF> cc. <@U0A2GEL4FPZ>
+
+    • <https://stargate-web-git-stm-44'
+- thread_ts: '1767600328.243309'
+  date: '2026-01-05'
+  reply_count: 42
+  text_preview: 마이너한것 하나더 발견해서 제보합니당 <@U06LJTDQREE> <@U07RASZTPFA> (캐리어인지 웹인지 모르겠네요)
+- thread_ts: '1768981942.470729'
+  date: '2026-01-21'
+  reply_count: 41
+  text_preview: '<@U0789L45ULV> 님 파일업로드 sse에서 실패케이스에도 temp_file_id를 전달주실 수 있을까요?
+
+    어떤 파일이 실패한건지 파악이 필요하여..!'
+- thread_ts: '1767754447.231039'
+  date: '2026-01-07'
+  reply_count: 40
+  text_preview: <https://sionicai.slack.com/archives/C07DU5YBH50/p1766114861912239|json을
+    입력해야 하는 필드에서 유효하지 않은 json구조
+- thread_ts: '1769089432.829029'
+  date: '2026-01-22'
+  reply_count: 37
+  text_preview: '[마이너] <@U06LJTDQREE> 폴더 UI 바뀌었는데 이거 구현에서 빠진것같습니다!'
+- thread_ts: '1769532953.363989'
+  date: '2026-01-28'
+  reply_count: 32
+  text_preview: '<@U08TPBS7FHR> 체크리스트 QA(1) 링크 전달 드립니다.
+
+    <https://stargate-web-git-stm-4494onclickch-bf217a-sionic-ai-'
+- thread_ts: '1769158978.542419'
+  date: '2026-01-23'
+  reply_count: 32
+  text_preview: '`bmp,xml,html 확장자 추가`
+
+    <@U09M73LM65R> 님 bmp일 때 converted필드로 접근하면 pdf로 떨어지고 있는데, 확인 한번 부탁드릴게요'
+- thread_ts: '1767841403.102839'
+  date: '2026-01-08'
+  reply_count: 32
+  text_preview: <@U0A2GEL4FPZ> 혹시 <https://sionicai.slack.com/archives/C07DU5YBH50/p1767833877525369?thread_ts=17678
+- thread_ts: '1769072963.093529'
+  date: '2026-01-22'
+  reply_count: 31
+  text_preview: '`채팅 중 파일업로드` QA전달드립니다! <!subteam^S094T0270JF> <@U0789L45ULV>
+
+    • <https://stargate-web-git-stm-4546cha'
+- thread_ts: '1769078074.587629'
+  date: '2026-01-22'
+  reply_count: 29
+  text_preview: '[마이너] <@U06LJTDQREE> <@U0789L45ULV> 로딩이 매우 긴데 혹시 이거 파스원래속도가 이런건지,
+    또는 뭔가 로직상 느려지게 된건지 체크한번 해보면 좋을 것 같'
+- thread_ts: '1769078119.761749'
+  date: '2026-01-22'
+  reply_count: 28
+  text_preview: '[메이저] <@U06LJTDQREE> 파일 업로드후 채팅 날리고나면 화면에서 이거 제거되어야할것같아요!'
+- thread_ts: '1770801456.511489'
+  date: '2026-02-11'
+  reply_count: 27
+  text_preview: '<@U0AAD58353N> <@U0A2GEL4FPZ>
+
+    빨강이 아니라 파랑처럼
+
+    시스템 변수는 앞에 텍스트 한번 더 붙여주기로 했었어요!
+
+    (다국어 고려 필요)'
+- thread_ts: '1769581100.713379'
+  date: '2026-01-28'
+  reply_count: 25
+  text_preview: '`체크리스트 phase1`[:fire:메이저] 검색노드에서 지식 청크 레시피 오류사항 미스매치 <@U08GLL1NGBY>'
+metadata:
+  created_at: '2026-02-13T16:29:37'
+  synced_by: sync_fast.py

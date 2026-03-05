@@ -1,0 +1,56 @@
+channel:
+  id: C06S3EQ9X1T
+  name: sig-지름
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 37
+  total_threads: 26
+  active_users: 14
+  avg_messages_per_day: 1.5
+summary: |
+  다양한 취미 제품과 선물 공유가 활발했던 분기. 권혜선(Jada Gwon)은 월급날마다 위스키를 구매하고 탁구화, 에어태그, 해피해킹 키보드 등을 공유하며 채널의 활발한 멤버로 자리잡았다. Noah는 혜원님/명하님 선물을 고민하며 큰 논의를 이끌었다. 김혜원은 쓸데없는 것, 고양이 선물, 간지 아이템, 폴딩카트 등을 구매했다. 이강욱은 "진짜 최종 마지막 키보드(아님)"를 구매하고 한복 브랜드(리슬) 제품을 공유했다. 신희수는 하월시아 모임에서 반려식물을 늘렸고, Sigrid Jin은 역지름(중고 판매)과 책 추천을 했다. 정세민은 5090 그래픽카드 가격(370만원), AI 명함 등을 공유했다. 오승희가 새 멤버로 합류하여 피규어(룩업 리바이) 예판 정보를 공유했다.
+topics:
+  - 위스키 (월급날 위스키)
+  - 키보드 (해피해킹, 최종 키보드)
+  - 선물 (혜원님/명하님 선물)
+  - 반려동물/식물 (고양이 용품, 하월시아)
+  - 피규어/굿즈 (룩업 리바이, 키보드 키링)
+  - 게임 (젤다)
+  - 가전 (에어태그, 폴딩카트)
+  - 패션 (한복 브랜드 리슬)
+key_discussions:
+  - thread_ts: '1745559837.046069'
+    date: '2025-04-25'
+    topic: 월급날 위스키 구매 및 추천
+    reply_count: 70
+  - thread_ts: '1750669227.141949'
+    date: '2025-06-23'
+    topic: 쓸데없는 것 구매 공유
+    reply_count: 49
+  - thread_ts: '1746764345.845919'
+    date: '2025-05-09'
+    topic: 혜원님 선물 고민
+    reply_count: 37
+  - thread_ts: '1750306534.489909'
+    date: '2025-06-19'
+    topic: 고양이 선물 구매
+    reply_count: 15
+  - thread_ts: '1746814672.513239'
+    date: '2025-05-09'
+    topic: 키보드 키링 팝업 정보
+    reply_count: 15
+terminology:
+  - term: "리슬(leesle)"
+    definition: "한복 브랜드, 현대적으로 재해석한 한복 의류"
+    context: "이강욱이 용안 점퍼 등 공유"
+  - term: "역지름"
+    definition: "구매의 반대, 중고 판매를 의미"
+    context: "Sigrid Jin이 역지름(중고 판매) 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

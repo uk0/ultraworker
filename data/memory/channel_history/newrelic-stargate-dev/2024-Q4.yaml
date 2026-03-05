@@ -1,0 +1,26 @@
+channel:
+  id: C07V9K26TTL
+  name: newrelic-stargate-dev
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  자동화된 New Relic 모니터링 채널로, Stargate 개발 환경의 인프라 및 성능 이슈를 추적한다. 2024년 4분기에는 3명의 멤버가 채널에 참여하였으며, 채널 초기 설정 단계에 해당하는 시기이다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "Stargate"
+    definition: "Sionic AI의 검색 엔진 서비스로, New Relic을 통해 개발 환경이 모니터링됨"
+  - term: "New Relic"
+    definition: "클라우드 기반 애플리케이션 성능 모니터링(APM) 플랫폼"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

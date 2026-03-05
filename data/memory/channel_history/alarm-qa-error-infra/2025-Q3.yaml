@@ -1,0 +1,42 @@
+channel:
+  id: C090GJ7546L
+  name: alarm-qa-error-infra
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5735
+  total_threads: 5733
+  active_users: 3
+  avg_messages_per_day: 573.5
+summary: |
+  2025-Q3 alarm-qa-error-infra 채널에서는 QA 환경의 stargate Pod 재시작 이슈가 극히 빈번하게 발생하여 일평균 573건이라는 매우 높은 알림 빈도를 기록하였다.
+  7월 14일 하루에만 수십 건의 stargate Pod 재시작 High 우선순위 이슈가 New Relic을 통해 연속적으로 알림되었으며, 이는 QA 인프라 안정성에 심각한 문제가 있었음을 시사한다.
+  5735개 메시지 중 5733개가 스레드로 분류될 만큼 대부분의 알림이 짧은 시간 내 연속 발생하였고, 3명의 팀원이 해당 상황을 모니터링하였다.
+topics:
+  - name: "stargate Pod 반복 재시작"
+    mention_count: 5700
+    description: "7월 14일을 포함한 분기 내 stargate Pod가 극히 빈번하게 재시작되는 High 이슈"
+  - name: "QA 인프라 안정성 위기"
+    mention_count: 5733
+    description: "일평균 573건의 알림이 발생할 만큼 QA 환경 인프라 안정성이 심각하게 저하된 상황"
+key_discussions:
+  - thread_ts: '1752502560.000000'
+    date: '2025-07-14'
+    reply_count: 1
+    text_preview: "stargate Pod 재시작 연속 발생 - 여러 Pod(hchz5, k7dtm, 5w8jd) 동시 재시작, InfraAlert(qa)"
+terminology:
+  - term: "stargate"
+    definition: "Sionic AI의 검색 엔진 서비스로 QA 환경에서 Q3 중 대규모 Pod 재시작 이슈 발생"
+    aliases: ["Stargate", "SG"]
+    context: "7월 14일 집중 발생한 연속 재시작 이슈로 QA 인프라 심각한 불안정 상태 초래"
+  - term: "sionicai-onprem-cluster"
+    definition: "Sionic AI 온프레미스 Kubernetes 클러스터"
+    aliases: ["온프렘 클러스터"]
+    context: "dev, qa, live 등 다양한 네임스페이스를 포함한 자체 운영 K8s 클러스터"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

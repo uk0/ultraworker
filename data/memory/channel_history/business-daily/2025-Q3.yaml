@@ -1,0 +1,57 @@
+channel:
+  id: C08C9JX0DC7
+  name: business-daily
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 57
+  total_threads: 36
+  active_users: 5
+  avg_messages_per_day: 1.5
+summary: |
+  사업팀 일일 업무 채널로, 일본 사업 본격 확대 및 신규 프로젝트 수주 활동이 주요 흐름.
+  오승희는 일본 출장 준비 및 실행(미팅 어레인지, IR Deck 영문/일문본, 브로셔, JD 작성), aiESG/라이오니스/SSP/DATT 에이전트 PoC 관리,
+  CEATEC/L-Camp/KOSA 일본진출 프로그램 지원, SaaS Pricing Plan 설계, 파트너키트 R&R 문서 작성 등 전략/해외사업 총괄.
+  한시형은 시암(SIAM) 프로젝트 네클과의 계약/설계서/평가지표, 삼성 E&A, 경향신문, 한림건축, 다날 제안서 등 국내 영업 집중.
+  김수진은 시암 progress log, 현대차 PoC 주간보고, 파트너키트 교육자료 작성, 에어테이블 기반 프로젝트 관리.
+  최윤정은 SSP 에이전트 구축, 리쿠르트 PoC, 일본어 번역 검수 담당.
+  태국 출장(시암 관련), 일본 출장(CEATEC, K-AI 클라우드 얼라이언스) 등 해외 활동이 크게 증가.
+topics:
+  - 일본 사업 확장 (CEATEC, L-Camp, aiESG)
+  - 시암(SIAM) 프로젝트 관리
+  - SaaS Pricing Plan 설계
+  - 파트너키트 제작
+  - 현대차 PoC 진행
+  - SSP/DATT 에이전트 PoC
+  - 태국 출장
+key_discussions:
+  - date: '2025-08-07'
+    summary: '오승희 일본 사업 총정리 - Junyas san 미팅, IR Deck 영문본, 노션 대시보드 구축'
+  - date: '2025-09-01'
+    summary: '오승희 일본 SaaS 과금안 공유 및 한국 적용 논의, DATT PoC 워크플로우 개요'
+  - date: '2025-09-05'
+    summary: 'tb innovation 발표 회고, ILS/KOSA/L-Camp 등 다수 프로그램 지원'
+  - date: '2025-09-10'
+    summary: '한시형 태국 출장 1일차 메모 - 10개 답글로 현지 미팅 기록'
+  - date: '2025-10-01'
+    summary: 'CEATEC/K-AI 클라우드 얼라이언스 준비 - 출장 인원 확정, 잠재 고객사 스크리닝'
+terminology:
+  - term: '시암(SIAM)'
+    definition: '태국 관련 AI 에이전트 프로젝트, 네클(NECL)과 협업하여 멀티에이전트 시스템 구축'
+  - term: 'CEATEC'
+    definition: '일본 최대 IT/전자 전시회, 사이오닉 AI 발표 참가'
+  - term: 'aiESG'
+    definition: '일본 ESG 평가업체, 사이오닉 AI와 협업 논의 중'
+  - term: 'SSP'
+    definition: 'AI 에이전트 PoC 프로젝트 중 하나 (기사 생성 등)'
+  - term: 'DATT'
+    definition: 'AI 에이전트 PoC 프로젝트 (승현님 담당)'
+  - term: '파트너키트'
+    definition: '파트너사 대상 교육/가이드 자료 및 R&R 문서 패키지'
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

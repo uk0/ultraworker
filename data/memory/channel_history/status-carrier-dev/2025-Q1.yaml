@@ -1,0 +1,26 @@
+channel:
+  id: C07S9L09BJP
+  name: status-carrier-dev
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q1 기간 동안 status-carrier-dev 채널의 활동이 매우 저조하여 총 3건의 메시지만 기록되었다. 채널에 새로운 멤버가 참여하는 수준의 활동만 있었으며, 모니터링 봇 알림이나 주요 상태 변경 메시지는 기록되지 않았다. 이전 분기의 높은 로그 수집량에 비해 급격히 감소한 것으로 보아 채널 운영 방식이 변경되었거나 모니터링 봇 설정이 조정된 것으로 추정된다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "Carrier"
+    definition: "Sionic AI의 LLM 추론 및 RAG 처리를 담당하는 내부 서비스"
+    aliases: ["carrier-api"]
+    context: "개발 환경 상태 모니터링 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

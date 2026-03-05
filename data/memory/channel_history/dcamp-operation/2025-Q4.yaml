@@ -1,0 +1,51 @@
+channel:
+  id: C096LRLD5NE
+  name: dcamp-operation
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 20
+  total_threads: 11
+  active_users: 10
+  avg_messages_per_day: 1.3
+summary: |
+  2025-Q4 dcamp-operation 채널은 사이오닉에이아이의 디캠프 입주 공간 운영 관련 소통 채널로, 다양한 행정 및 시설 관련 논의가 이루어졌다.
+  주요 이벤트로는 사이오닉에이아이가 데스커 오피스 체인지 최종 선정 팀으로 선발되어 책상과 책장 가구 후원을 받게 된 소식, 12월 1일 디캠프 타운홀 행사 준비(주차 안내, 출입증 관리), CCTV 설치 안내 등이 있었다.
+  멤버들 간 공용카드 위치, 상비약, 택배 확인 등 일상적인 사무 공간 운영 소통도 활발히 이루어졌다.
+topics:
+  - name: "데스커 오피스 체인지 선정"
+    mention_count: 5
+    description: "사이오닉에이아이가 데스커 오피스 체인지 대상 팀으로 최종 선정, 책상·책장 가구 후원 및 홍보 콘텐츠 제작 예정"
+  - name: "디캠프 타운홀 행사"
+    mention_count: 6
+    description: "12월 1일 디캠프 타운홀 행사 준비, 주차 안내 및 출입증 관리 협조 요청"
+  - name: "시설 및 행정 운영"
+    mention_count: 6
+    description: "CCTV 설치 안내, 공용카드 관리, 상비약 비치, 출입 QR 관련 일상적 소통"
+key_discussions:
+  - thread_ts: '1730953740.000000'
+    date: '2025-11-07'
+    reply_count: 9
+    text_preview: "데스커 오피스 체인지 최종 선정 안내 - 책상·책장 가구 후원, 데스커 홈페이지 가입 및 콘텐츠 제작 협의 예정"
+  - thread_ts: '1732715580.000000'
+    date: '2025-11-27'
+    reply_count: 20
+    text_preview: "12/01 디캠프 타운홀 행사 준비 - 출입증 보관 요청 및 주차 안내"
+  - thread_ts: '1733097580.000000'
+    date: '2025-12-01'
+    reply_count: 5
+    text_preview: "디캠프 상비약 및 사무용품(L자 파일) 비치 요청"
+terminology:
+  - term: "디캠프"
+    definition: "사이오닉에이아이가 입주한 스타트업 지원 공간 및 액셀러레이터"
+  - term: "데스커 오피스 체인지"
+    definition: "데스커(퍼시스 계열)가 입주 스타트업에 오피스 가구를 후원하는 프로그램"
+  - term: "타운홀"
+    definition: "디캠프 입주사들을 대상으로 하는 정기 행사"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

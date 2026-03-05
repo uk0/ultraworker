@@ -1,0 +1,59 @@
+channel:
+  id: C085HPG2GEQ
+  name: sig-zootopia
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 54
+  total_threads: 30
+  active_users: 14
+  avg_messages_per_day: 2.1
+summary: |
+  채널이 폭발적으로 성장한 분기(14명 참여). 권혜선(Jada Gwon)이 합류하며 고양이 아루(아롱구리)의 사진/영상을 적극 공유했다. Noah는 오드아이 고양이("항상 노여움"), 켈베로스, 캣타워 사진을 공유하고 댕댕이를 데리고 출근하기도 했다. 김수원은 몽자(반려견) 사진을 꾸준히 올리며 15개 답변의 인기 스레드를 만들었다. 김혜원은 고양이 테라스 설치, 이불 덮기, 모빌 보고 흥분해서 넘어지는 산도를 공유했다. 정세민은 고양이 민이와 깽이를, ye는 후추(강아지)와 카페 멍멍이를 공유했다. 권혜선은 고양이 건강검진 후 다이어트를 위해 조공 소피 캣 캔 나눔을 제안했다. 김수진의 벌레사냥꾼 고양이, Sigrid Jin의 오사카 고양이 등 다양한 동물 사진이 공유되었다.
+topics:
+  - 반려묘 (아루, 산도, 깽이, 민이, 보리)
+  - 반려견 (몽자, 후추)
+  - 고양이 건강 (다이어트, 캔 나눔)
+  - 반려동물 일상 (출근, 재택, 눈 구경)
+key_discussions:
+  - thread_ts: '1741855632.910039'
+    date: '2025-03-13'
+    topic: 몽자 보며 힐링 중
+    reply_count: 16
+  - thread_ts: '1740364103.031899'
+    date: '2025-02-24'
+    topic: 김수원 반려동물 사진
+    reply_count: 15
+  - thread_ts: '1741792246.009739'
+    date: '2025-03-12'
+    topic: 조공 소피 캣 캔 나눔
+    reply_count: 15
+  - thread_ts: '1737533053.747909'
+    date: '2025-01-22'
+    topic: 민이와 깽이 사진
+    reply_count: 9
+  - thread_ts: '1741922007.933329'
+    date: '2025-03-14'
+    topic: 댕댕이 데리고 출근
+    reply_count: 8
+  - thread_ts: '1741592216.611909'
+    date: '2025-03-10'
+    topic: 김혜원 고양이 사진 최적화
+    reply_count: 8
+terminology:
+  - term: "아루(아롱구리)"
+    definition: "권혜선(Jada Gwon)의 반려묘 이름"
+    context: "15살 할아버지 고양이"
+  - term: "깽이"
+    definition: "정세민(Sem)의 반려묘 이름, 사무실에도 출근하는 고양이"
+    context: "오승희가 임시집사 역할"
+  - term: "후추"
+    definition: "ye의 반려견 이름"
+    context: "밥 먹는 모습 공유"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

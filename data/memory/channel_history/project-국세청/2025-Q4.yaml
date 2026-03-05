@@ -1,0 +1,108 @@
+channel:
+  id: C09HS621PV2
+  name: project-국세청
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 47
+  total_threads: 27
+  active_users: 13
+  avg_messages_per_day: 2.2
+summary: |
+  2025-Q4 기간 동안 국세청 PoC 프로젝트가 본격적으로 진행되었다. STORM 플랫폼(Pylon, Stargate 웹, Carrier 연동)이 국세청 내부망에 설치 완료되었으며, NHN 모델 및 Gemma3-27B 등 LLM 연동 이슈가 주요 과제로 부각되었다. 벡터 검색 응답 속도 문제(약 40초), 리랭커 URL 설정 오류, 데이터 유실 및 PVC 재구성, 출처 청크 불일치 이슈 등이 발생하여 팀이 현장을 방문하며 해결하였다. NHN 모델의 OpenAI 스펙 미준수 및 최대 토큰(150) 제한 이슈로 LLM 연동에 어려움을 겪었으며, GraphDB(griffths) 버전업 및 법률 조항 데이터 반입도 완료하였다. 12월에는 국세청 전체 서버 다운 긴급 상황이 발생하기도 하였다.
+topics:
+  - name: "LLM 모델 연동 이슈"
+    mention_count: 15
+    description: "NHN 모델의 OpenAI 스펙 미준수, 최대 토큰 150 제한, Gemma3-27B vLLM 버전 불일치 등"
+  - name: "벡터 검색 속도 최적화"
+    mention_count: 8
+    description: "검색 응답 40초 문제 - 리랭커 URL 설정 오류(MULTI_RERANKER_V1_URL) 수정으로 14초로 개선"
+  - name: "GraphDB(griffths) 반입 및 버전업"
+    mention_count: 6
+    description: "Griffths 그래프 엔진 반입 가이드 작성, 버전업 및 QA 완료"
+  - name: "데이터 유실 및 PVC 재구성"
+    mention_count: 5
+    description: "베슬 클러스터 PVC 미설정으로 MinIO/Qdrant 인메모리 운영 중 파드 재기동 시 데이터 전체 유실"
+  - name: "출처 청크 불일치 이슈"
+    mention_count: 4
+    description: "스톰 UI의 유사도 순위와 출처 청크 JSON 리랭커 점수 순서 불일치 문제"
+  - name: "긴급 서버 다운"
+    mention_count: 3
+    description: "2025년 12월 국세청 내 모든 서버 다운 긴급 상황 발생"
+key_discussions:
+  - thread_ts: '1759364640.000000'
+    date: '2025-10-01'
+    reply_count: 13
+    text_preview: "ModuleNotFoundError: No module named nano_vectordb - LightRAG 실행 오류"
+  - thread_ts: '1759374060.000000'
+    date: '2025-10-01'
+    reply_count: 15
+    text_preview: "SSL 스킵 코드 작업 요청 - 베슬 게이트웨이 HTTPS 전용, 셀프인증서로 API 호출 불가"
+  - thread_ts: '1759580280.000000'
+    date: '2025-10-02'
+    reply_count: 5
+    text_preview: "STORM 플랫폼 설치 완료(graph, web 제외) - 아이티센 연동 완료, 다음 일정 공유"
+  - thread_ts: '1760614800.000000'
+    date: '2025-10-13'
+    reply_count: 45
+    text_preview: "반입 준비 목록 공유 - vllm v0.7.3, pylon, stargate-web, griffths, gemma3-27b-it 등"
+  - thread_ts: '1760697960.000000'
+    date: '2025-10-14'
+    reply_count: 13
+    text_preview: "그래프 PoC에서 제외, 일정 조율 - 이미지 반입 오늘 요청, 현장 방문 16일"
+  - thread_ts: '1761018529.000000'
+    date: '2025-10-16'
+    reply_count: 29
+    text_preview: "16일 진행상황 - 리랭커 URL 수정으로 속도 14초로 개선, vLLM 버전 불일치로 gemma3 구동 실패"
+  - thread_ts: '1761228120.000000'
+    date: '2025-10-20'
+    reply_count: 23
+    text_preview: "NHN 모델 openAI 스펙 미준수 - 그래프 연동 불가, NHN 측에 스펙 변경 요청 예정"
+  - thread_ts: '1762019400.000000'
+    date: '2025-10-28'
+    reply_count: 78
+    text_preview: "NHN 모델 아웃풋 최대 토큰 150으로 밝혀져 - 충격"
+  - thread_ts: '1763019696.000000'
+    date: '2025-11-13'
+    reply_count: 23
+    text_preview: "베슬 PVC 미설정으로 파드 재기동 시 MinIO/Qdrant 데이터 전체 유실 - PVC로 전환 완료"
+  - thread_ts: '1767781800.000000'
+    date: '2025-12-06'
+    reply_count: 21
+    text_preview: "국세청 내 전체 서버 다운 긴급 상황 발생 - 아이티센 경유 사이오닉 연락"
+terminology:
+  - term: "국세청"
+    definition: "대한민국 국세청(National Tax Service), STORM On-Premise PoC 고객사"
+    aliases: ["NTS"]
+    context: "세종 청사에 STORM 플랫폼 도입 PoC 진행"
+  - term: "STORM"
+    definition: "Sionic AI의 지식 관리 및 AI 검색 플랫폼 제품"
+    aliases: ["스톰"]
+    context: "국세청 내부망에 설치하는 On-Premise 솔루션"
+  - term: "griffths"
+    definition: "Sionic AI의 GraphRAG 엔진으로 그래프 기반 지식 검색 기능 제공"
+    aliases: ["그래프DB", "그래프 엔진"]
+    context: "국세청 PoC에서 GraphDB 연동용으로 반입 및 버전업"
+  - term: "아이티센"
+    definition: "국세청 PoC SI 파트너사, 솔루션 통합 및 아이티센 자체 솔루션 연동 담당"
+    aliases: ["ITcen"]
+    context: "원하선, 신홍중 수석 등이 아이티센 측 담당자"
+  - term: "베슬"
+    definition: "국세청 AI 클러스터의 쿠버네티스 관리 플랫폼"
+    aliases: []
+    context: "클러스터 PVC 미설정으로 인한 데이터 유실 이슈 발생"
+  - term: "NHN 모델"
+    definition: "NHN이 마개조한 Gemma3-27B 모델로, OpenAI API 스펙을 따르지 않아 연동에 어려움"
+    aliases: []
+    context: "아이티센이 베슬 플랫폼에 배포한 LLM, 최대 출력 토큰 150 제한 이슈"
+  - term: "MULTI_RERANKER_V1_URL"
+    definition: "Pylon의 리랭커 서비스 URL 환경변수로, 잘못된 설정으로 검색 응답 속도 40초 문제 발생"
+    aliases: []
+    context: "올바른 URL 설정 후 응답 속도 14초로 개선"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

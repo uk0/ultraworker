@@ -1,0 +1,25 @@
+channel:
+  id: C083RLRDERG
+  name: status-dev-stormparse
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 4분기 StormParse 개발 상태 모니터링 채널에는 신규 멤버 참여 메시지 1건만 기록되어 모니터링 알림 활동이 없는 비활성 상태였다.
+  이는 StormParse 서비스가 안정적으로 운영되었거나 모니터링 체계가 변경되었음을 시사한다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "StormParse"
+    definition: "Sionic AI의 STORM 플랫폼 내 파싱 서비스로, Sionic Monitoring 봇을 통해 Probe Alert를 수신하는 시스템"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

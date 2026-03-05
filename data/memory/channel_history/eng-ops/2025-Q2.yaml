@@ -1,0 +1,71 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 342
+  total_threads: 275
+  active_users: 15
+  avg_messages_per_day: 5.1
+summary: |
+  2025년 2분기는 채널 활동이 크게 증가(342개 메시지)한 시기로, IBK 부하테스트, OCI 인프라 운영 고도화, 서비스 안정화가 핵심 주제였다. IBK 현장 대응이 빈번했으며 loadtest 환경 구축, storm-parse 부하테스트가 집중적으로 진행되었다. Zitadel IdP 도입(Google Workspace 연동), OpenTelemetry+NewRelic PoC 성공, pgbouncer DB 커넥션 풀링 세팅이 이루어졌다. 커세어 컨트롤러 안정화, 리랭커 재시작 이슈 대응, 마스터4/5 노드 장애 복구 등 운영 이슈가 다수 발생했다. 뉴렐릭 기본 사용량 증대(1500->2500GB), 불필요한 로그 필터링(분당 1.3k->110개)으로 비용 최적화가 진행되었다. Helm 차트 관리 체계화, 서비스 차트 분리, QA존 구성, 네임스페이스 정리 등 배포 인프라가 정비되었다. 멀티모달 학습 파이프라인 자동화 논의, dragoon(드라군) 파서 배포, SMTP 서버 셋업 등 새로운 서비스 인프라 구축도 이루어졌다.
+topics:
+  - IBK 부하테스트 및 현장 대응
+  - Zitadel IdP 도입 및 SSO 구성
+  - OpenTelemetry + NewRelic 통합
+  - 커세어/리랭커 서비스 안정화
+  - 뉴렐릭 비용 최적화 (로그 필터링, 사용량 조정)
+  - Helm 차트 관리 및 QA존 구성
+  - pgbouncer DB 커넥션 풀링
+  - dragoon(드라군) 파서 서비스
+  - 멀티모달 학습 파이프라인 자동화
+key_discussions:
+  - thread_ts: '1750214138.434459'
+    date: '2025-06-18'
+    title: PM2 E2BIG 스폰 에러 디버깅
+    participants: [이강욱]
+    summary: 프론트엔드 서비스 PM2 spawn 실패 이슈 분석, 72개 답글
+  - thread_ts: '1749699151.871319'
+    date: '2025-06-12'
+    title: storm-parse 부하테스트 환경 구성
+    participants: [김수원, 송명하]
+    summary: 악사 파서 연동 및 loadtest 환경 세팅, 96개 답글
+  - thread_ts: '1749969801.321289'
+    date: '2025-06-15'
+    title: 멀티모달 학습 파이프라인 자동화 논의
+    participants: [양호진(Hojin Yang)]
+    summary: 학습 파이프라인 자동화 및 Slack 알림 연동 방안, 53개 답글
+  - thread_ts: '1750310745.657489'
+    date: '2025-06-19'
+    title: onicsi 네트워크 접근 및 VPN 병목
+    participants: [최병현(Hyune-c)]
+    summary: supply 테스트 시 VPN 네트워크 병목 의심, 접근 방법 논의, 53개 답글
+  - thread_ts: '1750309611.265289'
+    date: '2025-06-19'
+    title: OpenTelemetry NewRelic 적재 방법 고민
+    participants: [이강욱]
+    summary: OTLP를 NewRelic에 적재하는 아키텍처 논의, 48개 답글
+terminology:
+  - term: Zitadel
+    definition: 오픈소스 Identity Provider 솔루션
+    context: Keycloak/Casdoor 이후 최종 선택된 IdP, id.sionic.im에 배포
+  - term: dragoon (드라군)
+    definition: 사내 개발 문서 파서 서비스
+    context: axa parsr 대체 목적, live 배포 진행
+  - term: pgbouncer
+    definition: PostgreSQL 커넥션 풀러
+    context: OCI PostgreSQL 앞단에 배치하여 커넥션 관리
+  - term: academy
+    definition: 사내 API 문서화/Swagger 통합 서비스
+    context: 이강욱 주도, 서비스별 OpenAPI 문서 통합
+  - term: QA존
+    definition: QA 테스트 전용 Kubernetes 네임스페이스/환경
+    context: qa.sionic.tech 엔드포인트로 구성
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

@@ -1,0 +1,88 @@
+channel:
+  id: C05QCGG1E5V
+  name: business-contact
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 36
+  total_threads: 21
+  active_users: 9
+  avg_messages_per_day: 1.4
+summary: |
+  2025년 Q1 business-contact 채널은 웹사이트 문의 폼(OpenGateway/Zapier 자동화)을 통해 유입된 비즈니스 컨택을 팀이 분류하고 대응하는 허브 역할을 했다.
+  주요 인바운드 문의는 STORM Platform/Answer에 대한 제품 소개 및 데모 요청이 대부분이었으며, 올리브텍(보안 데이터스토리지, RPA), 한국산업은행(RAG 시스템), 리얼타임웨이브(국방 시뮬레이션), 한국오라클(Oracle Cloud/벡터DB 호환), 두산베어스(AI 모델) 등 다양한 산업군에서 문의가 들어왔다.
+  일본발 전시회/광고 스팸 문의(ブティックス, アドップ 등)도 다수 유입되었고, SG Holdings(투자 제안) 등 노이즈성 문의도 있었다.
+  몽트래블 고객의 카카오톡 연동 기술지원 건이 가장 긴 스레드를 형성했으며, 신희수/김혜원이 원격으로 문제를 해결했다.
+  한국오라클 컨택은 Oracle DB 23ai 벡터DB 호환 가능성에 대한 기술 리서치와 전략적 파트너십(OCI 번들링) 논의로 확대되었다.
+  유비씨(준컨설팅) 고객의 검색 품질 이슈는 프롬프트 롤백과 고급 검색 기능의 필요성을 드러냈다.
+  클루커스(클라우드 MSP)에서 파트너 제안이 왔고, 토스랩(잔디)에서 메시징 협업 문의가 유입되어 팀 내 기대감이 높았다.
+  팀원 김수진, 김혜원, 한시형, Noah(고석현), 원성준이 주로 대응했으며, 인바운드 대응 메일 템플릿(Relate 활용)도 공유되었다.
+topics:
+  - STORM Platform 제품 문의 및 데모 요청
+  - STORM Answer 대기자 신청
+  - 카카오톡 연동 기술지원 (몽트래블)
+  - Oracle DB 23ai 벡터DB 호환성 리서치
+  - OCI 파트너십/번들링 전략 논의
+  - 인바운드 대응 프로세스 (Relate 템플릿)
+  - 일본발 전시회/광고 스팸 필터링
+  - 한국산업은행 RAG 시스템 문의
+  - 국방/항공 AI Agent 문의 (리얼타임웨이브)
+  - 클라우드 MSP 파트너 제안 (클루커스)
+  - 메시징 협업 문의 (토스랩/잔디)
+  - 율촌화학 불량 추적 CV 문의 (미스매치로 대응 보류)
+key_discussions:
+  - thread_ts: '1736822018.965579'
+    date: '2025-01-14'
+    title: '올리브텍 STORM Platform 문의 - 보안 데이터스토리지 업체 RPA 활용 탐색'
+    summary: '올리브텍 이덕원 연구소장이 STORM Platform 통합 가능 여부 문의. 3회 반복 문의할 정도로 적극적. 가이드 문서와 함께 메일 대응.'
+  - thread_ts: '1739421622.387039'
+    date: '2025-02-13'
+    title: '몽트래블 카카오톡 연동 기술지원 - 가장 긴 스레드'
+    summary: '몽트래블 서찬수 고객의 카카오챗봇 연동 오류. 김혜원/신희수가 원인 분석 후 원격 지원. 카카오 비즈니스 어드민 폴백블록 스킬데이터 설정 문제로 해결.'
+  - thread_ts: '1738914766.803799'
+    date: '2025-02-07'
+    title: '한국산업은행 RAG 시스템 구축 문의 - PyCon 2024 발표 계기'
+    summary: 'KDB 박종훈 대리가 PyCon 2024 Codebase RAG 세션 참석 후 문의. IBK 기업은행 경험 공유 요청. 한시형이 직접 전화 대응.'
+  - thread_ts: '1740024681.754279'
+    date: '2025-02-20'
+    title: '리얼타임웨이브 국방 AI Agent 구축 문의'
+    summary: '국방/항공 시뮬레이션 업체에서 AI Agent 구축 문의. 한시형이 메일 보내고 김수진 IBK 일정과 조율하며 미팅 참여 준비.'
+  - thread_ts: '1742983262.112559'
+    date: '2025-03-26'
+    title: '한국오라클 STORM Platform + Oracle DB 23ai 벡터DB 호환 논의'
+    summary: '한국오라클 손창호가 Oracle Cloud 설치 및 벡터스토리지 호환 문의. 팀 내 OCI 번들링 전략 논의. Oracle DB 23ai 딥리서치 수행. 고객사 GPU/DB 활용 방안 파악 위해 미팅 추진.'
+  - thread_ts: '1741326635.597709'
+    date: '2025-03-07'
+    title: '토스랩(잔디) 메시징 협업 문의 - 높은 시너지 기대'
+    summary: '잔디 운영사 토스랩에서 메시징 협업 문의. 덕현님 경유 소식. Noah가 회신 담당. 메시징 플랫폼에 붙으면 유량이 클 것으로 기대.'
+  - thread_ts: '1740575891.565599'
+    date: '2025-02-27'
+    title: '율촌화학 불량 추적 문의 - CV 영역으로 미스매치 판단'
+    summary: '율촌화학 서현증이 필름 제조 불량 공정 추적 솔루션 문의. 정세민이 CV 태스크라 당사 적합하지 않다 판단. 한시형이 우선순위 최하로 분류.'
+  - thread_ts: '1743055758.541039'
+    date: '2025-03-27'
+    title: '유비씨 STORM Answer 검색 품질 이슈 - 프롬프트 롤백으로 해결'
+    summary: '유비씨 송영빈 고객이 에이전트 질의 실패 보고. 프롬프트 버전 문제로 파악되어 롤백 후 부분 해결. 고급 검색 기능과 컨설팅 필요성 확인.'
+terminology:
+  - term: "OpenGateway"
+    definition: "Sionic AI 홈페이지 문의 폼에서 Zapier를 통해 Slack으로 자동 전달되는 비즈니스 컨택 알림 시스템"
+    aliases: ["비즈니스 컨택 요청"]
+  - term: "Relate"
+    definition: "인바운드 대응 시 사용하는 CRM 도구. 메일 발송 시 읽음 여부/체류 시간 확인 가능"
+    aliases: []
+  - term: "Oracle DB 23ai"
+    definition: "Oracle의 벡터DB 기능이 포함된 데이터베이스 버전. 정형/비정형/벡터/그래프 등 모든 형태 데이터를 1개 DB에서 사용 가능"
+    aliases: ["23Ai", "Oracle 23ai"]
+  - term: "OCI"
+    definition: "Oracle Cloud Infrastructure. 퍼블릭 SaaS를 OCI에 올리면 프라이빗 SaaS 고객에게 대폭 할인 제안 가능"
+    aliases: ["Oracle Cloud"]
+  - term: "DXPO"
+    definition: "일본 ブティックス 주식회사가 주최하는 AI활용/DX추진 전시회. 반복적으로 출전 제안 스팸이 유입됨"
+    aliases: ["전시회 스팸"]
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

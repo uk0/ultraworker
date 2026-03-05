@@ -1,0 +1,85 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 349
+  total_threads: 217
+  active_users: 22
+  avg_messages_per_day: 4.7
+summary: |
+  2024년 1분기 random 채널은 회사의 중요한 이정표인 시드 라운드 투자 유치(55억 원, 한국투자파트너스·IMM·삼성벤처투자·힐스프링 참여)가 핵심 이슈였다.
+  사무실 인프라 정비(WiFi AP 추가, 유선전화 설치, 제빙기·정수기 관리), 사원증 케이스 배포 등 오피스 환경 개선이 진행되었다.
+  기술 트렌드로는 RAG 2.0(Contextual AI), GPT Vision, Claude, Sora(OpenAI 영상 생성), GDDR7, 뤼튼 Studio 등이 공유되었고,
+  데이터 구축 전략과 홈페이지 데이터 페이지 기획에 대한 심도 있는 논의가 있었다.
+  팀 문화로는 번개 곱창 모임, 플레이샵 수요 조사, 생일 축하, 간식 나눔 등 활발한 소통이 이루어졌다.
+  외부 활동으로는 글로벌 SaaS 육성 프로젝트(GSIP) 지원 검토, 일본 IT 전시회 정보, AI HUB 데이터 관련 이슈 등이 공유되었다.
+topics:
+  - name: "시드 라운드 투자 유치"
+    count: 5
+    description: "55억 원 규모 시드 투자 완료. 삼성벤처투자, IMM, 한국투자파트너스, 힐스프링 참여."
+  - name: "사무실 인프라 정비"
+    count: 12
+    description: "WiFi AP 설치, 대표번호 유선전화, 제빙기 안내, 사원증 배포, 복도 박스 정리 등."
+  - name: "AI/기술 트렌드 공유"
+    count: 15
+    description: "RAG 2.0, GPT Vision, Claude, Sora, GDDR7, 업스테이지 임베딩, Cohere K8s 등."
+  - name: "데이터 구축 전략 논의"
+    count: 3
+    description: "데이터 구축 비용·인력 현실, 홈페이지 데이터 페이지 기획 시기, 오픈소스 데이터 공개 방향."
+  - name: "팀 소셜/문화 활동"
+    count: 20
+    description: "번개 곱창, 플레이샵, 생일 축하, 간식 나눔, 맛집 공유 등."
+  - name: "글로벌 진출 준비"
+    count: 3
+    description: "GSIP 지원 검토, 일본 IT 전시회 정보, 리더보드 운영 관련 오프라인 모임 제안."
+key_discussions:
+  - thread_ts: '1710229290.267279'
+    date: '2024-03-12'
+    reply_count: 4
+    text_preview: "삼성과 IMM과의 투자계약 완료, 투자금 납입 완료. 55억 모집, 한국투자파트너스·IMM·삼성벤처투자·힐스프링 참여."
+  - thread_ts: '1711679476.113199'
+    date: '2024-03-29'
+    reply_count: 17
+    text_preview: "데이터 구축 전략 논의 - 비용·인력 현실, 오픈소스화 방향, 홈페이지 데이터 페이지 시기 결정."
+  - thread_ts: '1711096979.302349'
+    date: '2024-03-22'
+    reply_count: 51
+    text_preview: "번개 곱창 모임 조사 - 팀 전체 참여 의사 확인."
+  - thread_ts: '1710148772.751619'
+    date: '2024-03-11'
+    reply_count: 25
+    text_preview: "뤼튼 Studio(Zapier 느낌 workflow 프로덕트) 출시 관련 논의."
+  - thread_ts: '1710347721.145009'
+    date: '2024-03-13'
+    reply_count: 18
+    text_preview: "사이오닉 챗봇 개발 및 사무실 관련 지식 추가 계획."
+  - thread_ts: '1711180175.622749'
+    date: '2024-03-23'
+    reply_count: 10
+    text_preview: "글로벌 SaaS 육성 프로젝트(GSIP) 지원 관련 필라웨어 대표 미팅 계획."
+terminology:
+  - term: "GSIP"
+    definition: "글로벌 SaaS 육성 프로젝트 (Global SaaS Incubation Project)"
+    aliases: []
+    context: "정부 지원 사업으로, 해외 시장 진출 시 비용 절감 가능."
+  - term: "RAG 2.0"
+    definition: "Contextual AI에서 발표한 차세대 RAG 방식. 언어 모델과 검색기를 단일 시스템으로 종단간 최적화."
+    aliases: ["CLM"]
+    context: "기존 RAG 대비 정확도 향상, 연산량 감소."
+  - term: "NIPA"
+    definition: "정보통신산업진흥원. 고성능 서버 신청 공지 등 GPU 자원 관련."
+    aliases: []
+    context: "GPU 자원 확보를 위한 정부 지원 프로그램."
+  - term: "theVC"
+    definition: "한국 스타트업 투자 정보 플랫폼."
+    aliases: []
+    context: "사이오닉에이아이 페이지가 생성되어 투자 정보 공개."
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

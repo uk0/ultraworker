@@ -1,0 +1,90 @@
+channel:
+  id: C08BX810ULC
+  name: request-for-research
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 36
+  total_threads: 8
+  active_users: 19
+  avg_messages_per_day: 4.0
+summary: |
+  2025년 1분기 request-for-research 채널은 YC의 RFS(Request for Startups)에서 영감을 받아 팀이 장기적으로 해결하고 싶은 기술 문제들을 기록하기 위해 2월 초 개설되었다.
+  RAG 응답 참조 청크 추적, steering embedding, ColBERT m3 학습, LLM 디코더 프루닝(DRAMA), Graph 기반 리랭커 데이터 마이닝 등 다양한 연구 아이디어가 제안되었으며,
+  테크세미나 발표 주제 기획 및 Drill(반복 훈련) 방법론 논의도 이루어졌다.
+topics:
+  - name: "RAG 참조 청크 추적"
+    mention_count: 5
+    description: "LLM 응답 생성 시 실제로 참조한 청크를 역추적하는 기술 연구 요청"
+  - name: "Steering Embedding"
+    mention_count: 4
+    description: "사용자 피드백을 임베딩에 반영하는 steering 기법 연구 아이디어"
+  - name: "ColBERT m3 학습"
+    mention_count: 5
+    description: "FlagEmbedding 기반 ColBERT m3 Loss 변형 학습 스크립트 개발 요청"
+  - name: "LLM 디코더 프루닝"
+    mention_count: 4
+    description: "DRAMA(llama3 디코더 프루닝 + contrastive learning) 임베딩 모델로의 활용 제안"
+  - name: "고통 레이어"
+    mention_count: 6
+    description: "임베딩 품질 개선을 위한 어려운 레이어 구조 연구 논의"
+  - name: "Drill 방법론"
+    mention_count: 4
+    description: "반복적 체계적 훈련을 통한 AI 성능 개선 방법론 논의"
+key_discussions:
+  - thread_ts: '1738745400.000000'
+    date: '2025-02-05'
+    reply_count: 4
+    text_preview: "채널 개설: YC RFS 모방, 장기 해결 문제 기록 목적. 첫 요청: RAG 응답 참조 청크 찾아내기"
+  - thread_ts: '1738746900.000000'
+    date: '2025-02-05'
+    reply_count: 1
+    text_preview: "Steering embedding 아이디어: 유저 피드백을 임베딩에 반영하는 기법 설명 요청"
+  - thread_ts: '1740445200.000000'
+    date: '2025-02-25'
+    reply_count: 9
+    text_preview: "참조 청크 추적 및 임베딩 개선 관련 아이디어 공유"
+  - thread_ts: '1740531000.000000'
+    date: '2025-02-26'
+    reply_count: 22
+    text_preview: "ColBERT m3 로스 변형 학습 요청, FlagEmbedding 스크립트 부재 이슈"
+  - thread_ts: '1740538200.000000'
+    date: '2025-02-26'
+    reply_count: 24
+    text_preview: "고통 레이어 논의 시작"
+  - thread_ts: '1740614520.000000'
+    date: '2025-02-27'
+    reply_count: 9
+    text_preview: "Drill 방법론: 반복 훈련 체계적 정의 및 활용 방안"
+  - thread_ts: '1740989700.000000'
+    date: '2025-03-03'
+    reply_count: 14
+    text_preview: "뻘생각 정리: DRAMA 프루닝 LLM 디코더를 임베딩 모델로 활용"
+terminology:
+  - term: "RFR"
+    definition: "Request for Research, 팀이 장기적으로 해결하고 싶은 연구 문제를 제안하는 채널"
+    aliases: ["Request for Research"]
+    context: "YC의 RFS(Request for Startups)에서 영감을 받아 2025년 2월 개설"
+  - term: "Steering Embedding"
+    definition: "사용자 피드백을 임베딩 공간에 반영하여 검색 품질을 개선하는 기법"
+    aliases: []
+    context: "도균님이 연구 중인 아이디어로 채널에서 설명 요청"
+  - term: "DRAMA"
+    definition: "llama3 디코더를 프루닝(shread llama)하고 contrastive learning을 1회 적용한 임베딩 모델"
+    aliases: []
+    context: "0.3B 수준의 경량 LLM 디코더를 임베딩 모델로 활용하는 연구"
+  - term: "Drill"
+    definition: "특정 동작을 반복적으로 실행하는 체계적인 훈련 방법론"
+    aliases: ["드릴"]
+    context: "AI 모델 성능 개선을 위한 반복 학습 체계로 논의"
+  - term: "고통 레이어"
+    definition: "임베딩 품질 개선을 위해 집중 연구가 필요한 어려운 기술 구조 레이어"
+    aliases: []
+    context: "채널 내 주요 논의 주제로 등장한 임베딩 연구 아이디어"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

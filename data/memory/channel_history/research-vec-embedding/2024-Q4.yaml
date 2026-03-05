@@ -1,0 +1,56 @@
+channel:
+  id: C07MK1QMWV6
+  name: research-vec-embedding
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 66
+  total_threads: 48
+  active_users: 9
+  avg_messages_per_day: 1.6
+summary: |
+  2024-Q4 research-vec-embedding 채널에서는 한국어 임베딩 모델 성능 개선을 위한 Hard Negative Mining(HNM) 실험이 집중적으로 진행되었다. BM25+Dense Retrieval 결합 HNM, kowiki-tq 데이터셋 활용, EXAONE 기반 LLM2Vec 실험이 주요 활동이었으며, NV-Retriever·Jina Embeddings V3·Qwen2 등 최신 임베딩 모델 리뷰도 병행되었다. 연말에는 percpos-hnm 방식이 bge-m3 베이스 대비 NDCG 기준 약 3% 향상을 달성하였다.
+topics:
+  - name: "Hard Negative Mining 실험"
+    mention_count: 20
+    description: "BM25 100 + Dense Retrieval 100 결합 HNM 구현, kowiki-tq 데이터셋으로 성능 검증"
+  - name: "한국어 임베딩 모델 파인튜닝"
+    mention_count: 12
+    description: "EXAONE 기반 LLM2Vec, percpos-hnm 방식으로 bge-m3 대비 NDCG 향상 실험"
+  - name: "최신 임베딩 모델 리뷰"
+    mention_count: 10
+    description: "NV-Retriever, Jina Embeddings V3, Qwen2 7B Embedding 등 최신 모델 벤치마크 분석"
+  - name: "한국어 RAG 벤치마크 구축"
+    mention_count: 8
+    description: "한국어 금융 도메인 및 일반 도메인 RAG 평가 데이터셋 구축 논의"
+key_discussions:
+  - thread_ts: '1727840880.000000'
+    date: '2024-10-02'
+    reply_count: 11
+    text_preview: "한국어 형태소 BM25 활용 가능성 논의"
+  - thread_ts: '1727936471.000000'
+    date: '2024-10-03'
+    reply_count: 9
+    text_preview: "181GB 데이터 HNM 실험 진행 상황 공유, BM25+dense retrieval 결합 방식으로 전환"
+  - thread_ts: '1735657600.000000'
+    date: '2025-01-02'
+    reply_count: 0
+    text_preview: "percpos-hnm 1에폭 결과 공유: NDCG 84.478로 기존 대비 성능 향상 확인"
+terminology:
+  - term: "HNM(Hard Negative Mining)"
+    definition: "임베딩 학습 시 모델이 구분하기 어려운 유사 문서를 네거티브 샘플로 선택하는 데이터 구성 기법"
+  - term: "percpos-hnm"
+    definition: "Positive 샘플의 유사도 점수 분포를 기반으로 Hard Negative를 선택하는 HNM 변형 방식"
+  - term: "kowiki-tq"
+    definition: "한국어 위키피디아 기반 질의응답 데이터셋(sionic-ai/kowiki-tq). 임베딩 HNM 실험에 활용"
+  - term: "LLM2Vec"
+    definition: "사전학습된 LLM을 양방향 attention 구조로 변환하여 임베딩 모델로 활용하는 방법론"
+  - term: "bge-m3"
+    definition: "BAAI에서 공개한 다국어 다기능 임베딩 모델. 한국어 임베딩 실험의 기준 모델로 활용"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

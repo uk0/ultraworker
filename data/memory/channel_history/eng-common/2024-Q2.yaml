@@ -1,0 +1,105 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 114
+  total_threads: 75
+  active_users: 13
+  avg_messages_per_day: 2.6
+summary: |
+  2024-Q2에는 LLM MSP/라우팅 제품 구상, on-prem Qdrant DB 클러스터 구축, Vault(KMS) EKS 이전 등 인프라 고도화가 주요 화제였다.
+  Deploy Bot 개선으로 이미지 배포 시간을 최대 97% 단축하였고, OpenGateway 랜딩페이지를 런칭하였다.
+  개발 문화 킥오프, 문서화 도입, TypeORM→Prisma 마이그레이션 등 엔지니어링 프로세스 개선 논의가 활발했다.
+  OpenAI API Key를 Project Key 방식으로 전환하고, Copilot 구매, AWS RDS 성능 개선 도우미 도입 등 개발 생산성 향상 작업도 진행되었다.
+topics:
+  - LLM MSP/라우팅 제품
+  - on-prem Qdrant DB 구축
+  - Vault(KMS) EKS 이전
+  - Deploy Bot 개선
+  - OpenGateway 랜딩페이지
+  - 개발 문화 킥오프 및 문서화
+  - TypeORM→Prisma 마이그레이션
+  - OpenAI API Key 관리
+  - Copilot 구매
+  - AWS RDS 성능 개선 도우미
+  - GoCD 배포 시스템
+  - Stargate ID 타입 전환
+key_discussions:
+  - thread_ts: '1718686773.005489'
+    date: '2024-06-18'
+    reply_count: 51
+    text_preview: 'LLM MSP 라우팅 제품 구상 - Claude, OpenAI, OpenRouter, Xionic 모델 라우팅 및 failover 제품 논의'
+  - thread_ts: '1712902748.356079'
+    date: '2024-04-12'
+    reply_count: 42
+    text_preview: 'on-prem Qdrant DB 구축 - NAS iSCSI 연결, directPV, 분산 저장 전략 논의'
+  - thread_ts: '1718608849.596949'
+    date: '2024-06-17'
+    reply_count: 39
+    text_preview: '안쓰는 에이전트 정리 - dev 환경 에이전트 자동삭제 시스템 계획'
+  - thread_ts: '1718870375.581829'
+    date: '2024-06-20'
+    reply_count: 38
+    text_preview: 'sionic.chat 엔드포인트 스트리밍 이슈 - 알리바바 프록시 네트워크 문제 해결'
+  - thread_ts: '1715838543.760799'
+    date: '2024-05-16'
+    reply_count: 36
+    text_preview: 'Deploy Bot 업데이트 - on-prem GoCD 빌드로 배포시간 최대 97% 단축'
+  - thread_ts: '1715236168.006599'
+    date: '2024-05-09'
+    reply_count: 35
+    text_preview: '개발 문화 킥오프 - 개발 외적 노력(패딩)에 대한 이슈업 및 논의'
+  - thread_ts: '1713172969.921239'
+    date: '2024-04-15'
+    reply_count: 34
+    text_preview: 'on-prem Kubernetes 클러스터 구성 - GoCD, Qdrant dev 환경 정보 공유'
+  - thread_ts: '1713422448.822909'
+    date: '2024-04-18'
+    reply_count: 26
+    text_preview: '개발 문화 논의 킥오프 - 엔지니어링 문화 개선 방향 토론'
+  - thread_ts: '1713186738.967199'
+    date: '2024-04-15'
+    reply_count: 19
+    text_preview: 'Sionic NAS 접근 방법 공유 - on-prem 스토리지 설정 가이드'
+  - thread_ts: '1718627002.627959'
+    date: '2024-06-17'
+    reply_count: 16
+    text_preview: 'Pylon 인증 이슈 - URL 파라미터 기반 로그인 보안 문제 지적'
+terminology:
+  - term: "OpenGateway"
+    definition: "Sionic AI의 LLM API 게이트웨이 서비스"
+    aliases: ["OG"]
+    context: "랜딩페이지 런칭, Contact 폼 → Zapier 연동"
+  - term: "Pylon"
+    definition: "Sionic AI의 RAG 기반 챗봇/응답 엔진 서비스"
+    aliases: []
+    context: "Stargate와 함께 핵심 제품, dev/staging/live 환경 운영"
+  - term: "Stargate"
+    definition: "Sionic AI의 문서 검색 및 지식 관리 플랫폼"
+    aliases: ["스게"]
+    context: "ECR 이미지 관리, S3 정책, ID 타입 전환 논의"
+  - term: "Deploy Bot"
+    definition: "GoCD 기반 배포 자동화 Slack 봇"
+    aliases: []
+    context: "on-prem 빌드로 배포 시간 97% 단축 달성"
+  - term: "USIO"
+    definition: "Unstructured IO 기반 문서 파서"
+    aliases: ["Unstructured"]
+    context: "문서 파싱 전략 논의에서 언급"
+  - term: "Vault"
+    definition: "HashiCorp Vault 기반 KMS(키 관리 서비스)"
+    aliases: ["KMS"]
+    context: "on-prem에서 EKS 환경(vault.sionic.im)으로 이전"
+  - term: "Xionic"
+    definition: "Sionic AI의 자체 LLM 모델"
+    aliases: ["xionic-1-72b"]
+    context: "LLM 라우팅 제품에서 failover 용도로 활용 계획"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

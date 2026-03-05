@@ -1,0 +1,43 @@
+channel:
+  id: C08S9TC8DAN
+  name: alarm-live-info-external
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 400
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 8.9
+summary: |
+  2025년 3분기 외부 서비스 라이브 알림 채널에서는 OpenAI와 Anthropic Claude의 서비스 인시던트 알림이 하루 평균 8.9건씩 자동 수신되었다.
+  OpenAI GPT-5 대화 오류, 벡터 스토어 파일 업로드 지연, ChatGPT 4.5 모델 오류, ChatGPT 검색 기능 다운 등의 인시던트가 포함되었으며, 각 인시던트의 조사-식별-모니터링-해결 단계별 상태 업데이트가 기록되었다.
+  스레드 없이 자동화 봇 메시지만으로 구성된 외부 AI 서비스 가용성 모니터링 채널이다.
+topics:
+  - name: "OpenAI 서비스 인시던트"
+    mention_count: 200
+    description: "ChatGPT, GPT-5, 벡터 스토어, Search 등 OpenAI 서비스 장애 알림"
+  - name: "Anthropic Claude 서비스 상태"
+    mention_count: 80
+    description: "Claude.ai 서비스 상태 알림"
+  - name: "외부 AI 서비스 모니터링"
+    mention_count: 120
+    description: "외부 AI 공급자 상태 페이지 기반 자동 알림 수신"
+key_discussions: []
+terminology:
+  - term: "OpenAI Status"
+    definition: "OpenAI 서비스 상태 모니터링 봇 (B07QV7HH1T9)"
+  - term: "Claude Status"
+    definition: "Anthropic Claude 서비스 상태 모니터링 봇 (B05HH3ADPS4)"
+  - term: "GPT-5"
+    definition: "OpenAI의 5세대 GPT 대형 언어 모델"
+  - term: "벡터 스토어"
+    definition: "OpenAI의 파일 임베딩 및 검색을 위한 벡터 데이터베이스 서비스"
+  - term: "RCA"
+    definition: "Root Cause Analysis, 근본 원인 분석 보고서"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,53 @@
+channel:
+  id: C0A4RBP5M97
+  name: storm-evaluation
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 0
+  active_users: 5
+  avg_messages_per_day: 2.0
+summary: |
+  2025-Q4 말기인 12월 18일에 storm-evaluation 채널이 신설되어 STORM 제품의 평가 및 벤치마킹 작업이 시작되었다.
+  현대차 고객사 대상 STORM 응답 품질 이슈가 주로 논의되었으며, 이전 턴과 동일한 응답값 처리 문제, OpenRouter 오류, 종료 조건(턴 수 70 초과) 미작동 등 실제 고객 환경에서 발생한 버그들이 보고되었다.
+topics:
+  - name: "현대차 STORM 버그 리포트"
+    mention_count: 5
+    description: "동일 응답값 반복 시 다음 턴 미진행, OpenRouter 오류, 종료 조건 70 초과 시 계속 동작"
+  - name: "채널 초기화"
+    mention_count: 3
+    description: "채널 개설 및 팀원 초대 (성우, 수아, 성민, 재웅 등)"
+key_discussions:
+  - thread_ts: '1766067084.000000'
+    date: '2025-12-18'
+    reply_count: 0
+    text_preview: "[현대차] 이전 턴과 비교하여 같은 응답값이 들어왔을 때 쿼리를 날리지 않고 다음 턴으로 넘어가지 않는 현상"
+  - thread_ts: '1766148433.000000'
+    date: '2025-12-19'
+    reply_count: 0
+    text_preview: "[현대차] no choices from openrouter 오류 처음 발생 보고"
+  - thread_ts: '1766371281.000000'
+    date: '2025-12-22'
+    reply_count: 0
+    text_preview: "종료 조건 70 초과되서도 계속 동작하는 이슈 보고"
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 AI 워크플로우 빌더 제품"
+    aliases: []
+    context: "storm-evaluation 채널에서 현대차 등 고객사 환경에서의 평가 및 버그 트래킹"
+  - term: "OpenRouter"
+    definition: "다양한 LLM 모델에 통합 API를 제공하는 서비스"
+    aliases: ["openrouter"]
+    context: "STORM에서 LLM 호출 시 사용하는 API 라우터, no choices 오류 발생 사례 보고"
+  - term: "종료 조건"
+    definition: "STORM 워크플로우에서 반복을 종료하는 조건값 (예: 턴 수 70 초과)"
+    aliases: []
+    context: "현대차 환경에서 종료 조건 초과 후에도 워크플로우가 계속 실행되는 버그 발생"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

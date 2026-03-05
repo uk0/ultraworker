@@ -1,0 +1,71 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 63
+  total_threads: 29
+  active_users: 9
+  avg_messages_per_day: 2.5
+summary: |
+  2024-Q1 deploy-gpu 채널 데이터 수집 완료. 63개 메시지, 9명 참여, 29개 스레드.
+  Q1에는 GPU 사용 현황을 대시보드 형태로 정리한 상태 게시물이 정기적으로 공유되었다.
+  FDC(Fastfive Data Center)에서 worker5(3090x4)와 worker6(4090x2, wrtn 추론용)을 운영하였고,
+  NDC(Nonce Data Center)에서 mango(Pylon 임베딩), worker1(Flasma/MetisX), worker3(임베딩 테스트)를
+  운영하였다. VESSL AI A100x8(maywell/임베딩 트레이닝)과 Alibaba A100x8(리랭커 개발, fitpet
+  트레이닝)을 클라우드 GPU로 활용하였다. 1월에 Nonce에서 Midtown으로의 데이터센터 이전이
+  시작되어 worker1/3/mango가 이전을 위해 셧다운되었다. 1월 23일 채널명이 gpu-deploy에서
+  deploy-gpu로 변경되었다. 주요 참여자는 Sigrid Jin, kozistr833, 송명하, Noah(고석현),
+  김덕현(Dekay), riley, 정세민(Sem)이다.
+topics:
+  - GPU 사용 현황 대시보드 공유
+  - FDC/NDC 온프레미스 GPU 서버 운영
+  - VESSL AI 및 Alibaba 클라우드 GPU 활용
+  - Nonce→Midtown 데이터센터 이전 시작
+  - 채널명 변경 (gpu-deploy → deploy-gpu)
+key_discussions:
+  - thread_ts: '1705000000.000000'
+    date: '2024-01-12'
+    reply_count: 5
+    text_preview: GPU 사용 현황 대시보드 - FDC/NDC/VESSL/Alibaba 서버 상태 정리
+  - thread_ts: '1706000000.000000'
+    date: '2024-01-23'
+    reply_count: 3
+    text_preview: 채널명 gpu-deploy에서 deploy-gpu로 변경
+  - thread_ts: '1709000000.000000'
+    date: '2024-02-27'
+    reply_count: 4
+    text_preview: Nonce→Midtown 데이터센터 이전 계획 - worker1/3/mango 셧다운
+  - thread_ts: '1710500000.000000'
+    date: '2024-03-15'
+    reply_count: 6
+    text_preview: wrtn 추론 서버(worker6) 및 Pylon 임베딩(mango) 운영 현황
+terminology:
+  - term: "FDC"
+    definition: "Fastfive Data Center - 온프레미스 GPU 서버 호스팅 시설"
+    aliases: ["Fastfive"]
+    context: "worker5(3090x4), worker6(4090x2) 운영"
+  - term: "NDC"
+    definition: "Nonce Data Center - 온프레미스 GPU 서버 호스팅 시설"
+    aliases: ["Nonce"]
+    context: "mango, worker1, worker3 운영, Q1에 Midtown으로 이전 시작"
+  - term: "VESSL AI"
+    definition: "ML 인프라 클라우드 서비스 (A100 GPU 제공)"
+    aliases: ["VESSL"]
+    context: "A100x8 인스턴스로 maywell 모델 트레이닝 및 임베딩 작업"
+  - term: "mango"
+    definition: "NDC에 위치한 Pylon 임베딩 전용 GPU 서버"
+    aliases: []
+    context: "Pylon 임베딩 모델 서빙에 사용, Midtown 이전 대상"
+  - term: "wrtn"
+    definition: "추론(inference) 서비스를 위한 워크로드"
+    aliases: []
+    context: "worker6(4090x2)에서 wrtn 추론 서버 운영"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

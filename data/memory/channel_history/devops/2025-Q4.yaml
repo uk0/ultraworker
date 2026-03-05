@@ -1,0 +1,24 @@
+channel:
+  id: C07TM7T9LKV
+  name: devops
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q4 devops 채널은 ai-crawler 봇이 채널에 참여한 것 외에 실질적인 논의가 없었다.
+  DevOps 관련 기술적 대화는 이 채널이 아닌 다른 채널에서 이루어지고 있는 것으로 보인다.
+topics:
+  - 봇 연동
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

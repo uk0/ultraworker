@@ -1,0 +1,69 @@
+channel:
+  id: C07A18SADUP
+  name: deploy-common
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1178
+  total_threads: 745
+  active_users: 16
+  avg_messages_per_day: 14.5
+summary: |
+  2025년 3분기 deploy-common 채널은 carrier-supply와 carrier-storm-parse의 집중적인 개발·배포로 인해 하루 평균 14.5건의 활발한 CI/CD 활동이 이루어졌다. carrier 서비스의 라이브 릴리즈가 이 분기에 처음 이루어졌으며, bgeserver, overmind 서비스도 정기적으로 배포되었다. jina-v4-embed 임베딩 모델이 신규 도입되었고, 부하 테스트(load testing)를 통한 성능 검증이 배포 프로세스에 포함되었다. 16명의 팀원이 OCI 클러스터 전환을 병행하며 멀티클러스터 배포를 안정화하였다.
+topics:
+  - name: "carrier-supply 집중 개발"
+    mention_count: 200
+    description: "carrier-supply 벡터 인덱서 서비스 개발 스프린트 및 빈번한 배포"
+  - name: "carrier 라이브 릴리즈"
+    mention_count: 80
+    description: "Carrier 워크플로우 엔진 최초 라이브 프로덕션 배포"
+  - name: "bgeserver 배포"
+    mention_count: 70
+    description: "BGE 임베딩 모델 서버 정기 업데이트 및 배포"
+  - name: "부하 테스트"
+    mention_count: 40
+    description: "라이브 배포 전 성능 검증을 위한 로드 테스트 실시"
+  - name: "jina-v4-embed 도입"
+    mention_count: 30
+    description: "Jina AI v4 임베딩 모델 신규 도입 및 서비스 통합"
+key_discussions:
+  - thread_ts: '1751529600.000000'
+    date: '2025-07-03'
+    reply_count: 8
+    text_preview: "carrier-supply 인덱서 성능 개선 배포 및 부하 테스트 결과 논의"
+  - thread_ts: '1754208000.000000'
+    date: '2025-08-03'
+    reply_count: 11
+    text_preview: "carrier 라이브 릴리즈 배포 계획 및 롤아웃 전략 논의"
+  - thread_ts: '1756886400.000000'
+    date: '2025-09-03'
+    reply_count: 6
+    text_preview: "jina-v4-embed 서비스 신규 배포 및 bgeserver 대체 방안 검토"
+terminology:
+  - term: "carrier-supply"
+    definition: "Carrier 플랫폼의 문서 벡터 인덱싱 및 공급을 담당하는 서비스"
+    aliases: ["supply", "서플라이 인덱서"]
+    context: "Q3에 집중적인 개발과 배포가 이루어진 핵심 서비스"
+  - term: "bgeserver"
+    definition: "BGE(BAAI General Embedding) 모델을 서빙하는 임베딩 서버"
+    aliases: ["bge-server", "BGE 서버"]
+    context: "텍스트 임베딩 생성을 위한 내부 모델 서버"
+  - term: "jina-v4-embed"
+    definition: "Jina AI의 4세대 임베딩 모델 서비스"
+    aliases: ["jina-embed", "jina v4"]
+    context: "Q3에 신규 도입된 임베딩 모델"
+  - term: "overmind"
+    definition: "Sionic AI 내부 서비스. Q3부터 정기 배포 시작"
+    aliases: []
+    context: "Q3에 본격적으로 배포 사이클에 포함된 서비스"
+  - term: "load testing"
+    definition: "라이브 배포 전 시스템 성능과 안정성을 검증하는 부하 테스트"
+    aliases: ["부하 테스트", "로드 테스트"]
+    context: "carrier 라이브 릴리즈 전 검증 프로세스에 포함"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

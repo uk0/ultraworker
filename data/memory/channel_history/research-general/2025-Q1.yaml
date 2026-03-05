@@ -1,0 +1,131 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 130
+  total_threads: 55
+  active_users: 16
+  avg_messages_per_day: 1.4
+summary: >
+  2025 Q1는 리서치팀의 연구 방향이 다각화되고 외부 성과가 본격적으로 나타난 시기이다. DeepSeek R1 출시로
+  오픈소스 추론 모델에 대한 관심이 폭발적으로 증가했으며, R1 distill 버전의 성능이 o1 mini를 뛰어넘는다는
+  분석이 공유되었다. 청킹 전략에 대한 깊이 있는 논의가 진행되어 BERT 기반 의미적 청킹 모델 개발이 제안되었고,
+  Late CLS Chunking 연구가 시작되었다. CVPR 논문의 Borderline 리뷰 결과를 받고 리부탈을 성공적으로
+  진행하여 최종 억셉을 받았다. IBK RAG 프로젝트에서 리랭커 튜닝, 피드백 시스템 개선, LLM-as-reranker
+  활용 등 성능 고도화가 활발히 진행되었다. 리서치 슬랙 채널 용도를 재정립하여 research-common(업무),
+  random-research(자유 공유), request-for-research(요청), research-daily(업무일지) 등으로
+  체계화하였다. ModernBERT-GTE 모델 컨버터 개발, QwQ-32B 출시 분석, 하이브리드 검색 가중치 연구 등
+  기술적 성과도 풍부했다. song님의 국내 저널 출간, Langcon2025 발표 참여 등 대외 활동도 이어졌다.
+topics:
+  - name: "DeepSeek R1 및 추론 모델"
+    count: 12
+    summary: "DeepSeek R1/R1-Zero 출시 분석. R1 distill 14B가 o1 mini 성능 초과. L40s 서버에서 R1 테스트. DNA-R1 한국어 추론 모델 공개. LLM 증류 기법 아티클 작성 논의."
+  - name: "청킹 전략 연구"
+    count: 15
+    summary: "BERT 기반 의미적 청킹 모델 제안(sionic-ai/bert-chunker). 청킹 토큰 최적화 필요성 분석. Jina 실험 기반 고정길이 청킹의 효과. Late Chunking과 의미적 청킹 병행 방안."
+  - name: "임베딩 생성 고도화"
+    count: 10
+    summary: "Late CLS Chunking 연구. bge-m3 광역 인코딩(Concat Is All You Need). 레이어 복제 + Residual 학습 구조 제안. 임베딩 모델 구조 혁신 논의."
+  - name: "CVPR 논문 리부탈 및 억셉"
+    count: 8
+    summary: "CVPR 리뷰 결과 Borderline 2개, Weakly Reject 1개. 연휴 중 리부탈 진행. 최종 CVPR 억셉 확정. 기사 작성 논의."
+  - name: "IBK RAG 성능 고도화"
+    count: 18
+    summary: "IBK RAG에서 O1만 정답 가능한 계산 문제 발견. 리랭커 튜닝(레거시 챗봇 1만개 QA). LLM-as-reranker 활용 검토. Late CLS Chunking 적용. 피드백 시스템 개선."
+  - name: "리서치 채널 재정비"
+    count: 3
+    summary: "research-common(업무), random-research(자유), request-for-research(요청), research-daily(업무일지) 등으로 슬랙 채널 용도 재정립."
+  - name: "하이브리드 검색 가중치"
+    count: 5
+    summary: "BM25와 벡터 검색 가중치 최적화 연구. BM25 0.6/의미 0.4 비율에서 큰 성능 향상 관찰. Pinecone sparse vector 검색 벤치마크."
+  - name: "ModernBERT-GTE 컨버터"
+    count: 4
+    summary: "ModernBERT MLP 기반 구현. Alibaba-NLP gte-modernbert-base 타겟. MosaicML 구현체 분석. 블로그 아티클 작성 예정."
+  - name: "QwQ-32B 및 모델 분석"
+    count: 5
+    summary: "Qwen QwQ-32B 추론 모델 출시. DeepSeek-R1과 비교 분석. 32B 파라미터로 경쟁력 있는 성능."
+key_discussions:
+  - thread_ts: '1737426218'
+    date: '2025-01-21'
+    title: "DeepSeek R1 Distill 공개 및 성능 분석"
+    summary: "DeepSeek R1 distill 버전 공개. 14B 모델이 o1 mini 성능을 뛰어넘는 결과. IBK H100 16개에서 원본 모델 운용 가능성 검토."
+    participants: ["U06CLS6E694"]
+    decisions: ["R1 distill 모델 활용 검토"]
+    action_items: []
+    keywords: ["DeepSeek", "R1", "distill", "o1mini", "추론"]
+    relevance_score: 0.9
+  - thread_ts: '1735881268'
+    date: '2025-01-03'
+    title: "BERT 기반 의미적 청킹 모델 제안"
+    summary: "Noah가 BERT 기반 딥러닝 청킹 모델 구조를 제안. 인코더를 통해 토큰별 2클래스 분류로 청크 분할 위치를 결정. sionic-ai/bert-chunker 영문 데모 공개."
+    participants: ["U057PR1ADCL"]
+    decisions: ["자체 의미 청킹 모델 개발 방향 설정"]
+    action_items: ["합성 데이터 제작", "ModernBERT 기반 모델 검토"]
+    keywords: ["청킹", "BERT", "의미청킹", "ModernBERT"]
+    relevance_score: 1.0
+  - thread_ts: '1738851827'
+    date: '2025-02-06'
+    title: "Concat Is All You Need - bge-m3 광역 인코딩"
+    summary: "bge-m3로 2000~4000 토큰을 광역 인코딩하면서 Qwen 7B 임베딩을 이기는 방법 제안. n배 이어 붙이고 내적하는 방식. 뉴 STORM vs 구 STORM 비교에서 뉴 STORM이 전면 우위."
+    participants: ["U057PR1ADCL", "U06CLS6E694"]
+    decisions: []
+    action_items: ["STORM 적용 검증"]
+    keywords: ["bge-m3", "광역인코딩", "Late Chunking", "STORM"]
+    relevance_score: 0.9
+  - thread_ts: '1739851949'
+    date: '2025-02-18'
+    title: "리서치 슬랙 채널 용도 재정립"
+    summary: "research 관련 슬랙 채널의 용도를 명확히 정리. research-common(업무), random-research(자유 공유), request-for-research(요청), research-daily(업무일지), research-parse(Parse 연구), research-vec-embedding(RAG 연구) 등으로 체계화."
+    participants: ["U058A971Z8R"]
+    decisions: ["채널별 역할 분리 확정", "random-research 신설"]
+    action_items: ["당분간 채널 목적에 맞게 관리"]
+    keywords: ["채널정리", "research-common", "random-research", "research-daily"]
+    relevance_score: 0.8
+  - thread_ts: '1740544949'
+    date: '2025-02-26'
+    title: "CVPR 억셉 확정"
+    summary: "도균님의 CVPR 논문 최종 억셉 확정. 리뷰 결과 Borderline에서 리부탈을 통해 점수 상승. 머니투데이 기사 작성 논의."
+    participants: ["U057PR1ADCL", "U058A971Z8R"]
+    decisions: ["CVPR 기사 작성 추진"]
+    action_items: ["의의 5문장 작성", "기사 타임라인 설정"]
+    keywords: ["CVPR", "논문", "억셉", "학회"]
+    relevance_score: 1.0
+  - thread_ts: '1742292535'
+    date: '2025-03-18'
+    title: "IBK RAG LLM-as-reranker 제안"
+    summary: "IBK RAG 성능 향상을 위해 LLM을 리랭커처럼 사용하는 방안 제안. 청크 100개를 입력으로 넣고 유효한 20개만 LLM이 인덱스를 생성하는 방식. 활발한 논의(55개 답글)."
+    participants: ["U05T2RW7PE2", "U06CLS6E694", "U08DJL0LXL0", "U057PR1ADCL"]
+    decisions: ["다양한 접근법 병행 시도"]
+    action_items: ["리랭커 튜닝 진행", "LLM-as-reranker 실험"]
+    keywords: ["IBK", "RAG", "리랭커", "LLM", "성능"]
+    relevance_score: 0.9
+terminology:
+  - term: "DeepSeek R1"
+    definition: "DeepSeek에서 개발한 추론 특화 LLM. GRPO 강화학습 기반. R1-Zero(순수 RL), R1-Distill(증류) 버전 존재."
+    aliases: ["R1", "R1-Zero", "R1-Distill"]
+    context: "2025년 1월 공개. fp8 모델 700GB. 14B distill 버전이 o1 mini 초과 성능."
+  - term: "Late CLS Chunking"
+    definition: "넓은 컨텍스트 윈도우로 임베딩을 먼저 계산한 뒤 부분 풀링하여 앞뒤 문맥이 반영된 청크 임베딩을 생성하는 기법."
+    aliases: ["Late Chunking"]
+    context: "기존 청킹의 문맥 소실 문제를 해결하기 위한 접근. 특허 출원 진행."
+  - term: "QwQ-32B"
+    definition: "Qwen의 32B 파라미터 추론 특화 모델. DeepSeek-R1과 경쟁하는 성능."
+    aliases: []
+    context: "2025년 3월 출시."
+  - term: "DNA-R1"
+    definition: "한국어 기반 추론 특화 모델. DeepSeek-R1과 동일한 GRPO 방법론으로 대규모 강화학습 적용."
+    aliases: []
+    context: "한국어 기반으로 추론하는 첫 공개 모델."
+  - term: "supply"
+    definition: "사이오닉 자체 개발 검색 엔진/리트리버 프레임워크."
+    aliases: []
+    context: "BM25 + reranker 기반 검색 평가에 활용."
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

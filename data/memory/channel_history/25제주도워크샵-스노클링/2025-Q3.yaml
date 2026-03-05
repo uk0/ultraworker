@@ -1,0 +1,36 @@
+channel:
+  id: C097RJYNHB2
+  name: 25제주도워크샵-스노클링
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 27
+  total_threads: 7
+  active_users: 14
+  avg_messages_per_day: 3.4
+summary: |
+  2025년 8월 제주도 워크샵 스노클링 활동 채널. 김혜원이 팀장으로서 스노클링 준비 정보를 상세히 공유함.
+  장소는 김녕 세기알 해변(제주시 구좌읍 김녕리), 만조시간 12시 22분 기준 1시 도착 타겟. 스노클, 구명조끼, 오리발, 아쿠아슈즈 등 대여 가능. 수온 27.4도로 슈트 없이 가능.
+  당일(8/26) 점심 메뉴 투표 후 스노클링 진행, 2차 스노클링 출발자 모집도 이루어짐. 낚시팀과 합류하여 저녁 식사 조율. 약 9명(김혜원, Noah, 조하담, 신희수, 원성준, 김부교, 백은주, 오승희, Sigrid Jin)이 참여.
+topics:
+  - 제주 워크샵
+  - 스노클링
+  - 팀 빌딩
+  - 김녕 세기알 해변
+key_discussions:
+  - title: 스노클링 준비 정보 공유
+    summary: 김녕 세기알 해변 위치, 만조시간, 준비물(수영복/선크림), 대여 가능 장비, 수온 정보 등 상세 안내
+  - title: 당일 스노클링 진행
+    summary: 점심 식사 후 스노클링 진행, 2차 스노클링 출발자 모집, 낚시팀과 합류 조율
+terminology:
+  - term: 세기알 해변
+    definition: 제주시 구좌읍 김녕리에 위치한 스노클링 명소
+  - term: 만조/간조
+    definition: 스노클링 적정 시간 판단을 위한 조석 정보 (만조 앞뒤 1~2시간이 적절)
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

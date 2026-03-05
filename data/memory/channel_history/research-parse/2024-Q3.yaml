@@ -1,0 +1,66 @@
+channel:
+  id: C07K034UHNE
+  name: research-parse
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 41
+  total_threads: 21
+  active_users: 9
+  avg_messages_per_day: 2.6
+summary: |
+  2024-Q3 research-parse 채널은 Storm Organize(현 Storm Parse) 상품화를 목표로 VLM 기반 문서 파싱 기술 연구가 시작된 분기이다.
+  채널 초기에 상품화를 위한 문제 정의(속도·비용 이슈)와 역할 분담이 이루어졌고, Qwen2-VL-7B 공개 이후 이를 활용한 튜닝 실험이 집중적으로 진행되었다.
+  대규모 데이터셋(700k~1M 목표) 생성과 함께 Pretrain → SFT 학습 전략, 프롬프트 가이드 개선 등이 논의되었으며, 기술 PR(블로그, Hugging Face, GitHub) 전략도 수립되었다.
+topics:
+  - name: "Qwen2-VL 파인튜닝"
+    mention_count: 12
+    description: "Qwen2-VL-7B 모델을 활용한 PDF 파싱 SFT 및 Pretrain 실험, 2B 모델 반복 이슈 발생"
+  - name: "Storm Organize 상품화"
+    mention_count: 8
+    description: "속도(장당 10~30초)와 비용(1~35원/페이지) 문제 해결을 중심으로 상품화 방향 논의"
+  - name: "데이터셋 구축"
+    mention_count: 7
+    description: "Gemini Flash/Pro API로 마크다운 변환 데이터 생성, 700k~1M 규모 목표"
+  - name: "기술 PR 전략"
+    mention_count: 4
+    description: "기술 블로그, Hugging Face 모델 공개, 벤치마크 데이터 공개 등 외부 홍보 방안 논의"
+key_discussions:
+  - thread_ts: '1724889540.000000'
+    date: '2024-08-29'
+    reply_count: 4
+    text_preview: "Storm Organize 상품화 방향 설정 - 속도·비용 이슈 정의, 역할 분담(세민: 데모 상품화, 도균: 모델 R&D)"
+  - thread_ts: '1724978491.000000'
+    date: '2024-08-29'
+    reply_count: 9
+    text_preview: "Qwen2-VL-7B 공개 및 데모 테스트 - 사실상 튜닝 불필요 수준의 성능 확인"
+  - thread_ts: '1725519600.000000'
+    date: '2024-09-05'
+    reply_count: 1
+    text_preview: "Storm Organize 특허화 포인트 검토 논의"
+  - thread_ts: '1726536178.000000'
+    date: '2024-09-17'
+    reply_count: 5
+    text_preview: "Document AI 데모 공개 및 외부 PR 준비 논의"
+  - thread_ts: '1727321400.000000'
+    date: '2024-09-25'
+    reply_count: 6
+    text_preview: "Parsr 속도 이슈 및 Qwen VL 2B 반복 현상 해결 방안 논의"
+terminology:
+  - term: "Storm Organize"
+    definition: "현재의 Storm Parse 전신, 비정형 문서(이미지, 표, 그래프)를 구조화하여 RAG에 활용하는 기능"
+  - term: "Qwen2-VL"
+    definition: "Qwen에서 공개한 멀티모달 VLM 모델 시리즈, 7B 및 72B 버전 존재"
+  - term: "Parsr"
+    definition: "PDF 파싱 라이브러리, llamaparse와 함께 Storm Parse 파이프라인에서 활용됨"
+  - term: "llamaparse"
+    definition: "PDF 전처리에 사용된 외부 파싱 도구, 장당 약 3원 비용 발생"
+  - term: "드라군"
+    definition: "OCR 정확도 향상을 위해 Storm Parse 파이프라인에서 활용하는 내부 OCR 컴포넌트"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

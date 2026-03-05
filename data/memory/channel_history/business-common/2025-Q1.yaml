@@ -1,0 +1,97 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 462
+  total_threads: 283
+  active_users: 19
+  avg_messages_per_day: 6.2
+summary: |
+  2025-Q1에는 서부발전 PoC 수주와 현대차 2차 제안서 제출 등 대형 B2B 딜이 본격 추진되었으며, 아이티센 RAG 컨소시엄(NHN/베슬AI/퍼블릭AI/튜닙AI)을 통한 대규모 프로젝트 참여도 진행되었다.
+  제품소개서가 v0.3에서 최종 버전까지 수차례 반복 업데이트되었고, 영문 버전까지 제작되어 글로벌 영업 대응력을 강화했다.
+  앤트로픽 빌더 서밋 참가, 클루커스 MSP 파트너십 체결, Relate CRM 도입 등 파트너십과 내부 영업 인프라 고도화가 병행되었으며, LG전자 AX, SK네트웍스, 유진투자증권 STT 등 신규 영업 파이프라인도 확대되었다.
+topics:
+  - 서부발전 PoC 수주 및 진행
+  - 현대차 2차 제안서 제출
+  - 아이티센 RAG 컨소시엄 (NHN/베슬AI/퍼블릭AI/튜닙AI)
+  - 제품소개서 v0.3~vF 반복 업데이트 (국문/영문)
+  - 앤트로픽 빌더 서밋 참가
+  - 클루커스 MSP 파트너십 체결
+  - Relate CRM 도입
+  - IR Deck 작성
+  - LG전자 AX 미팅
+  - SK네트웍스 영업 대응
+  - 유진투자증권 STT 프로젝트
+  - 아이티센 농협PI 대응
+  - 준컨설팅 할인 협상
+key_discussions:
+  - thread_ts: '1741759146'
+    date: '2025-03-12'
+    reply_count: 73
+    text_preview: 서부발전 PoC 진행 - AI 기반 발전소 문서 분석 및 질의응답 시스템 구축
+  - thread_ts: '1742994542'
+    date: '2025-03-26'
+    reply_count: 65
+    text_preview: 제품소개서 v0.3 업데이트 - 전체 구성 및 디자인 재검토
+  - thread_ts: '1743039166'
+    date: '2025-03-27'
+    reply_count: 43
+    text_preview: 현대차 2차 제안서 제출 준비 - 기술 아키텍처 및 구축 방안 정리
+  - thread_ts: '1743154460'
+    date: '2025-03-28'
+    reply_count: 40
+    text_preview: 제품소개서 v0.7 피드백 반영 및 수정 사항 논의
+  - thread_ts: '1743175232'
+    date: '2025-03-28'
+    reply_count: 35
+    text_preview: 제품소개서 v0.8 영문 버전 번역 검토 및 글로벌 대응
+  - thread_ts: '1742865136'
+    date: '2025-03-25'
+    reply_count: 27
+    text_preview: 준컨설팅 할인율 협상 - 파트너 채널 가격 정책 논의
+  - thread_ts: '1742362902'
+    date: '2025-03-19'
+    reply_count: 25
+    text_preview: 앤트로픽 빌더 서밋 참가 후기 및 파트너십 기회 논의
+  - thread_ts: '1742826711'
+    date: '2025-03-24'
+    reply_count: 25
+    text_preview: 제품소개서 2025 최종 완성본 리뷰 및 배포
+  - thread_ts: '1741190436'
+    date: '2025-03-05'
+    reply_count: 24
+    text_preview: 서부발전 담당자 통화 내용 공유 - 요구사항 상세화
+  - thread_ts: '1742359383'
+    date: '2025-03-19'
+    reply_count: 19
+    text_preview: 아이티센 RAG 컨소시엄 구성 - NHN/베슬AI/퍼블릭AI/튜닙AI 역할 분담
+terminology:
+  - term: 서부발전
+    definition: 한국서부발전으로 발전소 문서 AI 분석 PoC를 발주한 공공기관 고객
+    aliases: [KOWEPO]
+    context: AI 기반 발전소 기술문서 질의응답 및 분석 시스템 PoC 진행
+  - term: 클루커스
+    definition: 클라우드 MSP(Managed Service Provider) 기업으로 사이오닉AI와 파트너십 체결
+    aliases: [Cloocus]
+    context: 클라우드 인프라 관리 파트너로서 공동 영업 및 기술 지원 협력
+  - term: Relate CRM
+    definition: 영업 관계 관리(CRM) 도구로 사이오닉AI가 내부 영업 프로세스 관리에 도입
+    aliases: [릴레이트]
+    context: 영업 파이프라인 관리 및 고객 이력 추적을 위해 도입
+  - term: 앤트로픽 빌더 서밋
+    definition: Anthropic이 주최하는 AI 개발자/파트너 대상 행사
+    aliases: [Anthropic Builders Summit]
+    context: 사이오닉AI 참가를 통한 Anthropic 파트너 네트워크 확대
+  - term: 아이티센
+    definition: IT 서비스 대기업으로 RAG 컨소시엄의 주관사
+    aliases: [ITcen]
+    context: NHN/베슬AI/퍼블릭AI/튜닙AI와 함께 대규모 RAG 프로젝트 컨소시엄 구성
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

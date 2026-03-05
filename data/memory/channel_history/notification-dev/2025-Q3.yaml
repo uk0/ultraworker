@@ -1,0 +1,41 @@
+channel:
+  id: C08H8TY7LCA
+  name: notification-dev
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 39
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 5.6
+summary: |
+  2025년 3분기 notification-dev 채널은 자동화 알림 봇을 통한 Storm OpenAPI 관련 이벤트가 기록된 알림 채널이다.
+  Storm OpenAPI 문서 업데이트(API key 발급 방법, 채팅 전송 API 명세 등)가 이루어졌으며, 신규 사용자 가입 알림이 수신되었다.
+  9월에는 Storm OpenAPI 노션에서 Apidog으로의 대규모 마이그레이션 준비 작업이 시작되었으며, 새로운 문서 구조(시작하기, 주요 기능 활용, 고급 활용 팁 등)가 준비되었다.
+topics:
+  - name: "Storm OpenAPI 문서 준비"
+    mention_count: 25
+    description: "9월 노션-Apidog 마이그레이션 사전 준비 - 시작하기, 주요 기능 활용, 고급 활용 팁, FAQ 구조 정비"
+  - name: "API 명세 업데이트"
+    mention_count: 8
+    description: "채팅 전송(stream/non-stream) API, API key 발급 관련 문서 업데이트"
+  - name: "신규 사용자 가입 알림"
+    mention_count: 1
+    description: "신규 사용자(Dan, Sionic Company) 가입 알림 수신"
+key_discussions: []
+terminology:
+  - term: "Storm OpenAPI"
+    definition: "Sionic AI STORM 플랫폼의 공개 API 문서"
+    aliases: ["STORM OpenAPI"]
+    context: "노션에서 Apidog으로 문서 이관 중"
+  - term: "Apidog"
+    definition: "API 문서 및 자동화 테스트 플랫폼"
+    aliases: []
+    context: "노션 대체 API 문서 관리 도구"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,61 @@
+channel:
+  id: C06SUBV2Q0M
+  name: fyi-summary
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 296
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 4.6
+summary: |
+  2025-Q2는 요약봇이 business-common, engineering(C057KN2911V), research-common(C08CAM2830E) 채널의 일일 대화를 정리하여 게시한 분기로, 메시지 수가 296개로 크게 증가했다. 주요 내용으로는 IBK 프로젝트(Storm 배포 자동화, OpenTelemetry 적용, 긴급 반입), 삼성 C-Lab Outside 제안서, 대흥에코 에이전트 개발, 현대차 제안서, 파트너십(데이터브릭스, 크림슨앰버), Stargate 엔드포인트 테스트, 연구 채널의 임베딩 모델 편향성/HNSW 성능 논의, Jina Reranker V3, Cross-Encoder와 BM25 비교 연구 등이 있었다.
+topics:
+  - name: "IBK 프로젝트 심화"
+    mention_count: 40
+    description: "Storm Platform 배포 자동화(Helm 기반), OpenTelemetry 적용(Jaeger 대신 OTLP), 긴급 반입 가이드, IBK 성능 이슈 대응"
+  - name: "삼성 C-Lab Outside 제안서"
+    mention_count: 8
+    description: "C-Lab 제안서 피드백 수렴, 9페이지 AI 기술 기반 문구 수정, 산출물 파트 추가, 일요일 최종 제출"
+  - name: "대흥에코 PoC"
+    mention_count: 6
+    description: "성상분류 매칭, 견적산출, 법령검색봇 3개 에이전트 개발 요건 정리, 매주 수요일 정례미팅"
+  - name: "임베딩 모델 연구"
+    mention_count: 15
+    description: "Dense Retriever 편향성(초기 답변 존재, 위치 편향), HNSW 성능과 내재적 차원 관계, Jina Reranker V3 기술 특징"
+  - name: "사업 개발"
+    mention_count: 12
+    description: "팀스파르타 발표, 현대차 세미나, LG전자 AX 총괄 방문, NIA 사업, Maggioli Group 미팅"
+key_discussions:
+  - thread_ts: '1746144000.000000'
+    date: '2025-04-02'
+    reply_count: 0
+    text_preview: "삼성 C-Lab Outside 제안서 검토 - 대흥에코 3개 에이전트 개발 요건 정리"
+  - thread_ts: '1746403200.000000'
+    date: '2025-04-04'
+    reply_count: 0
+    text_preview: "데이터 삽입 순서와 HNSW 검색 품질 - 내재적 차원이 클수록 ANN 난이도 증가"
+  - thread_ts: '1746576000.000000'
+    date: '2025-04-04'
+    reply_count: 0
+    text_preview: "Storm Platform 배포 자동화 - Helm value.yaml로 stargate-api, embedding 컴포넌트 설정"
+terminology:
+  - term: "Stargate"
+    definition: "사이오닉AI의 검색 엔진/게이트웨이 서비스. stargate-api, stargate-web 등 컴포넌트로 구성됨"
+    aliases: ["SG", "스타게이트", "스타겟"]
+    context: "Storm Platform 핵심 컴포넌트, IBK 구축에 사용"
+  - term: "OpenTelemetry"
+    definition: "분산 트레이싱 및 모니터링 표준 프레임워크. IBK 환경에서 OTLP HTTP/GRPC exporter를 통해 적용"
+    aliases: ["OTLP"]
+    context: "IBK 서비스 모니터링을 위해 2025년 2분기 도입"
+  - term: "Jina Reranker V3"
+    definition: "Jina AI에서 출시한 리랭킹 모델. 하나의 긴 컨텍스트에 질의와 여러 문서를 함께 넣는 방식, 마트료시카 지원"
+    aliases: []
+    context: "연구 채널(research-common)에서 기술 특징 논의"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

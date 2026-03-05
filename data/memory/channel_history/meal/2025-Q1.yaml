@@ -1,0 +1,58 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 383
+  total_threads: 204
+  active_users: 25
+  avg_messages_per_day: 5.7
+summary: |
+  사내 점심/저녁 식사 주문 채널. 매일 봇이 자동으로 '샐러드 열차'(11시 10분 마감)와 '일반식 열차'를 운영하며,
+  저녁에는 '저녁 수요 조사' 봇이 가동됨. 배달앱(배민) 함께주문 링크를 공유하여 팀원들이 공동 주문하는 방식.
+  주요 주문 담당자는 김혜원(샐러드), 정세민(일반식), 양호진(일반식/저녁팟). Storm-Fooding 봇이 오늘의 메뉴 옵션을 자동 추천.
+  커피 머신 원두 교체 논의, 간식 열차(쿠팡 공동구매), 나가먹(외식) 팟 등 다양한 식사 관련 소통이 활발히 이루어짐.
+topics:
+  - 점심 배달 주문
+  - 샐러드 열차
+  - 일반식 열차
+  - 저녁 수요 조사
+  - 간식 공동구매
+  - 커피 원두
+key_discussions:
+  - title: 커피 머신 원두 교체 논의
+    date: '2025-03-13'
+    summary: Noah가 커피 맛 저하를 느껴 왼쪽 원두 교체를 제안, 36개 답글로 활발한 토론
+  - title: 간식 열차 공동구매
+    date: '2025-03-24'
+    summary: 김혜원이 간식 재고 소진으로 쿠팡 공동구매 열차 운영, 과자/음료 희망 접수
+  - title: 샐러드 열차 메뉴 운영
+    date: '2025-Q1'
+    summary: 요일별 고정 메뉴 운영 - 월(샐러드파스타), 화(서브웨이), 수(타코보울), 목(샐러드파스타), 금(반미)
+terminology:
+  - term: 샐러드 열차
+    definition: 매일 11시 10분 마감으로 운영되는 샐러드 공동주문 시스템
+    aliases: [샐러드팟]
+  - term: 일반식 열차
+    definition: 일반식(밥류) 공동주문 시스템, 세민 푸딩 참여/나가먹/시켜먹 중 선택
+    aliases: [일반식팟]
+  - term: 빠저
+    definition: 빠른 저녁의 줄임말, 이른 시간에 저녁을 먹는 것
+    aliases: [이른저녁, 빠른저녁]
+  - term: Storm-Fooding
+    definition: 오늘의 메뉴 옵션을 자동 추천하는 봇
+    aliases: [푸딩봇]
+  - term: 나가먹
+    definition: 외부 식당에서 외식하는 것
+    aliases: []
+  - term: 미타
+    definition: 사무실/오피스 공간 명칭
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

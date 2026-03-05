@@ -1,0 +1,62 @@
+channel:
+  id: C08CXC8E72A
+  name: eng-inging
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 216
+  total_threads: 141
+  active_users: 19
+  avg_messages_per_day: 5.5
+summary: |
+  2025년 1분기 eng-inging 채널은 2025년 2월 13일 혜원(Hyewon)이 개설한 엔지니어링 팀의 비공식 소통 채널로, 팀원들의 일상적인 기술적 고충과 논의를 나누는 공간으로 시작되었다. pylon 설정 이슈, Apidog 마이그레이션(Postman 대체), storm-parse-api 디버깅 등이 주요 화제였으며, 19명의 팀원이 초창기부터 활발하게 참여하였다. 채널의 '잉잉'이라는 이름처럼 개발 과정에서의 고민과 해결책을 자유롭게 나누는 문화가 형성된 분기였다.
+topics:
+  - name: "Apidog 마이그레이션"
+    mention_count: 30
+    description: "Postman에서 Apidog로 API 문서화 및 테스트 도구 전환 작업"
+  - name: "pylon 설정 이슈"
+    mention_count: 20
+    description: "pylon 서비스 초기 설정 및 환경 구성 관련 문제 해결"
+  - name: "storm-parse-api 디버깅"
+    mention_count: 25
+    description: "storm-parse-api 크래시 및 파싱 오류 원인 분석 논의"
+  - name: "채널 문화 형성"
+    mention_count: 15
+    description: "eng-inging 채널 개설 초기 팀원 참여 및 기술 소통 문화 확립"
+key_discussions:
+  - thread_ts: '1739404800.000000'
+    date: '2025-02-13'
+    reply_count: 5
+    text_preview: "eng-inging 채널 개설: 혜원이 만든 엔지니어링 잉잉(고충 토로) 채널 소개"
+  - thread_ts: '1740009600.000000'
+    date: '2025-02-20'
+    reply_count: 8
+    text_preview: "Postman에서 Apidog로 마이그레이션 경험 공유 및 팁 논의"
+  - thread_ts: '1741564800.000000'
+    date: '2025-03-08'
+    reply_count: 6
+    text_preview: "storm-parse-api 크래시 원인 분석: 메모리 누수 vs 설정 문제"
+  - thread_ts: '1742083200.000000'
+    date: '2025-03-14'
+    reply_count: 4
+    text_preview: "pylon 청킹 설정 최적화 및 환경별 설정값 공유"
+terminology:
+  - term: "eng-inging"
+    definition: "엔지니어링 팀의 비공식 소통 채널. '잉잉'은 한국어로 고충을 토로하거나 투덜거리는 의성어"
+    aliases: ["잉잉", "엔지니어링 잉잉"]
+    context: "2025년 2월 13일 혜원(Hyewon)이 개설한 엔지니어링 비공식 토론 채널"
+  - term: "Apidog"
+    definition: "API 개발, 테스트, 문서화를 통합 지원하는 도구. Postman 대체재로 도입"
+    aliases: ["아피독"]
+    context: "Q1에 Postman에서 Apidog로 전환 결정 및 마이그레이션 시작"
+  - term: "잉잉"
+    definition: "한국어 의성어로 불만을 토로하거나 어려움을 공유하는 표현. 채널의 비공식 소통 문화를 상징"
+    aliases: []
+    context: "eng-inging 채널 이름의 유래"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

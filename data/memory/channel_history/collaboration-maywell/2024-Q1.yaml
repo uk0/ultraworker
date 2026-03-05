@@ -1,0 +1,50 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 203
+  total_threads: 40
+  active_users: 8
+  avg_messages_per_day: 8.8
+summary: |
+  Maywell(박정환)과 사이오닉AI 간 협업 채널 개설 및 초기 협업 시작. 사이오닉에서 A100 GPU 8장을 제공하여 speculative decoding용 데이터셋 생성, 70B 모델 vLLM 서빙, 한국어 이야기 생성 모델(nvnv) 2억 토큰 학습 등을 진행. LogicKor 리더보드 운영, LongLoRA 컨텍스트 확장 실험, Mixtral 8x22B 모델 평가, RAG 패턴 튜닝 논의 등 LLM 관련 기술 교류가 활발히 이루어짐. Jeonghwan Park(maywell)이 사이오닉 사무실 방문하여 오프라인 교류도 시작됨.
+topics:
+  - speculative decoding 데이터셋 생성
+  - vLLM 모델 서빙
+  - 한국어 LLM 파인튜닝 (nvnv 이야기 생성 모델)
+  - LogicKor 벤치마크 리더보드 운영
+  - LongLoRA 컨텍스트 확장
+  - RAG 패턴 튜닝
+  - Mixtral 8x22B 모델 평가
+  - GPU 자원 공유 및 협업
+key_discussions:
+  - title: "Maywell 협업 채널 개설 및 A100 GPU 지원"
+    summary: "사이오닉에서 maywell에게 A100 80G x8장 접근권한 제공. speculative decoding 모델 학습용 데이터셋 인퍼런스에 활용"
+  - title: "한국어 이야기 생성 모델 nvnv 공개"
+    summary: "2억 토큰 이상 훈련시킨 한국어 이야기 생성 모델을 HuggingFace에 공개. GPU 지원 덕분에 가능했던 성과"
+  - title: "LogicKor 리더보드 및 모델 평가"
+    summary: "한국어 LLM 벤치마크 LogicKor 운영. r+ 모델 성능 평가, 라이센스 이슈 논의"
+  - title: "LongLoRA 컨텍스트 확장 실험"
+    summary: "LongLoRA를 활용한 컨텍스트 확장 테스트 진행. 3트 시도 끝에 성공"
+terminology:
+  - term: "maywell"
+    definition: "박정환의 온라인 닉네임. 고등학생 시절부터 한국어 LLM 분야에서 활발히 활동하는 개발자/연구자"
+    aliases: ["메이웰", "이웰"]
+  - term: "LogicKor"
+    definition: "한국어 LLM 논리력 벤치마크. maywell이 주도적으로 개발 및 운영"
+    aliases: ["로직코"]
+  - term: "nvnv"
+    definition: "maywell이 사이오닉 GPU로 학습한 한국어 이야기 생성 모델 컬렉션"
+  - term: "LongLoRA"
+    definition: "효율적인 컨텍스트 길이 확장 방법론. 풀 파인튜닝 대비 저비용"
+  - term: "speculative decoding"
+    definition: "작은 드래프트 모델로 토큰을 미리 예측하여 LLM 인퍼런스 속도를 높이는 기법"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

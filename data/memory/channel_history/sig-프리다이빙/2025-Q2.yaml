@@ -1,0 +1,56 @@
+channel:
+  id: C08LPNBEH41
+  name: sig-프리다이빙
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 23
+  total_threads: 6
+  active_users: 9
+  avg_messages_per_day: 3.3
+summary: |
+  프리다이빙 채널 개설 및 활발한 활동 시작 분기. 김덕현(Dekay)이 채널을 만들고 공연 단체 관람도
+  sig채널 활동으로 볼 수 있다고 제안. 김혜원이 일정 조율을 위해 상세한 가능 날짜를 공유.
+  프리다이빙 일정 논의와 함께 바다 프리다이빙 계획도 수립. 신희수가 프렌젤(이퀄라이징 기법)
+  어려움을 토로하며 물 밖에서는 되는데 물 안에서 안 되는 고민을 공유. 파라다이브 같은
+  실내 다이빙 장소도 공유됨. 김혜원의 공연 일정과 프리다이빙 일정을 조율하는 대화가 활발.
+topics:
+  - 프리다이빙 일정 조율
+  - 프렌젤 이퀄라이징 기법 학습
+  - 실내 다이빙 장소 (파라다이브)
+  - 단체 공연 관람 계획
+  - 바다 프리다이빙 계획
+key_discussions:
+  - thread_ts: '1743582316.801339'
+    date: '2025-04-02'
+    reply_count: 9
+    text_preview: '김덕현 - 공연 단체 관람도 sig채널 활동 일환'
+  - thread_ts: '1747886702.614089'
+    date: '2025-05-22'
+    reply_count: 7
+    text_preview: '김혜원 - 바다에서 다같이 프다하러 가도되겠군요'
+  - thread_ts: '1743582282.733329'
+    date: '2025-04-02'
+    reply_count: 6
+    text_preview: '조하담 - 혜원님 공연 날짜 픽스 후 일정 재조정'
+  - thread_ts: '1748226232.586449'
+    date: '2025-05-26'
+    reply_count: 3
+    text_preview: '신희수 - 프렌젤 어렵다'
+terminology:
+  - term: "프렌젤"
+    definition: "Frenzel, 프리다이빙에서 사용하는 이퀄라이징(압력 평형) 기법"
+    context: "신희수가 물밖에서는 되는데 물안에서 안 된다고 고민 공유"
+  - term: "프다"
+    definition: "프리다이빙의 줄임말"
+    context: "김혜원이 바다 프리다이빙 계획을 논의할 때 사용"
+  - term: "파라다이브"
+    definition: "실내 프리다이빙 시설"
+    context: "김덕현이 카카오맵 링크와 함께 공유"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

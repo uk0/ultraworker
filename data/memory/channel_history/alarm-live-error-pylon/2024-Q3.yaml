@@ -1,0 +1,38 @@
+channel:
+  id: C066D0B9WKC
+  name: alarm-live-error-pylon
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 875
+  total_threads: 81
+  active_users: 14
+  avg_messages_per_day: 11.4
+summary: |
+  Pylon 운영 에러 알림 채널. 875개 메시지로 전 분기 대비 감소한 분기.
+  주요 에러는 CREATE_DOCUMENT_PROCESS_ERROR로, unstructured-io 문서 파싱 실패(빈 응답)가 지속적으로 발생했다.
+  document enrichment 에러(point_id 관련)도 새로 등장하여 벡터 포인트 처리 문제가 확인되었다.
+  Live Qdrant 헬스체크 503 에러도 간헐적으로 발생했으며, 에러 알림 수신자에 @U07CAKMF57F가 추가되었다.
+  에러 코드 체계가 이전 분기보다 구조화되어 CREATE_DOCUMENT_PROCESS_ERROR, GET_ANSWER_CONTEXT_ERROR 등
+  명확한 에러 코드가 사용되기 시작했다.
+topics:
+  - CREATE_DOCUMENT_PROCESS_ERROR (문서 생성 실패)
+  - unstructured-io 빈 응답 에러
+  - document enrichment point_id 에러
+  - Live Qdrant 헬스체크 실패
+  - 에러 코드 체계 구조화
+key_discussions: []
+terminology:
+  - term: "CREATE_DOCUMENT_PROCESS_ERROR"
+    definition: "문서 생성 프로세스 에러 코드, 파싱/저장/임베딩 실패 포함"
+  - term: "document enrichment"
+    definition: "문서에 메타데이터/임베딩 추가하는 과정, point_id 에러 시 벡터 저장 실패"
+  - term: "unstructured-io"
+    definition: "문서 파싱 외부 서비스, 빈 응답 또는 파싱 실패가 빈번히 발생"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,57 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 6
+  active_users: 5
+  avg_messages_per_day: 1.6
+summary: |
+  2025년 4분기 corp-blog-devrel 채널은 블로그 콘텐츠 활동이 저조한 분기였으며, 마지막 블로그 포스팅이 7월 이후 없었음이 지적되었다.
+  10월에 블로그 신규 콘텐츠 필요성이 제기되었으며, 11월에는 10월 블로그 메트릭 공유, 요즘IT에 정기 연재 제안, 신규 팀원의 첫 블로그 글 축하 등이 이루어졌다.
+  12월에는 HuggingFace Blog Article 등록 소식과 OCI 세션에서 만난 기술 세일즈 전문가와의 커피챗 논의가 이루어졌다.
+topics:
+  - name: "블로그 콘텐츠 활성화 논의"
+    mention_count: 4
+    description: "마지막 글이 7월이라는 지적과 함께 신규 콘텐츠 필요성 제기"
+  - name: "요즘IT 정기 연재 제안"
+    mention_count: 2
+    description: "요즘IT 에디터와 Sionic AI 콘텐츠 정기 연재 제안 논의"
+  - name: "HuggingFace Blog 등록"
+    mention_count: 1
+    description: "Sionic AI 관련 아티클이 HuggingFace Blog Article로 등재"
+key_discussions:
+  - thread_ts: '1765006800.000000'
+    date: '2025-10-15'
+    reply_count: 28
+    text_preview: "마지막 블로그 글이 7월 4일 - 새로운 콘텐츠 필요 논의"
+  - thread_ts: '1762323000.000000'
+    date: '2025-11-05'
+    reply_count: 7
+    text_preview: "요즘IT에 Sionic AI 콘텐츠 정기 연재 제안 논의"
+  - thread_ts: '1765452900.000000'
+    date: '2025-12-08'
+    reply_count: 2
+    text_preview: "HuggingFace Blog Article 등재 소식"
+terminology:
+  - term: "corp-blog-devrel"
+    definition: "Sionic AI 기업 블로그 및 개발자 관계(DevRel) 채널, 엔지니어를 '업계 인싸'로 만드는 것을 목표로 함"
+    aliases: ["corp-blog"]
+    context: "개인 브랜딩과 회사 브랜딩을 동시에 추구하는 B2B PR/MKT 채널"
+  - term: "요즘IT"
+    definition: "국내 IT 미디어 플랫폼, Sionic AI의 정기 콘텐츠 연재 협의 대상"
+    aliases: []
+    context: "2025년 11월 정기 연재 제안 논의"
+  - term: "HuggingFace Blog"
+    definition: "AI/ML 커뮤니티 플랫폼 HuggingFace의 블로그 섹션"
+    aliases: []
+    context: "Sionic AI 아티클이 HuggingFace Blog Article로 등재"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

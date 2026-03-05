@@ -1,0 +1,73 @@
+channel:
+  id: C06R0LPHHLJ
+  name: project-gov-subsidy
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 40
+  total_threads: 25
+  active_users: 11
+  avg_messages_per_day: 1.7
+summary: |
+  2025년 1분기에는 다수의 정부지원사업 공모를 동시에 검토하고 신청한 활발한 시기였다. 초격차 스타트업 1000+와 아기유니콘 육성사업에 신청하였으며, 엔비디아 글로벌 기업 협업 프로그램(엔업) 추천을 수락하여 신청 준비에 돌입하였다. AI반도체 응용실증 지원사업(~3/21)은 팀 전체가 총력을 기울여 최종 제출하였으나, K-클라우드 프로젝트 예산 57% 삭감 소식이 전해졌다. 기업부설연구소 지방 이전 및 부처협업 기반 AI 확산 사업 등 다수의 과제도 병행 검토되었다.
+topics:
+  - name: "AI반도체 응용실증 지원사업"
+    mention_count: 12
+    description: "3월 21일 마감, 팀 총력 신청 - K-클라우드 프로젝트 57% 삭감 이슈 발생"
+  - name: "엔업(글로벌 기업 협업 프로그램)"
+    mention_count: 10
+    description: "엔비디아로부터 추천받은 글로벌 기업 협업 프로그램 신청 준비"
+  - name: "초격차 스타트업 1000+"
+    mention_count: 8
+    description: "중기부 AI 분야 창업기업 지원 과제 신청(~2/20)"
+  - name: "아기유니콘 육성사업"
+    mention_count: 4
+    description: "이가유니콘 및 아기유니콘 육성사업 신청(~2/14)"
+  - name: "기업부설연구소 지방이전"
+    mention_count: 4
+    description: "기업부설연구소 지방 이전 관련 협약변경 및 담당자 변경"
+key_discussions:
+  - thread_ts: '1738555860.000000'
+    date: '2025-02-03'
+    reply_count: 20
+    text_preview: "초격차 스타트업 1000+, 아기유니콘 공고 검토 및 신청 준비"
+  - thread_ts: '1738899540.000000'
+    date: '2025-02-07'
+    reply_count: 33
+    text_preview: "엔업(글로벌 기업 협업 프로그램) 신청 관련 메일 공유 및 내부 논의"
+  - thread_ts: '1740030600.000000'
+    date: '2025-02-20'
+    reply_count: 94
+    text_preview: "AI반도체 응용실증 지원사업 신청 논의 - 3월 21일 마감"
+  - thread_ts: '1742386800.000000'
+    date: '2025-03-19'
+    reply_count: 0
+    text_preview: "AI반도체 응용실증 지원사업 최종 제출 완료"
+  - thread_ts: '1742460600.000000'
+    date: '2025-03-21'
+    reply_count: 15
+    text_preview: "부처협업 기반 AI 확산 사업 신규과제 공고 공유(~4/18)"
+terminology:
+  - term: "엔업"
+    definition: "엔비디아 글로벌 기업 협업 프로그램 - 창업기업 대상 최대 2억 지원(8개월)"
+    aliases: ["글로벌 기업 협업 프로그램"]
+    context: "엔비디아로부터 추천받아 신청 진행"
+  - term: "초격차 스타트업 1000+"
+    definition: "중소벤처기업부 주관 AI 분야 스타트업 집중 육성 프로젝트 - 최대 3억(3년)"
+    aliases: ["초격차"]
+    context: "2월 20일 마감, 신청 완료"
+  - term: "AI반도체 응용실증"
+    definition: "AI반도체 응용실증 지원사업 - K-클라우드 프로젝트 포함, 예산 57% 삭감"
+    aliases: ["K-클라우드 프로젝트"]
+    context: "3월 21일 마감, 팀 전원 총력 신청"
+  - term: "아기유니콘"
+    definition: "이가유니콘 육성사업 - 유망 스타트업 지원 정부과제"
+    aliases: ["이가유니콘 육성사업"]
+    context: "2월 14일 마감, 신청 완료"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,29 @@
+channel:
+  id: C060ZRJC70X
+  name: 아이엔지스토리_데모
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3 아이엔지스토리_데모 채널은 비활성 상태가 지속되었다. Notion AI 봇이 채널에 자동 참여한 것이
+  유일한 활동이며, 실질적인 대화나 데모 관련 논의는 없었다. Notion AI 연동이 워크스페이스 전반에
+  적용되면서 해당 채널에도 봇이 추가된 것으로 보인다.
+topics:
+  - Notion AI 연동
+key_discussions: []
+terminology:
+  - term: "Notion AI"
+    definition: "Slack 워크스페이스에 연동된 Notion AI 봇으로, 채널에 자동 참여됨"
+    aliases: []
+    context: "2025년 7월 워크스페이스 전반에 Notion AI 봇 배포"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

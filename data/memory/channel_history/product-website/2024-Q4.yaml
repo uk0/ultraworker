@@ -1,0 +1,47 @@
+channel:
+  id: C06PS33807Q
+  name: product-website
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 4
+  active_users: 4
+  avg_messages_per_day: 1.5
+summary: |
+  홈페이지 콘텐츠 업데이트와 신규 STORM 제품 공개 작업이 시작된 분기(6건 메시지).
+  10월에 Answer 페이지 레이아웃 깨짐 이슈가 제보되었고, 11월에는 홈페이지에 STORM 제품을 공개하는 작업(STM-2067)이 시작되어 활발한 논의(43개 답글)가 이루어졌다.
+  12월에는 뉴스룸 페이지 변경 작업이 진행되었고, 브라우저 리사이징 시 레이아웃 깨짐 이슈가 보고되었다.
+topics:
+  - STORM 제품 홈페이지 공개
+  - 뉴스룸 페이지 업데이트
+  - 레이아웃 깨짐 버그
+  - Answer 페이지 수정
+key_discussions:
+  - thread_ts: '1732090344.658709'
+    date: '2024-11-20'
+    reply_count: 43
+    text_preview: '김혜원 - 홈페이지에 STORM 제품 공개하기(STM-2067) 작업 요청'
+  - thread_ts: '1727854032.593839'
+    date: '2024-10-02'
+    reply_count: 17
+    text_preview: 'hhhssw - Answer 페이지 레이아웃 깨짐 제보'
+  - thread_ts: '1733033444.502999'
+    date: '2024-12-01'
+    reply_count: 8
+    text_preview: 'hyunwoo - 뉴스룸 변경 완료 및 확인 요청'
+  - thread_ts: '1733127087.604879'
+    date: '2024-12-02'
+    reply_count: 5
+    text_preview: '최병현 - 리사이징 이슈 제보'
+terminology:
+  - term: 'STM-2067'
+    definition: 'Linear 티켓 - 홈페이지에 STORM 제품을 공개하는 작업'
+    context: '2024년 11월부터 진행된 홈페이지 제품 페이지 업데이트 프로젝트'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

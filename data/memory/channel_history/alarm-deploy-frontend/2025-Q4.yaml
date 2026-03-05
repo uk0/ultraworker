@@ -1,0 +1,61 @@
+channel:
+  id: C09NYRWR8G5
+  name: alarm-deploy-frontend
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 577
+  total_threads: 4
+  active_users: 8
+  avg_messages_per_day: 14.1
+summary: |
+  2025-Q4에는 alarm-deploy-frontend 채널이 10월 28일 개설되어 Vercel과 GitHub Actions 기반의 프론트엔드 자동 배포 알림이 본격적으로 운영되었다. stargate-web(SaaS 클러스터)과 sionic-ai-website 두 프로젝트의 dev/JP/live 환경 배포 상태가 실시간 알림으로 기록되었다. 주요 배포 내용으로는 Teams 연동(팀즈 폼, API, 채널 추가), 일본 결제 페이지(특정 상거래법 표시), 워크플로우 UI 개선(If/Else 노드 편집폼, 다이얼로그), 크레딧 다국어 검수, STM 티켓 기반 기능 개발 등 활발한 릴리즈가 이루어졌다. 배포 담당자별 알림이 표시되어 배포 책임 추적이 가능하다.
+topics:
+  - name: "Vercel 자동 배포 알림"
+    mention_count: 350
+    description: "Vercel bot이 stargate-web 및 sionic-ai-website의 dev/JP/live 환경 배포 시작 및 완료 알림 자동 전송"
+  - name: "JP(일본) 클러스터 배포"
+    mention_count: 150
+    description: "JP 클러스터 LIVE 프로파일 배포 알림. v2.60.1부터 v2.66+ 이상까지 버전업. github-actions[bot], jada-gwon 등이 배포 담당"
+  - name: "Teams 연동 기능 개발"
+    mention_count: 30
+    description: "STM-4018(팀즈 폼 컴포넌트), STM-4019(팀즈 API 연동), STM-4093(팀즈 채널 추가), 팀즈 리뷰 반영 등 Teams 연동 기능 배포"
+  - name: "UI/UX 개선 배포"
+    mention_count: 25
+    description: "워크플로우 페이지 다이얼로그 x버튼 수정, If/Else 노드 편집폼, dialog 화면 잘림 문제 해결, LLM 노드 기타파라미터 필드 높이 가변 처리"
+  - name: "JP 배포 실패 및 복구"
+    mention_count: 5
+    description: "10월 28일 JP 클러스터 LIVE 배포 3회 연속 실패 후 '배포 실패하는 문제 수정' 커밋으로 복구"
+key_discussions:
+  - thread_ts: '1761640800.000000'
+    date: '2025-10-28'
+    reply_count: 0
+    text_preview: "버셀 배포 상태 대시보드로 들어가서 보는게 너무 짜쳐서 하나 만들었습니다 - alarm-deploy-frontend 채널 개설"
+  - thread_ts: '1761648000.000000'
+    date: '2025-10-28'
+    reply_count: 0
+    text_preview: "JP Cluster LIVE Profile Deployment Failed! (3회 연속) - 배포 담당자: jada-gwon"
+  - thread_ts: '1761654000.000000'
+    date: '2025-10-28'
+    reply_count: 0
+    text_preview: "feat: 일본 결제 페이지 추가 (특정 상거래법에 따른 표시) deployed successfully"
+terminology:
+  - term: "stargate-web"
+    definition: "사이오닉AI의 프론트엔드 웹 애플리케이션. Vercel을 통해 SaaS 클러스터와 JP 클러스터에 각각 배포됨"
+    aliases: ["STARGATE-WEB"]
+    context: "alarm-deploy-frontend 채널의 주요 배포 알림 대상"
+  - term: "JP 클러스터"
+    definition: "사이오닉AI의 일본 서비스 전용 인프라 클러스터. GitHub Actions로 JP LIVE 프로파일을 별도 배포"
+    aliases: ["JP Cluster"]
+    context: "alarm-deploy-frontend에서 SaaS 클러스터와 별도로 관리되는 일본 배포 환경"
+  - term: "STM 티켓"
+    definition: "사이오닉AI의 이슈 트래커(Linear)에서 사용하는 티켓 번호 형식. STM-4018, STM-4019 등으로 기능/버그를 관리"
+    aliases: ["Linear 티켓"]
+    context: "배포 커밋 메시지에 STM 티켓 번호가 포함되어 배포와 이슈를 연결"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

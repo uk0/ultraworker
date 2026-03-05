@@ -1,0 +1,37 @@
+channel:
+  id: C06N0GTHCEQ
+  name: guest-maywell-storm-live
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 1
+  active_users: 3
+  avg_messages_per_day: 2.0
+summary: |
+  jinu(U06M8SPDZP1)가 채널에 참여하여 Jeonghwan Park에게 다른 서비스(Perplexity, Risu 등)에서의
+  RAG 문제 해결 방식에 대해 질의함. Jeonghwan Park이 Perplexity Pro 기능 벤치마킹을 추천하고,
+  Risu AI의 Supa/Hypa 구조(수십만 토큰 이전 대화 요약), 로어북(키워드 기반 출력) 등을 설명함.
+  "한국의 Perplexity"가 아직 없으므로 Perplexity를 벤치마크로 삼을 것을 제안함.
+topics:
+  - RAG 서비스 벤치마킹 논의
+  - Perplexity vs Risu AI 비교
+key_discussions:
+  - thread_ts: '1713147960.528759'
+    date: '2024-04-15'
+    reply_count: 4
+    text_preview: "Perplexity 벤치마킹 제안 - RAG 서비스 개선 방향 논의"
+terminology:
+  - term: "Risu AI"
+    definition: "AI 기반 롤플레이/캐릭터 대화 서비스"
+    context: "Supa/Hypa 요약 구조를 참고용으로 언급"
+  - term: "Supa/Hypa"
+    definition: "Risu AI의 장기 대화 요약 시스템"
+    context: "수십만 토큰 이전 이야기를 요약하여 제시하는 방식"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

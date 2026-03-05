@@ -1,0 +1,55 @@
+channel:
+  id: C06G037GWV6
+  name: project-kt
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 37
+  total_threads: 24
+  active_users: 10
+  avg_messages_per_day: 2.3
+summary: |
+  KT SG그룹 프로젝트 제안 발표 및 기술 검증이 핵심이었던 분기. 7/8 SG그룹 제안 발표가 진행되었으며, 시나리오 기반 분석 및 개선 작업이 후속으로 진행되었다.
+  KT에서 STORM RAG를 검색기로만 사용하고 제3의 모델로 답변을 생성하는 구조가 확인되었으며, 이에 따른 청크 품질 최적화에 집중하였다.
+  솔라 미니(10.6B) 및 솔라 프로(36B) 모델 테스트 환경 구축, 시오닉 라마(xionic-ko-llama-3-70b) 모델 테스트가 진행되었다.
+  top-k 파라미터 조정, 리랭커 튜닝, 약관 개정본 비교 기능, 표 내 공백 텍스트 인식 등 구체적인 기술 이슈 해결에 주력하였다.
+  API 사양 변경, pageName 오류, 크몽 테스트 결과값 불일치 등 기술 지원 이슈가 빈번했다.
+topics:
+  - SG그룹 제안 발표
+  - 솔라 미니/프로 모델 테스트
+  - 시오닉 라마 모델 테스트
+  - top-k 파라미터 최적화
+  - 리랭커 튜닝
+  - 약관 개정본 비교
+  - RAG 검색기 모드 활용
+key_discussions:
+  - thread_ts: '1720152339.111569'
+    date: '2024-07-05'
+    title: KT SG그룹 사전테스트 결과 분석
+    summary: KT의 RAG 청크 기반 제3모델 답변 생성 구조 확인. 약관 비교, 표 공백 텍스트 인식 등 미해결 케이스 분석.
+  - thread_ts: '1720749324.452749'
+    date: '2024-07-12'
+    title: SG그룹 시나리오 기반 분석 및 개선 착수
+    summary: KT 주도로 협력사 모아 SG그룹 후속 대응 진행. 시나리오별 분석 작업 시작.
+  - thread_ts: '1721035199.133649'
+    date: '2024-07-15'
+    title: 솔라 미니 top-k 및 리랭커 튜닝
+    summary: 솔라 미니에서 top-k가 낮을수록 답변 품질 향상 확인. 리랭커 적용 및 튜닝 논의.
+  - thread_ts: '1720591802.620919'
+    date: '2024-07-10'
+    title: KT 문의 대응 - 동일 문서 다른 에이전트 테스트
+    summary: 다른 에이전트, 다른 폴더명, 같은 문서로 동일 질문 시 결과 불일치 이슈 대응. 174개 답글의 대규모 논의.
+terminology:
+  - term: 시오닉 라마(xionic-ko-llama-3)
+    definition: 사이오닉AI가 한국어 최적화한 LLaMA 3 기반 모델. 70B 파라미터 버전 사용
+  - term: EOS 토큰 부스팅
+    definition: 답변의 동어 반복 문제 해결을 위해 EOS(End of Sequence) 토큰의 확률을 높이는 기법
+  - term: SG그룹
+    definition: KT를 통해 RAG 솔루션 도입을 추진한 기업. 제안 발표 및 질의응답 진행
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

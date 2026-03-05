@@ -1,0 +1,66 @@
+channel:
+  id: C07K034UHNE
+  name: research-parse
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 24
+  total_threads: 14
+  active_users: 7
+  avg_messages_per_day: 1.4
+summary: |
+  2024-Q4 research-parse 채널은 Storm Parse(구 Storm Organize)의 IBK 파인튜닝, 대용량 데이터셋 구축, 멀티모달 RAG 발전 방향에 집중한 분기이다.
+  Gemini 2.0 Flash 모델의 뛰어난 마크다운 변환 성능이 확인되었고, 국가기록원 PDF 데이터 정제 과정에서 너무 쉬운 페이지 필터링 및 긴 표 생략 이슈가 발견되었다.
+  IBK 금융 문서 파인튜닝 작업, OmniDocBench 등 파싱 벤치마크 분석, Qwen2.5-VL 학습 소식 등이 공유되었으며 다양한 파싱 모델(OmniParser, DocLayout-YOLO 등) 동향이 논의되었다.
+topics:
+  - name: "IBK 파인튜닝"
+    mention_count: 6
+    description: "IBK 금융 문서 대상 7B VLM 파인튜닝 작업, 필요한 task와 학습 데이터, 도균님 지원 논의"
+  - name: "데이터셋 품질 개선"
+    mention_count: 7
+    description: "국가기록원 데이터 정제(쉬운 페이지 필터링, 표 생략 이슈), AI Hub 70만 건 데이터셋 활용 가능성"
+  - name: "Gemini 2.0 모델 테스트"
+    mention_count: 4
+    description: "Gemini 2.0 Flash Exp의 마크다운 변환 및 instruction following 성능 우수성 확인"
+  - name: "파싱 도구 및 벤치마크 동향"
+    mention_count: 5
+    description: "OmniParser, DocLayout-YOLO, OmniDocBench, DocLayout-YOLO 전처리 활용 검토"
+key_discussions:
+  - thread_ts: '1728259200.000000'
+    date: '2024-10-06'
+    reply_count: 3
+    text_preview: "Multi-modal RAG 및 Storm Organize 업그레이드 TODO 리스트 - 이미지 검색, 표·그래프 분리 RAG 로직"
+  - thread_ts: '1732070400.000000'
+    date: '2024-11-20'
+    reply_count: 8
+    text_preview: "Storm Parse 특허화 포인트 검토 논의"
+  - thread_ts: '1733990400.000000'
+    date: '2024-12-12'
+    reply_count: 15
+    text_preview: "국가기록원 데이터 파싱 중간 정리 - 쉬운 페이지 필터링, 표 생략 이슈, DocLayout-YOLO 전처리 방안"
+  - thread_ts: '1733990442.000000'
+    date: '2024-12-12'
+    reply_count: 2
+    text_preview: "PDF 파싱 벤치마크 OmniDocBench 공유"
+  - thread_ts: '2024-12-23'
+    date: '2024-12-23'
+    reply_count: 1
+    text_preview: "Qwen 2.5 Technical Report - Qwen2.5-VL 학습 중 소식"
+terminology:
+  - term: "DocLayout-YOLO"
+    definition: "문서 레이아웃 분석 모델, 표·이미지가 있는 페이지만 학습 데이터로 필터링하는 전처리에 활용"
+  - term: "OmniDocBench"
+    definition: "PDF 파싱 성능을 측정하는 멀티모달 벤치마크"
+  - term: "OmniParser"
+    definition: "Microsoft에서 공개한 OCR 기반 파싱 모델, UI 특화되어 있고 모델 무게가 큰 편"
+  - term: "국가기록원 데이터"
+    definition: "학습 데이터로 활용한 공공 PDF 데이터, 너무 쉬운 페이지가 많아 정제 필요"
+  - term: "IBK"
+    definition: "IBK 기업은행, 금융 문서 파싱 파인튜닝 고객사"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

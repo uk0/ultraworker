@@ -1,0 +1,57 @@
+channel:
+  id: C06UTL9DK6G
+  name: corp-vacation
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 118
+  total_threads: 51
+  active_users: 2
+  avg_messages_per_day: 2.1
+summary: |
+  2025년 2분기 corp-vacation 채널은 118건의 메시지로 1분기 대비 휴가 사용이 증가했다.
+  5월 초 어린이날 연휴(5/2~5/9)에 휴가가 집중되었으며, 박진형, 최병현, 이강욱, 김수진,
+  신희수, 임예원, 강성우 등이 연휴 전후로 휴가를 사용했다. 6월에는 정기연이 5/30~6/5
+  장기 휴가를, 양호진이 6/2~6/4 휴가를 신청했다. 권혜선(Jada)은 반차 변경 사유를
+  직접 메시지로 공유하며 "오전 기차로 바꾸면서 오후 반차에서 오전 반차로 변경, 14시~15시
+  즈음부터 재택 예정"이라 알렸다. 휴가 취소·재등록이 빈번했으며(양호진, 권혜선, 최병현,
+  김수원, 김수진 등), 여름 휴가 사전 신청도 시작되었다(홍성아 8월, 박진형 8월, 신희수 7월).
+topics:
+  - 연차/휴가 신청
+  - 어린이날 연휴 휴가 집중
+  - 여름 휴가 사전 신청
+  - 휴가 취소 및 변경
+  - 반차(오전/오후) 활용
+key_discussions:
+  - thread_ts: '1750425181.351819'
+    date: '2025-06-20'
+    reply_count: 61
+    text_preview: '[박진형] 6월 20일 오후 반차 - 매우 활발한 스레드 논의'
+  - thread_ts: '1746632859.331909'
+    date: '2025-05-07'
+    reply_count: 9
+    text_preview: '[최병현] 5월 9일 휴가 - 스레드 논의'
+  - thread_ts: '1746726963.615689'
+    date: '2025-05-08'
+    reply_count: 7
+    text_preview: '[이강욱] 5월 9일 휴가 - 스레드 논의'
+  - thread_ts: '1746674789.464429'
+    date: '2025-05-08'
+    reply_count: 6
+    text_preview: '[박진형] May 9 all day Vacation - 스레드 논의'
+  - thread_ts: '1748251207.884579'
+    date: '2025-05-26'
+    reply_count: 6
+    text_preview: '[양호진] 6월 2일~4일 휴가 - 스레드 논의'
+terminology:
+  - term: "반차"
+    definition: "반일 휴가. 오전 반차(10:00~15:00)와 오후 반차(15:00~19:00)로 구분."
+    aliases: ["오전반차", "오후반차", "half-day"]
+    context: "많은 구성원이 반차를 활용하여 시간 단위 휴가를 사용함"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

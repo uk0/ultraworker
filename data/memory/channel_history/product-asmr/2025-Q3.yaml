@@ -1,0 +1,71 @@
+channel:
+  id: C07BJQDM8BV
+  name: product-asmr
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 40
+  total_threads: 33
+  active_users: 8
+  avg_messages_per_day: 1.7
+summary: |
+  2025년 Q3는 ASMR의 GPT-5 시리즈 지원, Anthropic 추론 기능 통합, 그리고 vLLM 엔진 안정화가 핵심이었던 분기이다.
+  GPT-5, GPT-5-mini, GPT-5-nano 모델 지원이 추가되었으며(OpenAI/Azure), stream 요청 시 organization verification 필요 이슈가 있었다.
+  OpenAI 모델별 파라미터 변화(stop 미지원, max_tokens deprecation)에 대한 대응 방식을 공유하고,
+  Anthropic의 extended thinking(추론 기능)을 OpenAI reasoning_effort 규격과 어떻게 매핑할지에 대한 심도 깊은 논의가 있었다.
+  Gemini 2.0 지원 요청, Vertex에서 llama3-405b 및 claude-3-sonnet 지원 중단, Upstage solar-pro 지원 중단,
+  HyperClova HCX-005/007 추가 지원, 부하테스트용 LLM 목서버 논의, SIAM에서의 OpenRouter 활용 등도 다뤄졌다.
+  ASMR의 역할을 "OpenAI 규격으로 표준화된 인터페이스 제공"으로 재정의하는 중요한 논의도 있었다.
+topics:
+  - GPT-5 시리즈 지원 (gpt-5, gpt-5-mini, gpt-5-nano)
+  - Anthropic extended thinking과 OpenAI reasoning_effort 매핑 논의
+  - OpenAI 파라미터 변화 대응 (stop 미지원, max_tokens deprecation)
+  - vLLM 엔진 OpenAI 라이브러리 전환 계획
+  - 모델 지원 중단 대응 (Vertex llama3-405b, claude-3-sonnet, Upstage solar-pro)
+  - HyperClova HCX-005/007 추가 지원
+  - ASMR의 역할 재정의 (OpenAI 규격 표준화 인터페이스)
+  - Gemini 2.0 지원 요청
+  - SIAM에서 OpenRouter 활용
+key_discussions:
+  - date: '2025-07-14'
+    summary: Vertex에서 llama3-405b-instruct-maas 지원 중단 (8 replies)
+  - date: '2025-07-22'
+    summary: Anthropic에서 claude-3-sonnet-20240229 지원 중단 (38 replies)
+  - date: '2025-08-08'
+    summary: GPT-5 시리즈 지원 현황 - non-stream 가능, stream은 verification 필요 (16 replies)
+  - date: '2025-08-12'
+    summary: OpenAI 모델별 파라미터 지원 변화 및 ASMR 대응 방식 공유
+  - date: '2025-08-18'
+    summary: OpenRouter를 통한 모델 호출 간헐적 에러 해결 (4 replies)
+  - date: '2025-08-21'
+    summary: vLLM 엔진 OpenAI 라이브러리 전환 방향성 공유 - openai 스펙 비표준 Provider는 별도 서비스로 분리
+  - date: '2025-09-01'
+    summary: HyperClova HCX-005/007 추가 지원 Live/Dev 배포 완료 (5 replies)
+  - date: '2025-09-02'
+    summary: Claude thinking 모드 동작 여부 확인 요청 및 검증 (13 replies)
+  - date: '2025-09-03'
+    summary: Anthropic 추론 기능(extended thinking) OpenAI 규격 매핑 논의 (34 replies)
+  - date: '2025-09-03'
+    summary: ASMR 역할 재정의 - OpenAI 규격 표준화 인터페이스 + 프로바이더 간 fallback
+terminology:
+  - term: GPT-5
+    definition: OpenAI의 차세대 LLM 모델. gpt-5, gpt-5-mini, gpt-5-nano 버전 존재
+  - term: extended thinking
+    definition: Anthropic Claude의 확장 추론 기능. thinking.type으로 on/off, budget_tokens로 추론 깊이 제어
+  - term: reasoning_effort
+    definition: OpenAI의 추론 깊이 조정 파라미터 (minimal/low/medium/high)
+  - term: OpenRouter
+    definition: 다양한 LLM 제공자를 통합하는 외부 API 라우팅 서비스
+  - term: SIAM
+    definition: Sionic AI의 내부 서비스. OpenRouter 챗엔진을 활용
+  - term: Carrier
+    definition: Sionic AI의 내부 서비스. ASMR과 연동하여 LLM 호출 수행
+    aliases:
+      - 캐리어
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: claude-opus-4-6

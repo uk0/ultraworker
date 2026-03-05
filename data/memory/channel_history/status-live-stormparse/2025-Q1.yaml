@@ -1,0 +1,43 @@
+channel:
+  id: C083U6JJ928
+  name: status-live-stormparse
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 46
+  total_threads: 1
+  active_users: 7
+  avg_messages_per_day: 7.7
+summary: |
+  2025년 1분기 status-live-stormparse 채널에서는 StormParse 서비스 장애 알림과 대응이 활발히 이루어졌다.
+  1월 10일에 이미지 파싱 오류(page_num 누락)와 Gemini API 503 GOAWAY 오류가 발생하여 담당자가 retry 로직을 추가하고 핫픽스를 배포하였다.
+  1월 20일에도 다수의 알림이 연속으로 발생하였으며, 3월 23일에 추가 알림이 1건 발생하였다. 채널 활동은 주로 자동화 봇 알림과 엔지니어들의 실시간 장애 대응 스레드로 구성되었다.
+topics:
+  - name: "Storm Parse Alert"
+    mention_count: 22
+    description: "StormParse 파싱 서비스 이상 감지 자동 알림"
+  - name: "Gemini API 오류 대응"
+    mention_count: 5
+    description: "Gemini API 503 GOAWAY 오류 발생 및 retry 로직 적용"
+  - name: "이미지 파싱 오류"
+    mention_count: 3
+    description: "page_num 필드 누락으로 인한 파싱 실패 이슈"
+key_discussions:
+  - thread_ts: '1736478600.000000'
+    date: '2025-01-10'
+    reply_count: 8
+    text_preview: "이미지 page_num 비어있는 오류 발생, Gemini 503 GOAWAY 오류 확인 후 retry 로직 추가 및 핫픽스 배포"
+terminology:
+  - term: "Storm Parse Alert"
+    definition: "StormParse 파싱 서비스의 이상 상태를 알리는 자동화 모니터링 알림"
+  - term: "503 GOAWAY"
+    definition: "Gemini API 서버에서 연결 종료를 요청하는 HTTP 503 에러로, 외부 LLM 서비스 일시적 불가 상태를 의미"
+  - term: "retry"
+    definition: "외부 API 오류 발생 시 자동으로 요청을 재시도하는 처리 로직"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

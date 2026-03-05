@@ -1,0 +1,49 @@
+channel:
+  id: C08C9JX0DC7
+  name: business-daily
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 103
+  total_threads: 65
+  active_users: 17
+  avg_messages_per_day: 3.0
+summary: |
+  사업팀 일일 업무 기록 채널로, 주요 참여자(한시형, 김수진, 최윤정, 오승희)가 매일 업무 진행사항을 공유.
+  IBK 사이드 프로젝트(코드파일럿) 기획 및 테스트가 핵심 업무였으며, 미니코파(미니 코드파일럿) 에이전트 변환 및 프롬프트 수정 작업이 진행됨.
+  한시형은 아이티센엔텍, 대흥에코, 유진투자증권 등 다수 고객사 계약/견적 업무를 담당.
+  오승희가 3월 입사하여 IR 덱 작성, 킥더허들 정부지원사업, Japan IT Week 준비 등을 수행.
+  삼성 C-lab, 준컨설팅, 한국이디에스(강원랜드) 등 신규 사업 기회도 병행 추진.
+topics:
+  - IBK 사이드 프로젝트
+  - 코드파일럿(코파) 에이전트 테스트
+  - 고객사 계약 및 견적 관리
+  - IR 덱 제작
+  - Japan IT Week 준비
+  - 킥더허들 정부지원사업
+key_discussions:
+  - date: '2025-02-14'
+    summary: 'IBK 사이드 프로젝트 기획 시작 - 최윤정 담당, 22개 스레드 답글로 활발히 논의'
+  - date: '2025-02-18'
+    summary: '한시형 업무 정리 40개 답글 - 사업팀 전체 업무 조율 및 우선순위 논의'
+  - date: '2025-03-07'
+    summary: '석현님 건의 - 업무 기록 시 날짜를 본문에 적는 형식 제안'
+  - date: '2025-03-12'
+    summary: '오승희 IR Flow 드래프트 작성 시작 및 킥더허들 정부지원사업 자료 finalize'
+  - date: '2025-03-28'
+    summary: 'C-lab 목차 작성, 미니코파 구성자료 미팅 진행'
+terminology:
+  - term: '코드파일럿(코파)'
+    definition: 'IBK 은행을 위한 코드 검색/문의 AI 에이전트 프로젝트'
+    aliases: ['코파', 'CoPilot', '미니코파']
+  - term: '킥더허들'
+    definition: '정부지원사업 관련 프로젝트'
+  - term: 'IR Flow'
+    definition: '투자유치(IR) 프로세스 정리 및 덱 작성'
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,57 @@
+channel:
+  id: C06SUBV2Q0M
+  name: fyi-summary
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 155
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 2.3
+summary: |
+  2024-Q3는 요약봇이 주로 business-common 채널의 일일 대화를 정리하여 게시한 분기다. 주요 내용으로는 AWS re:Invent 참가 검토, 싱가포르 출장 관련 도착 카드 신청 안내, 다양한 고객사 미팅(한국자산평가, KT 해외사업부, 유진투자증권, IBK 제안서) 및 사업 개발 현황 공유가 포함되었다. 클라우드 비용 견적, 프라이빗 클라우드 구축 문의, 스톰 라이선스 판매 논의, 경쟁사 분석(렛서 AI, 올거나이즈 등), 마크스폰·대우건설·매경 등 고객사 대응 현황이 주요 주제였다.
+topics:
+  - name: "고객사 미팅 및 사업 개발"
+    mention_count: 30
+    description: "한국자산평가 STORM 콘솔 데모, KT 해외사업부 미팅, IBK 본사업 제안서 검토, 유진투자증권, 매경 등 다수 고객사 미팅 현황"
+  - name: "클라우드/인프라 비용 견적"
+    mention_count: 8
+    description: "고객사용 클라우드 최소 세트 구성 견적, 프라이빗 클라우드 구축 옵션, 스톰 라이선스+유지보수 합산 견적 논의"
+  - name: "경쟁사 분석"
+    mention_count: 5
+    description: "렛서(Letsur) AI 영업 방식 및 오가닉 리드 유입 전략 분석, 올거나이즈 레퍼런스 확인"
+  - name: "스톰파스 구축 라이선스"
+    mention_count: 4
+    description: "삼성 대상 연 1억 라이선스 조건 논의, 데이터 제약 방안 검토"
+  - name: "싱가포르 출장"
+    mention_count: 3
+    description: "싱가포르 입국 전 온라인 도착 카드 신청 안내, JP CREO 등 현지 기업 미팅"
+key_discussions:
+  - thread_ts: '1728518399.000000'
+    date: '2024-10-10'
+    reply_count: 0
+    text_preview: "바이트댄스 관련 업무 완료, IBK 본사업 제안서 검토 요청"
+  - thread_ts: '1727913600.000000'
+    date: '2024-10-02'
+    reply_count: 0
+    text_preview: "클라우드 비용 견적 요청 - 한국자산평가 STORM 콘솔 데모 및 협업 논의"
+terminology:
+  - term: "렛서(Letsur) AI"
+    definition: "사이오닉AI의 경쟁사. 2022년 영상 분석에서 2023년 생성형 AI로 전환, 개발자 1~2명, 팀 15명 규모"
+    aliases: ["렛서"]
+    context: "오가닉 리드 유입 전략 벤치마킹 대상"
+  - term: "스톰파스(StormPass)"
+    definition: "사이오닉AI의 엔터프라이즈 솔루션. 삼성 등 대기업 대상 라이선스 판매 협상 진행 중"
+    aliases: ["Stormpass", "스톰파스"]
+    context: "라이선스 판매 및 구축 비용 논의"
+  - term: "Pylon"
+    definition: "사이오닉AI의 지식베이스 검색/RAG 파이프라인 서비스. 고객사 구축 솔루션의 핵심 컴포넌트"
+    aliases: ["파일론", "Pylon Knowledge"]
+    context: "IBK, 한국자산평가 등 고객사 구축에 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

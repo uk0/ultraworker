@@ -1,0 +1,37 @@
+channel:
+  id: C083U6JJ928
+  name: status-live-stormparse
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 55
+  total_threads: 1
+  active_users: 5
+  avg_messages_per_day: 9.2
+summary: |
+  2025-Q4 초반(10월 1~9일) Storm Parse Alert 봇 알림이 집중 발생하였고, 10월 7일에는 이미지 요청 시 Converting 단계에서 Timeout이 발생하는 장애가 확인되어 팀 대응이 이루어졌다.
+  문서 요청은 정상 동작하였으나 이미지는 지속 대기 후 실패하는 이슈가 보고되었으며, 이후 10월 중순 이후 알림 발생이 급감하여 서비스가 안정화되었다.
+topics:
+  - name: "Storm Parse Alert"
+    mention_count: 48
+    description: "라이브 환경 StormParse 봇 자동 알림 - 파싱 오류 발생 시 채널에 알림 전송"
+  - name: "이미지 파싱 Timeout"
+    mention_count: 1
+    description: "이미지 요청 시 Converting 단계에서 무한 대기 후 Timeout 발생하는 장애"
+key_discussions:
+  - thread_ts: '1728296646.000000'
+    date: '2025-10-07'
+    reply_count: 4
+    text_preview: "문서는 정상이나 이미지 Converting 대기 후 Timeout 발생 - stormparse.sionic.ai 장애 보고"
+terminology:
+  - term: "Storm Parse Alert"
+    definition: "Sionic Monitoring 봇이 라이브 StormParse 서비스의 파싱 오류를 감지하여 슬랙 채널로 전송하는 자동 알림"
+  - term: "Converting Timeout"
+    definition: "이미지 파일을 처리 가능한 형식으로 변환하는 Converting 단계에서 응답 없이 무한 대기 후 시간 초과 발생하는 오류"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

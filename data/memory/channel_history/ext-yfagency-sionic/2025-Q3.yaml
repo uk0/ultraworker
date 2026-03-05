@@ -1,0 +1,53 @@
+channel:
+  id: C08UCFAPUJY
+  name: ext-yfagency-sionic
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 41
+  total_threads: 8
+  active_users: 9
+  avg_messages_per_day: 2.3
+summary: |
+  YF Agency 협업 지속. 주요 활동: (1) "AI and ME" 밋업 개최(8/12, JETRO 아카사카) - Sionic AI와
+  Tiro 공동주최, YF Agency를 스피커로 초대(32개 답변 대형 스레드),
+  (2) 파트너십 계약서 일본어 번역 및 법률 검토 완료 후 NDA 서명 진행,
+  (3) Cake 봇 GPT-5 전환 후 작동 중단 및 복구 - 커스텀 저지 이미지 생성 기능 개발 중,
+  (4) zfirouz7(Zia)의 Slack 계정이 zf(U09A2M2TM28)로 변경 - FDA 조직 탈퇴 후 재참여,
+  (5) 한시형(Kevin) 7/5-8 도쿄 방문 - 챗봇 핸즈온 워크샵 제안,
+  (6) Cake 웹사이트 라이브 배포(madebycake.ooo), 소셜미디어 프로모션,
+  (7) Storm 워크플로 베타 사용성 피드백, 계정 로그인 문제 해결.
+  오승희, 최윤정이 후속 업무 담당으로 참여. 김수원도 채널에 합류.
+topics:
+  - AI and ME 밋업 개최
+  - 파트너십 계약 체결
+  - Cake 봇 GPT-5 전환 이슈
+  - 커스텀 저지 이미지 생성 개발
+  - 소셜미디어 크로스 프로모션
+key_discussions:
+  - thread_ts: '1752148571.174849'
+    date: '2025-07-10'
+    reply_count: 32
+    text_preview: "AI and ME 밋업 스피커 등록 및 행사 안내"
+  - thread_ts: '1759119159.358899'
+    date: '2025-09-29'
+    reply_count: 13
+    text_preview: "계정 로그인 문제 확인 및 해결"
+  - thread_ts: '1757483154.193309'
+    date: '2025-09-10'
+    reply_count: 8
+    text_preview: "미팅 로그 및 후속 조치 공유"
+terminology:
+  - term: "AI and ME"
+    definition: "AIで、日常生活を豊かに. Sionic AI와 Tiro 공동주최 밋업"
+    context: "2025년 8월 12일 JETRO 아카사카에서 개최"
+  - term: "Tiro"
+    definition: "실시간 음성 인식 자동 의사록 서비스"
+    context: "AI and ME 밋업 공동주최사"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

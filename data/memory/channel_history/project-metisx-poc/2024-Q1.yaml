@@ -1,0 +1,72 @@
+channel:
+  id: C069E8P8N8M
+  name: project-metisx-poc
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 60
+  total_threads: 27
+  active_users: 8
+  avg_messages_per_day: 2.1
+summary: |
+  2024-Q1은 MetisX POC 프로젝트의 가장 활발한 시기였다. Sionic AI와 MetisX 간 FPGA 기반 벡터 검색 가속 협업이 본격적으로
+  진행되었다. 주요 활동으로는 xVector JNI 바인딩 개발, Flasma(Sionic 자체 벡터DB) 구현, Locust 기반 부하 테스트, FAISS 64bit
+  인덱스 분석, 랭콘(LangCon) 공동발표 준비 등이 있었다. Noah(고석현)가 xVector 적용 Flasma 기본 코드를 작성하고, Sigrid Jin이
+  MetisX측 코드 구동 및 벤치마크 스토리라인을 설계했다. riley(성하)가 Locust 부하 테스트를 구현했다. 매주 목요일 MetisX와
+  정기 미팅(Zoom)이 진행되었고, 3월에는 RAG 기초 활용 및 VDB 생태계 소개 등의 공동 테크 세미나가 논의되었다. MTEB 데이터셋,
+  CAGRA/HNSW 인덱스 비교, pylibraft 활용 등 기술적 심도 있는 실험이 수행되었다.
+topics:
+  - MetisX FPGA 벡터 검색 가속 POC
+  - xVector JNI 바인딩 개발
+  - Flasma 벡터DB 구현
+  - Locust 부하 테스트
+  - FAISS 64bit 인덱스 분석
+  - 랭콘(LangCon) 공동발표 준비
+  - CAGRA/HNSW 인덱스 비교
+  - 공동 테크 세미나 기획
+key_discussions:
+  - title: "벤치마크 스토리라인 설계"
+    date: "2024-02-25"
+    participants: ["Sigrid Jin", "Noah(고석현)"]
+    summary: "랭콘 발표를 위한 벤치마크 전략 수립. CPU vs GPU vs MetisX 비교, BEIR 데이터셋 1024+ 차원 임베딩 활용, recall vs latency 비교 계획."
+  - title: "xVector JNI 바인딩 및 Flasma 통합"
+    date: "2024-02-24~28"
+    participants: ["Noah(고석현)", "Sigrid Jin"]
+    summary: "MetisX xVector의 JNI 바인딩을 Flasma에 통합. CosineSimilarityService를 xvector로 전환. flasma-metisx 레포 생성."
+  - title: "MetisX 정기 미팅 및 자료 공유"
+    date: "2024-01-05~03-27"
+    participants: ["Sigrid Jin", "Noah(고석현)", "riley", "박우명", "song"]
+    summary: "매주 목요일 Zoom 정기 미팅. 벤치마크 도구 제공, pgvector 기반 비교 실험, 하드웨어 가속 1차 작업 완료."
+  - title: "공동 테크 세미나 기획"
+    date: "2024-03-21~27"
+    participants: ["Sigrid Jin", "Noah(고석현)", "song"]
+    summary: "MetisX와 공동 세미나 기획. RAG 기초 활용, 토크나이저, VDB 생태계 소개 등 발표 주제 확정. 4월 중순 이후 일정."
+terminology:
+  - term: "MetisX"
+    definition: "FPGA 기반 벡터 검색 하드웨어 가속 기술을 보유한 협력사"
+    aliases: ["메티스엑스", "메티스"]
+  - term: "Flasma"
+    definition: "Sionic AI 자체 벡터 데이터베이스. 이름은 스타크래프트2의 사이오닉 스톰 상위 기술인 플라즈마 서지에서 유래"
+    aliases: []
+  - term: "xVector"
+    definition: "MetisX의 벡터 검색 엔진 라이브러리"
+    aliases: []
+  - term: "CAGRA"
+    definition: "NVIDIA RAPIDS의 GPU 기반 그래프 인덱스 알고리즘"
+    aliases: []
+  - term: "HNSW"
+    definition: "Hierarchical Navigable Small World, 근사 최근접 이웃 탐색 알고리즘"
+    aliases: []
+  - term: "랭콘"
+    definition: "LangCon, 한국어 LLM/NLP 관련 컨퍼런스"
+    aliases: ["LangCon"]
+  - term: "MTEB"
+    definition: "Massive Text Embedding Benchmark, 임베딩 모델 평가 벤치마크"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

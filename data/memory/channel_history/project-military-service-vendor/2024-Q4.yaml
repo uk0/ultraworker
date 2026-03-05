@@ -1,0 +1,24 @@
+channel:
+  id: C06SQS126NM
+  name: project-military-service-vendor
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  활동이 거의 없었던 분기. 박우명이 병특 관련 채널 위치를 재확인하는 메시지 1건만 존재.
+  다른 채널에서 병특 관련 논의가 이루어진 것으로 보이며, 해당 스레드 링크를 공유했다.
+topics:
+  - 병역특례 채널 관리
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

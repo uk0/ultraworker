@@ -1,0 +1,82 @@
+channel:
+  id: C06RXLRRAAF
+  name: corp-playshop
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 44
+  total_threads: 10
+  active_users: 16
+  avg_messages_per_day: 4.4
+summary: |
+  2025년 2분기 corp-playshop 채널에서 제주도 워크샵(플레이샵) 기획이 본격적으로
+  시작되었다. 김혜원이 권혜선, 송명하, 정세민을 "워크샵 위원회"로 임명했으며(6/16),
+  숙소 리서치(세화마을, 맹그로브, 마음스테이, 오피스, 공간7 등 15곳 조사), 항공권
+  예매 방식(법인카드 일괄 결제), 워케이션 바우처 신청, 인원 파악(26인 이상), 렌트/
+  관광버스 교통 계획, 활동 계획(해커톤, 모델톤, MTEB 1등 찍기 등) 논의가 이루어졌다.
+  권혜선이 숙소 견적 수집 및 연락을 주도했으며, 세화마을과 마음스테이가 주요 후보로
+  부상했다. 정세민이 항공권 예매 관련 고민과 비행기 관련 공지를 담당했다. 오승희가
+  디캠프 입주사 제주 워케이션 비용 지원 정보를 공유했다. 공식일정 전 선발대 구성과
+  숙소 배정도 논의되었다.
+topics:
+  - 제주도 플레이샵(워크샵) 기획
+  - 워크샵 위원회 구성
+  - 숙소 리서치 및 견적 (15곳)
+  - 항공권 예매 (법인카드 일괄)
+  - 워케이션 바우처 신청
+  - 교통 계획 (렌트/관광버스)
+  - 인원 파악 및 선발대 구성
+  - 디캠프 워케이션 지원
+key_discussions:
+  - thread_ts: '1751529877.699089'
+    date: '2025-07-03'
+    reply_count: 84
+    text_preview: '세화마을/맹그로브 숙소 견적 비교 및 방배정 논의'
+  - thread_ts: '1751436593.051879'
+    date: '2025-07-02'
+    reply_count: 84
+    text_preview: '비행기 관련 공지 및 법인카드 결제 방식 논의'
+  - thread_ts: '1751447565.907179'
+    date: '2025-07-02'
+    reply_count: 77
+    text_preview: '숙소 인원/방배정 상세 계획'
+  - thread_ts: '1751011788.861019'
+    date: '2025-06-27'
+    reply_count: 59
+    text_preview: '항공권 예매 관련 고민 및 논의'
+  - thread_ts: '1750833664.323099'
+    date: '2025-06-25'
+    reply_count: 47
+    text_preview: '워케이션 바우처 신청 관련 논의'
+terminology:
+  - term: "플레이샵"
+    definition: "사이오닉 AI의 워크샵을 지칭하는 내부 용어. 2025년 제주도에서 개최."
+    aliases: ["playshop", "play#", "워크샵"]
+    context: "2025년 8월 제주도 플레이샵 기획"
+  - term: "워크샵 위원회"
+    definition: "플레이샵 기획을 담당하는 위원회. 김혜원, 권혜선, 송명하, 정세민으로 구성."
+    aliases: []
+    context: "숙소, 항공, 교통, 활동 전반 기획 담당"
+  - term: "세화마을"
+    definition: "제주 세화에 위치한 협동조합 숙소/오피스 단지. 플레이샵 숙소 후보."
+    aliases: ["세화마을협동조합"]
+    context: "공유오피스 + 숙소를 함께 제공하는 곳으로 검토"
+  - term: "마음스테이"
+    definition: "제주도 숙박시설. 플레이샵 공식일정 숙소로 사용."
+    aliases: []
+    context: "공식일정 참가자 숙소로 선정"
+  - term: "워케이션 바우처"
+    definition: "제주도 워케이션 지원 프로그램의 바우처. 숙소 비용 지원을 위해 신청."
+    aliases: []
+    context: "5월 26일 선착순 신청 진행, 7월 24일 3회차 모집"
+  - term: "디캠프"
+    definition: "D·CAMP, 은행권청년창업재단. 사이오닉 AI 입주사."
+    aliases: ["D·CAMP", "은행권청년창업재단"]
+    context: "입주사 대상 제주 워케이션 비용 지원 프로그램 운영"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,87 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 64
+  total_threads: 44
+  active_users: 8
+  avg_messages_per_day: 2.3
+summary: |
+  2025년 2분기 corp-blog-devrel 채널은 채널명이 "corp-blog"에서 "corp-blog-devrel"로 변경되며 DevRel 활동이 본격화된 분기였다.
+  Llama4 Token Editor, 엔터프라이즈 Docker 이미지 배포 전략, Contextual BM25F 등 다수의 기술 블로그 아티클이 발행되었다.
+  Spring AI 시리즈 강의 제작이 본격화되어 인프런 MD와 공동 밋업 및 글로벌 컨텐츠 협업 논의가 이루어졌다.
+  일본어 퍼블리싱(Qiita, Note, Zenn 계정 개설), 구글 서치콘솔 분석, OCI 고객 사례 등재 등 마케팅 활동도 활발히 진행되었다.
+topics:
+  - name: "Llama4 Token Editor 블로그 발행"
+    mention_count: 8
+    description: "메타 Llama4의 한국어 친화적 토크나이저를 분석하는 오픈소스 도구 블로그 아티클"
+  - name: "Spring AI 강의 제작 (인프런)"
+    mention_count: 12
+    description: "인프런 Spring AI 시리즈 강의 녹화 및 퍼블리싱, MD와 공동 밋업 논의"
+  - name: "엔터프라이즈 Docker 이미지 배포 전략"
+    mention_count: 5
+    description: "폐쇄망 환경에서의 효율적 Docker 이미지 업데이트 전략 블로그 (최인기 조회수 1위)"
+  - name: "Contextual BM25F 블로그 발행"
+    mention_count: 3
+    description: "작은 청크 검색 정확도를 높이는 Contextual BM25F 전략 아티클"
+  - name: "일본어 퍼블리싱 계정 개설"
+    mention_count: 4
+    description: "Qiita, Note, Zenn 일본어 플랫폼 계정 개설 및 Llama4 일본어 번역 검수"
+  - name: "구글 서치콘솔 및 블로그 메트릭"
+    mention_count: 4
+    description: "블로그 페이지뷰, 구글 오가닉 서치, 해커뉴스 유입 현황 분석"
+key_discussions:
+  - thread_ts: '1743994020.000000'
+    date: '2025-04-07'
+    reply_count: 52
+    text_preview: "블로그 Pageview 순위 - 대명하 1등, 진형님 2등, BGE-M3 3등, 하담님 4위"
+  - thread_ts: '1744008420.000000'
+    date: '2025-04-08'
+    reply_count: 4
+    text_preview: "인프런 MD 방문 - 일본 진출 협업 및 4월 중순 MCP/Spring AI 밋업 제안"
+  - thread_ts: '1745690940.000000'
+    date: '2025-04-25'
+    reply_count: 4
+    text_preview: "[예고] Helm Umbrella Pattern 관련 플랫폼 배포 관리 블로그 예정"
+  - thread_ts: '1746681720.000000'
+    date: '2025-05-08'
+    reply_count: 31
+    text_preview: "블로그 회사 사이트 진입 버튼 없음 지적 및 채널톡과의 비교"
+  - thread_ts: '1747282320.000000'
+    date: '2025-05-13'
+    reply_count: 126
+    text_preview: "Qwen3 모델 블로그 글 작성 논의 - kalomaze Qwen3 16B A3B 기반"
+  - thread_ts: '1748908200.000000'
+    date: '2025-06-02'
+    reply_count: 20
+    text_preview: "인프런 6/6까지 Spring AI 강의 반드시 공개 요청"
+terminology:
+  - term: "DevRel"
+    definition: "Developer Relations, 개발자 관계 및 커뮤니티 활동"
+    aliases: ["개발자 관계"]
+    context: "2025년 4월 채널 이름이 corp-blog에서 corp-blog-devrel로 변경되며 DevRel 활동 본격화"
+  - term: "인프런"
+    definition: "국내 주요 개발자 교육 플랫폼, Sionic AI Spring AI 강의 퍼블리싱 플랫폼"
+    aliases: []
+    context: "Spring AI 시리즈 강의 제작 및 MD와 협업, 글로벌 컨텐츠 협력 논의"
+  - term: "Llama4 Token Editor"
+    definition: "Sionic AI가 개발한 오픈소스 도구, Llama/Qwen 계열 토크나이저 분석 및 토큰 가중치 조정"
+    aliases: []
+    context: "github.com/sionic-ai/Llama4-Token-Editor, 블로그 및 해커뉴스 등에 공유"
+  - term: "Qwen3"
+    definition: "Alibaba의 오픈소스 LLM 모델 시리즈"
+    aliases: []
+    context: "2025년 5월 블로그 글 작성 논의, kalomaze 변형 버전 포함"
+  - term: "BM25F"
+    definition: "BM25의 확장 알고리즘으로 여러 필드 가중치를 지원하는 검색 랭킹 알고리즘"
+    aliases: ["Contextual BM25F"]
+    context: "작은 청크의 검색 정확도를 높이는 Contextual BM25F 전략 블로그 아티클"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,98 @@
+channel:
+  id: C06Q90GS5LL
+  name: product-design-system
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 143
+  total_threads: 95
+  active_users: 6
+  avg_messages_per_day: 2.3
+summary: |
+  디자인 시스템 본격 구축 단계. 외주 디자이너(minnimalism)와 프론트엔드 개발자(eun.juuu0/은주)가 긴밀히 협업하여
+  디자인 토큰 정의, 컴포넌트 가이드 제작, Storybook 연동을 집중적으로 진행함. 2차 계약이 범위 단위(기간 아닌)로
+  설정되었으며, 스프린트 기반 테스크 관리 도입. 토큰 네이밍 컨벤션은 Amazon Style Dictionary 기준으로 결정됨.
+  color, typography(fontSize, lineHeight, fontWeight, fontFamily), spacing/margin, boxShadow, borderRadius 등
+  핵심 토큰 정리 완료 후 GitHub PR로 전달. 컴포넌트별 가이드를 Figma에서 props 정리(states, boolean, default값 등)하여
+  ready-to-dev 상태로 제공. button, badge, accordion, input, textarea, select, date picker, toast, menubar 등
+  다수 컴포넌트 정리 완료. Storybook(Vercel 배포)으로 디자인-개발 싱크 확인 체계 구축. 6월부터 디자인 시스템
+  순차 적용 시작 합의. 데이터 시각화(대시보드) 관련 Material Design, Carbon, Microsoft 디자인 참고 자료 공유.
+topics:
+  - 디자인 토큰 정의 및 GitHub 연동
+  - 토큰 네이밍 컨벤션 (Amazon Style Dictionary)
+  - 컴포넌트 가이드 제작 (ready-to-dev)
+  - Storybook 연동 및 Vercel 배포
+  - 2차 계약 범위 설정
+  - 스프린트 기반 테스크 관리
+  - Figma props 정리 (states, boolean)
+  - 데이터 시각화 라이브러리 리서치
+  - 토큰 PR 리뷰 및 수정
+key_discussions:
+  - thread_ts: '1712549176.728359'
+    date: '2024-04-08'
+    topic: '디자인 토큰 GitHub 연동 세팅 - tokens studio 플러그인으로 PR 제출 프로세스 구축'
+    participants: ['minnimalism', 'eun.juuu0']
+  - thread_ts: '1714467511.002969'
+    date: '2024-04-30'
+    topic: '2차 작업 범위 테스크 문서화 및 Linear 티켓 생성'
+    participants: ['minnimalism', '김혜원']
+  - thread_ts: '1715841809.605299'
+    date: '2024-05-16'
+    topic: '디자인 토큰 전달 시 Mode1 네이밍 변경 및 value 형태 논의'
+    participants: ['eun.juuu0', 'minnimalism']
+  - thread_ts: '1718697834.307509'
+    date: '2024-06-18'
+    topic: '토큰 depth 구조 논의 - 컴포넌트 종속 토큰 지양, 글로벌 토큰 지향'
+    participants: ['eun.juuu0', 'minnimalism']
+  - thread_ts: '1718873032.512659'
+    date: '2024-06-20'
+    topic: '미팅 정리 - 글로벌 토큰 지향, Carbon Design System 참고, 컴포넌트별 토큰 지양'
+    participants: ['eun.juuu0', 'minnimalism']
+  - thread_ts: '1718201703.102099'
+    date: '2024-06-12'
+    topic: 'font weight 토큰 구조 논의 - number값 기반 전달'
+    participants: ['minnimalism', 'eun.juuu0']
+  - thread_ts: '1719378618.489349'
+    date: '2024-06-26'
+    topic: 'Storybook Vercel 배포 공유 - 디자인-개발 싱크 확인 체계'
+    participants: ['eun.juuu0', 'minnimalism', '김혜원']
+  - thread_ts: '1718285718.942459'
+    date: '2024-06-13'
+    topic: '토큰 네이밍에서 시각적 표현(bold, subtle) 지양하고 시멘틱 표현 지향'
+    participants: ['minnimalism']
+  - thread_ts: '1719554120.180709'
+    date: '2024-06-28'
+    topic: 'date picker 컴포넌트 상세 논의'
+    participants: ['minnimalism']
+terminology:
+  - term: "디자인 토큰 (Design Token)"
+    definition: "색상, 타이포그래피, 간격 등 디자인 속성값을 코드로 관리하는 변수. GitHub PR로 개발팀에 전달"
+    aliases: ["token", "토큰"]
+  - term: "ready-to-dev"
+    definition: "디자인 가이드 정리가 완료되어 개발 착수 가능한 상태를 나타내는 Figma 내 상태 표기"
+    aliases: []
+  - term: "Storybook"
+    definition: "UI 컴포넌트를 독립적으로 개발하고 문서화하는 도구. Vercel에 배포하여 디자인 QA 진행"
+    aliases: ["스토리북"]
+  - term: "tokens studio for figma"
+    definition: "Figma 디자인 토큰을 GitHub에 연동하는 플러그인. JSON 형태로 토큰을 내보내고 PR 생성"
+    aliases: ["tokens studio"]
+  - term: "Amazon Style Dictionary"
+    definition: "토큰 네이밍 컨벤션 참고 기준. Category-Type-Item 구조"
+    aliases: ["style-dictionary"]
+  - term: "Carbon Design System"
+    definition: "IBM의 디자인 시스템. 글로벌 토큰 구조 및 데이터 시각화 참고용으로 활용"
+    aliases: ["Carbon"]
+  - term: "Radix UI"
+    definition: "접근성 중심 React 컴포넌트 라이브러리. shadcn/ui의 기반이며, props 정리 시 참고"
+    aliases: ["radix"]
+  - term: "Linear"
+    definition: "프로젝트 관리 도구. 디자인 시스템 테스크를 티켓으로 관리"
+    aliases: ["리니어"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

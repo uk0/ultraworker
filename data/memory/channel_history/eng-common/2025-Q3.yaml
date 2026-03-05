@@ -1,0 +1,111 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 130
+  total_threads: 86
+  active_users: 13
+  avg_messages_per_day: 2.4
+summary: |
+  2025-Q3에는 프로덕트 버저닝/태깅 체계(s2025w36 형식)가 도입되고, 새로운 배포 시스템에 대한 논의가 본격화되었다.
+  academy.sionic.tech 내부 기술 문서 사이트가 런칭되었고, ApiDog 대체 UI(Swagger UI, RapiDoc, Stoplight Elements 등) 리서치가 진행되었다.
+  Sentry 프론트엔드 통합, npm 서플라이체인 공격 경고, PDF 뷰어 폰트 수정, Grafana Zitadel 로그인 통합 등 개발 환경 보안 및 안정성 강화가 이루어졌다.
+  Claude Code 팀 플랜($200→$150) 전환 검토, 일본 리전(ASMR) 배포 테스트, SIAM 환경 구축, KT 시연 준비 등 사업 확장 관련 작업도 병행되었다.
+topics:
+  - 프로덕트 버저닝/태깅 (s2025w36)
+  - 새로운 배포 시스템 논의
+  - academy.sionic.tech 런칭
+  - ApiDog 대체 UI 리서치
+  - Sentry 프론트엔드 통합
+  - npm 서플라이체인 공격 경고
+  - PDF 뷰어 폰트 수정
+  - Claude Code 팀 플랜 전환
+  - 일본 리전 배포 (ASMR)
+  - SIAM 환경 SaaS 배포
+  - OpenAPI 스펙 표준화
+  - Grafana Zitadel 로그인
+  - 브랜치 관리 (main/develop/master)
+  - KT 시연 준비
+key_discussions:
+  - thread_ts: '1753088776.505349'
+    date: '2025-07-21'
+    reply_count: 83
+    text_preview: '30주차 열차 - 주간 배포 사이클 관리 및 이슈 트래킹'
+  - thread_ts: '1757670888.537909'
+    date: '2025-09-12'
+    reply_count: 46
+    text_preview: '스톰웹 PDF 뷰어 폰트 깨짐 수정 논의'
+  - thread_ts: '1753709476.628609'
+    date: '2025-07-28'
+    reply_count: 29
+    text_preview: '자동평가 스크립트 제작 - 품질 검증 자동화'
+  - thread_ts: '1754548704.525219'
+    date: '2025-08-07'
+    reply_count: 26
+    text_preview: 'Dragoon 요청 실패 대응 논의 - 대용량 PDF multipart 업로드 이슈'
+  - thread_ts: '1753422321.912809'
+    date: '2025-07-25'
+    reply_count: 25
+    text_preview: 'Sentry 프론트엔드 레포 접근 승인 요청 - 에러 모니터링 강화'
+  - thread_ts: '1753429746.075009'
+    date: '2025-07-25'
+    reply_count: 25
+    text_preview: 'ASMR 일본 리전(jpsionic.im) 배포 테스트'
+  - thread_ts: '1758874513.799989'
+    date: '2025-09-26'
+    reply_count: 25
+    text_preview: 'task id 기반 에러 추적 개선 논의 - 에이전트/팀 식별 문제'
+  - thread_ts: '1757059917.176259'
+    date: '2025-09-05'
+    reply_count: 22
+    text_preview: '프로덕트 버저닝을 위한 각 서비스 live 브랜치 수집'
+  - thread_ts: '1753084260.809369'
+    date: '2025-07-21'
+    reply_count: 19
+    text_preview: '새로운 배포 방식 선호도 조사 - 노션 정리 기반 투표'
+  - thread_ts: '1756974966.792629'
+    date: '2025-09-04'
+    reply_count: 16
+    text_preview: 'academy.sionic.tech 내부 기술 문서 사이트 런칭'
+terminology:
+  - term: "academy.sionic.tech"
+    definition: "Sionic AI 내부 기술 문서/스키마 시각화 사이트"
+    aliases: ["아카데미"]
+    context: "DB 스키마 시각화, API 문서 등 내부 기술 자료 호스팅"
+  - term: "Sentry"
+    definition: "에러 추적/모니터링 서비스"
+    aliases: []
+    context: "프론트엔드 레포 통합, GitHub 앱 승인 요청"
+  - term: "s2025w36"
+    definition: "프로덕트 버저닝 태그 형식 (s+년도+w+주차)"
+    aliases: ["주차 태그"]
+    context: "IBK 경험 기반으로 전체 서비스 대상 태깅 체계 확대"
+  - term: "Pepper"
+    definition: "Qwen2.5 VL 베이스 학습 모델 (문서 파싱용)"
+    aliases: []
+    context: "Storm Parse에서 사용, KT 시연 시 dev 환경에 임시 설정"
+  - term: "SIAM"
+    definition: "SaaS 형태의 별도 배포 환경"
+    aliases: ["시암"]
+    context: "live와 동일 버전 배포, 별도 고객 테스트 환경"
+  - term: "profile"
+    definition: "배포 환경 구분 용어 (dev/qa/live)"
+    aliases: ["프로파일"]
+    context: "cluster(물리적 위치)와 구분되는 논리적 환경 구분"
+  - term: "Findy Team+"
+    definition: "개발자 생산성 분석 SaaS (일본 솔루션)"
+    aliases: ["핀디"]
+    context: "일본 영업 목적으로 도입 검토, 정량적 생산성 분석"
+  - term: "Cybros"
+    definition: "신규 내부 프로젝트 (데이터플랫폼 관련)"
+    aliases: []
+    context: "GitHub 리포 생성, 데이터플랫폼 이름 공모와 관련"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

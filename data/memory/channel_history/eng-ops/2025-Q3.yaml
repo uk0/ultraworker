@@ -1,0 +1,74 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 318
+  total_threads: 252
+  active_users: 18
+  avg_messages_per_day: 4.5
+summary: |
+  2025년 3분기는 배포 시스템 대전환, 국세청 PoC 대응, OCI 재계약이 핵심이었다. 새로운 배포 시스템(shuttle+ArgoCD+service 레포)이 도입되어 GoCD 기반에서 전환이 진행되었고, 슬랙봇(/sionic-deploy) 연동이 완료되었다. 국세청 PoC 준비로 파일 반입, 베슬 GPU k3s 설치, storm-toolkit 도커 이미지 등이 마련되었다. OCI 재계약(연100K 달러, 월별 분할납부)이 완료되고 협력사가 지티플러스에서 위즈베이스로 교체되었다. GreptimeDB PoC, Grafana 스택 설치, 옵저빌리티 개선이 추진되었다. istio 설정 정리(migurdia 프록시 마이그레이션), 파트너사 한국이디에스 설치 교육 준비, ML DevOps 엔지니어 JD 작성, 서비스 차트 분리(temp2 레포) 등이 진행되었다. 마스터4/5 노드 반복 장애, TLS 에러, OOM 이슈 등 운영 안정성 대응이 계속되었다. AWS 선급금 소진 알림이 오면서 OCI 마이그레이션 가속화 필요성이 확인되었다. dev 환경 온프렘 IDC 코로케이션 이전 준비도 시작되었다.
+topics:
+  - 배포 시스템 전환 (shuttle + ArgoCD + service 레포)
+  - 국세청 PoC 대응 (파일 반입, k3s, toolkit)
+  - OCI 재계약 및 위즈베이스 MSP 교체
+  - GreptimeDB PoC 및 옵저빌리티 개선
+  - istio/migurdia 프록시 마이그레이션
+  - 파트너사 설치 교육 (한국이디에스)
+  - ML DevOps 엔지니어 채용
+  - 마스터 노드 장애 대응
+  - AWS 비용 절감 및 OCI 전환 가속
+key_discussions:
+  - thread_ts: '1758781493.444429'
+    date: '2025-09-25'
+    title: 국세청 반입 파일 준비
+    participants: [송명하, Sigrid Jin, 한시형]
+    summary: 국세청 PoC 파일 반입 준비 및 베슬 GPU k3s 설치 논의, 64개 답글
+  - thread_ts: '1757581565.090869'
+    date: '2025-09-11'
+    title: dev-stargate 라우팅 변경 (stargate-go)
+    participants: [이강욱]
+    summary: virtualservice 라우팅 변경과 배포 시 덮어씌워지는 문제 해결, 95개 답글
+  - thread_ts: '1758567862.058349'
+    date: '2025-12-01'
+    title: OCI Terraform 핸드온 준비 (이디에스 교육)
+    participants: [이강욱]
+    summary: 이디에스 파트너 교육용 PPT 및 핸드온 환경 준비, 86개 답글
+  - thread_ts: '1759302640.192019'
+    date: '2025-10-01'
+    title: GreptimeDB PoC 평가
+    participants: [이강욱]
+    summary: GreptimeDB와 Grafana 스택 병행 운영 방안, mature도 우려, 32개 답글
+  - thread_ts: '1759301402.386769'
+    date: '2025-10-01'
+    title: OCI 클러스터 ARM 베이스 전환 검토
+    participants: [이강욱]
+    summary: 비용 절감을 위한 ARM 아키텍처 전환 가능성 논의, 35개 답글
+terminology:
+  - term: shuttle
+    definition: 사내 배포 자동화 시스템 (신규)
+    context: GoCD 대체, 슬랙봇 연동 배포 트리거, fan-out 방식 멀티 클러스터 배포
+  - term: migurdia
+    definition: 사내 개발 리버스 프록시
+    context: caddy 대체, 마스터 노드에 설치되어 서비스 라우팅 담당
+  - term: GreptimeDB
+    definition: 오픈소스 시계열 데이터베이스
+    context: Prometheus/Grafana 스택 대안으로 PoC 진행
+  - term: cybros (사이브로스)
+    definition: 사내 개발 데이터 파이프라인 시스템
+    context: connector/processor 인터페이스 설계, 이강욱 주도
+  - term: service 레포
+    definition: 서비스 배포 설정 저장소 (구 temp2)
+    context: ArgoCD application 정의 및 Helm values 관리
+  - term: 위즈베이스
+    definition: OCI MSP(Managed Service Provider) 파트너사
+    context: 지티플러스 대체, 오라클 측 교체 조치
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

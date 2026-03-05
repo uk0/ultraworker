@@ -1,0 +1,65 @@
+channel:
+  id: C07F2EFA76K
+  name: alarm-live-error-asmr
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 213
+  total_threads: 15
+  active_users: 13
+  avg_messages_per_day: 10.7
+summary: |
+  2024년 3분기는 alarm-live-error-asmr 채널의 초창기 운영 시기로, 2024년 8월 초에 채널과 incoming-webhook이 설정되면서 OpenLLM 라이브 API 오류 알림 수신이 시작되었다. 초기에는 테스트 알림 확인, 채널 목적 공유(OpenLLM에서 chat engine 호출 실패 시 알림), 알림 누락 현상 분석 등이 이루어졌다. 8월 말에는 로컬 디버깅 중 환경 잘못 지정으로 인한 대량 알림 발생 사건이 있었으며, 뉴렐릭 무료 데이터 초과로 인한 모니터링 중단도 기록되었다. Claude 연동 관련 sonnet 3.5 연동 요청 등 외부 고객(Woody/우디님)의 요구도 있었다.
+topics:
+  - name: "채널 초기 설정 및 테스트"
+    mention_count: 30
+    description: "2024-08-05 채널 생성, incoming-webhook 설정, 테스트 알림 전송 및 확인"
+  - name: "OpenLLM API 오류 알림"
+    mention_count: 150
+    description: "라이브 환경 OpenLLM chat engine 호출 실패 시 발생하는 API 오류 알림"
+  - name: "로컬 디버깅 환경 오류"
+    mention_count: 10
+    description: "개발자가 로컬 디버깅 시 환경변수를 잘못 설정하여 라이브 채널에 대량 오류 알림 발생"
+  - name: "뉴렐릭 모니터링 이슈"
+    mention_count: 5
+    description: "9월 초 뉴렐릭 무료 데이터 인제스트 초과로 모니터링 중단"
+  - name: "Claude 모델 연동 요청"
+    mention_count: 3
+    description: "외부 고객(Woody)의 Claude sonnet 3.5 연동 요청. OpenAI 래핑 인터페이스 관련 논의"
+key_discussions:
+  - thread_ts: '1722854400.000000'
+    date: '2024-08-06'
+    reply_count: 3
+    text_preview: "채널 목적 안내 - OpenLLM에서 chat engine 호출 실패 시 알림 채널, dev용 별도 채널 필요 여부 논의"
+  - thread_ts: '1724980800.000000'
+    date: '2024-08-30'
+    reply_count: 9
+    text_preview: "로컬 디버깅 중 환경변수 잘못 설정으로 라이브 채널에 대량 오류 알림 발생"
+  - thread_ts: '1727348400.000000'
+    date: '2024-09-26'
+    reply_count: 7
+    text_preview: "Claude sonnet 3.5 연동 요청 - OpenAI 인터페이스 래핑 vs. Anthropic/AWS 네이티브 연동 논의"
+  - thread_ts: '1725541860.000000'
+    date: '2024-09-03'
+    reply_count: 0
+    text_preview: "뉴렐릭 무료 데이터 인제스트 초과로 애플리케이션 모니터링 중단 알림"
+terminology:
+  - term: "status-openllm"
+    definition: "alarm-live-error-asmr 채널의 최초 이름. 2024-08-05에 생성, 이후 status-asmr -> alarm-live-error-asmr로 변경"
+    aliases: []
+    context: "채널명 변경 히스토리의 시작점"
+  - term: "chat engine"
+    definition: "OpenLLM 내부의 AI 프로바이더 호출 엔진. 호출 실패 시 이 채널로 알림 전송"
+    aliases: []
+    context: "채널의 주 모니터링 대상"
+  - term: "dev status 채널"
+    definition: "개발 환경 전용 오류 알림 채널(C07GMQK7V8W). 라이브 채널과 분리하여 개발 중 오류 추적"
+    aliases: ["status-dev-openllm"]
+    context: "2024-08-16에 별도 생성"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

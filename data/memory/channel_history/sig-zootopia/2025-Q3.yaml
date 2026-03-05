@@ -1,0 +1,49 @@
+channel:
+  id: C085HPG2GEQ
+  name: sig-zootopia
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 34
+  total_threads: 23
+  active_users: 10
+  avg_messages_per_day: 1.6
+summary: |
+  꾸준한 반려동물 일상 공유가 이어진 분기. 김혜원이 깽이를 보고싶어하며 흔적 사진을 올려 24개 답변을 받았다. 최윤정의 깽이-삘리 접묘(15개 답변)가 화제였고, 깽이 생존신고를 정세민에게 전했다. 권혜선은 아루의 일상(붙박이장에서 자기, 비싼 의자 선호, 털갈이 시즌)을 공유하고, 깽이 패션쇼(강성우)도 있었다. 김수원은 몽자앨범 월간 시리즈를 시작하고, 캐나다 야생동물(8개 답변)도 공유했다. 김덕현은 광고모델 몽자(6개 답변)를 올렸다. 정세민이 깽이의 석현님 신발 사랑 에피소드를 공유하기도 했다. 세계 고양이의 날(8월 8일)도 기념되었다.
+topics:
+  - 깽이 돌봄/그리움 (흔적, 생존신고, 접묘)
+  - 고양이 일상 (아루, 산도, 깽이)
+  - 반려견 일상 (몽자앨범)
+  - 야생동물 (캐나다)
+  - 세계 고양이의 날
+key_discussions:
+  - thread_ts: '1757574523.642099'
+    date: '2025-09-11'
+    topic: 깽이 보고싶은 흔적
+    reply_count: 24
+  - thread_ts: '1753250507.445049'
+    date: '2025-07-23'
+    topic: 깽이와 삘리 접묘
+    reply_count: 15
+  - thread_ts: '1756882228.402609'
+    date: '2025-09-03'
+    topic: 김수원 반려동물 사진
+    reply_count: 10
+  - thread_ts: '1760403760.936189'
+    date: '2025-10-14'
+    topic: 캐나다 야생동물
+    reply_count: 8
+terminology:
+  - term: "접묘"
+    definition: "고양이끼리 서로 가까이 붙어 있는 모습"
+    context: "깽이와 삘리가 3일 만에 접묘 성공"
+  - term: "삘리"
+    definition: "최윤정의 반려묘 이름"
+    context: "깽이와 접묘하며 껌딱지 별명"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

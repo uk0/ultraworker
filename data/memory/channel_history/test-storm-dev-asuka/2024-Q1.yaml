@@ -1,0 +1,63 @@
+channel:
+  id: C06PM6HE937
+  name: test-storm-dev-asuka
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 51
+  total_threads: 20
+  active_users: 9
+  avg_messages_per_day: 51.0
+summary: |
+  2024년 1분기 test-storm-dev-asuka 채널은 STORM 개발 환경(asuka)의 초기 통합 테스트를 진행하던 채널로, 3월 15일 하루에 51건의 메시지가 집중되며 가장 활발한 테스트 활동이 있었다.
+  주요 활동은 STORM 어시스턴트 에이전트와의 실시간 테스트(문서 등록, 벡터 검색, 페르소나 설정 등)와 연동 오류 디버깅이었으며, Qdrant 벡터 DB 연동 문제, 에이전트 ID 하드코딩 이슈, 삭제 문서 재등록 중복 처리 오류 등이 발생하였다.
+  9명의 팀원이 참여하여 실시간으로 채팅 응답을 테스트하고 버그를 수정하는 협업 세션이 진행되었다.
+topics:
+  - name: "STORM 어시스턴트 통합 테스트"
+    mention_count: 20
+    description: "STORM 에이전트의 문서 등록, 검색, 대화 기능 실시간 테스트"
+  - name: "Qdrant 벡터 DB 연동 오류"
+    mention_count: 6
+    description: "collection(s) not found 오류 및 벡터 DB 연동 디버깅"
+  - name: "에이전트 ID 설정 이슈"
+    mention_count: 4
+    description: "agent_id 하드코딩 vs 치환 방식 논의 및 수정"
+  - name: "문서 등록 중복 처리"
+    mention_count: 4
+    description: "삭제 후 재등록 시 중복 문서로 처리되는 버그 수정"
+  - name: "페르소나 설정 테스트"
+    mention_count: 3
+    description: "에이전트 페르소나 미적용 버그 발견 및 수정"
+key_discussions:
+  - thread_ts: '1710489600.000000'
+    date: '2024-03-15'
+    reply_count: 4
+    text_preview: "제일 친한 친구가 누구? - 페르소나 미적용 버그 발견"
+  - thread_ts: '1710491520.000000'
+    date: '2024-03-15'
+    reply_count: 7
+    text_preview: "하담에게 도움 요청 - 에이전트 ID 및 연동 오류 디버깅 협업"
+  - thread_ts: '1710493200.000000'
+    date: '2024-03-15'
+    reply_count: 9
+    text_preview: "테스트 반복 진행 - collection not found 오류 원인 추적"
+  - thread_ts: '1710492000.000000'
+    date: '2024-03-15'
+    reply_count: 2
+    text_preview: "문서 다시 올려주세요 - 중복 문서 처리 이슈"
+terminology:
+  - term: "asuka"
+    definition: "STORM 서비스의 개발 테스트 환경 코드명"
+  - term: "Qdrant"
+    definition: "STORM에서 사용하는 벡터 검색 데이터베이스"
+  - term: "agent_id"
+    definition: "STORM 에이전트를 식별하는 고유 ID"
+  - term: "페르소나"
+    definition: "STORM 에이전트에 설정하는 역할/성격 프로필"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

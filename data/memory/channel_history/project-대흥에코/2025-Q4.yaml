@@ -1,0 +1,24 @@
+channel:
+  id: C080MV7SEVC
+  name: project-대흥에코
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  대흥에코 프로젝트 전용 채널로, 2025년 4분기에는 1명의 신규 멤버 참여 기록만 존재하며 프로젝트 활동이 거의 없는 비활성 상태였다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "대흥에코"
+    definition: "Sionic AI가 담당하는 고객사 프로젝트명"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

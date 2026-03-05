@@ -1,0 +1,50 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 460
+  total_threads: 256
+  active_users: 26
+  avg_messages_per_day: 6.6
+summary: |
+  Q1과 동일한 식사 주문 체계가 지속 운영됨. 샐러드 열차/일반식 열차/저녁 수요 조사 봇이 매일 가동.
+  배민 함께주문 링크를 통한 공동주문이 활발하며, 460개 메시지로 Q1 대비 활동량 증가.
+  주요 주문처: 프로티너(단백질 식단), 인생포케, 프레퍼스 다이어트 푸드, 올데이파스타, 카산도, 온수반 등.
+  저녁팟(빠저) 문화가 정착되어 양호진/정세민이 주로 주도. 버거킹 신메뉴 리뷰, 부산 해운대 밀면 리뷰 등
+  음식 관련 잡담도 활발. 일부 주말/야근 시에도 저녁 주문 진행.
+topics:
+  - 점심 배달 주문
+  - 샐러드 열차
+  - 일반식 열차
+  - 저녁 수요 조사
+  - 음식 리뷰
+  - 빠른 저녁 (빠저)
+key_discussions:
+  - title: 버거킹 신메뉴 리뷰
+    date: '2025-06-18'
+    summary: 이강욱이 버거킹 신메뉴 후기 공유, 16개 답글로 토론
+  - title: 부산 해운대 밀면 리뷰
+    date: '2025-06-26'
+    summary: Sigrid Jin이 o4 mini high AI 추천 해운대가야밀면 방문 후 실망 후기 공유
+  - title: 저녁 팟 활성화
+    date: '2025-Q2'
+    summary: 양호진/정세민/Noah 중심으로 빠저/저녁팟이 정례화, 최대 65개 답글 스레드 발생
+terminology:
+  - term: 빠저
+    definition: 빠른 저녁의 줄임말, 보통 5시~6시 사이 이른 저녁 식사
+    aliases: [빠른저녁]
+  - term: 저메추
+    definition: 저녁 메뉴 추천의 줄임말
+    aliases: []
+  - term: 대세민
+    definition: 정세민을 지칭하는 별명
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

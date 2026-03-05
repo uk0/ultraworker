@@ -1,0 +1,50 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 698
+  total_threads: 197
+  active_users: 17
+  avg_messages_per_day: 8.0
+summary: |
+  활발한 기술 교류 분기. Llama 3 출시와 함께 한국어 모델 파인튜닝(Bllossom 기반) 및 LogicKor 평가 서버 시범 개발이 진행됨. Mixtral 8x22B, Command-R+ 등 신규 모델 벤치마크 및 데이터셋 채굴 논의. GPU 자원 활용하여 풀 파인튜닝, DPO 실험 등 수행. Maywell이 사이오닉 기숙사에 2주간 체류하며 오프라인 협업. LogicKor 페이퍼 킥오프 미팅 계획 수립. EXAONE 3.0 라마화, 캐릭터 채팅 서비스 클로즈 베타 시작 등 다양한 프로젝트 진행.
+topics:
+  - Llama 3 한국어 파인튜닝
+  - LogicKor 평가 서버 개발
+  - Command-R+ 모델 평가
+  - 풀 파인튜닝 및 DPO 실험
+  - 데이터셋 생성 및 품질 관리
+  - EXAONE 3.0 Llamafied 변환
+  - LLM API 서비스 런칭 (wanot.ai)
+  - 캐릭터 채팅 서비스 개발
+  - LogicKor 페이퍼 킥오프
+  - Tavily AI 검색 API 소개
+key_discussions:
+  - title: "Llama 3 출시 및 한국어 모델 생태계"
+    summary: "메타의 Llama 3 공개 후 한국어 모델 파인튜닝 활발. 데이터셋 채굴, 리랭커 학습 등 생태계 확장 논의"
+  - title: "LogicKor 페이퍼 작성 킥오프"
+    summary: "8월 22일 LogicKor 페이퍼 킥오프 미팅 계획. 1저자, 공저자, 교신저자 역할 분담 및 학회 일정 논의"
+  - title: "LLM API 서비스 wanot.ai 런칭"
+    summary: "maywell이 월 5달러 무제한 로컬 모델 API 서비스 런칭. 로드밸런싱, Fallback 등 실전 경험 축적 목적"
+  - title: "EXAONE 3.0 Llamafied 공개"
+    summary: "LG EXAONE 3.0 7.8B를 Llama 포맷으로 변환하여 HuggingFace에 공개. 라이센스 관련 평화시위 성공"
+  - title: "사이오닉 내부 모델 xionic-mini 테스트"
+    summary: "사이오닉 내부 서빙 시스템에 12B 모델 배포. maywell이 테스트 진행, internal server error 발생 후 디버깅"
+terminology:
+  - term: "DPO"
+    definition: "Direct Preference Optimization. 사람의 선호도 데이터로 LLM을 직접 최적화하는 방법"
+  - term: "EXAONE"
+    definition: "LG AI Research에서 개발한 한국어 대규모 언어 모델"
+  - term: "wanot.ai"
+    definition: "maywell이 개발한 LLM API 서비스. 월 5달러 무제한 로컬 모델 사용"
+  - term: "Bllossom"
+    definition: "한국어 LLM 파인튜닝 모델. 말평(한국어 NLP 과제) 기준 모델로도 활용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

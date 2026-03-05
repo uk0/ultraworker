@@ -1,0 +1,54 @@
+channel:
+  id: C08Q4GPSPAR
+  name: eng-apidog
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 52
+  total_threads: 17
+  active_users: 16
+  avg_messages_per_day: 4.3
+summary: |
+  2025-Q2에 eng-apidog 채널이 신설되었다(기존 product-api-support에서 채널명 변경).
+  파트너사에게 제공되는 Storm OpenAPI 문서(ko/en/ja) 관리가 주요 활동이었다.
+  최병현(Hyune-c)이 apidog 알림 연동(main 브랜치 변경 시 채널 알림), 캔버스 추가,
+  internal API 문서 갱신(폴더 구조 개선, deprecated 엔드포인트 정리) 등을 주도했다.
+  김부교(Bekay)가 ja/en 번역 문서 갱신 DRI를 맡았으며, 조하담(Joy)이 문서 학습 요청 API
+  description 수정을 기여했다. apidog 신규 기능 공유, 멤버 초대 권한 논의,
+  webhookUrl 필수값 여부 확인 등 API 문서 품질 개선 활동이 활발했다.
+topics:
+  - Storm OpenAPI 문서 관리
+  - apidog 알림 연동
+  - 다국어 문서 갱신 (ko/en/ja)
+  - internal API 문서 갱신
+  - deprecated 엔드포인트 정리
+key_discussions:
+  - thread_ts: '1745940914.363699'
+    date: '2025-04-29'
+    topic: 채널명 변경 논의 (eng-apidog vs product-api-support)
+  - thread_ts: '1746020068.793899'
+    date: '2025-04-30'
+    topic: apidog에서 서플라이 오더시트 테스트 시 LLM API key 설정 문의
+  - thread_ts: '1746128560.702679'
+    date: '2025-05-01'
+    topic: internal apidog deprecated 엔드포인트 주석 처리 요청
+  - thread_ts: '1748592111.118679'
+    date: '2025-05-30'
+    topic: main 브랜치 변경 시 채널 알림 연동 설정
+  - thread_ts: '1749615768.446329'
+    date: '2025-06-11'
+    topic: apidog Insufficient Permissions 이슈 해결
+terminology:
+  - term: apidog
+    definition: API 문서 관리 도구. Storm OpenAPI 문서를 ko/en/ja 다국어로 관리하는 데 사용
+  - term: Storm OpenAPI
+    definition: Sionic AI의 Storm 제품 공개 API 문서. apidog에서 관리
+  - term: DRI
+    definition: Directly Responsible Individual. 해당 업무의 최종 책임자
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

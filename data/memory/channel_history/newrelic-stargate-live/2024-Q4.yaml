@@ -1,0 +1,51 @@
+channel:
+  id: C07UUNGBULF
+  name: newrelic-stargate-live
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 50
+  total_threads: 36
+  active_users: 7
+  avg_messages_per_day: 4.2
+summary: |
+  2024년 4분기 newrelic-stargate-live 채널은 Stargate 라이브 환경의 New Relic 모니터링 알림 채널로 초기 설정이 이루어졌다.
+  11월 7일 채널 이름이 "newrelic-stargate-status"에서 "newrelic-stargate-live"로 변경되었으며, 동일 날짜에 워크플로우 설정 테스트가 진행되었다.
+  11월 13~14일에는 Stargate 라이브 환경에서 500 시리즈 API 오류가 연속으로 다수 발생하였고, 각 이슈마다 Critical Priority 알림이 New Relic을 통해 자동으로 채널에 전송되었다.
+  각 알림에는 오류 유형, 영향을 받은 엔티티, 조건, 정책 정보가 포함되어 있으며, Acknowledge 및 Close 버튼을 통한 인터랙티브 대응이 가능하도록 설계되었다.
+topics:
+  - name: "Stargate API 500 오류 알림"
+    mention_count: 35
+    description: "라이브 환경에서 500 시리즈 에러 발생 시 New Relic이 Critical Priority 알림을 자동 전송"
+  - name: "채널 설정 및 워크플로우 초기화"
+    mention_count: 5
+    description: "채널 이름 변경 및 New Relic 워크플로우 테스트 메시지 전송"
+key_discussions:
+  - thread_ts: '1731322200.000000'
+    date: '2024-11-07'
+    reply_count: 1
+    text_preview: "newrelic-stargate-live 워크플로우 최초 연결 테스트 - Stargate API Error 알림"
+  - thread_ts: '1731542280.000000'
+    date: '2024-11-08'
+    reply_count: 1
+    text_preview: "Stargate API Error Critical 알림 - 라이브 환경 500 오류 발생"
+  - thread_ts: '1731538740.000000'
+    date: '2024-11-13'
+    reply_count: 1
+    text_preview: "Stargate API Error 연속 발생 - 11월 13~14일 집중 알림"
+terminology:
+  - term: "Stargate"
+    definition: "Sionic AI의 검색 엔진 서비스, stargate-api-live 엔티티로 모니터링"
+    aliases: ["stargate-api-live", "SG"]
+    context: "라이브 환경 500 시리즈 오류를 New Relic [Monitoring] Stargate 정책으로 감지"
+  - term: "New Relic"
+    definition: "Sionic AI가 사용하는 APM 및 인프라 모니터링 플랫폼"
+    aliases: ["NR"]
+    context: "Stargate 라이브 환경의 오류 감지 및 Slack 알림 전송에 활용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

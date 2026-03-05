@@ -1,0 +1,66 @@
+channel:
+  id: C06814P5L5D
+  name: business-common-global
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 39
+  total_threads: 20
+  active_users: 9
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 1분기 동안 일본 시장 진출 관련 논의가 주를 이뤘다. 소프트뱅크, 미즈호 은행 등 일본 스타트업 연계 프로그램 대응과 현지 법인 설립 필요성, 라인 웍스 미팅, KSC 도쿄 좌석 확보 등 실질적인 일본 진출 준비 작업이 진행되었다. 팀원들이 일본 현지 네트워크(소프트뱅크/유니플랫폼 김윤경님, KSC 도쿄 김병훈 센터장님 등)를 활용하여 파트너십을 모색하였으며, 3월 말 일본 출장 계획도 조율되었다.
+topics:
+  - name: "일본 시장 진출"
+    mention_count: 18
+    description: "소뱅 스타트업 연계 프로그램, 미즈호 은행 스타트업 연계, 현지 법인 설립 필요성 논의"
+  - name: "일본 파트너십"
+    mention_count: 8
+    description: "YJ컴퍼니, 라인 웍스, KSC 도쿄 등 현지 파트너 및 네트워크 활용 방안"
+  - name: "일본 출장 및 행사 참여"
+    mention_count: 7
+    description: "3월 말 일본 출장 계획, 인베스트서울 도쿄 IR 설명회, 빅사이트 행사 참여 준비"
+  - name: "일본 마케팅"
+    mention_count: 5
+    description: "일본어 사업소개서, 데모 준비, 커뮤니티 포스팅, Line 비즈니스 계정 개설"
+key_discussions:
+  - thread_ts: '1739177938.458589'
+    date: '2025-02-11'
+    reply_count: 2
+    text_preview: "일본 관련 내용 f/u을 쉽게 하기 위해 흔적 적어두기 - 소뱅 스타트업 연계 프로그램 진행 현황 공유"
+  - thread_ts: '1739344566.000000'
+    date: '2025-02-12'
+    reply_count: 6
+    text_preview: "2월 To-do List: 일본 마케팅 방안 정리 - 사업소개서, Line 계정, 오프라인 행사, 커뮤니티 포스팅"
+  - thread_ts: '1740554939.000000'
+    date: '2025-02-26'
+    reply_count: 16
+    text_preview: "진형님 일본 출장 일정 조율 관련 논의"
+  - thread_ts: '1742035082.000000'
+    date: '2025-03-12'
+    reply_count: 13
+    text_preview: "인베스트서울 도쿄 IR 설명회 내용 공유"
+  - thread_ts: '1742038678.000000'
+    date: '2025-03-15'
+    reply_count: 69
+    text_preview: "일본 가상오피스 컨택 관련 논의 및 현지 법인 관련 사항"
+terminology:
+  - term: "KSC 도쿄"
+    definition: "K-Startup Center Tokyo - 도쿄에 위치한 한국 스타트업 지원 센터"
+    aliases: ["K-Startup Center Tokyo"]
+    context: "일본 현지 네트워크 및 사무 공간 활용 논의"
+  - term: "One-ship 프로그램"
+    definition: "소프트뱅크 계열 스타트업 연계 지원 프로그램, 일본 법인 필요"
+    aliases: []
+    context: "일본 진출 초기 단계에서 신청 시도하였으나 법인 필요 조건으로 중단"
+  - term: "라인 웍스"
+    definition: "LINE Works - 일본 기업 대상 업무 협업 메신저 서비스"
+    aliases: ["LINE Works"]
+    context: "일본 파트너십 미팅 대상 기업"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

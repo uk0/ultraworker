@@ -1,0 +1,35 @@
+channel:
+  id: C07V9K26TTL
+  name: newrelic-stargate-dev
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  자동화된 New Relic 모니터링 채널로, Stargate 개발 환경의 인프라 이슈 및 Critical 알림을 수신한다. 2025년 1분기에는 Pylon 파드 재시작 및 메모리 사용률 초과에 관한 Critical 알림이 발생하였으며, InfraAlert(live) 정책을 통해 자동 알림이 전송되었다.
+topics:
+  - name: "인프라 알림"
+    mention_count: 1
+    description: "Pylon 파드 재시작 및 메모리 사용률 90% 초과 Critical 알림"
+key_discussions:
+  - thread_ts: '1741582200.000000'
+    date: '2025-03-10'
+    reply_count: 0
+    text_preview: "Critical priority issue - Pylon 파드 재시작 및 메모리 사용률 90% 초과 알림 (InfraAlert live 정책)"
+terminology:
+  - term: "Stargate"
+    definition: "Sionic AI의 검색 엔진 서비스"
+  - term: "Pylon"
+    definition: "Sionic AI 온프레미스 클러스터에서 운영되는 서비스 파드"
+  - term: "InfraAlert"
+    definition: "인프라 모니터링 알림 정책으로 메모리, 파드 상태 등을 감시"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,54 @@
+channel:
+  id: C079AAU6265
+  name: deploy-asmr
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 132
+  total_threads: 52
+  active_users: 8
+  avg_messages_per_day: 5.1
+summary: |
+  2025년 1분기에 중요한 인프라 전환이 이루어졌다. 채널명이 deploy-openllm에서 deploy-asmr로 변경되었으며,
+  배포 시스템이 /deploy에서 /sionic-deploy로 전환되었다. OpenLLM에서 ASMR로 서비스 이관이 진행되었고,
+  이재준(Leo)님이 트래픽 이관 작업을 수행하였다(dev-openllm.sionic.tech -> dev-asmr.sionic.tech,
+  live-openllm.sionic.im -> live-asmr.sionic.im). 배포 환경도 onprem(dev)과 eks/oci(live)로 분리되었다.
+  asmr-dev/asmr-live 이중 네이밍 이슈가 논의되었고, 최병현님은 별도 채널 필요성에 대해 의문을 제기하였다(14개 답글).
+  조하담님이 asmr로의 완전 이관 여부를 확인하였고, Newrelic 모니터링도 asmr로 전환하였다.
+topics:
+  - OpenLLM -> ASMR 서비스 이관
+  - 채널명 변경 (deploy-openllm -> deploy-asmr)
+  - 배포 시스템 전환 (/deploy -> /sionic-deploy)
+  - 트래픽 이관 (onprem, eks, oci)
+  - 배포 채널 통합 논의
+key_discussions:
+  - thread_ts: '1737003696.212299'
+    date: '2025-01-16'
+    topic: ASMR 트래픽 이관 작업 안내 및 배포 중단 요청 (34개 답글)
+  - thread_ts: '1737011632.801959'
+    date: '2025-01-16'
+    topic: deploy-asmr 채널 분리 필요성 논의 (14개 답글)
+  - thread_ts: '1737009511.835099'
+    date: '2025-01-16'
+    topic: asmr-dev/asmr-live 이중 네이밍 이유 논의 (14개 답글)
+  - thread_ts: '1738898409.498529'
+    date: '2025-02-07'
+    topic: asmr-live EKS 배포 이슈 (23개 답글)
+terminology:
+  - term: ASMR
+    definition: OpenLLM의 후속 서비스명, Sionic AI의 LLM API 서비스
+  - term: /sionic-deploy
+    definition: 새로운 배포 슬래시 커맨드, /deploy를 대체
+  - term: onprem
+    definition: 온프레미스 환경, dev 배포에 사용
+  - term: EKS
+    definition: Amazon Elastic Kubernetes Service, live 배포에 사용
+  - term: OCI
+    definition: Oracle Cloud Infrastructure, live 배포에 사용
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

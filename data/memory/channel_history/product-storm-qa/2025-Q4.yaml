@@ -1,0 +1,48 @@
+channel:
+  id: C07DU5YBH50
+  name: product-storm-qa
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 276
+  total_threads: 225
+  active_users: 11
+  avg_messages_per_day: 5.6
+summary: |
+  2025-Q4 product-storm-qa 채널에서는 STORM 플레이그라운드 예제 기능, 파인튜닝 화면 QA가 집중적으로 진행되었다. 플레이그라운드 예제 모달에서의 마크다운 뷰어 깨짐, 언어 설정 변경 시 에러, 파인튜닝 화면의 수치 입력 버그 등 다수의 이슈가 발굴되어 수정되었다. 11명의 팀원이 참여하여 신규 기능 출시 전 체계적인 QA를 수행하였다.
+topics:
+  - name: "플레이그라운드 예제 QA"
+    mention_count: 40
+    description: "STORM APIs 플레이그라운드 예제 기능의 UI/UX 버그 발굴 및 수정"
+  - name: "파인튜닝 화면 QA"
+    mention_count: 30
+    description: "파인튜닝 모델 등록 화면의 입력 버그, 텍스트 수정, 버튼 위치 이슈 등 검증"
+  - name: "마크다운 뷰어"
+    mention_count: 20
+    description: "응답 및 예제 화면에서의 마크다운 렌더링 품질 및 깨짐 현상 확인"
+  - name: "다국어 지원"
+    mention_count: 15
+    description: "언어 설정 변경 시 발생하는 에러 및 영문 문서의 한국어 번역 처리 이슈"
+key_discussions:
+  - thread_ts: '1760331224.000000'
+    date: '2025-10-13'
+    reply_count: 16
+    text_preview: "플레이그라운드 예제 QA - 언어설정 변경 에러, 마크다운 뷰어 깨짐 등 메이저 이슈 4건 발굴"
+  - thread_ts: '1760333404.000000'
+    date: '2025-10-13'
+    reply_count: 7
+    text_preview: "파인튜닝 화면 QA - '파인 듀닝' 오타 이슈, 버튼 범위 초과 버그 등 발굴"
+terminology:
+  - term: "플레이그라운드 예제"
+    definition: "STORM APIs 페이지에서 제공하는 API 사용 예제 데모. 사용자가 직접 테스트할 수 있는 인터랙티브 화면"
+  - term: "파인튜닝"
+    definition: "STORM에서 제공하는 모델 미세조정 기능. 사용자가 자체 데이터로 모델을 커스터마이징"
+  - term: "스톰파스 (Storm Parse)"
+    definition: "STORM 제품의 문서 파싱 기능. PDF, 이미지, 문서 파일을 구조화하여 RAG에 활용"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

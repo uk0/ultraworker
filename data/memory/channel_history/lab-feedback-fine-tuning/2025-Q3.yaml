@@ -1,0 +1,41 @@
+channel:
+  id: C08G1H180KV
+  name: lab-feedback-fine-tuning
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3 기간 동안 lab-feedback-fine-tuning 채널에서 LLM이 RAG 과정에서 실제로 사용한 청크를 판별하는 로직 개발 아이디어가 제안되었다. 해당 로직이 파인튜닝 학습 데이터 생성에 활용될 수 있다는 아이디어가 논의되었으며, 이는 RAG 파인튜닝 데이터셋 자동 생성 가능성을 탐색하는 초기 논의였다. 분기 말에 신규 멤버가 채널에 합류하였다.
+topics:
+  - name: "RAG 청크 판별 로직 및 파인튜닝 데이터 생성"
+    mention_count: 1
+    description: "LLM이 실제로 사용한 청크를 판별하는 로직을 파인튜닝 데이터 생성에 활용하는 아이디어 논의"
+key_discussions:
+  - thread_ts: '1751950980.000000'
+    date: '2025-07-08'
+    reply_count: 16
+    text_preview: "LLM이 사용한 청크 판별 로직 - 파인튜닝 데이터 생성에 활용 가능성 아이디어 투척"
+terminology:
+  - term: "파인튜닝"
+    definition: "사전학습된 LLM을 특정 도메인에 맞게 추가 학습하는 기법"
+    aliases: ["fine-tuning"]
+    context: "RAG 파이프라인 청크 판별 데이터를 활용한 파인튜닝 연구"
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation의 약자로, 검색 기반 답변 생성 방식"
+    aliases: []
+    context: "LLM이 실제로 참조한 청크를 식별하여 학습 데이터로 활용"
+  - term: "청크"
+    definition: "RAG에서 문서를 분할한 단위, LLM이 답변 생성 시 참조하는 텍스트 조각"
+    aliases: []
+    context: "파인튜닝 데이터셋 구성의 핵심 단위"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,33 @@
+channel:
+  id: C057EPS43QW
+  name: corp-ideation
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 3분기 corp-ideation 채널에서 오승희가 "스톰 플랫폼에 챗봇을 붙이는 것"을
+  제안했다. 문제점으로 스톰 플랫폼이 직관적으로 사용하기 어려우며, 개발자든 비개발자든
+  충분한 공부와 시행착오가 필요하다는 점을 지적했다. 해결책으로 처음 접속 시 사용방법을
+  가이드해주는 튜토리얼과 막힐 때 물어볼 수 있는 챗봇을 제안했으며, 이를 통해 기업
+  고객과 파트너 모두에게 협업 편의성을 높일 수 있다고 주장했다. 6개 답글이 달렸다.
+topics:
+  - 스톰 플랫폼 UX 개선
+  - AI 챗봇 기반 사용자 가이드
+  - 고객/파트너 온보딩 개선
+key_discussions:
+  - thread_ts: '1753609026.948239'
+    date: '2025-07-27'
+    reply_count: 6
+    text_preview: '스톰 플랫폼에 튜토리얼 챗봇 제안 - UX 개선 아이디어'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

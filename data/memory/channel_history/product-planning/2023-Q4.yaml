@@ -1,0 +1,190 @@
+channel:
+  id: C05RK2SCFD2
+  name: product-planning
+  type: public
+period:
+  quarter: 2023-Q4
+  start_date: '2023-10-01'
+  end_date: '2023-12-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 51
+  total_threads: 18
+  active_users: 8
+  avg_messages_per_day: 0.8
+summary: >
+  2023년 4분기는 Storm Answer 제품의 핵심 기획이 집중적으로 이루어진 시기이다. 김혜원 주도로
+  피드백 시스템 설계(Perfect/Good/Fail 3단계 이모지 기반), Answer Builder Figma 기획서 작성,
+  Storm Console 과금 체계 설계(trial/standard/enterprise), 그리고 경쟁사 리서치(text.cortex,
+  chatpdf, askyourpdf, GPTs 비교)가 진행되었다. FE 개발 논의가 시작되어 Answer 우선 개발,
+  Console 후순위 전략이 확정되었고, 1월 중순 완료를 목표로 일정이 수립되었다. Analyze 기능
+  (요약/키워드 추출) 리서치와 GPT 기반 액션 기능 테스트도 수행되었다. 문서 수정 시 전체 교체 +
+  재인덱싱이 필요한 기술적 제약이 발견되었고, 다중 문서 학습 시 주제 혼동 문제가 우선순위 높은
+  과제로 식별되었다. 채널은 12월 6일에 보관 처리되었다.
+topics:
+  - name: "피드백 시스템 설계"
+    count: 8
+    summary: "이모지 기반 3단계 피드백 시스템 설계. Perfect(캐싱+검색모델학습+few-shot), Good(검색모델학습+few-shot), Fail(관리자 대안답변 -> Perfect 처리). 캐싱은 즉시 반영, 검색모델 학습은 지연 반영."
+  - name: "Answer Builder / Console 기획"
+    count: 12
+    summary: "김혜원이 Figma로 Answer Builder 화면 기획 완료. Storm Console 기획서 작성. Answer 우선 개발, Console 후순위 전략 확정. instruction, test 화면 먼저 작업."
+  - name: "과금 체계 설계"
+    count: 6
+    summary: "Agent별 요금제 선택 가능(trial/standard/enterprise). Trial은 계정당 2개, 일정 기간 후 삭제. 상위 플랜은 별도 문의 후 계약 기반. 카드 결제 시스템 없이 계약서 기반 결제."
+  - name: "경쟁사/참고 서비스 리서치"
+    count: 7
+    summary: "text.cortex, chatpdf, askyourpdf 분석. GPTs와 Storm 비교 테스트 결과 '비슷비슷'. Storm 장점: 여러 청크에서 정보 조합하여 답변(주차장 안내 예시)."
+  - name: "Analyze 기능 리서치"
+    count: 5
+    summary: "GPT-3.5 기반 요약/키워드 추출 테스트. 액션 기능(GPT가 {{액션명}} 말하게 하기) 테스트. 액션 구분은 잘하나 지시하지 않은 액션 생성 문제 발견. {{액션넘버}} 사용으로 해결 방안 도출."
+  - name: "제품 이슈 및 과제"
+    count: 5
+    summary: "문서 수정 시 전체 교체+재인덱싱 필요한 제약 발견. 다중 문서 학습 시 주제 혼동 문제 식별. 멀티턴 미지원 케이스 발견. 할루시네이션 방지 필요성 인식."
+  - name: "sLLM 데이터 생성"
+    count: 2
+    summary: "클로바X 크레딧을 활용한 sLLM 학습 데이터 생성 논의."
+key_discussions:
+  - thread_ts: '1698820882.412969'
+    date: '2023-11-01'
+    title: "피드백 기능 테스트 및 설계"
+    summary: "김혜원이 피드백 시스템의 3단계(Perfect/Good/Fail) 이모지 기반 설계를 공유. 캐싱, 검색모델 학습, few-shot 프롬프트 반영 방식과 반영 시점에 대해 상세 논의. 47개 답글이 달린 핵심 스레드."
+    participants: ["U05T2RW7PE2", "U05QCA7JTD5"]
+    decisions: ["3단계 이모지 피드백 체계 확정", "캐싱은 즉시 반영, 검색모델 학습은 지연 반영"]
+    action_items: ["피드백 반영 파이프라인 구축", "관리자 대안 답변 인터페이스 설계"]
+    keywords: ["피드백", "Perfect", "Good", "Fail", "캐싱", "few-shot"]
+    relevance_score: 1.0
+  - thread_ts: '1700440417.078049'
+    date: '2023-11-20'
+    title: "Storm 기획 논의 with FE"
+    summary: "김덕현과 FE 팀(은주)이 참여한 Storm 기획 논의. Answer 우선 작업, Console 후순위 전략 확정. instruction, test 화면 먼저 개발하기로 결정. 20개 답글의 중요 논의."
+    participants: ["U057MCDJHDY", "U06741L50TS", "U05T2RW7PE2"]
+    decisions: ["Answer 우선 개발", "instruction/test 화면 먼저 작업", "Console은 후순위"]
+    action_items: ["FE 작업 예상 일정 산출", "기획서 검토"]
+    keywords: ["Storm 기획", "FE", "Answer", "Console", "개발 일정"]
+    relevance_score: 0.9
+  - thread_ts: '1700211543.171939'
+    date: '2023-11-17'
+    title: "Console 과금 체계 기획"
+    summary: "김혜원이 Figma로 Console 기획서 초벌 작성 후 한시형과 과금 방식 논의. Agent별 요금제(trial/standard/enterprise), 계약 기반 결제, Trial은 계정당 2개 등 핵심 과금 정책 수립."
+    participants: ["U05T2RW7PE2", "U057K0HC9KQ"]
+    decisions: ["Agent별 요금제 선택", "Trial은 무료(계정당 2개)", "상위 플랜은 계약 기반"]
+    action_items: ["과금 정책 확정", "결제 시스템 설계 보류(추후 구축)"]
+    keywords: ["과금", "요금제", "trial", "standard", "enterprise", "계약"]
+    relevance_score: 0.9
+  - thread_ts: '1698822675.113549'
+    date: '2023-11-01'
+    title: "스톰 콘솔(앤서) 기획서 작성"
+    summary: "김혜원이 Storm Console/Answer 기획서 작성 시작. Notion과 Figma를 병행하여 기획 진행. 13개 답글."
+    participants: ["U05T2RW7PE2"]
+    decisions: ["기획서 Figma로 작성"]
+    action_items: ["Answer Builder 기획서 완성", "Console 기획서 작성"]
+    keywords: ["콘솔", "기획서", "Figma", "Answer Builder"]
+    relevance_score: 0.8
+  - thread_ts: '1701087620.830299'
+    date: '2023-11-27'
+    title: "Analyze 요약(Summarize) 리서치"
+    summary: "GPT-3.5 기반 요약 기능 리서치. 요약/키워드 추출 테스트 결과 공유. 37개 답글이 달린 심층 논의."
+    participants: ["U05T2RW7PE2", "U057K0HC9KQ"]
+    decisions: ["GPT-3.5 기반 요약 기능 방향 설정"]
+    action_items: ["요약 품질 개선", "키워드 추출 정확도 향상"]
+    keywords: ["Analyze", "요약", "GPT-3.5", "키워드 추출"]
+    relevance_score: 0.8
+  - thread_ts: '1701395128.863289'
+    date: '2023-12-01'
+    title: "GPT 액션 기능 테스트"
+    summary: "GPT가 {{액션명}}을 말하게 하는 기능 테스트. 액션 구분 능력은 양호하나 지시하지 않은 액션 생성 문제 발견. {{액션넘버}} 사용으로 해결 방안 도출. 92개 답글의 대규모 테스트 스레드."
+    participants: ["U05T2RW7PE2"]
+    decisions: ["{{액션명}} 대신 {{액션넘버}} 사용으로 방향 전환"]
+    action_items: ["액션 기능 프로토타입 구현", "후처리 로직 설계"]
+    keywords: ["액션", "GPT", "프롬프트", "후처리"]
+    relevance_score: 0.8
+  - thread_ts: '1701078797.985729'
+    date: '2023-11-27'
+    title: "GPTs vs STORM 비교 테스트"
+    summary: "김혜원이 GPTs와 Storm을 비교 테스트. 전반적으로 '비슷비슷'한 성능이나, Storm은 여러 청크에서 정보를 조합하여 답변하는 장점(주차장 안내 예시)을 확인."
+    participants: ["U05T2RW7PE2"]
+    decisions: ["Storm의 멀티청크 조합 답변이 차별점"]
+    action_items: ["GPTs 특이점 Notion 정리"]
+    keywords: ["GPTs", "Storm", "비교", "청크", "주차장"]
+    relevance_score: 0.7
+  - thread_ts: '1700811336.252979'
+    date: '2023-11-24'
+    title: "Agent Plan 레이블 색상 제안"
+    summary: "한시형이 Agent Plan 레이블 색상 변경 제안. Trial=회색, Standard=라이트블루, Enterprise=다크블루로 변경하여 직관성 개선."
+    participants: ["U057K0HC9KQ", "U05T2RW7PE2"]
+    decisions: ["레이블 색상 변경 검토"]
+    action_items: ["디자인 반영"]
+    keywords: ["레이블", "색상", "UI", "요금제"]
+    relevance_score: 0.6
+  - thread_ts: '1698911512.709799'
+    date: '2023-11-02'
+    title: "피드백 컬렉션 관련 질의"
+    summary: "김혜원이 진형(Sigrid Jin)에게 피드백 컬렉션 기능에 대해 상세 질의. 기술적 구현 방식과 제약사항 논의. 20개 답글."
+    participants: ["U05T2RW7PE2", "U05QCA7JTD5"]
+    decisions: []
+    action_items: ["피드백 컬렉션 구현 방안 정리"]
+    keywords: ["피드백", "컬렉션", "기술 구현"]
+    relevance_score: 0.7
+  - thread_ts: '1700720387.366269'
+    date: '2023-11-23'
+    title: "STORM 상표권 등록 문의"
+    summary: "hhhssw(석원)가 데모용 랜딩페이지 문구 작성 중 STORM 명칭의 상표권 등록 여부를 문의."
+    participants: ["U05CHK1D3LG"]
+    decisions: []
+    action_items: ["상표권 등록 확인"]
+    keywords: ["STORM", "상표권", "랜딩페이지"]
+    relevance_score: 0.5
+  - thread_ts: '1701057810.821789'
+    date: '2023-11-27'
+    title: "클로바X 활용 sLLM 데이터 생성"
+    summary: "김혜원이 클로바X 크레딧을 소진하면서 sLLM 학습 데이터를 생성하는 작업 시작. 25개 답글."
+    participants: ["U05T2RW7PE2", "U05LS9CBJ4A"]
+    decisions: ["클로바X 크레딧 활용하여 데이터 생성"]
+    action_items: ["sLLM 데이터셋 구축"]
+    keywords: ["sLLM", "클로바X", "데이터", "학습"]
+    relevance_score: 0.7
+terminology:
+  - term: "Storm Answer"
+    definition: "사이오닉의 문서 기반 Q&A 챗봇 제품. 업로드된 문서를 학습하여 사용자 질문에 답변."
+    aliases: ["사이오닉 앤서", "앤서"]
+    context: "이 채널에서 기획된 핵심 제품. 2023-Q4에 기획서 작성 및 FE 개발 착수."
+  - term: "Answer Builder"
+    definition: "Storm Answer 에이전트를 생성하고 설정하는 도구. Figma로 화면 기획 완료."
+    aliases: ["앤서 빌더"]
+    context: "Answer 중 instruction, test 화면 먼저 개발 진행."
+  - term: "Storm Console"
+    definition: "Storm 제품의 관리자 대시보드. Agent 관리, 과금, 설정 등을 담당."
+    aliases: ["콘솔"]
+    context: "Answer Builder 이후 후순위로 개발 예정."
+  - term: "Agent"
+    definition: "특정 문서/설정으로 구성된 챗봇 인스턴스. 요금제(trial/standard/enterprise)별로 관리."
+    aliases: ["에이전트"]
+    context: "Agent별 과금 plan 선택 가능하도록 설계."
+  - term: "Instruction"
+    definition: "에이전트에 주어지는 동작 지침. 답변 스타일, 제약사항 등을 설정."
+    aliases: []
+    context: "Answer Builder에서 가장 먼저 개발되는 화면 중 하나."
+  - term: "GPTs"
+    definition: "OpenAI의 커스텀 GPT 서비스. Storm과 비교 테스트 대상."
+    aliases: []
+    context: "Storm과 '비슷비슷'한 성능이나 Storm은 멀티청크 조합이 강점."
+  - term: "sLLM"
+    definition: "Small Language Model. 소형 언어 모델. 클로바X 데이터로 학습 데이터 생성."
+    aliases: []
+    context: "클로바X 크레딧 활용하여 데이터 생성 진행."
+  - term: "피드백 컬렉션"
+    definition: "사용자 피드백 데이터 수집 시스템. 이모지 기반 3단계(Perfect/Good/Fail) 피드백."
+    aliases: []
+    context: "캐싱, 검색모델 학습, few-shot 프롬프트에 반영."
+  - term: "Analyze"
+    definition: "Storm의 문서 분석 기능. 요약(Summarize)과 키워드 추출을 포함."
+    aliases: []
+    context: "GPT-3.5 기반으로 리서치 및 테스트 진행."
+  - term: "Pylon"
+    definition: "사이오닉의 RAG 파이프라인 엔진. 문서 처리, 임베딩, 검색, 답변 생성 담당."
+    aliases: ["파일론"]
+    context: "엔진 수준 개선(멀티턴, 문서 구분, 할루시네이션 방지) 병행 작업."
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual
+  note: "채널은 2023-12-06에 보관(archived) 처리됨. 이후 활동 없음."

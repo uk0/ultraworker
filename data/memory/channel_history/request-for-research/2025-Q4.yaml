@@ -1,0 +1,45 @@
+channel:
+  id: C08BX810ULC
+  name: request-for-research
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 4.0
+summary: |
+  2025년 4분기 request-for-research 채널은 검색 모델의 고객 데이터 기반 SFT(지도학습) 자동화를 향한 연구 요청이 핵심이었다.
+  Multi-Aspect Dense Retrieval 논문을 기반으로, LLM 에이전트가 앙상블 가중치를 스스로 결정하는 자동 ML 수준의 검색 파이프라인 구현 가능성을 논의하였으며, 4명의 팀원이 적극적으로 참여하였다.
+topics:
+  - name: "Multi-Aspect Dense Retrieval"
+    mention_count: 3
+    description: "문장 유사도, QnA 관계성, 시의적절성 등 다양한 관점을 앙상블하는 검색 모델 연구 검토 요청"
+  - name: "검색 모델 SFT 자동화"
+    mention_count: 2
+    description: "고객 데이터(노이즈 포함)로 검색 모델을 지도학습하는 Auto ML 수준 파이프라인 연구"
+key_discussions:
+  - thread_ts: '1730610240.000000'
+    date: '2025-11-03'
+    reply_count: 29
+    text_preview: "Multi-Aspect Dense Retrieval 논문 검토 요청: 문장 유사도·QnA 관계·날짜 앙상블, LLM 에이전트 가중치 자동 결정 가능성"
+terminology:
+  - term: "Multi-Aspect Dense Retrieval"
+    definition: "문장 유사도, QnA 관련성, 시의적절성 등 여러 측면(aspect)을 동시에 고려하는 밀집 검색 기법"
+    aliases: []
+    context: "Google Research 논문, 검색 모델 앙상블 자동화 연구의 기반"
+  - term: "SFT"
+    definition: "Supervised Fine-Tuning, 라벨링된 데이터로 사전학습 모델을 특정 태스크에 맞게 지도학습하는 방법"
+    aliases: ["지도학습", "Supervised Fine-Tuning"]
+    context: "고객 데이터로 검색 모델을 개선하는 핵심 방법론"
+  - term: "DFT"
+    definition: "Discriminative Fine-Tuning, 노이즈에 강인한 Loss 구조를 활용한 파인튜닝 방법론"
+    aliases: []
+    context: "고객 데이터의 노이즈 대응을 위해 개발된 학습 방법"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,22 @@
+channel:
+  id: C06SX4Z5L5P
+  name: makr_sionic_collab_
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3 기간 동안 makr_sionic_collab_ 채널에는 신규 멤버 참여 1건만 기록되었다. 실질적인 협업 활동은 이 분기에 거의 이루어지지 않았으며, 채널은 대기 상태로 유지되었다. Makr와 Sionic AI 간의 협업 채널은 지속적으로 유지되고 있다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

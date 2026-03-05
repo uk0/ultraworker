@@ -1,0 +1,30 @@
+channel:
+  id: C05801FL29F
+  name: corp-etc
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024년 3분기에는 회사 잡담 채널에서 단 1건의 메시지만 기록되었다.
+  NAVER ENGINEERING DAY 2024(5월) 세션 중 "LLM을 이용한 AI 코드 리뷰 도입기" 아티클 링크가 공유되었으며, 외부 기술 자료 공유 외 별다른 논의는 없었다.
+topics:
+  - name: "기술 아티클 공유"
+    mention_count: 1
+    description: "NAVER ENGINEERING DAY의 LLM 기반 AI 코드 리뷰 도입 관련 세션 링크 공유"
+key_discussions: []
+terminology:
+  - term: "NAVER ENGINEERING DAY"
+    definition: "네이버의 연간 엔지니어링 컨퍼런스 행사"
+  - term: "LLM"
+    definition: "Large Language Model, 대규모 언어 모델"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

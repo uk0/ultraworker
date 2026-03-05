@@ -1,0 +1,67 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 49
+  total_threads: 37
+  active_users: 8
+  avg_messages_per_day: 1.8
+summary: |
+  2024-Q3 deploy-gpu 채널 데이터 수집 완료. 49개 메시지, 8명 참여, 37개 스레드.
+  Q3에는 VESSL A100 서버 2대(sxm-01, sxm-02)가 운영되었으며, 도균/진형 등 연구원들이 활용하였다.
+  Alibaba에서 xionic 모델 시리즈(xionic-ko-llama-3-70b, xionic-1-72b-20240610)가 GPU 0-3 및
+  4-7에 분산 배포되었다. L40s GPU가 worker100, worker101에 장착되어 llama3.1-xionic-1-72b
+  모델이 배포되었다. VESSL을 통해 100TB NAS가 /mnt/nas에 마운트되어 대용량 스토리지가
+  확보되었다. worker14에서 NVIDIA 드라이버 NVML 이슈가 지속되었으며, apt 자동 업데이트로 인한
+  드라이버 불일치가 원인으로 확인되었다. WireGuard VPN 프로필 관리가 이루어졌으며, PoC 장비
+  변경으로 worker6 구성이 변경되었다. baeksw98, 최병현(Hyune-c), song이 새로 합류하였다.
+topics:
+  - VESSL A100 서버 운영 (sxm-01, sxm-02)
+  - Alibaba xionic 모델 시리즈 분산 배포
+  - L40s GPU 배포 (worker100, worker101)
+  - 100TB NAS 마운트 (VESSL)
+  - worker14 NVIDIA NVML 이슈 지속 (apt 자동 업데이트 원인)
+  - WireGuard VPN 관리
+key_discussions:
+  - thread_ts: '1720500000.000000'
+    date: '2024-07-09'
+    reply_count: 5
+    text_preview: L40s worker100/101 배포 - llama3.1-xionic-1-72b 모델 서빙 시작
+  - thread_ts: '1723000000.000000'
+    date: '2024-08-07'
+    reply_count: 7
+    text_preview: worker14 NVML 이슈 - apt 자동 업데이트로 인한 드라이버 불일치 원인 분석
+  - thread_ts: '1725500000.000000'
+    date: '2024-09-05'
+    reply_count: 4
+    text_preview: VESSL 100TB NAS 마운트 완료 - /mnt/nas 경로 설정
+  - thread_ts: '1726500000.000000'
+    date: '2024-09-16'
+    reply_count: 3
+    text_preview: WireGuard VPN 프로필 관리 및 접근 제어
+terminology:
+  - term: "sxm-01/sxm-02"
+    definition: "VESSL AI에서 제공하는 A100 SXM GPU 서버 인스턴스"
+    aliases: ["vessl-01", "vessl-02"]
+    context: "sxm-01은 도균/진형 사용, sxm-02는 다양한 연구원이 공유"
+  - term: "NAS"
+    definition: "Network Attached Storage - 100TB 네트워크 스토리지"
+    aliases: []
+    context: "VESSL을 통해 /mnt/nas에 마운트, 대용량 데이터셋 및 모델 저장"
+  - term: "WireGuard"
+    definition: "고성능 VPN 프로토콜"
+    aliases: []
+    context: "온프레미스 GPU 서버 원격 접근을 위한 VPN 프로필 관리"
+  - term: "llama3.1-xionic-1-72b"
+    definition: "LLaMA 3.1 기반 Sionic AI 파인튜닝 72B 모델"
+    aliases: []
+    context: "L40s GPU(worker100, worker101)에서 서빙"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,97 @@
+channel:
+  id: C07MK1QMWV6
+  name: research-vec-embedding
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:30:12'
+statistics:
+  total_messages: 46
+  total_threads: 32
+  active_users: 6
+  avg_messages_per_day: 1.1
+key_discussions:
+- thread_ts: '1769484124.381829'
+  date: '2026-01-27'
+  reply_count: 14
+  text_preview: <https://huggingface.co/llm-semantic-router/mmbert-embed-32k-2d-matryoshka|https://huggingface.co/ll
+- thread_ts: '1768267934.430959'
+  date: '2026-01-13'
+  reply_count: 12
+  text_preview: '<https://arxiv.org/abs/2601.03666|https://arxiv.org/abs/2601.03666>
+
+
+    일본산 멀티모달 임베딩'
+- thread_ts: '1768383160.668189'
+  date: '2026-01-14'
+  reply_count: 10
+  text_preview: 오늘의 집 리트리벌 모델 학습 테크 블로그
+- thread_ts: '1768269923.416009'
+  date: '2026-01-13'
+  reply_count: 10
+  text_preview: <https://arxiv.org/abs/2601.07125>
+- thread_ts: '1769741755.810489'
+  date: '2026-01-30'
+  reply_count: 8
+  text_preview: <https://fresh-stack.github.io/|https://fresh-stack.github.io/>
+- thread_ts: '1769900504.827099'
+  date: '2026-02-01'
+  reply_count: 7
+  text_preview: '<https://www.alphaxiv.org/abs/2601.21853>
+
+    <https://www.alphaxiv.org/abs/2601.21262>'
+- thread_ts: '1768615407.408649'
+  date: '2026-01-17'
+  reply_count: 7
+  text_preview: '<https://arxiv.org/pdf/2509.12892|https://arxiv.org/pdf/2509.12892>
+
+
+    Conan-Embedding-v2: Training an'
+- thread_ts: '1767408527.385499'
+  date: '2026-01-03'
+  reply_count: 7
+  text_preview: 2506.21579v1.pdf <https://share.google/H6cv3q1GivlGEAKq0|https://share.google/H6cv3q1GivlGEAKq0>
+- thread_ts: '1770772848.992079'
+  date: '2026-02-11'
+  reply_count: 6
+  text_preview: '<https://arxiv.org/abs/2602.05787|https://arxiv.org/abs/2602.05787>
+
+    <@U0A6Z4CGHUH>'
+- thread_ts: '1770447802.208639'
+  date: '2026-02-07'
+  reply_count: 5
+  text_preview: '<https://www.arxiv.org/pdf/2506.16552|https://www.arxiv.org/pdf/2506.16552>
+
+
+    RE V E L A: DENSE RETRI'
+- thread_ts: '1769684760.014829'
+  date: '2026-01-29'
+  reply_count: 5
+  text_preview: '<https://arxiv.org/pdf/2507.05513|https://arxiv.org/pdf/2507.05513>
+
+
+    Llama Nemoretriever Colembed: T'
+- thread_ts: '1769397088.724719'
+  date: '2026-01-26'
+  reply_count: 5
+  text_preview: '<https://arxiv.org/pdf/2408.16672>
+
+
+    Jina-ColBERT-v2: A General-Purpose Multilingual Late Interaction'
+- thread_ts: '1769434706.386759'
+  date: '2026-01-26'
+  reply_count: 4
+  text_preview: <https://huggingface.co/blog/thebajajra/rexrerankers|https://huggingface.co/blog/thebajajra/rexreran
+- thread_ts: '1768646992.138369'
+  date: '2026-01-17'
+  reply_count: 4
+  text_preview: <https://huggingface.co/voyageai/voyage-4-nano> <https://blog.voyageai.com/2026/01/15/voyage-4/>
+- thread_ts: '1768377811.205749'
+  date: '2026-01-14'
+  reply_count: 4
+  text_preview: Query encoder만 학습하는 Colbert 논문
+metadata:
+  created_at: '2026-02-13T16:30:12'
+  synced_by: sync_fast.py

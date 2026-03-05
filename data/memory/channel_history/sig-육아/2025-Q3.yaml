@@ -1,0 +1,46 @@
+channel:
+  id: C07KHG3C8N6
+  name: sig-육아
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 22
+  active_users: 4
+  avg_messages_per_day: 1.1
+summary: |
+  핵심 멤버(Noah, 신희수, 송명하) 중심으로 꾸준히 육아 일상이 공유된 분기. Noah의 아이는 101일차에 갑자기 기어다니기 시작하고, 거울 보기를 좋아하며, 만성수면부족 속에서도 급성장했다. 생후 5개월에 이미 서려고 하는 모습에 "이게 맞나"라는 반응이 있었다. 이가 나면서 뭐든지 물기 시작하고, "빵실한" 체형이 화제였다. 신희수의 해솔이는 현실 육아의 고충, 외출 시 즐거워하는 모습을 공유했다. 송명하의 하준이는 생일에 "달팽이랑 같이 밥먹으면서 놀고 싶어"라는 귀여운 소망(10개 답변), 인생 5년차의 귀차니즘, 최고의 생일 케이크를 공유했다.
+topics:
+  - 아기 성장 (기어다니기, 서기 시도, 이 나기)
+  - 수면 부족 (만성수면부족)
+  - 어린이 성장 (하준이 5세 생일)
+  - 외출/나들이
+key_discussions:
+  - thread_ts: '1754289339.320569'
+    date: '2025-08-04'
+    topic: 하준이 생일 소원(달팽이랑 밥먹기)
+    reply_count: 10
+  - thread_ts: '1752155337.957429'
+    date: '2025-07-10'
+    topic: 일하게해주세요(육아 고충)
+    reply_count: 9
+  - thread_ts: '1753424363.455349'
+    date: '2025-07-25'
+    topic: 101일차 기어다니기 시작
+    reply_count: 8
+  - thread_ts: '1752217178.711459'
+    date: '2025-07-11'
+    topic: 송명하 아이 일상
+    reply_count: 8
+  - thread_ts: '1751427554.575949'
+    date: '2025-07-02'
+    topic: 거울 보기 좋아하는 아기
+    reply_count: 8
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

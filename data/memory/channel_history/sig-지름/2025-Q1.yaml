@@ -1,0 +1,68 @@
+channel:
+  id: C06S3EQ9X1T
+  name: sig-지름
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 45
+  total_threads: 30
+  active_users: 14
+  avg_messages_per_day: 2.0
+summary: |
+  키보드/오디오 장비에 대한 열기가 높았던 분기. 이강욱이 새 멤버로 합류하며 수월우 이어폰(엣지, 골든에이지), Keyball61 분할 키보드, HD600 헤드폰 등 오디오/키보드 장비를 적극 공유했다. 백은주는 rainy75 키보드를, hyunwoo는 쿠팡에서 키보드를 구매했다. Noah는 2000원짜리 1인치 모니터, 도라에몽 모자, 아르타니스 장난감, 혜원님 선물을 구매했고, 정세민은 알리 제품, 이세돌 굿즈, 아이폰 17에어 후면 유출 소식을 공유했다. 김혜원은 수경(수영 고글) 업그레이드, 포켓몬 키캡, 반려동물 용품을 구매했다. 권혜선(Jada Gwon)이 채널에 합류하여 위스키 구매를 공유했고, 송명하는 전투가방(백팩)을 고민하며 27개 답변이 달린 큰 논의가 있었다.
+topics:
+  - 키보드 (Keyball61, rainy75, 키캡)
+  - 오디오/이어폰 (수월우, HD600)
+  - 스마트폰 (아이폰 17에어 루머)
+  - 선물 (혜원님 선물, 도라에몽 모자)
+  - 반려동물 용품
+  - 위스키
+  - 가방 (전투가방/백팩)
+  - 피규어/장난감 (아르타니스)
+key_discussions:
+  - thread_ts: '1736319996.712139'
+    date: '2025-01-08'
+    topic: 수영 관련 장비 구매 고민
+    reply_count: 37
+  - thread_ts: '1737348465.598539'
+    date: '2025-01-20'
+    topic: 전투가방(백팩) 추천 논의
+    reply_count: 27
+  - thread_ts: '1737373313.497779'
+    date: '2025-01-20'
+    topic: 인체공학 키보드(autokeybo) 논의
+    reply_count: 20
+  - thread_ts: '1737701770.147669'
+    date: '2025-01-24'
+    topic: 알리 제품(코인상점 할인) 공유
+    reply_count: 19
+  - thread_ts: '1736319810.423849'
+    date: '2025-01-08'
+    topic: 구매 공유
+    reply_count: 18
+  - thread_ts: '1741774981.068159'
+    date: '2025-03-12'
+    topic: 수경(수영 고글) 업그레이드
+    reply_count: 17
+  - thread_ts: '1740480961.262419'
+    date: '2025-02-25'
+    topic: 혜원님 선물 구매
+    reply_count: 17
+  - thread_ts: '1737708223.570319'
+    date: '2025-01-24'
+    topic: 수월우 이어폰(엣지, 골든에이지) 구매
+    reply_count: 15
+terminology:
+  - term: "Keyball61"
+    definition: "분할형 기계식 키보드에 트랙볼이 내장된 제품"
+    context: "이강욱이 손목 건강을 위해 구매"
+  - term: "수월우"
+    definition: "Moondrop, 중국 이어폰 브랜드"
+    context: "이강욱이 엣지, 골든에이지 모델 구매"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

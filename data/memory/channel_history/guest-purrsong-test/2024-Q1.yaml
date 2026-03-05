@@ -1,0 +1,27 @@
+channel:
+  id: C06KNUFTPDL
+  name: guest-purrsong-test
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  Purrsong 고객사 테스트 채널 초기 설정. hhhssw가 채널에 참여한 것 외에 실질적인 대화 없음.
+  Storm Answer 서비스 테스트를 위한 채널 준비 단계로 보임.
+topics:
+  - Purrsong 고객사 채널 설정
+key_discussions: []
+terminology:
+  - term: "Purrsong"
+    definition: "반려동물(고양이) 헬스케어 IoT 기업"
+    context: "Storm Answer 테스트 대상 고객사"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

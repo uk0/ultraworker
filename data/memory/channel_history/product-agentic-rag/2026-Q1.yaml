@@ -1,0 +1,360 @@
+channel:
+  id: C0A56TC8K9R
+  name: product-agentic-rag
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-26T04:12:00'
+statistics:
+  total_messages: 150
+  total_threads: 75
+  active_users: 15
+  avg_messages_per_day: 2.6
+summary: |
+  2026-Q1 product-agentic-rag channel covers the development and iteration of Sionic AI's
+  Agentic RAG system (previously called Logic RAG). The team transitioned from rule-based
+  RAG search logic to an agent-driven approach where an LLM autonomously decides search
+  strategy, skill usage, and termination. Key activities include: multi-round agent
+  architecture design (5-stage pipeline), fact extraction and deduplication improvements,
+  chunk expansion skill development, debug web UI creation, STORM product integration
+  preparation, and extensive QA testing with financial documents (loan/mortgage queries).
+  The channel was renamed from "product-logic-rag" to "product-agentic-rag" on Jan 28.
+  The team targets a March beta release. Active participants: Kim Hyewon (PM/testing lead),
+  Kang Seongwoo (core backend dev), Jeong Seokhyun (research/architecture), Kim Suwon
+  (infra/carrier), Kim Bugyo (QA/testing), with contributions from Sigrid Jin, Yang Hojin,
+  and others.
+topics:
+  - name: "Agentic RAG Architecture"
+    description: >
+      Multi-stage pipeline design: (1) File discovery via lexical+semantic metadata search,
+      (2) Automatic semantic chunk search across discovered files, (3) Agent-driven deep
+      investigation with skill selection (lexical search, semantic search, chunk expansion),
+      (4) Termination verification with forced double-check, (5) Sub-agent final formatting.
+      Discussed hierarchical agent patterns (top-tier planner, mid-level, worker) and
+      adaptive RAG routing based on query complexity.
+    participants:
+      - "Kang Seongwoo (U08GLL0SK2S)"
+      - "Jeong Seokhyun (U095HKJPKTK)"
+      - "Kim Hyewon (U05T2RW7PE2)"
+    first_mentioned: '2026-01-05'
+  - name: "Skill Development"
+    description: >
+      Skills being developed and iterated: chunk search, chunk expansion (expand_context),
+      query expansion, web search, keyword search metadata, search metadata, synthesize.
+      Discussion on new skills needed: read specific page of document, search within
+      specific document, get document page count, get document table of contents.
+      Added stop button, implicit knowledge (ammuji) frontend, skill feedback visibility.
+    participants:
+      - "Kang Seongwoo (U08GLL0SK2S)"
+      - "Jeong Seokhyun (U095HKJPKTK)"
+      - "Kim Hyewon (U05T2RW7PE2)"
+    first_mentioned: '2026-01-06'
+  - name: "Fact Extraction & Quality"
+    description: >
+      Major issues addressed: duplicate fact extraction (91 facts by turn 6), fact extractor
+      hallucinating non-existent information, conflicting facts causing agent confusion,
+      information loss during extraction preventing main brain from getting complete data.
+      Solutions: brute-force fact extraction + deduplication + improved fact resolution,
+      per-chunk fact/summary extraction, tighter prompts to prevent fabrication, page-level
+      fact extraction from found chunks' source pages.
+    participants:
+      - "Kang Seongwoo (U08GLL0SK2S)"
+      - "Kim Hyewon (U05T2RW7PE2)"
+      - "Jeong Seokhyun (U095HKJPKTK)"
+    first_mentioned: '2026-01-22'
+  - name: "Performance & Speed"
+    description: >
+      Agent running too many rounds, being "overly cautious" (not stopping when enough
+      info gathered), duplicate skill execution bug discovered (same parameters repeated),
+      LLM model optimization (main brain and final answer planning use better model,
+      sub-tasks use lighter model). Speed improvements achieved by mid-February.
+    participants:
+      - "Jeong Seokhyun (U095HKJPKTK)"
+      - "Kim Hyewon (U05T2RW7PE2)"
+      - "Kang Seongwoo (U08GLL0SK2S)"
+    first_mentioned: '2026-02-05'
+  - name: "STORM Integration"
+    description: >
+      Preparation to integrate Agentic RAG into STORM product. Tasks: SSE implementation,
+      chunk carrier format compatibility, UI design especially for detailed log view.
+      Carrier node setup for dev deployment, dev URL migration from on-prem to OCI.
+      React port to Vercel completed.
+    participants:
+      - "Kim Hyewon (U05T2RW7PE2)"
+      - "Kang Seongwoo (U08GLL0SK2S)"
+      - "Kim Suwon (U07RASZTPFA)"
+      - "Kim Bugyo (U08TPBS7FHR)"
+    first_mentioned: '2026-02-05'
+  - name: "Testing & QA"
+    description: >
+      Extensive testing with financial documents (loan/mortgage info). Test queries include
+      apartment loan rates, financial statement data extraction (revenue, COGS, gross profit,
+      total assets), contact info lookup. Test targets: Green Optics securities filing,
+      Paju Unjung A2 Hoban Summit mortgage, Geumho Eoulim apartment, Dunchon Jugong
+      apartment. Ground truth comparison for accuracy validation. Aaron Judge baseball
+      stats used as non-financial test case.
+    participants:
+      - "Kim Hyewon (U05T2RW7PE2)"
+      - "Kim Bugyo (U08TPBS7FHR)"
+      - "Jeong Seokhyun (U095HKJPKTK)"
+    first_mentioned: '2026-01-06'
+  - name: "Debug Web UI"
+    description: >
+      Debug viewer built at dev-agent-rag.sionic.tech/debug and dev-agent-rag.sionic.im/debug.
+      Shows agent rounds, skill usage, search results. Issues found: event streaming timing
+      lag, query being sent multiple times. Web search skill added to debug UI. React port
+      deployed to Vercel (agent-rag.vercel.app).
+    participants:
+      - "Kang Seongwoo (U08GLL0SK2S)"
+      - "Kim Hyewon (U05T2RW7PE2)"
+    first_mentioned: '2026-01-12'
+key_discussions:
+  - date: '2026-01-05'
+    thread_ts: '1767617072.476229'
+    topic: "Initial Logic RAG review and testing"
+    summary: "Sigrid Jin shared Logic RAG for review, Kim Hyewon started testing"
+    participants: ["Sigrid Jin", "Kim Hyewon"]
+  - date: '2026-01-06'
+    thread_ts: '1767673823.282529'
+    topic: "New skill proposals for Agentic RAG"
+    summary: >
+      Kim Hyewon proposed key skills: read specific page, search within specific document,
+      get page count, get table of contents. Emphasized that new skills matter more than
+      just round-based search.
+    participants: ["Kim Hyewon", "Sigrid Jin"]
+  - date: '2026-01-08'
+    thread_ts: '1767870062.296929'
+    topic: "Agentic RAG progress report"
+    summary: "Jeong Seokhyun shared Logic RAG / Agentic RAG development progress (33 replies)"
+    participants: ["Jeong Seokhyun", "Kim Hyewon", "Kang Seongwoo"]
+  - date: '2026-01-09'
+    thread_ts: '1767960818.737259'
+    topic: "Planner design discussion"
+    summary: >
+      Kim Hyewon proposed planner architecture: use query + expanded search queries +
+      extracted facts to reason about what information is needed, form hypotheses, and
+      generate N search queries as a single round rather than sequential rounds.
+    participants: ["Kim Hyewon"]
+  - date: '2026-01-19'
+    thread_ts: '1768794446.771239'
+    topic: "Logic RAG vs Agentic RAG naming/direction"
+    summary: >
+      Kim Hyewon proposed renaming from Logic RAG to Agentic RAG, distinguishing:
+      Logic RAG = rule-controlled search optimization, Agentic RAG = agent-controlled
+      search optimization. Channel renamed accordingly.
+    participants: ["Kim Hyewon"]
+  - date: '2026-01-20'
+    thread_ts: '1768911894.120909'
+    topic: "Thought experiment with manual skill execution"
+    summary: >
+      Kim Hyewon ran thought experiments by acting as the skill executor while the LLM
+      did planning only, to understand what skills are needed before building them.
+    participants: ["Kim Hyewon"]
+  - date: '2026-01-21'
+    thread_ts: '1769018828.690719'
+    topic: "New 5-stage agent architecture"
+    summary: >
+      Kang Seongwoo shared new experimental agent RAG design: (1) File discovery,
+      (2) Full semantic search, (3) Agent-driven deep investigation, (4) Termination
+      verification with forced recheck, (5) Sub-agent formatting. 21 replies.
+    participants: ["Kang Seongwoo"]
+  - date: '2026-01-22'
+    thread_ts: '1769049666.629539'
+    topic: "Agentic RAG survey paper review"
+    summary: >
+      Jeong Seokhyun shared arxiv paper on Agentic RAG patterns. Discussed hierarchical
+      agents (boss-manager-worker), adaptive RAG routing by query difficulty, and need
+      for pre-planning query analysis beyond simple keyword expansion.
+    participants: ["Jeong Seokhyun"]
+  - date: '2026-01-22'
+    thread_ts: '1769058402.749009'
+    topic: "Weekly meeting 01/22 - key action items"
+    summary: >
+      Action items: upgrade main brain/final answer model, bug investigation, per-chunk
+      fact extraction, add input context to each skill call, add final answer planning
+      logic, open API endpoint with query template + multi-turn parameters.
+    participants: ["Kim Hyewon", "Kang Seongwoo", "Jeong Seokhyun"]
+  - date: '2026-01-27'
+    thread_ts: '1769521608.163149'
+    topic: "Dev deployment and API endpoint"
+    summary: >
+      Kang Seongwoo deployed to dev-agent-rag.sionic.im with debug viewer. Shared
+      curl example for /v1/ask endpoint with parameters: question, history, model,
+      max_turns, include_references, callback_url.
+    participants: ["Kang Seongwoo"]
+  - date: '2026-01-29'
+    thread_ts: '1769666498.793009'
+    topic: "Weekly meeting - skill improvements plan"
+    summary: >
+      Planned improvements: search skill changes, data format changes for main brain,
+      final answer generation skill, memory variables for cross-round results,
+      language setting parameter.
+    participants: ["Kim Hyewon", "Kang Seongwoo"]
+  - date: '2026-02-02'
+    thread_ts: '1770008133.348059'
+    topic: "Web search skill added"
+    summary: "Kang Seongwoo added web search capability to agent RAG (44 replies)"
+    participants: ["Kang Seongwoo", "Kim Hyewon"]
+  - date: '2026-02-05'
+    thread_ts: '1770267401.434289'
+    topic: "Improvement sprint kickoff"
+    summary: >
+      Sprint items: stop button, give-up after 3 failed attempts, mention conflicting info,
+      implicit knowledge frontend, duplicate fact extraction bug fix, prevent fabrication
+      in fact extraction.
+    participants: ["Kim Hyewon"]
+  - date: '2026-02-05'
+    thread_ts: '1770275068.313329'
+    topic: "Carrier node dev deployment"
+    summary: "Kim Suwon set up carrier node for dev deployment (92 replies, major infra thread)"
+    participants: ["Kim Suwon", "Kang Seongwoo", "Kim Hyewon"]
+  - date: '2026-02-09'
+    thread_ts: '1770597207.962079'
+    topic: "Weekly improvement notes - completed items"
+    summary: >
+      Completed: stop button, implicit knowledge frontend, duplicate fact bug found,
+      fact extraction prompt tightening, instant answer generation button, skill feedback
+      visibility. Remaining: give-up logic, conflicting info handling.
+    participants: ["Kang Seongwoo"]
+  - date: '2026-02-09'
+    thread_ts: '1770640897.279849'
+    topic: "Extensive loan query testing with implicit knowledge"
+    summary: >
+      Testing Paju Unjung A2 Hoban Summit mortgage rate queries with added implicit
+      knowledge. 56 replies - most active testing thread of the quarter.
+    participants: ["Kim Hyewon", "Kang Seongwoo"]
+  - date: '2026-02-11'
+    thread_ts: '1770782376.350079'
+    topic: "Page-level fact extraction approach"
+    summary: >
+      Kim Hyewon proposed extracting facts from full pages of found chunks rather than
+      just chunks, to prevent information loss. Problem: too much info lost during
+      chunk-level fact extraction.
+    participants: ["Kim Hyewon", "Kang Seongwoo"]
+  - date: '2026-02-11'
+    thread_ts: '1770781164.888099'
+    topic: "Speed issues root cause found"
+    summary: >
+      Jeong Seokhyun found duplicate skill execution bug: dedup logic existed but frontend
+      showed removed rounds while LLM kept running identical operations behind the scenes.
+    participants: ["Jeong Seokhyun"]
+  - date: '2026-02-12'
+    thread_ts: '1770883670.386079'
+    topic: "Arbiter reference for architecture"
+    summary: >
+      Kim Hyewon suggested referencing Juwoon's Arbiter project as it has similar patterns
+      to Agentic RAG. Offered to arrange cross-team knowledge sharing.
+    participants: ["Kim Hyewon"]
+  - date: '2026-02-19'
+    thread_ts: '1771477786.880329'
+    topic: "STORM integration retry"
+    summary: >
+      Team restarted STORM integration effort. Tasks assigned: SSE work, chunk carrier
+      format adaptation, UI design for detailed logs.
+    participants: ["Kim Hyewon", "Kang Seongwoo", "Kim Suwon", "Kim Bugyo"]
+  - date: '2026-02-26'
+    thread_ts: '1772079132.969109'
+    topic: "Meeting summary - long-term memory & search ratio"
+    summary: >
+      Latest meeting notes: long-term memory (pattern learning) and tracking
+      searched chunks vs total chunks ratio as quality metric.
+    participants: ["Kang Seongwoo"]
+terminology:
+  - term: "Agentic RAG"
+    definition: "Agent-driven Retrieval-Augmented Generation where an LLM autonomously decides search strategy, skill usage, and termination"
+    aliases: ["에이전틱 레그", "에이레그", "agent-rag", "Agent RAG"]
+    context: "Evolved from Logic RAG, channel renamed to reflect this direction on Jan 28"
+  - term: "Logic RAG"
+    definition: "Rule-based RAG search optimization, predecessor to Agentic RAG"
+    aliases: ["로직래그", "로직레그"]
+    context: "Original approach, replaced by Agentic RAG philosophy"
+  - term: "Main Brain"
+    definition: "The primary LLM that decides which skills to use, when to stop, and orchestrates the overall search process"
+    aliases: ["메인뇌", "메인 뇌"]
+    context: "Uses a higher-quality model (e.g., Gemini 3 Flash Preview)"
+  - term: "Sub Brain"
+    definition: "Secondary LLMs used for individual skill execution like fact extraction and search"
+    aliases: ["서브뇌", "서브 뇌"]
+    context: "Uses lighter/cheaper models for cost optimization"
+  - term: "Fact Extraction"
+    definition: "Process of extracting discrete factual statements from retrieved chunks for the main brain to reason over"
+    aliases: ["팩트추출", "팩트 추출"]
+    context: "Major quality bottleneck - issues with duplication, hallucination, and information loss"
+  - term: "Chunk Expansion"
+    definition: "Skill that reads surrounding context (adjacent chunks/pages) around a found chunk for more complete information"
+    aliases: ["청크 확장", "expand_context"]
+    context: "Key skill for preventing information loss in narrow chunk retrieval"
+  - term: "Implicit Knowledge"
+    definition: "User-provided hints or domain knowledge injected into the agent to guide search behavior"
+    aliases: ["암묵지"]
+    context: "Added to frontend in Feb, allows customizing agent behavior per query"
+  - term: "STORM"
+    definition: "Sionic AI's main product platform where Agentic RAG will be integrated"
+    aliases: ["스톰"]
+    context: "Dev instance at sionicstorm-dev.vercel.app"
+  - term: "Carrier"
+    definition: "Infrastructure component that routes requests to Agentic RAG backend"
+    aliases: ["캐리어", "캐리에어"]
+    context: "Handles chunk format compatibility and node deployment"
+  - term: "Query Expansion"
+    definition: "Technique of generating multiple reformulated search queries from the original user query"
+    aliases: ["쿼리 익스펜션"]
+    context: "Used in early rounds to broaden search coverage"
+  - term: "Planner"
+    definition: "Planning component that analyzes query difficulty and determines search strategy before skill execution"
+    aliases: ["플래너"]
+    context: "Proposed to analyze query intent and form search hypotheses"
+  - term: "Round"
+    definition: "One cycle of skill execution and evaluation by the main brain"
+    aliases: ["라운드"]
+    context: "Debate on what constitutes a round - single skill call vs batch of N searches"
+  - term: "Synthesize"
+    definition: "Final answer generation skill, with built-in forced double-check before allowing completion"
+    aliases: []
+    context: "First call is rejected to force agent to verify completeness"
+  - term: "Queensguard"
+    definition: "Internal system or environment referenced during STORM integration"
+    aliases: ["퀸즈가드"]
+    context: "Mentioned in context of deploying Agentic RAG components"
+  - term: "Arbiter"
+    definition: "Internal project by Juwoon with similar patterns to Agentic RAG"
+    aliases: ["아비터"]
+    context: "Referenced as potential architectural inspiration"
+  - term: "OCI"
+    definition: "Oracle Cloud Infrastructure, target deployment environment"
+    aliases: []
+    context: "Dev URL migrated from on-prem to OCI at dev-agent-rag.sionic.im"
+  - term: "Text2SQL"
+    definition: "Converting natural language to SQL queries for structured data retrieval"
+    aliases: []
+    context: "Proposed as a skill for Agentic RAG to handle DB-type Excel/SQL searches"
+decisions:
+  - date: '2026-01-19'
+    decision: "Rename project direction from Logic RAG to Agentic RAG"
+    context: "Logic RAG uses rules, Agentic RAG lets LLM control search autonomously"
+  - date: '2026-01-20'
+    decision: "Set March 2026 as beta release target date"
+    context: "Need to ship to maintain velocity, frontend design may push past early March"
+  - date: '2026-01-22'
+    decision: "Use better model for main brain and final answer planning, lighter model for sub-tasks"
+    context: "Balance quality and cost/speed"
+  - date: '2026-01-22'
+    decision: "Add per-chunk fact/summary extraction and skill input context"
+    context: "Improve agent reasoning by giving more context to each step"
+  - date: '2026-01-26'
+    decision: "Text2SQL skill should be owned by Agentic RAG team"
+    context: "DB-type Excel SQL search fits naturally in RAG pipeline"
+  - date: '2026-02-05'
+    decision: "Add conflicting info handling and give-up-after-3-attempts logic"
+    context: "Agent was running endlessly and not acknowledging contradictory facts"
+  - date: '2026-02-11'
+    decision: "Switch to page-level fact extraction from chunk-level"
+    context: "Too much information lost when extracting facts from small chunks only"
+  - date: '2026-02-19'
+    decision: "Resume STORM integration with SSE, carrier format, and UI work"
+    context: "Performance reached acceptable level for product integration"
+metadata:
+  created_at: '2026-02-26T04:12:00'
+  synced_by: sync-channel-history

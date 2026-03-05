@@ -1,0 +1,27 @@
+channel:
+  id: C07KHG3C8N6
+  name: sig-육아
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 2.8
+summary: |
+  sig-육아 채널이 2024년 9월에 개설된 분기. Noah(고석현)가 채널을 만들고 신희수가 합류하여 아기(해솔이) 사진과 성장 이야기를 공유하기 시작했다. 입에 뭐든 닿으면 핥핥하는 모습, sig의 의미(Special Interest Group) 질문 등 초기 대화가 오갔다. Sigrid Jin과 정세민(Sem)도 합류했다.
+topics:
+  - 채널 개설
+  - 아기 성장 (핥핥, 사진 공유)
+key_discussions: []
+terminology:
+  - term: "해솔"
+    definition: "신희수의 자녀 이름"
+    context: "sig-육아 채널의 주요 주인공 중 하나"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

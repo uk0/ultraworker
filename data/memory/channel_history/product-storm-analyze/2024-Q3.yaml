@@ -1,0 +1,48 @@
+channel:
+  id: C05TNDBU38X
+  name: product-storm-analyze
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 3
+  total_threads: 2
+  active_users: 3
+  avg_messages_per_day: 0.03
+summary: >
+  2024년 3분기는 Analyze 채널의 활동이 매우 저조했던 유지보수 시기였다. 김혜원이 스톰 콘솔에서 Analyze
+  에러를 발견하여 진형에게 원인 파악을 요청했고, 정세민(Sem)이 Analyze 관련 작업에 참여하기 시작했다
+  (67개 답글의 상세 논의). 백은주가 채널에 새로 참여했다.
+topics:
+  - name: "Analyze 에러 확인"
+    count: 1
+    summary: "김혜원이 스톰 콘솔에서 Analyze 에러 발견. 진형에게 원인 파악 요청."
+  - name: "정세민 Analyze 작업 참여"
+    count: 1
+    summary: "정세민(Sem)이 Analyze 관련 작업에 참여. 67개 답글의 상세 논의."
+key_discussions:
+  - thread_ts: '1723783795.626129'
+    date: '2024-08-16'
+    title: "스톰 콘솔 Analyze 에러"
+    summary: "김혜원이 스톰 콘솔에서 Analyze 에러를 발견하여 진형에게 원인 파악 요청. 3개 답글."
+    participants: ["U05T2RW7PE2", "U05QCA7JTD5"]
+    decisions: []
+    action_items: ["에러 원인 파악"]
+    keywords: ["에러", "콘솔", "Analyze", "디버깅"]
+    relevance_score: 0.7
+  - thread_ts: '1727153289.818239'
+    date: '2024-09-24'
+    title: "정세민 Analyze 관련 작업"
+    summary: "정세민이 Analyze 관련 작업 내용 공유. 67개 답글의 대규모 논의 스레드로, 상세한 기술 논의가 이루어짐."
+    participants: ["U06CLS6E694"]
+    decisions: []
+    action_items: []
+    keywords: ["Analyze", "개발"]
+    relevance_score: 0.7
+terminology: []
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual

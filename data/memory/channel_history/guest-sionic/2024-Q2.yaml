@@ -1,0 +1,29 @@
+channel:
+  id: C058FGC6DK2
+  name: guest-sionic
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 2
+  active_users: 5
+  avg_messages_per_day: 5.5
+summary: |
+  2024-Q2 guest-sionic 채널 데이터 수집 완료. 11개 메시지, 5명 참여, 2개 스레드.
+  포티투마루 양호진님을 사이오닉 Slack Connect로 초대. 외부 협력자(maywell 포함)도 라운지에 초대. Slack Connect 기능 사용법 문의 등 게스트 온보딩 활동.
+topics:
+  - "포티투마루 양호진님 Slack Connect 초대"
+  - "게스트 온보딩"
+key_discussions:
+  - title: "포티투마루 양호진님 초대"
+    summary: "사이오닉 게스트 라운지에 포티투마루 양호진님을 Slack Connect로 초대. 진형님과의 기존 인맥을 통한 교류"
+terminology:
+  - term: "포티투마루"
+    definition: "AI 기술 기업. 양호진님이 소속"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,98 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 99
+  total_threads: 57
+  active_users: 13
+  avg_messages_per_day: 2.2
+summary: |
+  리서치팀의 본격적인 연구 활동이 시작된 분기. 주요 연구 주제로 Retriever/Reranker, VLM for Document AI, multi-modal DPO, GraphRAG, 한국어 임베딩 모델 등이 논의되었다.
+  AICA GPU 지원 사업 신청(미선정), NIPA 서류 작성, Qwen팀과의 기술 미팅(알리바바), 데이콘 IR 대회 참가 논의 등 외부 활동도 활발했다.
+  리서치 프로젝트 공유 체계 및 Research Weekly 진행 방식에 대한 회고가 이루어졌으며, 맥락 공유의 중요성이 강조되었다.
+  baeksw98(백상원)이 인턴으로 참여하여 Interpretable RAG, LLM 머징 기법 등을 연구하였고, 리서치 인턴 모집 과제도 구체화되었다.
+  xionic-mini 모델(10B 미만 최고 성능 공개모델)을 사내 서버에 배포하여 STORM 테스트를 진행하였다.
+topics:
+  - name: "RAG 연구"
+    mention_count: 15
+    description: "GraphRAG, chunking 전략, hybrid search, CoT RAG, reranker fine-tuning 등 RAG 전반 연구"
+  - name: "한국어 임베딩 모델"
+    mention_count: 8
+    description: "KoE5, msmarco 한국어 번역, multi-vector/single-vector 비교 등 임베딩 모델 연구"
+  - name: "VLM/멀티모달"
+    mention_count: 7
+    description: "VLM for Document AI, multi-modal DPO, ColPali 등 시각-언어 모델 연구"
+  - name: "GPU 자원 확보"
+    mention_count: 6
+    description: "AICA 지원 사업 신청, 고성능 컴퓨팅 추가 모집, GPU 사용 현황 관리"
+  - name: "리서치 운영 체계"
+    mention_count: 5
+    description: "Research Weekly 진행 방식 회고, 프로젝트 공유 체계 정립, standup 도입 논의"
+  - name: "Qwen 모델"
+    mention_count: 4
+    description: "Qwen2.5-72B 출시, Qwen팀 기술 미팅, 알리바바 협력"
+  - name: "LLM 머징/튜닝"
+    mention_count: 3
+    description: "LLM 머징 기법 블로그 작성, multi-turn 한국어 데이터셋 조사"
+  - name: "특허/논문"
+    mention_count: 3
+    description: "HCLT 논문 제출, 테크 블로그 작성, 특허 관련 논의"
+key_discussions:
+  - date: "2024-08-20"
+    topic: "리서치 프로젝트 공유 체계 회고"
+    participants: ["박우명"]
+    summary: "연구 공유 시 맥락 부족 문제 지적. 결론만 공유하지 말고 판단 과정, 근거, 이유 등 맥락을 함께 공유할 것을 제안"
+  - date: "2024-08-20"
+    topic: "RAG 중점 연구 주제 정리"
+    participants: ["박우명"]
+    summary: "문서 맞춤 chunking, GraphRAG, reranker fine-tuning, CoT RAG, hybrid search 등 핵심 연구 주제 정리"
+  - date: "2024-09-25"
+    topic: "리서치 인턴 과제 구체화"
+    participants: ["박우명"]
+    summary: "Retriever/Reranker, VLM for Document AI, multi-modal DPO, Automatic Prompt Generation, LLM-as-a-judge 5개 과제 제안"
+  - date: "2024-07-11"
+    topic: "GraphRAG 실험"
+    participants: ["Sigrid Jin"]
+    summary: "GraphRAG를 실행하여 실용적 의미 분석. 리랭커 학습 데이터 확보 및 맥락 풍부한 Q-A 생성에 활용 가능성 확인"
+  - date: "2024-07-16"
+    topic: "멀티모달 연구 방향 논의"
+    participants: ["박우명", "Noah"]
+    summary: "백상원 인턴의 멀티모달 연구 방향과 IR 연구 리소스 배분 논의. IR이 시급도가 높으나 멀티모달도 중장기 경쟁력으로 중요"
+  - date: "2024-09-19"
+    topic: "Qwen2.5-72B 출시"
+    participants: ["Noah"]
+    summary: "Qwen2.5-72B-Instruct 출시 직후 알리바바 인프라에 세팅 시작"
+  - date: "2024-09-09"
+    topic: "고성능 컴퓨팅 추가 모집 선정"
+    participants: ["Noah", "dkyoon", "박우명"]
+    summary: "고성능 컴퓨팅 자원 추가 모집에 선정되어 NAS 100TB 마운트 등 인프라 확보"
+terminology:
+  - term: "ColPali"
+    definition: "비전 언어 모델을 활용한 문서 검색 모델로 late interaction matching 메커니즘 사용"
+    aliases: []
+    context: "문서 이미지로부터 고품질 임베딩 생산"
+  - term: "GraphRAG"
+    definition: "Microsoft가 개발한 그래프 기반 RAG 시스템으로 hierarchical structure를 이해하고 비교 질문에 대응"
+    aliases: []
+    context: "RAG 고도화 연구 주제"
+  - term: "AICA"
+    definition: "AI Computing Alliance, GPU 대여 서비스 지원 사업"
+    aliases: []
+    context: "GPU 자원 확보를 위한 외부 지원 사업"
+  - term: "xionic-mini"
+    definition: "10B 미만 크기에서 가장 높은 점수의 한국어 공개모델"
+    aliases: []
+    context: "사내 서버(worker6)에 배포하여 STORM 테스트에 활용"
+  - term: "NIPA"
+    definition: "정보통신산업진흥원, GPU 자원 지원 등 정부 사업 운영"
+    aliases: []
+    context: "GPU 자원 확보를 위한 정부 사업 신청"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

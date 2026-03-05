@@ -1,0 +1,29 @@
+channel:
+  id: C06Q90GS5LL
+  name: product-design-system
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 1
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  채널 활동이 매우 저조한 분기. 새로운 멤버(s.baek, Notion AI)의 채널 참여와 UI 목업 참고 자료 공유만 이루어짐.
+  Sigrid Jin이 UI 목업 참고용 X(Twitter) 계정(@kvnkld) 자료를 김혜원에게 공유함. 디자인 시스템 자체에 대한
+  신규 작업이나 논의는 이루어지지 않은 것으로 보임.
+topics:
+  - UI 목업 참고 자료 공유
+key_discussions:
+  - thread_ts: '1758155352.566479'
+    date: '2025-09-18'
+    topic: 'UI 목업 참고 자료 공유 - X(@kvnkld) 계정의 UI 디자인 자료'
+    participants: ['Sigrid Jin / Jin Hyung Park', '김혜원']
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

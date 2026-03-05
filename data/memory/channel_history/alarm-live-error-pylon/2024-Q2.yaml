@@ -1,0 +1,45 @@
+channel:
+  id: C066D0B9WKC
+  name: alarm-live-error-pylon
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1827
+  total_threads: 75
+  active_users: 13
+  avg_messages_per_day: 30.4
+summary: |
+  Pylon 운영 에러 알림 채널. 1827개 메시지로 에러 급증한 분기.
+  Qdrant 벡터DB 장애가 핵심 이슈로, Dev/Staging Qdrant 503 에러와 collection not found 에러가 다수 발생했다.
+  6월 말에는 Qdrant 컬렉션 미존재 에러(gRPC NOT_FOUND)가 집중 발생하여 검색 서비스에 영향을 미쳤다.
+  Pylon 서버 헬스체크 실패(Live/Staging 모두 503, connection reset)도 빈번했으며,
+  Korean Reranker 서비스 503 장애, Anthropic API 에러(빈 메시지 content, at least one message required)도 발생.
+  Sigrid Jin이 Qdrant 재시작 및 Korean Reranker 복구 등 장애 대응을 주도했다.
+topics:
+  - Qdrant 벡터DB 장애 (503, collection not found)
+  - Pylon 서버 헬스체크 실패 (Live/Staging)
+  - Korean Reranker 서비스 장애
+  - Anthropic API 에러 (빈 메시지)
+  - Qdrant Backup Alert 다수
+  - 문서 파싱 실패 지속
+key_discussions:
+  - date: '2024-06-28'
+    summary: 'Dev Qdrant 재시작 진행 (Sigrid Jin), 503 에러 대량 발생'
+  - date: '2024-06-24'
+    summary: 'Qdrant 컬렉션 미존재 에러 집중 발생, collection doesn''t exist gRPC 에러 다수'
+  - date: '2024-06-21'
+    summary: 'Korean Reranker 503 장애 - 과도한 사용으로 인한 서비스 다운, 별도 머신 이전 결정 (Sigrid Jin)'
+terminology:
+  - term: "Qdrant"
+    definition: "Pylon에서 사용하는 벡터 데이터베이스, 문서 임베딩 저장 및 유사도 검색 담당"
+  - term: "Korean Reranker"
+    definition: "한국어 재순위화 모델 서비스 (ko-reranker.sionic.tech), 검색 결과 정확도 향상용"
+  - term: "Qdrant Backup Alert"
+    definition: "Qdrant 백업 작업 관련 알림, 주기적으로 발생"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,87 @@
+channel:
+  id: C07BJQDM8BV
+  name: product-asmr
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 53
+  total_threads: 39
+  active_users: 10
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 Q4는 ASMR-V2 개발 본격화, 임베딩/리랭커 통합 논의, 외부 서비스(OpenGateway) 셀링 추진,
+  그리고 다수의 신규 모델 지원이 핵심이었던 분기이다.
+  Anthropic extended thinking의 budget_tokens 필수 파라미터 처리 방안이 정리되었고,
+  Upstage solar-pro2 모델 지원 중단 및 claude-3-5-sonnet 지원 종료에 대응했다.
+  임베딩/리랭커 모델을 ASMR에 통합하여 API로 서비스하는 방안이 논의되었고,
+  OpenGateway를 외부 서비스로 셀링하기 위한 운영 측면 정비가 결정되었다.
+  메이웰(Maywell/Elyn)에 ASMR을 통한 Vertex 모델 사용 지원이 시작되었다.
+  ASMR-V2에서 Vertex Gemini VLM(이미지 입력) 지원이 개발되었으며, Gemini 3, GPT-5-2, Claude Opus 4.5,
+  Claude Sonnet 4.5 등 신규 모델 지원이 빠르게 추가되었다.
+  OpenAI Response API 리서치 및 이점 분석이 공유되었고, APIS-Parse에서의 VertexAI 호출 ASMR-V2 전환 작업이 진행되었다.
+  non-stream 요청의 10분 제한 이슈, max_tokens 허용 범위 초과 요청, 이상한 body 형식 요청 등 운영 이슈도 다수 발생했다.
+topics:
+  - ASMR-V2 개발 및 VLM(Vision Language Model) 지원
+  - 임베딩/리랭커 모델 ASMR 통합 논의
+  - OpenGateway 외부 서비스 셀링 추진
+  - 메이웰(Maywell) Vertex 모델 사용 지원
+  - 신규 모델 지원 (Gemini 3, GPT-5-2, Claude Opus 4.5, Claude Sonnet 4.5)
+  - OpenAI Response API 리서치
+  - Anthropic extended thinking budget_tokens 처리
+  - 모델 지원 중단 대응 (solar-pro2, claude-3-5-sonnet, llama-3.1-405b)
+  - 운영 이슈 대응 (non-stream 10분 제한, max_tokens 초과)
+  - APIS-Parse VertexAI 호출 ASMR-V2 전환
+key_discussions:
+  - date: '2025-10-13'
+    summary: Anthropic extended thinking budget_tokens 필수 파라미터 처리 방안 정리
+  - date: '2025-10-20'
+    summary: 긴급 장애 대응 요청 (40 replies)
+  - date: '2025-11-03'
+    summary: 임베딩/리랭커 모델 ASMR 통합 및 API 서비스화 논의 (69 replies)
+  - date: '2025-11-05'
+    summary: 임베딩/리랭커 통합 회의 정리 - 방학 기간 빠른 작업, OpenGateway 외부 셀링 추진, 메이웰 지원
+  - date: '2025-11-18'
+    summary: Gemini 3 ASMR 연동 작업 - 1시간 내 붙이기 목표 (113 replies)
+  - date: '2025-11-24'
+    summary: ASMR-V2 Vertex Gemini VLM 지원 개발 (64 replies)
+  - date: '2025-12-01'
+    summary: Anthropic Claude non-stream 10분 제한 이슈 - 신세계 고객 반복 실패 (46 replies)
+  - date: '2025-12-10'
+    summary: APIS-Parse에서의 VertexAI 호출 ASMR-V2 전환 (47 replies)
+  - date: '2025-12-11'
+    summary: Gemini Pro 3 Preview live 에러 발생 - dev/live 동일 이미지인데 live만 에러 (66 replies)
+  - date: '2025-12-15'
+    summary: OpenAI Response API 이점 분석 공유 - 에이전트형 흐름, 멀티턴, 캐시 활용 등
+  - date: '2025-12-22'
+    summary: Vertex AI 429 에러 대응 - 신규 프로젝트 생성으로 가용성 확보 논의 (17 replies)
+terminology:
+  - term: ASMR-V2
+    definition: ASMR의 차세대 버전. VLM 지원 등 확장된 기능 제공
+    aliases:
+      - asmr-v2
+  - term: VLM
+    definition: Vision Language Model. 이미지 입력을 지원하는 LLM
+  - term: OpenGateway
+    definition: ASMR의 외부 서비스 브랜드명. 외부 고객 대상 LLM API 통합 서비스
+  - term: Response API
+    definition: OpenAI의 새로운 API 규격. Chat Completions API 대비 에이전트형 흐름, 멀티턴, 캐시 활용 등 이점
+  - term: Maywell
+    definition: 외부 협력사(Elyn). ASMR을 통해 Vertex 모델 사용
+    aliases:
+      - 메이웰
+      - Elyn
+  - term: APIS-Parse
+    definition: Storm의 문서 파싱 서비스. VertexAI를 통해 Gemini 모델 호출
+  - term: Gemini 3
+    definition: Google의 차세대 AI 모델 (gemini-3-pro 등)
+    aliases:
+      - 젬삼
+  - term: budget_tokens
+    definition: Anthropic extended thinking에서 추론 깊이를 제어하는 필수 파라미터 (1024 이상)
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: claude-opus-4-6

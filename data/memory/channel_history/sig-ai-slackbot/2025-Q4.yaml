@@ -1,0 +1,56 @@
+channel:
+  id: C0A03MLTZFT
+  name: sig-ai-slackbot
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 31
+  total_threads: 11
+  active_users: 12
+  avg_messages_per_day: 3.4
+summary: |
+  2025-Q4에 sig-ai-slackbot SIG(Special Interest Group)가 구성되어 AI 기반 Slack 봇 개발 논의가 시작되었다. STORM을 활용한 Slack AI 봇의 응답 속도 개선, Agentic RAG 워크플로 설계, SQL Archon 연동, 채널별 가중치 검색 기능 등이 논의되었다. Anthropic과의 미팅에서 유사 사례를 공유받는 등 외부 레퍼런스도 수집하였다.
+topics:
+  - name: "AI Slack 봇 개발"
+    mention_count: 10
+    description: "STORM 기반 Slack AI 봇 구현 - 응답 속도 개선, 슬랙 래핑, 가시성 향상 논의"
+  - name: "Agentic RAG 워크플로"
+    mention_count: 8
+    description: "Logic RAG, 코드 검색 병렬 처리 및 선택적 응답 대기 로직 설계 탐색"
+  - name: "SQL Archon 연동"
+    mention_count: 3
+    description: "aibot에 SQL Archon을 연동하는 방안 논의"
+  - name: "채널별 가중치 검색"
+    mention_count: 3
+    description: "채널명에 따른 검색 가중치 조정 또는 채널명을 메타데이터로 활용하는 기능 제안"
+key_discussions:
+  - thread_ts: '1732543343.000000'
+    date: '2025-11-25'
+    reply_count: 14
+    text_preview: "응답속도 줄이기, Agentic RAG 워크플로 설계, Slack 래핑 개선 목표 논의 시작"
+  - thread_ts: '1733561204.000000'
+    date: '2025-12-07'
+    reply_count: 11
+    text_preview: "Anthropic 미팅에서 Slack+Linear+코드 연동 봇 레퍼런스 공유받음 - 월드클래스 피드백"
+  - thread_ts: '1734922380.000000'
+    date: '2025-12-23'
+    reply_count: 6
+    text_preview: "슬랙봇 크롤러 주기 문의 - 문서 최신성 유지를 위한 인덱싱 주기 논의"
+terminology:
+  - term: "SIG"
+    definition: "Special Interest Group. 특정 기술 주제를 중심으로 자발적으로 모인 연구/개발 소그룹"
+  - term: "aibot"
+    definition: "Sionic AI의 Slack AI 봇. STORM RAG 기능을 활용하여 Slack 채널 내 질의응답을 지원"
+  - term: "aibot-slack-relayer"
+    definition: "Slack 메시지를 AI 봇으로 중계하는 컴포넌트. GitHub 저장소로 관리됨"
+  - term: "SQL Archon"
+    definition: "SQL 데이터베이스 질의를 자연어로 처리하는 컴포넌트. aibot 연동 방안이 논의됨"
+  - term: "rust-supply"
+    definition: "Rust로 구현된 Supply 컴포넌트. 현재 aibot 배포의 기반 코드로 사용 중"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

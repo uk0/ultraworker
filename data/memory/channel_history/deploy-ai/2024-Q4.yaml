@@ -1,0 +1,34 @@
+channel:
+  id: C080LE2ACNM
+  name: deploy-ai
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 17
+  total_threads: 12
+  active_users: 3
+  avg_messages_per_day: 4.2
+summary: |
+  2024-Q4에 deploy-ai 채널(당시 명칭: deploy-test-leo)이 개설되어 슬랙봇 기반 배포 자동화 명령어의 초기 테스트가 집중적으로 이루어졌다. /sionic-deploy 및 /demo 명령어를 통해 slackbot, stargate 등 주요 서비스의 dev·staging 환경 배포가 반복 시도되었으며, 12월에 채널명이 "deploy-test"로 변경되었다.
+topics:
+  - name: "슬랙봇 배포 명령어 테스트"
+    mention_count: 14
+    description: "/sionic-deploy, /demo 명령어로 slackbot·stargate 서비스의 dev·staging 환경 배포 반복 테스트"
+  - name: "채널 초기 설정"
+    mention_count: 2
+    description: "deploy-test-leo에서 deploy-test로 채널명 변경 및 멤버 초대"
+key_discussions: []
+terminology:
+  - term: "sionic-deploy"
+    definition: "사이오닉의 슬랙봇 배포 자동화 명령어. 서비스명·환경(dev/staging)·커밋 해시·인프라(eks/onprem) 파라미터를 입력받아 배포"
+  - term: "demo"
+    definition: "데모 환경 전용 배포 명령어로 /demo {서비스명} {환경} {커밋해시} {인프라} 형식으로 사용"
+  - term: "onprem"
+    definition: "EKS(클라우드) 대비 온프레미스 인프라를 지칭하며 배포 타겟 환경을 구분하는 파라미터"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

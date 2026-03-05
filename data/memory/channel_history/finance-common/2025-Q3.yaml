@@ -1,0 +1,58 @@
+channel:
+  id: C08MQPQA76F
+  name: finance-common
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 42
+  total_threads: 20
+  active_users: 12
+  avg_messages_per_day: 1.4
+summary: |
+  2025-Q3 finance-common 채널은 이전 분기 대비 스레드 수가 크게 증가하여, 각 주제에 대한 실질적인 논의가 활발해졌다. 주요 이슈로는 뉴렐릭(NewRelic) 모니터링 서비스 비용 과다 청구 문제(기존 150~200만원 대비 500만원 이상 청구)와 계약서 직인 처리, SaaS 법인카드 용도 논의, 태국 시암AI 출장 비용 등 실무적인 재무 행정 업무가 주를 이루었다. 외부 정보로는 국내 스타트업 투자 동향(2025년 상반기 AI 투자 44% 감소), 스타트업 M&A 사례, 오픈소스 커뮤니티와 투자유치 상관관계 등이 공유되었다.
+topics:
+  - name: "뉴렐릭 비용 이슈"
+    mention_count: 8
+    description: "개발팀 실수로 인한 뉴렐릭 모니터링 비용 과다 청구(500만원+) 및 메가존 영업에 구제책 요청, 계약서 처리"
+  - name: "스타트업 투자 동향"
+    mention_count: 10
+    description: "2025년 상반기 국내 스타트업 투자 급감(초기 라운드 42.9% 감소, AI 투자 44.1% 감소) 분석"
+  - name: "재무 행정 실무"
+    mention_count: 8
+    description: "법인카드 용도 구분, 출장 비용, 인보이스 처리, 계약서 직인 등 실무 재무 업무"
+  - name: "M&A 및 기업 가치 평가"
+    mention_count: 6
+    description: "준오헤어 블랙스톤 인수, 리멤버 엑시트 사례 등 M&A 전략 논의"
+key_discussions:
+  - thread_ts: '1751428440.000000'
+    date: '2025-07-02'
+    reply_count: 11
+    text_preview: "뉴렐릭 비용 과다 청구 - 기존 150-200만원에서 400만원 이상으로 예상"
+  - thread_ts: '1752551780.000000'
+    date: '2025-07-15'
+    reply_count: 3
+    text_preview: "뉴렐릭 계약서 직인 요청 및 전자서명 전환 논의"
+  - thread_ts: '1754604513.000000'
+    date: '2025-08-07'
+    reply_count: 20
+    text_preview: "뉴렐릭 관련 후속 논의"
+  - thread_ts: '1756247430.000000'
+    date: '2025-08-26'
+    reply_count: 21
+    text_previous: "2024년 12월 미납금 $1065 처리 요청"
+terminology:
+  - term: "뉴렐릭(NewRelic)"
+    definition: "Sionic AI에서 사용하는 클라우드 기반 애플리케이션 모니터링 서비스. 메가존을 통해 계약"
+  - term: "메가존"
+    definition: "AWS 및 뉴렐릭 등 클라우드 서비스 리셀러. Sionic AI의 인프라 파트너"
+  - term: "법카"
+    definition: "법인카드의 줄임말. SaaS 인프라 비용 및 일반 업무 비용 결제에 사용"
+  - term: "IRR"
+    definition: "Internal Rate of Return(내부수익률). 투자 성과 평가 지표"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

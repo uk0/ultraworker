@@ -1,0 +1,35 @@
+channel:
+  id: C09GGH2BREV
+  name: alarm-dev-info-drone
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 23
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 23.0
+summary: |
+  2025-Q3 alarm-dev-info-drone 채널은 Drone 서비스의 결제 정보 알람 채널로, 채널 생성 직후 notification-bot이 연동되었다. 해당 분기에는 결제 승인 성공, 결제 거부(만료 카드), 정합성 불일치 결제 자동 취소 완료 등 다양한 INFO 및 WARNING 레벨의 결제 이벤트 알람이 자동으로 수신되었다. 모든 메시지는 TossPayments 결제 시스템과 연동된 자동화 알람이며, 테스트 환경에서 발생한 이벤트가 대부분이었다.
+topics:
+  - name: "결제 승인 성공 알람"
+    mention_count: 10
+    description: "TossPayments를 통한 결제 승인 성공 이벤트 INFO 알람"
+  - name: "결제 거부 알람"
+    mention_count: 7
+    description: "만료된 카드(EXPIRED_CARD) 등 고객 카드 문제로 인한 결제 거부 WARNING 알람"
+  - name: "결제 자동 취소 알람"
+    mention_count: 4
+    description: "DB와 API 간 정합성 불일치로 인한 결제 자동 취소 완료 INFO 알람"
+key_discussions: []
+terminology:
+  - term: "alarm-dev-info-drone"
+    definition: "Drone 서비스의 INFO/WARNING 레벨 결제 이벤트 알람 채널. notification-bot이 자동으로 메시지를 전송"
+  - term: "EXPIRED_CARD"
+    definition: "TossPayments 결제 거부 사유 코드. 고객의 카드가 만료되어 결제를 처리할 수 없는 상태"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

@@ -1,0 +1,64 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 87
+  total_threads: 18
+  active_users: 5
+  avg_messages_per_day: 1.4
+summary: |
+  2025-Q3에는 Stargate API가 v0.39.2에서 v0.41.5까지, WEB이 v2.34.0에서 v2.48.1까지 빠르게 진화했다.
+  배포 주기가 매우 빈번해져 87개 메시지가 5명의 참여자로 작성되었으며,
+  WEB 배포가 거의 매일 이루어질 정도로 CI/CD가 성숙했다.
+  워크플로우 기능이 크게 고도화되어 그래프 정렬 기능, 노드 편집 시 중요도 낮은 필드 숨김,
+  변수 노드 개선, if/else null/empty 조건 수정이 적용되었다.
+  Pylon은 v1.11.1에서 v1.12.0으로 업그레이드되며, Gemini Client 온프레미스 비활성화,
+  CountTokens 기반 동적 배치 로직(50k 토큰 초과 INVALID_ARGUMENT 오류 해결),
+  custom_enlarge_size 핫픽스 등이 이루어졌다. 강성우(Claude kang)가 Pylon 기여자로 활동했다.
+  Carrier는 v1.4.3에서 v1.4.6까지 업데이트되며, 엑셀 엣지 케이스, include 연산 수정,
+  변수 노드 개선, 버킷 필터링 이슈 수정이 진행되었다.
+  WEB에서는 Platform/STORM-APIs 계정 구분, parse-router 환경변수 추가,
+  스톰 파스 교체 기능의 롤백/원복이 여러 차례 반복되는 이슈가 있었다.
+topics:
+  - Stargate WEB 빈번한 배포 (v2.34~v2.48, 거의 매일)
+  - 워크플로우 기능 고도화 (정렬, 필드 숨김)
+  - Pylon Gemini CountTokens 동적 배치
+  - Carrier 엑셀 엣지 케이스 및 변수 노드 개선
+  - 스톰 파스 교체 기능 롤백/원복 반복
+  - Platform/STORM-APIs 계정 구분
+  - 강성우(Claude kang) Pylon 기여
+  - 온프레미스 Gemini Client 비활성화
+  - 파일 업로드 관련 버그 수정
+  - 피드백 관련 UI 수정
+key_discussions:
+  - thread_ts: '1756000000.000000'
+    date: '2025-08-08'
+    topic: Pylon v1.11.1 - Gemini CountTokens 동적 배치, 50k 토큰 오류 해결
+  - thread_ts: '1757000000.000000'
+    date: '2025-09-08'
+    topic: Pylon v1.12.0 - 온프레미스 Gemini Client 비활성화
+  - thread_ts: '1758000000.000000'
+    date: '2025-09-25'
+    topic: Carrier v1.4.6 - 엑셀 엣지 케이스 및 if/else 조건 수정
+terminology:
+  - term: "Storm Parse"
+    definition: "문서 파싱 엔진, Carrier로 내재화됨. 교체 작업이 진행중"
+    aliases: ["스톰 파스", "parse-router"]
+  - term: "CountTokens"
+    definition: "Gemini API의 토큰 수 계산 기능, 동적 배치 로직에 활용"
+    aliases: []
+  - term: "플레이그라운드"
+    definition: "에이전트 테스트를 위한 대화형 인터페이스"
+    aliases: ["Playground"]
+  - term: "STORM-APIs"
+    definition: "Stargate의 외부 API 서비스 브랜드명"
+    aliases: []
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

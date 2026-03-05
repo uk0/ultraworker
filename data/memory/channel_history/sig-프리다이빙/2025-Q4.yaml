@@ -1,0 +1,29 @@
+channel:
+  id: C08LPNBEH41
+  name: sig-프리다이빙
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  비수기로 활동이 줄어든 분기. 김덕현(Dekay)이 이전에 함께 프리다이빙했을 때 분실한
+  스노클링 마스크를 찾는 메시지를 올림(3개 답글). 재구매를 고려하는 상황.
+  겨울 시즌이라 실제 다이빙 활동은 없었음.
+topics:
+  - 장비 분실/재구매
+key_discussions:
+  - thread_ts: '1762004776.583379'
+    date: '2025-11-01'
+    reply_count: 3
+    text_preview: '김덕현 - 스노클링 마스크 분실, 재구매 고려'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

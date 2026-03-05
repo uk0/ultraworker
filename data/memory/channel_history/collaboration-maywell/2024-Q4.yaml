@@ -1,0 +1,51 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 103
+  total_threads: 31
+  active_users: 13
+  avg_messages_per_day: 3.6
+summary: |
+  Maywell의 기술 활동 지속 확대. 토크나이저 효율 분석 아카 게시물, Adam optimizer epsilon 분석, vLLM pipeline parallel 지원, speculative decoding 실전 적용, 모델 hidden state 실험 등 심화 연구 공유. LogicKor 운영 중단 공지(상향 평준화로 변별력 상실). moreh Llama-3-Motif-102B 모델 평가(성능 저조). 야놀자 ogem 추천, Firestore 마이그레이션, PaliGemma VLM 테스트 등. HuggingFace 다운로드 Top 10에 maywell 데이터 2개 포함. 카나나(Kakao)가 LogicKor를 벤치마크로 소개.
+topics:
+  - LogicKor 리더보드 운영 중단 공지
+  - 토크나이저 효율 분석 (vocab 크기 vs compression ratio)
+  - Adam optimizer epsilon 분석 논문 공유
+  - vLLM pipeline parallel 지원
+  - speculative decoding (Aphrodite engine)
+  - moreh Llama-3-Motif-102B 평가
+  - 야놀자 ogem (LiteLLM 대안)
+  - Firestore 마이그레이션
+  - 다국어 문장 인코딩 MEXMA 논문 분석
+  - logickor_for_human (인간 vs AI 벤치마크)
+  - HuggingFace Trainer 커스텀 best practice
+key_discussions:
+  - title: "LogicKor 리더보드 운영 중단"
+    summary: "상위 모델 변별력 상실, 운영 인력 부족, 벤치마크 취지 변질 등의 이유로 Read-Only 전환. LogicKor Hard로 재출시 예정"
+  - title: "moreh Llama-3-Motif-102B 평가 - 성능 저조"
+    summary: "moreh에서 AMD로 약 50억원 투자하여 학습한 102B 모델이 13B보다 수학 성능이 낮아 실망적 평가"
+  - title: "MEXMA 다국어 문장 인코딩 논문 분석"
+    summary: "교차 언마스킹, KoLeo 손실, MSE 기반 정렬 손실 등 다국어 임베딩 기법 심층 분석 공유"
+  - title: "야놀자 ogem 추천"
+    summary: "야놀자 내부 LLM 게이트웨이 도구 오픈소스 전환. LiteLLM 대비 프로덕션 안정성이 높다고 평가"
+terminology:
+  - term: "ogem"
+    definition: "야놀자에서 오픈소스로 공개한 LLM API 게이트웨이. LiteLLM의 안정적 대안"
+  - term: "Aphrodite"
+    definition: "PygmalionAI의 LLM 서빙 엔진. draft 모델 없는 n-gram speculative decoding 지원"
+  - term: "pipeline parallel"
+    definition: "여러 GPU에 모델 레이어를 순차 배치하는 병렬화 방식. vLLM 8월부터 지원"
+  - term: "moreh"
+    definition: "AMD GPU 기반 AI 학습 플랫폼 기업. Llama-3-Motif-102B 모델 공개"
+  - term: "MEXMA"
+    definition: "Meta의 다국어 문장 인코딩 모델. 문장/토큰 레벨 듀얼 목표 학습"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

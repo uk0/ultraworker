@@ -1,0 +1,108 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:25:58'
+statistics:
+  total_messages: 111
+  total_threads: 77
+  active_users: 15
+  avg_messages_per_day: 2.6
+key_discussions:
+- thread_ts: '1770891873.574109'
+  date: '2026-02-12'
+  reply_count: 91
+  text_preview: <!subteam^S06VCLT4X6J> <@U08GLL0SK2S> 여기서 장애대응 해주세요
+- thread_ts: '1770956053.393849'
+  date: '2026-02-13'
+  reply_count: 83
+  text_preview: <@U08GLL0SK2S> 에이전틱래그 쓰려고 하는데요 dev에 문서 500장짜리 pdf파일 하나 올릴려고 합니다
+- thread_ts: '1770892352.165969'
+  date: '2026-02-12'
+  reply_count: 83
+  text_preview: 데브 이슈 분리 <@U05SJ36FBN2>
+- thread_ts: '1769490034.726169'
+  date: '2026-01-27'
+  reply_count: 54
+  text_preview: <!subteam^S07P0378MN0> 지금 <https://sionicai.slack.com/archives/C05FKUZGB2A/p1769489924691339|에러>
+    엄청나
+- thread_ts: '1769743647.172019'
+  date: '2026-01-30'
+  reply_count: 48
+  text_preview: '그라파나/ 슬랙 알림메시지 잘아시는분 <!subteam^S065CB7LKJR>
+
+    <https://sionicai.slack.com/archives/C0ABNJMT16W/p176974'
+- thread_ts: '1767878073.861449'
+  date: '2026-01-08'
+  reply_count: 45
+  text_preview: 요거 <https://sionicai.slack.com/archives/C05FKUZGB2A/p1767870953558159|에러>
+    울렸는데 검색실패?한것같아요 <!subteam^
+- thread_ts: '1767684824.270549'
+  date: '2026-01-06'
+  reply_count: 39
+  text_preview: p3-p4레벨의 장애( <https://sionicai.slack.com/archives/C066D0B9WKC/p1767684580663169?thread_ts=1767684186
+- thread_ts: '1767855679.726189'
+  date: '2026-01-08'
+  reply_count: 33
+  text_preview: '뭔가 파스에서 문서 처리량 및 속도에 대한 요구가 계속 생기는데,
+
+    이미지 렌더링이 병목이라 이미지 렌더링 서버를 별도로 만드는 것에 대해 고민중입니다.
+
+
+    그냥 렌더링만 하면되어서 '
+- thread_ts: '1770278130.787389'
+  date: '2026-02-05'
+  reply_count: 32
+  text_preview: '<!subteam^S08GZKUS7HR> 프린이도 구조화는 하고 싶은데요.
+
+    이 스킬로 걍 돌리는거 어떻게 생각하시나요? 버셀에서 관리하는거면 충분히 유의미해 보여서요.
+
+    • 요즘 o'
+- thread_ts: '1767688598.386489'
+  date: '2026-01-06'
+  reply_count: 32
+  text_preview: '제가 필요해서 팀 아이디를 입력하면 팀 정보를 빠르게 볼 수 있는 대시보드를 만들었습니다
+
+    <https://grafana.sionic.im/d/5f5dec6a-33a4-46d9-9d'
+- thread_ts: '1769592787.750049'
+  date: '2026-01-28'
+  reply_count: 30
+  text_preview: '<!subteam^S065CB7LKJR> <!subteam^S094T0270JF>
+
+    제품팀 자리 배치도 공유드립니다!
+
+    • 옵스/프론트는 자리사이에서 소소 조정 있을예정'
+- thread_ts: '1770107914.823679'
+  date: '2026-02-03'
+  reply_count: 28
+  text_preview: '<!subteam^S065CB7LKJR> 용어집... 수작업중인데 직접 적어주실 수 있는 분은 적어주시면 너무 감사합니다
+
+    + 빠진게 있으면 알려주세요
+
+    <https://www.not'
+- thread_ts: '1770127315.217339'
+  date: '2026-02-03'
+  reply_count: 23
+  text_preview: '<https://github.com/aminediro/ferrules>
+
+    꽤 최근에 나온 PDF 텍스트 추출 + OCR + 레이아웃 디텍션을 다 해주는 친구가 있네요
+
+    written '
+- thread_ts: '1769755806.364109'
+  date: '2026-01-30'
+  reply_count: 23
+  text_preview: '<!subteam^S065CB7LKJR> 요즘 드는 생각인데 이야기해보면 좋을것같아요. 슬랙이든 엔지니어링 위클리든
+
+
+    저희가 엔진들에 스타용어들을 붙이곤 하는데요(ex. pylon'
+- thread_ts: '1769582664.447049'
+  date: '2026-01-28'
+  reply_count: 19
+  text_preview: 저 어디선가 공유된거를 제가 놓쳤을 수 있는데 디자인 시스템이 뭐예요?
+metadata:
+  created_at: '2026-02-13T16:25:58'
+  synced_by: sync_fast.py

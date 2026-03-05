@@ -1,0 +1,45 @@
+channel:
+  id: C07GMQK7V8W
+  name: alarm-dev-error-asmr
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 357
+  total_threads: 82
+  active_users: 8
+  avg_messages_per_day: 9.2
+summary: |
+  2024년 4분기 alarm-dev-error-asmr 채널에서는 하루 평균 9.2건, 총 357건의 알림이 발생하였다. New Relic 기반 Error Rate Alert(open-llm-dev 에러율 > 1.0)가 주를 이루었으며, 스레드 82건으로 오류 발생 시 팀원들이 직접 Acknowledge/Close 대응한 흔적이 많다. Openllm API Error와 New Relic High Priority 알림이 거의 동시에 쌍으로 발생하는 패턴이 관찰되었다.
+topics:
+  - name: "New Relic Error Rate Alert"
+    mention_count: 180
+    description: "open-llm-dev의 에러율이 1분간 1.0 초과 시 New Relic이 Slack으로 High Priority 알림 전송"
+  - name: "Openllm API Error"
+    mention_count: 170
+    description: "ASMR dev 서비스의 OpenLLM API 호출 실패 — New Relic 알림과 쌍으로 발생하는 패턴"
+  - name: "팀원 Acknowledge/Close 대응"
+    mention_count: 82
+    description: "New Relic 알림 스레드에 팀원이 직접 확인·종료 처리한 스레드 82건"
+key_discussions:
+  - thread_ts: '1728006240.000000'
+    date: '2024-10-04'
+    reply_count: 1
+    text_preview: "open-llm-dev Error Rate Alert 발생, New Relic High Priority 알림 — Acknowledge/Close 대응"
+  - thread_ts: '1728990960.000000'
+    date: '2024-10-15'
+    reply_count: 1
+    text_preview: "연속적인 Openllm API Error + New Relic 알림 쌍 발생 — 10월 중순 가장 빈번한 오류 구간"
+terminology:
+  - term: "open-llm-dev"
+    definition: "ASMR 서비스의 개발 환경 OpenLLM 인스턴스 — New Relic에서 에러율을 모니터링하는 대상 엔티티"
+  - term: "New Relic"
+    definition: "Sionic AI가 사용하는 APM/모니터링 플랫폼 — 에러율 초과 시 Slack에 High Priority 알림 전송"
+  - term: "Error Rate Alert"
+    definition: "New Relic Policy 설정 — open-llm-dev의 에러율이 1분간 1.0 초과 시 발동하는 알림 정책"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

@@ -1,0 +1,28 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:43'
+statistics:
+  total_messages: 93
+  total_threads: 16
+  active_users: 2
+  avg_messages_per_day: 2.2
+key_discussions:
+- thread_ts: '1769678189.611599'
+  date: '2026-01-29'
+  reply_count: 2
+  text_preview: "STARGATE-WEB v2.117.0 배포 완료 :live: *January 29, 2026* | 배포 담당자: @jada-gwon\
+    \ :bug: *Bug fixes* \n- 워크플로"
+- thread_ts: '1768992611.008279'
+  date: '2026-01-21'
+  reply_count: 2
+  text_preview: "STARGATE-WEB v2.106.0 배포 완료 :live: *January 21, 2026* | 배포 담당자: @juwon5272\
+    \ :rocket: *What’s new* \n- "
+metadata:
+  created_at: '2026-02-13T16:27:43'
+  synced_by: sync_fast.py

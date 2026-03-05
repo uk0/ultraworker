@@ -1,0 +1,73 @@
+channel:
+  id: C06R0LPHHLJ
+  name: project-gov-subsidy
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 67
+  total_threads: 50
+  active_users: 9
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 2분기에는 엔업(글로벌 기업 협업 프로그램) 최종 선정 및 협약 완료, 현대차 제로원 딥테크 밸류업 협약 완료, 창업성장기술개발사업(디딤돌) 신청이 핵심 성과였다. 기업부설연구소 담당자가 변경되었으며(우명 → 기연), 독자 AI 파운데이션 모델 프로젝트 사업설명회 참여 등 신규 과제 발굴도 활발히 이루어졌다. 디딤돌 과제는 접수 후 미선정 통보를 받았으며, 온라인 보충역 산업기능요원 채용박람회 참가도 병행되었다.
+topics:
+  - name: "엔업 협약 완료"
+    mention_count: 15
+    description: "엔비디아 글로벌 기업 협업 프로그램 최종 선정 및 협약 완료(5/19)"
+  - name: "현대차 딥테크 밸류업"
+    mention_count: 12
+    description: "현대차 제로원 딥테크 밸류업 협업계획서 제출 및 협약 완료(5/29)"
+  - name: "디딤돌 신청 및 미선정"
+    mention_count: 8
+    description: "창업성장기술개발사업(디딤돌) 사업계획서 접수 후 미선정"
+  - name: "기업부설연구소"
+    mention_count: 7
+    description: "담당자 변경(우명→기연), 연구개발활동조사 제출, 천안 이전 협약변경"
+  - name: "독자 AI 파운데이션 모델"
+    mention_count: 6
+    description: "독자 AI 파운데이션 모델 프로젝트 사업설명회 참여 및 내부 논의"
+key_discussions:
+  - thread_ts: '1745485500.000000'
+    date: '2025-04-24'
+    reply_count: 15
+    text_preview: "엔업 오리엔테이션 자료 요청 및 협약체결 서류 준비"
+  - thread_ts: '1746741540.000000'
+    date: '2025-05-09'
+    reply_count: 14
+    text_preview: "현대차 딥테크 밸류업 협업계획서 제출 요청 - 안전작업허가서 AI Agent 개발"
+  - thread_ts: '1746764400.000000'
+    date: '2025-05-09'
+    reply_count: 20
+    text_preview: "디딤돌 사업계획서 수정 검토 요청"
+  - thread_ts: '1748557080.000000'
+    date: '2025-05-29'
+    reply_count: 5
+    text_preview: "현대차 제로원 딥테크 밸류업 협약 완료"
+  - thread_ts: '1751016000.000000'
+    date: '2025-06-27'
+    reply_count: 38
+    text_preview: "독자 AI 파운데이션 모델 프로젝트 사업설명회 참여 및 내부 논의"
+terminology:
+  - term: "엔업"
+    definition: "엔비디아 글로벌 기업 협업 프로그램 - 최대 2억 지원(8개월), 자부담 30%"
+    aliases: ["글로벌 기업 협업 프로그램"]
+    context: "4월 선정 확인서 수령 후 협약 완료"
+  - term: "딥테크 밸류업"
+    definition: "현대차 제로원 주관 딥테크 스타트업 협업 프로그램"
+    aliases: ["현대차 딥테크 밸류업", "현대차 제로원"]
+    context: "안전작업허가서 작성 및 위험요소 분류 AI Agent 개발 프로젝트"
+  - term: "디딤돌"
+    definition: "창업성장기술개발사업 - 중기부 주관 기술개발 지원"
+    aliases: ["창업성장기술개발사업"]
+    context: "5월 7일 접수 후 미선정"
+  - term: "독자 AI 파운데이션 모델"
+    definition: "국내 독자 AI 파운데이션 모델 개발을 지원하는 대규모 정부 프로젝트"
+    aliases: []
+    context: "6월 27일 사업설명회 참여, 컨소시엄 구성 검토"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

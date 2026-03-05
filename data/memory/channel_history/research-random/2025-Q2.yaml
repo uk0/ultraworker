@@ -1,0 +1,63 @@
+channel:
+  id: C08CAM2830E
+  name: research-random
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 169
+  total_threads: 105
+  active_users: 10
+  avg_messages_per_day: 2.6
+summary: |
+  2025-Q2 research-random 채널에서는 LLM 추론, 임베딩, 검색 기술 관련 논문과 모델 공유가 활발하게 이루어졌다.
+  Cross-Encoder의 BM25 재발견, 한국어 임베딩 리더보드 업데이트(KURE-v1), SetFit 프레임워크, 지속 학습(Continual Learning) 기법 등이 주요 주제로 다루어졌으며, RTX 5090 성능 테스트와 GPU 확보 논의도 있었다.
+  4월부터 6월까지 임베딩 학습, GRPO 실험, 모델 평가, 슬랙 전체 데이터 공급 코드 등 실무 연구 활동이 활발하였다.
+topics:
+  - name: "임베딩 모델 연구"
+    mention_count: 30
+    description: "BGE-M3, KURE-v1, KOE5 비교 평가, BEIR 벤치마크, 한국어 임베딩 리더보드"
+  - name: "LLM 추론 및 학습"
+    mention_count: 25
+    description: "GRPO 한국어 학습, SFT vs GRPO 비교, QwQ-32B, Claude 3.7 Sonnet 등"
+  - name: "Cross-Encoder 및 리랭킹"
+    mention_count: 15
+    description: "Cross-Encoder의 Semantic BM25 발견, 리랭커 평가 방법론"
+  - name: "GPU 및 인프라"
+    mention_count: 10
+    description: "RTX 5090 성능 테스트, RTX 5090*2 vs H100 비교, GPU 추가 확보 논의"
+  - name: "지속 학습"
+    mention_count: 8
+    description: "임베딩·LLM의 Catastrophic Forgetting, EWC, Adapter, Knowledge Distillation"
+key_discussions:
+  - thread_ts: '1743518847.000000'
+    date: '2025-04-01'
+    reply_count: 8
+    text_preview: "RTX 5090*2 vs H100 성능 비교 - 5090 듀얼이 H100 대비 우수하다는 벤치 공유"
+  - thread_ts: '1745847754.000000'
+    date: '2025-04-28'
+    reply_count: 14
+    text_preview: "Cross-Encoder가 Semantic BM25를 재발견한다는 mechanistic interpretability 논문 상세 분석"
+  - thread_ts: '1748491440.000000'
+    date: '2025-05-29'
+    reply_count: 6
+    text_preview: "한국어 임베딩 리더보드 1위 변경 - nlpai-lab/KURE-v1 (BGE-M3 기반) 성능 비교"
+terminology:
+  - term: "KURE-v1"
+    definition: "nlpai-lab에서 공개한 BGE-M3 기반 한국어 임베딩 모델로 한국어 리더보드 1위"
+    aliases: ["KuRE"]
+    context: "BGE-M3 대비 recall@1, ndcg 지표에서 전반적으로 우수한 성능"
+  - term: "SetFit"
+    definition: "HuggingFace의 few-shot 파인튜닝 프레임워크로 10개 미만 데이터로 임베딩/분류 튜닝"
+    aliases: []
+    context: "소량 데이터로 임베딩 모델을 효과적으로 파인튜닝하는 접근"
+  - term: "DRAMA"
+    definition: "Facebook에서 공개한 1B 규모 임베딩 모델로 BEIR에서 BGE-M3를 앞서는 성능"
+    aliases: ["drama-1b"]
+    context: "2월 말 릴리즈된 신규 임베딩 모델, BEIR 벤치마크에서 M3 초월"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

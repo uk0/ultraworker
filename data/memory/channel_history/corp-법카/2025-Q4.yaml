@@ -1,0 +1,55 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 63
+  total_threads: 11
+  active_users: 3
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 4분기 corp-법카 채널은 62건의 메시지로 커피챗 사용이 크게 증가했다.
+  특히 이상호(U09QEFWEQ3W)가 신규 멤버로 합류하여 11~12월에 매우 활발하게
+  커피챗을 사용했다(정세민, 강성우, 호진, 대곤, 줄리앙, 메이웰, 기연, 혜선 등과).
+  김혜원이 "법카가 어제 입은 바지에 있다"는 빅이슈를 공유하며 커피챗 이용자들에게
+  사과하는 에피소드가 있었고(10/14), 안진혁이 "법카 있으니 필요한 분 알려달라"는
+  안내도 있었다. 최병현도 12월에 다수의 커피챗을 사용했다(권혜선, 홍혁준, 양호진,
+  조하담, 이승규 등). 식사는 미타인원 야식/아침이 주를 이뤘으며, 오승희의 외부미팅
+  경비 사용도 있었다.
+topics:
+  - 법인카드 사용 내역
+  - 커피챗 사용 급증 (이상호 신규 합류)
+  - 법카 분실 에피소드
+  - 식사 (야식/아침)
+  - 외부 미팅 경비
+  - 신규 멤버 커피챗 활용
+key_discussions:
+  - thread_ts: '1760409066.524309'
+    date: '2025-10-14'
+    reply_count: 8
+    text_preview: '김혜원 법카 분실 에피소드 - "법카가 어제 입은 바지에 있다"'
+  - thread_ts: '1766378833.258439'
+    date: '2025-12-22'
+    reply_count: 6
+    text_preview: '두목님과 커피챗 - 스레드 논의'
+  - thread_ts: '1759384274.799059'
+    date: '2025-10-02'
+    reply_count: 3
+    text_preview: '미티인원 기타 사용 - 스레드 논의'
+  - thread_ts: '1762996328.706559'
+    date: '2025-11-13'
+    reply_count: 3
+    text_preview: '권혜선, 이상호 커피챗 - 스레드 논의'
+terminology:
+  - term: "이상호"
+    definition: "2025년 4분기에 합류한 신규 멤버. 커피챗을 매우 활발하게 활용하며 팀원들과 교류."
+    aliases: []
+    context: "11~12월 사이 다수의 커피챗 사용 내역 기록"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

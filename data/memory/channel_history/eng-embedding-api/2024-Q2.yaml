@@ -1,0 +1,26 @@
+channel:
+  id: C05UPLPJA03
+  name: eng-embedding-api
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q2는 eng-embedding-api 채널 활동이 매우 저조한 분기. Sigrid Jin이 공개 임베딩 API v1/v2 도메인이 Vercel 배포 시스템 이전으로 인해 DNS가 변경되어 접속 불가 상태가 된 것을 발견. HuggingFace에 공개된 sionic-ai-v1 모델 페이지의 API 도메인을 sionic.tech 등으로 변경해야 하는 이슈를 기록.
+topics:
+  - 공개 임베딩 API 도메인 변경 이슈
+  - Vercel 배포 시스템 이전 영향
+key_discussions: []
+terminology:
+  - term: 'sionic-ai-v1'
+    definition: 'HuggingFace에 공개된 Sionic AI 첫 번째 임베딩 모델 (huggingface.co/sionic-ai/sionic-ai-v1)'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

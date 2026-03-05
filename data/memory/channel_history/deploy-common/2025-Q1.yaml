@@ -1,0 +1,65 @@
+channel:
+  id: C07A18SADUP
+  name: deploy-common
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 508
+  total_threads: 360
+  active_users: 15
+  avg_messages_per_day: 8.3
+summary: |
+  2025년 1분기 deploy-common 채널은 storm-parse-api 크래시 버그 조사와 함께 carrier, asmr, supply 서비스의 파이프라인 마이그레이션이 핵심 과제로 다루어졌다. ta-event-collector-api의 이벤트 수집 관련 배포 이슈가 지속적으로 논의되었으며, bgeserver 배포 과정에서 설정 오류로 인한 문제가 발생하여 팀 전체가 공동 대응하였다. 15명의 팀원이 참여하여 하루 평균 8.3건의 배포가 이루어졌으며, CI/CD 파이프라인 안정화에 집중하였다.
+topics:
+  - name: "storm-parse-api 크래시 이슈"
+    mention_count: 50
+    description: "storm-parse-api 서비스 크래시 버그 원인 조사 및 핫픽스 배포"
+  - name: "carrier 파이프라인 마이그레이션"
+    mention_count: 70
+    description: "carrier 서비스 CI/CD 파이프라인 재구성 및 마이그레이션 배포"
+  - name: "ta-event-collector-api"
+    mention_count: 45
+    description: "이벤트 수집 API 서비스 배포 및 설정 이슈 해결"
+  - name: "bgeserver 배포 이슈"
+    mention_count: 35
+    description: "bgeserver 배포 시 설정 오류 및 롤백 처리"
+  - name: "asmr 파이프라인 개선"
+    mention_count: 40
+    description: "asmr LLM 프록시 서비스 배포 파이프라인 개선 작업"
+key_discussions:
+  - thread_ts: '1736121600.000000'
+    date: '2025-01-06'
+    reply_count: 10
+    text_preview: "storm-parse-api 크래시 버그 원인 분석 및 긴급 핫픽스 배포"
+  - thread_ts: '1738800000.000000'
+    date: '2025-02-06'
+    reply_count: 8
+    text_preview: "bgeserver 배포 설정 오류 및 롤백 후 재배포 논의"
+  - thread_ts: '1741478400.000000'
+    date: '2025-03-06'
+    reply_count: 6
+    text_preview: "carrier 파이프라인 마이그레이션 완료 및 검증"
+terminology:
+  - term: "storm-parse-api"
+    definition: "문서 파싱 처리 API 서비스. Q1에 크래시 버그가 발생하여 집중 디버깅"
+    aliases: ["storm-parse", "스톰파스 API"]
+    context: "Q1 주요 장애 대응 서비스"
+  - term: "ta-event-collector-api"
+    definition: "TA(트래킹/분석) 이벤트 수집 API 서비스"
+    aliases: ["ta-event", "이벤트 컬렉터"]
+    context: "Q1에 배포 이슈가 자주 발생한 서비스"
+  - term: "asmr"
+    definition: "Sionic AI의 LLM 프록시 및 라우팅 서비스"
+    aliases: ["asmr-api", "LLM 프록시"]
+    context: "Q1에 파이프라인 마이그레이션이 진행된 서비스"
+  - term: "파이프라인 마이그레이션"
+    definition: "기존 CI/CD 파이프라인을 새로운 구조로 이전하는 작업"
+    aliases: ["pipeline migration"]
+    context: "Q1에 여러 서비스에 걸쳐 진행된 인프라 개선 작업"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

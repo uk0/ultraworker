@@ -1,0 +1,33 @@
+channel:
+  id: C091ST3TSDC
+  name: alarm-live-info
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 211
+  total_threads: 10
+  active_users: 9
+  avg_messages_per_day: 2.3
+summary: |
+  운영 환경 정보 알림 채널. 211건으로 Q2 대비 약 10배 증가, 일평균 2.3건.
+  두 가지 주요 스케줄 테스트 결과 수신: "[live] STORM 최소 시나리오"(55건)와 "[live] ASMR 전체 모델 대상 stream 요청 테스트"(43건).
+  전체 98건 테스트 중 13건 실패(최저 93.3%), 평균 통과율 99.4%로 양호.
+  김덕현(Dekay), 양호진(Hojin Yang) 등이 간헐적 확인 참여.
+  ASMR 모델 스트림 테스트가 추가되어 모니터링 범위 확대.
+topics:
+  - STORM 최소 시나리오 일간 테스트
+  - ASMR 전체 모델 stream 테스트 추가
+  - 간헐적 테스트 실패 (93.3% 최저)
+  - live 환경 API 헬스체크
+key_discussions: []
+terminology:
+  - term: "ASMR 전체 모델 대상 stream 요청 테스트"
+    definition: "ASMR 서비스의 모든 모델에 대한 스트리밍 요청 검증 테스트"
+    context: "Q3부터 live 환경 모니터링에 추가"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

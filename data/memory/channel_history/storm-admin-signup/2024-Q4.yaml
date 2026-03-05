@@ -1,0 +1,39 @@
+channel:
+  id: C07T22TQZT9
+  name: storm-admin-signup
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 36
+  total_threads: 9
+  active_users: 12
+  avg_messages_per_day: 1.9
+summary: |
+  Storm Admin 신규 가입 알림 채널이 2024년 10월 25일에 개설되었다. 김혜원이 채널을 생성하고 live-admin-signup-alert-bot을 연동하여 스톰 신규 계정 생성 시 슬랙 알림을 받을 수 있도록 설정하였다. 이 분기에는 약 15건의 Admin 가입 완료 알림이 발생했으며, 비즈니스팀(김혜원)과 엔지니어링팀(Noah 등)이 신규 가입 고객의 트라이얼 기간 관리 및 계정 상태를 논의하였다. 특히 트라이얼 기간 만료 후 고객 컨택 여부와 계정 정지 관련 논의가 있었다.
+topics:
+  - Storm Admin 가입 알림 봇 설정
+  - 신규 고객 트라이얼 관리
+  - 계정 정지 정책
+key_discussions:
+  - thread_ts: '1732252540.409209'
+    date: '2024-11-22'
+    title: 스톰 트라이얼 알림과 Admin 가입 알림 차이 논의
+    summary: Noah가 김혜원에게 Admin 가입 알림과 스톰 트라이얼 알림의 차이를 확인하는 논의 (23개 답글)
+  - thread_ts: '1734079653.939949'
+    date: '2024-12-13'
+    title: 신규 가입 고객 대응
+    summary: Admin 가입 알림 후 고객 대응 관련 논의 (17개 답글)
+terminology:
+  - term: storm-admin-signup
+    definition: Storm 서비스의 Admin 계정 신규 가입을 실시간으로 알려주는 슬랙 채널
+    aliases: []
+  - term: live-admin-signup-alert-bot
+    definition: Admin 가입 완료 시 자동으로 슬랙 알림을 보내는 봇
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

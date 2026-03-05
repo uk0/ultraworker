@@ -1,0 +1,25 @@
+channel:
+  id: C058FGC6DK2
+  name: guest-sionic
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 4
+  active_users: 3
+  avg_messages_per_day: 1.2
+summary: |
+  2025-Q3 guest-sionic 채널 데이터 수집 완료. 5개 메시지, 3명 참여, 4개 스레드.
+  추석 인사 교환. 노진우님이 유튜브에서 사이오닉 관련 영상 발견 공유. 대 천 성(Cheonseong Kang) 데모 발표 시간 초과 에피소드.
+topics:
+  - "추석 인사"
+  - "유튜브 영상 공유"
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

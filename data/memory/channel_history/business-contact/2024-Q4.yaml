@@ -1,0 +1,97 @@
+channel:
+  id: C05QCGG1E5V
+  name: business-contact
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 15
+  total_threads: 8
+  active_users: 4
+  avg_messages_per_day: 1.7
+summary: |
+  2024-Q4에는 STORM Platform에 대한 문의가 집중되었으며, 다양한 업종에서의 도입 검토가 활발했다.
+  총 15건의 메시지가 접수되었고 4명의 내부 인원이 참여하였다.
+
+  주요 문의 유형:
+  1) STORM Platform 도입 문의: 케이뱅크(전체 솔루션 설명자료), 오티톤메디컬(기술력 자료),
+     GS네오텍(서비스 소개서), 대우건설(브로셔/매뉴얼/도입비용), 개인(서비스 소개서)
+  2) STORM Answer 관련: 아사달(OCR 텍스트 출력/API 및 온프레미스 견적), 스피링크(제품 테스트),
+     동의대학교(대기자 신청)
+  3) 기타 업무 자동화: 한국펀드평가(Document AI 사내 업무 자동화)
+  4) 일본 비즈니스: Marcus Evans(CIO Japan Summit 출전 안내, 리톤테크놀로지스와의 MOU 관련),
+     타나카기획(영업대행 재제안)
+  5) 파이콘 행사: 김덕현(Dekay)이 파이콘에서 직접 수집한 상담 요청
+
+  특히 금융권(케이뱅크), 건설(대우건설), 의료기기(오티톤메디컬), SI(GS네오텍) 등 다양한
+  업종에서 STORM Platform에 대한 관심이 높아졌으며, xFusion International에서의 AI 인프라
+  협업 제안도 있었다. 아사달의 문의는 OCR/텍스트 출력 기능에 대한 구체적인 가격(API/온프레미스)
+  문의로 9개 답글이 달렸다.
+topics:
+  - STORM Platform 도입 문의 (금융, 건설, 의료, SI)
+  - STORM Answer OCR/텍스트 출력 기능
+  - Document AI 업무 자동화
+  - 일본 시장 진출 (CIO Japan Summit)
+  - 파이콘 행사 비즈니스 컨택
+  - AI 인프라 협업 (xFusion)
+  - 온프레미스 vs API 가격 정책
+key_discussions:
+  - thread_ts: '1728351027.606409'
+    date: '2024-10-08'
+    reply_count: 10
+    text_preview: '스피링크 김성엽 - STORM Answer 제품 테스트 요청'
+  - thread_ts: '1730256689.396479'
+    date: '2024-10-30'
+    reply_count: 9
+    text_preview: '아사달 강성수 - OCR/텍스트 출력 API 및 온프레미스 견적 문의'
+  - thread_ts: '1732087571.467759'
+    date: '2024-11-20'
+    reply_count: 7
+    text_preview: 'xFusion International Sam Xu - AI 인프라 협업 제안'
+  - thread_ts: '1732102287.013829'
+    date: '2024-11-20'
+    reply_count: 6
+    text_preview: '케이뱅크 조상원 - 스톰 플랫폼 및 전체 솔루션 설명자료 요청'
+  - thread_ts: '1732064434.706639'
+    date: '2024-11-20'
+    reply_count: 6
+    text_preview: '오티톤메디컬 조미정 - AI 기술력 자료 요청'
+  - thread_ts: '1730277521.578919'
+    date: '2024-10-30'
+    reply_count: 4
+    text_preview: '김덕현(Dekay) - 파이콘 행사에서 수집한 상담 요청 공유'
+  - thread_ts: '1731901383.132419'
+    date: '2024-11-18'
+    reply_count: 4
+    text_preview: 'GS네오텍 심수현 - STORM Platform 서비스 소개서 요청'
+  - thread_ts: '1732602618.652849'
+    date: '2024-11-26'
+    reply_count: 2
+    text_preview: 'Marcus Evans - CIO Japan Summit 출전 안내'
+terminology:
+  - term: "CIO Japan Summit"
+    definition: "Marcus Evans 주최의 일본 대기업 IT/디지털 부문장 대상 초청제 비즈니스 매칭 이벤트"
+    aliases: []
+    context: "리톤테크놀로지스와의 MOU 소식을 보고 Sionic AI에 출전 제안"
+  - term: "xFusion"
+    definition: "AI 인프라 제공 업체(xFusion International Pte. Ltd). 다양한 산업별 솔루션도 개발"
+    aliases: []
+    context: "AI Platform 관련 협업 논의를 위한 컨택 요청"
+  - term: "Document AI"
+    definition: "문서 AI 처리 기술. 사내 업무 자동화에 활용 가능한 Sionic AI의 기술 영역"
+    aliases: []
+    context: "한국펀드평가에서 사내 업무 자동화 목적으로 실현 가능성과 비용 문의"
+  - term: "파이콘"
+    definition: "Python 커뮤니티 컨퍼런스. 개발자 대상 네트워킹 및 비즈니스 기회 창출 행사"
+    aliases: ["PyCon"]
+    context: "김덕현(Dekay)이 파이콘 현장에서 직접 비즈니스 상담 요청을 수집함"
+  - term: "온프레미스"
+    definition: "고객사 자체 서버/인프라에 직접 설치하는 방식. 클라우드 API 방식과 대비되는 배포 형태"
+    aliases: ["on-premise", "설치형"]
+    context: "아사달에서 API 방식과 온프레미스 설치형의 가격을 각각 문의함"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,27 @@
+channel:
+  id: C09NZEA4V1S
+  name: alarm-live-critical-drone
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 0
+  active_users: 6
+  avg_messages_per_day: 2.3
+summary: |
+  드론 관련 라이브 서비스의 크리티컬 알람 수신 채널로, 2025-Q4에 채널이 생성되고 멤버 6명이 합류하였다.
+  notification-bot이 연동되었으며, 실제 알람 메시지는 해당 분기에 기록되지 않았다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "alarm-live-critical-drone"
+    definition: "드론 서비스 라이브 환경의 크리티컬 레벨 알람 전용 수신 채널"
+  - term: "notification-bot"
+    definition: "서비스 알람 및 장애 알림을 Slack에 전송하는 봇"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

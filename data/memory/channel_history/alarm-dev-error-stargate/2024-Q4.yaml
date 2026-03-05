@@ -1,0 +1,58 @@
+channel:
+  id: C07GDDBPGJU
+  name: alarm-dev-error-stargate
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 2739
+  total_threads: 17
+  active_users: 10
+  avg_messages_per_day: 65.2
+summary: |
+  2024-Q4 기간 동안 Stargate API의 개발 환경 에러 알림 채널에서 하루 평균 65건의 오류가 관측되었다. 주요 오류 유형으로는 Pylon에서 발생하는 피드백 미존재(FeedbackNotFoundError), 문서 생성 실패(CREATE_DOCUMENT_PROCESS_ERROR), JSON 파싱 오류, Carrier 통신 오류(ERROR_WHILE_PROCESSING_CARRIER_RESPONSE) 등이 있었다. unstructured-io의 PDF 파싱 엔드포인트(/pdf/parse/pymupdf) 404 오류가 집중적으로 발생하였으며, Carrier 측의 미지원 모델(gpt-4o-2024-11-20 등) 오류도 확인되었다.
+topics:
+  - name: "문서 생성 오류"
+    mention_count: 40
+    description: "unstructured-io PDF 파싱 엔드포인트 404 오류로 인한 CREATE_DOCUMENT_PROCESS_ERROR 반복 발생"
+  - name: "Carrier 통신 오류"
+    mention_count: 20
+    description: "LLM 모델 미지원(MODEL_NOT_FOUND) 등으로 Carrier 응답 처리 중 오류 발생"
+  - name: "피드백 처리 오류"
+    mention_count: 15
+    description: "피드백 ID가 존재하지 않아 업데이트 실패하는 UPDATE_FEEDBACK_PROCESS_ERROR"
+  - name: "JSON 파싱 오류"
+    mention_count: 10
+    description: "요청 본문의 JSON 파싱 실패(Unexpected token })"
+key_discussions:
+  - thread_ts: '1728278400.000000'
+    date: '2024-10-07'
+    reply_count: 0
+    text_preview: "FROM_PYLON 피드백 업데이트 실패 - feedback id(s) does not exist"
+  - thread_ts: '1728374760.000000'
+    date: '2024-10-08'
+    reply_count: 0
+    text_preview: "INTERNAL_SERVER_ERROR - JSON 파싱 오류(Unexpected token } at position 61)"
+  - thread_ts: '1728563160.000000'
+    date: '2024-10-10'
+    reply_count: 0
+    text_preview: "unstructured-io /pdf/parse/pymupdf 404 Not Found 오류 집중 발생"
+terminology:
+  - term: "CREATE_DOCUMENT_PROCESS_ERROR"
+    definition: "문서 생성 처리 중 발생하는 Pylon 오류 코드, 주로 PDF 파싱 실패 시 반환"
+    aliases: []
+    context: "unstructured-io 파싱 실패 시 발생"
+  - term: "ERROR_WHILE_PROCESSING_CARRIER_RESPONSE"
+    definition: "Carrier LLM 서비스와 통신 중 응답 처리 실패 시 발생하는 Stargate 오류 유형"
+    aliases: []
+    context: "미지원 모델 호출 또는 Carrier 응답 파싱 불일치 시 발생"
+  - term: "Carrier"
+    definition: "Stargate가 LLM 추론을 위해 호출하는 내부 AI 서비스"
+    aliases: []
+    context: "chat/completions 등의 엔드포인트로 LLM 호출 처리"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

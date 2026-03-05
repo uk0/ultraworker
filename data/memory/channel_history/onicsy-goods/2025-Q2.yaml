@@ -1,0 +1,33 @@
+channel:
+  id: C06G345H2A0
+  name: onicsy-goods
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 12
+  total_threads: 2
+  active_users: 8
+  avg_messages_per_day: 4.0
+summary: |
+  2025년 2분기에 고석현(Noah)님이 채널 보관을 해제하고 재활성화하였다. 정세민님이 새로운 굿즈 시안을 공유하였고,
+  회사 티셔츠 구매 요청이 외부에서도 들어오고 있다는 이야기가 공유되었다(20개 답글). 강성우님, 김수원님,
+  양호진님, 권혜선님, 오승희님, 김혜원님 등 신규 멤버들이 다수 합류하였다.
+topics:
+  - 채널 보관 해제 및 재활성화
+  - 회사 티셔츠 외부 구매 문의
+  - 새 굿즈 시안 공유
+key_discussions:
+  - thread_ts: '1745993221.966229'
+    date: '2025-04-30'
+    topic: 외부에서 티셔츠 구매 요청 (20개 답글)
+  - thread_ts: '1745922358.865749'
+    date: '2025-04-29'
+    topic: 굿즈 관련 논의 (9개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

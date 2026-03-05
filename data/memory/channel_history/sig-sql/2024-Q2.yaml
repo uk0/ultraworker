@@ -1,0 +1,40 @@
+channel:
+  id: C071M3G0EDR
+  name: sig-sql
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 5.0
+summary: |
+  2024-Q2 기간에 sig-sql 채널이 개설되어 SQL SIG(Special Interest Group) 스터디 공간으로 운영되기 시작하였다. 채널 개설 초기에 멤버가 작성한 SQL 쿼리의 정확성 검증을 요청하는 토론이 진행되었으며, 실행 결과는 맞게 나오나 실제 데이터와 건수가 다른 문제에 대해 스터디 리더(제멋대로 선생님)를 초대해 함께 리뷰하였다. 소규모 스터디 채널로 2명이 참여하였으며 SQL 쿼리 검증을 위한 Q&A 포맷으로 운영되었다.
+topics:
+  - name: "SQL 쿼리 검증"
+    mention_count: 3
+    description: "작성한 SQL 쿼리의 정확성 검증 요청 - 실행 결과와 실제 데이터 건수 불일치 문제 논의"
+  - name: "스터디 채널 개설"
+    mention_count: 2
+    description: "SQL 질문방으로 채널 신설, 전문가(제멋대로 선생님) 초대 및 스터디 체계 구성"
+key_discussions:
+  - thread_ts: '1746143940.000000'
+    date: '2024-05-02'
+    reply_count: 30
+    text_preview: "SQL 쿼리 검증 요청 - 실행 건수는 나오나 실제 데이터 건수와 다름. 스터디 리더 초대하여 리뷰"
+terminology:
+  - term: "SIG"
+    definition: "Special Interest Group의 약자로, 특정 기술 주제에 대한 관심 있는 팀원들이 모여 스터디하는 소모임"
+    aliases: ["sig-sql"]
+    context: "SQL 관련 기술 스터디를 위한 소모임 채널"
+  - term: "제멋대로 선생님"
+    definition: "SQL SIG 채널의 스터디 리더 역할을 맡은 멤버의 별칭"
+    aliases: []
+    context: "SQL 쿼리 리뷰 및 검증을 담당하는 멘토"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

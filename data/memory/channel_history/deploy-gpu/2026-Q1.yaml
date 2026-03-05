@@ -1,0 +1,90 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:50'
+statistics:
+  total_messages: 205
+  total_threads: 16
+  active_users: 8
+  avg_messages_per_day: 4.8
+key_discussions:
+- thread_ts: '1770622379.271409'
+  date: '2026-02-09'
+  reply_count: 26
+  text_preview: '이앤에이와 동일한 테스트 환경 구축을 위해 vessel 1번 0,1번 gpu 사용하도록 하겠습니다.
+
+    내일 점심전까지만 잡고있겠습니다. :man-bowing:'
+- thread_ts: '1768607248.379779'
+  date: '2026-01-17'
+  reply_count: 13
+  text_preview: <!subteam^S07MRM7NLAC> 현재 크립콜로니가 새롭게 생성해도 뜨지가 않아서 vessel 2번 중 4개 gpu
+    사용하도록 하겠습니다
+- thread_ts: '1769586186.456989'
+  date: '2026-01-28'
+  reply_count: 11
+  text_preview: '~vessel 1번 position bias <https://arxiv.org/pdf/2601.16934|관련 연구>
+    비교 평가를 위해 gpu : 0,5,6,7  로 4개 사용합니'
+- thread_ts: '1769389274.416349'
+  date: '2026-01-26'
+  reply_count: 11
+  text_preview: vessel 1번 GPU 오늘까지 7개 사용합니다. (CUDA:4번은 사용 안함.)
+- thread_ts: '1770177492.572579'
+  date: '2026-02-04'
+  reply_count: 8
+  text_preview: '`크립콜로니` 모델서빙 탭 테스트에 도움주실분 구합니다
+
+
+    이 탭의 목표:
+
+    • A100장비 (이사 이후 onprem장비)에 모델을 빠르게 띄워서 테스트해보기 위함.
+
+    테스트하고 싶은 '
+- thread_ts: '1770290134.011139'
+  date: '2026-02-05'
+  reply_count: 5
+  text_preview: 'position bias 실험을 위해 vessel 2번 cuda:4,5번을 잠시 빌려도 될까요? <@U08GLL0SK2S>
+
+    내일 출근하시기 전(오전 10시 전)에 종료될 예정입니다'
+- thread_ts: '1769833872.725139'
+  date: '2026-01-31'
+  reply_count: 3
+  text_preview: <@U05SJ36FBN2> 새로 고침과 클릭 각각 5회 이상 시도하였음에도 creep colony에서 terminate
+    instance가 작동 안합니다. 한번 시간 날 때 확인해주
+- thread_ts: '1768450102.465819'
+  date: '2026-01-15'
+  reply_count: 3
+  text_preview: <@U05QCA7JTD5> 진행님 지금 gpu 컨테이너 쓰시나열?
+- thread_ts: '1768380461.968029'
+  date: '2026-01-14'
+  reply_count: 3
+  text_preview: 'creep colony issue &gt;&gt;
+
+
+    크립 콜로니에 표기된 gpu와 할당된 gpu 번호가 서로 다름.'
+- thread_ts: '1770773106.976139'
+  date: '2026-02-11'
+  reply_count: 2
+  text_preview: '베슬 2번 아무것도 안 돌아가는 것 같아서 잠시 점령하겠습니다 :성우짱:'
+- thread_ts: '1769142865.397109'
+  date: '2026-01-23'
+  reply_count: 2
+  text_preview: vessel 1번 GPU 8개 모두 사용합니다. ECIR 학회에 작성할 colbert의 다양한 제안방안 실험 ing..
+- thread_ts: '1767780253.719529'
+  date: '2026-01-07'
+  reply_count: 2
+  text_preview: <@U05SJ36FBN2> 말씀하신 것 (기존 wandb와의 연결)  -&gt; 현재 이러한 에러가 뜹니다.
+- thread_ts: '1767759214.514669'
+  date: '2026-01-07'
+  reply_count: 2
+  text_preview: '~pepper-vl h200 1장에서 vllm 동시 처리량 체크를 위해서 잠시 runpod 사용하겠습니다.~
+
+
+    70B llm h200 2장에서 vllm 동시 처리량 체크 위해서 잠'
+metadata:
+  created_at: '2026-02-13T16:27:50'
+  synced_by: sync_fast.py

@@ -1,0 +1,31 @@
+channel:
+  id: C06USMT72DB
+  name: noti-figma
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 60
+  total_threads: 2
+  active_users: 6
+  avg_messages_per_day: 4.3
+summary: |
+  Figma 디자인 파일 변경 알림 채널. 'Storm Answer_기획' 파일의 업데이트가 다시 활발해졌다.
+  1월에 대규모 편집 작업이 집중되었으며(1/16~1/20 기간 특히 활발), 2월에도 꾸준한 수정이 이루어졌다.
+  여러 새 멤버(Sigrid Jin, 최병현, 신희수, 김수원, 대신해주는새)가 채널에 참여하여 디자인 모니터링을 시작했다.
+  3월 말에도 마지막 업데이트가 있었다.
+topics:
+  - Storm Answer 기획 디자인 대규모 리뉴얼
+  - Figma 파일 변경 알림
+key_discussions:
+  - title: Storm Answer_기획 1월 대규모 디자인 작업
+    summary: 2025년 1월 16~20일에 집중적으로 'Storm Answer_기획' 파일이 대규모 수정됨. 새해 제품 리뉴얼 또는 기능 추가와 관련된 디자인 작업으로 추정.
+  - title: 신규 팀원 채널 합류
+    summary: Sigrid Jin, 최병현 Hyune-c, 신희수, 김수원 등 엔지니어링 멤버들이 채널에 합류하여 디자인 변경 모니터링 시작.
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

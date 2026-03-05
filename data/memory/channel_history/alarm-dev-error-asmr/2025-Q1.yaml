@@ -1,0 +1,65 @@
+channel:
+  id: C07GMQK7V8W
+  name: alarm-dev-error-asmr
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 443
+  total_threads: 11
+  active_users: 7
+  avg_messages_per_day: 15.3
+summary: |
+  2025년 1분기 alarm-dev-error-asmr 채널은 ASMR 서비스의 OpenLLM API 오류 알림과 함께 팀의 능동적인 대응 논의가 이루어졌다.
+  1월 7일과 1월 20일에는 New Relic 알림 시스템을 통해 Critical/High Priority 이슈가 발생하였으며, 모든 failover가 실패하는 케이스도 감지되었다.
+  1월 20일 밤에는 팀원이 502 Bad Gateway 오류를 직접 분석하고 HTTP 클라이언트 테스트 결과를 채널에 공유하였다.
+  2월에는 지원되는 모델 자동화 테스트 방법(JetBrains HTTP Client, Apidog)을 탐색하는 논의가 활발히 진행되었으며, Upstage solar-mini 모델의 API 버그도 발견하여 공유하였다.
+topics:
+  - name: "OpenLLM API 오류 및 failover 실패"
+    mention_count: 180
+    description: "ASMR 서비스 API 호출 실패 및 모든 failover가 실패하는 케이스 발생"
+  - name: "자동화 테스트 방법 탐색"
+    mention_count: 5
+    description: "지원 모델 대상 병렬 자동화 테스트를 위해 JetBrains HTTP Client, Apidog CLI 등을 검토"
+  - name: "Upstage solar-mini 모델 버그"
+    mention_count: 1
+    description: "solar-mini-250123 풀네임 요청 시 400 오류 발생, 별칭 사용 시 정상 동작하는 버그 발견"
+  - name: "Hyperclova 테스트"
+    mention_count: 2
+    description: "Hyperclova 모델 통합 테스트 진행"
+key_discussions:
+  - thread_ts: '1737395741.000000'
+    date: '2025-01-20'
+    reply_count: 1
+    text_preview: "New Relic High Priority 이슈 - open-llm-dev failover 실패 케이스 발생"
+  - thread_ts: '1737753241.000000'
+    date: '2025-01-31'
+    reply_count: 10
+    text_preview: "Openllm API Error - 1월 31일 연속 오류 발생, 스레드에서 원인 논의"
+  - thread_ts: '1738723087.000000'
+    date: '2025-02-05'
+    reply_count: 1
+    text_preview: "gpt-3.5-turbo-instruct 모델 지원 여부 문의 및 병렬 테스트 자동화 탐색"
+  - thread_ts: '1739335680.000000'
+    date: '2025-02-12'
+    reply_count: 2
+    text_preview: "Upstage solar-mini API 버그 발견 - 풀네임 vs 별칭 동작 차이"
+terminology:
+  - term: "ASMR"
+    definition: "Sionic AI의 LLM API 프록시 서비스, 다중 모델 failover 지원"
+    aliases: ["open-llm-dev", "OpenLLM"]
+    context: "개발 환경 에러 알림 채널"
+  - term: "failover"
+    definition: "주 LLM 공급자 실패 시 백업 공급자로 자동 전환하는 메커니즘"
+    aliases: []
+    context: "모든 failover가 실패하는 케이스 발생 시 Critical 알림 발생"
+  - term: "solar-mini"
+    definition: "Upstage의 LLM 모델, solar-mini-250123 버전"
+    aliases: ["solar-mini-250123"]
+    context: "풀네임으로 요청 시 400 오류 반환하는 API 버그 발견"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

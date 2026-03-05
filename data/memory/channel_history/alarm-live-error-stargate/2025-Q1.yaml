@@ -1,0 +1,36 @@
+channel:
+  id: C05FKUZGB2A
+  name: alarm-live-error-stargate
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2887
+  total_threads: 52
+  active_users: 10
+  avg_messages_per_day: 62.8
+summary: |
+  Stargate API 운영 에러 알림 채널. 2887개 메시지로 에러 빈도가 높았던 분기.
+  INTERNAL_SERVER_ERROR(34건)가 가장 많았고, ERROR_WHILE_PROCESSING_CARRIER_RESPONSE(21건),
+  ERROR_WHILE_PROCESSING_POST_PROCESS(13건), FROM_PYLON(7건), SEND_TO_PYLON(3건) 순이었다.
+  live 환경(78건) 에러가 대부분이었으며, unstructured-io 문서 파싱 실패가 지속적으로 발생했다.
+  NewRelic Critical 알림이 3월 말에 집중적으로 발생하여 주말 포함 연속 장애 패턴이 나타났다.
+  SSE 이벤트 매니저 브로드캐스트 관련 에러도 새로 등장했다.
+topics:
+  - INTERNAL_SERVER_ERROR 증가
+  - unstructured-io 문서 파싱 지속 실패
+  - NewRelic Critical 알림 집중 (3월 말)
+  - SSE 이벤트 매니저 에러
+  - Carrier 응답 처리 에러
+key_discussions: []
+terminology:
+  - term: "SseEventManager"
+    definition: "Server-Sent Events 이벤트 관리자, 실시간 스트리밍 응답 브로드캐스트 담당"
+  - term: "unstructured-io"
+    definition: "문서 파싱 서비스, 예상치 못한 에러 발생 빈번"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

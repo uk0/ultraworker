@@ -1,0 +1,35 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 98
+  total_threads: 96
+  active_users: 4
+  avg_messages_per_day: 3.6
+summary: |
+  2025-Q3 deploy-pylon 채널은 이전 분기(268개) 대비 배포 빈도가 줄었으나, 꾸준한 Pylon 서비스 개발 및 배포 사이클이 유지되었다. 4명의 팀원이 dev 및 live 환경에 대한 배포를 지속적으로 진행하였으며, 커밋 해시 기반의 /sionic-deploy 커맨드 방식이 이 분기에도 동일하게 사용되었다. 7월 말에는 배포 자동화 봇의 BUILD/DEPLOY 상태 메시지가 새 채널에서도 동작하기 시작하였고, 9월 초에 live 환경 배포로 분기를 마무리하였다. 이 기간에 신규 팀원이 채널에 합류하였다.
+topics:
+  - name: "Pylon dev 환경 배포"
+    mention_count: 78
+    description: "/sionic-deploy pylon dev [hash] onprem 커맨드를 통한 개발 환경 배포"
+  - name: "Pylon live 환경 배포"
+    mention_count: 12
+    description: "/sionic-deploy pylon live [hash] onprem 커맨드를 통한 운영 환경 배포"
+  - name: "배포 자동화 봇 알람"
+    mention_count: 1
+    description: "배포 시작(DEPLOY Started) 자동화 봇 메시지"
+key_discussions: []
+terminology:
+  - term: "deploy-pylon"
+    definition: "Pylon 서비스 배포 자동화 알람 채널"
+  - term: "/sionic-deploy"
+    definition: "Sionic AI 내부 배포 슬래시 커맨드. 서비스명, 환경(dev/live), 커밋 해시, 배포 대상(onprem) 인자를 받음"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

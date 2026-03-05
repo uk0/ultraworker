@@ -1,0 +1,62 @@
+channel:
+  id: C08UVNSJS92
+  name: status-app
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 33
+  total_threads: 28
+  active_users: 3
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 2분기 status-app 채널은 New Relic의 "status-app" 워크플로우를 통해 애플리케이션 오류(Application Error)를 실시간으로 알림하는 채널로, 5월 말부터 6월에 걸쳐 활발한 알람이 발생하였다.
+  주요 모니터링 대상 서비스는 stargate-api(dev/live), carrier-storm-parse(dev/live), carrier-supply-dev, carrier-dev, storm-parse-api-dev 등이며, New Relic의 "Application Error" 조건 위반 시 Critical 우선순위 알람이 발송되었다.
+  5월 31일에 dev 환경 메모리 사용률 초과(90% 이상)로 stargate-rallypoint Pod 재시작 알람도 발생하였다.
+topics:
+  - name: "stargate-api 오류 알람"
+    mention_count: 12
+    description: "stargate-api-dev 및 stargate-api-live Application Error Critical 알람"
+  - name: "carrier 서비스 오류 알람"
+    mention_count: 8
+    description: "carrier-storm-parse, carrier-supply, carrier-dev 오류 알람"
+  - name: "인프라 알람"
+    mention_count: 2
+    description: "Pod 메모리 사용률 초과 및 재시작 알람"
+  - name: "storm-parse-api 오류"
+    mention_count: 2
+    description: "storm-parse-api-dev Application Error 알람"
+key_discussions:
+  - thread_ts: '1748649600.000000'
+    date: '2025-05-31'
+    reply_count: 1
+    text_preview: "dev-stargate-rallypoint Pod 메모리 90% 초과 재시작 알람 - InfraAlert(dev)"
+  - thread_ts: '1748736000.000000'
+    date: '2025-06-01'
+    reply_count: 1
+    text_preview: "stargate-api-live Application Error Critical 알람"
+  - thread_ts: '1748822400.000000'
+    date: '2025-06-02'
+    reply_count: 1
+    text_preview: "stargate-api-dev Application Error - 3건 인시던트"
+  - thread_ts: '1748822800.000000'
+    date: '2025-06-02'
+    reply_count: 1
+    text_preview: "carrier-storm-parse-dev Application Error Critical 알람"
+terminology:
+  - term: "stargate-api"
+    definition: "사이오닉AI의 검색 엔진 stargate 서비스의 API 컴포넌트 (dev/live 환경 구분)"
+  - term: "carrier"
+    definition: "사이오닉AI의 JVM 기반 백엔드 서비스 (carrier-storm-parse, carrier-supply 등 포함)"
+  - term: "New Relic"
+    definition: "사이오닉AI에서 사용하는 APM 및 인프라 모니터링 플랫폼"
+  - term: "Application Error"
+    definition: "New Relic 모니터링 조건으로 애플리케이션 오류 쿼리 결과가 0이 아닐 때 발동"
+  - term: "status-app 워크플로우"
+    definition: "New Relic 알람을 이 Slack 채널로 라우팅하는 워크플로우 설정"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,41 @@
+channel:
+  id: C07NQH3U7SN
+  name: noti-linear
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2600
+  total_threads: 22
+  active_users: 8
+  avg_messages_per_day: 43.3
+summary: |
+  Linear 이슈 트래커 알림 채널. 이 분기에는 2600개의 대량 알림이 발생하여 Storm 팀의 매우 활발한 개발 활동을 보여준다.
+  주요 활동자는 백은주, 최병현, 신희수, 김혜원, 송현우, 조하담, 노진우, 박진형 등이며, GitHub 자동 연동도 활발했다.
+  주요 프로젝트로는 NewRelic POC 및 모니터링 솔루션 계약(STM-1783, STM-2201), Azure 콘솔 모델 배포(STM-2217),
+  Token 통계 API agentIds 필터링(STM-2231), Database query logging 이슈(STM-2047) 등이 있었다.
+  22개 스레드가 생성되어 이슈 관련 논의가 활발했으며, 연말 스프린트 마감을 위한 대량의 이슈 정리(Done/Canceled)가 12월 말에 이루어졌다.
+topics:
+  - NewRelic 모니터링 솔루션 도입
+  - Azure 콘솔 모델 배포
+  - Token 통계 API 개선
+  - Database query logging 개선
+  - Storm 팀 스프린트 관리
+key_discussions:
+  - title: NewRelic 모니터링 솔루션 결정 및 계약 (STM-2201)
+    summary: 최병현, 이재준, 김덕현이 NewRelic POC를 진행하고 모니터링 솔루션 결정 및 계약을 위한 논의를 진행함.
+  - title: Azure 콘솔 모델 배포 (STM-2217)
+    summary: 조하담이 Azure 콘솔에 지원 모델별 배포 작업을 진행함.
+  - title: 연말 이슈 대규모 정리
+    summary: 12월 23일에 백은주가 다수의 이슈를 한꺼번에 Done 처리. 분기말 스프린트 마감 정리 작업.
+terminology:
+  - term: NewRelic
+    definition: APM(Application Performance Monitoring) 도구. Sionic AI에서 모니터링 솔루션으로 도입 검토
+  - term: SLOW_QUERY_TIME_LIMIT
+    definition: 느린 쿼리 판별 시간 제한 설정값
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

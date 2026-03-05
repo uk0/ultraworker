@@ -1,0 +1,23 @@
+channel:
+  id: C08E19XUF9S
+  name: noah-실험실
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3 동안 noah-실험실 채널에는 신규 멤버 참여 외에 실질적인 연구 활동 기록이 없었다.
+  메시지가 1건에 그쳐 분기 내 채널이 비활성 상태였으며, 관련 연구 논의는 research-random 등 다른 채널에서 진행된 것으로 보인다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

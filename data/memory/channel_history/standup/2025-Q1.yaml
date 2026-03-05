@@ -1,0 +1,91 @@
+channel:
+  id: C058VN1LUKE
+  name: standup
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1696
+  total_threads: 462
+  active_users: 30
+  avg_messages_per_day: 20.7
+summary: |
+  2025-Q1 standup 채널은 팀원 30명이 일일 출퇴근 및 근무 상태를 공유하는 채널로 활발히 운영되었다.
+  주요 근무 장소로 미타(본사), 아비케(강남 거점), IBK(기업은행 프로젝트 파견), 지하2층(IBK 프로젝트룸) 등이 사용되었다.
+  설 연휴(1/28~1/30) 전후로 다수 휴가가 집중되었으며, 재택/점심미타(점미) 등 유연 근무가 일반적이었다.
+  IBK 프로젝트 관련 파견 근무(송명하, 이재준, 김덕현 등)가 본격화되었고, Storm 플랫폼 설치를 위한 도커 이미지 반입 작업이 진행되었다.
+  Noah(고석현) 대표가 RAG 청킹 개선 작업(멀티스테이지 청킹)을 집중 수행하며 데모 사이트를 공유하였다.
+  현대차 미팅(SaaS 판매 기회), 오라클 APAC VP 미팅, 네이버 검색 대장 미팅, 투자사 방문 등 외부 영업/IR 활동이 활발했다.
+  외부 법인 감사 및 실사가 처음으로 진행되었으며(홍성아, 한시형 주도), 오닉사이 부스 발표(정세민, Noah 등)도 있었다.
+  한시형은 도쿄 출장, 박우명은 도쿄 거점 마련 출장을 다녀왔다.
+topics:
+  - name: "IBK 프로젝트 파견"
+    count: 45
+    description: "기업은행 프로젝트룸 파견 근무. Storm 플랫폼 설치, 도커 이미지 반입, 보안 환경 대응 등"
+  - name: "RAG 청킹 개선"
+    count: 15
+    description: "Noah 주도 멀티스테이지 청킹 개발. 룰베이스+모델기반+하이브리드 3단계 파이프라인"
+  - name: "영업/IR 활동"
+    count: 20
+    description: "현대차, 오라클 APAC VP, 네이버 검색, 투자사 미팅 등 외부 영업 활동"
+  - name: "외부 감사/실사"
+    count: 5
+    description: "사이오닉 AI 첫 외부 법인 감사 및 실사 진행"
+  - name: "파서 개발"
+    count: 10
+    description: "이강욱 중심 parsr(문서 파싱) 재작성 작업"
+key_discussions:
+  - thread_ts: '1738266870.287219'
+    date: '2025-01-30'
+    reply_count: 84
+    text_preview: "RAG 청킹 개선 업데이트. 멀티스테이지 종료조건 추가, 룰베이스+모델기반+하이브리드 3단계 청킹"
+  - thread_ts: '1737552490.091049'
+    date: '2025-01-22'
+    reply_count: 12
+    text_preview: "IBK 지하2층 근무 환경 공유. 금속탐지기, 노트북 사물함, 100명 한 공간 등"
+  - thread_ts: '1737545624.674129'
+    date: '2025-01-22'
+    reply_count: 10
+    text_preview: "한시형 도쿄 출장 출발. 진형님과의 만두국 세션 후 제안 작업"
+  - thread_ts: '1737544577.358879'
+    date: '2025-01-22'
+    reply_count: 10
+    text_preview: "청킹 데모사이트 공유 (VPN/사내망 전용)"
+  - thread_ts: '1737680039.211039'
+    date: '2025-01-24'
+    reply_count: 6
+    text_preview: "네이버 검색 대장님 미팅 결과. Storm 컨셉/포지션 호평, 네이버 서비스향 협업 탐색"
+terminology:
+  - term: "미타"
+    definition: "사이오닉 AI 본사 오피스 (마포구 소재)"
+    aliases: ["미탐다", "미탐당"]
+  - term: "아비케"
+    definition: "강남 거점 오피스 (ABIK)"
+    aliases: ["아비켐다", "아비켑니다"]
+  - term: "IBK"
+    definition: "기업은행 프로젝트 파견 근무지"
+    aliases: ["이비케이"]
+  - term: "지하2층"
+    definition: "IBK 프로젝트룸. 보안 구역으로 금속탐지기 통과, 노트북 사물함 보관 필요"
+    aliases: ["지하이층"]
+  - term: "점미"
+    definition: "점심 미타. 오전 재택 후 점심시간에 미타(본사)로 출근하는 패턴"
+    aliases: []
+  - term: "재전"
+    definition: "재택 전환. 외출/운동 등 후 재택으로 돌아와 업무 재개"
+    aliases: []
+  - term: "퇴각"
+    definition: "퇴근의 비격식 표현"
+    aliases: ["빠퇴"]
+  - term: "Storm"
+    definition: "사이오닉 AI의 주력 AI 검색엔진 플랫폼 제품"
+    aliases: ["스톰"]
+  - term: "parsr"
+    definition: "문서 파싱 엔진. 이강욱 중심으로 재작성 진행"
+    aliases: ["파서"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

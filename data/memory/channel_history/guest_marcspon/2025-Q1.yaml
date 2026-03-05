@@ -1,0 +1,25 @@
+channel:
+  id: C079KMS7LNN
+  name: guest_marcspon
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 1
+  active_users: 10
+  avg_messages_per_day: 4.3
+summary: |
+  2025-Q1 guest_marcspon 채널 데이터 수집 완료. 13개 메시지, 10명 참여, 1개 스레드.
+  연동 프로젝트 안정화 단계. 기술적 이슈 대부분 해결 후 운영 안정화 논의. 활동량 감소(13개 메시지, 1개 스레드).
+topics:
+  - "연동 안정화"
+  - "운영 논의"
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,42 @@
+channel:
+  id: C090GJ7546L
+  name: alarm-qa-error-infra
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 4
+  active_users: 3
+  avg_messages_per_day: 2.3
+summary: |
+  2025-Q2 alarm-qa-error-infra 채널에서는 QA 환경의 인프라 에러 알림이 소수 기록되었다.
+  6월에 stargate Pod 재시작 High 우선순위 이슈가 반복적으로 발생하여 New Relic을 통해 다수의 알림이 전송되었으며, 6월 초 테스트 알림(Critical, [TEST] Memory Used %)도 포함되었다.
+  신규 멤버(U07RE9XKXPV)가 6월에 채널에 합류하였고, 6월 17일 또 다른 멤버도 참여하였다.
+topics:
+  - name: "stargate Pod 재시작 알림"
+    mention_count: 5
+    description: "QA 환경에서 stargate Pod가 반복 재시작되는 High 우선순위 이슈"
+  - name: "테스트 알림"
+    mention_count: 1
+    description: "Critical 우선순위 [TEST] Memory Used % 90% 초과 테스트 알림"
+key_discussions:
+  - thread_ts: '1749434520.000000'
+    date: '2025-06-09'
+    reply_count: 1
+    text_preview: "stargate Pod 재시작 High 이슈 - stargate-86c7459687-s6tmc, QA Namespace, 반복 발생"
+terminology:
+  - term: "stargate"
+    definition: "Sionic AI의 검색 엔진 서비스 컴포넌트로 QA 환경에서 Pod 재시작 이슈 발생"
+    aliases: ["Stargate", "SG"]
+    context: "alarm-qa-error-infra에서 가장 빈번하게 알림이 발생하는 대상 컴포넌트"
+  - term: "InfraAlert(qa)"
+    definition: "QA 환경 인프라 모니터링 New Relic 알람 정책"
+    aliases: []
+    context: "sionicai-onprem-cluster QA 네임스페이스의 Pod 재시작 등을 감지"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

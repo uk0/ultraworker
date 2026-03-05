@@ -1,0 +1,69 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 9
+  active_users: 6
+  avg_messages_per_day: 1.3
+summary: |
+  2025년 3분기는 조직문화의 실천적 측면에 대한 깊은 논의가 이루어진 시기였다. 회의 참여의 열린 원칙, 재택근무 세팅 지원 범위, 마이크로매니징 경계,
+  'Act without Permission'과 '즉단즉행'의 미묘한 차이 등 조직문화 가치의 실제 적용에 대한 성찰이 두드러졌다.
+  원격근무와 과소통 문화에 대한 긍정적 인식 공유, 집단 착각과 팀 역학 관련 아티클 공유, Google HR 담당자 인터뷰 등 외부 사례 학습도 활발했다.
+  권혜선(Jada)이 첫 컬쳐핏 면접 경험을 공유하며 조직문화 가치의 실무 적용에 대한 고민을 나눴다.
+topics:
+  - 회의 참여 원칙 (열린 참여)
+  - 재택근무 세팅 지원 범위
+  - 마이크로매니징 vs 자율성 경계
+  - Act without Permission과 즉단즉행의 차이
+  - 원격근무/과소통 문화
+  - 집단 착각과 팀 역학
+  - Google HR 사례
+key_discussions:
+  - thread_ts: '1759302010.407189'
+    date: '2025-10-01'
+    reply_count: 19
+    text_preview: 회의 참여 관련 제안 - 열린 참여를 원칙으로 하면 어떨까요?
+  - thread_ts: '1758638508.018069'
+    date: '2025-09-23'
+    reply_count: 16
+    text_preview: 회사에서 제공하는 재택 세팅 지원을 어느정도라고 말해야 될까요?
+  - thread_ts: '1758630483.994559'
+    date: '2025-09-23'
+    reply_count: 14
+    text_preview: 사이오닉에서 첫 컬쳐핏 면접 후기 - Act without permission과 즉단즉행의 미묘한 차이
+  - thread_ts: '1758181607.523659'
+    date: '2025-09-18'
+    reply_count: 14
+    text_preview: 임팩트가 있는지 고민해보라는 의견은 좋지만 마이크로매니징 아닌가
+  - thread_ts: '1753255971.730419'
+    date: '2025-07-23'
+    reply_count: 11
+    text_preview: 원격근무 관련 아티클 공유 (jbee.io)
+  - thread_ts: '1756449923.720009'
+    date: '2025-08-29'
+    reply_count: 11
+    text_preview: 조직문화 관련 Notion 아티클 공유
+  - thread_ts: '1754276703.238729'
+    date: '2025-08-04'
+    reply_count: 9
+    text_preview: 조직문화 관련 Hacker News 아티클 공유
+terminology:
+  - term: "즉단즉행"
+    definition: "즉시 판단하고 즉시 실행하는 행동 원칙"
+    context: "Act without Permission과의 미묘한 차이에 대한 컬쳐핏 면접 후 고민"
+  - term: "열린 참여"
+    definition: "회의에 초대받지 않아도 관심 있으면 자유롭게 참석할 수 있는 원칙"
+    context: "회의 초대/참여 방식의 투명성과 접근성을 높이기 위한 제안"
+  - term: "과소통"
+    definition: "지나칠 정도로 많이 소통하는 것을 긍정적으로 표현한 Sionic AI의 소통 문화 가치"
+    context: "재택근무에서도 슬랙으로 활발히 소통하는 문화를 긍정적으로 평가"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

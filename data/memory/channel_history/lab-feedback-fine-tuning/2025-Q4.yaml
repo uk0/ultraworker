@@ -1,0 +1,26 @@
+channel:
+  id: C08G1H180KV
+  name: lab-feedback-fine-tuning
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q4 기간 동안 lab-feedback-fine-tuning 채널에는 신규 멤버 초대와 합류 메시지 3건만 기록되어 실질적인 파인튜닝 연구 논의는 이루어지지 않았다. 분기 초에 새로운 팀원이 채널에 초대되어 멤버 구성이 확장되었으며, 분기 말에 또 다른 멤버가 합류하였다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "파인튜닝"
+    definition: "사전학습된 LLM을 특정 도메인이나 피드백 데이터로 추가 학습하는 기법"
+    aliases: ["fine-tuning"]
+    context: "서비스 피드백 데이터를 활용한 LLM 성능 개선 연구 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,32 @@
+channel:
+  id: C06GZ8S0KQW
+  name: japanese-learning
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 2.0
+summary: |
+  2025년 1분기에는 박우명님의 JLPT N3 합격 소식이 공유되어 채널에서 축하가 이어졌다.
+  고석현(Noah)님이 박우명님의 N3 취득에 자극받아 청해(리스닝) 학습을 시작하였으며,
+  YouTube 청해 연습 영상을 공유하는 등 자율적인 학습 활동이 이어졌다.
+topics:
+  - JLPT N3 합격
+  - 청해 학습
+  - 자율 학습
+key_discussions:
+  - thread_ts: '1738937917.488659'
+    date: '2025-02-07'
+    topic: 박우명님 JLPT N3 취득 축하 및 청해 학습 시작 (YouTube 영상 공유)
+terminology:
+  - term: JLPT N3
+    definition: 일본어능력시험 3급, 일상적인 일본어를 어느 정도 이해할 수 있는 중급 수준
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

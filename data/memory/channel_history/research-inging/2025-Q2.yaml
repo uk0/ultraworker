@@ -1,0 +1,69 @@
+channel:
+  id: C08LV1WBEGP
+  name: research-inging
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 104
+  total_threads: 58
+  active_users: 21
+  avg_messages_per_day: 3.0
+summary: |
+  2025-Q2에 research-inging 채널이 개설되어 21명의 리서치 및 엔지니어링 멤버가 합류하였다. 채널 초기에는 Qwen2.5 프루닝, LangGraph, 그래프 기반 RAG, Apache AGE 등 신규 기술 논의가 활발하였다. 비전 언어 모델(Xionic-VL) 학습 관련 실험, DPO 학습, KL 발산 조절 등 모델 파인튜닝 과정이 공유되었으며, 일본 AI 학회(LLM-JP) 초대 수령, CIC Tokyo 입주 등 대외 활동도 보고되었다.
+topics:
+  - name: "신기술 탐색 및 공유"
+    mention_count: 15
+    description: "LangGraph, 그래프 RAG, Apache AGE, Qwen3 MoE, Grok3 등 최신 모델/기술 공유"
+  - name: "Xionic-VL 모델 학습"
+    mention_count: 10
+    description: "비전 언어 모델 학습 파이프라인 구축, KL 발산 조절, DPO 학습 실험"
+  - name: "Qwen3 Retrieval 서버 개발"
+    mention_count: 4
+    description: "ZMQ 기반 배치처리 워커, 3090 GPU로 약 28 QPS 처리 성능 달성"
+  - name: "RAG 2.0 아키텍처 논의"
+    mention_count: 3
+    description: "Claude Code의 로직이 RAG 2.0 시스템과 유사하다는 인사이트 공유"
+  - name: "대외 활동"
+    mention_count: 3
+    description: "LLM-JP 일본 학회 슬랙 초대, CIC Tokyo 입주, ARR 논문 리뷰"
+key_discussions:
+  - thread_ts: '1744219960.000000'
+    date: '2025-04-09'
+    reply_count: 27
+    text_preview: "그래프 기반 RAG 도입 결국 하는 것인가 논의"
+  - thread_ts: '1744197320.000000'
+    date: '2025-04-09'
+    reply_count: 20
+    text_preview: "Apache AGE GraphDB 활용 방안 및 비교 토론"
+  - thread_ts: '1746671400.000000'
+    date: '2025-05-08'
+    reply_count: 7
+    text_preview: "HNSW 밑바닥부터 라이브 코딩 공유"
+  - thread_ts: '1749432540.000000'
+    date: '2025-06-09'
+    reply_count: 6
+    text_preview: "Qwen3 Retrieval 서버 개발 공유: ZMQ 배치처리, 28 QPS 성능"
+  - thread_ts: '1745207820.000000'
+    date: '2025-04-21'
+    reply_count: 6
+    text_preview: "KL 발산 값이 너무 커서 학습 불안정 이슈 해결 논의"
+terminology:
+  - term: "LangGraph"
+    definition: "LangChain 기반 그래프 형태의 AI 에이전트 워크플로우 프레임워크"
+  - term: "Xionic-VL"
+    definition: "사이오닉AI 내부 개발 중인 비전 언어 모델"
+  - term: "DPO"
+    definition: "Direct Preference Optimization, 강화학습 없이 선호도 데이터로 모델 정렬하는 방법"
+  - term: "HNSW"
+    definition: "Hierarchical Navigable Small World, 근사 최근접 이웃 검색 알고리즘"
+  - term: "Apache AGE"
+    definition: "PostgreSQL 기반 그래프 데이터베이스 확장"
+  - term: "LLM-JP"
+    definition: "일본 국립정보학연구소(NII) 주도의 일본어 LLM 연구 학회"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

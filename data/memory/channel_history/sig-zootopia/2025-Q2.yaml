@@ -1,0 +1,60 @@
+channel:
+  id: C085HPG2GEQ
+  name: sig-zootopia
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 111
+  total_threads: 78
+  active_users: 17
+  avg_messages_per_day: 2.5
+summary: |
+  채널 역대 최대 활동량(111개 메시지, 17명 참여)을 기록한 분기. 오승희가 임시집사로 깽이를 돌보며 대량의 깽이 콘텐츠를 생산했다(꾹꾹이로 3시반 기상, 바보 깽이, 손 주는 깽이, 프롬프팅 꿈 등). 권혜선은 아루의 넥카라(상처 관리), 병원 방문, 고양이와의 절교 에피소드 등 건강 관련 이야기를 공유했다. 김수원의 몽자는 "개 키우지마.."(30개 답변), 벽지 뜯기, 장마철 실외배변 등 반려견 일상의 고충을 보여줬다. 김혜원의 산도는 "저희집 너구리"(23개 답변)로 화제가 되었고, 고양이 소쿠리를 추천하여 권혜선도 구매했다. 정세민은 당근마켓에서 깽이 돌봄 구인 글을 올리기도 했다. 고양이 티셔츠용 사진 모집(24개 답변), still3028의 강아지 나무 소개 등 다양한 반려동물 콘텐츠가 풍성했다.
+topics:
+  - 반려묘 건강 (넥카라, 병원, 상처 관리)
+  - 임시집사/돌봄 (깽이 돌봄, 당근마켓 구인)
+  - 반려견 일상 (몽자, 나무)
+  - 반려동물 용품 (소쿠리, 셀프 그루머, 조공 오리맛)
+  - 반려동물 굿즈 (고양이 티셔츠, 냥티커)
+key_discussions:
+  - thread_ts: '1747389363.109469'
+    date: '2025-05-16'
+    topic: 몽자 벽지 뜯기 사건
+    reply_count: 30
+  - thread_ts: '1747048889.699409'
+    date: '2025-05-12'
+    topic: 개 키우지마.. (반려견 고충)
+    reply_count: 30
+  - thread_ts: '1749096551.179279'
+    date: '2025-06-05'
+    topic: 깽이 옷장/신발장 좋아하는 이야기
+    reply_count: 25
+  - thread_ts: '1745853207.161269'
+    date: '2025-04-28'
+    topic: 고양이 티셔츠 사진 모집
+    reply_count: 24
+  - thread_ts: '1750996619.133959'
+    date: '2025-06-27'
+    topic: 산도 너구리 닮은꼴
+    reply_count: 23
+  - thread_ts: '1748411324.763899'
+    date: '2025-05-28'
+    topic: 실시간 옆자리 반려동물
+    reply_count: 21
+terminology:
+  - term: "넥카라"
+    definition: "넥 카라(Elizabeth collar), 반려동물의 상처 핥기 방지용 보호대"
+    context: "아루 상처 관리 시 사용"
+  - term: "조공"
+    definition: "반려동물 사료/간식 브랜드"
+    context: "소피 캣 캔, 오리맛 신제품 기호성 테스트"
+  - term: "나무"
+    definition: "still3028의 반려견 이름, 만 9세"
+    context: "별명 '갈색폭격기', 간식 숨기기 특기"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

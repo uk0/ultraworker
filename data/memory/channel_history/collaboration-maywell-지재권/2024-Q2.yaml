@@ -1,0 +1,54 @@
+channel:
+  id: C06TDQ24SLE
+  name: collaboration-maywell-지재권
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 21
+  total_threads: 5
+  active_users: 5
+  avg_messages_per_day: 2.3
+summary: |
+  Maywell(Jeonghwan Park)과 Sionic AI 간 지재권(특허) 협업 채널. 2024년 4월에 Noah(고석현 대표)가
+  Jeonghwan Park과의 특허 작업을 위해 채널을 개설함. 주요 활동:
+  (1) 모델 컨텍스트 확장 특허화 작업(40개 답변 대형 스레드) - 박우명과 고석현이 기존 특허 공유,
+  Jeonghwan Park이 related works 조사, 실험/평가 요소 정의(Code-Mixing 빈도 측정, 도메인 성능
+  향상 검증 등),
+  (2) 한국어 토큰 확률 변경 기술 관련 논의,
+  (3) KMMLU, PubMed 등 벤치마크 데이터셋 선정,
+  (4) 특허 비용 및 변리사는 Sionic AI에서 지원,
+  (5) 박우명이 특허 이해도 향상을 위한 참고 문서 공유,
+  (6) dkyoon이 채널에 추가 참여.
+topics:
+  - 모델 컨텍스트 확장 특허
+  - 한국어 토큰 확률 제어 기술
+  - 특허 출원 준비
+  - 벤치마크 평가 설계
+key_discussions:
+  - thread_ts: '1714356812.896379'
+    date: '2024-04-29'
+    reply_count: 40
+    text_preview: "모델 컨텍스트 확장 특허화 작업 메인 스레드"
+  - thread_ts: '1713608544.261799'
+    date: '2024-04-20'
+    reply_count: 5
+    text_preview: "고석현 대표와 기술 논의"
+  - thread_ts: '1716115010.950849'
+    date: '2024-05-19'
+    reply_count: 3
+    text_preview: "한국어 토큰 확률 변경 진행 상황 확인"
+terminology:
+  - term: "Code-Mixing"
+    definition: "한국어 Undertrain 모델에서 나타나는 언어 혼합 현상"
+    aliases: ["Code-Switching"]
+    context: "특허 실험에서 출현 빈도 측정 대상"
+  - term: "KMMLU"
+    definition: "한국어 다중 과목 언어 이해 벤치마크"
+    context: "Code-Mixing 평가용 데이터셋으로 검토"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,30 @@
+channel:
+  id: C070AQCSZ0C
+  name: alarm-dev-error-pylon
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:09'
+statistics:
+  total_messages: 3245
+  total_threads: 2
+  active_users: 6
+  avg_messages_per_day: 75.5
+key_discussions:
+- thread_ts: '1770610289.302529'
+  date: '2026-02-09'
+  reply_count: 28
+  text_preview: '<@U09PC5PNGUA> "bucketId": "7426475490185707521" 이 아이디 갖고있는 팀 찾아줘'
+- thread_ts: '1770609417.446779'
+  date: '2026-02-09'
+  reply_count: 4
+  text_preview: '*[ 참고 ]* 제가 Pylon OCI 클러스터에 띄우고 있습니다
+
+    위 오류들이 저와 관련있는지는 모릅니다. :eyes:
+
+    cc <!subteam^S08KY8KKE1K>'
+metadata:
+  created_at: '2026-02-13T16:29:09'
+  synced_by: sync_fast.py

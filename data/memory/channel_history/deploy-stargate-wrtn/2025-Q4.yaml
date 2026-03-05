@@ -1,0 +1,24 @@
+channel:
+  id: C07EGUY0G11
+  name: deploy-stargate-wrtn
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  자동화된 배포 채널. stargate-wrtn 서비스의 배포 알림이 기록되는 채널로, 2025-Q4에는 신규 멤버 참여 외 실질적인 배포 활동이 없었다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "stargate-wrtn"
+    definition: "Sionic AI의 wrtn(뤼튼) 연동 Stargate 검색 서비스 배포 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

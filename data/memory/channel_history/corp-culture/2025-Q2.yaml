@@ -1,0 +1,55 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 6
+  active_users: 4
+  avg_messages_per_day: 1.2
+summary: |
+  2025년 2분기는 채용 프로세스 개선에 집중된 시기였다. 양호진이 채용 공고에 STORM 플랫폼 체험 링크를 포함시키자는 제안을 했으며(22건 답글),
+  컬쳐핏 면접 질문 정비, 채용페이지 수정, 인턴십/채용 문의 대응 등 채용 관련 논의가 주를 이루었다.
+  토스의 레포 기반 지원(이력서 없이 레포만으로 지원) 사례가 공유되는 등 혁신적 채용 방식에 대한 관심도 높았다.
+topics:
+  - 채용 공고 개선 (STORM 체험 링크)
+  - 컬쳐핏 면접 질문 정비
+  - 채용페이지 관리
+  - 혁신적 채용 방식 (레포 기반 지원)
+key_discussions:
+  - thread_ts: '1745977527.689909'
+    date: '2025-04-30'
+    reply_count: 22
+    text_preview: 채용 공고 안에 스톰을 사용할 수 있는 링크를 넣는 게 어떨까요?
+  - thread_ts: '1744781104.173309'
+    date: '2025-04-16'
+    reply_count: 13
+    text_preview: 컬쳐핏 면접 질문 적다가...
+  - thread_ts: '1745978215.504969'
+    date: '2025-04-30'
+    reply_count: 12
+    text_preview: 산기요 관련해서 모교 선생님들과 연락 - 인턴십/채용 관련 문의 대응
+  - thread_ts: '1747735714.865009'
+    date: '2025-05-20'
+    reply_count: 7
+    text_preview: 타래 옮김 (채용/컬쳐 관련 논의)
+  - thread_ts: '1751003514.839499'
+    date: '2025-06-27'
+    reply_count: 3
+    text_preview: 채용페이지 수정 관련 논의
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 주력 AI 검색/문서 플랫폼 서비스"
+    aliases: ["스톰"]
+    context: "채용 공고에 STORM 체험 링크를 포함시켜 지원자의 제품 이해도를 높이자는 제안"
+  - term: "산기요"
+    definition: "산업기능요원 (병역특례) 제도"
+    context: "병역특례 관련 채용/인턴십 문의 대응 맥락"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

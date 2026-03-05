@@ -1,0 +1,48 @@
+channel:
+  id: C08LAM5H9AT
+  name: eng-github-jvm
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 163
+  total_threads: 76
+  active_users: 2
+  avg_messages_per_day: 3.5
+summary: |
+  2025년 3분기 eng-github-jvm 채널은 carrier 저장소의 GitHub PR 및 코드 리뷰 알림 채널로, 주로 한 명의 개발자(U06BLM250QG)가 PR 작업을 주도하였다.
+  7월에는 특히 11일에 33개 답글이 달린 대규모 PR 리뷰가 진행되는 등 활발한 코드 리뷰 활동이 있었고, 8월과 9월에도 꾸준한 PR 활동이 지속되었다.
+  8월 24일 11개 답글 스레드 등 주요 아키텍처 변경이나 중요 기능 개발 관련 리뷰가 진행되었으며, 9월에는 PR 활동이 점차 안정화되었다.
+topics:
+  - name: "Pull Request 알림"
+    mention_count: 76
+    description: "carrier 저장소 PR 생성 및 코드 리뷰 알림"
+  - name: "코드 리뷰 토론"
+    mention_count: 30
+    description: "PR에 대한 심층 코드 리뷰 및 기술 논의"
+key_discussions:
+  - thread_ts: '1752192000.000000'
+    date: '2025-07-11'
+    reply_count: 33
+    text_preview: "7월 대규모 PR 리뷰 - 33개 답글"
+  - thread_ts: '1752192400.000000'
+    date: '2025-07-11'
+    reply_count: 8
+    text_preview: "7월 추가 PR 리뷰 - 8개 답글"
+  - thread_ts: '1753920000.000000'
+    date: '2025-08-24'
+    reply_count: 11
+    text_preview: "8월 주요 PR - 11개 답글"
+  - thread_ts: '1751241600.000000'
+    date: '2025-07-01'
+    reply_count: 9
+    text_preview: "7월 초 PR 리뷰 - 9개 답글"
+terminology:
+  - term: "carrier"
+    definition: "사이오닉AI의 JVM(Kotlin+Spring) 기반 핵심 백엔드 서비스 저장소"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

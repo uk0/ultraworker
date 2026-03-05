@@ -1,0 +1,32 @@
+channel:
+  id: C079KMS7LNN
+  name: guest_marcspon
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 6
+  active_users: 13
+  avg_messages_per_day: 5.2
+summary: |
+  2024-Q2 guest_marcspon 채널 데이터 수집 완료. 26개 메시지, 13명 참여, 6개 스레드.
+  마크스폰(EDK 개발 기획)과 사이오닉 간 협업 채널 개설. 마크스폰 윤찬흠님이 STORM 데모 버전 사용 후 기술 문의 진행. 프롬프트 엔지니어링(답변 스타일 150자 제한 해제 요청), 텍스트 출력 글자수 제한(600-700자) 이슈, API 연동 관련 기술적 질의응답 시작.
+topics:
+  - "STORM 데모 사용 및 기술 문의"
+  - "프롬프트 엔지니어링 설정"
+  - "API 연동 논의"
+key_discussions:
+  - title: "마크스폰 STORM 데모 사용 시작"
+    summary: "마크스폰 윤찬흠님이 STORM 데모 사용 후 답변 스타일 글자수 제한, 출력 길이 제한 등 기술적 문의 진행"
+terminology:
+  - term: "마크스폰(Marcspon)"
+    definition: "EDK 개발 기획 소속. STORM API 연동을 통한 서비스 개발 파트너"
+  - term: "답변 스타일"
+    definition: "STORM의 프롬프트 엔지니어링 설정. 도출 결과의 템플릿화 목적"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

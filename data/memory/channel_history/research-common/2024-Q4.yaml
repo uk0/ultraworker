@@ -1,0 +1,102 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 86
+  total_threads: 58
+  active_users: 15
+  avg_messages_per_day: 1.9
+summary: |
+  2024년 Q4 KPI가 설정되어 Document AI 기술 내재화, 도메인별 reranker 파인튜닝, 한국어/일본어 임베딩 모델 개발, 특허 7건 출원 등 구체적 목표가 수립되었다.
+  ModernBERT 출시에 대한 관심이 높았으며, ColBERT 학습을 위한 한국어 데이터셋 제작(ko-pylate), NLI 한국어 데이터셋 1.12M row 구축 등 임베딩/리랭커 연구가 활발했다.
+  VLM 튜닝(Qwen2-VL-7B 기반 IBK용), 메타 에이전트 전략, 문서 처리 파이프라인 고도화 등 제품 연관 연구도 진행되었다.
+  CVPR 논문 제출(dkyoon), Moreh의 Motif-102B 모델 공개, 일본어 인턴(최다솔) 과제 설정 등의 활동이 있었다.
+  리서치 미팅이 월요일 오전 11시로 변경되었고, 테크 세미나에서 인코더 논문 읽기 등이 진행되었다.
+topics:
+  - name: "임베딩/리랭커 연구"
+    mention_count: 20
+    description: "ModernBERT, ColBERT(pylate), bge-m3, KURE, NLI 데이터셋, Retriever 벤치마크 등"
+  - name: "VLM/Document AI"
+    mention_count: 10
+    description: "Qwen2-VL-7B 기반 IBK용 VLM 튜닝, bge-visualized 멀티모달 임베딩, QVQ-72B"
+  - name: "KPI 및 로드맵"
+    mention_count: 5
+    description: "2024 Q4 KPI 설정: Document AI, reranker, 한국어/일본어 임베딩 모델, 특허 7건, 논문 1건"
+  - name: "CVPR 논문"
+    mention_count: 4
+    description: "dkyoon의 CVPR 논문 제출 및 영어 작업 지원"
+  - name: "메타 에이전트/RAG 전략"
+    mention_count: 3
+    description: "SKT 에스터 사례 기반 메타 에이전트 전략, RAG 특화 파일 포맷, 프롬프트 엔지니어링 우선순위"
+  - name: "한국어 데이터셋"
+    mention_count: 5
+    description: "korean-archive-dataset 평가, ko-pylate 학습 데이터, NLI 한국어 데이터셋 구축"
+  - name: "LLM 경량화/최적화"
+    mention_count: 3
+    description: "Super Weight 개념, Test Time Training, PEFT 접근법 정리"
+  - name: "코드믹싱 해결"
+    mention_count: 2
+    description: "라마3.3 토큰 전수 검사를 통한 코드믹싱 감소 방법 연구"
+key_discussions:
+  - date: "2024-10-04"
+    topic: "2024 Q4 KPI 설정"
+    participants: ["박우명"]
+    summary: "Document AI 기술 내재화, reranker 파인튜닝, 한국어/일본어 임베딩 모델, 특허 7건, 논문 1건 등 구체적 목표 수립"
+  - date: "2024-12-20"
+    topic: "ModernBERT 분석"
+    participants: ["Sigrid Jin"]
+    summary: "ModernBERT-large 출시에 대한 분석. MosaicML 기반 개량, global/local attention, unpadding, flash_attention2 등 최적화 기법 적용"
+  - date: "2024-12-04"
+    topic: "IBK용 VLM 튜닝 논의"
+    participants: ["정세민"]
+    summary: "Qwen2-VL-7B 기반 FFT 학습, OCR 기반 텍스트 일치율 검증 방법 논의"
+  - date: "2024-11-18"
+    topic: "메타 에이전트 전략 논의"
+    participants: ["Noah", "박우명"]
+    summary: "메타 에이전트 개발 시기, 모델 튜닝 vs 프롬프트 엔지니어링, RAG 특화 파일 포맷 등 전략 방향 논의"
+  - date: "2024-12-12"
+    topic: "korean-archive-dataset 평가"
+    participants: ["Noah"]
+    summary: "25k 데이터를 bm25+reranker로 평가한 결과 공유 (40개 스레드 답변으로 심층 논의)"
+  - date: "2024-12-02"
+    topic: "Moreh Motif-102B 모델 공개"
+    participants: ["Noah"]
+    summary: "모레 프론티어급 한국어 공개모델 공유, 라이브 챗봇/모델/소스 코드 링크 공유 및 피드백 요청"
+  - date: "2024-12-09"
+    topic: "코드믹싱 감소 방법"
+    participants: ["Noah"]
+    summary: "라마3.3 토큰 전수 검사 후 언어셋 룰 적용하여 코드믹싱 감소 실험"
+terminology:
+  - term: "ModernBERT"
+    definition: "MosaicBERT 기반으로 최신 기법을 적용한 bidirectional encoder 모델"
+    aliases: ["FlexBERT"]
+    context: "GTE NewEmbedding 백본과 비교, ColBERT 학습 등에 활용"
+  - term: "ColBERT"
+    definition: "Contextualized Late Interaction 기반의 multi-vector 검색 모델"
+    aliases: ["pylate"]
+    context: "ModernBERT base로 학습하는 한국어 ColBERT 모델 개발"
+  - term: "KURE"
+    definition: "nlpai-lab에서 공개한 한국어 retrieval 모델"
+    aliases: ["KURE-v1"]
+    context: "bge-m3를 튜닝해도 성능 개선이 미미함을 확인"
+  - term: "코드믹싱"
+    definition: "LLM 출력에서 여러 언어가 혼합되어 나타나는 현상"
+    aliases: ["code mixing"]
+    context: "repetition_penalty 조정이나 logit 마스크를 통해 감소 가능"
+  - term: "Motif-102B"
+    definition: "모레(Moreh)에서 개발한 프론티어급 한국어 공개 LLM"
+    aliases: []
+    context: "Llama 3 기반의 대규모 한국어 모델"
+  - term: "DBSF"
+    definition: "Distribution-Based Score Fusion, 앙상블 검색 점수 융합 방법"
+    aliases: []
+    context: "다양한 검색 모델의 점수를 정규화하여 결합"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

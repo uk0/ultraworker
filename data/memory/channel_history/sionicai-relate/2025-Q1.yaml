@@ -1,0 +1,62 @@
+channel:
+  id: C083Z9S9Y9M
+  name: sionicai-relate
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 19
+  total_threads: 7
+  active_users: 6
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 1분기 sionicai-relate 채널에서는 Relate 툴 온보딩과 초기 설정 작업이 본격적으로 진행되었다. 1월에는 VoIP 시스템 및 문자 메시지 연동 가능 여부 문의, Engage 기능의 자동 발송 조건 질의가 이루어졌다. 2월에는 수진님이 설정 작업을 진행하였고, 구글 계정 연동 로그인 이슈(비밀번호 재설정으로 해결) 및 이메일 서명 추가 방법 문의, Organization 삭제 불가 이슈 등이 논의되었다. 3월에는 Relate 팀과의 중간 체크인 미팅 제안과 함께 한국어 UI 지원 출시 안내, 이메일 마케팅 웨비나 공지가 있었다.
+topics:
+  - name: "Relate 온보딩 및 초기 설정"
+    mention_count: 8
+    description: "수진님 중심의 설정 작업 진행, 구글 계정 로그인 이슈 해결, 인비 재발송"
+  - name: "Engage 기능 사용법 문의"
+    mention_count: 4
+    description: "Engage 자동 발송 조건(People에 추가되는 모든 연락처 해당 여부), 이메일 서명 추가"
+  - name: "Relate 툴 이슈"
+    mention_count: 3
+    description: "Organization 삭제 불가 이슈, VoIP/문자 연동 문의, 딜(Deal) 삭제 방법"
+  - name: "한국어 UI 출시 및 웨비나"
+    mention_count: 3
+    description: "3월 27일 한국어 언어 지원 출시, 3월 6일 이메일 마케팅 웨비나 공지"
+key_discussions:
+  - thread_ts: '1737029520.000000'
+    date: '2025-01-16'
+    reply_count: 10
+    text_preview: "VoIP 시스템 및 문자 메시지 연동 가능 여부 문의"
+  - thread_ts: '1739196600.000000'
+    date: '2025-02-10'
+    reply_count: 0
+    text_preview: "구글 계정 로그인 이슈 - 비밀번호 재설정으로 해결. 인비 재발송"
+  - thread_ts: '1739513280.000000'
+    date: '2025-02-14'
+    reply_count: 12
+    text_preview: "이메일 서명 추가 방법 문의"
+  - thread_ts: '1739772920.000000'
+    date: '2025-02-17'
+    reply_count: 5
+    text_preview: "Organization 삭제 불가 이슈 확인"
+terminology:
+  - term: "Relate"
+    definition: "B2B CRM 플랫폼. 영업 파이프라인, 연락처 관리, 이메일 마케팅 통합"
+    aliases: ["relate.so", "admin.relate.so"]
+    context: "2025-Q1부터 Sionic AI 영업팀이 본격적으로 온보딩 및 활용 시작"
+  - term: "Engage"
+    definition: "Relate의 시퀀스 이메일 기능"
+    aliases: ["Sequences"]
+    context: "아웃바운드 자동 팔로업 이메일 발송에 활용"
+  - term: "People"
+    definition: "Relate에서 연락처(Contact)를 관리하는 섹션"
+    aliases: ["Contacts"]
+    context: "Engage 자동 발송 트리거 조건 관련 질의에서 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

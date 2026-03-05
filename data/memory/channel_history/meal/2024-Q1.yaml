@@ -1,0 +1,56 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 127
+  total_threads: 84
+  active_users: 15
+  avg_messages_per_day: 1.9
+summary: |
+  2024-Q1 meal 채널은 사내 식사 및 간식 관련 소통의 중심 채널이었다. 주요 활동으로는 매일 오후 진행되는 저녁 수요 조사 봇 운영,
+  주 2~3회 '푸딩(Fooding)' 배송 서비스를 통한 저녁 메뉴 공지 및 주문, 점심 외식 조율(곱창, 양꼬치 등), 과자/음료/커피 캡슐 등
+  사무실 비품 주문이 있었다. 네스프레소 캡슐 대량 구매 논의, 회식 장소 선정, 배달 앱(쿠팡이츠, 배민) 활용 등 실용적 소통이
+  활발했다. 15명의 구성원이 참여하여 평균 일 1.9건의 메시지가 오갔다.
+topics:
+  - 저녁 수요 조사
+  - 푸딩 배송 메뉴
+  - 점심 외식 조율
+  - 과자/음료 주문
+  - 네스프레소 캡슐 구매
+  - 회식/단체 식사
+key_discussions:
+  - thread_ts: '1704956400.000000'
+    date: '2024-01-11'
+    reply_count: 10
+    text_preview: 미리 조사하는 오늘의 저녁 수요 - 저녁 식사 수요 파악 봇 운영 시작
+  - thread_ts: '1706166000.000000'
+    date: '2024-01-25'
+    reply_count: 8
+    text_preview: 푸딩 배송 메뉴 공지 및 주문 - 주 2~3회 정기 배송 메뉴 안내
+  - thread_ts: '1709000000.000000'
+    date: '2024-02-27'
+    reply_count: 6
+    text_preview: 네스프레소 캡슐 대량 구매 논의 - 사무실 커피 비품 충전
+  - thread_ts: '1710000000.000000'
+    date: '2024-03-10'
+    reply_count: 5
+    text_preview: 점심 외식 조율 - 곱창, 양꼬치 등 맛집 탐방 논의
+terminology:
+  - term: 푸딩
+    definition: Fooding 배송 서비스. 사무실로 정기 배송되는 저녁 식사 서비스
+    aliases:
+      - Fooding
+    context: 주 2~3회 저녁 메뉴를 배송받아 사무실에서 식사하는 복지 시스템
+  - term: 저녁 수요 조사
+    definition: 매일 오후 슬랙 봇을 통해 저녁 식사 인원을 사전 파악하는 시스템
+    aliases: []
+    context: 배달/배송 수량 결정을 위해 미리 인원 파악
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

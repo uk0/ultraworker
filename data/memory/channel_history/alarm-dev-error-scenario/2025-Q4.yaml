@@ -1,0 +1,43 @@
+channel:
+  id: C0A3RV6Q7K2
+  name: alarm-dev-error-scenario
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 119
+  total_threads: 0
+  active_users: 5
+  avg_messages_per_day: 19.8
+summary: |
+  2025년 4분기 alarm-dev-error-scenario 채널은 2025년 12월 11일에 신규 생성된 채널로, Apidog 기반의 자동화 시나리오 테스트 결과를 CI/CD 파이프라인과 연동하여 수신하는 채널이다. 채널명은 alarm-dev-error에서 alarm-dev-error-scenario로 변경되었으며, STORM 최소 시나리오 및 에이전트 생성-문서 업로드-챗-에이전트 삭제 시나리오에 대한 자동 실행 결과가 지속적으로 보고되었다. 초기에는 13개 테스트 전부 실패(0% 통과율)가 기록되었으나, 이후 18개 테스트 중 16개 통과(88.89%)로 개선되었다. 일 평균 약 20개의 메시지가 발생하는 고빈도 자동화 알림 채널이다.
+topics:
+  - name: "STORM 최소 시나리오 테스트"
+    mention_count: 50
+    description: "Apidog 기반 STORM InternalAPI의 최소 시나리오 자동 실행 결과. CI/CD 파이프라인과 연동"
+  - name: "에이전트 생성-문서 업로드-챗-삭제 시나리오"
+    mention_count: 60
+    description: "에이전트 생성, 문서 업로드, 챗 응답, 에이전트 삭제 전체 플로우 자동 테스트"
+  - name: "스케줄 테스트 실행"
+    mention_count: 10
+    description: "주기적으로 실행되는 스케줄 태스크 결과 보고(dev 환경 STORM 최소 시나리오)"
+key_discussions: []
+terminology:
+  - term: "Apidog"
+    definition: "API 테스트 및 문서화 도구. Sionic AI의 자동화 시나리오 테스트에 사용"
+    aliases: ["apidog"]
+    context: "CI/CD 파이프라인 연동 테스트 리포트 생성"
+  - term: "STORM 최소 시나리오"
+    definition: "STORM 플랫폼의 핵심 기능을 검증하는 최소한의 E2E 테스트 시나리오 세트"
+    aliases: []
+    context: "dev 환경에서 주기적으로 실행되는 회귀 테스트"
+  - term: "통과율"
+    definition: "자동화 테스트에서 Passed/Total 비율. 초기 0% 에서 88.89%로 개선"
+    aliases: ["Passing Rate"]
+    context: "테스트 품질 지표로 활용"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

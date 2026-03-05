@@ -1,0 +1,32 @@
+channel:
+  id: C06G345H2A0
+  name: onicsy-goods
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 2
+  active_users: 6
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 4분기에 정세민님이 GPT를 활용한 굿즈 디자인 작업을 공유하며 "GPT는 신이야"라고 감탄하였다(8개 답글).
+  새로운 굿즈 시안이 공유되었으며, 원성준님, 안진혁님, Sigrid Jin님 등이 새로 합류하였다.
+  AI를 활용한 디자인 작업이 굿즈 제작 프로세스에 도입되고 있음을 보여주었다.
+topics:
+  - GPT 활용 굿즈 디자인
+  - 새 굿즈 시안 공유
+key_discussions:
+  - thread_ts: '1761780630.770949'
+    date: '2025-10-29'
+    topic: GPT를 활용한 굿즈 디자인 작업 (8개 답글)
+  - thread_ts: '1762349756.678189'
+    date: '2025-11-05'
+    topic: 새 굿즈 시안 공유 (3개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

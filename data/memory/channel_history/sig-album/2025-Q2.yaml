@@ -1,0 +1,65 @@
+channel:
+  id: C08NUL5CGFN
+  name: sig-album
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 111
+  total_threads: 52
+  active_users: 20
+  avg_messages_per_day: 3.6
+summary: |
+  가장 활발한 사진 앨범 채널. 최병현(Hyune-c)이 치앙마이/태국 워케이션 사진을 대량으로 공유하며
+  채널의 주요 기여자로 활동. 코끼리, 코코넛 감자튀김, 태국 야시장, 사원, 맥주 등 다양한 여행 사진 공유.
+  권혜선은 캠핑, 스테이크(포터하우스), 산책 중 발견물 등 일상 사진을 공유.
+  Sigrid Jin은 상하이 여행 사진과 Stanford Engineering Carnival 에피소드(스탠포드와 무관한 티셔츠 착용) 공유.
+  김덕현은 경주 여행 후기(어린이날+부처님오신날 경주 가지 말 것), 사이오닉 1주년 홍보 공유.
+  백은주 검샷 시리즈(대마왕 게임캐릭터), 정세민 상하이 사진, 송명하 호치민 사진 등 해외 출장/여행 사진도 다수.
+  오승희 칠가이 사진, 양호진 참여, 김혜원 참여 등 20명의 대규모 참여.
+topics:
+  - 치앙마이/태국 워케이션 (최병현)
+  - 캠핑/일상 사진 (권혜선)
+  - 상하이 출장 사진 (Sigrid Jin, 정세민)
+  - 경주 여행 후기 (김덕현)
+  - 호치민 사진 (송명하)
+  - 팀원 일상/사무실 사진
+  - 사이오닉 1주년
+key_discussions:
+  - thread_ts: '1748421043.135649'
+    date: '2025-05-28'
+    reply_count: 31
+    text_preview: '권혜선 - 골골대서 든든한거 먹으러 옴'
+  - thread_ts: '1746601063.554379'
+    date: '2025-05-07'
+    reply_count: 17
+    text_preview: '최병현 - 잘 지내고 있습니다 (치앙마이)'
+  - thread_ts: '1744953765.374119'
+    date: '2025-04-18'
+    reply_count: 16
+    text_preview: '최병현 - 합성 아님 (태국 사진)'
+  - thread_ts: '1745035871.492029'
+    date: '2025-04-19'
+    reply_count: 16
+    text_preview: '최병현 - 코끼리에게 먹여줘'
+  - thread_ts: '1746023343.325469'
+    date: '2025-04-30'
+    reply_count: 15
+    text_preview: '최병현 - 감자튀김이 코코넛에 담겨나오는 것에 대해서'
+  - thread_ts: '1745758914.744059'
+    date: '2025-04-27'
+    reply_count: 15
+    text_preview: '최병현 - 여기에만 누우면 일어날수가 없음'
+terminology:
+  - term: "미타"
+    definition: "사이오닉AI의 사무실/오피스 이름"
+    context: "사무실 관련 사진에서 미타라는 이름으로 언급"
+  - term: "옴닉"
+    definition: "특정 캐릭터/마스코트 (오버워치 관련 추정)"
+    context: "최병현이 태국에서도 옴닉을 발견했다고 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

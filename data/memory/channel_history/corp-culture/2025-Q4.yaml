@@ -1,0 +1,59 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 6
+  active_users: 4
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 4분기는 Culture v2.0 수립과 조직문화 블로그 콘텐츠 제작이 핵심 활동이었다.
+  김혜원이 지난 2년간의 Culture v1.0을 발전시킨 Culture v2.0 초안을 공유하며, '무모함이 아닌 용기 있는 실행', '결과로 배우는 끈기', '함께 성장하는 팀' 등 새로운 가치 체계를 제안했다(13건 답글).
+  안진혁이 '사이오닉에서 살아남기 2탄' 블로그 글을 작성하여 외부 공개를 위한 피드백을 받았으며, 타운홀에서의 조직문화 세션 계획도 논의되었다.
+  이강욱이 Sionic AI의 과소통 문화와 재택근무의 자유로움을 긍정적으로 평가하는 글을 공유하며 조직문화에 대한 자부심을 표현했다.
+topics:
+  - Culture v2.0 수립
+  - 조직문화 블로그 콘텐츠 (사이오닉에서 살아남기 2탄)
+  - 타운홀 조직문화 세션
+  - 과소통 문화 긍정 평가
+key_discussions:
+  - thread_ts: '1760421919.588399'
+    date: '2025-10-14'
+    reply_count: 13
+    text_preview: Culture v1.0에서 v2.0으로 - 무모함이 아닌 용기 있는 실행, 결과로 배우는 끈기, 함께 성장하는 팀
+  - thread_ts: '1761202474.749179'
+    date: '2025-10-23'
+    reply_count: 12
+    text_preview: 과소통 문화와 재택근무의 자유로움에 대한 긍정 평가
+  - thread_ts: '1761712858.334219'
+    date: '2025-10-29'
+    reply_count: 12
+    text_preview: 사이오닉에서 살아남기 2탄 블로그 글 초안 피드백 요청
+  - thread_ts: '1761555219.300949'
+    date: '2025-10-27'
+    reply_count: 6
+    text_preview: 차주 타운홀에서 조직문화 관련 세션 계획 논의
+  - thread_ts: '1762348098.636529'
+    date: '2025-11-05'
+    reply_count: 3
+    text_preview: 사이오닉에서 살아남기 2탄 최종 시안 - oopy 퍼블리시 예정
+terminology:
+  - term: "Culture v2.0"
+    definition: "Sionic AI의 업데이트된 조직문화 체계. 용기 있는 실행, 끝까지 해내는 끈기, 함께 성장하는 팀을 핵심 가치로 제안"
+    context: "Culture v1.0 (허락보다 실행, 빠른 결정과 추진력)을 2년간의 경험을 바탕으로 발전시킨 버전"
+  - term: "사이오닉에서 살아남기"
+    definition: "Sionic AI 블로그에 게시되는 직원 경험담 시리즈"
+    aliases: ["살아남기 시리즈"]
+    context: "1탄은 예원님(ML 인턴), 2탄은 안진혁이 작성하여 외부 공개"
+  - term: "타운홀"
+    definition: "전사 구성원이 참여하는 정기 전체 미팅"
+    context: "조직문화 세션을 타운홀에서 진행하는 방안 논의"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

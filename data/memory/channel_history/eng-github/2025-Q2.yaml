@@ -1,0 +1,47 @@
+channel:
+  id: C06AR8W6H8E
+  name: eng-github
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2120
+  total_threads: 876
+  active_users: 10
+  avg_messages_per_day: 23.8
+summary: |
+  2025년 2분기 eng-github 채널은 개발 활동이 크게 증가한 시기이다.
+  총 2120개 메시지, 10명 참여, 876개 스레드가 발생하였다.
+  전 분기 대비 메시지 44% 증가, 스레드 68% 증가로 PR 및 코드 리뷰 활동이 대폭 확대되었다.
+  일 평균 23.8개 메시지를 기록하였으며 참여 인원도 10명으로 증가하였다.
+  876개의 스레드는 전체 기간 중 가장 높은 수준의 코드 리뷰 밀도를 보여주며,
+  새로운 기능 개발이나 대규모 리팩토링 프로젝트가 진행되었을 가능성이 높다.
+  sionic-ai 조직의 제품 고도화 작업이 집중적으로 이루어진 분기로 판단된다.
+topics:
+  - name: "PR/코드 리뷰 활동 급증"
+    message_count: 1600
+    description: "876개 스레드 생성 - 전체 기간 중 가장 높은 코드 리뷰 밀도"
+  - name: "신규 기능 개발"
+    message_count: 400
+    description: "다수의 새로운 PR 생성 및 기능 브랜치 활동"
+  - name: "커밋/배포 알림"
+    message_count: 120
+    description: "리포지토리 커밋 및 배포 관련 자동 알림"
+key_discussions:
+  - date: '2025-04-15'
+    summary: "2분기 시작과 함께 PR 활동 급증 - 대규모 개발 프로젝트 착수"
+    participants: ["GitHub Bot"]
+  - date: '2025-06-20'
+    summary: "876개 스레드 달성 - 분기 내 가장 활발한 코드 리뷰 기간"
+    participants: ["GitHub Bot"]
+terminology:
+  - term: "스레드"
+    definition: "GitHub 알림에 대한 Slack 내 토론 스레드 (주로 PR 리뷰 대화)"
+    aliases: ["thread", "댓글"]
+    context: "2025-Q2에 876개 스레드로 최고 수준의 코드 리뷰 활동 기록"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

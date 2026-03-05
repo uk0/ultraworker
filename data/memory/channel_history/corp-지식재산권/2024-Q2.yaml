@@ -1,0 +1,51 @@
+channel:
+  id: C06T556UPU5
+  name: corp-지식재산권
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 2
+  active_users: 14
+  avg_messages_per_day: 4.2
+summary: |
+  2024-Q2에 corp-지식재산권 채널이 개설되어 사내 특허 출원 체계가 구축되었다. 첫 번째 특허로 '모델 inference 시 고객 도메인 문서 데이터에 따른 자동 토큰 레벨 가중치 조절' 기법이 변리사 미팅을 거쳐 출원 준비되었으며, '문서 버킷(multi-document retrieval)' 관련 두 번째 특허 초안도 작성되었다. RAG 관련 다양한 아이디어 목록(청킹 전략, 시맨틱 캐시, 자동 평가, 피드백 시스템 등)을 정리하고 국내 20개/해외 5개 특허 출원을 목표로 설정하였다.
+topics:
+  - name: "첫 번째 특허 출원 준비"
+    mention_count: 6
+    description: "모델 inference 시 토큰 레벨 가중치 자동 조절 기법, 변리사 미팅 및 출원 진행"
+  - name: "두 번째 특허 초안 작성"
+    mention_count: 4
+    description: "문서 버킷(multi-document retrieval) 관련 특허 초안 작성 및 검토"
+  - name: "특허 아이디어 목록 정리"
+    mention_count: 3
+    description: "문서 청킹, 시맨틱 캐시, 자동 평가, 피드백 시스템 등 RAG 관련 특허 후보 아이디어"
+key_discussions:
+  - thread_ts: '1712563200.000000'
+    date: '2024-04-08'
+    reply_count: 0
+    text_preview: "특허 출원 채널 개설: 변리사 협력으로 RAG 관련 아이디어 특허화, 국내 20개/해외 5개 목표"
+  - thread_ts: '1713840060.000000'
+    date: '2024-04-23'
+    reply_count: 8
+    text_preview: "첫 번째 특허 초안 작성: 모델 inference 시 고객 도메인 데이터에 따른 자동 토큰 레벨 가중치 조절"
+  - thread_ts: '1714003680.000000'
+    date: '2024-04-25'
+    reply_count: 36
+    text_preview: "두 번째 특허 초안 작성: 문서 버킷(multi-document retrieval), 변리사 미팅 4/25 오후 3시 진행"
+terminology:
+  - term: "토큰 레벨 가중치 조절"
+    definition: "LLM inference 시 고객 도메인 문서 데이터를 기반으로 토큰별 가중치를 자동 조정하는 기법, 첫 번째 특허 주제"
+  - term: "문서 버킷 (multi-document retrieval)"
+    definition: "다수의 문서를 묶어서 검색하는 방식, 두 번째 특허 주제"
+  - term: "시맨틱 캐시"
+    definition: "의미 기반으로 쿼리 결과를 캐싱하는 RAG 최적화 기법"
+  - term: "변리사"
+    definition: "특허 출원 절차를 대리하는 전문가"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

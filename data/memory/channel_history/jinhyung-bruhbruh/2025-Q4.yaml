@@ -1,0 +1,25 @@
+channel:
+  id: C098PE6B7D4
+  name: jinhyung-bruhbruh
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 4.0
+summary: |
+  2025-Q4 jinhyung-bruhbruh 채널은 진형님(U05QCA7JTD5)이 개인적인 생각과 인플루언싱 전략을 공유하는 소규모 채널이다. 한국에서의 인지도가 포화 상태에 이르렀다는 성찰과 함께, 해외(다른 국가)로 인플루언싱을 확장하려는 계획, Twitter 블루체크마크 재구매, LinkedIn 유료 구독의 부스팅 효과 등이 언급되었다.
+topics:
+  - name: "인플루언싱 전략"
+    mention_count: 5
+    description: "한국 인지도 포화 인식, 해외 시장 인플루언싱 확장 계획, Twitter·LinkedIn 활용 전략"
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

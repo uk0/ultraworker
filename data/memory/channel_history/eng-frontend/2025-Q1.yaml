@@ -1,0 +1,53 @@
+channel:
+  id: C08H8PU7VAQ
+  name: eng-frontend
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 40
+  total_threads: 21
+  active_users: 9
+  avg_messages_per_day: 3.3
+summary: |
+  2025-Q1에 eng-frontend 채널이 신설되었다(권혜선(Jada)이 채널 개설).
+  Stargate-web 프론트엔드 프로젝트의 기술 논의가 본격화되었다.
+  주요 활동: IBK 온프렘 환경 UI 개발 방식 논의, Vercel/New Relic 연동,
+  env vault 이전, Next.js 보안 이슈(CVE) 대응, 코드리뷰 정책 논의(approve 후
+  변경 시 재리뷰 강제 해제 제안), Dockerfile 최적화(corepack 활용), Linear 프로젝트
+  및 버그 레이블 정리, 패키지 구조 개선 테크스펙 작성, 하이라이팅 구현 방법 논의 등.
+  권혜선(Jada)과 백은주가 주요 기여자였으며, 김덕현(Dekay)이 온프렘/ECR 관련 이슈를 공유했다.
+topics:
+  - Stargate-web 프론트엔드 채널 신설
+  - IBK 온프렘 환경 UI 개발
+  - Vercel/New Relic 연동
+  - env vault 이전
+  - Next.js 보안 이슈 대응
+  - 코드리뷰 정책 개선
+  - Linear 프로젝트 관리
+key_discussions:
+  - thread_ts: '1742198010.962949'
+    date: '2025-03-17'
+    topic: IBK 온프렘 UI 개발 방식 및 배포 버전 관리 논의
+  - thread_ts: '1742547403.452599'
+    date: '2025-03-21'
+    topic: 코드리뷰 approve 후 변경 시 재리뷰 강제 해제 제안
+  - thread_ts: '1742970890.827799'
+    date: '2025-03-26'
+    topic: 하이라이팅 구현 방법 논의
+  - thread_ts: '1742186453.003619'
+    date: '2025-03-17'
+    topic: Vercel 리전 변경 후 성능 이슈 (HTTP/1.1 병목)
+terminology:
+  - term: Stargate-web
+    definition: Sionic AI의 Storm 제품 프론트엔드 웹 애플리케이션 (Next.js 기반)
+  - term: IBK 온프렘
+    definition: IBK(기업은행) 고객사를 위한 온프레미스 환경 배포
+  - term: env vault
+    definition: 환경 변수를 안전하게 관리하는 도구/서비스
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

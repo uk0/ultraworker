@@ -1,0 +1,102 @@
+channel:
+  id: C07K034UHNE
+  name: research-parse
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 45
+  total_threads: 31
+  active_users: 10
+  avg_messages_per_day: 1.6
+summary: |
+  2025-Q4 research-parse 채널은 Qwen3-VL 기반 파싱 모델 학습 실험과 평가셋 체계 고도화가 집중적으로 이루어진 분기이다.
+  Pepper(Qwen2.5-VL 파인튜닝 모델)의 후속인 Pepper2 목표 하에 Qwen3-VL 4B/8B SFT 실험이 진행되었으며, 학습 데이터 품질 필터링(Edit Distance 기반)과 새로운 한국어 파싱 평가셋(225문제, 3타입) 구축이 핵심 성과였다.
+  NVIDIA Nemotron Parse, AI Hub 한국어 VQA 데이터셋 변환, DPO/ORPO 등 학습 방법론 탐색도 병행되었으며, 취소선 인식, 다단 구조 판단 등 실제 문서 파싱 난제도 심도 있게 논의되었다.
+topics:
+  - name: "Qwen3-VL 학습 실험"
+    mention_count: 18
+    description: "Qwen3-VL 4B/8B SFT 실험, 데이터셋 품질(new vs old) 비교, 최적 lr·배치 사이즈 탐색"
+  - name: "한국어 파싱 평가셋 구축"
+    mention_count: 10
+    description: "225문제 3타입(어려운 표, 일반 행정문서, 다양한 레이아웃) 평가셋 신규 구축, 불명확한 기존 평가셋 대체"
+  - name: "학습 데이터 품질 필터링"
+    mention_count: 8
+    description: "Edit Distance(Levenshtein) 기반 chosen-rejected 유사도 측정으로 DPO 데이터 품질 필터링"
+  - name: "DPO 데이터셋 구축"
+    mention_count: 7
+    description: "Gemini 2.5 Pro + 드라군 chosen, Qwen3-VL 4B/8B rejected 기반 14,580개 DPO 데이터셋 구축"
+  - name: "AI Hub 데이터 변환"
+    mention_count: 5
+    description: "AI Hub VQA 한국어 데이터셋을 파싱 학습에 활용하기 위해 변환 작업 진행"
+  - name: "실제 문서 파싱 난제"
+    mention_count: 6
+    description: "취소선 인식, 다단 구조 판단, 고난도 표 파싱(EDS 파트너사 문서), HunyuanOCR 동향"
+key_discussions:
+  - thread_ts: '1761001020.000000'
+    date: '2025-10-20'
+    reply_count: 27
+    text_preview: "Parse 관련 Storm Parse API 현황, Pepper/드라군 기반 구성 확인 및 평가 데이터셋 논의"
+  - thread_ts: '1761016740.000000'
+    date: '2025-10-20'
+    reply_count: 21
+    text_preview: "QA Availability 기반 LLM Judge 파싱 평가 구현 및 노션 문서 공유"
+  - thread_ts: '1762539600.000000'
+    date: '2025-11-05'
+    reply_count: 0
+    text_preview: "온프레미스 Qwen3-VL 평가 결과 - 한국어 성능, DPO loss 안정화 방법, Pepper2 목표"
+  - thread_ts: '1763046180.000000'
+    date: '2025-11-14'
+    reply_count: 31
+    text_preview: "VLM의 취소선 인식 한계 및 프롬프트 보완 방법 논의"
+  - thread_ts: '1763544060.000000'
+    date: '2025-11-19'
+    reply_count: 1
+    text_preview: "DPO 학습 데이터셋 14,580개 구축 완료, GitHub 및 HuggingFace 공개"
+  - thread_ts: '1764030180.000000'
+    date: '2025-11-27'
+    reply_count: 24
+    text_preview: "Qwen3-VL 4B SFT 실험 - new vs old 데이터 비교, 4B 모델 capacity 한계 발견"
+  - thread_ts: '1764294817.000000'
+    date: '2025-11-28'
+    reply_count: 0
+    text_preview: "Qwen3-VL 8B SFT 실험 결과 - 데이터 20K 혼합 시 성능 최고, lr 1e-5 효과적"
+  - thread_ts: '1764999360.000000'
+    date: '2025-12-04'
+    reply_count: 43
+    text_preview: "한국어 파싱 평가 데이터셋 revision 과정 공유 - 225문제 3타입 신규 구축"
+  - thread_ts: '1765351229.000000'
+    date: '2025-12-10'
+    reply_count: 72
+    text_preview: "EDS 파트너사 고난도 문서 파싱 실험 및 결과 논의"
+  - thread_ts: '1765357616.000000'
+    date: '2025-12-10'
+    reply_count: 12
+    text_preview: "Edit Distance 기반 DPO 데이터 필터링 방법론 및 노션 공유"
+terminology:
+  - term: "Pepper"
+    definition: "Qwen2.5-VL 기반 Sionic AI 자체 파인튜닝 파싱 모델, 32B(중형)와 소형 두 버전 관리 예정"
+  - term: "Pepper2"
+    definition: "Pepper의 후속 목표 모델, Qwen3-VL 기반 경량화 + 성능 개선 목표"
+  - term: "드라군"
+    definition: "Storm Parse 파이프라인의 OCR 컴포넌트, Gemini와 결합하여 chosen 데이터 생성에 활용"
+  - term: "Edit Distance"
+    definition: "Levenshtein Distance 기반 문자열 유사도 측정, DPO 데이터 품질 필터링에 활용(0: 동일, 1: 완전 상이)"
+  - term: "DPO"
+    definition: "Direct Preference Optimization, chosen(Gemini+드라군) vs rejected(Qwen3-VL) 쌍으로 학습하는 방법론"
+  - term: "ORPO"
+    definition: "Odds Ratio Preference Optimization, DPO를 보완하는 손실 함수 방법론"
+  - term: "AI Hub"
+    definition: "한국 AI 허브, VQA 한국어 데이터셋 등 공공 AI 학습 데이터를 제공하는 플랫폼"
+  - term: "HunyuanOCR"
+    definition: "Tencent에서 공개한 1B OCR 모델, 2025년 11월 출시 시점에 SOTA 성능"
+  - term: "EDS"
+    definition: "고난도 파싱 문서를 제공한 파트너사, 복잡한 레이아웃 문서 파싱 기술 검증에 활용"
+  - term: "curriculum learning"
+    definition: "난이도를 점진적으로 높이며 학습하는 방식, 파싱 데이터셋 설계 실험 중 하나로 검토됨"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

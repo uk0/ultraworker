@@ -1,0 +1,66 @@
+channel:
+  id: C07DU5YBH50
+  name: product-storm-qa
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 182
+  total_threads: 155
+  active_users: 13
+  avg_messages_per_day: 4.3
+summary: |
+  2025-Q2 product-storm-qa 채널에서는 파일론(Pylon)과 서플라이(Supply) 연동 배포, 청크 머징 로직 개선, 출처 PDF 하이라이팅 고도화, GUI 오더시트, 버킷 페이지네이션 등 다수의 기능이 QA를 통해 검증되었다. 스톰파스의 PDF 하이라이팅 기능에서 페이지 매핑 오류, 청크 중복, 잔상 문제 등이 집중 발굴되어 반복 수정되었다. 13명의 QA 참여자와 함께 주차별 열차(릴리즈) QA 체계로 진행되었다.
+topics:
+  - name: "출처 PDF 하이라이팅 고도화"
+    mention_count: 50
+    description: "PDF 뷰어에서 출처 청크의 정확한 하이라이팅 위치 매핑 및 잔상/중복 이슈 해결"
+  - name: "파일론+서플라이 연동"
+    mention_count: 25
+    description: "Pylon과 Supply 컴포넌트 연동 배포 및 동작 검증 QA"
+  - name: "청크 머징 로직"
+    mention_count: 20
+    description: "중복 청크 제거 및 페이지 머징 알고리즘 개선 테스트"
+  - name: "GUI 오더시트"
+    mention_count: 15
+    description: "워크플로우 오더시트 GUI 편집 도구(JSON 에디터 → 일반 텍스트 필드) QA"
+  - name: "버킷 페이지네이션"
+    mention_count: 10
+    description: "버킷 목록 페이지네이션 기능 추가 및 정렬 이슈 검증"
+  - name: "elif 기능 테스트"
+    mention_count: 8
+    description: "조건 분기 노드(elif) 동작 검증 및 오류 제보"
+key_discussions:
+  - thread_ts: '1743755419.000000'
+    date: '2025-04-04'
+    reply_count: 59
+    text_preview: "지식/피드백 분리 & 필터 QA - 왓다갓다해도 검색어 유지 등 마이너 이슈 다수 발굴"
+  - thread_ts: '1745562654.000000'
+    date: '2025-04-25'
+    reply_count: 179
+    text_preview: "jpeg 파일 스톰파스 처리 실패 이슈 - 커세어 영향 여부 파악, 라이브는 재현 안됨"
+  - thread_ts: '1747053359.000000'
+    date: '2025-05-13'
+    reply_count: 22
+    text_preview: "PDF 하이라이팅 성능 4000ms → 800-900ms 개선, 청크 내용과 다른 부분 하이라이팅 버그 수정"
+  - thread_ts: '1748348688.000000'
+    date: '2025-05-27'
+    reply_count: 31
+    text_preview: "GUI 오더시트 QA - DB 수정 후 워크플로우 화면 미반영 메이저 이슈 발굴"
+terminology:
+  - term: "파일론 (Pylon)"
+    definition: "Sionic AI의 RAG 검색 엔진. STORM의 문서 검색 핵심 컴포넌트"
+  - term: "서플라이 (Supply)"
+    definition: "STORM의 문서 버전 관리 및 배포 컴포넌트. Pylon과 연동하여 라이브/데브 환경 분리 관리"
+  - term: "오더시트"
+    definition: "STORM 워크플로우 설정을 정의하는 구성 파일. GUI 편집 도구를 통해 관리 가능"
+  - term: "열차 QA"
+    definition: "주차별 릴리즈 단위로 진행되는 QA. 메이저/마이너 이슈 분류 후 체크리스트 형태로 관리"
+  - term: "청크 머징"
+    definition: "인접 청크를 합쳐 검색 품질을 높이는 알고리즘. 중복 제거와 페이지 정합성이 주요 과제"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

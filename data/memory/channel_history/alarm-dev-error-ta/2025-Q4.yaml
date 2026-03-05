@@ -1,0 +1,42 @@
+channel:
+  id: C09Q7852KNU
+  name: alarm-dev-error-ta
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 9
+  total_threads: 2
+  active_users: 6
+  avg_messages_per_day: 2.2
+summary: |
+  2025년 4분기 alarm-dev-error-ta 채널은 TA(Text Analysis) 개발 환경의 오류 알림을 수신하는 채널로, 10월 말에 채널이 개설되며 여러 팀원이 합류하였다.
+  10월 30일에 NewRelic을 통한 Critical 오류 알림이 2건 발생하였으며, dev-ta-event-collector-api에서 TA_500에러발생 조건이 트리거되었다.
+  채널 개설 이후 활동량은 적었으며, 자동화된 NewRelic 알림 위주로 운영되고 있다.
+topics:
+  - name: "TA_500에러발생"
+    mention_count: 2
+    description: "NewRelic에서 dev-ta-event-collector-api의 500 에러 발생 시 Critical 알림 트리거"
+  - name: "채널 개설 및 팀원 합류"
+    mention_count: 4
+    description: "2025년 10월 TA dev error 알림 채널 신규 개설 및 팀원 참여"
+key_discussions:
+  - thread_ts: '1761832020.000000'
+    date: '2025-10-30'
+    reply_count: 1
+    text_preview: "dev-ta-event-collector-api Critical 이슈 - TA_500에러발생 조건 트리거, NewRelic 알림 수신"
+terminology:
+  - term: "NewRelic"
+    definition: "클라우드 기반 애플리케이션 성능 모니터링(APM) 및 알림 서비스"
+  - term: "TA"
+    definition: "Text Analysis의 약자로, 사이오닉의 텍스트 분석 서비스"
+  - term: "dev-ta-event-collector-api"
+    definition: "TA 서비스의 개발 환경 이벤트 수집 API 서비스"
+  - term: "TA_공통정책"
+    definition: "TA 서비스 전반에 적용되는 NewRelic 알림 정책"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

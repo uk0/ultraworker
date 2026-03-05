@@ -1,0 +1,47 @@
+channel:
+  id: C0796P32H70
+  name: eng-deploybot
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 4
+  active_users: 4
+  avg_messages_per_day: 2.8
+summary: |
+  2024-Q3은 배포봇 고도화 및 이슈 해결이 집중된 분기. 채널 이름이 "etc-deploybot"에서 "eng-deploybot"으로 변경됨. 주요 이슈로 deploy bot이 2개 앱(sionic-deploy: 공통 템플릿 지원 / deploy: 기존 Pylon/Stargate 배포 지원)으로 혼재된 문제가 발견되어, Sigrid Jin이 통합 수정 작업을 진행. GoCD 스크립트에서 latest 태그 누락으로 ECR 이미지 풀 실패(ErrImagePull) 이슈도 발생. 신희수에게 GoCD EnvironmentVariables 관련 이슈 해결을 위한 good first issue가 제안됨. Noah가 워크플로우 봇 기반 배포봇 자동화를 제안.
+topics:
+  - 배포봇 2개 앱 혼재 문제 통합
+  - GoCD 스크립트 ECR latest 태그 누락
+  - GoCD EnvironmentVariables 설정
+  - 워크플로우 봇 자동화 제안
+  - 채널 이름 변경 (etc → eng)
+key_discussions:
+  - thread_ts: '1722255924.654589'
+    date: '2024-07-29'
+    title: 'Deploy bot 현재 상태 및 2개 앱 혼재 이슈'
+    summary: 'Sigrid Jin이 sionic-deploy와 deploy 두 앱이 혼재된 상태를 정리. 신규 커밋이 기존 Pylon/Stargate 커맨드를 미지원하는 문제 수정 작업 착수'
+  - thread_ts: '1721783005.159919'
+    date: '2024-07-24'
+    title: 'GoCD EnvironmentVariables Env vs Environment 차이 문의'
+    summary: '신희수가 gocd.EnvironmentVariables의 Env와 Environment 필드 차이에 대해 문의. 6개 답글'
+  - thread_ts: '1722316071.635869'
+    date: '2024-07-30'
+    title: '워크플로우 봇 기반 배포봇 자동화 제안'
+    summary: 'Noah가 수동 배포 대신 워크플로우 봇 기반 배포 자동화를 제안'
+terminology:
+  - term: 'sionic-deploy'
+    definition: '신규 배포봇 앱 (slackbot-test.sionic.im). 공통 템플릿 지원하나 기존 배포 방식 미지원'
+  - term: 'deploy'
+    definition: '기존 배포봇 앱 (slackbot.sionic.im). Pylon/Stargate 배포 방식 지원'
+  - term: 'ECR'
+    definition: 'AWS Elastic Container Registry - Docker 이미지 저장소'
+  - term: 'ecr-refresher'
+    definition: 'GoCD에서 ECR 이미지를 새로고침하는 스크립트/잡'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

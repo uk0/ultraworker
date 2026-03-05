@@ -1,0 +1,72 @@
+channel:
+  id: C06814P5L5D
+  name: business-common-global
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:08'
+statistics:
+  total_messages: 18
+  total_threads: 15
+  active_users: 7
+  avg_messages_per_day: 0.4
+key_discussions:
+- thread_ts: '1769763740.040159'
+  date: '2026-01-30'
+  reply_count: 47
+  text_preview: '*인도네시아 원룸 중개 플랫폼 "마미코스" SaaS 도입 관련*'
+- thread_ts: '1770009146.326069'
+  date: '2026-02-02'
+  reply_count: 17
+  text_preview: 예상 비용 계산기 <@U09NST7DHGS> <@U08GCAT3Q31>
+- thread_ts: '1770257396.775799'
+  date: '2026-02-05'
+  reply_count: 15
+  text_preview: Singtel CVC f/u call &gt;&gt;
+- thread_ts: '1768290834.614699'
+  date: '2026-01-13'
+  reply_count: 14
+  text_preview: 일본 deck 업데이트 여부 문의
+- thread_ts: '1768532056.587139'
+  date: '2026-01-16'
+  reply_count: 9
+  text_preview: NVIDIA GTC - Singtel 네트워킹 행사 초대 건
+- thread_ts: '1770961105.736249'
+  date: '2026-02-13'
+  reply_count: 7
+  text_preview: ':moneybag:무료:dollar: 해외대 인턴 채용 논의 &gt;&gt; '
+- thread_ts: '1770360508.958079'
+  date: '2026-02-06'
+  reply_count: 7
+  text_preview: '*[KB스타트터스 모집 공고]*'
+- thread_ts: '1767680887.531869'
+  date: '2026-01-06'
+  reply_count: 5
+  text_preview: Google Workplace 그룹 설정 관하여 &gt;&gt; cc. <@U057MCDJHDY>
+- thread_ts: '1770253083.692579'
+  date: '2026-02-05'
+  reply_count: 4
+  text_preview: 2026년 과기부 K-Global 프로젝트 민관합동 통합설명회 &gt;
+- thread_ts: '1768791914.823729'
+  date: '2026-01-19'
+  reply_count: 4
+  text_preview: '<@U08GCAT3Q31> 님 예시 주신거 기계번역해서 일본 스타트업 데이 7분정도 발표에서 쓰려는데 혹시
+
+    의도와 다른 표현이나 있으시면 좀 수정해주실수 있을까요?'
+- thread_ts: '1768464602.432009'
+  date: '2026-01-15'
+  reply_count: 4
+  text_preview: 태국 진출 위한 일본 케이스
+- thread_ts: '1770642646.902449'
+  date: '2026-02-09'
+  reply_count: 3
+  text_preview: SEA 경쟁사 리서치 덤프 &gt;&gt;
+- thread_ts: '1768480460.556099'
+  date: '2026-01-15'
+  reply_count: 2
+  text_preview: 동남아 테크 전시/박람회 관련 고민
+metadata:
+  created_at: '2026-02-13T16:27:08'
+  synced_by: sync_fast.py

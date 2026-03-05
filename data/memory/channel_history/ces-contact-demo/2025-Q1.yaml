@@ -1,0 +1,53 @@
+channel:
+  id: C0873ELU31U
+  name: ces-contact-demo
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 173
+  total_threads: 146
+  active_users: 13
+  avg_messages_per_day: 13.3
+summary: |
+  2025년 1분기 CES 컨택 데모 채널에서는 사이오닉 에이아이를 포함한 다수 기업을 대상으로 STORM Platform 기반 AI 솔루션이 자동 생성되어 제안되었다.
+  하루 평균 13.3건의 메시지와 146개 스레드가 생성되는 매우 활발한 활동이 이루어졌으며, 각 스레드에는 기업별 특성에 맞는 챗봇 구축, 지능형 검색, 데이터 분석, 콘텐츠 자동화, AI 교육 프로그램 등 맞춤형 AI 솔루션이 상세히 제안되었다.
+  13명의 멤버가 참여하였으며, 분기 내 가장 활발한 CES 채널 활동 시기로 기록된다.
+topics:
+  - name: "기업별 AI 솔루션 제안"
+    mention_count: 146
+    description: "STORM Platform 기반 맞춤형 AI 솔루션 자동 생성 및 스레드 공유"
+  - name: "STORM 기반 챗봇 구축"
+    mention_count: 30
+    description: "고객 지원 및 내부 커뮤니케이션 효율화를 위한 맞춤형 챗봇 솔루션 제안"
+  - name: "AI 데이터 분석 및 자동화"
+    mention_count: 25
+    description: "데이터 기반 의사결정 지원 및 보고서 자동 생성 솔루션"
+  - name: "마케팅 콘텐츠 자동화"
+    mention_count: 20
+    description: "AI 기반 마케팅 콘텐츠 자동 생성 솔루션"
+  - name: "지능형 검색 시스템"
+    mention_count: 20
+    description: "STORM Answer RAG 기반 기업 내부 정보 지능형 검색 구축"
+key_discussions:
+  - thread_ts: '1735963860.000000'
+    date: '2025-01-04'
+    reply_count: 3
+    text_preview: "AI Solutions for 사이오닉 에이아이 - STORM 기반 경쟁사 분석, 챗봇, 마케팅 자동화 등 6개 솔루션 제안"
+terminology:
+  - term: "CES"
+    definition: "Consumer Electronics Show, Sionic AI가 참가하여 기업 컨택 및 데모를 진행한 세계 최대 가전/IT 전시회"
+  - term: "STORM Platform"
+    definition: "Sionic AI의 맞춤형 LLM 환경 구성 플랫폼"
+  - term: "STORM Answer"
+    definition: "Sionic AI의 기업 최적화 생성형 AI 서비스 (RAG 기능, 다양한 데이터 소스 지원)"
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation, 외부 데이터를 참조하여 생성 품질을 높이는 AI 기법"
+  - term: "LLM"
+    definition: "Large Language Model, 대규모 언어 모델"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

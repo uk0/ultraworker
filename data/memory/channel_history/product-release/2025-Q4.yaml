@@ -1,0 +1,67 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 111
+  total_threads: 16
+  active_users: 7
+  avg_messages_per_day: 1.9
+summary: |
+  2025-Q4에는 Stargate API가 v0.42.5에서 v0.43.3까지, WEB이 v2.75.2에서 v2.92.1까지
+  111개 메시지로 가장 활발한 분기였다. WEB 버전이 v2.92까지 급속 증가하며 거의 매일 배포가 이루어졌다.
+  GitHub 알림이 채널에 연결되어(sionic-ai/storm-apis releases 구독) 자동 릴리즈 알림이 추가되었다.
+  Pylon v1.13.0에서는 MUVERA(vllm-muvera, bge-m3) 임베딩 앙상블을 도입하여
+  4000토큰 이상 청크에 대해 구간별 임베딩 모델을 앙상블하는 혁신적 기능이 추가되었다.
+  WEB에서는 실행 로그 기능 구현 및 QA 반영, 플레이그라운드 암호 PDF 검증 로직,
+  스톰 파스 교체 기능(한글/엑셀 뷰어) 롤백 후 원복 작업이 계속되었고,
+  콘솔 버튼 경로 변경, 팀 선택기에 회사명 표시 등 세밀한 UX 개선이 이루어졌다.
+  Carrier는 v1.5.0에서 v1.5.3까지 업데이트되며, 에러 상세 정보 개선, Boolean 비교 수정,
+  RAG 노드 rag_context 제어, 좀비 연결 정리 등이 적용되었다.
+  Stargate API에서는 v0.43.2 긴급 핫픽스(API 호출 불가 이슈)가 발생하여
+  빠르게 대응되었다. storm-apis 리포지토리의 GitHub 릴리즈 알림도 채널에 연결되었다.
+topics:
+  - Pylon MUVERA 임베딩 앙상블 도입
+  - Stargate WEB 실행 로그 기능
+  - 플레이그라운드 암호 PDF 검증
+  - 스톰 파스 교체/롤백/원복 반복
+  - Carrier 에러 상세 정보 및 안정성 개선
+  - Stargate API 긴급 핫픽스 (v0.43.2)
+  - storm-apis GitHub 릴리즈 알림 연결
+  - 팀 선택기 UX 개선
+  - 배포 빈도 최고치 (111개 메시지)
+  - WEB v2.92까지 급속 버전 증가
+key_discussions:
+  - thread_ts: '1766000000.000000'
+    date: '2025-12-23'
+    topic: Pylon v1.13.0 - MUVERA 임베딩 앙상블, Pre-expand 순차처리 개선
+  - thread_ts: '1765000000.000000'
+    date: '2025-12-11'
+    topic: Stargate API v0.43.2 긴급 핫픽스 - API 호출 불가 이슈 대응
+  - thread_ts: '1764000000.000000'
+    date: '2025-12-03'
+    topic: Carrier v1.5.2 - RAG 노드 rag_context 제어 버그 수정
+terminology:
+  - term: "MUVERA"
+    definition: "Multi-Vector Embedding Retrieval Architecture - 구간별 임베딩 모델 앙상블 기법"
+    aliases: ["vllm-muvera"]
+  - term: "storm-apis"
+    definition: "Stargate의 외부 API 서비스 리포지토리 (GitHub)"
+    aliases: ["STORM APIs"]
+  - term: "실행 로그"
+    definition: "에이전트 실행 이력을 상세히 조회하는 기능"
+    aliases: ["Execution Log"]
+  - term: "Carrier"
+    definition: "문서 파싱 파이프라인 서비스, v1.5.x까지 성장"
+    aliases: ["Storm Parse 캐리어"]
+  - term: "Pre-expand"
+    definition: "청크 검색 전 확장 단계, 순차 처리로 개선됨"
+    aliases: []
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

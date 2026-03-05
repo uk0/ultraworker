@@ -1,0 +1,38 @@
+channel:
+  id: C08H8TY7LCA
+  name: notification-dev
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 29
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 7.2
+summary: |
+  2025년 1분기 notification-dev 채널이 3월에 신규 개설되었으며, ta-notification-bot이 연동되어 첫 알림 테스트가 진행되었다.
+  채널 개설 직후 Slack webhook을 통한 "Hello, World!" 테스트 메시지 발송이 확인되었고, 신규 사용자 가입 알림 포맷이 반복 테스트를 통해 점진적으로 개선되었다.
+  가입 알림에 User ID, 팀 ID, 가입일시 등 상세 정보가 추가되는 형태로 알림 포맷이 완성되었다.
+topics:
+  - name: "알림 봇 초기 설정"
+    mention_count: 15
+    description: "ta-notification-bot Slack webhook 연동 테스트 및 신규 사용자 가입 알림 포맷 개발"
+  - name: "알림 포맷 개선"
+    mention_count: 14
+    description: "신규 사용자 가입 알림에 User ID, 팀 ID, 가입일시 등 상세 필드 순차적으로 추가"
+key_discussions: []
+terminology:
+  - term: "ta-notification-bot"
+    definition: "개발 환경 이벤트를 Slack으로 전달하는 알림 봇"
+    aliases: []
+    context: "notification-dev 채널에 연동된 자동화 알림 봇"
+  - term: "Slack webhook"
+    definition: "Slack으로 메시지를 전송하는 웹훅 URL"
+    aliases: []
+    context: "알림 봇이 채널에 메시지를 보내는 데 사용하는 Slack 통합 기능"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

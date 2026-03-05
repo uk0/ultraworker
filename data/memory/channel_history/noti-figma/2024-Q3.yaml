@@ -1,0 +1,28 @@
+channel:
+  id: C06USMT72DB
+  name: noti-figma
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 38
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 2.5
+summary: |
+  Figma 디자인 파일 변경 알림 채널. 이 분기에는 'Storm Answer_기획' 파일의 업데이트 알림만 발생했다.
+  Q2 대비 메시지 수가 크게 감소(159→38)했으며, 7월과 8~9월에 간헐적으로 디자인 수정이 이루어졌다.
+  활성 사용자가 2명(Figma 봇 + 백은주)으로 줄어 채널 활동이 저조했던 시기이다.
+topics:
+  - Storm Answer 기획 디자인
+  - Figma 파일 변경 알림
+key_discussions:
+  - title: Storm Answer_기획 간헐적 업데이트
+    summary: 7월, 8월, 9월에 걸쳐 'Storm Answer_기획' 파일이 간헐적으로 수정됨. Q2 대비 편집 빈도가 크게 줄었으며, 주로 소규모 수정 작업이 이루어진 것으로 보임.
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

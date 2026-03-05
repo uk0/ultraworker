@@ -1,0 +1,61 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 36
+  total_threads: 17
+  active_users: 9
+  avg_messages_per_day: 2.2
+summary: |
+  2025년 1분기 deploy-gpu 채널은 VESSL AI 온프레미스 GPU 서버(베슬1, 베슬2) 사용 조율과 인프라 개선이 주요 주제였다.
+  1월 초 베슬1번의 Docker 데이터 디렉토리를 /data/docker로 이전하여 디스크 용량 문제를 해결하였으며, GPU 메트릭 모니터링을 위한 DCGM 컨테이너를 배포하고 Grafana 대시보드를 구축하였다.
+  2월에는 Qwen 2.5 1M 컨텍스트 윈도우 모델 배포, 온프렘 k8s 환경에서의 L40s GPU 할당 이슈 논의 등이 있었으며, 3월에는 멀티모달 모델 학습 목적의 GPU 사용 요청이 진행되었다.
+topics:
+  - name: "베슬 GPU 사용 조율"
+    mention_count: 10
+    description: "베슬1, 베슬2 서버의 GPU 사용 현황 공유 및 순번 조율"
+  - name: "DCGM 모니터링 구축"
+    mention_count: 3
+    description: "GPU 메트릭 수집을 위한 DCGM 컨테이너 배포 및 Grafana 대시보드 연동"
+  - name: "Docker 디렉토리 이전"
+    mention_count: 2
+    description: "베슬1번의 잦은 용량 부족 문제 해결을 위해 Docker 저장 경로를 /data/docker로 이전"
+  - name: "온프렘 k8s GPU 할당"
+    mention_count: 3
+    description: "온프레미스 Kubernetes 환경에서 3090, L40s GPU nodeAffinity 할당 이슈"
+  - name: "GPU 사용 현황 공유"
+    mention_count: 2
+    description: "팀 내 GPU 할당 현황 주기적 공유 (VESSL AI, 외부 클라우드, 온프렘 구분)"
+key_discussions:
+  - thread_ts: '1735883400.000000'
+    date: '2025-01-03'
+    reply_count: 17
+    text_preview: "vessel 1번 GPU 4~7번 점유 및 사용 조율, DCGM 컨테이너 배포 안내"
+  - thread_ts: '1738630800.000000'
+    date: '2025-02-04'
+    reply_count: 20
+    text_preview: "베슬1번 GPU 1번 사용 여부 확인 및 온프렘 k8s Pending 이슈 논의"
+  - thread_ts: '1741164600.000000'
+    date: '2025-03-05'
+    reply_count: 29
+    text_preview: "vessl 1번 사용 가능 여부 확인 및 멀티모달 모델 학습 계획"
+terminology:
+  - term: "베슬 (VESSL AI)"
+    definition: "사이오닉이 사용하는 AI 인프라 플랫폼. A100 GPU x8 서버 2대(베슬1, 베슬2)를 온프레미스로 운영"
+  - term: "DCGM"
+    definition: "NVIDIA Data Center GPU Manager. GPU 메트릭(온도, 메모리 등)을 수집하는 모니터링 도구"
+  - term: "Grafana"
+    definition: "메트릭 시각화 대시보드 툴. GPU 사용 현황을 시각적으로 확인하는 용도로 활용"
+  - term: "RunPod"
+    definition: "GPU 클라우드 서비스. 온프렘 자원이 부족할 때 H100 등 고성능 GPU를 시간 단위로 임대"
+  - term: "L40s"
+    definition: "NVIDIA의 데이터센터용 GPU로 온프렘 k8s 클러스터에서 worker100/101에 배치"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

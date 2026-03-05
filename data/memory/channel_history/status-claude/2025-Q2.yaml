@@ -1,0 +1,27 @@
+channel:
+  id: C08SW0NR5ME
+  name: status-claude
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 2.0
+summary: |
+  2025-Q2 status-claude 채널은 Claude API 불안정 이슈를 모니터링하기 위해 5월에 개설된 채널이다. 채널 설명이 "불안정한 claude 이슈 구독을 위한 채널"로 설정되었으며, 이 분기에는 채널 개설 멤버의 합류 메시지 외에 별다른 활동은 기록되지 않았다.
+topics:
+  - name: "채널 개설"
+    mention_count: 1
+    description: "Claude API 상태 모니터링 채널 개설 및 목적 설정"
+key_discussions: []
+terminology:
+  - term: "status-claude"
+    definition: "Anthropic Claude API의 불안정 이슈 및 상태를 모니터링하기 위한 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,24 @@
+channel:
+  id: C06G345H2A0
+  name: onicsy-goods
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024년 3분기에 정세민님이 채널을 보관(archive) 처리하였다. 1분기에 진행된 굿즈 제작이 완료되어
+  채널의 목적이 달성된 것으로 판단하여 보관한 것으로 보인다.
+topics:
+  - 채널 보관 처리
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

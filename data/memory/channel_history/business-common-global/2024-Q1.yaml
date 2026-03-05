@@ -1,0 +1,72 @@
+channel:
+  id: C06814P5L5D
+  name: business-common-global
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 28
+  total_threads: 12
+  active_users: 9
+  avg_messages_per_day: 1.6
+summary: |
+  2024년 1분기 business-common-global 채널은 Sionic AI의 일본 시장 진출 초기 준비에 집중되었다.
+  LINE 마켓플레이스 출품 심사 신청, 일본 가상 오피스(긴자) 계약, AI EXPO 부스 출점 검토 등
+  일본 사업의 기반을 다지는 활동이 주를 이루었다. 카카오인베스트먼트 투자자 대응을 위한
+  일본 사업 진행 현황 정리, NexTech Week 전시회 참가 준비, 일본어 주소 표기 확인,
+  통역 서비스 제안 검토 등 실무적인 진출 준비가 진행되었다. Cambridge Innovation Center를 통한
+  일본 진출 사례 조사, AISmiley 포털 등재 검토 등 다양한 채널을 통한 시장 접근 방법도 모색하였다.
+  일본 AI 시장 관련 참고 자료(NTT tsuzumi, Hitachi, Z Holdings 등)가 공유되었다.
+topics:
+  - name: "일본 시장 진출 준비"
+    message_count: 15
+    description: "LINE 마켓플레이스 출품, 가상 오피스 계약, EXPO 부스 출점 등 일본 진출 기반 구축"
+  - name: "AI EXPO 참가 검토"
+    message_count: 5
+    description: "NexTech Week AI EXPO 부스 출점 가능 여부 확인 및 준비"
+  - name: "투자자 대응"
+    message_count: 3
+    description: "카카오인베스트먼트 등 투자자 질의에 대한 일본 사업 현황 정리"
+  - name: "일본 AI 시장 리서치"
+    message_count: 5
+    description: "NTT, Hitachi, Z Holdings 등 일본 AI 기업 동향 자료 공유"
+key_discussions:
+  - title: "LINE 마켓플레이스 출품 심사 신청"
+    date: "2024-01-12"
+    participants: ["hhhssw", "한시형"]
+    summary: "LINE OA(Official Account)향 제품 출품을 위한 심사 신청 프로세스 진행. 월 1만엔 + 판매액 20% 수수료 구조."
+  - title: "일본 가상 오피스 계약"
+    date: "2024-03-28"
+    participants: ["hhhssw"]
+    summary: "긴자(銀座) 소재 가상 오피스 계약 완료. 주소 기재, 우편물 대리수령, 해외 포워딩 가능."
+  - title: "AI EXPO 부스 출점 확인"
+    date: "2024-02-29"
+    participants: ["hhhssw", "박우명"]
+    summary: "일본 전시회 부스 출점 가능 여부 확인. 외국 법인도 신청 가능."
+  - title: "일본 사업 진행 현황 투자자 보고"
+    date: "2024-01-08"
+    participants: ["Noah ( 고석현 )", "hhhssw", "한시형"]
+    summary: "카카오인베스트먼트 질의 대응을 위한 일본 사업 진행 현황 정리."
+terminology:
+  - term: "LINE 마켓플레이스"
+    definition: "LINE 메신저 플랫폼의 공식 계정(OA) 앱 마켓. 출품 시 심사 및 수수료 구조 적용."
+    aliases: ["LINE OA"]
+    context: "Sionic AI 제품의 일본 시장 배포 채널로 검토됨"
+  - term: "NexTech Week"
+    definition: "일본 도쿄 빅사이트에서 개최되는 IT/AI 관련 대규모 전시회"
+    aliases: ["AI EXPO"]
+    context: "2024년 봄 전시회 부스 출점 준비"
+  - term: "AISmiley"
+    definition: "일본 최대 규모의 AI 포털 미디어. AI 제품 비교 및 자료 요청이 가능한 플랫폼."
+    aliases: []
+    context: "Sionic AI 등재 검토용으로 공유됨"
+  - term: "Cambridge Innovation Center"
+    definition: "미국계 공간대여/스타트업 커뮤니티 운영 회사. 해외 스타트업의 일본 진출 시 활용 가능."
+    aliases: ["CIC"]
+    context: "일본 진출 시 활용 가능한 거점으로 조사됨"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,59 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 16
+  total_threads: 6
+  active_users: 7
+  avg_messages_per_day: 0.9
+summary: >
+  research-common 채널이 2024년 6월 12일에 개설되었다. 기존 research-general 채널에 다양한 내용이 섞이는
+  문제를 해결하기 위해 업무 논의 전용 채널로 분리하였다. 채널 개설 직후 Research Weekly 미팅이 이미 정례화되어
+  있었으며, 평가 파이프라인 타임라인 논의, 특허 정리, 주간 리서치 미팅 진행 등 업무 중심의 논의가 시작되었다.
+  초기 멤버로 박우명, Sigrid Jin, Noah, 정세민, dkyoon, song, taeeunk1208이 참여하였다.
+topics:
+  - name: "채널 개설 및 역할 정의"
+    count: 3
+    summary: "research-general과 research-common을 분리하여 업무 논의 전용 채널로 운영 시작."
+  - name: "Research Weekly 미팅"
+    count: 4
+    summary: "매주 4시 Research Weekly 미팅 진행. 노션 기반 어젠다 공유 및 진행상황 업데이트."
+  - name: "평가 파이프라인"
+    count: 2
+    summary: "박우명님과 Sigrid Jin님이 평가 파이프라인 타임라인 및 방향 논의."
+  - name: "특허 정리"
+    count: 1
+    summary: "정환님 아이디어 관련 특허 정리 작업 시작."
+key_discussions:
+  - thread_ts: '1718236834'
+    date: '2024-06-13'
+    title: "research-common 채널 개설"
+    summary: "research-general에 여러 내용이 섞이는 문제를 해결하기 위해 업무 논의 전용 채널을 신설. research-common은 업무 관련 논의, research-general은 최신 트렌드/논문/블로그 공유로 역할 분리."
+    participants: ["U058A971Z8R"]
+    decisions: ["채널 역할 분리: common=업무, general=트렌드"]
+    action_items: []
+    keywords: ["채널분리", "research-common", "research-general"]
+    relevance_score: 0.9
+  - thread_ts: '1719303512'
+    date: '2024-06-25'
+    title: "평가 파이프라인 타임라인 논의"
+    summary: "Sigrid Jin과 박우명님이 논의한 평가 파이프라인 관련 타임라인 공유."
+    participants: ["U05QCA7JTD5", "U058A971Z8R"]
+    decisions: []
+    action_items: ["평가 파이프라인 일정 확정"]
+    keywords: ["평가", "파이프라인", "타임라인"]
+    relevance_score: 0.7
+terminology:
+  - term: "Research Weekly"
+    definition: "리서치팀의 주간 정기 미팅. 각자 연구 진행 상황을 공유하고 논의하는 시간."
+    aliases: ["리서치 위클리"]
+    context: "매주 월요일 또는 화요일 오후에 진행."
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

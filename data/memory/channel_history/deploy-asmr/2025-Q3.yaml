@@ -1,0 +1,30 @@
+channel:
+  id: C079AAU6265
+  name: deploy-asmr
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 38
+  total_threads: 36
+  active_users: 2
+  avg_messages_per_day: 2.2
+summary: |
+  2025년 3분기에도 ASMR 서비스의 지속적인 배포가 이루어졌다. 조하담님이 주 1~2회 빈도로 dev(onprem)와
+  live(oci) 배포를 수행하였다. 배포 프로세스는 완전히 안정화되어 dev 빌드+배포 후 live --skip-build 패턴이
+  일관되게 유지되었다. 9월 말에는 하루에 여러 차례 배포가 이루어지는 집중 배포 기간도 있었다.
+  일부 배포에서 live --skip-build 명령에서 이슈가 발생하여 전체 해시로 재시도하는 경우도 있었다(20개 답글).
+topics:
+  - ASMR 정기 배포 지속
+  - 집중 배포 기간
+key_discussions:
+  - thread_ts: '1758524598.942139'
+    date: '2025-09-22'
+    topic: ASMR live 배포 이슈 및 대응 (20개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

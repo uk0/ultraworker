@@ -1,0 +1,65 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 101
+  total_threads: 86
+  active_users: 16
+  avg_messages_per_day: 2.1
+summary: |
+  2025년 3분기 product-storm-parse 채널은 16명이 참여하여 101개의 메시지와 86개의 스레드가 발생하였다. 엑셀 처리 로직 개선(호라이즌 병합 구분 심볼, 헤더 구분 로직), 새 드라군 버전으로 인한 다단 구조 변환 순서 개선, DPO 학습 모델 성능 평가, 스톰파스 API 상품화 기획, PDF 학습 실패 이슈 해결이 주요 내용이었다. 드라군 신버전 교체 후 자연어 변환 비율 향상 및 다단 구조 변환 순서 개선이 확인되어 라이브 배포가 결정되었다.
+topics:
+  - name: "엑셀 처리 로직 개선"
+    mention_count: 20
+    description: "호라이즌 병합 심볼, 헤더 구분 로직, 엑셀 유형별 처리 방식 개선"
+  - name: "드라군 신버전 배포"
+    mention_count: 12
+    description: "신버전 드라군 교체로 다단구조 변환 순서 및 자연어 변환 비율 개선"
+  - name: "DPO 학습 모델 평가"
+    mention_count: 15
+    description: "0703, 0710 DPO 학습 모델의 미타 평가셋 기준 성능 평가 및 비교"
+  - name: "스톰파스 API 상품화"
+    mention_count: 8
+    description: "스톰파스 API 상품화 관련 기획 초안 공유 및 논의"
+  - name: "학습 실패 이슈"
+    mention_count: 6
+    description: "dev 환경 문서 펜딩 및 학습 실패 이슈 해결"
+key_discussions:
+  - thread_ts: '1751516580.000000'
+    date: '2025-07-03'
+    reply_count: 20
+    text_preview: "엑셀 논의 결론 - 호라이즌 병합 구분 심볼, 헤더 구분 로직 개선 방향 결정"
+  - thread_ts: '1752037320.000000'
+    date: '2025-07-08'
+    reply_count: 0
+    text_preview: "신버전 드라군으로 교체 후 다단구조 변환 순서 개선, 자연어 변환 비율 향상 - 내일 라이브 배포 결정"
+  - thread_ts: '1752126780.000000'
+    date: '2025-07-10'
+    reply_count: 9
+    text_preview: "0710 DPO 학습 모델 미타 평가셋 결과 업데이트 - 여전히 못하는 유형 분석"
+  - thread_ts: '1752202320.000000'
+    date: '2025-07-11'
+    reply_count: 8
+    text_preview: "새롭게 학습한 모델 결과 업데이트 - 0710_dpo학습_1epoch 더 안정적"
+terminology:
+  - term: "DPO"
+    definition: "Direct Preference Optimization - LLM 파인튜닝 방법으로 스톰파스 모델 품질 개선에 활용"
+    aliases: []
+    context: "미타 평가셋 기준으로 DPO 학습 모델 성능 검증"
+  - term: "드라군"
+    definition: "PDF/문서를 마크다운으로 변환하는 사이오닉 AI의 내부 파서"
+    aliases: ["Dragoon", "DP"]
+    context: "3분기에 신버전으로 교체하여 다단 구조 처리 개선"
+  - term: "xionic-vl"
+    definition: "사이오닉 AI의 자체 개발 Vision-Language 모델 (VLM)"
+    aliases: []
+    context: "스톰파스에서 이미지+텍스트를 함께 처리하는 핵심 모델"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

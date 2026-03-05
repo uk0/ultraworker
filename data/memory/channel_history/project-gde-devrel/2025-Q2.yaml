@@ -1,0 +1,39 @@
+channel:
+  id: C081FFR811R
+  name: project-gde-devrel
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 2.0
+summary: |
+  GDE 6월 지원을 구체적으로 준비한 분기.
+  AI GDE 선발 기준이 업데이트되어 공유되었으며, 주요 요건은 다음과 같다:
+  - Google AI 제품(Gemini, Gemma, JAX, Keras, Vertex AI) 활용 경험 필수
+  - 최근 12개월 내 2회 이상 발표 또는 4회 이상 블로그/팟캐스트/유튜브 필수
+  - RAG, Fine-tuning, Embeddings, Prompt Engineering 등 GenAI 핵심 기술 이해 필요
+  Sigrid Jin이 6월 지원 예정임을 공유했다.
+topics:
+  - AI GDE 지원 기준 업데이트
+  - GDE 6월 지원 준비
+  - Generative AI 기술 요건
+key_discussions:
+  - thread_ts: '1748326848.476319'
+    date: '2025-05-27'
+    summary: 'GDE 6월 지원 계획 공유'
+terminology:
+  - term: 'AI Studio'
+    definition: 'Google의 Gemini API 테스트 및 프로토타이핑 도구'
+  - term: 'Gemma'
+    definition: 'Google의 오픈소스 LLM 모델 패밀리'
+  - term: 'RAG'
+    definition: 'Retrieval Augmented Generation. 검색 증강 생성 기술'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

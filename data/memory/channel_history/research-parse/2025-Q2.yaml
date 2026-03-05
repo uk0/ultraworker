@@ -1,0 +1,78 @@
+channel:
+  id: C07K034UHNE
+  name: research-parse
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 47
+  total_threads: 33
+  active_users: 12
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q2 research-parse 채널은 xionic-vl이라는 자체 문서 파싱 전용 VLM 개발 계획이 수립되고, Gemma·VoRA 등 다양한 모델 실험과 PyMuPDF4LLM 파서 도입 검토가 이루어진 분기이다.
+  Gemma 모델은 표 및 이미지 처리 능력 부족으로 한계가 확인되었고, VoRA(Vision OCR Research Architecture) 프로젝트로 TPU를 활용한 대규모 데이터 사전학습이 진행되었다.
+  Storm Parse 데이터 제작 및 정제, IBK xionic-vl 작업 계획, Gemini 파인튜닝 실험 등이 병렬로 진행되었으며, 1차 한국어(8월 말), 2차 일본어(9월 말) 출시 목표가 설정되었다.
+topics:
+  - name: "xionic-vl 개발 계획"
+    mention_count: 10
+    description: "Sionic AI 브랜드를 대표하는 한국어 문서 파싱 전용 VLM, 1차 한국어(8월), 2차 일본어(9월) 출시 목표"
+  - name: "Gemma 모델 실험 및 한계"
+    mention_count: 8
+    description: "Gemma 모델의 표·이미지 이해 한계 확인, DP(Document Parser) 결과를 보완하는 방향으로 재조정"
+  - name: "VoRA 프리트레이닝"
+    mention_count: 7
+    description: "Jina CLIP v2 기반 Vision OCR 아키텍처, TPU 지원 프로그램 활용 60만 건 데이터 1차 학습"
+  - name: "PyMuPDF4LLM 도입 검토"
+    mention_count: 4
+    description: "Parsr 대비 속도가 월등히 빠른 PyMuPDF4LLM을 파이프라인에 적용, Storm Parse MCP 공개 가능성 논의"
+  - name: "GRPO 및 학습 방법론"
+    mention_count: 5
+    description: "Multimodal GRPO 정상화 및 표 파싱을 위한 근본적 학습 방법론 심층 논의"
+  - name: "Nanonets 벤치마크"
+    mention_count: 3
+    description: "Nanonets-OCR-s 모델 및 IDP Leaderboard 공개, Storm Parse의 상업화 방향 참고"
+key_discussions:
+  - thread_ts: '1744176120.000000'
+    date: '2025-04-09'
+    reply_count: 88
+    text_preview: "파싱을 더 잘 할 수 있는 근본적인 방법에 대한 심층 논의"
+  - thread_ts: '1745581800.000000'
+    date: '2025-04-25'
+    reply_count: 29
+    text_preview: "PyMuPDF4LLM 성능 테스트 - Parsr 대비 속도 월등, VLM 추가 시 품질 보완 가능성"
+  - thread_ts: '1746487740.000000'
+    date: '2025-05-06'
+    reply_count: 40
+    text_preview: "VoRA Jina CLIP 기반 멀티노드 학습 성공 및 진행 상황 공유"
+  - thread_ts: '1747613940.000000'
+    date: '2025-05-19'
+    reply_count: 8
+    text_preview: "xionic-vl 개발 목표 수립 - 한국어 8월, 일본어 9월 출시, 문서 파싱 전용 VLM"
+  - thread_ts: '1749998400.000000'
+    date: '2025-06-15'
+    reply_count: 7
+    text_preview: "Nanonets 파싱 전문 업체 분석 - ARR 200억, 비정형 데이터 정형화 파이프 사업 모델 참고"
+  - thread_ts: '1751319480.000000'
+    date: '2025-06-28'
+    reply_count: 18
+    text_preview: "Gemini Flash 파인튜닝 실험 진행"
+terminology:
+  - term: "xionic-vl"
+    definition: "Sionic AI가 자체 개발 중인 문서 파싱 전용 VLM, 한국어 우선 지원 목표"
+  - term: "VoRA"
+    definition: "Vision OCR Research Architecture, Jina CLIP v2 기반 사전학습 OCR 아키텍처"
+  - term: "PyMuPDF4LLM"
+    definition: "LLM 입력 최적화 PDF 파서, Parsr 대비 속도가 매우 빠름(1400페이지 10장 병렬 5.9초)"
+  - term: "IDP Leaderboard"
+    definition: "Nanonets에서 운영하는 멀티모달 문서 파싱 벤치마크 리더보드"
+  - term: "SFT"
+    definition: "Supervised Fine-Tuning, 파싱 모델 학습에 사용되는 지도 학습 방법론"
+  - term: "드라군"
+    definition: "Storm Parse 파이프라인에서 OCR 정확도 향상에 사용하는 내부 컴포넌트"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

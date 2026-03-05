@@ -1,0 +1,49 @@
+channel:
+  id: C07EJLJSVUG
+  name: product-supply
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 5
+  active_users: 5
+  avg_messages_per_day: 1.8
+summary: |
+  2024-Q4는 Supply 검색 품질 평가 체계 구축과 모델 성능 비교가 본격적으로 시작된 분기이다.
+  ye(연구원)가 합류하여 BGE-M3 임베딩 + GTE 리랭커 기반 베이스라인 평가를 진행했으며,
+  1:N query-context pair를 반영하도록 evaluation 코드가 수정되었다. Recall 계산 방식이 개선되었고,
+  corpus embedding을 cache dir에 저장하는 방식으로 변경되었다(Qdrant에서 가져오는 문제 회피).
+  Sigrid Jin(진형)이 ye에게 TensorFlow Metal 플러그인을 공유하는 등 ML 인프라 관련 논의도 있었다.
+  또한 update된 eval set 기준 베이스라인 결과가 공유되었다.
+topics:
+  - BGE-M3 + GTE 리랭커 기반 검색 품질 평가 (베이스라인)
+  - 1:N query-context pair 반영 evaluation 코드 수정
+  - corpus embedding 캐시 저장 방식 도입
+  - TensorFlow Metal 플러그인 공유
+key_discussions:
+  - date: '2024-12-21'
+    summary: BGE-M3(top100) + GTE(top20) 베이스라인 평가 결과 공유 - 1:N query-context 반영 (84 replies)
+  - date: '2024-12-20'
+    summary: corpus embedding cache dir 저장 방식 변경 (5 replies)
+  - date: '2024-12-19'
+    summary: TensorFlow Metal 플러그인 공유 및 Supply 관련 프로젝트 소개
+terminology:
+  - term: BGE-M3
+    definition: BAAI에서 개발한 다국어 임베딩 모델. Supply에서 벡터 검색의 기본 임베딩 모델로 활용
+    aliases:
+      - bge-m3
+  - term: GTE
+    definition: General Text Embeddings 리랭커 모델. Supply에서 검색 결과 재순위 지정에 활용
+    aliases:
+      - gte reranker
+  - term: Recall
+    definition: 검색 품질 지표. 전체 정답 중 검색 결과에 포함된 정답의 비율
+  - term: eval set
+    definition: 검색 품질 평가를 위한 query-context 쌍 데이터셋
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,50 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 12
+  total_threads: 6
+  active_users: 6
+  avg_messages_per_day: 1.3
+summary: |
+  2024년 1분기에는 Sigrid Jin이 주도적으로 조직문화 관련 학습 자료를 공유하며 채널 활동을 시작했다.
+  김창준의 '실패에서 잘 배우기', 야생학습 휴리스틱스 툴셋, 효과적인 피드백 전략 등 학습과 피드백 문화에 대한 콘텐츠가 주로 공유되었다.
+  김혜원이 초반 컬쳐 논의를 마무리하고 홈페이지 개편에 맞춰 컬쳐 정리를 제안하는 등 조직문화 체계화의 초기 논의가 이루어졌다.
+topics:
+  - 조직문화 초기 논의
+  - 학습 자료 공유
+  - 피드백 문화
+  - 실패 학습
+key_discussions:
+  - thread_ts: '1710814718.986919'
+    date: '2024-03-19'
+    reply_count: 10
+    text_preview: 저희 초반에 컬쳐에 대해 논의하던거 마무리가 없었던 것 같은데욤. 이번에 홈페이지 개편하면서 컬쳐쪽 정리를 미리 해두면 좋을 것 같아요
+  - thread_ts: '1709315231.562809'
+    date: '2024-03-01'
+    reply_count: 9
+    text_preview: 실패에서 잘배우기 by 김창준
+  - thread_ts: '1706766706.041569'
+    date: '2024-02-01'
+    reply_count: 8
+    text_preview: (Sigrid Jin 조직문화 관련 자료 공유)
+  - thread_ts: '1708308843.266169'
+    date: '2024-02-19'
+    reply_count: 2
+    text_preview: 3x3 매트릭스 전략으로 효과적인 피드백 받기
+terminology:
+  - term: "야생학습"
+    definition: "공식적인 교육 과정 밖에서 자기 주도적으로 학습하는 방식"
+    context: "조직문화 학습 자료로 공유됨"
+  - term: "메타인지"
+    definition: "자신의 사고 과정을 인식하고 평가하는 능력"
+    context: "학습과 피드백 맥락에서 언급됨"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

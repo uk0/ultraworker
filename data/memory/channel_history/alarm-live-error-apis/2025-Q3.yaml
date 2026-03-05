@@ -1,0 +1,33 @@
+channel:
+  id: C09DQ2Y239C
+  name: alarm-live-error-apis
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 7
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 3.5
+summary: |
+  2025년 3분기 alarm-live-error-apis 채널은 초기 설정 단계로, 9월 초에 채널이 생성되어 4명이 참여하였다. apis-manager와 apis-parse-router 두 서비스를 모니터링 대상으로 설정하였으며, 채널 설명이 반복 업데이트되며 초기 구성이 완료되었다. 메시지 수가 7개로 적어 본격적인 운영은 4분기부터 시작된 것으로 보인다.
+topics:
+  - name: "채널 초기 설정"
+    mention_count: 4
+    description: "apis-manager, apis-parse-router 모니터링을 위한 채널 설명 설정"
+key_discussions: []
+terminology:
+  - term: "apis-manager"
+    definition: "API 관리 서비스로 라이브 에러 모니터링 대상 시스템 중 하나"
+    aliases: []
+    context: "alarm-live-error-apis 채널의 모니터링 대상"
+  - term: "apis-parse-router"
+    definition: "파싱 요청 라우팅 API 서비스"
+    aliases: []
+    context: "alarm-live-error-apis 채널의 모니터링 대상"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

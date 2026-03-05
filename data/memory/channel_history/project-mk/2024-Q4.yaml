@@ -1,0 +1,30 @@
+channel:
+  id: C06FA5KDNKV
+  name: project-mk
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 3.0
+summary: |
+  채널 정리 및 운영 체계 점검이 이루어진 분기. 2024년 10월 10일 채널명이 "product-storm-write"에서 "project-mk"로 변경되었다.
+  매경 10만 크레딧 구매 후 월별 사용량 측정 및 공유 필요성이 논의되었으며, 사용량 대시보드 제공 여부도 점검되었다.
+  채널명 변경은 제품 단위(STORM Write)에서 고객사 단위(매경) 프로젝트 관리로의 전환을 의미한다.
+topics:
+  - 채널명 변경 (product-storm-write → project-mk)
+  - 크레딧 사용량 모니터링
+key_discussions:
+  - thread_ts: '1728534454.751559'
+    date: '2024-10-10'
+    title: 매경 크레딧 사용량 모니터링 논의
+    summary: 10만 크레딧 구매 후 월별 사용량 측정 및 공유 필요성 논의. 별도 대시보드 제공 여부 점검.
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,77 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 17
+  total_threads: 14
+  active_users: 5
+  avg_messages_per_day: 1.3
+summary: |
+  2025년 1분기는 조직문화 채널이 다시 활성화된 시기로, 피드백 문화, 슬랙 소통 방식, 온보딩 프로세스, 채용 서류 개선 등 다양한 주제가 논의되었다.
+  Sigrid Jin이 부정적 피드백 대처법, Glue Work(묵묵히 조직을 운영하는 사람들), 좋은 질문법 등 조직문화 관련 깊이 있는 글을 다수 공유했으며, 특히 피드백 관련 스레드가 35건의 답글로 큰 반향을 일으켰다.
+  김혜원이 신규입사자 온보딩 프로세스와 메이트 제도를 체계화하고, 슬랙 공개채널 참여 문화 개선을 고민했다.
+  이강욱이 슬랙에서 기술적/비기술적 논의를 채널별로 분리하자는 소통 구조 개선안을 제안하여 25건의 활발한 토론이 이루어졌다.
+topics:
+  - 피드백 문화 (부정적 피드백 대처법)
+  - 슬랙 소통 구조 개선
+  - 신규입사자 온보딩/메이트 제도
+  - 채용 서류 심사 개선
+  - Glue Work (비가시적 조직 기여)
+  - 좋은 질문법
+  - 칭찬/인정 문화
+  - 컬쳐 문서 버전 관리
+key_discussions:
+  - thread_ts: '1742810224.735089'
+    date: '2025-03-24'
+    reply_count: 35
+    text_preview: 채용 관련 제안 - 서류에 사고 과정을 적어달라고 하면 어떨까
+  - thread_ts: '1738819057.991589'
+    date: '2025-02-06'
+    reply_count: 35
+    text_preview: 부정적 피드백을 잘 주는 방법과 받았을 때 잘 대처하는 방법
+  - thread_ts: '1737341706.777119'
+    date: '2025-01-20'
+    reply_count: 25
+    text_preview: 슬랙에서 기술적/비기술적 논의 채널 분리 제안
+  - thread_ts: '1739777000.219309'
+    date: '2025-02-17'
+    reply_count: 22
+    text_preview: 제대로 돕고 싶으니 컨텍스트를 주세요 - 좋은 질문의 요건
+  - thread_ts: '1738853409.766339'
+    date: '2025-02-06'
+    reply_count: 15
+    text_preview: 칭찬/인정 슬랙 채널 경험해보신분? (Babywhale 사례 공유)
+  - thread_ts: '1741943629.107699'
+    date: '2025-03-14'
+    reply_count: 14
+    text_preview: 신규입사자 온보딩 프로세스와 메이트 역할 설명
+  - thread_ts: '1741680149.147419'
+    date: '2025-03-11'
+    reply_count: 13
+    text_preview: Glue - 묵묵히 조직이 굴러가게 만드는 사람들 (Tanya Reilly 글 공유)
+  - thread_ts: '1741951918.704039'
+    date: '2025-03-14'
+    reply_count: 11
+    text_preview: 마사지 복지 관련 논의
+terminology:
+  - term: "Glue Work"
+    definition: "직함에 명시되지 않지만 조직이 돌아가게 만드는 비가시적 업무 (온보딩, 로드맵 갱신, 이슈 챙기기 등)"
+    context: "Tanya Reilly의 'Being Glue' 글을 기반으로 조직 내 인정받지 못하는 기여에 대한 논의"
+  - term: "메이트"
+    definition: "신규입사자의 온보딩과 적응을 돕는 기존 직원 (버디 시스템)"
+    context: "2025년 3월 신규입사자 온보딩 프로세스 체계화 과정에서 도입"
+  - term: "과소통"
+    definition: "지나칠 정도로 많이 소통하는 것을 긍정적으로 표현한 Sionic AI의 소통 문화"
+    context: "슬랙 소통 구조 개선 논의에서 언급"
+  - term: "Disagree and commit"
+    definition: "반대 의견이 있어도 의사결정 후에는 전적으로 실행에 동의하는 리더십 원칙"
+    context: "주니어의 건설적 챌린지와 의견 개진의 중요성 맥락에서 언급"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

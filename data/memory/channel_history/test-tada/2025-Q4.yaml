@@ -1,0 +1,33 @@
+channel:
+  id: C0A307HPA20
+  name: test-tada
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 10
+  total_threads: 1
+  active_users: 7
+  avg_messages_per_day: 5.0
+summary: |
+  2025년 4분기에 TADA 비즈니스 서비스 테스트를 위해 채널이 개설되었다. 웰컴쿠폰(15,000원)과 테스트쿠폰(50,000원)을 활용하여 카카오T와 비교 테스트를 진행하기 위한 목적으로 팀원 7명이 참여하였다. 채널 초기 설명과 사용법 안내가 이루어졌으며, 활동은 제한적이었다.
+topics:
+  - name: "TADA 비즈니스 테스트"
+    mention_count: 5
+    description: "TADA 비즈니스 서비스 쿠폰 테스트 및 카카오T 비교"
+key_discussions:
+  - thread_ts: '1733896260.000000'
+    date: '2025-12-11'
+    reply_count: 2
+    text_preview: "TADA 비즈니스 사용법 안내 - 웰컴쿠폰 15,000원, 테스트쿠폰 50,000원 발급"
+terminology:
+  - term: "TADA 비즈니스"
+    definition: "TADA 법인 택시 서비스 - 카카오T의 대안으로 테스트 진행"
+    aliases: ["타다 비즈니스"]
+    context: "법인 택시 서비스 비교 테스트 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

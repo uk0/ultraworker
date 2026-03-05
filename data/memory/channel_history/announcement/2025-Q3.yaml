@@ -1,0 +1,87 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 104
+  total_threads: 64
+  active_users: 20
+  avg_messages_per_day: 2.0
+summary: |
+  2025년 3분기 announcement 채널은 제주도 플레이샵 실행, 신규 입사자 온보딩, 채용 솔루션 이관, 사무실 운영 개선, 홈페이지 개편 등이 주요 주제였다.
+  신규 입사자 5명(안진혁 CEO Staff, 정석현 AI Research 인턴, 백승현 Business Manager 인턴, 유대곤 AI/ML Developer)이 합류하였다. NIA 프로젝트 관련 단기 계약 데이터 검수 인원 5명도 투입되었다.
+  제주도 플레이샵(8/25~27)이 성공적으로 진행되었으며, CEO 타운홀, 팀별 액티비티(스노클링, 카페투어, 낚시 등), 회고 세션이 포함되었다.
+  일본 시장에서의 밋업 'AI and ME'(8/12, JETRO 사무소)가 개최되어 exposure 확대를 도모하였다.
+  채용 솔루션이 Flex에서 Greeting으로 이관되었고, 채용페이지 도메인 연동 및 파이프라인 재설계가 완료되었다.
+  사무실(미타) 자리배치도 변경, 호텔링 좌석 셋업, 세면대 청결도 개선, IT 액세서리 관리 등 오피스 운영 관련 정비가 활발했다.
+  IT 운영채널(#it-support) 신설, 슬랙 일본어 번역봇 추가, Claude Max 구독 관리 등 도구/인프라 정비도 이루어졌다.
+  홈페이지 4개 주요 페이지(메인/Product/Storm Parse/Storm Retrieval) 개편이 진행되어 Figma 프로토타입 리뷰 후 배포되었다.
+  취업규칙 제정 및 전직원 서명, 법정의무교육(직장 내 괴롭힘) 추가 이수, 추석 선물 안내, 출장비 가이드 재공지 등 HR/총무 업무도 다수 진행되었다.
+  테크세미나 주제는 비개발자 위한 Claude Code Session, 서플라이 작업공유, 워크플로 디버깅/자동화, DSL 워크플로우 소개 등으로 진행되었다.
+  진형님(Sigrid Jin) 조모상 부고가 공유되었다.
+topics:
+  - 제주도 플레이샵
+  - 신규 입사자 온보딩
+  - 채용 솔루션 이관 (Flex → Greeting)
+  - 사무실 운영 개선
+  - 홈페이지 개편
+  - 일본 밋업 개최 (AI and ME)
+  - IT 운영채널 신설
+  - 슬랙 일본어 번역봇
+  - Claude Max 구독 관리
+  - 취업규칙 제정
+  - 법정의무교육
+  - 테크세미나 운영
+  - 출장비 가이드
+key_discussions:
+  - thread_ts: '1756716968.986059'
+    date: '2025-09-01'
+    reply_count: 100
+    text_preview: '법정의무교육 하반기 - 직장 내 괴롭힘 교육 이수 안내'
+  - thread_ts: '1756159607.502769'
+    date: '2025-08-26'
+    reply_count: 61
+    text_preview: '제주 플레이샵 둘째날 일정 - 자유시간/팀별활동/저녁식사'
+  - thread_ts: '1755738212.300499'
+    date: '2025-08-21'
+    reply_count: 38
+    text_preview: '플레이샵 낚시 이벤트 - 가장 많이 낚은 사람이 성우님 삭발'
+  - thread_ts: '1751960529.477019'
+    date: '2025-07-08'
+    reply_count: 36
+    text_preview: 'Claude Max 구독자 현황 관리 및 업데이트'
+  - thread_ts: '1757827204.637949'
+    date: '2025-09-14'
+    reply_count: 23
+    text_preview: '부고 알림 - Sigrid Jin 조모상'
+  - thread_ts: '1753266251.126299'
+    date: '2025-07-23'
+    reply_count: 21
+    text_preview: '제주 워크샵 둘째날 팀활동 안내 - 스노클링/카페투어 등'
+terminology:
+  - term: "Greeting"
+    definition: "채용 솔루션 플랫폼. Flex에서 이관하여 채용 파이프라인 관리에 사용"
+    aliases: ["그리팅"]
+  - term: "미타"
+    definition: "사이오닉의 메인 사무실(역삼 소재) 별칭. Meettown의 약어"
+    aliases: ["Meettown", "미트타운"]
+  - term: "디캠프"
+    definition: "사이오닉이 일부 인원이 사용하는 선릉 소재 보조 사무 공간"
+    aliases: ["D.CAMP"]
+  - term: "AI and ME"
+    definition: "사이오닉이 일본 JETRO 사무소에서 개최한 AI 밋업 행사(2025/8/12)"
+    aliases: []
+  - term: "템플러"
+    definition: "사이오닉 구성원을 부르는 호칭. 안진혁(스캇)이 도입"
+    aliases: []
+  - term: "HOT DESK"
+    definition: "자유석/공용자리를 표시하는 사인. 사무실 자리 부족 대응책"
+    aliases: ["호텔링"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,65 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 82
+  total_threads: 78
+  active_users: 7
+  avg_messages_per_day: 1.7
+summary: |
+  2025-Q2에는 IBK 프로젝트 투입을 위한 미니PC, 경량 모니터 4대, 삼성덱스 장비 등 현장 장비 구매가 두드러졌다. Cursor AI, Manus, 일레븐랩스 Pro 등 AI 도구 구독과 함께 JetBrains All Products Pack 연간 구독, OpenRouter API 크레딧 충전 등 개발 환경 구독 비용도 많이 처리되었다. 재택 장비(모니터, 매직키보드, 트랙패드), 코루틴 강의, RAG 관련 도서 등 교육 및 개인 장비 구매도 활발히 진행되었다.
+topics:
+  - name: "IBK 현장 장비 구매"
+    mention_count: 5
+    description: "IBK 프로젝트 투입을 위한 미니PC, 경량 모니터 4대, 삼성덱스 세팅 장비"
+  - name: "AI 도구 구독"
+    mention_count: 8
+    description: "Cursor AI, Manus Pro, 일레븐랩스 Pro, JetBrains, OpenRouter 등"
+  - name: "재택 장비"
+    mention_count: 6
+    description: "매직키보드, 트랙패드, 모니터, 의자 등 재택 근무 환경 장비"
+  - name: "교육 자료"
+    mention_count: 6
+    description: "코루틴 강의, RAG 도서, IT/AI 용어 도서, 분산트랜잭션 강의 등"
+  - name: "간식 및 생활용품"
+    mention_count: 10
+    description: "월별 간식 구매, 긱사 생활용품, 제로 음료 대량 구매"
+key_discussions:
+  - thread_ts: '1743720000.000000'
+    date: '2025-04-03'
+    reply_count: 19
+    text_preview: "IBK 사용할 미니PC 후보 검토(ThinkCentre M75q Gen5, BLINK EQR6)"
+  - thread_ts: '1743811200.000000'
+    date: '2025-04-04'
+    reply_count: 2
+    text_preview: "IBK 사용할 경량 모니터 4EA(2,201,840원) 구매 요청"
+  - thread_ts: '1744272660.000000'
+    date: '2025-04-11'
+    reply_count: 0
+    text_preview: "Manus Pro($199/월) AI Agent 구독 요청"
+  - thread_ts: '1745553660.000000'
+    date: '2025-04-25'
+    reply_count: 2
+    text_preview: "월간 간식 담기 안내"
+  - thread_ts: '1748098800.000000'
+    date: '2025-05-22'
+    reply_count: 11
+    text_preview: "랭체인 RAG 도서 2권 사내 비치용 구매 요청"
+terminology:
+  - term: "IBK"
+    definition: "IBK기업은행, 사이오닉AI가 PoC/프로젝트를 수행한 고객사"
+  - term: "삼성덱스"
+    definition: "삼성 스마트폰을 PC처럼 활용할 수 있는 덱스 모드, IBK 현장 투입 장비로 검토"
+  - term: "Manus"
+    definition: "AI Agent 자동화 플랫폼, 월 $199 Pro 구독 서비스"
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation, 검색 증강 생성 기법"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

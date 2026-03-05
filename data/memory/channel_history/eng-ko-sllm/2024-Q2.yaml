@@ -1,0 +1,62 @@
+channel:
+  id: C05UZB4MSSE
+  name: eng-ko-sllm
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 31
+  total_threads: 21
+  active_users: 7
+  avg_messages_per_day: 1.4
+summary: |
+  2024-Q2는 eng-ko-sllm 채널의 핵심 활동 분기. 주요 연구 주제는 (1) 한국어 토큰 분포 튜닝을 통한 다국어 모델의 한국어 성능 향상, (2) HyDE(Hypothetical Document Embeddings) 기반 검색 품질 개선, (3) RAFT 데이터셋 기반 sLLM 파인튜닝이었음. Noah(고석현)가 Qwen 32B/72B/110B 모델에 한국어 토큰 부스팅(logit bias)을 적용해 중국어/일본어 토큰 혼입 문제를 해결. 정세민(Sem)이 HyDE+Pylon 실험에서 기존 대비 오답률 2배 이상 감소 달성(7/85 → 2/85). Sigrid Jin이 HyDE를 dark-pylon에 통합하고 수협 데이터로 검증. 중기부 장관 주재 AI 스타트업 링크업 협의회에서 sLLM 시연 발표도 진행.
+topics:
+  - 한국어 토큰 분포 튜닝 (logit bias)
+  - HyDE (Hypothetical Document Embeddings) 검색 품질 개선
+  - RAFT 데이터셋 기반 sLLM 파인튜닝
+  - Qwen 모델 시리즈 (32B, 72B, 110B) 한국어 최적화
+  - Llama 3 한국어 부스팅
+  - Command-R Plus 한국어 토큰 튜닝
+  - 수협 문서 QA 성능 평가
+  - 중기부 AI 스타트업 sLLM 시연
+key_discussions:
+  - thread_ts: '1712557297.447729'
+    date: '2024-04-08'
+    title: '한국어 토큰 post-processor 부스팅 실험 (Qwen 32B)'
+    summary: 'Noah가 다국어 모델에서 한국어 토큰 등장 확률을 증대시키는 실험 수행. 영어/중국어 어휘에서 한국어 어휘를 제외한 토큰에 0.9 logit bias를 적용하여 중국어 토큰 혼입 문제 해결'
+  - thread_ts: '1713836444.059889'
+    date: '2024-04-23'
+    title: '수협 RAFT dataset 기반 sLLM 튜닝'
+    summary: 'Noah가 벡터 서치에서 찾기 힘든 청크를 생성하여 (G+R)AG를 수행하는 가설 검증. RAFT 데이터셋으로 sLLM을 튜닝해 검색 품질 향상 시도'
+  - thread_ts: '1715302295.307249'
+    date: '2024-05-10'
+    title: 'HyDE 수협 Pylon 적용 (dev) 통합 테스트'
+    summary: 'Sigrid Jin이 semantic embedding과 hyde embedding을 모두 활용해 4단계 검색(default, related, left, multi-turn) 후 rerank하는 파이프라인 구현'
+  - thread_ts: '1716957574.804209'
+    date: '2024-05-29'
+    title: 'HyDE를 의미있게 사용해보기'
+    summary: 'Sigrid Jin 주도로 HyDE의 실전 활용 방안 논의. 25개 답글로 활발한 토론 진행'
+  - thread_ts: '1719404337.658209'
+    date: '2024-06-26'
+    title: '중기부 장관 주재 AI 스타트업 링크업 협의회 sLLM 시연'
+    summary: '김덕현(Dekay)이 중소벤처기업부 장관 주재 협의회에서 사이오닉 sLLM 기술 시연 발표 진행'
+terminology:
+  - term: 'HyDE'
+    definition: 'Hypothetical Document Embeddings - 쿼리에 대한 가상 문서를 생성하여 임베딩 기반 검색 품질을 향상시키는 기법'
+    aliases: ['hyde']
+  - term: 'RAFT'
+    definition: 'Retrieval Augmented Fine-Tuning - 검색 증강을 위한 파인튜닝 데이터셋 생성 방법론'
+  - term: 'logit bias'
+    definition: '모델 출력 시 특정 토큰의 확률을 조정하여 원하는 언어 토큰 출현을 유도하는 기법'
+    aliases: ['토큰 분포 튜닝', '토큰 부스팅']
+  - term: 'dark-pylon'
+    definition: 'Sionic AI 내부 검색 엔진 Pylon의 개발 버전 레포지토리'
+  - term: 'xionic'
+    definition: 'Sionic AI에서 개발한 한국어 최적화 LLM 모델 시리즈'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

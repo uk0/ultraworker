@@ -1,0 +1,60 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 72
+  total_threads: 36
+  active_users: 13
+  avg_messages_per_day: 1.8
+summary: |
+  2024년 2분기는 온프레미스 인프라 본격 구축기였다. UPS 설치, 서버실 전기공사, 통신실 랙 정리 등 물리 인프라 작업이 집중적으로 진행되었다. 사내 Kubernetes 클러스터 셋업이 시작되어 on-prem DNS 설정, istio gateway 구성, self-sign 인증서 발급이 이루어졌다. L40s GPU 서버 도입 과정에서 NVMe 호환성 이슈(마이크론 nvme 7300 인식 불가)가 발견되었고, 네트워크 구조가 ALB에서 NLB->ALB->Istio로 변경되었다. AWS 마이그레이션 프로그램 펀딩 승인, 한국오라클/OCI 미팅 및 계약 추진, Google Startup Program 크레딧(1.38억원) 확보, 알리바바 A100 GPU 임대 등 다양한 클라우드 벤더 활동이 있었다. 플랫폼 엔지니어 채용 공고 작성 및 veccl 신규 장비 도입도 진행되었다.
+topics:
+  - 온프레미스 K8s 클러스터 구축 (istio, ArgoCD)
+  - 서버실/통신실 물리 인프라 (UPS, 전기공사, 랙)
+  - L40s GPU 서버 도입 및 트러블슈팅
+  - 네트워크 구조 변경 (NLB->ALB->Istio)
+  - 멀티 클라우드 계약 (AWS, OCI, GCP, 알리바바)
+  - 플랫폼 엔지니어 채용
+key_discussions:
+  - thread_ts: '1716650344.300199'
+    date: '2024-05-25'
+    title: 네트워크 구조 변경 (NLB->ALB->Istio)
+    participants: [송명하]
+    summary: 고정 IP 필요로 NLB 추가, SSL/TLS 인증 유지를 위한 ALB 병행 구조로 변경 완료
+  - thread_ts: '1713254400.148879'
+    date: '2024-04-16'
+    title: 한국오라클 미팅 및 OCI 계약 추진
+    participants: [김덕현(Dekay)]
+    summary: OCI 스타텁 프로그램 및 계약 진행 논의, 28개 답글의 활발한 논의
+  - thread_ts: '1717510955.235429'
+    date: '2024-06-04'
+    title: L40s 장비 NVMe 호환성 이슈
+    participants: [송명하]
+    summary: 마이크론 NVMe 7300 인식 불가 이슈 발견, 삼성 NVMe로 교체하여 해결
+  - thread_ts: '1718099993.140269'
+    date: '2024-06-11'
+    title: veccl 신규 장비 도입
+    participants: [김덕현(Dekay), 송명하]
+    summary: 신규 장비 구성 및 세팅 관련 19개 답글 논의
+terminology:
+  - term: L40s
+    definition: NVIDIA L40S GPU 서버
+    context: 온프레미스 GPU 서버로 도입, 8장 구성
+  - term: EKS Anywhere
+    definition: AWS의 온프레미스 Kubernetes 배포 솔루션
+    context: ML 파이프라인 인프라 구성용으로 검토
+  - term: veccl
+    definition: 사내 GPU 서버 장비명
+    context: 신규 장비 도입 및 세팅
+  - term: OCI
+    definition: Oracle Cloud Infrastructure
+    context: 스타텁 프로그램을 통한 계약 추진
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

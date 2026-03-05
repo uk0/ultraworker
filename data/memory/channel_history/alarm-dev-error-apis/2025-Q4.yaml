@@ -1,0 +1,53 @@
+channel:
+  id: C09DQ30H3FG
+  name: alarm-dev-error-apis
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 2041
+  total_threads: 30
+  active_users: 8
+  avg_messages_per_day: 60.0
+summary: |
+  2025-Q4 alarm-dev-error-apis 채널에서는 개발 환경의 API 서비스(apis-manager, apis-parse-router 등)에서 발생한 에러가 New Relic을 통해 자동으로 알림되었다.
+  일평균 60건이라는 높은 메시지 빈도로 Critical 및 High 우선순위 이슈들이 지속적으로 기록되었으며, 특히 paddleocr-inference Pod 재시작, storm-apis-manager-dev 에러 로그 알람, 메모리 사용률 90% 초과 등의 이벤트가 빈번하게 발생하였다.
+  개발팀 8명이 알림을 수신하며 주요 이슈에 대한 스레드 토론이 이루어졌다.
+topics:
+  - name: "Pod 재시작 알림"
+    mention_count: 800
+    description: "paddleocr-inference, storm-apis-manager-dev 등 개발 환경 Pod 재시작 Critical/High 이슈"
+  - name: "API 에러 로그 알람"
+    mention_count: 600
+    description: "APIS-MANAGER-DEV-ERROR 로그 알람 발생, storm-apis-manager-dev 쿼리 결과 이상"
+  - name: "메모리 사용률 초과"
+    mention_count: 200
+    description: "Memory Used % 90% 초과 임계값 위반 이슈"
+key_discussions:
+  - thread_ts: '1764370200.000000'
+    date: '2025-10-30'
+    reply_count: 1
+    text_preview: "storm-apis-manager-dev query result is != 0.0 - APIS-MANAGER-DEV-ERROR 로그 알람 발생"
+  - thread_ts: '1764369900.000000'
+    date: '2025-10-30'
+    reply_count: 1
+    text_preview: "paddleocr-inference Pod 재시작 Critical 이슈 - Namespace: dev, Cluster: sionicai-onprem-cluster"
+terminology:
+  - term: "apis-manager"
+    definition: "API 관리 서비스로 개발 환경에서 에러 모니터링 대상 컴포넌트"
+    aliases: ["storm-apis-manager-dev", "APIS-MANAGER-DEV"]
+    context: "New Relic 알람 정책 APIS-MANAGER-DEV-알람정책에 의해 모니터링"
+  - term: "apis-parse-router"
+    definition: "API 파싱 라우팅 서비스로 alarm-dev-error-apis 채널 모니터링 대상"
+    aliases: []
+    context: "채널 설명에 명시된 주요 모니터링 서비스"
+  - term: "InfraAlert(dev)"
+    definition: "개발 환경 인프라 모니터링 정책으로 Pod 재시작, 메모리 초과 등을 감지"
+    aliases: []
+    context: "New Relic 기반 sionicai-onprem-cluster 개발 환경 알람 정책"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

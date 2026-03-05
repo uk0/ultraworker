@@ -1,0 +1,24 @@
+channel:
+  id: C06G037GWV6
+  name: project-kt
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 2.0
+summary: |
+  활동이 거의 없었던 분기. 오승희님의 채널 참여와 김혜원님이 보험사 문서 관련 흔적을 확인한 메시지 2건만 존재한다.
+  KT 프로젝트 채널이 비활성 상태였으며, 과거 보험사(수협) 문서 작업 이력을 추적하는 정도의 활동만 있었다.
+topics:
+  - 보험사 문서 이력 확인
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

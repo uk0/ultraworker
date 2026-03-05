@@ -1,0 +1,68 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 91
+  total_threads: 50
+  active_users: 7
+  avg_messages_per_day: 2.3
+summary: |
+  2024-Q3에는 Stargate API가 v0.19.1에서 v0.28.1까지, WEB이 v1.6.0에서 v1.13.3까지 성장했다.
+  채널명이 "deploy-release"에서 "product-release"로 변경(9월 9일)되었다.
+  주요 기능으로는 RAG On/Off 토글, LLM 모델 설정(커스텀 모델 지원), 프롬프트 커스터마이징,
+  권한 설정 UI, 채널 연동 강화, Admin 회원가입 플로우, 대시보드 기능, 다국어(i18n) 확장이 출시되었다.
+  Pylon은 v1.2.0에서 v1.4.2로 업그레이드되며, Chunk Padding 도입, 암호화 PDF 핸들링,
+  Azure OpenLLM 지원, 대용량 문서 처리(USIO split), HWP 이슈 해결, Qdrant Topology 재설계,
+  on-prem k8s 이관, Cohere Bedrock 전환이 이루어졌다.
+  WEB에서는 Prisma DB 이관이 완료(7월 31일)되어 ORM이 전면 교체되었고,
+  마크다운/LaTeX 뷰어, 디자인 시스템 컴포넌트 대량 개발, Storybook 환경이 구축되었다.
+  참여 인원이 7명으로 줄었으나, 배포 빈도는 높게 유지되며 91개 메시지가 작성되었다.
+topics:
+  - Stargate API/WEB 대규모 업그레이드 (v0.19~v0.28 / v1.6~v1.13)
+  - RAG On/Off 기능
+  - LLM 모델 설정 및 커스텀 모델 지원
+  - Prisma DB ORM 이관 완료
+  - Pylon Qdrant Topology 재설계 및 on-prem 이관
+  - 대용량 문서 처리 개선 (USIO split)
+  - 암호화 PDF 핸들링
+  - Admin 회원가입 플로우
+  - 채널명 변경 (deploy-release -> product-release)
+  - 다국어 지원 확장
+key_discussions:
+  - thread_ts: '1719588551.233919'
+    date: '2024-06-28'
+    topic: Stargate API v0.19.0 BIG BANG 릴리즈 - 대규모 리팩토링
+  - thread_ts: '1718790070.206539'
+    date: '2024-07-19'
+    topic: Stargate API v0.17.0 - Authorization token on Pylon requests (37개 댓글)
+  - thread_ts: '1728549333.559689'
+    date: '2024-10-10'
+    topic: Stargate API v0.29.0 - Admin 가입, RoleGuard, chat log 이벤트 (26개 댓글)
+  - thread_ts: '1729232713.311649'
+    date: '2024-10-18'
+    topic: Pylon v1.5.0 리팩토링 1차 라이브 (24개 댓글)
+terminology:
+  - term: "Prisma"
+    definition: "Node.js/TypeScript용 ORM으로, Stargate API의 DB 접근 계층이 이관됨"
+    aliases: []
+  - term: "Chunk Padding"
+    definition: "검색 청크 앞뒤로 컨텍스트를 확장하는 기술"
+    aliases: []
+  - term: "USIO"
+    definition: "파일 전처리(파싱) 서버, 대용량 문서 split 기능 포함"
+    aliases: ["Storm Parse"]
+  - term: "RoleGuard"
+    definition: "팀 내 역할(Admin/Manager/Worker)별 API 접근 제어 미들웨어"
+    aliases: []
+  - term: "OpenLLM"
+    definition: "커스텀 LLM 모델을 Pylon에 연결하는 기능"
+    aliases: ["vLLM"]
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

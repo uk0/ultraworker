@@ -1,0 +1,37 @@
+channel:
+  id: C08LZ85CLVA
+  name: business-inging
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 64
+  total_threads: 36
+  active_users: 22
+  avg_messages_per_day: 2.3
+summary: |
+  비공식 사내 감정 표현 및 자유 소통 채널(잉잉). 2025년 4월 초 채널 생성 후 빠르게 멤버 합류.
+  주요 내용: 업무 스트레스 해소를 위한 감정 표현(악!!, 잉잉~ 등), 동료 칭찬(특히 혜원님 팬덤),
+  ServiceNow/Cohere 등 기술 기업 리서치 공유, CRM Relate 사용 문의, 안드레이 카파시 YC 강연 공유 등.
+  실질적 업무 논의보다는 팀 유대감 형성과 감정 교류 목적의 채널.
+topics:
+  - 업무 스트레스 해소
+  - 팀 유대감 형성
+  - 기술 기업 리서치 공유
+key_discussions:
+  - date: '2025-04-05'
+    summary: '채널 생성 - sLLM 컨설팅 문의 대응 고민, 고객 특화 LLM 논의'
+  - date: '2025-04-26'
+    summary: 'ServiceNow 기업 분석 공유 - Now Platform, 구독 매출 28.66억 달러 등'
+key_discussions: []
+terminology:
+  - term: '잉잉'
+    definition: '감정 표현용 비공식 채널명, 업무 고충이나 기쁨을 자유롭게 공유'
+  - term: '대혜원'
+    definition: '김혜원님에 대한 애칭, 팀 내 존경과 친밀감 표현'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,45 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 123
+  total_threads: 47
+  active_users: 11
+  avg_messages_per_day: 2.8
+summary: |
+  Maywell의 인턴 계약 종료 후에도 지속적인 기술 교류. Zapier 연동 일일 요약봇 운영. Solar-Pro 22B 모델 평가(context 4K, 한국어 최적화 미흡), DeepSeek 기업 분석, Reflection-Llama 논란 등 LLM 업계 동향 공유. Maywell 대학 입시(자소서 작성, KAIST 1차 합격) 과정에서 사이오닉 팀원들의 멘토링 지원. 토크나이저 효율성 분석 아카 게시물 작성, Python 3.13 GIL 제거 등 기술 이슈 논의.
+topics:
+  - Solar-Pro 22B 모델 평가
+  - DeepSeek 기업 분석
+  - Reflection-Llama 3.1 70B 논란
+  - 토크나이저 효율성 분석 (compression ratio)
+  - Python 3.13 릴리즈 (GIL 제거)
+  - KAIST 입시 준비 (자소서 작성)
+  - LogicKor 리더보드 운영
+  - 코드믹싱 리서치
+  - HuggingFace 토크나이저 BPE fallback 분석
+key_discussions:
+  - title: "Solar-Pro 22B 평가 - context 4K 문제"
+    summary: "Upstage Solar-Pro 모델 평가. context 4K, 한국어 토큰 최적화 미흡, LogicKor 결과 저조. MMLU 79점은 캐글러 3명의 MMLU 파인튜닝 결과라는 분석"
+  - title: "Maywell KAIST 1차 합격"
+    summary: "사이오닉 팀원들이 자소서 리뷰, 모의면접 지원 등 멘토링. 80% 합격 확률 예측 후 1차 합격 달성"
+  - title: "코드믹싱 연구"
+    summary: "코드믹싱 관련 개인 리서치 진행. 결과가 좋게 나와 향후 공유 예정"
+terminology:
+  - term: "Solar-Pro"
+    definition: "Upstage에서 개발한 22B 한국어 LLM. context 4K 제한"
+  - term: "DeepSeek"
+    definition: "중국 헤지펀드 High-Flyer 산하 AI 기업. A100 1만대 이상 보유"
+  - term: "코드믹싱"
+    definition: "다국어 텍스트에서 언어가 혼합되는 현상. LLM 다국어 성능 향상 연구에 활용"
+  - term: "compression ratio"
+    definition: "토크나이저의 텍스트 압축 효율. vocab 크기와의 관계 분석"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

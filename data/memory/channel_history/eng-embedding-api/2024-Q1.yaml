@@ -1,0 +1,53 @@
+channel:
+  id: C05UPLPJA03
+  name: eng-embedding-api
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 6
+  active_users: 6
+  avg_messages_per_day: 1.6
+summary: |
+  2024-Q1은 Sionic AI Embedding API의 운영 및 기술 지원이 활발했던 분기. 서버 하드웨어 업그레이드를 위한 점검 공지가 있었고, Embedding v2 API의 기술 문의가 다수 발생. 주요 이슈로는 v2 임베딩의 max token 제한, 출력 벡터 사이즈, 특수문자(이중 따옴표) 포함 텍스트에서의 500 에러 등이 있었음. Riley와 Sigrid Jin이 kozistr833(형찬)에게 v2 관련 기술 문의를 활발히 진행. MetisX 파트너와의 v3 임베딩 사양 공유(L2 Norm 포함)도 이루어짐. 256개 이상 문자열 배치 임베딩 시 500 에러가 발생하는 제한 사항도 보고됨.
+topics:
+  - Embedding v2 API 기술 지원 및 문의
+  - 서버 하드웨어 업그레이드 점검
+  - Embedding v3 MetisX 사양 공유
+  - 배치 임베딩 256개 제한 이슈
+  - 특수문자 처리 시 500 에러
+key_discussions:
+  - thread_ts: '1704249650.777659'
+    date: '2024-01-03'
+    title: '서버 하드웨어 업그레이드 점검 공지'
+    summary: 'Sigrid Jin이 임베딩 API 서버 하드웨어 업그레이드를 위한 점검 일정 공지. 8개 답글로 상세 조율'
+  - thread_ts: '1705998685.998689'
+    date: '2024-01-23'
+    title: 'Embedding v2 API max token 제한 문의'
+    summary: 'Sigrid Jin이 kozistr833에게 v2 임베딩 인풋 max token 수 문의. 8개 답글'
+  - thread_ts: '1706012444.147119'
+    date: '2024-01-23'
+    title: 'v2 임베딩 특수문자 500 에러 이슈'
+    summary: 'Riley가 이중 따옴표 포함 텍스트에서 500 에러 발생 보고. 7개 답글로 원인 분석'
+  - thread_ts: '1709522240.662629'
+    date: '2024-03-04'
+    title: 'MetisX 임베딩 배치 256개 제한 이슈'
+    summary: 'MetisX Slack 채널에서 보고된 배치 임베딩 257개 이상 시 500 에러 이슈. Noah가 공유'
+terminology:
+  - term: 'Embedding v2'
+    definition: 'Sionic AI의 두 번째 버전 임베딩 API (api.sionic.ai/v2/embedding)'
+  - term: 'Embedding v3'
+    definition: 'MetisX 파트너용으로 공유된 세 번째 버전 임베딩 API 사양'
+  - term: 'MetisX'
+    definition: 'Sionic AI의 AI 반도체/임베딩 파트너 회사'
+  - term: 'L2 Norm'
+    definition: '벡터의 유클리드 노름. 임베딩 벡터 정규화에 사용'
+  - term: 'kozistr833'
+    definition: '형찬 - Sionic AI 임베딩 API 담당 엔지니어'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

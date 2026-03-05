@@ -1,0 +1,23 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 0
+  total_threads: 0
+  active_users: 0
+  avg_messages_per_day: 0
+summary: |
+  No activity in this quarter. Channel may not have been created yet.
+  research-common 채널에 2024-Q1 기간 동안 메시지가 없습니다. 채널이 아직 생성되지 않았을 수 있습니다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: sync-channel-history

@@ -1,0 +1,65 @@
+channel:
+  id: C06BTPLLWBH
+  name: project-aiprofile-wrtn
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 34
+  total_threads: 19
+  active_users: 11
+  avg_messages_per_day: 2.1
+summary: |
+  뤼튼(Wrtn) AI 프로필 프로젝트의 핵심 활동 분기.
+  채널이 개설되어(1월 3일) hhhssw(석원)의 PM 온보딩과 함께 뤼튼 측 AI 프로필 프로젝트가 본격 가동되었다.
+  주요 활동: Jira 태스크 관리, 뤼튼 대면 미팅 제안, API_KEY 접근제어 적용, invoice 정산 처리.
+  SDXL 모델의 VRAM 최적화(23GB, 4배치 목표) 작업이 진행되었으며, 그라디언트 체크포인팅 없이 효율적 처리를 위한 기술 논의가 활발했다(43건 스레드).
+  핏펫(Fitpet) AI 사진 서비스와의 미팅도 준비하여, 반려동물 AI 프로필 시장 진출을 검토했다.
+  뤼튼 작업물을 정리하여 강남언니/화해 등 뷰티 B2C 서비스에 제안하는 영업 활동도 기획했다.
+  카카오 칼로 AI프로필, 에이블리 AI프로필 등 경쟁사 동향도 모니터링했다.
+  STORM Platform/Core/PaaS 등 범용 플랫폼 명칭 논의도 이루어졌다.
+topics:
+  - 뤼튼 AI 프로필 프로젝트 운영
+  - SDXL 모델 최적화
+  - 핏펫 AI 사진 서비스 미팅
+  - B2C 뷰티 서비스 영업 기획
+  - 경쟁사 동향 모니터링
+  - API 접근제어
+key_discussions:
+  - thread_ts: '1705062053.925959'
+    date: '2024-01-12'
+    summary: 'SDXL 모델 VRAM 최적화 논의 (23GB, 4배치 목표, 43건 스레드)'
+  - thread_ts: '1707238203.171199'
+    date: '2024-02-06'
+    summary: '핏펫 AI 사진 서비스 발견 및 미팅 준비 (25건 스레드)'
+  - thread_ts: '1706678628.180879'
+    date: '2024-01-31'
+    summary: '뤼튼 invoice 정산 및 내부 공유 처리 (24건 스레드)'
+  - thread_ts: '1706877030.541409'
+    date: '2024-02-02'
+    summary: 'AI 프로필 고객사 리스트 정리 (27건 스레드)'
+  - thread_ts: '1707394914.821619'
+    date: '2024-02-08'
+    summary: '핏펫 대면 미팅 일정 조율 (강남구 테헤란로)'
+  - thread_ts: '1706596798.097479'
+    date: '2024-01-30'
+    summary: '뤼튼 작업물 정리 및 뷰티 B2C 서비스 제안 기획'
+terminology:
+  - term: 'SDXL'
+    definition: 'Stable Diffusion XL. 고품질 이미지 생성 모델'
+  - term: '뤼튼'
+    definition: 'Wrtn Technologies. AI 서비스 회사. AI 프로필 프로젝트 고객사'
+  - term: 'Probe'
+    definition: 'AI 프로필 엔지니어링 프로젝트의 내부 코드명'
+  - term: 'RunPod'
+    definition: 'GPU 클라우드 서비스. AI 모델 학습/추론용 인프라'
+  - term: '핏펫'
+    definition: 'Fitpet. 반려동물 헬스케어 플랫폼. AI 사진 서비스 파트너 후보'
+  - term: 'ComfyDeploy'
+    definition: 'ComfyUI 워크플로우를 API로 배포하는 서비스'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

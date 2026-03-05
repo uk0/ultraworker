@@ -1,0 +1,51 @@
+channel:
+  id: C06S5LBR3K3
+  name: deploy-stargate
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 143
+  total_threads: 136
+  active_users: 9
+  avg_messages_per_day: 3.0
+summary: |
+  2025년 1분기 deploy-stargate 채널은 9명이 참여하여 143개의 메시지와 136개의 스레드가 발생하였다. 1월 초부터 stargate의 onprem(dev) 및 EKS(live) 배포가 활발히 진행되었으며, OpenLLM에서 ASMR로 파이프라인 이관 테스트가 1월 중순에 있었다. 1분기에는 live 환경이 EKS 기반으로 운영되었으며, 2분기부터 OCI로 전환된 것으로 보인다.
+topics:
+  - name: "Stargate dev 배포"
+    mention_count: 90
+    description: "개발 환경(onprem)에 stargate 배포"
+  - name: "Stargate live 배포 (EKS)"
+    mention_count: 15
+    description: "라이브 환경(EKS)에 stargate 배포"
+  - name: "OpenLLM → ASMR 파이프라인 이관"
+    mention_count: 5
+    description: "OpenLLM에서 ASMR로 파이프라인 이관 테스트를 위한 stargate dev 재배포"
+key_discussions:
+  - thread_ts: '1736083200.000000'
+    date: '2025-01-06'
+    reply_count: 7
+    text_preview: "stargate live EKS 배포 (77e8bee)"
+  - thread_ts: '1736809200.000000'
+    date: '2025-01-14'
+    reply_count: 5
+    text_preview: "OpenLLM에서 ASMR로 파이프라인 이관 중 다른 파이프라인 영향 확인차 stargate dev 재배포"
+terminology:
+  - term: "EKS"
+    definition: "Amazon Elastic Kubernetes Service - 1분기 stargate live 환경 호스팅 플랫폼"
+    aliases: []
+    context: "2분기에 OCI로 전환됨"
+  - term: "Stargate"
+    definition: "사이오닉 AI의 검색 엔진 서비스"
+    aliases: ["SG", "스타게이트"]
+    context: "dev(onprem)와 live(EKS) 환경에서 운영"
+  - term: "OpenLLM"
+    definition: "LLM 서빙 플랫폼으로 1분기에 ASMR로 이관 작업이 진행됨"
+    aliases: []
+    context: "ASMR 파이프라인으로 교체 대상"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,66 @@
+channel:
+  id: C05QCGG1E5V
+  name: business-contact
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:26:50'
+statistics:
+  total_messages: 26
+  total_threads: 10
+  active_users: 2
+  avg_messages_per_day: 0.6
+key_discussions:
+- thread_ts: '1767923811.732219'
+  date: '2026-01-09'
+  reply_count: 9
+  text_preview: '```성명 : 김덕수
+
+    연락처 : 한국 (+82) 01075221435
+
+    회사 : 신세계아이앤씨
+
+    메일주소 : <mailto:shinsegaeinc@shinsegae.com|shinse'
+- thread_ts: '1767870924.245529'
+  date: '2026-01-08'
+  reply_count: 8
+  text_preview: '```성명 : 김규진
+
+    연락처 : 한국 (+82) 01032432250
+
+    회사 : 경제서적
+
+    메일주소 : <mailto:assetkim@hotmail.com|assetkim@hotmai'
+- thread_ts: '1770011916.946099'
+  date: '2026-02-02'
+  reply_count: 5
+  text_preview: ''
+- thread_ts: '1767847439.935669'
+  date: '2026-01-08'
+  reply_count: 4
+  text_preview: '```성명 : 장재인
+
+    연락처 : 한국 (+82) 01080309446
+
+    회사 : MBC
+
+    메일주소 : <mailto:jangjane00@naver.com|jangjane00@naver'
+- thread_ts: '1767766652.781679'
+  date: '2026-01-07'
+  reply_count: 3
+  text_preview: '```성명 : 上田和真
+
+    연락처 : 일본 (+81) <tel:080-2168-1478|080-2168-1478>
+
+    회사 : MCON ASIA 株式会社
+
+    메일주소 : kueda@mcona'
+- thread_ts: '1768470509.352559'
+  date: '2026-01-15'
+  reply_count: 2
+  text_preview: 연초 문의량 레전드
+metadata:
+  created_at: '2026-02-13T16:26:50'
+  synced_by: sync_fast.py

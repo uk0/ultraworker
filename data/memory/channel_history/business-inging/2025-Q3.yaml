@@ -1,0 +1,32 @@
+channel:
+  id: C08LZ85CLVA
+  name: business-inging
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 37
+  total_threads: 28
+  active_users: 8
+  avg_messages_per_day: 1.7
+summary: |
+  비공식 감정 표현 및 자유 소통 채널. Q3에는 일상적 감정 공유, 동료 칭찬, 기술 공유가 지속됨.
+  혜원님 관련 팬덤 메시지 다수, 스톰파스 하드트레이닝 미팅 링크 공유, 에이전트 토큰 사용량 확인 요청 등 간헐적 업무 소통.
+  QA/bug report/storm 채널 구분 가이드를 혜원님이 공유하여 채널 사용 정리.
+  GPT 5 느린 속도에 대한 불만, Felo 서비스 체험 등 AI 관련 일상 대화도 포함.
+topics:
+  - 팀 유대감 및 감정 공유
+  - 채널 사용 가이드
+  - AI 서비스 체험
+key_discussions:
+  - date: '2025-09-30'
+    summary: '혜원님 QA/bug report/storm 채널 구분 가이드 공유 - 각 채널 용도 명확화'
+  - date: '2025-09-17'
+    summary: '덕현님 비즈니스커먼 한달치 정독 후 팀원들 고생 격려'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

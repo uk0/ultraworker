@@ -1,0 +1,134 @@
+channel:
+  id: C05TNDBU38X
+  name: product-storm-analyze
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 47
+  total_threads: 22
+  active_users: 8
+  avg_messages_per_day: 0.5
+summary: >
+  2024년 1분기는 CS Analyze 올인원 스킬 개발 및 본격 테스트가 이루어진 시기였다. 김혜원이 요약용 테스트
+  데이터셋을 수작업으로 제작하고(카테고리 31개, 스크립트 66건), 임베딩 기반 카테고리 분류를 위해 Qdrant에
+  데이터를 저장했다. CS Analyze 올인원 스킬이 개발되어 요약+키워드 추출+카테고리 분류+감정분석을 하나의
+  API로 통합했으며, HyperCLOVA 기반 요약으로 스타일 컨트롤, GPT를 리랭커 역할로 카테고리 분류(호출당 약
+  2원)하는 구조가 확립되었다. 분석 품질 평가 결과 요약은 "대체로 완벽", 키워드는 "꽤 잘 뽑음", 감정분석은
+  "틀려보이는 건 없음"으로 평가되었다. CS 쉐어링 고객사 STT 스크립트 기반 테스트가 진행되었고,
+  stargate-web.vercel.app/analyze에 데모가 배포되었다. 김덕현이 Analyze 데모 제작을 담당했으며,
+  경쟁사 Allganize(올거나이즈) 분석도 이루어졌다. 3월 말 GCP에서 AWS로 Qdrant 이관이 시작되었다.
+topics:
+  - name: "CS Analyze 올인원 스킬 개발"
+    count: 15
+    summary: "요약+키워드+카테고리+감정분석 올인원 API 개발. HyperCLOVA 요약, GPT 리랭커 카테고리 분류(호출당 2원). few-shot 예시 데이터로 요약 스타일 일관성 확보. 키워드 추출은 요약 기반으로 비용 절감+품질 향상."
+  - name: "테스트 데이터 제작 및 품질 평가"
+    count: 12
+    summary: "김혜원이 카테고리 31개, 스크립트 66건 수작업 제작. 요약 '대체로 완벽', 키워드 '꽤 잘 뽑음, 간혹 불필요한 것 포함', 감정분석 '틀려보이는 건 없음'. CS 쉐어링 STT 스크립트 기반 테스트."
+  - name: "임베딩 기반 카테고리 분류"
+    count: 8
+    summary: "Qdrant에 임베딩 데이터 저장하여 유사도 기반 분류. 고오급 카테고리 분류 및 키워드 추출 기능. Analyze 전용 Qdrant 별도 운영."
+  - name: "데모 사이트 제작"
+    count: 5
+    summary: "stargate-web.vercel.app/analyze에 데모 배포. 김덕현이 데모 제작 진행. 외부 데모 가이드 Notion 문서 작성."
+  - name: "Qdrant 이관 (GCP -> AWS)"
+    count: 3
+    summary: "3월 말 GCP에서 AWS로 이관 시작. Analyze 전용 Qdrant 폐지, 기존 Qdrant와 통합 사용 예정. 이관 중 고오급 요약/카테고리 기능 일시 중단."
+  - name: "경쟁사 분석"
+    count: 2
+    summary: "Allganize(올거나이즈)를 answer/analyze 레벨 경쟁사로 인식. coxwave 리서치 진행(김혜원)."
+key_discussions:
+  - thread_ts: '1704352612.342799'
+    date: '2024-01-04'
+    title: "Analyze 요구사항 우선순위 및 테스트 계획"
+    summary: "김혜원이 Analyze 초안 Figma, 요구사항 우선순위 구글 시트, 요약 프롬프트 초안 공유. answer 화면작업 진행 중 analyze 일부 기능 테스트 및 구체화 시작."
+    participants: ["U05T2RW7PE2", "U057MCDJHDY", "U061V8PBS9M"]
+    decisions: ["차주부터 본격 테스트 시작"]
+    action_items: ["형찬님 일정 확인", "analyze 기능 테스트 착수"]
+    keywords: ["Analyze", "요구사항", "Figma", "프롬프트"]
+    relevance_score: 0.8
+  - thread_ts: '1705047936.936589'
+    date: '2024-01-12'
+    title: "CS Analyze 올인원 스킬 제안"
+    summary: "김혜원이 CS Analyze 올인원 스킬 제안. CS 스크립트 입력으로 요약/키워드/카테고라이즈/감정분석 통합 제공. 하클 요약 스타일 컨트롤, GPT 리랭커 카테고리 분류(호출당 2원), 감정분석은 요약과 묶어 호출 비용 절감."
+    participants: ["U05T2RW7PE2", "U057K0HC9KQ", "U061V8PBS9M"]
+    decisions: ["올인원 스킬 구조 확정", "감정분석과 요약 묶어서 비용 절감"]
+    action_items: ["CS Analyze 스킬 개발"]
+    keywords: ["CS Analyze", "올인원", "요약", "감정분석", "카테고리", "키워드"]
+    relevance_score: 1.0
+  - thread_ts: '1705368174.734869'
+    date: '2024-01-16'
+    title: "Analyze 데모 제작"
+    summary: "김덕현이 Analyze 데모 제작 착수. 115개 답글이 달린 대규모 논의 스레드."
+    participants: ["U057MCDJHDY"]
+    decisions: ["데모 제작 진행"]
+    action_items: ["데모 사이트 구현"]
+    keywords: ["데모", "Analyze", "UI"]
+    relevance_score: 0.8
+  - thread_ts: '1705465518.352809'
+    date: '2024-01-17'
+    title: "키워드 프롬프트 수정 및 Analyze API 업데이트"
+    summary: "김혜원이 키워드 프롬프트 수정본을 Notion에 작성. 형찬(kozistr833)에게 API 업데이트 요청. 147개 답글의 대규모 협업 스레드."
+    participants: ["U05T2RW7PE2", "U061V8PBS9M"]
+    decisions: ["키워드 프롬프트 수정 적용"]
+    action_items: ["API 업데이트"]
+    keywords: ["키워드", "프롬프트", "API"]
+    relevance_score: 0.9
+  - thread_ts: '1705559949.313859'
+    date: '2024-01-18'
+    title: "키워드 추출 심화 논의"
+    summary: "김혜원이 한시형에게 키워드 추출 관련 질문. 52개 답글의 심층 논의. full script 대신 요약된 내용 기반 키워드 추출 시 비용 절감 + 품질 향상 확인."
+    participants: ["U05T2RW7PE2", "U057K0HC9KQ"]
+    decisions: ["요약 기반 키워드 추출 채택"]
+    action_items: []
+    keywords: ["키워드", "추출", "비용 최적화"]
+    relevance_score: 0.8
+  - thread_ts: '1711086299.216069'
+    date: '2024-03-22'
+    title: "한국어 Analyze 프롬프트 작업"
+    summary: "김혜원이 최윤정에게 한국어 analyze 프롬프트 관련 작업 요청. 37개 답글의 대규모 논의."
+    participants: ["U05T2RW7PE2", "U067AL7NWHE"]
+    decisions: []
+    action_items: ["한국어 프롬프트 개선"]
+    keywords: ["프롬프트", "한국어", "Analyze"]
+    relevance_score: 0.7
+  - thread_ts: '1711514550.176429'
+    date: '2024-03-27'
+    title: "Analyze 전용 Qdrant 이관 (GCP -> AWS)"
+    summary: "형찬이 Analyze 전용 Qdrant가 죽어있었음을 발견. GCP에서 AWS로 이관하면서 Analyze 전용 DB 폐지하고 기존 Qdrant와 통합 사용 결정. 고오급 요약/카테고리 기능 일시 중단 공지."
+    participants: ["U061V8PBS9M"]
+    decisions: ["Analyze 전용 Qdrant 폐지, 기존과 통합"]
+    action_items: ["AWS 이관 후 cs-test 데이터 재투입"]
+    keywords: ["Qdrant", "이관", "GCP", "AWS"]
+    relevance_score: 0.8
+terminology:
+  - term: "CS Analyze"
+    definition: "CS 상담 스크립트 올인원 분석 스킬. 요약+키워드+카테고리+감정분석 통합 API."
+    aliases: ["올인원 스킬"]
+    context: "2024-Q1에 본격 개발. HyperCLOVA 요약, GPT 리랭커 카테고리 분류."
+  - term: "Qdrant"
+    definition: "벡터 데이터베이스. 임베딩 기반 카테고리 분류에 사용."
+    aliases: ["쿼드란트"]
+    context: "Analyze 전용 Qdrant 별도 운영 후 기존과 통합. GCP에서 AWS로 이관."
+  - term: "CS 쉐어링"
+    definition: "콜센터/상담 서비스 고객사. STT 스크립트 기반 분석 테스트 대상."
+    aliases: []
+    context: "CS Analyze 초기 테스트 고객사. STT 스크립트 데이터 제공."
+  - term: "Allganize"
+    definition: "올거나이즈. AI 기반 문서 분석 경쟁사."
+    aliases: ["올거나이즈"]
+    context: "answer/analyze 레벨에서 경쟁사로 인식."
+  - term: "STT"
+    definition: "Speech-to-Text. 음성을 텍스트로 변환하는 기술."
+    aliases: []
+    context: "CS 쉐어링 상담 녹음 데이터를 텍스트로 변환한 스크립트."
+  - term: "few-shot"
+    definition: "소량의 예시 데이터를 프롬프트에 포함하여 LLM 출력 스타일을 제어하는 기법."
+    aliases: []
+    context: "요약 스타일 일관성 확보를 위해 예시 데이터를 프롬프트에 포함."
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual

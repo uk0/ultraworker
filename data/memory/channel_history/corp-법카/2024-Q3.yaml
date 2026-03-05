@@ -1,0 +1,54 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 86
+  total_threads: 39
+  active_users: 8
+  avg_messages_per_day: 2.0
+summary: |
+  2024년 3분기 corp-법카 채널은 8명이 참여하여 86개의 메시지와 39개의 스레드가 발생하였다. 봇을 통한 법인카드 사용 내역 자동 기록이 주를 이루었으며, 식사(점심/저녁), 커피 구매, 에어컨 청소/보강 등 사무실 유지보수, 야근 식사 등 다양한 목적의 사용이 기록되었다. 3분기는 2분기 대비 활발한 사용 패턴을 보였으며, 외부 미팅 및 디너챗 사용도 포함되었다.
+topics:
+  - name: "법인카드 식사 사용"
+    mention_count: 40
+    description: "팀원들의 점심 및 저녁 식사, 야근 식사에 법인카드 사용 기록"
+  - name: "커피 구매"
+    mention_count: 15
+    description: "코삼이 카페 등 팀원 커피 구매 기록"
+  - name: "사무실 유지보수"
+    mention_count: 5
+    description: "에어컨 청소, 냉방 파이프 보강 등 사무실 관리 목적 법카 사용"
+  - name: "외부 미팅/디너챗"
+    mention_count: 8
+    description: "외부 비즈니스 미팅 및 디너챗 관련 식사 법카 사용"
+key_discussions:
+  - thread_ts: '1720000800.000000'
+    date: '2024-07-04'
+    reply_count: 1
+    text_preview: "장경훈 기타 목적 법카 사용"
+  - thread_ts: '1720669020.000000'
+    date: '2024-07-11'
+    reply_count: 0
+    text_preview: "장경훈 외 7인 계림 야근식사"
+terminology:
+  - term: "법카"
+    definition: "법인카드의 줄임말로 회사 공용 신용카드"
+    aliases: ["법인카드"]
+    context: "봇을 통해 사용자, 사용일, 목적, 사용자 명단이 자동 기록됨"
+  - term: "코삼이"
+    definition: "회사 근처 카페 이름"
+    aliases: []
+    context: "커피 구매 시 자주 이용하는 카페"
+  - term: "공용 법카"
+    definition: "특정 개인 소유가 아닌 사무실 공용 법인카드"
+    aliases: []
+    context: "출장 또는 공용 목적 사용 시 소지자 공유 필요"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

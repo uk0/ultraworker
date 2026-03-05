@@ -1,0 +1,22 @@
+channel:
+  id: C071M3G0EDR
+  name: sig-sql
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3 기간 동안 sig-sql 채널에는 신규 멤버 합류 메시지 1건만 기록되어 비활성 상태를 유지하였다. SQL SIG 스터디 채널로서의 실질적인 활동은 이루어지지 않았으며, 채널 멤버 확장만 이루어진 분기이다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

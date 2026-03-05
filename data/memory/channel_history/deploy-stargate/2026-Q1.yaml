@@ -1,0 +1,78 @@
+channel:
+  id: C06S5LBR3K3
+  name: deploy-stargate
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:21'
+statistics:
+  total_messages: 81
+  total_threads: 81
+  active_users: 3
+  avg_messages_per_day: 1.9
+key_discussions:
+- thread_ts: '1767589732.765699'
+  date: '2026-01-05'
+  reply_count: 20
+  text_preview: /sionic-deploy-new stargate live 28f7308 oci
+- thread_ts: '1768874344.036499'
+  date: '2026-01-20'
+  reply_count: 11
+  text_preview: /sionic-deploy-new stargate-go dev 5770399 onprem --auto-deploy
+- thread_ts: '1769606017.716559'
+  date: '2026-01-28'
+  reply_count: 10
+  text_preview: /sionic-deploy-new stargate live 00b2746 oci
+- thread_ts: '1768881953.371479'
+  date: '2026-01-20'
+  reply_count: 10
+  text_preview: /sionic-deploy-new stargate live f46c5b5 oci
+- thread_ts: '1768791098.574879'
+  date: '2026-01-19'
+  reply_count: 10
+  text_preview: /sionic-deploy-new stargate live e6ea9b0 oci
+- thread_ts: '1770279274.157619'
+  date: '2026-02-05'
+  reply_count: 9
+  text_preview: /sionic-deploy-new stargate dev ea66148 oci auto-deploy skip-build
+- thread_ts: '1770279138.324879'
+  date: '2026-02-05'
+  reply_count: 9
+  text_preview: /sionic-deploy-new stargate dev ea66148 onprem auto-deploy --skip-build
+- thread_ts: '1769492248.595899'
+  date: '2026-01-27'
+  reply_count: 9
+  text_preview: /sionic-deploy-new stargate live c8e5757 oci
+- thread_ts: '1768953410.811199'
+  date: '2026-01-21'
+  reply_count: 9
+  text_preview: /sionic-deploy-new stargate live 0e48c1f oci
+- thread_ts: '1768526181.777179'
+  date: '2026-01-16'
+  reply_count: 9
+  text_preview: /sionic-deploy-new stargate live e6ea9b0 oci
+- thread_ts: '1770868394.659759'
+  date: '2026-02-12'
+  reply_count: 8
+  text_preview: /sionic-deploy stargate-go dev 0037c56 oci
+- thread_ts: '1770868373.009889'
+  date: '2026-02-12'
+  reply_count: 8
+  text_preview: /sionic-deploy stargate dev f6950a4 oci
+- thread_ts: '1770803727.985449'
+  date: '2026-02-11'
+  reply_count: 8
+  text_preview: /sionic-deploy stargate dev 21ca066 oci auto-deploy
+- thread_ts: '1770268571.320549'
+  date: '2026-02-05'
+  reply_count: 8
+  text_preview: /sionic-deploy-new stargate live 83747dd oci
+- thread_ts: '1770260016.256439'
+  date: '2026-02-05'
+  reply_count: 8
+  text_preview: /sionic-deploy-new stargate dev b9c8fba oci auto-deploy skip-build
+metadata:
+  created_at: '2026-02-13T16:28:21'
+  synced_by: sync_fast.py

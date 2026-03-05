@@ -1,0 +1,30 @@
+channel:
+  id: C079AAU6265
+  name: deploy-asmr
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 17
+  total_threads: 11
+  active_users: 6
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 4분기에는 배포 시스템 이슈가 발생하였다. 조하담님이 빌드 후 배포 단계로 넘어가지 않는 문제를 보고하였으며,
+  "Paused by anonymous (sadf)"라는 메시지가 표시되어 인프라팀에 문의하였다. Sigrid Jin님도 빌드용 배포를
+  수행하였다. 홍혁준님, 이상호님, artdark12님 등 새 멤버들이 합류하면서 채널 참여자가 다양해졌다.
+  배포는 기존과 동일하게 /sionic-deploy asmr 커맨드를 사용하였으나, 배포 빈도는 다소 감소하였다.
+topics:
+  - 배포 시스템 이슈 (Paused by anonymous)
+  - 신규 멤버 합류
+key_discussions:
+  - thread_ts: '1761931900.967889'
+    date: '2025-10-31'
+    topic: ASMR dev 배포 파이프라인 이슈 - 빌드 후 배포 미진행 (12개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

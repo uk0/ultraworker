@@ -1,0 +1,78 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:17'
+statistics:
+  total_messages: 20
+  total_threads: 18
+  active_users: 3
+  avg_messages_per_day: 0.5
+key_discussions:
+- thread_ts: '1768238358.624719'
+  date: '2026-01-13'
+  reply_count: 32
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build --auto-deploy
+- thread_ts: '1768236784.864149'
+  date: '2026-01-13'
+  reply_count: 29
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build
+- thread_ts: '1767878340.043039'
+  date: '2026-01-08'
+  reply_count: 11
+  text_preview: /sionic-deploy-new pylon live b820758 onprem
+- thread_ts: '1768237977.471309'
+  date: '2026-01-13'
+  reply_count: 10
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build
+- thread_ts: '1769443713.423369'
+  date: '2026-01-27'
+  reply_count: 9
+  text_preview: /sionic-deploy-new pylon live 528f5fb oci --skip-build
+- thread_ts: '1768892116.825079'
+  date: '2026-01-20'
+  reply_count: 9
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build --auto-deploy
+- thread_ts: '1767785392.865329'
+  date: '2026-01-07'
+  reply_count: 9
+  text_preview: /sionic-deploy-new pylon dev 94c9da1 onprem
+- thread_ts: '1769397053.196049'
+  date: '2026-01-26'
+  reply_count: 8
+  text_preview: /sionic-deploy-new pylon live daefafb oci --auto-deploy
+- thread_ts: '1768395365.916339'
+  date: '2026-01-14'
+  reply_count: 8
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build --auto-deploy
+- thread_ts: '1769446493.979199'
+  date: '2026-01-27'
+  reply_count: 7
+  text_preview: /sionic-deploy-new pylon live daefafb oci --skip-build
+- thread_ts: '1769397029.379259'
+  date: '2026-01-26'
+  reply_count: 7
+  text_preview: /sionic-deploy-new pylon dev df06333 onprem --auto-deploy
+- thread_ts: '1769164468.368939'
+  date: '2026-01-23'
+  reply_count: 7
+  text_preview: /sionic-deploy-new pylon dev d1d1893 onprem --auto-deploy
+- thread_ts: '1769050161.346969'
+  date: '2026-01-22'
+  reply_count: 7
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build --auto-deploy
+- thread_ts: '1768239741.624709'
+  date: '2026-01-13'
+  reply_count: 7
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build --auto-deploy
+- thread_ts: '1768239365.719389'
+  date: '2026-01-13'
+  reply_count: 7
+  text_preview: /sionic-deploy-new pylon live b820758 oci --skip-build --auto-deploy
+metadata:
+  created_at: '2026-02-13T16:28:17'
+  synced_by: sync_fast.py

@@ -1,0 +1,73 @@
+channel:
+  id: C06814P5L5D
+  name: business-common-global
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 138
+  total_threads: 113
+  active_users: 13
+  avg_messages_per_day: 2.3
+summary: |
+  2025년 2분기 글로벌 비즈니스 채널에서는 일본 IT Week Spring(4월 22-25일) 출장 준비와 현장 미팅, Beyond Seoul Tokyo IR 행사(5월 7일), Japan IT Week FunDeal 현장 미팅(5월 8-9일) 등 일본 시장 공략이 집중적으로 이루어졌다. IMM Japan 파트너십 논의, AVANT Consulting(YJ Corp 연결), 통역 섭외, 일본 제품소개서 업데이트 등 준비 작업도 체계적으로 진행되었다. 또한 태국 Siam AI와의 협력 논의가 시작되었고, 동남아 시장 진출을 위한 리서치가 병행되었다.
+topics:
+  - name: "일본 IT Week 출장"
+    mention_count: 30
+    description: "Japan IT Week Spring(4/22-4/25) 출장 준비 - 통역 섭외, 제품 소개자료, 부스 미팅 일정 관리"
+  - name: "Beyond Seoul Tokyo IR"
+    mention_count: 15
+    description: "InvestSeoul 주관 도쿄 IR 행사(5/7) 참가. 밋업 희망 투자사 선정 및 사전 준비"
+  - name: "Japan IT Week FunDeal 미팅"
+    mention_count: 10
+    description: "FunDeal 주관 일본 기업 대상 개별 미팅(5/8-9). Quackshift, HEROZ, Zuva Pro 등 다수 기업과 20분 면담"
+  - name: "Siam AI(태국) 협업"
+    mention_count: 8
+    description: "Siam AI와의 협력 시나리오 설계, STORM 플랫폼 도입 논의"
+  - name: "IMM Japan 파트너십"
+    mention_count: 5
+    description: "IMM Japan을 통한 일본 잠재 고객사 네트워크 연결 논의"
+key_discussions:
+  - thread_ts: '1744977600.000000'
+    date: '2025-04-02'
+    reply_count: 22
+    text_preview: "Beyond Seoul Tokyo IR 행사 참가 준비 - 밋업 희망 투자사 3순위 작성 요청"
+  - thread_ts: '1744941000.000000'
+    date: '2025-04-03'
+    reply_count: 26
+    text_preview: "Japan IT Week Spring 출장 스레드(4/22~4/25) - 통역, 부스, 미팅 일정 준비"
+  - thread_ts: '1745919600.000000'
+    date: '2025-04-29'
+    reply_count: 0
+    text_preview: "Rocket Pitch Night 2025 Ultimate(5/7) 참가 준비"
+  - thread_ts: '1746360600.000000'
+    date: '2025-05-04'
+    reply_count: 4
+    text_preview: "일본 통역 및 미팅 일정 최종 확정 - FunDeal 현장 5/8-9 일정"
+  - thread_ts: '1751456400.000000'
+    date: '2025-07-02'
+    reply_count: 21
+    text_preview: "일본 경쟁사 리서치 결과 공유"
+terminology:
+  - term: "FunDeal"
+    definition: "일본 스타트업-기업 간 비즈니스 매칭 행사. 5/8-9 개별 면담 20분씩 진행"
+    aliases: []
+    context: "일본 시장 기업 네트워킹 행사"
+  - term: "InvestSeoul"
+    definition: "서울시 창업지원기관. Beyond Seoul Tokyo IR 행사 주관"
+    aliases: []
+    context: "도쿄 투자유치 IR 행사 지원"
+  - term: "IMM Japan"
+    definition: "일본 벤처캐피탈. Sionic AI와 일본 고객사 네트워크 연결 논의"
+    aliases: []
+    context: "일본 진출 파트너십 채널"
+  - term: "DATT Japan"
+    definition: "일본 파트너사. 건설회사향, CS향(REGZA 포함), 기술 리뷰 등 다양한 논의"
+    aliases: []
+    context: "CEATEC 직전 미팅 진행"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

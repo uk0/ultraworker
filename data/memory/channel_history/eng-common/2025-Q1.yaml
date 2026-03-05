@@ -1,0 +1,109 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 307
+  total_threads: 209
+  active_users: 18
+  avg_messages_per_day: 4.7
+summary: |
+  2025-Q1에는 OCI(Oracle Cloud) 이관이 최대 화제로, EKS에서 OCI로의 인프라 마이그레이션이 성공적으로 완료되었다.
+  IBK 프로젝트 납품/테스트가 집중적으로 진행되었으며, 코드 프리징, 반입 버전 관리, 온프렘 배포 등 엔터프라이즈 딜리버리 프로세스가 체계화되었다.
+  Vercel 리전 서울 추가 최적화, ApiDog 환경변수 변경, 난독화 처리, 온보딩 문서 정비 등 개발 환경 개선이 이루어졌다.
+  n8n 워크플로우 도구 발견, 깃헙 빌링 정리, 스톰 아키텍처 v2503 갱신 등 인프라/도구 고도화도 진행되었다.
+topics:
+  - OCI 이관 (EKS→OCI)
+  - IBK 프로젝트 납품/테스트
+  - 코드 프리징 및 버전 관리
+  - Vercel 리전 최적화 (서울)
+  - ApiDog 환경변수 변경
+  - 온보딩 문서 정비
+  - 깃헙 빌링 관리
+  - 난독화 (온프렘 납품)
+  - n8n 워크플로우 도구
+  - 스톰 아키텍처 v2503
+  - Supply 개선 프로젝트
+  - 민감정보 회고
+key_discussions:
+  - thread_ts: '1741341425.812649'
+    date: '2025-03-07'
+    reply_count: 251
+    text_preview: 'OCI 이사 전 테스트 - 전체 서비스 이관 전 통합 테스트 진행'
+  - thread_ts: '1741620675.929879'
+    date: '2025-03-10'
+    reply_count: 108
+    text_preview: 'OCI 이관 작업 스레드 - 새벽 1시부터 진행된 실제 마이그레이션'
+  - thread_ts: '1742533851.946229'
+    date: '2025-03-21'
+    reply_count: 67
+    text_preview: '스톰 웹 오프라인 PDF 이슈 - 온프렘 환경 PDF 뷰어 문제'
+  - thread_ts: '1742296305.279069'
+    date: '2025-03-18'
+    reply_count: 55
+    text_preview: 'Carrier 서비스 관련 논의 - IBK 배포 이슈 해결'
+  - thread_ts: '1743392032.768099'
+    date: '2025-03-31'
+    reply_count: 55
+    text_preview: 'IBK 14w 티켓 관리 - dev 배포 및 테스트 완료 추적'
+  - thread_ts: '1742281546.163529'
+    date: '2025-03-18'
+    reply_count: 46
+    text_preview: 'IBK 25.11w 테스트 진행 - 반입 전 통합 테스트'
+  - thread_ts: '1742314777.558069'
+    date: '2025-03-18'
+    reply_count: 43
+    text_preview: 'Carrier/Supply 서비스 배포 논의'
+  - thread_ts: '1742351540.455649'
+    date: '2025-03-19'
+    reply_count: 39
+    text_preview: '미타 환경 IBK 테스트 - 반입 전 워룸 테스트 진행'
+  - thread_ts: '1741938532.158329'
+    date: '2025-03-14'
+    reply_count: 37
+    text_preview: '스게 파일업로드 학습 실패 - 트러블슈팅 요청'
+  - thread_ts: '1742916143.548659'
+    date: '2025-03-25'
+    reply_count: 34
+    text_preview: 'IBK 테스트 일정 조율 - 반입 전 최종 검증'
+terminology:
+  - term: "OCI"
+    definition: "Oracle Cloud Infrastructure - 클라우드 인프라 서비스"
+    aliases: []
+    context: "EKS에서 OCI로 전체 서비스 마이그레이션 완료, EKS 2주 유지 후 제거"
+  - term: "IBK"
+    definition: "IBK기업은행 프로젝트 (온프렘 납품)"
+    aliases: ["아비케"]
+    context: "주차별 반입 버전 관리(ibk.25.11w 등), 코드 프리징, 미타 테스트"
+  - term: "미타"
+    definition: "IBK 내부 테스트 환경 (온프렘)"
+    aliases: ["MITA"]
+    context: "아비케 유사 환경 구성, 반입 전 테스트 수행"
+  - term: "코드 프리징"
+    definition: "특정 시점에서 코드 변경을 중단하고 버전을 고정하는 절차"
+    aliases: ["code freezing"]
+    context: "IBK 반입 전 각 서비스 레포에 태그 설정"
+  - term: "n8n"
+    definition: "오픈소스 워크플로우 자동화 도구"
+    aliases: []
+    context: "업무 자동화를 위해 발견/검토"
+  - term: "ApiDog"
+    definition: "API 문서화 및 테스트 도구"
+    aliases: ["apidog"]
+    context: "OCI 이관에 따른 환경변수 변경, 온보딩 시 계정 초대"
+  - term: "난독화"
+    definition: "소스코드를 읽기 어렵게 변환하는 기법"
+    aliases: ["obfuscation"]
+    context: "온프렘 납품 시 스크립트 언어 프로젝트 보호 목적"
+  - term: "Polaris"
+    definition: "내부 API 서비스 (API 가이드 공유)"
+    aliases: ["폴라리스"]
+    context: "API 가이드 문서 공유"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

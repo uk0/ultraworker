@@ -1,0 +1,59 @@
+channel:
+  id: C0A56TC8K9R
+  name: product-agentic-rag
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 26
+  total_threads: 10
+  active_users: 11
+  avg_messages_per_day: 6.5
+summary: |
+  2025년 4분기에 Logic RAG(로직래그) 개발 채널이 신설되어 Agentic RAG 기능 개발이 본격화되었다. Simple Answer(단순 RAG)와 Final Answer(Logic RAG) 비교 테스트가 이루어졌으며, 쿼리 확장, 종료 조건, 검색 이터레이션 등 Agentic RAG 핵심 로직이 논의되었다. 스게 RAG 지원 추가 및 웹 디폴트 에이전트에 SKAX 데모 연결이 완료되었다.
+topics:
+  - name: "Logic RAG 개발"
+    mention_count: 12
+    description: "로직래그 서버 배포, 쿼리 확장, 종료 조건, 검색 이터레이션 로직 개발"
+  - name: "RAG 비교 테스트"
+    mention_count: 6
+    description: "Simple Answer(일반 RAG) vs Final Answer(Logic RAG) 비교 테스트"
+  - name: "스게 RAG 연동"
+    mention_count: 3
+    description: "스게 RAG 지원 추가 및 SKAX 데모 연결"
+key_discussions:
+  - thread_ts: '1766753203.000000'
+    date: '2025-12-24'
+    reply_count: 11
+    text_preview: "로직래그 테스트 에이전트 공유 - 검색 이터레이션 및 쿼리 확장 논의"
+  - thread_ts: '1766766480.000000'
+    date: '2025-12-24'
+    reply_count: 86
+    text_preview: "종료 조건 변경 제안 - RAG 이터레이션 최적화"
+  - thread_ts: '1766988300.000000'
+    date: '2025-12-26'
+    reply_count: 23
+    text_preview: "StormParse 기반 Logic RAG vs 일반 RAG 응답 품질 비교"
+  - thread_ts: '1767018027.000000'
+    date: '2025-12-29'
+    reply_count: 0
+    text_preview: "스게 RAG 지원 추가 및 SKAX 데모 웹 디폴트 에이전트 연결 완료"
+terminology:
+  - term: "Logic RAG"
+    definition: "로직래그 - 단순 검색 대신 복수의 검색 이터레이션을 통해 정확도를 높이는 Agentic RAG 방식"
+    aliases: ["로직래그", "LogicRAG"]
+    context: "Storm 플랫폼의 고급 RAG 기능으로 개발 중"
+  - term: "스게 RAG"
+    definition: "스게(Sgee) 서비스를 위한 RAG 파이프라인 지원"
+    aliases: []
+    context: "Logic RAG에 스게 RAG 지원 추가 완료"
+  - term: "Simple Answer"
+    definition: "단순 RAG - 단일 검색 후 답변 생성하는 기본 RAG 방식"
+    aliases: []
+    context: "Logic RAG(Final Answer)와 비교 테스트 대상"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

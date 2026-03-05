@@ -1,0 +1,30 @@
+channel:
+  id: C08UVNSJS92
+  name: status-app
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 4분기 status-app 채널은 New Relic 기반 애플리케이션 상태 모니터링 알람을 수신하는 채널로, 이 분기에는 11월에 신규 멤버(U09Q29284G6)가 채널에 합류하는 활동만 기록되었다.
+  이전 분기 대비 실제 애플리케이션 오류 알람 발생이 없었으며, 채널이 조용한 상태를 유지하였다.
+topics:
+  - name: "채널 멤버 합류"
+    mention_count: 1
+    description: "신규 팀원의 status-app 채널 참여"
+key_discussions: []
+terminology:
+  - term: "status-app"
+    definition: "New Relic 워크플로우를 통한 애플리케이션 상태 알람 수신 채널"
+  - term: "New Relic"
+    definition: "애플리케이션 성능 모니터링(APM) 및 알람 플랫폼"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

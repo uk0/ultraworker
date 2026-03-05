@@ -1,0 +1,44 @@
+channel:
+  id: C05FKUZGB2A
+  name: alarm-live-error-stargate
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4860
+  total_threads: 108
+  active_users: 14
+  avg_messages_per_day: 71.5
+summary: |
+  Stargate API 운영 에러 알림 채널. 이 분기는 4860개 메시지로 역대 최다 에러 발생 분기였다.
+  live 환경 에러가 91건으로 대부분이었고, FROM_PYLON(29건), SEND_TO_PYLON(17건), ERROR_WHILE_SENDING_SSE_STREAM(15건),
+  INTERNAL_SERVER_ERROR(14건), ERROR_WHILE_PROCESSING_CARRIER_RESPONSE(10건) 등 다양한 에러 유형이 고르게 분포했다.
+  문서 파싱 실패(/callback/documents)와 검색 컨텍스트 에러(/answer/contexts)가 주요 경로였다.
+  9월에는 NewRelic 알림 시스템 전환 논의가 있었으며, 반복 에러 알림의 실효성 문제가 제기되었다.
+  카카오톡 채널 연동 테스트 중 에러도 확인되었다.
+topics:
+  - SSE 스트림 전송 에러 (ERROR_WHILE_SENDING_SSE_STREAM)
+  - Carrier 응답 처리 에러 증가
+  - NewRelic 알림 전환 논의
+  - unstructured-io 문서 파싱 실패
+  - 카카오톡 채널 연동 에러
+key_discussions:
+  - date: '2024-09-25'
+    summary: 'NewRelic 알림 시스템 전환 논의 - 기존 Slack 웹훅 직접 알림에서 NewRelic alert policy 기반으로 변경 검토 (최병현)'
+  - date: '2024-09-25'
+    summary: '반복 에러 알림의 실효성 문제 제기 - 동일 에러 반복 노티로 알림 기능 퇴색 (김덕현)'
+  - date: '2024-09-25'
+    summary: '카카오톡 채널 연동 테스트 진행 (신희수)'
+terminology:
+  - term: "ERROR_WHILE_SENDING_SSE_STREAM"
+    definition: "Server-Sent Events 스트림 전송 중 발생한 에러, 실시간 응답 스트리밍 관련"
+  - term: "ERROR_WHILE_PROCESSING_CARRIER_RESPONSE"
+    definition: "외부 LLM/AI 엔진(carrier) 응답 처리 중 발생한 에러"
+  - term: "NewRelic"
+    definition: "APM/모니터링 도구, 알림 정책 기반 능동적 장애 알림 시스템"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,61 @@
+channel:
+  id: C06SUBV2Q0M
+  name: fyi-summary
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 89
+  total_threads: 2
+  active_users: 7
+  avg_messages_per_day: 3.1
+summary: |
+  2025-Q1에는 요약봇이 business-common 및 engineering 채널 요약을 게시하며, IBK 프로젝트 본격 진행, 일본 사업 준비(일본 현지 채용, KOTRA 나고야 담당자 미팅, 미즈호 은행 계좌 개설), 유진투자증권 POC 연장 및 세미나(2월 20일), 현대차 세미나 준비, LG전자 미팅 조율, 스톰 플랫폼 제품소개서 업데이트(국문/영문/일문), 파트너십 확대(데이터브릭스, 크림슨앰버, 아이티센) 등의 내용이 포함되었다. 2월 말에 요약봇 Slack 토큰 오류(not_allowed_token_type) 발생으로 일시 중단되었다.
+topics:
+  - name: "IBK 프로젝트 진행"
+    mention_count: 20
+    description: "IBK 현장 반입, 긴급 대응 가이드, OpenTelemetry 적용, Storm 배포 자동화(Helm), 성능 이슈 대응 등"
+  - name: "일본 사업 준비"
+    mention_count: 10
+    description: "일본 현지 채용 방안(중개 업체 활용), KOTRA 나고야 담당자 미팅(2/16), 미즈호 은행 법인 계좌 개설, 제품소개서 일본어 번역"
+  - name: "유진투자증권 POC"
+    mention_count: 8
+    description: "2월 말까지 POC 연장, 2월 20일 사업부 세미나 진행, RAG 없는 에이전트 프롬프트 재작성 1차 작업 완료"
+  - name: "제품소개서 및 IR 자료 개편"
+    mention_count: 7
+    description: "스톰 플랫폼 제품소개서 Mar2025-vF 국문/영문 업데이트, IR 덱과 제품소개서 분리, 일문 초벌 번역"
+  - name: "파트너십 생태계 확대"
+    mention_count: 6
+    description: "데이터브릭스 미팅, 크림슨앰버 협업, 아이티센 비즈니스 지원, LG전자·현대차 미팅 준비"
+key_discussions:
+  - thread_ts: '1741651200.000000'
+    date: '2025-02-04'
+    reply_count: 0
+    text_preview: "IBK 프로젝트 - 화면코드 9,900개, 행원 만명, 일평균 10~15회 질문 예상, 프로젝트 기간 최대 3개월"
+  - thread_ts: '1741824000.000000'
+    date: '2025-02-07'
+    reply_count: 0
+    text_preview: "Get Smart 미팅 - qdrant 추천, 약 15테라 규모 문서 데이터, unstructured.io 대안 탐색"
+  - thread_ts: '1742515200.000000'
+    date: '2025-03-21'
+    reply_count: 0
+    text_preview: "LG전자 미팅 - 우정훈 상무(가전사업부 AX 총괄), 정진주 실장 방문 예정, 콜센터 use case 공유 요청"
+terminology:
+  - term: "아비케(AviCE)"
+    definition: "사이오닉AI의 제품/기능 중 하나. 제품소개서 및 RAG 2.0 문서 작업에서 활용 검토됨"
+    aliases: ["AVICE", "아비케"]
+    context: "제품소개서 작성 및 RAG 2.0 문서에서 언급"
+  - term: "헤럴드경제"
+    definition: "사이오닉AI 고객사 중 하나(언론사). 1페이지 제안서 검토 및 과금 구조 논의"
+    aliases: []
+    context: "2025년 1분기 고객사 제안 논의"
+  - term: "Relate"
+    definition: "사이오닉AI에서 계약 전 고객 관리에 사용하는 CRM 도구"
+    aliases: []
+    context: "미팅 노트 자동화 및 고객 관리에 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

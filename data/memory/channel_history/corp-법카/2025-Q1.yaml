@@ -1,0 +1,65 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 43
+  total_threads: 14
+  active_users: 2
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 1분기 corp-법카 채널은 43건의 법인카드 사용 내역이 자동 봇을 통해 기록되었다.
+  주요 사용 목적은 식사(점심/저녁/야식), 커피챗, 기타(간식/청소용역 등)로 구분된다.
+  가장 빈번한 사용자는 U06CLS6E694(세민과 함께하는 식사가 많음)이며, 송명하, 이재준,
+  김수진, 조하담, 신희수 등도 자주 사용했다. 고석현(Noah)은 "IBK 출장카드 따로
+  처리할테니 남기지말고 쓰세요"라는 안내를 남겼다. 1월 25일에는 instruct.kr 멤버
+  (진형, 메웰, 호진, 준영)과의 단체 식사가 있었다. 긱사 청소 용역, 케이크 구매 등
+  비식사 사용도 일부 있었다.
+topics:
+  - 법인카드 사용 내역
+  - 식사 (점심/저녁/야식)
+  - 커피챗
+  - 기타 경비 (간식/용역)
+  - IBK 출장카드 별도 관리
+key_discussions:
+  - thread_ts: '1738407384.812589'
+    date: '2025-02-01'
+    reply_count: 6
+    text_preview: '세민 다솔 저녁 - 커피챗 스레드 논의'
+  - thread_ts: '1737824615.171829'
+    date: '2025-01-25'
+    reply_count: 4
+    text_preview: 'instruct.kr 멤버 단체 식사'
+  - thread_ts: '1737689192.587749'
+    date: '2025-01-24'
+    reply_count: 4
+    text_preview: '김수진 기타 사용 스레드'
+  - thread_ts: '1739444085.053499'
+    date: '2025-02-13'
+    reply_count: 3
+    text_preview: '재준 점심 식사'
+terminology:
+  - term: "법카"
+    definition: "법인카드의 줄임말. 회사 경비 사용을 위한 공용 카드."
+    aliases: ["법인카드", "공용법카", "공동법카"]
+    context: "식사, 커피챗, 기타 업무 관련 경비에 사용"
+  - term: "커피챗"
+    definition: "동료와 커피를 마시며 가벼운 대화를 나누는 것. 법인카드로 결제 가능."
+    aliases: ["coffee chat"]
+    context: "팀원 간 소통 및 네트워킹 목적으로 빈번하게 사용"
+  - term: "미타"
+    definition: "사이오닉 AI 사무실 또는 팀을 지칭하는 내부 용어."
+    aliases: ["미타인원", "미타러들"]
+    context: "미타인원 야식, 미타 커피 등의 표현으로 사용"
+  - term: "코삼이"
+    definition: "코스트코 삼성점 또는 커피 브랜드의 내부 약칭. 커피 구매 시 자주 언급."
+    aliases: ["코사뮈"]
+    context: "단체 커피 구매 시 자주 이용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

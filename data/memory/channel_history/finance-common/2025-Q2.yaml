@@ -1,0 +1,48 @@
+channel:
+  id: C08MQPQA76F
+  name: finance-common
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 5
+  active_users: 16
+  avg_messages_per_day: 2.9
+summary: |
+  2025-Q2 finance-common 채널은 4월에 개설된 재무/금융 논의 채널로, 분기 초 다수의 팀원이 채널에 합류하였다. 주요 내용으로는 회계 기준 변경 사례(오늘의집), 스타트업 투자 동향 분석(에이블리 벨류 엑시트, 국내 스타트업 재무), 인베스트서울 글로벌 투자유치 세션 참여 등이 공유되었다. 채널 개설 초기에는 창업 생태계와 투자 트렌드에 대한 정보 공유가 활발하게 이루어졌으며, 5월부터는 기업 경영 참고 자료 공유도 시작되었다.
+topics:
+  - name: "스타트업 투자 동향"
+    mention_count: 8
+    description: "국내외 스타트업 투자 현황, VC 투자 트렌드, 에이블리 엑시트 사례 등 공유"
+  - name: "재무/회계 사례 공유"
+    mention_count: 5
+    description: "오늘의집 회계기준 변경, 스타트업 재무 현황 분석 자료 공유"
+  - name: "투자유치 실무 세션"
+    mention_count: 3
+    description: "인베스트서울 글로벌 투자유치 실무 세션 참여 관련 공유"
+  - name: "신규 멤버 합류"
+    mention_count: 10
+    description: "채널 개설 후 16명의 팀원이 합류"
+key_discussions:
+  - thread_ts: '1744272480.000000'
+    date: '2025-04-10'
+    reply_count: 0
+    text_preview: "채널 개설 및 오늘의집 회계기준 변경 사례 공유"
+  - thread_ts: '1745466223.000000'
+    date: '2025-04-24'
+    reply_count: 5
+    text_preview: "에이블리 벨류 6천억원 엑시트 시점 - 스타트업 엑시트 전략 분석"
+terminology:
+  - term: "finance-common"
+    definition: "Sionic AI의 재무 및 금융 관련 공개 논의 채널. 투자 트렌드, 회계, 세무 등을 다룸"
+  - term: "VC"
+    definition: "Venture Capital. 스타트업에 투자하는 벤처캐피털"
+  - term: "엑시트"
+    definition: "스타트업 투자자가 보유 지분을 매각하여 수익을 실현하는 것"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

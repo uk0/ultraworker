@@ -1,0 +1,28 @@
+channel:
+  id: C09BEFBJW15
+  name: 25제주-해커톤
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 11
+  total_threads: 2
+  active_users: 8
+  avg_messages_per_day: 3.7
+summary: |
+  2025년 8월 제주도 워크샵의 해커톤 채널. 채널 생성 초기 단계로 팀원들이 참여하고 프론트엔드 동작 이슈 등이 보고됨.
+  이강욱이 프론트엔드가 동작하지 않는 문제(노드 이동 불가, 클릭 무반응)를 보고했으며, 김혜원이 관련 링크를 공유함. 대부분의 메시지는 채널 참여 알림으로 구성됨.
+topics:
+  - 제주 워크샵
+  - 해커톤
+  - 프론트엔드 이슈
+key_discussions:
+  - title: 프론트엔드 동작 이슈
+    summary: 이강욱이 해커톤 프로젝트의 프론트엔드가 동작하지 않는 문제 보고 (노드 이동 불가, 클릭 무반응)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

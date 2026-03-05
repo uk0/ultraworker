@@ -1,0 +1,24 @@
+channel:
+  id: C06EEMDQEKV
+  name: geek4
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q4 geek4 채널은 거의 활동이 없었다. 2개 메시지만 기록되었으며, 새로운 구성원의 채널 참여 정도만 확인된다.
+  긱사 운영이 안정화되면서 별도의 조율 필요성이 줄어든 것으로 보인다.
+topics:
+  - 채널 저활동
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

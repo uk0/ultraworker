@@ -1,0 +1,35 @@
+channel:
+  id: C070AQCSZ0C
+  name: alarm-dev-error-pylon
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 3724
+  total_threads: 2
+  active_users: 9
+  avg_messages_per_day: 81.0
+summary: |
+  Pylon 개발 환경 에러 알림 채널. 3724개 메시지(일평균 81건)로 이전 분기 대비 에러 감소.
+  EmbeddingServiceAPIError가 새로 등장하여 임베딩 서버 연결 실패 및 빈 결과 반환이 주요 이슈였다.
+  ENRICH_DOCUMENT_PROCESS_ERROR에서 RESOURCE_EXHAUSTED(gRPC 리소스 소진) 에러가 빈번하게 발생했다.
+  404 Not Found 에러와 DocumentAlreadyExistsError도 12월에 집중 발생했으며,
+  NewRelic에서 다양한 예외 유형이 자동 감지되었다.
+topics:
+  - EmbeddingServiceAPIError (임베딩 서버 연결 실패)
+  - RESOURCE_EXHAUSTED (gRPC 리소스 소진)
+  - 404 Not Found 에러
+  - DocumentAlreadyExistsError
+  - 에러 감소 추세 (이전 분기 대비)
+key_discussions: []
+terminology:
+  - term: "EmbeddingServiceAPIError"
+    definition: "임베딩 서비스 API 호출 실패 시 발생하는 Pylon 커스텀 예외"
+  - term: "RESOURCE_EXHAUSTED"
+    definition: "gRPC 리소스 소진 상태, Qdrant 서버 용량 초과 시 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

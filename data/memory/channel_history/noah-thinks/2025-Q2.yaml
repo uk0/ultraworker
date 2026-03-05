@@ -1,0 +1,57 @@
+channel:
+  id: C06L6H4DB2R
+  name: noah-thinks
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 5
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  Q2에는 사이오닉의 핵심 전략적 의사결정 사항들이 집중적으로 논의됨.
+  Foundation Model 개발 여부에 대한 pro/con 상세 분석, B2B 고객 성공 철학,
+  매출 프로젝션 리뷰, 장기(1~15년) 회사 방향성 메모 등 경영 전략 주제 다수.
+  오승희가 마음AI 리서치 기반으로 사이오닉 매출 ARPU 과대 산정 이슈를 제기하여
+  51개 답글로 활발한 토론이 이루어짐. Foundation Model 논의는 26개 답글.
+topics:
+  - Foundation Model 개발 전략
+  - B2B 고객 성공 철학
+  - 매출 프로젝션 분석
+  - 장기 사업 방향성 (1~15년)
+  - 소버린 AI
+key_discussions:
+  - title: Foundation Model 개발 도전 여부
+    date: '2025-04-21'
+    summary: |
+      긍정 요인(DeepSeek/Pathways로 1/10~1/100 비용 절감, continual learning 노하우 축적,
+      자체 LLM 브랜딩 필요성, 정부 GPU 지원) vs 부정 요인(10~100억 리스크, 기존 PMF 성과,
+      파트너십 충돌, 조직 문화 변화) 상세 분석. 26개 답글.
+  - title: 매출 프로젝션 ARPU 과대 이슈
+    date: '2025-05-20'
+    summary: |
+      오승희가 마음AI 수주 금액(건당 2천만~7.4억) 대비 사이오닉 ARPU가 과도하게 높게
+      잡혀있음을 지적. 영업/오퍼레이션 관점 실현 가능성 토론. 51개 답글.
+  - title: 장기 회사 방향성 메모
+    date: '2025-06-04'
+    summary: Noah가 1/3/5/10/15년 장기 방향성 노션 문서 공유. 3개 답글.
+terminology:
+  - term: Foundation Model
+    definition: 자체 기초 언어모델. 사이오닉의 전략적 투자 결정 핵심 주제
+    aliases: [파운데이션 모델]
+  - term: 소버린 AI
+    definition: 국가 주도 AI 주권 사업. 태국 KT-업스테이지 자스민 그룹 수주 사례 등
+    aliases: [Sovereign AI]
+  - term: DUS
+    definition: Depth Up-Scaling. 업스테이지의 모델 확장 기법
+    aliases: [접붙이기]
+  - term: ARPU
+    definition: Average Revenue Per User. 고객당 평균 매출
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history
