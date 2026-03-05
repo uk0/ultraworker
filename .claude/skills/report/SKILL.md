@@ -52,6 +52,17 @@ workflow:
       status: "completed"  # Completed
 ```
 
+### Step 1.5: Search Existing Memory
+
+Before collecting evidence, search LTM for related work records to include in the report.
+
+```
+/recall --what "relevant topics from the task"
+/recall --where "files modified during implementation"
+```
+
+Include any discovered past work context in the report.
+
 ### Step 2: Collect Related Files
 
 ```
@@ -172,6 +183,32 @@ Block Kit final report approval message structure:
   ],
   "text": ":clipboard: Final Report - Implement API Response Caching (TASK-2026-0129-001)"
 }
+```
+
+### Step 6: Save to Long-Term Memory
+
+After the report is generated and Slack notification sent, you MUST save a WorkRecord to LTM using `/remember`.
+
+WorkRecord fields to save:
+- **request-ref**: Related RequestRecord ID
+- **purpose**: Final report generation
+- **action**: `report`
+- **topics**: Key topics from the completed task
+- **files-modified**: Task file path (where report was added)
+
+```
+/remember work --request-ref "{req_id}" \
+  --purpose "Generate final report for {task_title}" \
+  --action report --topics "{topic1},{topic2}" \
+  --files-modified "data/tasks/{task_id}.md"
+```
+
+Example:
+```
+/remember work --request-ref req-20260129-0001 \
+  --purpose "Generate final report for API Response Caching" \
+  --action report --topics caching,redis,api-performance \
+  --files-modified "data/tasks/TASK-2026-0129-001.md"
 ```
 
 ## Simple Workflow Report

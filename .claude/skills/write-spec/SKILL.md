@@ -54,6 +54,17 @@ Current status: pending
 Please try again after approval.
 ```
 
+### Step 1.5: Search Existing Memory
+
+Before deep analysis, search LTM for related past work on the same files or topics.
+
+```
+/recall --what "relevant topics from the TODO"
+/recall --where "files that will be modified"
+```
+
+Incorporate any discovered past decisions or architectural context into the spec.
+
 ### Step 2: Collect Context
 
 Read related files:
@@ -197,6 +208,32 @@ Block Kit spec approval message structure:
   ],
   "text": ":page_facing_up: Tech Spec Review - Implement API Response Caching (TASK-2026-0129-001)"
 }
+```
+
+### Step 7: Save to Long-Term Memory
+
+After spec is written and Slack notification sent, you MUST save a WorkRecord to LTM using `/remember`.
+
+WorkRecord fields to save:
+- **request-ref**: Related RequestRecord ID (from exploration, if available)
+- **purpose**: The spec writing goal
+- **action**: `spec_writing`
+- **topics**: Key technical topics from the spec
+- **files-created**: Path to the spec file
+
+```
+/remember work --request-ref "{req_id}" \
+  --purpose "Write tech spec for {task_title}" \
+  --action spec_writing --topics "{topic1},{topic2}" \
+  --files-created "data/specs/{task_id}_spec.md"
+```
+
+Example:
+```
+/remember work --request-ref req-20260129-0001 \
+  --purpose "Write tech spec for API Response Caching" \
+  --action spec_writing --topics caching,redis,api-performance \
+  --files-created "data/specs/TASK-2026-0129-001_spec.md"
 ```
 
 ## Output Example

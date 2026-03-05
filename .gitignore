@@ -48,6 +48,9 @@ data/
 .DS_Store
 Thumbs.db
 
+# Local state files
+.qdrant-initialized
+
 # Secrets
 *.pem
 *.key

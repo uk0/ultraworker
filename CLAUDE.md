@@ -397,6 +397,130 @@ keyword1 keyword2 - AND search
 
 ---
 
+## Long-Term Memory (LTM) System
+
+### Overview
+
+The agent manages two types of long-term memory records:
+- **RequestRecord (req-*)**: Captures who/when/where/what/why/how of a request (5W1H)
+- **WorkRecord (work-*)**: Captures what was done, where, and why (actions + artifacts)
+
+Records are connected through:
+- **FacetKey** implicit edges (`k/<facet>/<value>` format)
+- **ShallowLink** explicit edges between records
+- **CausalLink** causal chain tracking (caused_by, leads_to, blocks, supersedes)
+
+### Directory Structure
+
+```
+data/memory/
+├── requests/              # RequestRecord files (req-YYYYMMDD-NNNN.md)
+├── works/                 # WorkRecord files (work-YYYYMMDD-req-...-NN.md)
+├── index/
+│   └── facet_index.yaml   # Machine-readable inverted index
+├── indexes/               # Agent-readable QMD indexes
+│   ├── who.md             # Person -> records mapping
+│   ├── what.md            # Topic/entity -> records mapping
+│   ├── where.md           # Location (channel/file) -> records mapping
+│   ├── links.md           # Intent-work connections + causal chains
+│   └── timeline.md        # Chronological record listing
+└── channel_history/       # Quarterly channel summaries (existing)
+```
+
+### When to Save (4-Signal Gate)
+
+Evaluate 4 boolean signals. Threshold varies by record type.
+
+| Signal | Question |
+|---|---|
+| novelty | Is this new information not already in memory? |
+| actionability | Did this lead to a concrete action or decision? |
+| persistence | Is this useful beyond the current session? |
+| connectedness | Can this connect to existing records? |
+
+- **RequestRecord**: 2/4 signals required to save
+- **WorkRecord**: 1/4 signals required to save (lower bar because actions are inherently valuable)
+
+**Save triggers (REQUIRED - you MUST save at these points):**
+1. After `/explore-context` completion -> you MUST save a RequestRecord using `/remember`
+2. After code changes or architectural decisions -> you MUST save a WorkRecord using `/remember`
+3. After file modifications or test writing -> you MUST save a WorkRecord using `/remember`
+4. When discovering connections to past records -> you MUST update causal links using `/remember link`
+
+**Do NOT save:** Simple file existence checks, re-confirming already-recorded info, official doc lookups, empty search results.
+
+### How to Save (`/remember`)
+
+```bash
+# Save a request record
+/remember req --who U0123 --where eng-common --what "Auth refactoring" \
+  --topics authentication,middleware --why "SRP violation" \
+  --intents "JWT separation;Chain improvement;Test writing"
+
+# Save a work record
+/remember work --request-ref req-20260225-0001 \
+  --step-ref "req-20260225-0001#step1" \
+  --purpose "Extract JWT verifier module" \
+  --action extract_module --topics jwt,authentication \
+  --files-modified src/auth/middleware.py \
+  --files-created src/auth/jwt_verifier.py
+
+# Add a causal link between records
+/remember link --source req-20260225-0001 --target req-20260220-0003 \
+  --relation caused_by --reason "Perf improvement revealed structural issues"
+
+# Update an existing record
+/remember update --id req-20260225-0001 --intent-status step1=done
+```
+
+### How to Search (`/recall`)
+
+```bash
+# Search by topic
+/recall --what authentication
+
+# Search by person
+/recall --who U0123456789
+
+# Search by file/location
+/recall --where src/auth/middleware.py
+
+# Combined search (multiple dimensions = more precise)
+/recall --what authentication --who U0123 --when 2026-Q1
+
+# Trace causal chain (root cause)
+/recall --trace-cause work-20260225-0001
+
+# Trace effect (blast radius)
+/recall --trace-effect req-20260225-0001
+```
+
+### How to Use Memory
+
+**Automatic usage (REQUIRED at these points):**
+1. Before `/explore-context`: you MUST `/recall` related past requests/work
+2. Before `/write-spec`: you MUST `/recall` related file locations and architecture
+3. Before code implementation: you MUST `/recall` past modifications to the same files
+4. On new requests: you MUST `/recall` same requester's history for patterns
+
+**Structural inference rules:**
+1. **Time proximity**: Same date prefix (req-20260225-*) records are likely from the same session
+2. **ID-based search**: Found REQ? Glob for WRK-same-date-* to find related work
+3. **Intent chains**: Use links.md to find all work records for a request's intents
+4. **File-based backtracking**: Use where.md to find all records touching a file
+5. **Topic clustering**: Use what.md to find related topic clusters
+
+### Causal Chain Types
+
+| Type | Meaning | Example |
+|---|---|---|
+| caused_by | This record was triggered by another | Performance issue revealed structural problem |
+| leads_to | This record's result triggered another | JWT extraction led to chain improvement |
+| blocks | Must complete before another can start | Module split required before testing |
+| supersedes | This record replaces an older one | Expanded scope replaces original request |
+
+---
+
 ## Skill Detailed Execution Guide
 
 ### 1. /sync-slack - Slack Synchronization

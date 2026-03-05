@@ -1039,12 +1039,49 @@ def start(
         "--agentic/--no-agentic",
         help="Enable agentic mode for the polling daemon",
     ),
+    tunnel: bool = typer.Option(
+        True,
+        "--tunnel/--no-tunnel",
+        help="Start Cloudflare tunnel and post URL to Slack",
+    ),
+    tunnel_channel: str = typer.Option(
+        "",
+        "--tunnel-channel",
+        help="Slack channel ID to post tunnel URL (defaults to config default_channel)",
+    ),
 ) -> None:
     """Start polling daemon and dashboard together."""
+    from ultrawork.config import find_config_path
+    from ultrawork.tunnel import TunnelManager
+
+    config = get_config()
+    resolved_data_dir = data_dir.expanduser() if data_dir else config.data_dir
+    if not resolved_data_dir.is_absolute():
+        config_path = find_config_path()
+        if config_path:
+            resolved_data_dir = (config_path.parent / resolved_data_dir).resolve()
+        else:
+            resolved_data_dir = (Path.cwd() / resolved_data_dir).resolve()
+
+    tm = TunnelManager(resolved_data_dir / "state")
+    tunnel_proc = None
     daemon_started = False
     try:
         daemon_start(foreground=False, agentic=agentic)
         daemon_started = True
+
+        # Start Cloudflare tunnel before dashboard so URL is ready
+        if tunnel:
+            notify_ch = tunnel_channel or config.slack.default_channel
+            console.print("[cyan]Starting Cloudflare tunnel...[/cyan]")
+            try:
+                tunnel_url = tm.start(port=port, notify_channel=notify_ch)
+                console.print(f"[green]Tunnel URL:[/green] {tunnel_url}")
+                if notify_ch:
+                    console.print(f"[dim]Slack 알림 전송됨 → {notify_ch}[/dim]")
+            except Exception as exc:
+                console.print(f"[yellow]Tunnel 시작 실패 (계속 진행):[/yellow] {exc}")
+
         console.print("[green]Starting dashboard...[/green]")
         dashboard_start(
             host=host,
@@ -1053,9 +1090,119 @@ def start(
             data_dir=data_dir,
         )
     finally:
+        tm.stop()
         if daemon_started:
             poll_stop()
             daemon_stop()
+
+
+# --- Tunnel Commands ---
+
+
+@app.command("tunnel:start")
+def tunnel_start_cmd(
+    port: int = typer.Option(7878, "--port", help="Local dashboard port"),
+    channel: str = typer.Option(
+        "",
+        "--channel",
+        help="Slack channel ID to post tunnel URL (defaults to config default_channel)",
+    ),
+    data_dir: Path | None = typer.Option(  # noqa: UP007
+        None,
+        "--data-dir",
+        help="Ultrawork data directory",
+    ),
+) -> None:
+    """Start a Cloudflare quick tunnel to the dashboard and post URL to Slack."""
+    from ultrawork.config import find_config_path
+    from ultrawork.tunnel import TunnelManager
+
+    config = get_config()
+    resolved_data_dir = data_dir.expanduser() if data_dir else config.data_dir
+    if not resolved_data_dir.is_absolute():
+        config_path = find_config_path()
+        if config_path:
+            resolved_data_dir = (config_path.parent / resolved_data_dir).resolve()
+        else:
+            resolved_data_dir = (Path.cwd() / resolved_data_dir).resolve()
+
+    tm = TunnelManager(resolved_data_dir / "state")
+
+    if tm.is_running():
+        existing = tm.get_url()
+        console.print(f"[yellow]터널이 이미 실행 중입니다:[/yellow] {existing}")
+        return
+
+    notify_ch = channel or config.slack.default_channel
+    console.print(f"[cyan]Cloudflare 터널 시작 중... (localhost:{port})[/cyan]")
+    try:
+        url = tm.start(port=port, notify_channel=notify_ch)
+        console.print(f"[green]터널 URL:[/green] {url}")
+        if notify_ch:
+            console.print(f"[dim]Slack 알림 전송 → {notify_ch}[/dim]")
+        else:
+            console.print("[dim]Slack 채널 미설정 (--channel 또는 config default_channel 지정)[/dim]")
+        console.print("[dim]중지하려면: uv run ultrawork tunnel:stop[/dim]")
+    except Exception as exc:
+        console.print(f"[red]터널 시작 실패:[/red] {exc}")
+        raise typer.Exit(1)
+
+
+@app.command("tunnel:stop")
+def tunnel_stop_cmd(
+    data_dir: Path | None = typer.Option(  # noqa: UP007
+        None,
+        "--data-dir",
+        help="Ultrawork data directory",
+    ),
+) -> None:
+    """Stop the running Cloudflare tunnel."""
+    from ultrawork.config import find_config_path
+    from ultrawork.tunnel import TunnelManager
+
+    config = get_config()
+    resolved_data_dir = data_dir.expanduser() if data_dir else config.data_dir
+    if not resolved_data_dir.is_absolute():
+        config_path = find_config_path()
+        if config_path:
+            resolved_data_dir = (config_path.parent / resolved_data_dir).resolve()
+        else:
+            resolved_data_dir = (Path.cwd() / resolved_data_dir).resolve()
+
+    tm = TunnelManager(resolved_data_dir / "state")
+    if tm.stop():
+        console.print("[green]Cloudflare 터널이 중지되었습니다.[/green]")
+    else:
+        console.print("[yellow]실행 중인 터널이 없습니다.[/yellow]")
+
+
+@app.command("tunnel:status")
+def tunnel_status_cmd(
+    data_dir: Path | None = typer.Option(  # noqa: UP007
+        None,
+        "--data-dir",
+        help="Ultrawork data directory",
+    ),
+) -> None:
+    """Show current Cloudflare tunnel status."""
+    from ultrawork.config import find_config_path
+    from ultrawork.tunnel import TunnelManager
+
+    config = get_config()
+    resolved_data_dir = data_dir.expanduser() if data_dir else config.data_dir
+    if not resolved_data_dir.is_absolute():
+        config_path = find_config_path()
+        if config_path:
+            resolved_data_dir = (config_path.parent / resolved_data_dir).resolve()
+        else:
+            resolved_data_dir = (Path.cwd() / resolved_data_dir).resolve()
+
+    tm = TunnelManager(resolved_data_dir / "state")
+    url = tm.get_url()
+    if url:
+        console.print(f"[green]터널 활성:[/green] {url}")
+    else:
+        console.print("[dim]터널 비활성[/dim]")
 
 
 @app.command("end")
@@ -1068,6 +1215,306 @@ def end() -> None:
     poll_stop()
     daemon_stop()
     dashboard_stop()
+
+
+# --- Research Orchestrator Commands ---
+
+
+@app.command("research:init")
+def research_init(
+    scaffold_repo: bool = typer.Option(
+        True,
+        "--scaffold/--no-scaffold",
+        help="Create repository scaffold directories/files from the orchestration plan",
+    ),
+) -> None:
+    """Initialize research orchestration storage and optional repository scaffold."""
+    from ultrawork.research_orchestrator import ResearchStore, ensure_repo_scaffold
+
+    config = get_config()
+    store = ResearchStore(config.data_dir)
+    store.ensure_dirs()
+    console.print(f"[green]Research store initialized:[/green] {store.root}")
+
+    if scaffold_repo:
+        repo_root = Path(__file__).resolve().parents[2]
+        created = ensure_repo_scaffold(repo_root)
+        console.print(f"[green]Scaffold created:[/green] {len(created)} files")
+        for path in created:
+            console.print(f"  [dim]- {path.relative_to(repo_root)}[/dim]")
+
+
+@app.command("research:job-template")
+def research_job_template(
+    output: Path = typer.Option(
+        Path("contracts/job_spec.example.yaml"),
+        "--output",
+        "-o",
+        help="Destination for generated JobSpec template",
+    ),
+) -> None:
+    """Generate a canonical JobSpec YAML template."""
+    import yaml
+
+    from ultrawork.research_orchestrator import JobSpec, ResearchStage
+
+    template = JobSpec(
+        job_id="refrag-qwen9b-poc-0001",
+        stage=ResearchStage.STAGE_A_RECON,
+        base_model="Qwen/Qwen3.5-9B-Base",
+        dataset_snapshot="slimpajama-book-arxiv@20260304",
+        k=16,
+        p_expand=0.1,
+        lr=2e-4,
+        global_batch=256,
+        max_steps=5000,
+        budget_gpu_hours=48.0,
+        seed=42,
+        owner="research",
+        notes="Stage A reconstruction baseline run",
+        tags=["refrag", "qwen3.5", "poc"],
+    )
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(
+        yaml.safe_dump(template.model_dump(mode="json"), allow_unicode=True, sort_keys=False),
+        encoding="utf-8",
+    )
+    console.print(f"[green]JobSpec template written:[/green] {output}")
+
+
+@app.command("research:job-submit")
+def research_job_submit(
+    job_spec: Path = typer.Argument(..., help="Path to JobSpec YAML"),
+) -> None:
+    """Validate and submit a research job contract."""
+    from ultrawork.research_orchestrator import ResearchOrchestrator, ResearchStore
+
+    config = get_config()
+    store = ResearchStore(config.data_dir)
+    job = store.read_job_spec(job_spec)
+    orchestrator = ResearchOrchestrator(store)
+    orchestrator.submit_job(job)
+
+    console.print(f"[green]Job submitted:[/green] {job.job_id}")
+    console.print(f"[dim]Stage:[/dim] {job.stage.value}")
+    console.print(f"[dim]Budget (GPUh):[/dim] {job.budget_gpu_hours}")
+
+
+@app.command("research:manifest-create")
+def research_manifest_create(
+    job_spec: Path = typer.Argument(..., help="Path to JobSpec YAML"),
+    code_commit: str = typer.Option("", "--code-commit", help="Code commit hash"),
+    data_hash: str = typer.Option(..., "--data-hash", help="DVC or dataset snapshot hash"),
+    env_lock: str = typer.Option("uv.lock", "--env-lock", help="Environment lockfile path"),
+    hardware: str = typer.Option("RTX PRO 6000 x8", "--hardware", help="Hardware descriptor"),
+    trainer_arg: list[str] = typer.Option(
+        [],
+        "--trainer-arg",
+        help="Trainer arg as key=value (repeatable)",
+    ),
+    artifact_uri: list[str] = typer.Option([], "--artifact-uri", help="Artifact URI (repeatable)"),
+) -> None:
+    """Create and persist a reproducibility manifest."""
+    import subprocess
+
+    from ultrawork.research_orchestrator import ResearchOrchestrator, ResearchStore
+
+    config = get_config()
+    store = ResearchStore(config.data_dir)
+    job = store.read_job_spec(job_spec)
+    orchestrator = ResearchOrchestrator(store)
+
+    resolved_commit = code_commit
+    if not resolved_commit:
+        result = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True)
+        if result.returncode == 0:
+            resolved_commit = result.stdout.strip()
+        else:
+            resolved_commit = "unknown"
+
+    trainer_args: dict[str, str | int | float | bool] = {}
+    for item in trainer_arg:
+        if "=" not in item:
+            console.print(f"[red]Invalid trainer arg (expected key=value):[/red] {item}")
+            raise typer.Exit(1)
+        key, raw = item.split("=", 1)
+        if raw.lower() in {"true", "false"}:
+            trainer_args[key] = raw.lower() == "true"
+        else:
+            try:
+                trainer_args[key] = int(raw)
+            except ValueError:
+                try:
+                    trainer_args[key] = float(raw)
+                except ValueError:
+                    trainer_args[key] = raw
+
+    manifest = orchestrator.create_manifest(
+        job=job,
+        code_commit=resolved_commit,
+        data_hash=data_hash,
+        env_lock=env_lock,
+        hardware=hardware,
+        trainer_args=trainer_args,
+        artifact_uris=artifact_uri,
+        agent_trace=["codex_runner", "claude_reviewer"],
+    )
+    path = store.manifests_dir / f"{manifest.manifest_id}.json"
+
+    console.print(f"[green]Manifest created:[/green] {manifest.manifest_id}")
+    console.print(f"[dim]Path:[/dim] {path}")
+
+
+@app.command("research:eval")
+def research_eval(
+    report_path: Path = typer.Argument(..., help="Path to EvalReport JSON"),
+    baseline_path: Path | None = typer.Option(  # noqa: UP007
+        None, "--baseline", help="Optional baseline EvalReport JSON"
+    ),
+    max_ppl_regression: float = typer.Option(0.05, "--max-ppl-regression"),
+    min_ttft_improvement_ms: float = typer.Option(0.0, "--min-ttft-improvement-ms"),
+    min_vram_reduction_gb: float = typer.Option(0.0, "--min-vram-reduction-gb"),
+    max_seed_metric_std: float = typer.Option(0.03, "--max-seed-metric-std"),
+) -> None:
+    """Evaluate gates for an EvalReport and persist outcome event."""
+    from ultrawork.research_orchestrator import (
+        GateThresholds,
+        ResearchOrchestrator,
+        ResearchStore,
+    )
+
+    config = get_config()
+    store = ResearchStore(config.data_dir)
+    report = store.read_eval_report(report_path)
+    baseline = store.read_eval_report(baseline_path) if baseline_path else None
+    orchestrator = ResearchOrchestrator(
+        store,
+        thresholds=GateThresholds(
+            max_ppl_regression=max_ppl_regression,
+            min_ttft_improvement_ms=min_ttft_improvement_ms,
+            min_vram_reduction_gb=min_vram_reduction_gb,
+            max_seed_metric_std=max_seed_metric_std,
+        ),
+    )
+
+    evaluation = orchestrator.evaluate_report(report, baseline=baseline)
+    title = "PASSED" if evaluation.all_passed else "FAILED"
+    table = Table(title=f"Gate Evaluation ({title})")
+    table.add_column("Gate", style="cyan")
+    table.add_column("Passed", style="green")
+    table.add_column("Message", style="white")
+
+    for check in evaluation.checks:
+        passed = "[green]yes[/green]" if check.passed else "[red]no[/red]"
+        table.add_row(check.gate_id, passed, check.message)
+    console.print(table)
+
+    if not evaluation.all_passed:
+        raise typer.Exit(1)
+
+
+@app.command("research:decision-log")
+def research_decision_log(
+    job_id: str = typer.Argument(..., help="Job ID"),
+    hypothesis: str = typer.Option(..., "--hypothesis", help="Hypothesis statement"),
+    change: str = typer.Option(..., "--change", help="Change applied"),
+    result: str = typer.Option(..., "--result", help="Observed result"),
+    next_action: str = typer.Option(..., "--next-action", help="Next action"),
+    owner: str = typer.Option("", "--owner", help="Owner for this decision"),
+) -> None:
+    """Append a decision log entry for weekly research cadence."""
+    from ultrawork.research_orchestrator import DecisionLogEntry, ResearchStore
+
+    config = get_config()
+    store = ResearchStore(config.data_dir)
+    entry = DecisionLogEntry(
+        job_id=job_id,
+        hypothesis=hypothesis,
+        change=change,
+        result=result,
+        next_action=next_action,
+        owner=owner,
+    )
+    path = store.append_decision_log(entry)
+    console.print(f"[green]Decision log updated:[/green] {path}")
+
+
+@app.command("research:review-record")
+def research_review_record(
+    job_id: str = typer.Argument(..., help="Job ID"),
+    patch_ref: str = typer.Option(..., "--patch-ref", help="Patch or commit reference"),
+    reviewer: str = typer.Option("claude-reviewer", "--reviewer", help="Reviewer identity"),
+    decision: str = typer.Option("needs_changes", "--decision", help="approve|needs_changes|block"),
+    risk_tag: list[str] = typer.Option([], "--risk-tag", help="Risk tag (repeatable)"),
+    required_test: list[str] = typer.Option(
+        [],
+        "--required-test",
+        help="Required test command/name (repeatable)",
+    ),
+    blocker: list[str] = typer.Option([], "--blocker", help="Blocking issue (repeatable)"),
+    notes: str = typer.Option("", "--notes", help="Reviewer notes"),
+) -> None:
+    """Persist reviewer output for Codex->Claude review loop."""
+    from ultrawork.research_orchestrator import ResearchStore, ReviewDecision, ReviewSpec
+
+    config = get_config()
+    store = ResearchStore(config.data_dir)
+
+    try:
+        review_decision = ReviewDecision(decision)
+    except ValueError:
+        console.print(f"[red]Invalid decision:[/red] {decision}")
+        console.print("[dim]Allowed: approve, needs_changes, block[/dim]")
+        raise typer.Exit(1)
+
+    review = ReviewSpec(
+        patch_ref=patch_ref,
+        risk_tags=risk_tag,
+        required_tests=required_test,
+        blockers=blocker,
+        review_decision=review_decision,
+        reviewer=reviewer,
+        notes=notes,
+    )
+    path = store.write_review_spec(review, job_id=job_id)
+    console.print(f"[green]Review recorded:[/green] {path}")
+    console.print(f"[dim]Decision:[/dim] {review_decision.value}")
+
+
+@app.command("research:promote")
+def research_promote(
+    report_path: Path = typer.Argument(..., help="Path to EvalReport JSON"),
+    checkpoint_uri: str = typer.Option(..., "--checkpoint-uri", help="Checkpoint URI to promote"),
+    promoted_by: str = typer.Option("human-review", "--promoted-by", help="Promotion actor"),
+    baseline_path: Path | None = typer.Option(  # noqa: UP007
+        None, "--baseline", help="Optional baseline EvalReport JSON"
+    ),
+) -> None:
+    """Promote checkpoint when automated and human gates pass."""
+    from ultrawork.research_orchestrator import ResearchOrchestrator, ResearchStore
+
+    config = get_config()
+    store = ResearchStore(config.data_dir)
+    report = store.read_eval_report(report_path)
+    baseline = store.read_eval_report(baseline_path) if baseline_path else None
+    orchestrator = ResearchOrchestrator(store)
+    evaluation = orchestrator.evaluate_report(report, baseline=baseline)
+
+    promoted = orchestrator.promote_checkpoint(
+        report=report,
+        evaluation=evaluation,
+        checkpoint_uri=checkpoint_uri,
+        promoted_by=promoted_by,
+    )
+    if promoted:
+        console.print(f"[green]Checkpoint promoted:[/green] {checkpoint_uri}")
+        return
+
+    console.print("[red]Promotion denied.[/red]")
+    console.print(
+        "[dim]Requirements: all gates passed + human_approved=true + reviewer_decision=approve[/dim]"
+    )
+    raise typer.Exit(1)
 
 
 # --- Config Commands ---
