@@ -43,6 +43,15 @@ class DashboardConfig:
     refresh_seconds: float = 1.0
 
 
+@dataclass(frozen=True)
+class SessionLogResolution:
+    """Resolved worktree artifacts for a session."""
+
+    log_path: Path | None
+    log_source: str = "missing"
+    mention_dir: Path | None = None
+
+
 _process_lock = threading.Lock()
 _running_processes: dict[str, subprocess.Popen[str]] = {}
 
@@ -470,6 +479,7 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
 
             offsets: dict[Path, int] = {}
             last_scan = 0.0
+            resolved_log_paths: list[Path] | None = None  # session별 resolved 경로 캐시
 
             # Initialize interaction logger for reading interactions
             interaction_logger = InteractionLogger(cfg.data_dir)
@@ -479,7 +489,24 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
                 while True:
                     now = time.time()
                     if now - last_scan > 2.0:
-                        log_paths = _get_log_paths(cfg, session=session)
+                        if session and resolved_log_paths is None:
+                            # ultrawork session_id → external Claude session_id 매핑
+                            mention_record = _find_mention_for_session(cfg.data_dir, session)
+                            session_obj = _get_session_manager(cfg).get_session(session)
+                            resolution = _resolve_session_log(
+                                config=cfg,
+                                session_id=session,
+                                mention_record=mention_record,
+                                session_obj=session_obj,
+                                command_ts=None,
+                            )
+                            if resolution.log_path:
+                                resolved_log_paths = [resolution.log_path]
+                        log_paths = (
+                            resolved_log_paths
+                            if resolved_log_paths
+                            else _get_log_paths(cfg, session=session)
+                        )
                         for path in log_paths:
                             offsets.setdefault(path, 0)
                         last_scan = now
@@ -650,6 +677,7 @@ def _build_requests(
     manager: ContextManager,
     limit: int = 5,
 ) -> list[dict[str, Any]]:
+    _ = log_index
     mentions_root = config.data_dir / "mentions"
     if not mentions_root.exists():
         return []
@@ -712,10 +740,31 @@ def _build_requests(
             or input_data.get("session_id")
         )
         session_id = str(session_id) if session_id else ""
-        session_candidates = _session_candidates(session_id, channel_id, thread_ts)
-        resolved_session_id, log_path = _resolve_log_path(log_index, session_candidates)
-
-        log_status = _activity_status(log_path.stat().st_mtime) if log_path else "missing"
+        mention_record = {
+            "mention_path": mention_dir,
+            "message_ts": message_ts,
+            "created_at": created_at,
+        }
+        resolution = _resolve_session_log(
+            config=config,
+            session_id=session_id,
+            mention_record=mention_record,
+            session_obj=None,
+            command_ts=created_at,
+        )
+        log_path = resolution.log_path
+        execution_artifact = _first_execution_artifact_path(mention_dir)
+        resolved_session_id = log_path.stem if log_path else (session_id or "")
+        log_available = bool(log_path or execution_artifact)
+        if log_path:
+            log_status = _activity_status(log_path.stat().st_mtime)
+            log_path_text = _relative_path(log_path, config.log_root)
+        elif execution_artifact:
+            log_status = "executor"
+            log_path_text = str(execution_artifact.relative_to(config.data_dir))
+        else:
+            log_status = "missing"
+            log_path_text = ""
 
         requests.append(
             {
@@ -738,9 +787,10 @@ def _build_requests(
                 "task_titles": [task.title for task in linked_tasks],
                 "session_id": session_id,
                 "log_session_id": resolved_session_id,
-                "log_available": bool(log_path),
+                "log_available": log_available,
                 "log_status": log_status,
-                "log_path": _relative_path(log_path, config.log_root) if log_path else "",
+                "log_path": log_path_text,
+                "log_source": resolution.log_source if log_path else ("executor" if execution_artifact else ""),
                 "session_status": str(session_data.get("status") or ""),
                 "response_success": bool(response_data.get("success")) if response_data else None,
                 "response_completed_at": str(response_data.get("completed_at") or ""),
@@ -1009,6 +1059,7 @@ def _iter_mention_records(data_dir: Path) -> list[dict[str, Any]]:
             {
                 "request_id": mention_dir.name,
                 "mention_dir": mention_dir.name,
+                "mention_path": mention_dir,
                 "channel_id": channel_id,
                 "thread_ts": thread_ts,
                 "message_ts": message_ts,
@@ -1136,7 +1187,15 @@ def _resolve_session_status(
     *,
     now_ts: float,
     stalled_threshold_seconds: int,
+    mention_data: dict[str, Any] | None = None,
 ) -> str:
+    # mention_data가 있으면 session.yaml/response.yaml의 완료 상태를 우선 확인
+    if mention_data is not None:
+        if str(mention_data.get("session_status") or "").lower() == "completed":
+            return "completed"
+        if mention_data.get("response_success") is True:
+            return "completed"
+
     normalized = str(primary_status or "").strip().lower()
     if normalized:
         if normalized in {"cancelled"}:
@@ -1163,13 +1222,21 @@ def _resolve_session_status(
             return "active"
         return "pending"
 
-    has_error = any(
-        str(event.get("kind") or "") == "tool_result"
+    tool_error_indices = [
+        i
+        for i, event in enumerate(events)
+        if str(event.get("kind") or "") == "tool_result"
         and str(event.get("status") or "").lower() == "error"
-        for event in events
-    )
-    if has_error:
-        return "failed"
+    ]
+    if tool_error_indices:
+        last_error_idx = max(tool_error_indices)
+        # 에러 이후에 assistant_output이 존재하면 복구된 것으로 간주 → failed 아님
+        recovered = any(
+            str(events[i].get("kind") or "") == "assistant_output"
+            for i in range(last_error_idx + 1, len(events))
+        )
+        if not recovered:
+            return "failed"
 
     runtime = _extract_runtime_markers(events, now_ts)
     last_terminal_type = str(runtime.get("last_terminal_type") or "")
@@ -1448,6 +1515,7 @@ def _build_thread_sessions(
             session_id=session_id,
             command_text=command_text,
             command_ts=command_ts,
+            mention_record=mention_for_session,
         )
         counts = summarize_event_counts(events)
 
@@ -1482,6 +1550,7 @@ def _build_thread_sessions(
             events,
             now_ts=now_ts,
             stalled_threshold_seconds=stalled_threshold_seconds,
+            mention_data=mention_for_session,
         )
 
         summary_source = next(
@@ -1568,6 +1637,7 @@ def _build_session_worktree(
         session_id=session_id,
         command_text=command_text,
         command_ts=command_ts,
+        mention_record=mention_for_session,
     )
 
     sorted_events = sorted(events, key=lambda event: int(event.get("seq") or 0))
@@ -1624,16 +1694,35 @@ def _get_session_worktree_events(
     session_id: str,
     command_text: str | None,
     command_ts: str | None,
+    mention_record: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     thread_key = f"{channel_id}_{thread_ts}"
-    log_path = _resolve_session_log_path(config.log_root, session_id)
+    session_mgr = _get_session_manager(config)
+    session_obj = session_mgr.get_session(session_id)
+    resolution = _resolve_session_log(
+        config=config,
+        session_id=session_id,
+        mention_record=mention_record,
+        session_obj=session_obj,
+        command_ts=command_ts,
+    )
     events = parse_session_worktree_events(
         session_id=session_id,
         thread_key=thread_key,
-        log_path=log_path,
+        log_path=resolution.log_path,
         command_text=command_text,
         command_ts=command_ts,
     )
+
+    if not any(event.get("kind") != "user_command" for event in events):
+        events = _append_execution_log_fallback_events(
+            events=events,
+            session_id=session_id,
+            thread_key=thread_key,
+            mention_dir=resolution.mention_dir,
+            mention_record=mention_record,
+            session_obj=session_obj,
+        )
 
     events = _append_interaction_fallback_events(
         config=config,
@@ -1644,11 +1733,52 @@ def _get_session_worktree_events(
         thread_ts=thread_ts,
     )
 
+    events = _append_missing_log_placeholder_event(
+        events=events,
+        session_id=session_id,
+        thread_key=thread_key,
+        mention_dir=resolution.mention_dir,
+        mention_record=mention_record,
+        session_obj=session_obj,
+    )
+
     events.sort(key=lambda event: int(event.get("seq") or 0))
     return events
 
 
+def _find_mention_for_session(
+    data_dir: Path, session_id: str
+) -> dict[str, Any] | None:
+    """data/mentions/ 디렉토리에서 session_id가 일치하는 mention record를 반환."""
+    mentions_root = data_dir / "mentions"
+    if not mentions_root.exists():
+        return None
+    try:
+        dirs = sorted(
+            (d for d in mentions_root.iterdir() if d.is_dir()),
+            key=lambda d: d.stat().st_mtime,
+            reverse=True,
+        )
+    except OSError:
+        return None
+    for mention_dir in dirs:
+        s_data = _read_yaml(mention_dir / "session.yaml")
+        if str(s_data.get("session_id") or "") == session_id:
+            message_ts = mention_dir.name.replace("_", ".", 1)
+            return {
+                "mention_path": mention_dir,
+                "message_ts": message_ts,
+                "created_at": str(s_data.get("created_at") or ""),
+                "session_id": session_id,
+                "session_status": str(s_data.get("status") or ""),
+                "response_success": _read_yaml(mention_dir / "response.yaml").get("success"),
+            }
+    return None
+
+
 def _resolve_session_log_path(log_root: Path, session_id: str) -> Path | None:
+    if not session_id:
+        return None
     if not log_root.exists():
         return None
     matches = [path for path in log_root.rglob(f"{session_id}.jsonl") if path.is_file()]
@@ -1656,6 +1786,385 @@ def _resolve_session_log_path(log_root: Path, session_id: str) -> Path | None:
         return None
     matches.sort(key=lambda path: path.stat().st_mtime, reverse=True)
     return matches[0]
+
+
+def _resolve_session_log(
+    *,
+    config: DashboardConfig,
+    session_id: str,
+    mention_record: dict[str, Any] | None,
+    session_obj: Any,
+    command_ts: str | None,
+) -> SessionLogResolution:
+    mention_dir = _coerce_mention_dir(mention_record)
+    candidate_pairs: list[tuple[str, str]] = []
+
+    def add_candidate(source: str, value: Any) -> None:
+        candidate = str(value or "").strip()
+        if not candidate:
+            return
+        if any(existing == candidate for _, existing in candidate_pairs):
+            return
+        candidate_pairs.append((source, candidate))
+
+    add_candidate("session_id", session_id)
+    if session_obj is not None:
+        add_candidate("external_session_id", getattr(session_obj, "external_session_id", None))
+    if mention_dir is not None:
+        session_data = _read_yaml(mention_dir / "session.yaml")
+        response_data = _read_yaml(mention_dir / "response.yaml")
+        add_candidate("mention_external_session_id", session_data.get("external_session_id"))
+        add_candidate("response_external_session_id", response_data.get("external_session_id"))
+
+    for source, candidate in candidate_pairs:
+        log_path = _resolve_session_log_path(config.log_root, candidate)
+        if log_path is not None:
+            return SessionLogResolution(
+                log_path=log_path,
+                log_source=source,
+                mention_dir=mention_dir,
+            )
+
+    message_ts = str((mention_record or {}).get("message_ts") or "").strip()
+    created_at = str((mention_record or {}).get("created_at") or "").strip()
+    if not created_at and session_obj is not None and getattr(session_obj, "created_at", None):
+        created_at = session_obj.created_at.isoformat()
+    if not created_at:
+        created_at = str(command_ts or "")
+
+    log_path = _resolve_session_log_path_by_message_ts(
+        config.log_root,
+        message_ts=message_ts,
+        created_at=created_at,
+    )
+    if log_path is not None:
+        return SessionLogResolution(
+            log_path=log_path,
+            log_source="message_ts",
+            mention_dir=mention_dir,
+        )
+
+    return SessionLogResolution(log_path=None, mention_dir=mention_dir)
+
+
+def _coerce_mention_dir(record: dict[str, Any] | None) -> Path | None:
+    if not record:
+        return None
+    raw = record.get("mention_path")
+    if isinstance(raw, Path):
+        return raw
+    text = str(raw or "").strip()
+    return Path(text) if text else None
+
+
+def _resolve_session_log_path_by_message_ts(
+    log_root: Path,
+    *,
+    message_ts: str,
+    created_at: str,
+    scan_limit: int = 200,
+    read_limit: int = 256_000,
+) -> Path | None:
+    if not message_ts or not log_root.exists():
+        return None
+
+    target_ts = _to_time_value(created_at)
+    candidates: list[tuple[float, float, Path]] = []
+    log_files = _iter_log_files(log_root)
+    log_files.sort(key=lambda path: path.stat().st_mtime, reverse=True)
+
+    for path in log_files[:scan_limit]:
+        try:
+            stat = path.stat()
+        except OSError:
+            continue
+        if target_ts and stat.st_mtime < target_ts - 1800:
+            continue
+
+        text = _read_text_prefix(path, read_limit)
+        if message_ts not in text:
+            continue
+
+        distance = abs(stat.st_mtime - target_ts) if target_ts else 0.0
+        candidates.append((distance, -stat.st_mtime, path))
+
+    if not candidates:
+        return None
+
+    candidates.sort(key=lambda item: (item[0], item[1]))
+    return candidates[0][2]
+
+
+def _read_text_prefix(path: Path, limit: int) -> str:
+    try:
+        with path.open("rb") as handle:
+            return handle.read(limit).decode("utf-8", errors="ignore")
+    except OSError:
+        return ""
+
+
+def _append_execution_log_fallback_events(
+    *,
+    events: list[dict[str, Any]],
+    session_id: str,
+    thread_key: str,
+    mention_dir: Path | None,
+    mention_record: dict[str, Any] | None,
+    session_obj: Any,
+) -> list[dict[str, Any]]:
+    if mention_dir is None or not mention_dir.exists():
+        return events
+
+    session_data = _read_yaml(mention_dir / "session.yaml")
+    response_data = _read_yaml(mention_dir / "response.yaml")
+    seq = max((int(event.get("seq") or 0) for event in events), default=0)
+    existing_ids = {str(event.get("event_id") or "") for event in events}
+    staged_entries: list[dict[str, Any]] = []
+
+    for stage, default_title in (("fork_failed", "Fork Failed"), ("main", "Assistant Output")):
+        result_data = _read_yaml(mention_dir / f"result_{stage}.yaml")
+        sections = _parse_execution_log_sections(mention_dir / f"execution_{stage}.log")
+        if not result_data and not any(sections.values()):
+            continue
+
+        ts = str(
+            result_data.get("executed_at")
+            or response_data.get("completed_at")
+            or session_data.get("completed_at")
+            or session_data.get("created_at")
+            or (mention_record or {}).get("created_at")
+            or ""
+        )
+        returncode = result_data.get("returncode")
+        success = result_data.get("success")
+        stdout = sections.get("stdout", "")
+        stderr = sections.get("stderr", "")
+        return_code_text = sections.get("return_code", "")
+
+        if stage == "fork_failed":
+            message = stderr or stdout or _build_execution_status_summary(returncode, return_code_text)
+            if message:
+                staged_entries.append(
+                    {
+                        "sort_ts": _to_time_value(ts),
+                        "ts": ts,
+                        "kind": "assistant_observation",
+                        "status": "error",
+                        "title": default_title,
+                        "summary": _trim(message, 160),
+                        "preview": _trim(message, 800),
+                        "raw": {
+                            "source": "execution_log",
+                            "stage": stage,
+                            "result": result_data,
+                            "path": str(mention_dir / f"execution_{stage}.log"),
+                        },
+                    }
+                )
+            continue
+
+        if stdout:
+            staged_entries.append(
+                {
+                    "sort_ts": _to_time_value(ts),
+                    "ts": ts,
+                    "kind": "assistant_output",
+                    "status": "ok" if success is not False else "error",
+                    "title": default_title,
+                    "summary": _trim(stdout, 160),
+                    "preview": _trim(stdout, 800),
+                    "raw": {
+                        "source": "execution_log",
+                        "stage": stage,
+                        "result": result_data,
+                        "path": str(mention_dir / f"execution_{stage}.log"),
+                    },
+                }
+            )
+
+        if stderr:
+            staged_entries.append(
+                {
+                    "sort_ts": _to_time_value(ts) + 0.001,
+                    "ts": ts,
+                    "kind": "assistant_observation",
+                    "status": "error",
+                    "title": "Execution Error",
+                    "summary": _trim(stderr, 160),
+                    "preview": _trim(stderr, 800),
+                    "raw": {
+                        "source": "execution_log",
+                        "stage": stage,
+                        "result": result_data,
+                        "path": str(mention_dir / f"execution_{stage}.log"),
+                    },
+                }
+            )
+        elif success is False:
+            failure_summary = _build_execution_status_summary(returncode, return_code_text)
+            staged_entries.append(
+                {
+                    "sort_ts": _to_time_value(ts) + 0.001,
+                    "ts": ts,
+                    "kind": "assistant_observation",
+                    "status": "error",
+                    "title": "Execution Failed",
+                    "summary": _trim(failure_summary, 160),
+                    "preview": _trim(failure_summary, 800),
+                    "raw": {
+                        "source": "execution_log",
+                        "stage": stage,
+                        "result": result_data,
+                        "path": str(mention_dir / f"execution_{stage}.log"),
+                    },
+                }
+            )
+
+    staged_entries.sort(key=lambda item: (item.get("sort_ts") or 0.0, str(item.get("title") or "")))
+
+    for index, entry in enumerate(staged_entries):
+        event_id = f"{session_id}:executor:{index}"
+        if event_id in existing_ids:
+            continue
+        seq += 1
+        events.append(
+            {
+                "event_id": event_id,
+                "thread_key": thread_key,
+                "session_id": session_id,
+                "seq": seq,
+                "ts": entry.get("ts") or "",
+                "kind": entry.get("kind"),
+                "status": entry.get("status"),
+                "title": entry.get("title"),
+                "summary": entry.get("summary"),
+                "preview": entry.get("preview"),
+                "parent_event_id": None,
+                "tool_use_id": None,
+                "raw": entry.get("raw") or {},
+            }
+        )
+        existing_ids.add(event_id)
+
+    return events
+
+
+def _parse_execution_log_sections(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+
+    try:
+        content = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return {}
+
+    sections: dict[str, list[str]] = {}
+    current: str | None = None
+    for raw_line in content.splitlines():
+        line = raw_line.rstrip("\n")
+        if line.startswith("=== ") and line.endswith(" ==="):
+            header = line[4:-4].strip().lower().replace(" ", "_")
+            current = header
+            sections.setdefault(current, [])
+            continue
+        if current is not None:
+            sections.setdefault(current, []).append(line)
+
+    return {
+        key: "\n".join(lines).strip()
+        for key, lines in sections.items()
+        if "\n".join(lines).strip()
+    }
+
+
+def _build_execution_status_summary(returncode: Any, return_code_text: str) -> str:
+    if returncode is not None:
+        return f"Execution failed with return code {returncode}"
+    if return_code_text:
+        return f"Execution finished with return code {return_code_text}"
+    return "Execution finished without a recoverable Claude JSONL."
+
+
+def _first_execution_artifact_path(mention_dir: Path | None) -> Path | None:
+    if mention_dir is None or not mention_dir.exists():
+        return None
+    for candidate in (
+        mention_dir / "execution_main.log",
+        mention_dir / "execution_fork_failed.log",
+        mention_dir / "result_main.yaml",
+        mention_dir / "result_fork_failed.yaml",
+    ):
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def _append_missing_log_placeholder_event(
+    *,
+    events: list[dict[str, Any]],
+    session_id: str,
+    thread_key: str,
+    mention_dir: Path | None,
+    mention_record: dict[str, Any] | None,
+    session_obj: Any,
+) -> list[dict[str, Any]]:
+    if any(event.get("kind") != "user_command" for event in events):
+        return events
+
+    session_status = ""
+    created_at = str((mention_record or {}).get("created_at") or "")
+    if session_obj is not None:
+        session_status = str(getattr(getattr(session_obj, "status", None), "value", "") or "")
+        if not created_at and getattr(session_obj, "created_at", None):
+            created_at = session_obj.created_at.isoformat()
+
+    if mention_dir is not None and mention_dir.exists():
+        session_data = _read_yaml(mention_dir / "session.yaml")
+        response_data = _read_yaml(mention_dir / "response.yaml")
+        if not session_status:
+            session_status = _derive_mention_status(session_data, response_data)
+        if not created_at:
+            created_at = str(
+                session_data.get("created_at")
+                or response_data.get("completed_at")
+                or ""
+            )
+
+    normalized_status = session_status.strip().lower()
+    if normalized_status in {"active", "initializing", "running", "started", "pending"}:
+        title = "Claude Log Pending"
+        status = "running"
+        text = "Session started, but no Claude JSONL or executor output is available yet."
+    elif normalized_status in {"completed", "success"}:
+        title = "Claude Log Missing"
+        status = "info"
+        text = "Session completed, but no Claude JSONL or executor output was saved."
+    elif normalized_status in {"failed", "error", "cancelled"}:
+        title = "Execution Failed"
+        status = "error"
+        text = "Session ended without a recoverable Claude JSONL."
+    else:
+        return events
+
+    seq = max((int(event.get("seq") or 0) for event in events), default=0) + 1
+    events.append(
+        {
+            "event_id": f"{session_id}:placeholder",
+            "thread_key": thread_key,
+            "session_id": session_id,
+            "seq": seq,
+            "ts": created_at,
+            "kind": "assistant_observation",
+            "status": status,
+            "title": title,
+            "summary": _trim(text, 160),
+            "preview": _trim(text, 800),
+            "parent_event_id": None,
+            "tool_use_id": None,
+            "raw": {"source": "placeholder", "status": normalized_status},
+        }
+    )
+    return events
 
 
 def _append_interaction_fallback_events(
@@ -1722,9 +2231,7 @@ def _append_interaction_fallback_events(
                     title = "Processing Started"
                     status = "running"
                 elif interaction_type == "processing_heartbeat":
-                    kind = "assistant_observation"
-                    title = "Processing Heartbeat"
-                    status = "running"
+                    continue  # heartbeat는 UI 카드로 표시하지 않음
                 elif interaction_type == "processing_completed":
                     kind = "assistant_observation"
                     title = "Processing Completed"

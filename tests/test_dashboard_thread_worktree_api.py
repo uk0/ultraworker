@@ -28,6 +28,26 @@ def _write_jsonl(path: Path, rows: list[dict]) -> None:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def _write_execution_log(path: Path, *, stdout: str = "", stderr: str = "", return_code: int = 0) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "\n".join(
+            [
+                "=== STDOUT ===",
+                stdout,
+                "",
+                "=== STDERR ===",
+                stderr,
+                "",
+                "=== RETURN CODE ===",
+                str(return_code),
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+
 def _create_mention(
     data_dir: Path,
     mention_id: str,
@@ -241,6 +261,178 @@ def test_build_session_worktree_supports_tail_and_before_seq_chunking(tmp_path: 
     )
 
     assert cursor_payload["events"] == []
+
+
+def test_build_session_worktree_resolves_log_by_message_ts_when_session_id_mismatches(
+    tmp_path: Path,
+) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CMAP",
+        thread_ts="1888.100",
+        user_id="U1",
+        message="follow-up request",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CMAP", "1888.100", session.session_id)
+
+    _create_mention(
+        cfg.data_dir,
+        "m-map",
+        channel_id="CMAP",
+        thread_ts="1888.100",
+        message_ts="1888.200",
+        text="trace this forked session",
+        session_id=session.session_id,
+        created_at="2026-03-10T09:32:34Z",
+    )
+
+    _write_jsonl(
+        cfg.log_root / "project" / "external-session.jsonl",
+        [
+            {
+                "type": "queue-operation",
+                "operation": "enqueue",
+                "timestamp": "2026-03-10T09:33:00Z",
+                "sessionId": "external-session",
+                "content": "message_ts: 1888.200",
+            },
+            {
+                "type": "assistant",
+                "timestamp": "2026-03-10T09:33:01Z",
+                "message": {
+                    "role": "assistant",
+                    "content": [{"type": "thinking", "thinking": "mapping by message ts"}],
+                },
+            },
+            {
+                "type": "assistant",
+                "timestamp": "2026-03-10T09:33:02Z",
+                "message": {
+                    "role": "assistant",
+                    "content": [{"type": "text", "text": "recovered actual Claude log"}],
+                },
+            },
+        ],
+    )
+
+    payload = _build_session_worktree(
+        cfg,
+        channel_id="CMAP",
+        thread_ts="1888.100",
+        session_id=session.session_id,
+    )
+
+    assert payload["total_events"] == 3
+    assert [event["kind"] for event in payload["events"]] == [
+        "user_command",
+        "assistant_thinking",
+        "assistant_output",
+    ]
+    assert payload["events"][-1]["summary"] == "recovered actual Claude log"
+
+
+def test_build_session_worktree_falls_back_to_execution_log_when_claude_log_missing(
+    tmp_path: Path,
+) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CFALL",
+        thread_ts="1999.777",
+        user_id="U1",
+        message="show fallback output",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CFALL", "1999.777", session.session_id)
+
+    _create_mention(
+        cfg.data_dir,
+        "m-fallback",
+        channel_id="CFALL",
+        thread_ts="1999.777",
+        message_ts="1999.888",
+        text="recover from executor artifacts",
+        session_id=session.session_id,
+        created_at="2026-03-10T09:40:00Z",
+    )
+    _write_yaml(
+        cfg.data_dir / "mentions" / "m-fallback" / "result_main.yaml",
+        {
+            "executed_at": "2026-03-10T09:41:00Z",
+            "returncode": 0,
+            "stage": "main",
+            "success": True,
+        },
+    )
+    _write_execution_log(
+        cfg.data_dir / "mentions" / "m-fallback" / "execution_main.log",
+        stdout="executor fallback output",
+        return_code=0,
+    )
+
+    payload = _build_session_worktree(
+        cfg,
+        channel_id="CFALL",
+        thread_ts="1999.777",
+        session_id=session.session_id,
+    )
+
+    assert payload["total_events"] == 2
+    assert [event["kind"] for event in payload["events"]] == [
+        "user_command",
+        "assistant_output",
+    ]
+    assert payload["events"][-1]["summary"] == "executor fallback output"
+
+
+def test_build_session_worktree_adds_placeholder_when_no_logs_exist(tmp_path: Path) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CPEND",
+        thread_ts="2000.123",
+        user_id="U1",
+        message="still running",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CPEND", "2000.123", session.session_id)
+
+    mention_dir = cfg.data_dir / "mentions" / "m-pending"
+    _write_yaml(
+        mention_dir / "input.yaml",
+        {
+            "channel_id": "CPEND",
+            "thread_ts": "2000.123",
+            "message_ts": "2000.124",
+            "text": "waiting for claude log",
+            "created_at": "2026-03-10T09:48:28Z",
+            "user": "U1",
+        },
+    )
+    _write_yaml(
+        mention_dir / "session.yaml",
+        {
+            "session_id": session.session_id,
+            "status": "started",
+            "created_at": "2026-03-10T09:48:28Z",
+        },
+    )
+
+    payload = _build_session_worktree(
+        cfg,
+        channel_id="CPEND",
+        thread_ts="2000.123",
+        session_id=session.session_id,
+    )
+
+    assert payload["total_events"] == 2
+    assert payload["events"][-1]["title"] == "Claude Log Pending"
+    assert payload["events"][-1]["status"] == "running"
 
 
 def test_handle_create_thread_session_creates_manual_session(

@@ -42,7 +42,11 @@ ENV/
 logs/
 
 # Data directory (all runtime data excluded from repo)
-data/
+data/*
+!data/memory/
+data/memory/*
+!data/memory/channel_history/
+data/memory/channel_history/_raw/
 
 # OS
 .DS_Store

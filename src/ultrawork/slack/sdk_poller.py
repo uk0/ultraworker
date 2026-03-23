@@ -196,6 +196,11 @@ class SlackSDKPoller:
         self._startup_ts: str | None = None
         self._last_stale_cleanup_at = 0.0
 
+        # Concurrency limit: max 2 simultaneous Claude subprocesses to prevent RAM exhaustion
+        max_concurrent = int(os.environ.get("ULTRAWORK_MAX_CONCURRENT_AGENTS", "2"))
+        self._agent_semaphore = threading.Semaphore(max_concurrent)
+        logger.info(f"[Poller] Max concurrent agents: {max_concurrent}")
+
         runtime_cfg = get_config().executor
         self.heartbeat_interval_seconds = max(5, int(runtime_cfg.heartbeat_interval_seconds))
         self.fork_max_age_seconds = max(0, int(runtime_cfg.fork_max_age_seconds))
@@ -1229,8 +1234,19 @@ Example Block Kit structure for a response:
 2. If Block Kit `blocks` parameter is not supported by the MCP tool, fall back to plain `text` only
 3. If slack MCP fails, use slack-bot MCP:
    - mcp__slack-bot__slack_reply_to_thread(channel_id, thread_ts, text)
-4. Write responses naturally following Human Framework rules
-5. Even if no context found, send a response like "I couldn't find related information"
+4. If BOTH MCP tools fail, use Python SDK as final fallback (Bash tool):
+```python
+import os, sys
+sys.path.insert(0, 'src')
+from slack_sdk import WebClient
+token = os.environ.get('SLACK_TOKEN')
+cookie = os.environ.get('SLACK_COOKIE', '')
+headers = {{'Cookie': f'd={{cookie}}'}} if token and token.startswith('xoxc-') and cookie else {{}}
+client = WebClient(token=token, headers=headers)
+client.chat_postMessage(channel='{channel_id}', text='YOUR_MESSAGE', thread_ts='{thread_ts}')
+```
+5. Write responses naturally following Human Framework rules
+6. Even if no context found, send a response like "I couldn't find related information"
 
 ## Response Style
 - Friendly and natural language
@@ -1602,10 +1618,18 @@ Example Block Kit structure for a response:
         # Add 👀 reaction to indicate processing
         self._add_reaction(channel_id, message_ts, EMOJI_PROCESSING)
 
+        def _run_with_semaphore():
+            acquired = self._agent_semaphore.acquire(blocking=True)
+            if not acquired:
+                return
+            try:
+                self._process_mention_agentic_sync(message, channel_id)
+            finally:
+                self._agent_semaphore.release()
+
         # Run in background thread so polling continues
         thread = threading.Thread(
-            target=self._process_mention_agentic_sync,
-            args=(message, channel_id),
+            target=_run_with_semaphore,
             daemon=True,
         )
         thread.start()
