@@ -1,0 +1,80 @@
+channel:
+  id: C08N0JJRPUM
+  name: research-graph
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 39
+  total_threads: 20
+  active_users: 10
+  avg_messages_per_day: 1.6
+summary: |
+  2025년 4분기 research-graph 채널은 Graph RAG 연구와 실용적 구현에 집중하였다.
+  HippoRAG를 비롯한 최신 SOTA 그래프 RAG 논문 및 LightRAG 마개조, LogicRAG(sionic-ai) 개발과 배포가 주요 이슈였으며,
+  HyperGraph 세미나 및 Spreading Activation 알고리즘의 GraphRAG 통합, 시간 기반 지식 그래프 논문 공유 등 다양한 기술 교류가 이루어졌다.
+  삼벤(사회복지 multi-hop 평가셋) 관련 그래프 실험과 RAPTOR 비교 실험도 활발히 진행되었다.
+topics:
+  - name: "Graph RAG"
+    mention_count: 18
+    description: "GraphRAG 논문 리뷰, HippoRAG, LightRAG 마개조, LogicRAG 개발 및 배포 논의"
+  - name: "HyperGraph"
+    mention_count: 5
+    description: "하이퍼그래프 세미나, 온톨로지 taxonomy, community detection 알고리즘 적용"
+  - name: "시간 기반 지식 그래프"
+    mention_count: 4
+    description: "시간 변화에 민감한 RAG 시스템, bi-level temporal graph 구조 논문 공유"
+  - name: "사회복지 multi-hop 평가"
+    mention_count: 5
+    description: "삼벤 평가셋 실험, RAPTOR 비교, multi-hop 신뢰성 검토"
+  - name: "GLiNER / entity 추출"
+    mention_count: 3
+    description: "GLiNER2를 entity 추출 용도로 활용하는 방안 논의"
+key_discussions:
+  - thread_ts: '1728295200.000000'
+    date: '2025-10-07'
+    reply_count: 13
+    text_preview: "LightRAG 마개조 중이라는 공유와 관련 논의"
+  - thread_ts: '1730005800.000000'
+    date: '2025-10-27'
+    reply_count: 9
+    text_preview: "그래프 전담 및 ontology 홍보를 위한 이태님 컨택 논의"
+  - thread_ts: '1730822340.000000'
+    date: '2025-11-05'
+    reply_count: 50
+    text_preview: "Graph RAG 논문 & 아이디어 스터디 참여자 모집 및 스터디 방식 기획"
+  - thread_ts: '1733298960.000000'
+    date: '2025-12-04'
+    reply_count: 5
+    text_preview: "LogicRAG 성우님 체크 요청 및 agentic alternative to GraphRAG 소개"
+  - thread_ts: '1734907320.000000'
+    date: '2025-12-22'
+    reply_count: 12
+    text_preview: "삼벤 문제 이슈 확인 정리 및 multi-hop 평가 결과 공유"
+terminology:
+  - term: "GraphRAG"
+    definition: "지식 그래프를 활용한 Retrieval-Augmented Generation 기법의 총칭"
+    aliases: ["Graph RAG"]
+    context: "Microsoft GraphRAG, HippoRAG, LightRAG 등 다양한 구현체 논의"
+  - term: "HippoRAG"
+    definition: "그래프 구축 시 동의어를 묶어 관계를 추가하고 검색 시 불필요한 그래프를 제거하는 SOTA Graph RAG 기법"
+    aliases: []
+    context: "다양한 벤치마크에서 일관되게 높은 점수를 기록한 신뢰할 만한 그래프 RAG"
+  - term: "LogicRAG"
+    definition: "Sionic AI가 개발하여 오픈소스로 공개한 그래프 기반 RAG 시스템"
+    aliases: []
+    context: "2025년 12월 GitHub에 공개(sionic-ai/logicrag), 배포 및 가시성 개선 논의"
+  - term: "HyperGraph"
+    definition: "여러 노드를 동시에 연결하는 하이퍼엣지를 사용하는 고차 그래프 구조"
+    aliases: ["Hypergraph"]
+    context: "온톨로지 taxonomy 군집화, GraphRAG 확장, 세미나 발표 주제"
+  - term: "삼벤"
+    definition: "사회복지 도메인 multi-hop 질의응답 평가셋"
+    aliases: []
+    context: "그래프 RAG 성능 평가 및 RAPTOR 비교 실험에 활용"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

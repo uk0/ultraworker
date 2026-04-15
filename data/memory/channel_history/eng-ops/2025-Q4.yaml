@@ -1,0 +1,78 @@
+channel:
+  id: C06LXJ3GE2D
+  name: eng-ops
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 348
+  total_threads: 264
+  active_users: 22
+  avg_messages_per_day: 4.5
+summary: |
+  2025년 4분기는 채널 역대 최다 활동(348개 메시지, 22명 참여)을 기록하며 커세어 대규모 마이그레이션, 배포 파이프라인 고도화, 일본/파트너 대응이 집중된 시기였다. 커세어 qdrant 마이그레이션이 770개 답글의 대규모 작업으로 진행되어 테넌시 합치기, 리저브 관리, CSI 드라이버 이슈 등을 해결했다. shuttle 배포 시스템이 안정화되면서 live 자동배포 제어, Apidog CLI 연동 최소 시나리오 검증, 컨테이너 이미지 캐시 적용이 이루어졌다. DGX Spark(worker301) 도입, 일본 리전 서빙 준비, 삼성E&A/이디에스/국세청 등 파트너사 대응이 활발했다. cybros(사이브로스) 데이터 파이프라인 개발이 진행되어 connector/processor 인터페이스가 구현되었다. NewRelic instrumentation 인증서 만료, harbor 장애, istio HPA 정리, OOM 이슈 등 운영 안정성 대응이 계속되었다. Grafana alert rule 추가, 배포 시 최소 시나리오 통과 의무화 논의, live 배포 승인 게이트 도입, GitHub 보안 점검(미사용 앱 suspend) 등 운영 프로세스가 강화되었다. OCI blockstorage 비용 절감(일 930k->367k), AWS 100k 쿠폰 활성화, Vault secret operator 도입 논의도 이루어졌다. MLOps 팀 구성 논의 및 ML DevOps 채용 활동이 지속되었다.
+topics:
+  - 커세어 qdrant 대규모 마이그레이션
+  - shuttle 배포 파이프라인 안정화 및 고도화
+  - DGX Spark 도입 및 GPU 인프라 확장
+  - 일본 리전 서빙 준비
+  - 파트너사 대응 (이디에스, 삼성E&A, 국세청)
+  - cybros(사이브로스) 데이터 파이프라인 개발
+  - 운영 프로세스 강화 (최소 시나리오, 배포 승인)
+  - OCI 비용 최적화 (blockstorage, 이미지 캐시)
+  - 보안 점검 (GitHub 앱, harbor, 인증서)
+  - MLOps 팀 구성 및 채용
+key_discussions:
+  - thread_ts: '1765178435.610249'
+    date: '2025-12-08'
+    title: 커세어 qdrant 마이그레이션
+    participants: [이강욱]
+    summary: qdrant 테넌시 마이그레이션 대규모 작업, 롤백 절차 포함, 770개 답글
+  - thread_ts: '1765419357.420409'
+    date: '2025-12-11'
+    title: shuttle live 자동배포 제어
+    participants: [송명하]
+    summary: live 환경 auto-deploy 비활성화 및 수동 승인 게이트 도입 논의, 54개 답글
+  - thread_ts: '1765420611.774629'
+    date: '2025-12-11'
+    title: 배포 시 최소 시나리오 통과 의무화
+    participants: [김혜원]
+    summary: 배포 파이프라인에 Apidog 시나리오 검증 단계 추가 논의, 44개 답글
+  - thread_ts: '1764571871.883619'
+    date: '2025-12-01'
+    title: GitHub 보안 점검 (미사용 앱 suspend)
+    participants: [이강욱]
+    summary: Findy Team+, Google Cloud Build 등 미사용 GitHub App 정리, 11개 답글
+  - thread_ts: '1765611733.333709'
+    date: '2025-12-13'
+    title: 커세어 패쳐 실행 및 마이그레이션 작업
+    participants: [이강욱]
+    summary: 커세어 패쳐 실행, 캐시 세팅, 야간 마이그레이션 계획, 43개 답글
+terminology:
+  - term: DGX Spark
+    definition: NVIDIA DGX Spark GPU 서버
+    context: worker301로 설치, 서버실 배치
+  - term: cybros (사이브로스)
+    definition: 사내 데이터 파이프라인 시스템
+    context: connector/processor 인터페이스 구현, Rust 기반 개발
+  - term: chamber (챔버)
+    definition: 서비스 배포 관리 도구
+    context: 정식 오픈 전까지 임시 배포 방식 병행
+  - term: Apidog CLI
+    definition: API 테스트 자동화 도구
+    context: shuttle 배포 완료 후 최소 시나리오 자동 검증에 활용
+  - term: polaris (폴라리스)
+    definition: 삼성E&A 대응 프로젝트
+    context: 도커 이미지 및 환경 변수 파일 준비
+  - term: storm-enterprise
+    definition: 스톰 플랫폼 엔터프라이즈 배포 패키지
+    context: 이디에스 파트너 교육 및 설치 가이드 제공
+  - term: FalkorDB
+    definition: 그래프 데이터베이스
+    context: OCI Terraform으로 배포, Sigrid Jin 주도
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

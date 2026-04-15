@@ -1,0 +1,52 @@
+channel:
+  id: C05D9LZJ63H
+  name: storm-demo
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 31
+  total_threads: 14
+  active_users: 10
+  avg_messages_per_day: 2.6
+summary: |
+  2024년 CES 참가를 위한 Storm 데모 개발이 집중적으로 진행된 분기이다. 정세민(Sem)이 CES 데모 기획을 주도하고, Dalpha 레퍼런스를 활용하여 회사 홈페이지 URL을 입력하면 해당 기업에 맞는 사이오닉 AI 솔루션을 추천하는 데모를 제작하기로 결정하였다. hyunwoo가 프론트엔드 마크업 및 Figma 디자인을 담당하고, 정세민이 CES-DEMO-API 백엔드를 구축하였다. 김혜원과 최윤정이 유즈케이스 맵핑 작업을 수행하였으며, ces.sionic.ai 도메인으로 배포를 완료하였다. 주요 이슈로 co.kr 도메인 URL의 솔루션 로딩 실패와 Vercel 프리뷰에서의 502 에러가 있었다.
+topics:
+  - CES 데모 기획 및 개발
+  - Storm 솔루션 추천 데모
+  - CES-DEMO-API 구축
+  - 유즈케이스 맵핑
+  - 데모 디자인 및 배포
+key_discussions:
+  - thread_ts: '1734649086.195529'
+    date: '2024-12-19'
+    title: CES-DEMO-API 개발 및 연동
+    summary: 정세민이 CES-DEMO-API 스펙 공유 (ko/en/jp 엔드포인트, company_summary/solutions 이벤트 구조). 177개 답글로 가장 활발한 개발 논의
+  - thread_ts: '1734927048.659129'
+    date: '2024-12-23'
+    title: 유즈케이스 맵핑 스프레드시트 작업
+    summary: 김혜원이 유즈케이스 맵핑 작업 진행 및 세민에게 보강 피드백 요청 (48개 답글)
+  - thread_ts: '1734520063.187829'
+    date: '2024-12-18'
+    title: CES 데모 Figma 디자인 리뷰
+    summary: hyunwoo가 Figma 디자인 공유 및 피드백 논의 (21개 답글)
+  - thread_ts: '1734083538.441659'
+    date: '2024-12-13'
+    title: 데모 초기 디자인 기획
+    summary: 빠르게 기획한 디자인에 대한 피드백 논의 (18개 답글)
+terminology:
+  - term: CES-DEMO-API
+    definition: CES 전시용 Storm 데모 백엔드 API. 회사 URL 입력 시 회사 정보 요약 및 맞춤 솔루션 추천 제공
+    aliases: [ces-demo-api]
+  - term: Dalpha
+    definition: 솔루션 추천 서비스의 레퍼런스로 활용된 외부 서비스 (app.dalpha.so)
+    aliases: []
+  - term: ces.sionic.ai
+    definition: CES 데모 배포 도메인
+    aliases: [ces-sionic.ai]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

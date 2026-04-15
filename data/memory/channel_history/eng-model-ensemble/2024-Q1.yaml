@@ -1,0 +1,61 @@
+channel:
+  id: C06HSVDS87P
+  name: eng-model-ensemble
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 34
+  total_threads: 15
+  active_users: 13
+  avg_messages_per_day: 2.4
+summary: |
+  2024-Q1은 eng-model-ensemble 채널이 본격적으로 활성화된 분기. 주요 연구 주제는 (1) BM25+임베딩 앙상블을 통한 검색 성능 향상, (2) 임베딩 모델 파인튜닝 파이프라인 개발, (3) Reranker 활용 전략 검토였음. Riley가 작심(Zaksim) 테스트셋 대상으로 BM25+임베딩 RRF(Reciprocal Rank Fusion) 그리드 서치 실험을 수행하여 bm25:embed = 0.5:0.5 ~ 0.3:0.7 비율이 최적임을 확인. kozistr833(형찬)이 임베딩 모델 파인튜닝 자동화 파이프라인(multi-GPU, deepspeed 지원)을 개발. Cohere reranker를 retriever 목적으로만 사용하는 전략과 그 한계를 분석. Noah가 Supply 프로젝트에 BM25 사용자 전용 사전 기능을 추가. Sigrid Jin이 Rust 기반 렉시컬 검색 라이브러리 Tantivy를 소개하고, Gemma 7B 기반 SFT/DPO 튜닝 실험도 진행. Riley는 최종적으로 모델 앙상블 연구 중단을 결정하고 내용을 정리 공유.
+topics:
+  - BM25 + 임베딩 앙상블 (RRF)
+  - 임베딩 모델 파인튜닝 파이프라인
+  - Reranker 활용 전략 (Cohere)
+  - 작심(Zaksim) 테스트셋 평가
+  - KorSQuAD weighted RRF 실험
+  - Supply 프로젝트 사용자 사전
+  - Tantivy (Rust 렉시컬 검색)
+  - Gemma SFT/DPO 튜닝
+  - Fuse 공개 검토
+key_discussions:
+  - thread_ts: '1707902360.177159'
+    date: '2024-02-14'
+    title: '작심 테스트셋 BM25+임베딩 RRF 결과 분석'
+    summary: 'Riley가 작심 테스트셋에서 finetuned e5, 원 모델, BM25+원 모델을 비교. 세 모델 모두 비슷한 수준이며 공통 오답이 대부분. 30개 답글로 심도 깊은 분석'
+  - thread_ts: '1708343017.181779'
+    date: '2024-02-19'
+    title: 'BM25 + 임베딩 앙상블 KorSQuAD 성능 평가'
+    summary: 'Riley가 KorSQuAD 대상 BM25+임베딩 weighted RRF 파라미터 그리드 서치 수행. 26개 답글'
+  - thread_ts: '1708060851.163399'
+    date: '2024-02-16'
+    title: '임베딩 모델 파인튜닝 자동화 파이프라인 개발'
+    summary: 'kozistr833이 multi-GPU, deepspeed 지원 파인튜닝 파이프라인 PR 제출. 7개 답글'
+  - thread_ts: '1709011507.301119'
+    date: '2024-02-27'
+    title: '모델 앙상블 연구 중단 및 정리 발표'
+    summary: 'Riley가 모델 앙상블 연구 중단을 결정하고 배경/실험 내용 정리 발표 일정 조율'
+terminology:
+  - term: 'RRF'
+    definition: 'Reciprocal Rank Fusion - 여러 검색 결과의 순위를 역수 기반으로 결합하는 앙상블 기법'
+  - term: 'CC'
+    definition: 'Convex Combination - RRF 대안으로 검토된 점수 결합 방식'
+  - term: 'Supply'
+    definition: 'Sionic AI 내부 BM25 기반 렉시컬 검색 프로젝트'
+  - term: '작심 (Zaksim)'
+    definition: 'Sionic AI 고객사 중 하나. 피트니스 관련 서비스로 문서 QA 테스트에 활용'
+  - term: 'Tantivy'
+    definition: 'Apache Lucene의 Rust 대안 라이브러리. 렉시컬 검색 도입 시 검토 옵션'
+  - term: 'Fuse'
+    definition: 'Sigrid Jin이 공개 검토 중이던 모델/도구 프로젝트'
+  - term: 'finetune-embedding-model-pipeline'
+    definition: 'Sionic AI 임베딩 모델 파인튜닝 자동화 파이프라인 레포지토리'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

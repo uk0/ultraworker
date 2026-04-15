@@ -1,0 +1,22 @@
+channel:
+  id: C07S9L09BJP
+  name: status-carrier-dev
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3 기간 동안 status-carrier-dev 채널에는 신규 멤버 합류 메시지 1건만 기록되어 비활성 상태가 지속되었다. Carrier 개발 서비스의 상태 모니터링은 별도의 채널 또는 외부 도구로 이전된 것으로 보이며, 해당 채널의 운영 목적이 축소된 상태이다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

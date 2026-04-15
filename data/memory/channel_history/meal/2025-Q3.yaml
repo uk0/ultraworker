@@ -1,0 +1,47 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 288
+  total_threads: 217
+  active_users: 22
+  avg_messages_per_day: 3.9
+summary: |
+  여름 분기로 메시지 수 감소(288개)했으나 식사 주문 체계는 꾸준히 운영.
+  샐러드 열차/일반식 열차/저녁 수요 조사 봇 매일 가동. 오토김밥 데이 특별 봇 메시지도 등장(토요일 운영).
+  저녁 스레드 답글 수가 매우 활발(최대 71개). 맛집 추천 문화도 정착 - Noah가 '빌즈 역삼점' 추천.
+  족발/회/김치찜 등 야식 문화도 보임. 김부교(Bekay) 신규 참여자 등장.
+  배민 함께주문 중심에서 나가먹/외식 팟도 증가 추세.
+topics:
+  - 점심 배달 주문
+  - 샐러드 열차
+  - 일반식 열차
+  - 오토김밥 데이
+  - 맛집 추천
+  - 저녁/야식 주문
+key_discussions:
+  - title: 맛집 추천 - 빌즈 역삼점
+    date: '2025-09-08'
+    summary: Noah가 빌즈 역삼점의 치킨 슈니첼과 리코타 핫케이크 추천
+  - title: 회/김치찜 저녁 파티
+    date: '2025-09-19'
+    summary: 김덕현이 다음 주 월요일밤 회 또는 김치찜 파티 모집
+  - title: 오토김밥 데이 봇
+    date: '2025-09-13'
+    summary: 특별 봇 메시지로 오토김밥 데이 안내, 전용 일반식 열차 운영
+terminology:
+  - term: 오토김밥 데이
+    definition: 토요일에 오토김밥을 주문하는 특별 이벤트, 전용 봇 메시지가 발송됨
+    aliases: []
+  - term: 전역먹자
+    definition: 전원 역삼역 근처에서 외식하자는 의미
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

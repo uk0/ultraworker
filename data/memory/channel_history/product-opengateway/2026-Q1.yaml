@@ -1,0 +1,238 @@
+channel:
+  id: C09CLS4BDHT
+  name: product-opengateway
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-26T08:00:00'
+statistics:
+  total_messages: 258
+  total_threads: 189
+  active_users: 22
+  avg_messages_per_day: 4.5
+summary: |
+  2026-Q1은 OpenGateway 제품의 알파 오픈 및 본격 운영 시작 분기.
+  1월에는 ASMR v2 기반 OpenGateway 알파 오픈 준비(도메인 변경, 과금 연동, 모델 전수 테스트, 랜딩페이지 작업)가 집중적으로 진행됨.
+  1월 26일 알파 오픈 후 외부 사용자 유입 시작, 홍보(개발 커뮤니티/링크드인), 디스코드 채널 운영 개시.
+  2월에는 ASMR v1 Fade-out(2/23 키 revoke), billing/stripe 결제 live 오픈, 대시보드/logs 기능 배포,
+  추론 모델 지원, OpenRouter 호환성 작업, JP(일본) 리전 데이터 반출 정책 대응, Response API 개발 등이 진행됨.
+  Claude Opus 4.6 모델 지원, Gemini 3.1 Pro 추가, Anthropic 모델 revoke 대응 등 모델 관리 이슈도 다수 발생.
+  Vertex AI 429 에러 급증, OOM 이슈, 스토리지 사용량 증가 등 운영 안정성 이슈에 대한 논의 활발.
+topics:
+  - name: 알파 오픈 준비 및 런칭
+    message_count: 45
+    description: |
+      OpenGateway 알파 오픈을 위한 준비 작업. 도메인 변경(opengateway.sionic.im -> opengateway.ai),
+      랜딩페이지 다듬기, 구글폼 수정, 대고객 이메일 전송, 디스코드 채널 개설,
+      알파 테스터 모집($100 무료 크레딧), 개발 커뮤니티 홍보 전략 논의.
+      1/26 알파 오픈 후 첫 외부 사용자 유입 확인.
+  - name: ASMR v1 Fade-out 및 v2 전환
+    message_count: 30
+    description: |
+      ASMR v1에서 v2(OpenGateway) 전환 작업. v1 Live Key Revoke 일정(2/23) 안내,
+      전환 대상 서비스별 호출 현황 조사, API Key 발급 가이드, QnA 스레드 운영.
+      Carrier에서 asmr-v2 live로 트래픽 전환(1/28), 전환 후 모니터링.
+  - name: 과금 및 결제 시스템
+    message_count: 35
+    description: |
+      Stripe 기반 billing 메뉴 live 오픈(2/4), 크레딧 충전 방식 논의,
+      모델별 토큰 가격 정책 논의, 초기 크레딧 지급 기능 dev 배포,
+      CP 과금 로직 버그 수정, LlmCallRecord 스키마 변경, usage 데이터 누락 장애 대응.
+      Azure 리전별 과금 차이, cached_token 구분 과금 조사.
+  - name: 모델 지원 및 호환성
+    message_count: 40
+    description: |
+      Claude Opus 4.6 지원, Gemini 3.1 Pro Preview 추가, GPT-5.1/5.2 Azure 지원,
+      Gemini 3 Flash Preview 추가, Anthropic 모델 revoke 대응(claude-3-5-haiku, claude-3-7-sonnet),
+      추론 모델 처리(reasoning depth control, thinking content 반환),
+      OpenRouter 호환성(temperature/top_p 동시 사용 정책, max_tokens 기본값),
+      Provider별 Tools(펑션콜) 지원 완료(OpenAI/Azure/CLOVA/vLLM/Anthropic/VertexAI).
+  - name: 대시보드 및 Logs 기능
+    message_count: 25
+    description: |
+      Logs 기능 dev/live 배포(1월 말~2월 초), 대시보드 레이아웃 dev 배포,
+      사용성 QA 진행, 그라파나 모니터링 대시보드 대거 개선.
+  - name: 인프라 및 운영 안정성
+    message_count: 30
+    description: |
+      Vertex AI 429 에러 급증 대응(사용량 6배 증가), OOM 이슈 조사,
+      스토리지 사용량 증가(27GB->36GB/주), 408 에러 대응,
+      JP(일본) 리전 환경 구성(데이터 반출 정책, OCI 이관),
+      도메인 변경 작업(auth0, stripe 관련), Live 에러 핫픽스.
+  - name: 비즈니스 및 파트너십
+    message_count: 20
+    description: |
+      OAI Korea 스타트업 지원팀과의 협업 논의, Azure MSP 클루커스 미팅 준비,
+      디캠프 패밀리사/베네핏 제공 논의, 서울대 계약 진행(모델별 토큰 가격 안내),
+      경쟁사 분석(agihalo.com), 장기 제품 방향성 논의(가격 외 차별화).
+  - name: Response API 개발
+    message_count: 10
+    description: |
+      Response API 구현을 위한 분석 완료(2영업일 예상), non-stream dev 배포.
+  - name: 보안 및 권한
+    message_count: 8
+    description: |
+      보안 취약점 제보(teamId로 타인 apiKey 조회 가능, admin API 접근 가능),
+      AI 모델 API 사용량 조회 권한 설정, 회원가입 약관 필요성 논의.
+key_discussions:
+  - title: OpenGateway 알파 오픈 및 홍보 전략
+    ts: '1769502366.966029'
+    date: '2026-01-27'
+    participants:
+      - 최병현 Hyune-c
+      - 김수원
+      - 원성준
+      - 강성우(Claude kang)
+    summary: |
+      알파 오픈 후 실 유저 유입을 위한 전략 논의. 개발 커뮤니티(디프만 등)에
+      $100 무료 크레딧으로 홍보, 대기업 POC 무상 API키 제공 아이디어 제안.
+      하루 17명 가입 달성, 링크드인/커뮤니티 공유 진행.
+    reply_count: 57
+  - title: ASMR v1 Live Key Revoke 안내 및 전환
+    ts: '1770007174.327339'
+    date: '2026-02-02'
+    participants:
+      - 조하담 (Joy)
+      - 강성우(Claude kang)
+      - 김수원
+    summary: |
+      ASMR v1 Live Key 2/23 일괄 revoke 예정 안내. 최근 7일간 v1 호출 현황
+      서비스별 조사 결과 공유, 전환 필요 서비스 식별, QnA 스레드 개설.
+    reply_count: 11
+  - title: 일본 데이터 반출 관련 정책 대응
+    ts: '1772011688.646069'
+    date: '2026-02-25'
+    participants:
+      - 조하담 (Joy)
+      - 김수원
+      - 최병현 Hyune-c
+    summary: |
+      일본 리전 데이터 반출 정책 준수 작업. JP 환경에서 일본 리전 모델만
+      호출하는 기능 필요성 논의, Slack 에러 알림도 반출 해당 여부 확인.
+    reply_count: 16
+  - title: Vertex AI 429 에러 급증
+    ts: '1771957375.466029'
+    date: '2026-02-24'
+    participants:
+      - 최병현 Hyune-c
+      - 조하담 (Joy)
+      - Jeonghwan Park
+    summary: |
+      2시부터 사용량 6배 급증으로 Vertex AI 429 에러 다수 발생.
+      에러 알림 폭주, 대응 방안 논의.
+    reply_count: 19
+  - title: 모델별 토큰 가격 정책
+    ts: '1770293246.232599'
+    date: '2026-02-05'
+    participants:
+      - 김혜원
+      - 김수원
+      - 조하담 (Joy)
+    summary: |
+      과금 방식 논의. 실제 모델 공급 가격 기반 할인율 적용 결제 방식,
+      모델별 가격 차이 계산 방법, STORM 측과의 공통 고민 공유.
+    reply_count: 34
+  - title: 보안 취약점 제보 및 대응
+    ts: '1769694567.105279'
+    date: '2026-01-29'
+    participants:
+      - Jeonghwan Park
+      - 최병현 Hyune-c
+    summary: |
+      teamId만으로 타인의 apiKey 조회 가능, 일반 유저의 admin API 접근 가능 등
+      보안 취약점 제보. 즉시 대응 진행.
+    reply_count: 10
+  - title: Billing 메뉴 Live 오픈
+    ts: '1770224149.870859'
+    date: '2026-02-04'
+    participants:
+      - 최병현 Hyune-c
+    summary: |
+      Stripe 실결제 연동 billing 메뉴 live 오픈. 실결제 성공 확인.
+    reply_count: 6
+  - title: OpenGateway x OpenClaw 연동
+    ts: '1771563591.311819'
+    date: '2026-02-20'
+    participants:
+      - Sigrid Jin / Jin Hyung Park
+    summary: |
+      OpenClaw 고객별 프로비저닝 데모(OpenGateway 사용) 진행.
+    reply_count: 11
+  - title: Carrier에서 OG live 전환
+    ts: '1769593581.255699'
+    date: '2026-01-28'
+    participants:
+      - 최병현 Hyune-c
+      - 조하담 (Joy)
+      - 김수원
+    summary: |
+      Storm-Carrier 트래픽을 OpenGateway로 전환. 예상보다 유량 많음 확인,
+      전환 후 모니터링 진행, 그라파나 대시보드로 실시간 관제.
+    reply_count: 19
+  - title: Usage 데이터 누락 장애
+    ts: '1770660961.642459'
+    date: '2026-02-09'
+    participants:
+      - 조하담 (Joy)
+    summary: |
+      2/4 배포 코드에서 usage 누락 발생. 총 241개 chat 영향.
+      원인 수정 및 live 배포 완료, 장애보고서 작성, 데이터 복원 예정.
+    reply_count: 0
+terminology:
+  - term: OG
+    definition: OpenGateway의 약어
+    aliases:
+      - OpenGateway
+      - OGW
+    context: LLM API 게이트웨이 서비스. OpenAI SDK 호환, 멀티 프로바이더 라우팅 및 Failover 지원.
+  - term: ASMR
+    definition: Assimilator의 약어. OpenGateway의 Data Plane(DP) 컴포넌트.
+    aliases:
+      - assimilator
+      - assimilator-v2
+      - asmr-v2
+    context: LLM 프로바이더로의 실제 API 호출을 처리하는 라우팅 엔진.
+  - term: CP
+    definition: Control Plane. OpenGateway의 관리/인증/과금 서버.
+    aliases:
+      - control-plane
+      - cp-be
+      - cp-fe
+    context: API Key 관리, 팀/사용자 관리, 과금 처리, 대시보드 제공.
+  - term: DP
+    definition: Data Plane. OpenGateway의 API 요청 처리 서버.
+    aliases:
+      - data-plane
+      - dp-be
+      - ODP
+    context: LLM API 호출의 라우팅, 폴백, 스트리밍 처리 담당.
+  - term: Carrier
+    definition: Storm 플랫폼의 LLM 호출 라우터 (기존 시스템)
+    aliases: []
+    context: OpenGateway로 트래픽 전환 대상이었던 이전 라우팅 시스템.
+  - term: Response API
+    definition: OpenAI의 새로운 Response API 호환 구현
+    aliases: []
+    context: 2월 말 개발 착수, non-stream dev 배포 완료.
+  - term: Failover
+    definition: 특정 모델/프로바이더 장애 시 자동으로 대체 모델로 우회하는 기능
+    aliases:
+      - fallback
+    context: OpenGateway의 핵심 기능. extra.fallbacks 필드로 제어.
+  - term: LlmCallRecord
+    definition: LLM API 호출 기록 데이터 스키마
+    aliases: []
+    context: CP DB에 저장되는 호출 기록. 과금 및 usage 추적에 사용.
+  - term: 메이웰
+    definition: OpenGateway를 연동한 외부 고객/서비스
+    aliases: []
+    context: 최초 대규모 연동 고객. 데일리 7-9만원 사용량, $3000 크레딧 지원 논의.
+  - term: OpenClaw
+    definition: Sionic AI의 서비스 중 하나
+    aliases: []
+    context: OpenGateway를 활용한 고객별 프로비저닝 데모 진행.
+metadata:
+  created_at: '2026-02-26T08:00:00'
+  synced_by: sync-channel-history

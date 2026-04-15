@@ -1,0 +1,93 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:26:36'
+statistics:
+  total_messages: 97
+  total_threads: 95
+  active_users: 2
+  avg_messages_per_day: 2.3
+key_discussions:
+- thread_ts: '1770686896.127529'
+  date: '2026-02-10'
+  reply_count: 24
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U0A7EFLSTT2> <@U057MCDJHDY> <@U05T2RW7PE2>\
+    \ <@U057PR1ADCL> \n• 구매요청자 :"
+- thread_ts: '1768287851.306329'
+  date: '2026-01-13'
+  reply_count: 23
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U09QEFWEQ3W>"
+- thread_ts: '1768285990.344899'
+  date: '2026-01-13'
+  reply_count: 19
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U057PR1ADCL>"
+- thread_ts: '1769071340.331419'
+  date: '2026-01-22'
+  reply_count: 18
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U07RE9XKXPV>"
+- thread_ts: '1770351141.573569'
+  date: '2026-02-06'
+  reply_count: 16
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U0A7EFLSTT2> <@U057MCDJHDY> <@U05T2RW7PE2>\
+    \ <@U057PR1ADCL> \n• 구매요청자 :"
+- thread_ts: '1768295022.672859'
+  date: '2026-01-13'
+  reply_count: 16
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U05T2RW7PE2>"
+- thread_ts: '1770784106.302999'
+  date: '2026-02-11'
+  reply_count: 15
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U0A7EFLSTT2> <@U057MCDJHDY> <@U05T2RW7PE2>\
+    \ <@U057PR1ADCL> \n• 구매요청자 :"
+- thread_ts: '1770184118.548759'
+  date: '2026-02-04'
+  reply_count: 15
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U0A7EFLSTT2> <@U057MCDJHDY> <@U05T2RW7PE2>\
+    \ <@U057PR1ADCL> \n• 구매요청자 :"
+- thread_ts: '1770172637.058719'
+  date: '2026-02-04'
+  reply_count: 14
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U07R7F9KFM0>"
+- thread_ts: '1769175120.641529'
+  date: '2026-01-23'
+  reply_count: 12
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U095L163Q5Q>"
+- thread_ts: '1767674079.380619'
+  date: '2026-01-06'
+  reply_count: 12
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U0A6R62B58S>"
+- thread_ts: '1769416347.726829'
+  date: '2026-01-26'
+  reply_count: 11
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U0AAD58353N>"
+- thread_ts: '1770557506.192649'
+  date: '2026-02-08'
+  reply_count: 10
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U0A7EFLSTT2> <@U057MCDJHDY> <@U05T2RW7PE2>\
+    \ <@U057PR1ADCL> \n• 구매요청자 :"
+- thread_ts: '1770363167.974989'
+  date: '2026-02-06'
+  reply_count: 10
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U0A7EFLSTT2> <@U057MCDJHDY> <@U05T2RW7PE2>\
+    \ <@U057PR1ADCL> \n• 구매요청자 :"
+- thread_ts: '1770015325.538509'
+  date: '2026-02-02'
+  reply_count: 10
+  text_preview: "• 구매를 진행해주세요 : <@U095L163Q5Q> <@U057MCDJHDY> <@U05T2RW7PE2> <@U057PR1ADCL>\
+    \ \n• 구매요청자 : <@U06EG12UUMV>"
+metadata:
+  created_at: '2026-02-13T16:26:36'
+  synced_by: sync_fast.py

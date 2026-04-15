@@ -1,0 +1,64 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 50
+  total_threads: 34
+  active_users: 9
+  avg_messages_per_day: 2.2
+summary: |
+  2025년 1분기 corp-blog-devrel 채널에서는 보안·레드팀 블로그 포스팅, BGE-M3 모델 구현 아티클 발행, 딥러닝/RAG 개념 시리즈 작성 등 기술 블로그 콘텐츠 제작이 활발하게 이루어졌다.
+  블로그 플랫폼을 우피(Oopy)에서 자체 도메인으로 전환하는 논의와 함께 메인 페이지 리디자인 및 다국어(일본어) 번역 검수 작업도 병행되었다.
+  CES 2025 현장 리뷰, AGI 개관, LLM 증류 기법 등 다양한 주제의 아티클이 기획·발행되었으며, 월별 아티클 접속 순위 공유와 콘텐츠 방향성 논의가 정기적으로 이루어졌다.
+topics:
+  - name: "기술 블로그 아티클 발행"
+    mention_count: 18
+    description: "BGE-M3 구현, RAG 개념, AGI 개관, CES 2025 리뷰 등 다양한 기술 아티클 작성 및 퍼블리시"
+  - name: "블로그 플랫폼 전환"
+    mention_count: 8
+    description: "Oopy 기반 블로그에서 자체 도메인으로의 전환 논의 및 UI/UX 개선"
+  - name: "다국어 번역"
+    mention_count: 5
+    description: "블로그 아티클 일본어 번역 검수 및 다국어 지원 작업"
+  - name: "콘텐츠 방향성 논의"
+    mention_count: 4
+    description: "딥러닝/RAG 쉬운 개념 시리즈 등 블로그 색깔 변화에 대한 팀 의견 수렴"
+key_discussions:
+  - thread_ts: '1735786860.000000'
+    date: '2025-01-02'
+    reply_count: 7
+    text_preview: "블로그에 딥러닝/머신러닝, RAG 개념 쉬운 글 시리즈 방향성 논의"
+  - thread_ts: '1736723052.000000'
+    date: '2025-01-13'
+    reply_count: 32
+    text_preview: "블로그 페이지가 우피를 벗었을 때의 관련 논의 - 플랫폼 전환 검토"
+  - thread_ts: '1736990880.000000'
+    date: '2025-01-16'
+    reply_count: 25
+    text_preview: "블로그 메인 페이지 이미지 저작권 및 디자인 논의"
+  - thread_ts: '1738757460.000000'
+    date: '2025-02-05'
+    reply_count: 12
+    text_preview: "CES 2025 블로그 글 초안 작성 및 방향 논의"
+terminology:
+  - term: "BGE-M3"
+    definition: "Baidu의 임베딩 모델로, Dense와 LayerNorm을 처음부터 구현한 아티클 발행"
+    aliases: []
+    context: "1월 초 블로그 퍼블리시된 기술 구현 아티클 주제"
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation, 검색 증강 생성 기법"
+    aliases: []
+    context: "쉽게 이해하자 시리즈로 다룬 AI 개념"
+  - term: "Oopy"
+    definition: "노션 기반 블로그 서비스(우피), 이후 자체 도메인으로 전환"
+    aliases: ["우피"]
+    context: "블로그 플랫폼 전환 논의에서 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

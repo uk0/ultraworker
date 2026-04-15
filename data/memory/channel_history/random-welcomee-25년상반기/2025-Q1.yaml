@@ -1,0 +1,44 @@
+channel:
+  id: C08J57KKCLD
+  name: random-welcomee-25년상반기
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 31
+  total_threads: 13
+  active_users: 11
+  avg_messages_per_day: 10.3
+summary: |
+  2025-Q1에 채널이 신규 개설되었으며, 2025년 3월 신규 입사자들의 친목 밍글링 채널로 시작되었다. 채널명이 "ramdom-welcomee"에서 "ramdom-welcomee-25년03월"로, 이후 오타가 수정된 "random-welcomee-25년03월"로 변경되었다.
+  신규 입사자들이 자기소개, 사이오닉 AI 강점 설명, STORM 제품 소개, 일상 잡담 등을 통해 친목을 다졌으며, 3월 한 달간 활발한 대화가 이루어졌다.
+topics:
+  - name: "신규 입사자 자기소개"
+    mention_count: 5
+    description: "3월 신규 입사자들의 자기소개 및 서로 알아가는 초기 교류"
+  - name: "사이오닉 AI 강점 소개"
+    mention_count: 3
+    description: "기존 구성원이 신규 입사자에게 사이오닉 AI의 강점을 1시간 이상 설명"
+  - name: "STORM 제품 소개"
+    mention_count: 2
+    description: "신규 입사자 대상 STORM 플랫폼 간략 소개 (dev-hello-kang-test 링크 공유)"
+key_discussions:
+  - thread_ts: '1742890172.000000'
+    date: '2025-03-26'
+    reply_count: 14
+    text_preview: "신규 입사자와의 대화, 사이오닉 강점 설명 후 추가 질문 안내"
+  - thread_ts: '1742290090.053189'
+    date: '2025-03-26'
+    reply_count: 49
+    text_preview: "채널 설명과 실제 구성원 현황 차이에 대한 유쾌한 지적"
+  - thread_ts: '1742310000.000000'
+    date: '2025-03-26'
+    reply_count: 7
+    text_preview: "STORM 제품 간략 소개 및 신규 입사자 초대"
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,74 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:09'
+statistics:
+  total_messages: 17
+  total_threads: 11
+  active_users: 6
+  avg_messages_per_day: 0.4
+key_discussions:
+- thread_ts: '1770887617.613529'
+  date: '2026-02-12'
+  reply_count: 39
+  text_preview: '슬랙에서 먼가 요청할 때
+
+
+    @누군가멘션 뭐뭐요청스레드
+
+    -&gt; 이러이러한걸 하고싶은데 뭐시기뭐시기 해주실 수 있으신지
+
+
+    이렇게 하지 말고
+
+
+    뭐뭐요청스레드
+
+    -&gt; 이러이러한걸 '
+- thread_ts: '1770791944.760049'
+  date: '2026-02-11'
+  reply_count: 8
+  text_preview: <@U0A7EFLSTT2> 프론트 워크샵 관련 스레드
+- thread_ts: '1768897277.813409'
+  date: '2026-01-20'
+  reply_count: 6
+  text_preview: <@U0A7EFLSTT2> culture v2버전 전사에 같이 설명드리는 걸 언제하면 좋을지 고민입니다
+- thread_ts: '1768885756.466009'
+  date: '2026-01-20'
+  reply_count: 5
+  text_preview: '*명절 선물 업체 찾는 중입니다 &gt;&gt;&gt;*
+
+
+    히스토리 확인해보니 작년에 계약했던 ''*위펀*'' 업체 괜찮은 것 같아서 카탈로그 받아놨습니다'
+- thread_ts: '1768456757.714019'
+  date: '2026-01-15'
+  reply_count: 5
+  text_preview: '사이오닉 커리어 사이트 디벨롭중인데
+
+    메인 이미지 그대로 갈까요 <@U05QCA7JTD5> 모델님??'
+- thread_ts: '1768107337.420289'
+  date: '2026-01-11'
+  reply_count: 5
+  text_preview: '조직문화와 리더십 교양스러운 영상
+
+    <https://youtu.be/PsVt6VbRIQg?si=5sAFpjLajzSNpfZD|https://youtu.be/PsVt6VbRIQg?si'
+- thread_ts: '1770889207.902639'
+  date: '2026-02-12'
+  reply_count: 3
+  text_preview: 이하 예시 메시지
+- thread_ts: '1770889231.036569'
+  date: '2026-02-12'
+  reply_count: 2
+  text_preview: 뫄뫄 요청 스레드
+- thread_ts: '1769413870.337299'
+  date: '2026-01-26'
+  reply_count: 2
+  text_preview: <@U0A7EFLSTT2> 저희 회사 홈페이지 커리어 페이지에 있는 JD 업데이트 요청 (여기다 쓰는게 맞는지 모르겠지만)
+metadata:
+  created_at: '2026-02-13T16:27:09'
+  synced_by: sync_fast.py

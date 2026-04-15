@@ -1,0 +1,38 @@
+channel:
+  id: C08E19XUF9S
+  name: noah-실험실
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 2
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q2 noah-실험실 채널에서는 Dense vs Sparse 벡터 검색 방식에 대한 간단한 기술 논의가 이루어졌다.
+  노아(석현)가 Sparse 벡터 방식을 선호하는 이유에 대한 궁금증이 제기되었으며, 세민이 이에 관해 설명하는 스레드가 형성되었다.
+topics:
+  - name: "Dense vs Sparse 벡터"
+    mention_count: 3
+    description: "Dense 벡터와 Sparse 벡터의 차이, 노아의 Sparse 선호 이유 논의"
+key_discussions:
+  - thread_ts: '1750834440.000000'
+    date: '2025-06-25'
+    reply_count: 7
+    text_preview: "Dense vector vs Sparse vector 차이 - 노아가 Sparse를 밀고 있는 이유 궁금증 제기"
+terminology:
+  - term: "Dense vector"
+    definition: "모든 차원에 값이 있는 밀집 벡터 표현 방식 - 현재 STORM에서 사용"
+    aliases: ["Dense 임베딩"]
+    context: "Sparse vector와 대비되는 개념으로 현재 서비스에서 채택된 방식"
+  - term: "Sparse vector"
+    definition: "대부분의 차원이 0인 희소 벡터 표현 방식 - 노아(석현)가 선호하는 방식"
+    aliases: ["Sparse 임베딩"]
+    context: "SPLADE 등 학습된 희소 표현 모델에서 생성되며 해석 가능성이 높음"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,34 @@
+channel:
+  id: C06PS33807Q
+  name: product-website
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:12'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 0.0
+key_discussions:
+- thread_ts: '1769481542.379469'
+  date: '2026-01-27'
+  reply_count: 9
+  text_preview: '<@U05T2RW7PE2> (cc <@U057PR1ADCL>)
+
+    홈페이지 news 란에 alibaba cloud 랑 mou 맺은 기사도 올라와 있는데요 (24년 9월)
+
+    최소한 일본 '
+- thread_ts: '1770008919.936239'
+  date: '2026-02-02'
+  reply_count: 5
+  text_preview: '<@U05T2RW7PE2> 홈페이지에 있는 나와있는 회사 주소 변경하려고 하는데
+
+    ''서울 강남구 도곡동 950-6'' 로 교체하면 될까요?
+
+    cc. <@U095L163Q5Q>'
+metadata:
+  created_at: '2026-02-13T16:28:12'
+  synced_by: sync_fast.py

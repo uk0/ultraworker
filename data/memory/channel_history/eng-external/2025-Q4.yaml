@@ -1,0 +1,22 @@
+channel:
+  id: C05JQPUNYTT
+  name: eng-external
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q4은 eng-external 채널이 비활성 상태인 분기. ai-crawler 봇이 채널에 참여한 것이 유일한 활동으로, 외부 엔지니어링 관련 논의는 없었음.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

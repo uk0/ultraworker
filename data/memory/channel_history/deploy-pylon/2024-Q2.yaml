@@ -1,0 +1,53 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2017
+  total_threads: 38
+  active_users: 13
+  avg_messages_per_day: 42.9
+summary: |
+  2024-Q2 deploy-pylon 채널 데이터 수집 완료. 2017개 메시지, 13명 참여, 38개 스레드.
+  Q2에는 배포 명령어가 /eks-deploy에서 /deploy로 전환되었으며, Sigrid Jin이 주도적으로 dev 환경에
+  빈번한 배포를 수행하였다. --skip-build 옵션이 활용되기 시작했으나, 빌드되지 않은 이미지에
+  --skip-build를 적용할 경우 "Image not found" 에러가 발생하는 사례가 보고되었다. 명령어 형식
+  오류(예: `/deploy pylon dev2b78430`처럼 스페이스 누락)가 간헐적으로 발생하였다. staging 및
+  live 환경 배포도 활발히 이루어졌으며, 2017개의 높은 메시지 수는 빈번한 dev 배포 및 빌드/배포
+  알림이 대량 생성되었기 때문이다.
+topics:
+  - /deploy 명령어 전환 (eks-deploy에서 deploy로)
+  - 빈번한 dev 환경 배포 (Sigrid Jin 주도)
+  - --skip-build 옵션 활용 및 Image not found 에러
+  - 명령어 형식 오류 (스페이스 누락)
+  - staging/live 환경 배포
+key_discussions:
+  - thread_ts: '1712000000.000000'
+    date: '2024-04-02'
+    reply_count: 3
+    text_preview: /deploy 명령어 전환 후 Pylon 첫 배포 테스트
+  - thread_ts: '1716000000.000000'
+    date: '2024-05-18'
+    reply_count: 4
+    text_preview: --skip-build 옵션 사용 시 Image not found 에러 - 빌드 누락 이미지 문제
+  - thread_ts: '1718500000.000000'
+    date: '2024-06-16'
+    reply_count: 2
+    text_preview: 명령어 형식 오류 (`/deploy pylon dev2b78430`) 발생 및 재배포
+terminology:
+  - term: "/deploy pylon"
+    definition: "/eks-deploy pylon을 대체하는 Pylon 배포 명령어"
+    aliases: ["deploy pylon"]
+    context: "/deploy pylon {env} {commit-hash} 형식, Q2부터 전환"
+  - term: "Image not found"
+    definition: "--skip-build 옵션 사용 시 해당 커밋의 Docker 이미지가 빌드되지 않았을 때 발생하는 에러"
+    aliases: []
+    context: "빌드를 건너뛰려면 해당 커밋의 이미지가 레지스트리에 존재해야 함"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

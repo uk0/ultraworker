@@ -1,0 +1,61 @@
+channel:
+  id: C06UTL9DK6G
+  name: corp-vacation
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:31'
+statistics:
+  total_messages: 112
+  total_threads: 33
+  active_users: 2
+  avg_messages_per_day: 2.6
+key_discussions:
+- thread_ts: '1768904042.222799'
+  date: '2026-01-20'
+  reply_count: 26
+  text_preview: 무제한 휴가가 아니라 연차로 잘못등록해서 전부 취소하느라 좀 노이지할것같습니다 (미리죄송해요)
+- thread_ts: '1770152520.294839'
+  date: '2026-02-04'
+  reply_count: 22
+  text_preview: ':palm_tree: [양호진] - 2월 4일 하루종일 휴가입니다.'
+- thread_ts: '1769135372.688909'
+  date: '2026-01-23'
+  reply_count: 7
+  text_preview: ':palm_tree: [송명하] - 1월 23일 오전 10:00 ~ 오후 3:00 휴가입니다.'
+- thread_ts: '1770610727.619859'
+  date: '2026-02-09'
+  reply_count: 6
+  text_preview: ':palm_tree: [신희수] - 2월 19일 ~ 2월 20일 휴가입니다.'
+- thread_ts: '1770857029.550239'
+  date: '2026-02-12'
+  reply_count: 5
+  text_preview: ':palm_tree: [정세민] - 2월 12일 하루종일 휴가입니다.'
+- thread_ts: '1767686703.192469'
+  date: '2026-01-06'
+  reply_count: 4
+  text_preview: ':palm_tree: [윤여준] - 1월 2일 하루종일 휴가입니다.'
+- thread_ts: '1770183087.894639'
+  date: '2026-02-04'
+  reply_count: 3
+  text_preview: ':palm_tree: [이상호] - 2월 13일 하루종일 휴가입니다.'
+- thread_ts: '1769336619.893329'
+  date: '2026-01-25'
+  reply_count: 3
+  text_preview: ':palm_tree: [서맹관] - 2월 12일 ~ 2월 13일 휴가입니다.'
+- thread_ts: '1768193083.020799'
+  date: '2026-01-12'
+  reply_count: 3
+  text_preview: '<!subteam^S0A7X6N7R51> 휴가 설정 지금은 종일연차/ 오전-오후 반차 이렇게 설정되어있는데 혹시 히스토리가
+    따로 없다면 시간단위 설정으로 바꾸는 것 어떨까요?
+
+    • '
+- thread_ts: '1770784239.276209'
+  date: '2026-02-11'
+  reply_count: 2
+  text_preview: ':palm_tree: [이강욱] - 3월 23일 ~ 3월 26일 휴가입니다.'
+metadata:
+  created_at: '2026-02-13T16:28:31'
+  synced_by: sync_fast.py

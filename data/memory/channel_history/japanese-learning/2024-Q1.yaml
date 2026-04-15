@@ -1,0 +1,41 @@
+channel:
+  id: C06GZ8S0KQW
+  name: japanese-learning
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 9
+  active_users: 10
+  avg_messages_per_day: 2.2
+summary: |
+  2024년 1분기에 최윤정님 주도로 사내 일본어 학습 세션이 개설되었다. 2월 초 채널이 생성되어 멤버 모집이 시작되었고,
+  매주 월요일 오후 5~6시에 회의실에서 30분간 수업이 진행되었다. 히라가나와 카타카나 문자 학습을 중심으로 진행되었으며,
+  시험을 통한 복습 체계도 마련되었다. 3월 말 한국expo 관련 준비로 일시 중단 후 재개 예정이었다.
+  수업 교재는 일본어 기초 교재를 사용하였고, 140~141p까지 진도가 나갔다.
+topics:
+  - 일본어 기초 학습
+  - 히라가나/카타카나
+  - 사내 어학 세션
+key_discussions:
+  - thread_ts: '1708234877.302099'
+    date: '2024-02-18'
+    topic: 일본어 수업 개설 안내 및 히라가나/카타카나 학습 자료 공유
+  - thread_ts: '1709013707.323719'
+    date: '2024-02-27'
+    topic: 회의실 4C에서 첫 정규 수업 진행 및 참석자 확인
+  - thread_ts: '1711354375.774459'
+    date: '2024-03-25'
+    topic: 한국expo 준비로 수업 일시 중단 공지, 히라가나/카타카나 전문 시험 예고
+terminology:
+  - term: 히라가나
+    definition: 일본어 기본 문자 체계 중 하나로, 일본 고유어 표기에 사용
+  - term: 카타카나
+    definition: 일본어 기본 문자 체계 중 하나로, 외래어 표기에 주로 사용
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

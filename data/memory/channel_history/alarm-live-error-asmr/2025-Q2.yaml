@@ -1,0 +1,54 @@
+channel:
+  id: C07F2EFA76K
+  name: alarm-live-error-asmr
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 38
+  total_threads: 10
+  active_users: 4
+  avg_messages_per_day: 5.4
+summary: |
+  2025년 2분기 alarm-live-error-asmr 채널에서는 OpenLLM API 오류가 산발적으로 발생하였다. 주요 이슈로는 Upstage의 solar-pro-241126 모델이 무효화되어 400 오류가 발생하고, 준컨설팅 관련 메시지 content가 공백인 400 오류, Upstage 크레딧 부족으로 인한 엔진 실패 등이 있었다. 4월 말부터 5월까지 solar 모델 이슈가 집중 논의되었으며, 6월에는 채널명이 status-asmr에서 alarm-live-error-asmr로 변경되었다. 담당자(하담, 귤진우)들이 원인을 즉시 분석하고 코멘트를 달아 빠른 대응이 이루어졌다.
+topics:
+  - name: "Upstage solar 모델 오류"
+    mention_count: 15
+    description: "solar-pro-241126 모델 무효화(400 Requested model is invalid). solar-pro-250422, solar-mini로 대체 확인"
+  - name: "메시지 content 공백 오류"
+    mention_count: 5
+    description: "준컨설팅 관련 messages content가 빈 상태로 요청되어 400 오류 발생"
+  - name: "Upstage 크레딧 부족"
+    mention_count: 3
+    description: "Upstage 엔진 크레딧 부족으로 인한 fail. storm 서비스 자체에는 영향 없음"
+  - name: "채널명 변경"
+    mention_count: 1
+    description: "6월 18일 채널명을 status-asmr에서 alarm-live-error-asmr로 변경"
+key_discussions:
+  - thread_ts: '1745829480.000000'
+    date: '2025-04-28'
+    reply_count: 28
+    text_preview: "solar-pro-241126 모델 400 오류 발생 - 새 모델(solar-pro-250422, solar-mini-250422)로 대체 필요"
+  - thread_ts: '1745933280.000000'
+    date: '2025-04-28'
+    reply_count: 17
+    text_preview: "OpenLLM API 오류 - 내용 분석 및 담당자 대응"
+  - thread_ts: '1749230460.000000'
+    date: '2025-06-23'
+    reply_count: 5
+    text_preview: "content가 비어있어서 400 에러 발생 - 테스트 중인 사용자 식별"
+terminology:
+  - term: "solar-pro"
+    definition: "Upstage의 한국어 특화 LLM 모델. solar-pro-241126 버전이 2025-Q2에 무효화됨"
+    aliases: ["solar", "solar-mini"]
+    context: "모델 버전 관리 이슈 발생. solar-pro-250422로 업그레이드 필요"
+  - term: "status-asmr"
+    definition: "alarm-live-error-asmr 채널의 이전 이름. 2025년 6월 18일에 변경됨"
+    aliases: []
+    context: "채널명 변경 히스토리"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

@@ -1,0 +1,50 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 37
+  total_threads: 13
+  active_users: 1
+  avg_messages_per_day: 1.4
+summary: |
+  2025년 3분기 corp-법카 채널은 38건의 메시지로 여름 휴가 시즌 영향으로 사용량이
+  감소했다. 주요 사용 목적은 식사(미타인원 야식이 빈번), 커피챗, 기타(커피 구매,
+  openrouter 크레딧 50$x2회) 등이었다. U06CLS6E694가 미타인원 야식을 자주
+  사용했으며(7/14, 9/2, 9/10), 오승희, 박진형, 이강욱, 김혜원, 송명하 등도
+  사용했다. 8월 7일에는 "일본 AI 리서쳐 방문 식사"(진형, 승희, 호진)가 있었다.
+  openrouter 크레딧 구매가 7/29, 8/4에 각각 50$씩 발생했으며, 8/4에는 자동결제
+  등록도 이루어졌다. 이강욱의 "혼밥" 사용도 특이하게 기록되었다.
+topics:
+  - 법인카드 사용 내역
+  - 식사 (야식 위주)
+  - 커피챗
+  - openrouter 크레딧 구매 (자동결제 등록)
+  - 외부 방문자 식사 (일본 AI 리서쳐)
+  - 미타 단체 커피 구매
+key_discussions:
+  - thread_ts: '1754297323.995729'
+    date: '2025-08-04'
+    reply_count: 7
+    text_preview: 'openrouter 50달러 자동 결제 등록 - 스레드 논의'
+  - thread_ts: '1757437257.442239'
+    date: '2025-09-09'
+    reply_count: 6
+    text_preview: '미타인원 야식 - 스레드 논의'
+  - thread_ts: '1755836405.269639'
+    date: '2025-08-22'
+    reply_count: 4
+    text_preview: '이강욱 혼밥 - 스레드 논의'
+  - thread_ts: '1752722435.765109'
+    date: '2025-07-17'
+    reply_count: 4
+    text_preview: '정기연 기타 사용 - 스레드 논의'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

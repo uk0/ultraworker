@@ -1,0 +1,99 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 93
+  total_threads: 57
+  active_users: 16
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 4분기 announcement 채널은 시리즈 A 투자 유치, 일본 첫 계약 체결, 대규모 인력 충원, Graph RAG 스터디, 종무식 등 회사의 급성장기를 반영하는 주요 공지가 집중되었다.
+  시리즈 A 투자 라운드가 공식 완료되어 신규 250억 투자 유치, 누적 300억 돌파가 달성되었다. 투자사는 네이버, 삼성, KT, 기업은행(SI) 및 에이티넘, IMM, 한국투자파트너스, LB(FI) 등 국내 주요 투자사가 참여하였다.
+  일본에서의 첫 계약(Zeevaa 파트너십)이 공식 체결되었으며, 12월 도쿄 엑스포 참가와 Sionic X Oracle Cloud 핸즈온 세션이 진행되었다.
+  신규 입사자가 대폭 증가하여 8명(유대곤 AI/ML, 김승규 Kotlin+Spring, 김혁준 Kotlin+Spring, 이주원 Frontend 인턴, 서소영 Japan BD 인턴, 이지혜 AI Research, 김여준 BD, 카타오카상욱 Product Designer)이 합류하였다.
+  Graph RAG(온톨로지) 스터디가 리서치팀 중심으로 매주 목요일 16:30에 정기 운영되기 시작하였다.
+  인스트럭트한국 12월 밋업에서 사이오닉 후원 해커톤(12/20)이 개최되었으며, STORM Parse/Solution 활용 AI Agent 빌딩이 주제였다.
+  김수원님의 역할이 ML Backend Engineering Lead에서 TPO(Technical Product Owner)로 변경되어 데이터플랫폼 제품 중심으로 전환되었다.
+  사무실 자리 부족 이슈로 자유석(HOT DESK) 전환이 본격화되었고, 쿠팡 공용 장바구니 운영 정책, 법인카드 기록 관리 등 오피스 운영 정책이 정비되었다.
+  11월 전사 회식(호보식당), 12월 연말 타운홀(디캠프 선릉 6층), 종무식 겸 2025 마지막 위클리, 제품팀 연말 회고세션 등이 진행되었다.
+  겨울방학 기간(12/25~1/4)이 공지되었고, 슬랙 프로필에 이름 발음(카타카나/닉네임) 추가가 안내되었다.
+  CloudFlare/AWS 글로벌 장애 알림, Grafana VPN 접근 변경, STORM live 계정 복구 등 인프라 이슈 공지도 있었다.
+  '내업공(내 업무 공유하기)' 세션이 매주 월요일 엔지니어링 위클리 후반부에 신설되었다.
+topics:
+  - 시리즈 A 투자 유치 (250억, 누적 300억)
+  - 일본 첫 계약 (Zeevaa)
+  - 대규모 신규 입사자 온보딩
+  - Graph RAG 스터디
+  - 해커톤 개최 (인스트럭트한국)
+  - TPO 역할 변경 (김수원)
+  - 사무실 자유석 전환
+  - 연말 타운홀 및 종무식
+  - 겨울방학 공지
+  - 슬랙 프로필 카타카나 추가
+  - 내업공(내 업무 공유하기) 세션
+  - CloudFlare/AWS 장애 알림
+  - Oracle Cloud 핸즈온 세션
+  - 도쿄 엑스포 참가
+key_discussions:
+  - thread_ts: '1763710465.144129'
+    date: '2025-11-21'
+    reply_count: 22
+    text_preview: '시리즈 A 투자 라운드 완료 - 250억 신규 유치, 누적 300억 돌파'
+  - thread_ts: '1763438234.556079'
+    date: '2025-11-18'
+    reply_count: 22
+    text_preview: 'Graph RAG(온톨로지) 스터디 안내 - 리서치팀 중심 매주 목요일 진행'
+  - thread_ts: '1765172320.045599'
+    date: '2025-12-08'
+    reply_count: 17
+    text_preview: '이웰 생일 축하 스레드'
+  - thread_ts: '1763341262.964709'
+    date: '2025-11-17'
+    reply_count: 16
+    text_preview: '강욱님 생일 축하 스레드'
+  - thread_ts: '1765774486.322219'
+    date: '2025-12-15'
+    reply_count: 14
+    text_preview: '건강검진 12월 진행 독려 - 과태료 경고 포함'
+  - thread_ts: '1763615343.373019'
+    date: '2025-11-20'
+    reply_count: 12
+    text_preview: '인스트럭트한국 12월 밋업 해커톤 안내 (STORM 활용, 상금 100만원)'
+  - thread_ts: '1765350127.878689'
+    date: '2025-12-10'
+    reply_count: 8
+    text_preview: '일본 첫 계약(Zeevaa 파트너십) 공식 체결 발표'
+terminology:
+  - term: "시리즈 A"
+    definition: "사이오닉의 주요 투자 라운드. 2025년 11월 완료, 250억 신규 유치(누적 300억)"
+    aliases: ["Series A"]
+  - term: "Zeevaa"
+    definition: "사이오닉이 일본에서 체결한 첫 번째 파트너십 계약 대상 기업"
+    aliases: []
+  - term: "TPO"
+    definition: "Technical Product Owner. PO의 역할에 기술적 의사결정까지 포함하는 역할"
+    aliases: ["Technical Product Owner"]
+  - term: "Graph RAG"
+    definition: "그래프 기반 RAG 접근 방식. 온톨로지와 결합하여 리서치팀에서 스터디 운영 중"
+    aliases: ["온톨로지"]
+  - term: "내업공"
+    definition: "내 업무 공유하기. 매주 월요일 엔지니어링 위클리 후반부에 진행되는 업무 공유 세션"
+    aliases: []
+  - term: "인스트럭트한국"
+    definition: "AI 커뮤니티. 사이오닉 후원으로 12월 해커톤을 개최"
+    aliases: []
+  - term: "STORM Parse"
+    definition: "사이오닉의 문서 파싱 엔진 제품"
+    aliases: ["스톰 파스"]
+  - term: "STORM Solution"
+    definition: "사이오닉의 에이전트 설계 플랫폼 제품"
+    aliases: ["스톰 솔루션"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

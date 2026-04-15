@@ -1,0 +1,29 @@
+channel:
+  id: C095EJXDS2C
+  name: noti-saas-결제
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 15
+  total_threads: 3
+  active_users: 5
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 4분기에는 SaaS 결제 알림 봇(notification-bot)이 자동으로 결제 이벤트를 전송하였으며, 새 멤버들이 채널에 참여하였다. 봇 메시지 위주로 구성된 분기로, 실질적인 논의보다는 자동화된 결제 알림 수신이 주 용도였다. 10월~12월에 걸쳐 산발적인 결제 알림이 수신되었다.
+topics:
+  - name: "SaaS 결제 알림"
+    mention_count: 10
+    description: "notification-bot을 통한 자동 SaaS 결제 이벤트 알림"
+key_discussions: []
+terminology:
+  - term: "notification-bot"
+    definition: "SaaS 결제 이벤트를 Slack 채널에 자동으로 알리는 봇"
+    aliases: ["알림봇"]
+    context: "결제 발생 시 채널에 자동 메시지 전송"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

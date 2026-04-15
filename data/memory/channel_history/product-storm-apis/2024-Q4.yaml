@@ -1,0 +1,31 @@
+channel:
+  id: C07RCDTGW9E
+  name: product-storm-apis
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 5
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 1.7
+summary: |
+  2024-Q4에 product-storm-apis 채널이 개설되었으며, Storm API 콘솔 UI 기획 관련 피그마 링크 공유와 초기 싱크 미팅 요청이 이루어졌다. 채널 활동이 매우 적은 초기 단계로, 주요 구성원인 혜원님과 덕현님이 채널에 참여하여 스톰 API 콘솔 형상에 대한 논의를 시작했다.
+topics:
+  - name: "Storm API 콘솔 UI 기획"
+    mention_count: 2
+    description: "Figma 기반 Storm APIs 콘솔 UI 디자인 검토 및 싱크 미팅 요청"
+key_discussions:
+  - thread_ts: '1728298440.000000'
+    date: '2024-10-07'
+    reply_count: 3
+    text_preview: "storm api 콘솔 형상 관련 싱크 요청, 피그마 링크 공유"
+terminology:
+  - term: "Storm APIs"
+    definition: "사이오닉의 외부 공개 API 서비스로, 문서 파싱 등 AI 기능을 API 형태로 제공하는 제품군"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

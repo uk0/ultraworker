@@ -1,0 +1,115 @@
+channel:
+  id: C05TNDBU38X
+  name: product-storm-analyze
+  type: public
+period:
+  quarter: 2023-Q4
+  start_date: '2023-09-27'
+  end_date: '2023-12-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 45
+  total_threads: 16
+  active_users: 9
+  avg_messages_per_day: 0.5
+summary: >
+  2023년 4분기는 Storm Analyze 프로덕트의 태동기였다. 채널 개설(9/27) 후 진형, 시형, 석현의 초기
+  아이디에이션 미팅을 통해 CS 상담 데이터 분석 제품 개발이 시작되었다. 진형이 하이퍼클로바 기반 간단한
+  POC를 Golang으로 제작하여 Google Cloud Run에 배포했고, /sentiments, /summarize, /keywords,
+  /categories 엔드포인트를 /analyze로 통합하는 구조를 설계했다. 김혜원이 Figma에 Analyze 기획 초안을
+  작성하고 요약 기술 리서치를 주도했는데, 43페이지 논문 요약 테스트에서 의미 유사 단락별 split + 순서대로
+  입력 방식이 효과적임을 확인했다 (GPT-4 비용: 43페이지 기준 약 3,450원, 11회 호출). CS 상담 스크립트
+  요약 테스트도 진행되었다. 한시형이 과금 모델 초안과 상품 패키징(진형, 박우명과 논의)을 주도했으며,
+  네이버클라우드 AI 컨택센터 조직장과의 미팅을 통해 BrightPattern 콜센터 솔루션에 분석 기능 연동 가능성이
+  제안되었다. Analyze는 개별 기능마다 에이전트를 따로 띄우고 조합하는 형태로 개발하기로 결정되었다.
+topics:
+  - name: "Analyze POC 개발"
+    count: 12
+    summary: "진형이 하이퍼클로바 기반 POC를 Golang으로 제작. /sentiments, /summarize, /keywords, /categories를 /analyze로 통합. Google Cloud Run 배포. 스프레드시트 URL 입력 기반 분석."
+  - name: "요약 기술 리서치"
+    count: 10
+    summary: "김혜원 주도. 43페이지 논문 요약 테스트에서 의미 유사 단락별 split + 순서 입력 방식이 효과적. GPT-4 비용 43p 기준 약 3,450원(11회 호출). 윗내용부터 순서대로 덧붙이는 방식은 품질 저하."
+  - name: "기획 및 상품 패키징"
+    count: 8
+    summary: "김혜원 Figma 기획 초안 작성. 한시형 과금안 초안 작성 및 상품 패키징 논의(진형, 박우명 참여). 요약에 비즈니스 로직 넣는 방법 고민."
+  - name: "네이버클라우드 연동"
+    count: 3
+    summary: "한시형이 네이버클라우드 AI 컨택센터 조직장 미팅. BrightPattern(외산 콜센터 솔루션)에 분석 기능(요약/카테고리/키워드/감정분석) 연동 제안."
+  - name: "현대 캐피탈 테스트"
+    count: 2
+    summary: "진형이 현대 캐피탈 raw 데이터로 분석 테스트 진행."
+key_discussions:
+  - thread_ts: '1695789785.001539'
+    date: '2023-09-27'
+    title: "Analyze 초기 아이디에이션 미팅"
+    summary: "진형, 시형, 석현 참석. Analyze 프로덕트 초기 컨셉 논의. Notion에 회의록 공유."
+    participants: ["U05QCA7JTD5", "U057K0HC9KQ", "U057PR1ADCL"]
+    decisions: ["Analyze 프로덕트 개발 시작"]
+    action_items: ["POC 개발 착수"]
+    keywords: ["Analyze", "아이디에이션", "POC"]
+    relevance_score: 0.9
+  - thread_ts: '1698262257.052529'
+    date: '2023-10-25'
+    title: "Analyze POC 배포 (Golang/Cloud Run)"
+    summary: "진형이 하이퍼클로바 기반 POC를 Golang으로 제작하여 Google Cloud Run에 배포. /sentiments, /summarize, /keywords, /categories 각 엔드포인트와 /analyze 통합 엔드포인트 제공. 스프레드시트 URL 기반 입력."
+    participants: ["U05QCA7JTD5"]
+    decisions: ["모듈화된 엔드포인트 구조 채택", "/analyze로 통합"]
+    action_items: ["테스트 및 피드백"]
+    keywords: ["POC", "Golang", "Cloud Run", "HyperCLOVA", "API"]
+    relevance_score: 1.0
+  - thread_ts: '1701936163.621469'
+    date: '2023-12-07'
+    title: "Analyze 기획 초안 (Figma)"
+    summary: "김혜원이 Figma에 기획 초안 작성 후 한시형과 싱크. 필수 고객 요건 리뷰 및 오버스펙 여부 검토. 48개 답글이 달린 주요 논의 스레드."
+    participants: ["U05T2RW7PE2", "U057K0HC9KQ"]
+    decisions: ["기획 초안 확정 후 디벨롭 진행"]
+    action_items: ["고객 요건 기반 기획 디벨롭"]
+    keywords: ["Figma", "기획", "Analyze"]
+    relevance_score: 0.9
+  - thread_ts: '1702010233.130339'
+    date: '2023-12-08'
+    title: "43페이지 논문 요약 테스트"
+    summary: "김혜원이 긴 문서 요약 방법 테스트. 의미 유사 단락별 split + 순서 입력 방식이 효과적. 순서대로 덧붙이는 방식은 품질 저하. GPT-4 비용 43p 기준 약 3,450원(11회 호출)."
+    participants: ["U05T2RW7PE2"]
+    decisions: ["의미 유사 단락별 split 방식 채택"]
+    action_items: ["요약 프롬프트 최적화"]
+    keywords: ["요약", "논문", "GPT-4", "비용", "분할"]
+    relevance_score: 0.9
+  - thread_ts: '1702955268.359429'
+    date: '2023-12-19'
+    title: "네이버클라우드 BrightPattern 연동 제안"
+    summary: "한시형이 네이버클라우드 AI 컨택센터 조직장과 미팅. BrightPattern 콜센터 솔루션에 분석 기능(요약/카테고리/키워드/감정분석) 연동 테스트 제안. 일정 확인 요청."
+    participants: ["U057K0HC9KQ", "U05T2RW7PE2"]
+    decisions: ["연동 테스트 가능성 검토"]
+    action_items: ["테스트 일정 산출"]
+    keywords: ["BrightPattern", "네이버클라우드", "콜센터", "연동"]
+    relevance_score: 0.8
+  - thread_ts: '1702445734.837599'
+    date: '2023-12-13'
+    title: "상품 패키징 논의"
+    summary: "한시형이 진형, 박우명과 상품 패키징 논의 내용 공유. Analyze 제품의 과금 모델 및 패키징 방향 설정."
+    participants: ["U057K0HC9KQ", "U05QCA7JTD5", "U058A971Z8R"]
+    decisions: []
+    action_items: ["과금 모델 구체화"]
+    keywords: ["상품 패키징", "과금", "비즈니스"]
+    relevance_score: 0.7
+terminology:
+  - term: "Storm Analyze"
+    definition: "사이오닉의 CS 상담 데이터 분석 제품. 요약/키워드 추출/카테고리 분류/감정분석 기능 제공."
+    aliases: ["Analyze"]
+    context: "2023년 9월 프로덕트 아이디에이션 시작, Golang POC부터 개발."
+  - term: "HyperCLOVA"
+    definition: "네이버 클라우드의 LLM 서비스. Analyze POC에서 요약 등에 사용."
+    aliases: ["하클", "하이퍼클로바"]
+    context: "초기 POC에서 메인 LLM으로 활용. 요약 스타일 컨트롤에 사용."
+  - term: "BrightPattern"
+    definition: "외산 콜센터 솔루션. 네이버클라우드에서 사용 중."
+    aliases: []
+    context: "네이버클라우드 AI 컨택센터에서 사용하는 솔루션에 Analyze 분석 기능 연동 제안."
+  - term: "POC"
+    definition: "Proof of Concept. 기술 검증용 프로토타입."
+    aliases: []
+    context: "Analyze의 초기 버전. Golang으로 구현, Google Cloud Run 배포."
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual

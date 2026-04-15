@@ -1,0 +1,44 @@
+channel:
+  id: C07U07Y2LQY
+  name: project-claude-computer-use
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 20
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 20.0
+summary: |
+  ChatGPT Operator를 활용한 스톰(STORM) 자동가입 테스트, RAG 봇 만들기 실험, VSCode에서 ChatGPT
+  코드 리트리벌 테스트 등 다양한 AI 에이전트 활용 실험 진행. Sigrid Jin 주도로 4명 참여.
+  Computer Use 개념을 확장하여 다양한 AI 도구의 자동화 가능성 탐색.
+topics:
+  - ChatGPT Operator
+  - 스톰 자동가입 테스트
+  - RAG 봇 실험
+  - VSCode 코드 리트리벌
+  - AI 에이전트 자동화
+key_discussions:
+  - topic: ChatGPT Operator 스톰 자동가입 테스트
+    participants: [Sigrid Jin]
+    summary: OpenAI의 ChatGPT Operator를 활용하여 스톰(STORM) 서비스 자동가입 프로세스 테스트
+  - topic: RAG 봇 만들기 실험
+    participants: [Sigrid Jin]
+    summary: RAG(Retrieval-Augmented Generation) 기반 챗봇 구축 실험
+  - topic: VSCode ChatGPT 코드 리트리벌 테스트
+    participants: [Sigrid Jin]
+    summary: VSCode 환경에서 ChatGPT를 활용한 코드 검색 및 리트리벌 기능 테스트
+terminology:
+  - term: ChatGPT Operator
+    definition: OpenAI의 웹 브라우저 자동 조작 AI 에이전트. 사용자 대신 웹사이트에서 작업 수행
+  - term: STORM(스톰)
+    definition: Sionic AI의 검색 엔진 서비스
+  - term: RAG
+    definition: Retrieval-Augmented Generation. 외부 문서 검색을 통해 LLM 응답 품질을 높이는 기법
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

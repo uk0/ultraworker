@@ -1,0 +1,43 @@
+channel:
+  id: C07UUNGBULF
+  name: newrelic-stargate-live
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 3
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 2분기 newrelic-stargate-live 채널에는 Stargate 라이브 환경 API 오류 알림이 3건 발생하였다.
+  4월 28일, 5월 9일, 5월 23일에 각각 Critical Priority Stargate API Error 알림이 New Relic을 통해 전송되었다.
+  또한 4월 초에 신규 팀원 한 명이 채널에 참여하였다. 전반적으로 활동량이 매우 적은 분기였다.
+topics:
+  - name: "Stargate API 500 오류 알림"
+    mention_count: 3
+    description: "라이브 환경에서 500 시리즈 에러 발생 시 New Relic Critical 알림 전송"
+key_discussions:
+  - thread_ts: '1745810580.000000'
+    date: '2025-04-28'
+    reply_count: 1
+    text_preview: "Stargate API Error Critical 알림 - 4월 28일 라이브 환경 500 오류"
+  - thread_ts: '1746766440.000000'
+    date: '2025-05-09'
+    reply_count: 1
+    text_preview: "Stargate API Error Critical 알림 - 5월 9일 라이브 환경 500 오류"
+  - thread_ts: '1748072700.000000'
+    date: '2025-05-23'
+    reply_count: 1
+    text_preview: "Stargate API Error Critical 알림 - 5월 23일 라이브 환경 500 오류"
+terminology:
+  - term: "Stargate"
+    definition: "Sionic AI의 검색 엔진 서비스, 라이브 환경 모니터링 대상"
+    aliases: ["stargate-api-live"]
+    context: "New Relic [Monitoring] Stargate 정책으로 500 시리즈 오류 감지"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

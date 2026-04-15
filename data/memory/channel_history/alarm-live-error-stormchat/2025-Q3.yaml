@@ -1,0 +1,29 @@
+channel:
+  id: C081TUD7MBM
+  name: alarm-live-error-stormchat
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 2
+  active_users: 4
+  avg_messages_per_day: 1.2
+summary: |
+  STORM Chat 에러 제보 채널. 에러 제보 4건 발생, Q2 대비 소폭 증가.
+  7월 7일 에러 제보에 4건 답글, 8월 17일 에러 제보에 6건 답글로 활발한 대응.
+  9월 10일 김수원, 이강욱이 채널에 합류. Notion AI 봇도 7월에 참여.
+  8월 중순 에러 집중 발생(8/15, 8/17 연속 에러)으로 일시적 서비스 불안정 관찰.
+topics:
+  - STORM Chat 500 에러 간헐적 발생
+  - 8월 중순 에러 집중 발생
+  - 에러 대응 스레드 활발
+  - 대응 인력 추가 합류
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

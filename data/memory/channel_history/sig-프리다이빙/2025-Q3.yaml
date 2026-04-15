@@ -1,0 +1,36 @@
+channel:
+  id: C08LPNBEH41
+  name: sig-프리다이빙
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 3
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  여름 시즌 바다 프리다이빙 활동 분기. 김혜원이 해수욕장/스노클 스팟을 추천받기 위해
+  조하담, 백은주, 신희수에게 물어보며 제주도 여행 관련 21개 답글의 활발한 토론 진행.
+  김덕현이 제주도 바다 첫 방문을 앞두고 핀만 가져가도 되는지 질문. 수트 필요 여부에 대한
+  실용적인 대화도 이루어짐.
+topics:
+  - 제주도 프리다이빙/스노클링 계획
+  - 해수욕장 스팟 추천
+  - 프리다이빙 장비 (핀, 수트)
+key_discussions:
+  - thread_ts: '1752475123.496409'
+    date: '2025-07-14'
+    reply_count: 21
+    text_preview: '김혜원 - 선호 해수욕장/스노클 스팟 추천 요청'
+  - thread_ts: '1751913642.624609'
+    date: '2025-07-07'
+    reply_count: 2
+    text_preview: '김덕현 - 제주도 핀만 있어도 되는지 질문'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

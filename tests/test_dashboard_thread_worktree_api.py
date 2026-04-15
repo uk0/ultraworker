@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pytest
@@ -25,6 +26,26 @@ def _write_jsonl(path: Path, rows: list[dict]) -> None:
     with path.open("w", encoding="utf-8") as handle:
         for row in rows:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def _write_execution_log(path: Path, *, stdout: str = "", stderr: str = "", return_code: int = 0) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "\n".join(
+            [
+                "=== STDOUT ===",
+                stdout,
+                "",
+                "=== STDERR ===",
+                stderr,
+                "",
+                "=== RETURN CODE ===",
+                str(return_code),
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
 
 
 def _create_mention(
@@ -242,6 +263,178 @@ def test_build_session_worktree_supports_tail_and_before_seq_chunking(tmp_path: 
     assert cursor_payload["events"] == []
 
 
+def test_build_session_worktree_resolves_log_by_message_ts_when_session_id_mismatches(
+    tmp_path: Path,
+) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CMAP",
+        thread_ts="1888.100",
+        user_id="U1",
+        message="follow-up request",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CMAP", "1888.100", session.session_id)
+
+    _create_mention(
+        cfg.data_dir,
+        "m-map",
+        channel_id="CMAP",
+        thread_ts="1888.100",
+        message_ts="1888.200",
+        text="trace this forked session",
+        session_id=session.session_id,
+        created_at="2026-03-10T09:32:34Z",
+    )
+
+    _write_jsonl(
+        cfg.log_root / "project" / "external-session.jsonl",
+        [
+            {
+                "type": "queue-operation",
+                "operation": "enqueue",
+                "timestamp": "2026-03-10T09:33:00Z",
+                "sessionId": "external-session",
+                "content": "message_ts: 1888.200",
+            },
+            {
+                "type": "assistant",
+                "timestamp": "2026-03-10T09:33:01Z",
+                "message": {
+                    "role": "assistant",
+                    "content": [{"type": "thinking", "thinking": "mapping by message ts"}],
+                },
+            },
+            {
+                "type": "assistant",
+                "timestamp": "2026-03-10T09:33:02Z",
+                "message": {
+                    "role": "assistant",
+                    "content": [{"type": "text", "text": "recovered actual Claude log"}],
+                },
+            },
+        ],
+    )
+
+    payload = _build_session_worktree(
+        cfg,
+        channel_id="CMAP",
+        thread_ts="1888.100",
+        session_id=session.session_id,
+    )
+
+    assert payload["total_events"] == 3
+    assert [event["kind"] for event in payload["events"]] == [
+        "user_command",
+        "assistant_thinking",
+        "assistant_output",
+    ]
+    assert payload["events"][-1]["summary"] == "recovered actual Claude log"
+
+
+def test_build_session_worktree_falls_back_to_execution_log_when_claude_log_missing(
+    tmp_path: Path,
+) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CFALL",
+        thread_ts="1999.777",
+        user_id="U1",
+        message="show fallback output",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CFALL", "1999.777", session.session_id)
+
+    _create_mention(
+        cfg.data_dir,
+        "m-fallback",
+        channel_id="CFALL",
+        thread_ts="1999.777",
+        message_ts="1999.888",
+        text="recover from executor artifacts",
+        session_id=session.session_id,
+        created_at="2026-03-10T09:40:00Z",
+    )
+    _write_yaml(
+        cfg.data_dir / "mentions" / "m-fallback" / "result_main.yaml",
+        {
+            "executed_at": "2026-03-10T09:41:00Z",
+            "returncode": 0,
+            "stage": "main",
+            "success": True,
+        },
+    )
+    _write_execution_log(
+        cfg.data_dir / "mentions" / "m-fallback" / "execution_main.log",
+        stdout="executor fallback output",
+        return_code=0,
+    )
+
+    payload = _build_session_worktree(
+        cfg,
+        channel_id="CFALL",
+        thread_ts="1999.777",
+        session_id=session.session_id,
+    )
+
+    assert payload["total_events"] == 2
+    assert [event["kind"] for event in payload["events"]] == [
+        "user_command",
+        "assistant_output",
+    ]
+    assert payload["events"][-1]["summary"] == "executor fallback output"
+
+
+def test_build_session_worktree_adds_placeholder_when_no_logs_exist(tmp_path: Path) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CPEND",
+        thread_ts="2000.123",
+        user_id="U1",
+        message="still running",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CPEND", "2000.123", session.session_id)
+
+    mention_dir = cfg.data_dir / "mentions" / "m-pending"
+    _write_yaml(
+        mention_dir / "input.yaml",
+        {
+            "channel_id": "CPEND",
+            "thread_ts": "2000.123",
+            "message_ts": "2000.124",
+            "text": "waiting for claude log",
+            "created_at": "2026-03-10T09:48:28Z",
+            "user": "U1",
+        },
+    )
+    _write_yaml(
+        mention_dir / "session.yaml",
+        {
+            "session_id": session.session_id,
+            "status": "started",
+            "created_at": "2026-03-10T09:48:28Z",
+        },
+    )
+
+    payload = _build_session_worktree(
+        cfg,
+        channel_id="CPEND",
+        thread_ts="2000.123",
+        session_id=session.session_id,
+    )
+
+    assert payload["total_events"] == 2
+    assert payload["events"][-1]["title"] == "Claude Log Pending"
+    assert payload["events"][-1]["status"] == "running"
+
+
 def test_handle_create_thread_session_creates_manual_session(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -450,3 +643,108 @@ def test_handle_terminate_thread_session_marks_cancelled(tmp_path: Path) -> None
     refreshed = SessionManager(cfg.data_dir).get_session(session.session_id)
     assert refreshed is not None
     assert refreshed.status.value == "cancelled"
+
+
+def test_build_thread_sessions_marks_stalled_without_heartbeat(tmp_path: Path) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CSTALL",
+        thread_ts="1999.001",
+        user_id="U1",
+        message="stalled request",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CSTALL", "1999.001", session.session_id)
+    _create_mention(
+        cfg.data_dir,
+        "m-stalled",
+        channel_id="CSTALL",
+        thread_ts="1999.001",
+        message_ts="1999.001",
+        text="run long task",
+        session_id=session.session_id,
+        created_at="2026-02-06T12:00:00Z",
+    )
+
+    started_at = (datetime.now(timezone.utc) - timedelta(minutes=20)).isoformat()
+    _write_jsonl(
+        cfg.data_dir / "logs" / "interactions.jsonl",
+        [
+            {
+                "timestamp": started_at,
+                "type": "processing_started",
+                "session_id": session.session_id,
+                "channel_id": "CSTALL",
+                "thread_ts": "1999.001",
+                "content": f"Starting new session {session.session_id}",
+                "metadata": {},
+            }
+        ],
+    )
+
+    payload = _build_thread_sessions(cfg, "CSTALL", "1999.001")
+    by_id = {item["session_id"]: item for item in payload["sessions"]}
+    stalled = by_id[session.session_id]
+
+    assert stalled["status"] == "stalled"
+    assert int(stalled["elapsed_seconds"]) >= 1000
+
+
+def test_build_thread_sessions_uses_heartbeat_runtime_metadata(tmp_path: Path) -> None:
+    cfg = _cfg(tmp_path)
+    manager = SessionManager(cfg.data_dir)
+
+    session = manager.create_session(
+        channel_id="CHEART",
+        thread_ts="1999.002",
+        user_id="U1",
+        message="heartbeat request",
+        trigger_type="mention",
+    )
+    manager.register_thread_session("CHEART", "1999.002", session.session_id)
+    _create_mention(
+        cfg.data_dir,
+        "m-heartbeat",
+        channel_id="CHEART",
+        thread_ts="1999.002",
+        message_ts="1999.002",
+        text="run long task with heartbeat",
+        session_id=session.session_id,
+        created_at="2026-02-06T12:00:00Z",
+    )
+
+    started_at = (datetime.now(timezone.utc) - timedelta(seconds=90)).isoformat()
+    heartbeat_at = (datetime.now(timezone.utc) - timedelta(seconds=15)).isoformat()
+    _write_jsonl(
+        cfg.data_dir / "logs" / "interactions.jsonl",
+        [
+            {
+                "timestamp": started_at,
+                "type": "processing_started",
+                "session_id": session.session_id,
+                "channel_id": "CHEART",
+                "thread_ts": "1999.002",
+                "content": f"Starting new session {session.session_id}",
+                "metadata": {},
+            },
+            {
+                "timestamp": heartbeat_at,
+                "type": "processing_heartbeat",
+                "session_id": session.session_id,
+                "channel_id": "CHEART",
+                "thread_ts": "1999.002",
+                "content": "Still running",
+                "metadata": {"elapsed_seconds": 75, "pid": 4242},
+            },
+        ],
+    )
+
+    payload = _build_thread_sessions(cfg, "CHEART", "1999.002")
+    by_id = {item["session_id"]: item for item in payload["sessions"]}
+    active = by_id[session.session_id]
+
+    assert active["status"] == "active"
+    assert int(active["elapsed_seconds"]) >= 75
+    assert active["runner_pid"] == 4242

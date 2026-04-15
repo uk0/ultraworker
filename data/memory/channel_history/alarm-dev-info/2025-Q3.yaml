@@ -1,0 +1,43 @@
+channel:
+  id: C090FGSSRFT
+  name: alarm-dev-info
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 168
+  total_threads: 8
+  active_users: 6
+  avg_messages_per_date: 1.8
+summary: |
+  2025-Q3에는 STORM 최소 시나리오 테스트 구성이 개편되어 dev/qa 환경을 분리하여 각각 알림하는 방식으로 변경되었으며, 테스트 케이스 수도 17~18개로 조정되었다. 분기 초반(7월)에는 100% 통과율을 보이다가 7월 7일 76.47%, 7월 17~19일 88.89%, 7월 20일 72.22% 등 여러 차례 실패가 발생하였다. 실패 원인 조사 및 재실행이 이루어지며 안정화 작업이 지속되었고, 박진형·이재준·서반석 등이 수동 테스트를 실행하는 장면도 기록되었다.
+topics:
+  - name: "STORM 최소 시나리오 dev 환경 테스트"
+    mention_count: 130
+    description: "매일 오전 1시 dev 환경 STORM InternalAPI 최소 시나리오 17~18개 자동 실행 결과 알림"
+  - name: "테스트 실패 및 원인 조사"
+    mention_count: 8
+    description: "7월 7일(4개 실패), 7월 17~19일(2개 실패), 7월 20일(5개 실패) 등 간헐적 실패 발생 및 수동 재실행"
+  - name: "알림 메시지 마크다운 개선"
+    mention_count: 2
+    description: "7월 1일 박진형-이재준 간 알림 메시지에 마크다운 적용 시 가독성 향상 가능성 논의"
+key_discussions:
+  - thread_ts: '1751939284.000000'
+    date: '2025-07-07'
+    reply_count: 5
+    text_preview: "Total: 17, Passed: 13, Failed: 4, Passing Rate: 76.47%"
+  - thread_ts: '1752969600.000000'
+    date: '2025-07-20'
+    reply_count: 0
+    text_preview: "왜 실패하누 - Total: 18, Passed: 13, Failed: 5, Passing Rate: 72.22%"
+terminology:
+  - term: "STORM InternalAPI"
+    definition: "STORM 플랫폼 내부 API. 최소 시나리오 테스트의 대상 서비스"
+    aliases: []
+    context: "alarm-dev-info 채널의 자동 테스트 알림 대상"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

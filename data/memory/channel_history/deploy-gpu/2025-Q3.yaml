@@ -1,0 +1,78 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 39
+  total_threads: 17
+  active_users: 10
+  avg_messages_per_day: 2.4
+summary: |
+  2025년 3분기 deploy-gpu 채널에서는 GPU 서버 용량 관리, RunPod 자동 모니터링 봇 도입, CUDA 버전 업그레이드 논의 등이 주요 이슈였다.
+  7월에 베슬1 루트 파티션이 95% 도달하여 긴급 정리 작업이 진행되었으며, RunPod 사용 알림을 채널에 공유하는 규칙이 만들어졌다. 8월에는 RunPod 일일 현황 알림 봇(incoming-webhook)이 채널에 통합되어 Pod 생성/종료 현황을 자동으로 보고하기 시작하였다.
+  9월에는 베슬1번의 CUDA 12.1 버전을 12.8로 업그레이드하는 논의가 있었으며, Qwen3 Next 테스트 런, GRPO 실험, RunPod RTX 5090 8-way 실험 등 다양한 ML 실험이 진행되었다. VESSL AI IDC 하이퍼바이저 시스템 업그레이드 점검 일정도 안내되었다.
+topics:
+  - name: "베슬1 디스크 용량 부족"
+    mention_count: 3
+    description: "루트 파티션 95% 도달로 긴급 파일 정리 및 Docker 데이터 삭제 작업"
+  - name: "RunPod 모니터링 봇"
+    mention_count: 6
+    description: "8월 RunPod 일일 현황 알림 봇 도입, Pod 생성/종료 자동 알림 시작"
+  - name: "CUDA 버전 업그레이드"
+    mention_count: 2
+    description: "베슬1번 CUDA 12.1에서 12.8 업그레이드 가능 여부 논의"
+  - name: "Qwen3 Next 실험"
+    mention_count: 2
+    description: "베슬1번 8장으로 Qwen3 Next 테스트 런 진행"
+  - name: "GRPO 실험"
+    mention_count: 2
+    description: "베슬1번 8장에 GRPO(Gradient-based Reward Policy Optimization) 실험 실행"
+  - name: "VESSL AI IDC 점검"
+    mention_count: 1
+    description: "VESSL AI IDC 하이퍼바이저 업그레이드로 인한 서버 리부트 예정 안내 (9/27, 11/15)"
+key_discussions:
+  - thread_ts: '1753148880.000000'
+    date: '2025-07-22'
+    reply_count: 11
+    text_preview: "베슬1 루트 95% 도달, 긴급 파일 정리 요청 및 Docker 데이터 삭제 논의"
+  - thread_ts: '1753195200.000000'
+    date: '2025-07-25'
+    reply_count: 25
+    text_preview: "vessel 0,1,2,3 GPU 점유 예정 및 사용 조율"
+  - thread_ts: '1754841600.000000'
+    date: '2025-08-09'
+    reply_count: 20
+    text_preview: "vessel 2번 0~7번 GPU 점유 중 및 java 프로세스 확인 요청"
+  - thread_ts: '1758038400.000000'
+    date: '2025-09-16'
+    reply_count: 17
+    text_preview: "베슬1번 CUDA 12.1 -> 12.8 업그레이드 가능 여부 논의"
+  - thread_ts: '1758124800.000000'
+    date: '2025-09-16'
+    reply_count: 29
+    text_preview: "vessel 1번 8장 Qwen3 Next 테스트 런 (17일 오전까지 예정)"
+  - thread_ts: '1758631800.000000'
+    date: '2025-09-23'
+    reply_count: 12
+    text_preview: "베슬1번 8장에 GRPO 실험 실행, 필요 시 종료 가능"
+terminology:
+  - term: "베슬 (VESSL AI)"
+    definition: "사이오닉이 사용하는 AI 인프라 플랫폼. A100 GPU x8 서버 2대(베슬1, 베슬2) 운영"
+  - term: "RunPod"
+    definition: "GPU 클라우드 서비스. H100, RTX 5090 등 고성능 GPU를 시간 단위로 임대"
+  - term: "CUDA"
+    definition: "NVIDIA GPU 병렬 컴퓨팅 플랫폼 및 API. 버전에 따라 지원 라이브러리가 달라짐"
+  - term: "GRPO"
+    definition: "Gradient-based Reward Policy Optimization. 강화 학습 기반 언어 모델 학습 방법론"
+  - term: "Qwen3 Next"
+    definition: "Alibaba의 Qwen 시리즈 차세대 언어 모델"
+  - term: "IDC"
+    definition: "Internet Data Center, VESSL AI 서버가 위치한 데이터센터"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

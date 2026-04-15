@@ -1,0 +1,61 @@
+channel:
+  id: C06SUBV2Q0M
+  name: fyi-summary
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 303
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 4.7
+summary: |
+  2025-Q3는 요약봇이 business-common, engineering, research-common 채널을 지속적으로 요약하며 303개 메시지를 게시한 분기다. 주요 내용으로는 결제 시스템(토스페이먼츠/Stripe) 도입 논의, NIA 사업 예산 조정, 제품소개서 일본어 번역 완료, 스톰파스 API 상품화 기획, 파일론 검색 성능 10배 개선 작업, Qdrant 배치사이즈 이슈, IBK 성능 이슈 및 OpenTelemetry 반입 완료, SLM 논문 토론(NVIDIA), Vespa.ai 계층적 랭킹, SBERT v5.0.0 릴리즈(SparseEncoder 지원) 등이 있었다.
+topics:
+  - name: "결제 시스템 도입"
+    mention_count: 10
+    description: "토스페이먼츠 가입 및 심사(7~14일 소요), Stripe와 비교(글로벌 결제 vs 국내 결제), 단순 결제 링크 방식으로 1차 결정"
+  - name: "IBK 성능 이슈 및 안정화"
+    mention_count: 15
+    description: "IBK 내부 서비스 속도 문제(1rps, 33% 실패율), OpenTelemetry IBK 반입 완료, Qdrant 배치사이즈 버그 수정"
+  - name: "제품소개서 일본어 번역"
+    mention_count: 8
+    description: "48페이지 초벌 번역 완료, 7/3 오전 10:30 피드백 접수, 홈페이지 즉시 적용"
+  - name: "연구 논문 공유"
+    mention_count: 20
+    description: "SLM이 에이전트 시대에 적합한 7가지 이유(NVIDIA), Vespa.ai 계층적 랭킹, SBERT v5.0.0 SparseEncoder 지원, H200 GPU 논의"
+  - name: "스톰파스 API 상품화"
+    mention_count: 6
+    description: "API 상품화 기획안 피그마 공유, 12시 미팅 예정, 워딩 및 번역 이슈 수정"
+key_discussions:
+  - thread_ts: '1751385600.000000'
+    date: '2025-07-01'
+    reply_count: 0
+    text_preview: "결제 시스템 - 토스페이먼츠 국내, Stripe 글로벌. NIA 사업 예산 조정(PC 구매 임차 형태 변경)"
+  - thread_ts: '1751472000.000000'
+    date: '2025-07-02'
+    reply_count: 0
+    text_preview: "SLM 관련 NVIDIA 논문 - SLM이 에이전트 시대에 적합한 7가지 이유. Phi-2, Hymba, SmolLM2 등 모델 언급"
+  - thread_ts: '1751644800.000000'
+    date: '2025-07-03'
+    reply_count: 0
+    text_preview: "스톰파스 API 상품화 기획, 제품소개서 일본어 번역 완료, Qdrant 배치사이즈 버그 수정"
+terminology:
+  - term: "스톰파스(StormPass)"
+    definition: "사이오닉AI의 엔터프라이즈 솔루션. API 상품화 기획이 2025년 3분기에 진행됨"
+    aliases: ["Stormpass", "스톰파스", "stormparse"]
+    context: "API 상품화 기획 및 라이선스 판매 논의"
+  - term: "SparseEncoder"
+    definition: "SBERT v5.0.0에서 새롭게 지원하는 sparse embedding 인코더 기능"
+    aliases: []
+    context: "연구 채널에서 SBERT v5.0.0 릴리즈 공유 시 언급"
+  - term: "OpenObserve"
+    definition: "IBK 내부 환경에서 사용 예정인 오픈소스 관측성 도구. OpenTelemetry 반입 시 이슈 발생"
+    aliases: []
+    context: "IBK OpenTelemetry 반입 작업에서 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

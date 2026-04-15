@@ -1,0 +1,92 @@
+channel:
+  id: C08PNQ7QNR2
+  name: product-bug-report
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 94
+  total_threads: 83
+  active_users: 21
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 4분기 product-bug-report 채널은 STORM 플랫폼의 워크플로우, 에이전트, RAG 노드 등 다양한 기능에 걸친 버그 제보가 활발히 이루어졌다. 주요 이슈로는 워크플로우 저장 불가, if/else 노드 오동작, 오더시트 관련 버그, 출처 청크 미표시, 라이브 환경 전체 워크플로우 오류 등 심각도 높은 장애들이 포함되었다. HWP 파일 파싱 실패, 스톰파스 변환 오류, API 노드 POST 요청 불가 등 다양한 기능 영역에서 이슈가 확인되었으며, 21명의 팀원이 적극적으로 버그를 제보하고 대응하였다.
+topics:
+  - name: "워크플로우 버그"
+    mention_count: 25
+    description: "워크플로우 저장 불가, 노드 삭제 오류, if/else 노드 오동작, 오더시트 수정 불가 등 워크플로우 전반의 버그"
+  - name: "RAG 및 출처 청크"
+    mention_count: 10
+    description: "출처 청크 미표시, 검색 결과 없음, 출처 매칭 오류 등 RAG 관련 이슈"
+  - name: "에이전트 생성/관리"
+    mention_count: 8
+    description: "템플릿 에이전트 생성 버튼 클릭 불가, 에이전트명 미표시 등"
+  - name: "파일 업로드/파싱"
+    mention_count: 7
+    description: "HWP 파일 파싱 실패, 압축 PDF 업로드 후 학습 실패 등"
+  - name: "UI 표시 오류"
+    mention_count: 8
+    description: "언어 깨짐, 툴팁 오류, 스크롤 이상, 화면 터짐 등 UI 버그"
+  - name: "스톰파스"
+    mention_count: 5
+    description: "스톰파스 변환 실패, 후처리 노드 오동작"
+  - name: "권한/인증"
+    mention_count: 4
+    description: "쉐도우 계정 접근 거부, 로그인 세션 자주 만료, 팀 권한 오류"
+  - name: "API 노드"
+    mention_count: 4
+    description: "API 노드 POST 요청 불가, GET/POST 동작 차이 등"
+key_discussions:
+  - thread_ts: '1761640800.000000'
+    date: '2025-10-28'
+    reply_count: 50
+    text_preview: "라이브 환경 모든 에이전트 워크플로우 접속 시 오류 발생 - 전체 서비스 영향"
+  - thread_ts: '1764339480.000000'
+    date: '2025-11-18'
+    reply_count: 165
+    text_preview: "워크플로우 동작이 의도한 것과 다름 - 연결되지 않은 노드가 수행되는 현상 (캐리어 오더시트)"
+  - thread_ts: '1764427800.000000'
+    date: '2025-11-19'
+    reply_count: 52
+    text_preview: "오더시트가 의도한대로 동작 안하는 이슈 - if else 노드 전에 종료됨"
+  - thread_ts: '1764992400.000000'
+    date: '2025-11-27'
+    reply_count: 65
+    text_preview: "워크플로우가 저장이 안되는 이슈"
+  - thread_ts: '2025-11-13'
+    date: '2025-11-13'
+    reply_count: 46
+    text_preview: "쉐도우 계정으로 접근 시 무수히 많은 거부 발생"
+  - thread_ts: '1765468800.000000'
+    date: '2025-12-08'
+    reply_count: 48
+    text_preview: "HWP 파일 Parse가 안되는 문제"
+  - thread_ts: '1766390400.000000'
+    date: '2025-12-17'
+    reply_count: 31
+    text_preview: "로그 순서 오류 버그 제보"
+  - thread_ts: '1766809200.000000'
+    date: '2025-12-20'
+    reply_count: 30
+    text_preview: "API 노드에서 GET 요청은 잘 가는데 POST로 바꾸면 안되는 이슈"
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 AI 에이전트 플랫폼 서비스 (sionicstorm.ai)"
+  - term: "오더시트"
+    definition: "STORM 워크플로우의 JSON 기반 설정 편집 도구"
+  - term: "스톰파스"
+    definition: "STORM의 문서 파싱/변환 기능"
+  - term: "RAG 노드"
+    definition: "워크플로우에서 지식 검색을 수행하는 노드"
+  - term: "캐리어"
+    definition: "특정 고객사 또는 서비스 연동 에이전트를 지칭하는 내부 용어"
+  - term: "if/else 노드"
+    definition: "워크플로우 조건 분기 노드"
+  - term: "쉐도우 계정"
+    definition: "내부 테스트용 계정 (다크템플러 등)"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

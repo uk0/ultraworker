@@ -4,6 +4,7 @@ This module provides SessionManager for tracking and managing agent sessions,
 skill executions, and workflow graphs throughout the agent lifecycle.
 """
 
+import logging
 import uuid
 from datetime import datetime
 from pathlib import Path
@@ -90,6 +91,7 @@ class SessionManager:
         user_id: str,
         message: str,
         trigger_type: Literal["mention", "manual", "scheduled"] = "mention",
+        forked_from: str | None = None,
     ) -> AgentSession:
         """Create a new agent session.
 
@@ -99,6 +101,7 @@ class SessionManager:
             user_id: User who triggered the session
             message: Original message content
             trigger_type: How the session was triggered
+            forked_from: Session ID this session is forked from (for context continuity)
 
         Returns:
             The created AgentSession
@@ -114,6 +117,7 @@ class SessionManager:
             original_message=message,
             status=SessionStatus.ACTIVE,
             current_role=AgentRole.RESPONDER,
+            forked_from=forked_from,
         )
 
         # Create associated workflow graph
@@ -254,6 +258,44 @@ class SessionManager:
         for session_id in reversed(session_ids):
             session = self.get_session(session_id)
             if session:
+                return session
+        return None
+
+    def get_forkable_session_for_thread(
+        self,
+        channel_id: str,
+        thread_ts: str,
+        max_age_seconds: int | None = None,
+    ) -> AgentSession | None:
+        """Get the most recent completed/failed session for forking.
+
+        Returns the latest session in this thread that is in a terminal
+        state (completed or failed). Active sessions are excluded to
+        avoid data races in Claude's conversation storage.
+        """
+        forkable = {SessionStatus.COMPLETED, SessionStatus.FAILED}
+        thread_key = self._make_thread_key(channel_id, thread_ts)
+        index = self._load_thread_index()
+        session_data = index.get("threads", {}).get(thread_key)
+
+        if isinstance(session_data, str):
+            session_ids = [session_data]
+        elif isinstance(session_data, list):
+            session_ids = [str(sid) for sid in session_data if sid]
+        else:
+            return None
+
+        for session_id in reversed(session_ids):
+            session = self.get_session(session_id)
+            if not session or session.status not in forkable:
+                continue
+            if max_age_seconds is not None and max_age_seconds > 0:
+                terminal_ts = session.completed_at or session.updated_at or session.created_at
+                if terminal_ts is None:
+                    continue
+                age_seconds = (datetime.now() - terminal_ts).total_seconds()
+                if age_seconds > max_age_seconds:
+                    continue
                 return session
         return None
 
@@ -457,7 +499,66 @@ class SessionManager:
         if self._active_session_id == session_id:
             self._active_session_id = None
 
+        # Save LTM records on successful session completion
+        if success:
+            self._save_session_ltm(session)
+
         return True
+
+    def _save_session_ltm(self, session: AgentSession) -> None:
+        """Save RequestRecord + WorkRecord to LTM when a session completes.
+
+        This is the primary programmatic path for LTM saves, triggered by
+        complete_session() which the SDK poller calls after subprocess finishes.
+        """
+        try:
+            from ultrawork.agent.memory_manager import MemoryManager
+            from ultrawork.memory.save_policy import SaveContext
+
+            mm = MemoryManager(self.data_dir)
+
+            # 1. Save RequestRecord (the original request)
+            req = mm.create_request_record(
+                who=session.user_id or "unknown",
+                where=session.channel_id or "unknown",
+                what=session.original_message[:200] if session.original_message else "No message",
+            )
+            req_ctx = SaveContext(
+                record_type="request",
+                content_summary=session.original_message[:200] if session.original_message else "",
+                is_novel=True,
+                led_to_decision=True,
+                scope="cross_session",
+            )
+            mm.commit_record(req, req_ctx)
+
+            # 2. Save WorkRecord (the execution result)
+            outputs = [v for v in [
+                f"exploration:{session.exploration_id}" if session.exploration_id else "",
+                f"task:{session.task_id}" if session.task_id else "",
+            ] if v]
+            work = mm.create_work_record(
+                request_id=req.id,
+                step_id="session_complete",
+                who="claude",
+                why_kind="advance_step",
+                immediate_goal=f"Session processing: {session.original_message[:100]}",
+                actions=[{"action": "session_processing", "output": f"status={session.status.value}"}],
+                outputs=outputs,
+            )
+            work_ctx = SaveContext(
+                record_type="work",
+                content_summary=f"Session {session.session_id}: {session.original_message[:100]}",
+                is_novel=True,
+                led_to_decision=True,
+                scope="cross_session",
+            )
+            mm.commit_record(work, work_ctx)
+
+        except Exception:
+            logging.getLogger("ultrawork.session_manager").warning(
+                "LTM session save failed", exc_info=True
+            )
 
     def cancel_session(self, session_id: str, reason: str = "") -> bool:
         """Mark a session as cancelled.
@@ -644,7 +745,62 @@ class SessionManager:
             self._save_workflow(graph)
 
         self._save_execution(execution)
+
+        # LTM backup: save a WorkRecord as safety net for prompt-level /remember
+        if not error:
+            self._save_ltm_backup(execution)
+
         return True
+
+    def _save_ltm_backup(self, execution: SkillExecution) -> None:
+        """Save a WorkRecord as backup when prompt-level /remember is skipped.
+
+        This ensures at least minimal LTM records exist for every completed
+        skill execution, even if the Claude subprocess didn't invoke /remember.
+        """
+        try:
+            from ultrawork.agent.memory_manager import MemoryManager
+            from ultrawork.memory.save_policy import SaveContext
+
+            mm = MemoryManager(self.data_dir)
+
+            # Build a concise summary from execution data
+            summary = f"Skill execution: {execution.skill_name}"
+            if execution.output_data:
+                out_keys = list(execution.output_data.keys())[:3]
+                summary += f" (output keys: {', '.join(out_keys)})"
+
+            # Determine the session user for `who`
+            session = self.get_session(execution.session_id)
+            who = session.user_id if session else "system"
+
+            record = mm.create_work_record(
+                request_id="auto",
+                step_id=execution.skill_name,
+                who=who,
+                why_kind="advance_step",
+                immediate_goal=summary,
+                actions=[
+                    {"action": execution.skill_name, "output": str(execution.output_data)[:200]}
+                ],
+                inputs=list(execution.input_args.keys())[:5] if execution.input_args else [],
+                outputs=execution.artifacts[:5] if execution.artifacts else [],
+                evidence=[],
+            )
+            save_ctx = SaveContext(
+                record_type="work",
+                content_summary=summary,
+                is_novel=True,
+                led_to_decision=True,
+                scope="cross_session",
+                related_record_count=0,
+            )
+            mm.commit_record(record, save_ctx)
+        except Exception:
+            # Backup failure must never break main flow
+            logging.getLogger("ultrawork.session_manager").warning(
+                "LTM backup save failed", exc_info=True
+            )
 
     def get_execution(self, execution_id: str) -> SkillExecution | None:
         """Get a skill execution by ID."""
@@ -1026,6 +1182,25 @@ class SessionManager:
         if not session:
             return False
         session.update_stage(stage)
+        self._save_session(session)
+        return True
+
+    def update_runtime_metadata(
+        self,
+        session_id: str,
+        *,
+        runner_pid: int | None = None,
+        external_session_id: str | None = None,
+    ) -> bool:
+        """Update runtime metadata used for process/session tracking."""
+        session = self.get_session(session_id)
+        if not session:
+            return False
+
+        session.runner_pid = runner_pid
+        if external_session_id:
+            session.external_session_id = external_session_id
+        session.updated_at = datetime.now()
         self._save_session(session)
         return True
 

@@ -1,0 +1,28 @@
+channel:
+  id: C080TTP7V0S
+  name: storm-subscription-extend
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 2
+  active_users: 8
+  avg_messages_per_day: 1.8
+summary: |
+  2025-Q1에 구독 연장 문의 알림이 본격적으로 발생하기 시작하였다. 2월 15일에 첫 번째 ":bell: 구독 연장 문의 알림"이 기록되었고, 3월에 2건의 추가 알림이 발생하였다. 양호진, 최병현, 이재준, 김수원, 조하담 등 다수의 팀원이 채널에 참여하여 모니터링 체계를 갖추었다. 최병현이 "ㅇㅎ 있네"라고 확인한 것으로 보아 구독 연장 기능이 새로 도입된 시점이다.
+topics:
+  - 구독 연장 알림 시스템 가동 시작
+  - 모니터링 인원 확충
+key_discussions:
+  - thread_ts: '1742283989.590439'
+    date: '2025-03-18'
+    title: 구독 연장 문의 대응
+    summary: 3월 구독 연장 문의에 대한 팀 내 대응 (2개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

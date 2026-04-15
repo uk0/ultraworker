@@ -1,0 +1,90 @@
+channel:
+  id: C08PNQ7QNR2
+  name: product-bug-report
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 85
+  total_threads: 58
+  active_users: 23
+  avg_messages_per_day: 2.4
+summary: |
+  2025년 2분기는 product-bug-report 채널이 처음 개설된 시기로, 채널 생성 직후부터 STORM 플랫폼 전반에 걸친 다양한 버그 제보가 활발히 이루어졌다. 파일 업로드 후 검색 불가 이슈, 오더시트 버그, 청크 페이징 문제, PDF 뷰어 오류, 스게 API 버그 등 다양한 영역에서 이슈가 발생하였으며, 23명의 팀원이 참여하여 버그를 수집하고 수정하였다.
+topics:
+  - name: "파일 업로드/학습"
+    mention_count: 8
+    description: "파일 업로드 성공 후 검색 불가, 기등록 문서 재등록 거절, 엑셀 10만행 업로드 실패 등"
+  - name: "오더시트 버그"
+    mention_count: 6
+    description: "오더시트 수정 및 저장 불가, 관련 API 이슈"
+  - name: "청크/페이지 표시"
+    mention_count: 5
+    description: "청크 페이징 이슈, 출처 페이지 번호 오표시"
+  - name: "스게 API"
+    mention_count: 7
+    description: "stargate-web API 요청 실패, 피드백 API 에러, 오리진 ID 조회 인증 불가 등"
+  - name: "PDF 뷰어"
+    mention_count: 3
+    description: "PDF 뷰어 깨짐, 문서 뷰어 이슈"
+  - name: "권한/접근 제어"
+    mention_count: 4
+    description: "worker 권한으로 LLM 설정 접근 가능 버그, 초대 링크 권한 오류"
+  - name: "다국어/UI"
+    mention_count: 4
+    description: "일본어/영어 혼용 표시, 언어 설정 미반영"
+  - name: "E2E 테스트 실패"
+    mention_count: 2
+    description: "dev 환경 E2E 테스트에서 chat 결과 null 반환"
+key_discussions:
+  - thread_ts: '1745572680.000000'
+    date: '2025-04-25'
+    reply_count: 58
+    text_preview: "파일 업로드에 성공했다고 뜨지만 해당 파일이 검색 안되는 현상 (데브)"
+  - thread_ts: '1745816280.000000'
+    date: '2025-04-28'
+    reply_count: 54
+    text_preview: "캐리어 마이너 이슈 - 메타정보가 에이전트 언어 설정을 안따르는 현상"
+  - thread_ts: '1746008400.000000'
+    date: '2025-04-30'
+    reply_count: 47
+    text_preview: "18w 적용 이후 확인되는 청크 페이징 이슈"
+  - thread_ts: '1746538080.000000'
+    date: '2025-05-07'
+    reply_count: 30
+    text_preview: "stargate-web에서 api 요청 시 접근 불가능한 경우 (커넥션 timeout 등)"
+  - thread_ts: '1746623760.000000'
+    date: '2025-05-09'
+    reply_count: 45
+    text_preview: "재현할 수 없지만 방금 발생한 현상 제보"
+  - thread_ts: '1747124400.000000'
+    date: '2025-05-16'
+    reply_count: 86
+    text_preview: "오더시트 버그 이슈 스레드"
+  - thread_ts: '1748350080.000000'
+    date: '2025-05-28'
+    reply_count: 29
+    text_preview: "맥북 16인치에서 우측 버튼이 잘리는 UI 이슈"
+  - thread_ts: '1748873460.000000'
+    date: '2025-05-23'
+    reply_count: 134
+    text_preview: "페이지 멀리 떨어지는 이슈 재현 관련 논의"
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 AI 에이전트 플랫폼 서비스"
+  - term: "스게"
+    definition: "Stargate의 줄임말, Sionic AI의 검색 엔진 서비스"
+  - term: "오더시트"
+    definition: "STORM 워크플로우의 JSON 기반 설정 편집 도구"
+  - term: "스톰파스"
+    definition: "STORM의 문서 파싱/변환 기능"
+  - term: "파일런"
+    definition: "파일 처리 관련 내부 서비스"
+  - term: "캐리어"
+    definition: "특정 고객사 또는 서비스 연동 에이전트"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

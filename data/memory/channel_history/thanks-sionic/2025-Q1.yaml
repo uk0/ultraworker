@@ -1,0 +1,61 @@
+channel:
+  id: C08GN320Q1G
+  name: thanks-sionic
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 5
+  active_users: 4
+  avg_messages_per_day: 2.7
+summary: |
+  2025년 1분기 thanks-sionic 채널은 3월 7일 덕현님이 IBK 프로젝트에서 옵스 팀원들의 도움에 감사를 표하며 채널을 개설하였다.
+  채널 설명에는 "항상 도움받는 분들께 감사함을 표하고 싶어서 만들었습니다"라고 명시되어 있다.
+  3월에 IBK 배포 및 운영 관련 수고한 팀원들(명하님, 재준님, 욱님 등)에 대한 감사 메시지와, 신입 팀원의 첫 주 감사 인사, 제품소개서 작업을 도와준 팀원들에 대한 감사 메시지가 공유되었다.
+topics:
+  - name: "IBK 프로젝트 감사"
+    mention_count: 3
+    description: "IBK(IBK기업은행 관련 프로젝트) 배포 및 운영 지원에 대한 팀원 감사 표현"
+  - name: "신입 팀원 온보딩 감사"
+    mention_count: 1
+    description: "입사 첫 주 도움을 준 팀원들(혜원님, 덕현님 등)에 대한 신입 팀원의 감사 인사"
+  - name: "제품소개서 작업 감사"
+    mention_count: 1
+    description: "하루 만에 초안을 완성한 제품소개서 작업에서 도움을 준 팀원들에 대한 감사"
+key_discussions:
+  - thread_ts: '1741334460.000000'
+    date: '2025-03-07'
+    reply_count: 5
+    text_preview: "채널 개설 - IBK에서 옵스 팀원들 도움에 감사, 재준님 사진 공유"
+  - thread_ts: '1741959000.000000'
+    date: '2025-03-14'
+    reply_count: 8
+    text_preview: "IBK 서비스 배포 및 스톰파스/파일런 작업 수고 감사"
+  - thread_ts: '1741960680.000000'
+    date: '2025-03-14'
+    reply_count: 6
+    text_preview: "신입 팀원 입사 첫 주 감사 인사 - 혜원님, 덕현님께 특별 감사"
+  - thread_ts: '1742990400.000000'
+    date: '2025-03-26'
+    reply_count: 3
+    text_preview: "제품소개서 초안 작업 도움 - 혜원님과 병현님께 감사"
+terminology:
+  - term: "IBK"
+    definition: "IBK기업은행과 관련된 Sionic AI 프로젝트, 현장 배포 및 인프라 운영 포함"
+    aliases: ["IBK기업은행"]
+    context: "IBK 현장에서 스타게이트 도커 이미지 빌드, 배포, 스톰파스/파일런 작업 수행"
+  - term: "옵스 (Ops)"
+    definition: "Sionic AI의 운영 담당 팀, 배포 및 인프라 관리 역할"
+    aliases: ["ops", "운영팀"]
+    context: "IBK 현장 운영 지원, GoCD 배포 시스템 관리"
+  - term: "스톰파스"
+    definition: "Sionic AI의 내부 서비스 또는 모듈명"
+    aliases: []
+    context: "IBK 배포 관련 스톰파스 및 파일런 작업 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

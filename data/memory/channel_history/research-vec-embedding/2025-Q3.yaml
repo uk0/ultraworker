@@ -1,0 +1,45 @@
+channel:
+  id: C07MK1QMWV6
+  name: research-vec-embedding
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 7
+  total_threads: 3
+  active_users: 4
+  avg_messages_per_day: 1.2
+summary: |
+  2025-Q3 research-vec-embedding 채널의 활동량은 적었으나, 리랭커 최신 연구(ZeRank-1B/4B)와 임베딩 모델 아키텍처 비교(Encoder vs. Decoder 사전학습) 등 핵심 논문이 공유되었다. Pinecone DIME(차원 중요도 추정) 연구, BAAI Matryoshka Re-Ranker, Gemini Embedding-001 GA 릴리즈, ETTIN 인코더·디코더 비교 연구 등이 주요 공유 내용이었다.
+topics:
+  - name: "리랭커 최신 연구"
+    mention_count: 3
+    description: "ZeRank(4B/1.4B 리랭커, Cohere 3.5 이상 성능), Matryoshka Re-Ranker(가변 깊이/폭) 리뷰"
+  - name: "임베딩 아키텍처 비교"
+    mention_count: 2
+    description: "ETTIN: 인코더 vs. 디코더 사전학습 비교. 분류에는 인코더, 생성에는 디코더가 우세"
+  - name: "차원 중요도 추정"
+    mention_count: 1
+    description: "Pinecone DIME: 쿼리별 중요 임베딩 차원을 추정해 검색 품질 향상(+3~5 nDCG@10)"
+key_discussions:
+  - thread_ts: '1752710400.000000'
+    date: '2025-07-09'
+    reply_count: 3
+    text_preview: "ZeRank-1B/4B 리랭커 공유: Cohere Reranker 3.5보다 우수한 성능"
+  - thread_ts: '1752746400.000000'
+    date: '2025-07-14'
+    reply_count: 1
+    text_preview: "Gemini Embedding-001 GA 릴리즈 공유"
+terminology:
+  - term: "ZeRank"
+    definition: "4B와 1.4B 파라미터 리랭커 모델로 Cohere Reranker 3.5보다 우수한 성능을 보이는 오픈소스 모델"
+  - term: "DIME(Dimension Importance Estimation)"
+    definition: "쿼리별로 중요한 임베딩 차원을 추정하여 노이즈 차원을 마스킹함으로써 검색 품질을 향상시키는 방법"
+  - term: "Matryoshka Re-Ranker"
+    definition: "BAAI에서 제안한 가변 깊이·폭 리랭커 아키텍처로 연산 효율과 정확도를 균형 있게 조절"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

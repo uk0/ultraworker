@@ -1,0 +1,209 @@
+channel:
+  id: C06C7N3U4TY
+  name: product-storm-platform
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 136
+  total_threads: 73
+  active_users: 12
+  avg_messages_per_day: 1.5
+summary: |
+  Carrier MVP 개발 및 연동이 본격 진행된 가장 활발한 분기. 모듈 역할 분담(Stargate: 계정/팀/권한/로깅/빌링/주문서/deploy,
+  Carrier: 주문서 받아 구동, 문서 업로드 모듈: 파일론에서 분리)이 확정됨.
+  김덕현(Dekay)이 Carrier MVP 테크스펙을 Notion에 작성하고 공유. swkim0512(수원)이 Carrier 개발을 담당하며
+  코틀린/스프링 베이스라인으로 구축. 주문서(Order Sheet) 포맷을 YAML/JSON으로 정의하고 여러 차례 수정/개선.
+  storm/llm, storm/rag 노드 타입의 import/export properties 설계가 반복적으로 논의됨.
+  김혜원이 Carrier QA를 집중적으로 진행하며 다수 이슈 발견: 에러 코드 정의(RAG, Open LLM), 로그 파일 저장/조회,
+  Task ID + Node ID 헤더 추가, 간헐적 커넥션 끊김, Stream 처리 이슈(SSE vs callback 방식) 등.
+  Carrier-Stargate 연동 시 스트림 응답 타입 문제가 주요 기술 이슈로 부상.
+  2024-09-12 스게 라이브 배포 완료. Pylon v2 경로 변경 대응도 진행.
+  띵스플로우 비즈 요청으로 프롬프트에 API 변수값 삽입 기능 필요성이 제기되었으나 후순위로 판단.
+topics:
+  - name: Carrier MVP 개발
+    description: Carrier 프로젝트 MVP 요건 정의, 테크스펙 작성, 코틀린/스프링 개발
+    message_count: 25
+    participants:
+      - 김덕현
+      - swkim0512
+      - 김혜원
+      - 송명하
+  - name: 주문서(Order Sheet) 설계
+    description: 주문서 포맷(YAML/JSON) 정의, 노드 타입별 properties, 템플릿 변수 {{변수명}} 설계
+    message_count: 20
+    participants:
+      - 김덕현
+      - swkim0512
+      - 김혜원
+      - 신희수
+  - name: Carrier QA
+    description: 김혜원 중심의 Carrier QA 진행. 에러 처리, 로그, 커넥션, 스트림 등 다수 이슈 발견/수정
+    message_count: 40
+    participants:
+      - 김혜원
+      - swkim0512
+      - 신희수
+      - jinu
+  - name: Carrier-Stargate 연동
+    description: Carrier와 Stargate 간 API 연동, 응답 타입(callback vs event-stream) 논의
+    message_count: 15
+    participants:
+      - jinu
+      - swkim0512
+      - 김혜원
+      - 신희수
+      - 김덕현
+  - name: 스트림 처리 이슈
+    description: 스트림 응답 방식(callback vs SSE) 결정. 마지막 노드만 스트림, sequence_body에 스트림 여부 추가
+    message_count: 10
+    participants:
+      - jinu
+      - swkim0512
+      - 김덕현
+      - 김혜원
+  - name: 라이브 배포
+    description: Stargate 라이브 배포(2024-09-12) 및 Carrier live 환경 준비
+    message_count: 5
+    participants:
+      - 김혜원
+      - swkim0512
+      - 신희수
+  - name: Flowise/Langflow 검증
+    description: 마크스폰, 한국자산평가 케이스로 Flowise 검증. 세민이 Langflow/Flowise 데모 제작
+    message_count: 10
+    participants:
+      - 김혜원
+      - 정세민
+      - 송명하
+  - name: Pylon 분리 실행
+    description: Pylon에서 Open LLM 교체, 프롬프팅 분리 등 실행 단계 진행
+    message_count: 5
+    participants:
+      - 김혜원
+      - jinu
+      - 송명하
+key_discussions:
+  - thread_ts: '1719898059.768559'
+    title: Flowise 유사 솔루션 탐색
+    summary: 김혜원이 Flowise 비슷한 솔루션 탐색 시작. 118개 답글로 매우 활발한 논의.
+    participants:
+      - 김혜원
+      - 정세민
+      - 송명하
+    reply_count: 118
+  - thread_ts: '1723614679.753109'
+    title: Carrier 테스트 주문서 QA
+    summary: 김혜원이 테스트하고 싶은 주문서를 공유하고 QA 진행. 70개 답글.
+    participants:
+      - 김혜원
+      - 김덕현
+      - swkim0512
+    reply_count: 70
+  - thread_ts: '1724670077.639349'
+    title: contexts API 메타정보 정리
+    summary: feedback 청크 삽입 방식 등 contexts API 메타정보 정리 및 캐리어 대응 논의. 55개 답글.
+    participants:
+      - 김혜원
+      - swkim0512
+    reply_count: 55
+  - thread_ts: '1724823577.314619'
+    title: Carrier 로그 확인 방법 논의
+    summary: 신희수가 carrier 실행 로그 확인 방법을 질문. 로그 조회 기능 개선 논의. 51개 답글.
+    participants:
+      - 신희수
+      - swkim0512
+    reply_count: 51
+  - thread_ts: '1719971704.622179'
+    title: 한국자산평가 Flow 설계
+    summary: 한국자산평가 케이스의 Flow 구성 방법 논의. 42개 답글.
+    participants:
+      - 김혜원
+      - 정세민
+    reply_count: 42
+  - thread_ts: '1726731005.207239'
+    title: 오더시트 내용 처리 누락 발견
+    summary: 김혜원이 오더시트 중 캐리어에서 처리 누락되는 부분 발견. 42개 답글.
+    participants:
+      - 김혜원
+      - swkim0512
+      - jinu
+    reply_count: 42
+  - thread_ts: '1725945871.734179'
+    title: Carrier 라이브 배포 일정
+    summary: 신희수가 carrier live 배포 일정 확인. 39개 답글.
+    participants:
+      - 신희수
+      - swkim0512
+    reply_count: 39
+  - thread_ts: '1721641398.504899'
+    title: 아키텍처 및 테크스펙 협의 주간
+    summary: 김혜원이 아키텍처 설계/테크스펙 작성 주간 계획 공유. 모듈별 정보 전달 및 값 fix. 37개 답글.
+    participants:
+      - 김혜원
+      - 김덕현
+      - swkim0512
+      - 송명하
+    reply_count: 37
+  - thread_ts: '1725505334.122019'
+    title: 스게-캐리어 응답 타입 이슈
+    summary: jinu가 스게-캐리어 간 스트림 응답 타입 문제를 공유. callback vs event-stream 해결안 2가지 제시. 37개 답글.
+    participants:
+      - jinu
+      - 김혜원
+      - swkim0512
+    reply_count: 37
+    decision: 스트림 처리는 마지막 노드만 스트림, sequence_body에 스트림 여부 추가
+  - thread_ts: '1725611427.314439'
+    title: Properties 타입 및 extra 필드 논의
+    summary: 신희수가 properties value 타입과 extra 필드 참조 방법을 질문. 73개 답글로 가장 긴 기술 논의.
+    participants:
+      - 신희수
+      - swkim0512
+      - 김혜원
+    reply_count: 73
+  - thread_ts: '1727331673.925259'
+    title: Carrier 후속 작업 정리
+    summary: 김혜원이 캐리어 남은 후속작업을 확인. 31개 답글.
+    participants:
+      - 김혜원
+      - swkim0512
+    reply_count: 31
+terminology:
+  - term: Stargate (스게)
+    definition: Storm의 웹 프론트엔드/API 서버. 계정/팀/권한, 로깅, 빌링, 주문서 만들기, deploy 담당.
+    aliases:
+      - 스게
+      - 스타게이트
+  - term: Carrier (캐리어)
+    definition: 주문서 기반 워크플로우 실행 엔진. 코틀린/스프링으로 개발. Stargate에서 주문서를 받아 구동.
+    aliases:
+      - 캐리어
+  - term: Order Sheet (주문서)
+    definition: 에이전트 실행 워크플로우를 정의하는 문서. YAML/JSON 포맷. 템플릿 변수는 {{변수명}} 형식.
+    aliases:
+      - 오더시트
+  - term: Open LLM
+    definition: LLM 호출 통합 모듈. Pylon이 호출하던 모든 LLM(하클, 클로드 등)을 대응.
+  - term: storm/llm
+    definition: Carrier 노드 타입 중 하나. LLM 호출을 담당하는 노드.
+  - term: storm/rag
+    definition: Carrier 노드 타입 중 하나. RAG(검색 증강 생성)를 담당하는 노드.
+  - term: import_properties
+    definition: 이전 노드의 출력을 현재 노드의 입력으로 가져오는 속성.
+  - term: export_properties
+    definition: 현재 노드의 출력을 다음 노드로 전달하는 속성.
+  - term: sequence_body
+    definition: Stargate가 Carrier에 전송하는 실행 요청 본문. 스트림 여부 등 포함.
+  - term: ComfyUI
+    description: 이미지 생성 AI 워크플로우 도구. Order sheet 제작 가능성 검토됨.
+  - term: 띵스플로우
+    definition: 고객사. 프롬프트에 API 변수값 삽입 기능을 요청.
+    aliases:
+      - ThingsFlow
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-channel-history-sync

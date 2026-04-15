@@ -1,0 +1,77 @@
+channel:
+  id: C07DU5YBH50
+  name: product-storm-qa
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 171
+  total_threads: 124
+  active_users: 13
+  avg_messages_per_day: 5.9
+summary: |
+  2024-Q3는 product-storm-qa 채널이 신설된 분기로, 7월 24일 김혜원이 QA 전용 채널로 개설하였다.
+  주요 QA 활동은 에이전트 빌더 UI(프롬프트 설정, 파라미터 조정, 모드 전환), LLM 모델 설정 기능(Azure/OpenAI 전환, JSON 파라미터 입력),
+  프리즈마 이관 검증, 대시보드(호출수/토큰수 차트, 다운로드 기능), 답변출처(trust score) 노출,
+  pre-retrieval recipe 테스트, 캐리어 연동(오더시트, 배포, 다국어 지원), 에이전트 생성 UI 개선,
+  권한설정 UI 등 광범위한 STORM 제품 기능 검증이 진행되었다.
+  주요 참여자는 김혜원(QA 리드), 백은주(FE 개발), 신희수(BE 개발), 조하담(BE 개발),
+  eun.juuu0(FE 개발), Sigrid Jin(BE/검색엔진), 김덕현(버그 리포팅) 등이다.
+topics:
+  - 에이전트 빌더 QA
+  - LLM 모델 설정 (Azure, OpenAI, Gemini, Xionic)
+  - 프리즈마 이관 검증
+  - 대시보드 (호출수, 토큰수 차트)
+  - pre-retrieval recipe
+  - 캐리어 연동 및 오더시트
+  - 답변출처 및 trust score
+  - 에이전트 생성 UI 개선
+  - 권한설정 UI
+  - 파일 업로드 확장자 체크
+key_discussions:
+  - date: '2024-07-24'
+    topic: QA 채널 개설 및 에이전트 빌더 초기 QA
+    summary: 김혜원이 QA 전용 채널을 개설하고, 에이전트 빌더의 프롬프트 설정, 파라미터 조정, stop sequence, 모드 전환 등 다수의 UI 이슈를 제보함
+    participants: [김혜원, eun.juuu0, 백은주]
+  - date: '2024-07-29'
+    topic: 프리즈마 이관 QA
+    summary: 프리즈마 DB 이관 후 문서 관리, 피드백 등록, 프롬프트 버전 관리, 채널 필터링 등의 이슈 검증
+    participants: [김혜원, 백은주, 신희수, 조하담]
+  - date: '2024-08-06'
+    topic: LLM 모델 설정 기능 QA
+    summary: OpenAI/Azure 모델 전환, JSON 파라미터 입력, xionic 모델 호출, 모델 활성화/비활성화 관리 등 전수 모델 테스트 진행
+    participants: [김혜원, 백은주, 조하담]
+  - date: '2024-08-12'
+    topic: 대시보드 및 pre-retrieval recipe QA
+    summary: 호출수/토큰수 대시보드 차트 UI 개선, 날짜 필터, 다운로드 기능 QA와 함께 BM25 기반 pre-retrieval recipe 테스트 완료
+    participants: [김혜원, 백은주, Sigrid Jin]
+  - date: '2024-09-10'
+    topic: 캐리어 연동 테스트
+    summary: RAG on/off, 프로모드, 배포, 피드백, 일본어 다국어 등 캐리어 연동 종합 테스트. 오더시트 리비전 미적용, 디폴트 프롬프트 언어 오류 등 발견
+    participants: [김혜원, 신희수, 조하담, 백은주]
+  - date: '2024-09-24'
+    topic: trust score 및 다른 엔드포인트 캐리어 연동
+    summary: trust score 노출 확인, STM-1605(다른 엔드포인트 Carrier 연동), 카카오 연동, 젬미니 호출 에러 테스트
+    participants: [김혜원, 신희수]
+terminology:
+  - term: 오더시트 (Order Sheet)
+    definition: 캐리어 엔진의 실행 설정을 정의하는 JSON 구조. 노드(RAG, LLM, Response 등)와 링크로 구성
+    context: 에이전트의 RAG/LLM 파이프라인 실행 순서와 설정을 관리
+  - term: 캐리어 (Carrier)
+    definition: STORM의 워크플로우 실행 엔진. 오더시트에 따라 RAG, LLM, 후처리 등 노드를 순차/병렬 실행
+    context: 에이전트의 질의응답 파이프라인을 처리하는 백엔드 서비스
+  - term: 파일론 (Pylon)
+    definition: 문서 관리 및 RAG용 벡터 저장을 담당하는 서비스
+    context: 문서 업로드, 폴더 관리, 청크 검색 등을 처리
+  - term: trust score
+    definition: LLM 답변의 신뢰도 점수. 레이블링된 청크의 리랭크 스코어 기반으로 계산
+    context: 답변출처에서 신뢰도를 수치로 표시하여 사용자에게 제공
+  - term: pre-retrieval recipe
+    definition: RAG 검색 전에 수행되는 전처리 레시피. BM25 등의 모델로 사전 검색 수행
+    context: 기존 retrieval recipe 전에 별도 검색 파이프라인을 추가하는 기능
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

@@ -1,0 +1,43 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 14
+  total_threads: 10
+  active_users: 7
+  avg_messages_per_day: 1.1
+summary: |
+  2024년 2분기에는 구글코리아 DevRel 팀의 Gemini 관련 발표 요청, Pinecone 내한 행사 참여 기회, 한림과학원·충남대 특강, AI 협회 발표 등 다양한 외부 강연이 진행되었다. 파이콘 한국 스폰서 참여와 세션 연계 방안도 논의되었으며, 영숙님이 배치처리 등 기술 주제로 발표 소스를 외부 강연에 연계할 수 있다는 의견을 제시하였다. 쿠버네티스 테크 세미나 발표도 공유되었다.
+topics:
+  - name: "구글 행사 발표"
+    mention_count: 4
+    description: "구글코리아 DevRel 팀 Gemini 관련 발표 요청, 4/27 토요일 행사"
+  - name: "파이콘 한국 스폰서"
+    mention_count: 4
+    description: "파이콘 한국 스폰서 참여 및 세션 연계 논의"
+  - name: "외부 특강"
+    mention_count: 4
+    description: "한림과학원, 충남대, 서울대, AI 협회 등 외부 기관 특강 진행"
+key_discussions:
+  - thread_ts: '1714807440.000000'
+    date: '2024-04-04'
+    reply_count: 14
+    text_preview: "구글코리아 DevRel 팀 Gemini 관련 발표 요청 접수 - 4/27 토 행사"
+  - thread_ts: '1722170460.000000'
+    date: '2024-07-28'
+    reply_count: 27
+    text_preview: "파이콘 한국 스폰서 참여 검토 - 세션 우선권 및 비용 문의"
+terminology:
+  - term: "Pinecone"
+    definition: "벡터 데이터베이스 분야 유명 기업으로 한국 행사 개최"
+    aliases: []
+    context: "벡터 DB 관련 외부 발표 기회"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

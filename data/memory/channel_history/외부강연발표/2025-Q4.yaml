@@ -1,0 +1,77 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 56
+  total_threads: 44
+  active_users: 12
+  avg_messages_per_day: 1.4
+summary: |
+  2025년 4분기에는 OpenAI Dev Day Korea 부스 전시, LB AI Day 발표, Spring AI Meetup 발표(하담님), Python 심포지움 발표, OCI OKE Terraform 기획, 컴퓨터월드 특집 취재, 요즘IT 기고, InstructKR x Sionic AI 해커톤, Oracle AI Summit, 클코 밋업, 당근 이벤트 협업, FastCampus Builderthon 등 다양한 대외 발표와 홍보 활동이 이루어졌다. 연사 요청이 3일 연속 들어오는 등 대표님의 외부 강연 수요가 급증하였다.
+topics:
+  - name: "OpenAI Dev Day Korea"
+    mention_count: 10
+    description: "OpenAI Dev Day Korea 부스 전시 요청 및 준비 논의"
+  - name: "Spring AI 밋업 발표"
+    mention_count: 8
+    description: "하담님 Spring AI Meetup 발표 - 10/26 성황리 완료"
+  - name: "요즘IT 기고 및 미디어"
+    mention_count: 6
+    description: "진형님 요즘IT 기고, 컴퓨터월드 강성우 연구원 특집 취재"
+  - name: "InstructKR 해커톤"
+    mention_count: 5
+    description: "IntrcutKR x Sionic AI 해커톤 행사 당일 준비 및 진행"
+  - name: "연사 요청 급증"
+    mention_count: 5
+    description: "LB 인베스트먼트 AI 강연, 더벨 스타트업 어워즈, 한국투자파트너스 세미나 등 3일 연속 연사 요청"
+key_discussions:
+  - thread_ts: '1729003500.000000'
+    date: '2025-10-15'
+    reply_count: 110
+    text_preview: "OpenAI Dev Day Korea 부스 전시 요청 논의"
+  - thread_ts: '1730209800.000000'
+    date: '2025-10-26'
+    reply_count: 0
+    text_preview: "Spring AI Meetup 발표 성공적 완료 - 사이오닉 홍보도 진행"
+  - thread_ts: '1731283140.000000'
+    date: '2025-11-11'
+    reply_count: 34
+    text_preview: "컴퓨터월드 강성우 연구원 데이터 파싱 및 청킹 솔루션 특집 취재"
+  - thread_ts: '1731372540.000000'
+    date: '2025-11-12'
+    reply_count: 26
+    text_preview: "LLM 오케스트레이션 책 집필 제안 관련 논의"
+  - thread_ts: '1733067840.000000'
+    date: '2025-12-01'
+    reply_count: 34
+    text_preview: "호진님 요즘IT 기고 팔로업 요청"
+  - thread_ts: '1734657600.000000'
+    date: '2025-12-19'
+    reply_count: 2
+    text_preview: "요즘IT 2026년 1월 호진님 복잡한 문서 구조 AI 처리 라이브 세미나"
+  - thread_ts: '1735226280.000000'
+    date: '2025-12-26'
+    reply_count: 57
+    text_preview: "커뮤니티 매니저님 당근 이벤트 협업 논의"
+terminology:
+  - term: "InstructKR"
+    definition: "인스트럭트한국 - AI 기술 커뮤니티 밋업 및 해커톤 행사"
+    aliases: ["인스트럭트한국", "Instruct Korea"]
+    context: "Sionic AI와 공동 해커톤 개최"
+  - term: "StormParse"
+    definition: "Storm Platform의 문서 파서 기능 - 복잡한 PDF 표·그래프 처리"
+    aliases: ["스톰파스", "Storm Parse"]
+    context: "외부 발표 및 데모의 핵심 소재"
+  - term: "요즘IT"
+    definition: "위시켓이 운영하는 개발자/IT 콘텐츠 플랫폼"
+    aliases: []
+    context: "진형님 및 호진님 기고 및 라이브 세미나 진행"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

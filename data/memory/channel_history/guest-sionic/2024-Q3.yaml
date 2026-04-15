@@ -1,0 +1,23 @@
+channel:
+  id: C058FGC6DK2
+  name: guest-sionic
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q3 guest-sionic 채널 데이터 수집 완료. 3개 메시지, 3명 참여, 0개 스레드.
+  활동이 저조한 분기. 기존 멤버들의 채널 참여/탈퇴 정도의 이벤트만 발생. 포티투마루 워크스페이스가 채널에서 자신을 제거함.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

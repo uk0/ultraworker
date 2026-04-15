@@ -1,0 +1,109 @@
+channel:
+  id: C058VN1LUKE
+  name: standup
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1067
+  total_threads: 377
+  active_users: 21
+  avg_messages_per_day: 14.0
+summary: |
+  2024년 2분기는 사이오닉 AI의 비즈니스 확장과 투자 유치가 집중된 분기였다.
+  Noah(고석현)가 일본(SBI, 소프트뱅크), KT, LG U+, 현대차, 카카오, 수협, 매경, 국가기록원 등
+  다수의 고객사/투자사 미팅을 수행하며 사업 개발에 주력했다.
+  정부 과제로는 RAG 벡터 시멘틱 검색 가속 과제(메티스/서울대 협업, 최대 50억/30개월),
+  데이터 바우처(0.6억), 초기창업패키지(1억), 포티파이 심리상담 과제 등을 진행했다.
+  기술적으로는 수협 RAFT 데이터 증강 + Hyde 방식 RAG 부스팅 실험, llama3 모델 튜닝,
+  AWS 베드록 프로그램 검토, 기술보증기금 20억 규모 신용보증 획득 등의 성과가 있었다.
+  Sigrid Jin은 미국 출장 중 Databricks/AI Engineer 행사 참석, allganize RAG 평가,
+  LanceDB CEO 발표에서 메티스 부사장과 만남 등의 활동을 했다.
+  song은 랭체인코리아 밋업 참석, 데이터 바우처 공급기관 계약, 논문 저널 등재(JDMDH) 등을 진행했다.
+  고성능 NAS 장비(약 1억, 시장가 9억 상당)를 도입하여 내부 인프라를 강화했다.
+topics:
+  - 일본 진출 탐색 (SBI, 소프트뱅크 IR/미팅)
+  - KT AICC팀 미팅 및 B2C 사업 논의
+  - LG U+ 전략적 투자 IR (CSO 및 임원급 20여명 참석)
+  - 현대차 남양연구소 미팅
+  - 수협 RAFT 데이터 증강 + Hyde RAG 부스팅 실험
+  - llama3 8B/70B 한국어 모델 튜닝
+  - 정부 과제 (RAG 벡터 가속 50억, 데이터 바우처 0.6억, 초창패 1억)
+  - 기술보증기금 20억 신용보증 획득
+  - 고성능 NAS 장비 도입 (1억, 시장가 ~9억)
+  - AWS 베드록 프로그램 검토
+  - 채용 활동 (ML+DATA+Back 엔지니어 커피챗, 파트타임 제안)
+  - 회사 기술 플랫폼 목표 정의 작업
+  - allganize RAG 파이프라인 평가 (리랭커/임베딩 영향도)
+  - 논문 저널 등재 (JDMDH)
+key_discussions:
+  - date: '2024-04-09'
+    summary: 디캠프 일본 지원사업 피칭 완료, 기술 블로그와 아티클이 가장 임팩트 있었음
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-04-23'
+    summary: RAG 벡터 시멘틱 검색 가속 정부 과제 진행 (메티스/서울대, 최대 50억/30개월)
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-04-24'
+    summary: 고성능 NAS 장비 입고 완료 (시장가 약 9억, 실 도입가 1억 이내)
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-04-26'
+    summary: LG U+ IR - CSO 및 전무급 이상 4명, 20여명 참석, 후속 논의 예정
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-05-07'
+    summary: 수협 데이터 RAFT 증강 + Hyde + 임베딩 모델 RAG 부스팅 결과 정리
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-05-08'
+    summary: 데이터 바우처 0.6억 선정, 초창패 1억 진행, AI 반도체 벡터DB 과제 8~9억 협의
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-06-03'
+    summary: 기술 플랫폼 목표 정리 슬라이드 작성 및 전사 세션 제안
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-06-11'
+    summary: 기보 딜 마무리, 토큰 조정 방식 모델 튜닝 (전체 5등, 네이버 추월), 포티파이 과제 발표
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-06-25'
+    summary: 기술보증기금 보증 절차 완료 - 20억 규모 신용보증 자산 획득
+    participants:
+      - Noah ( 고석현 )
+terminology:
+  - term: "RAFT"
+    definition: "Retrieval Augmented Fine-Tuning - 검색 증강 파인튜닝 기법"
+    aliases: []
+  - term: "Hyde"
+    definition: "Hypothetical Document Embedding - 가상 문서 생성을 통한 검색 부스팅 기법"
+    aliases: []
+  - term: "초창패"
+    definition: "초기창업패키지 - 정부 창업 지원 사업 (약 1억 규모)"
+    aliases: ["초기창업패키지"]
+  - term: "NAS"
+    definition: "Network Attached Storage - 네트워크 연결 스토리지, 내부 서비스 운영/테스트용으로 도입"
+    aliases: []
+  - term: "기보"
+    definition: "기술보증기금 - 기술력 기반 신용보증 기관"
+    aliases: ["기술보증기금"]
+  - term: "데이터 바우처"
+    definition: "정부 데이터 구매 지원 사업 (0.6억 선정)"
+    aliases: []
+  - term: "OpenGateway"
+    definition: "사이오닉 AI의 신규 상품, 고객사가 원하는 LLM을 자유롭게 선택 가능한 서비스"
+    aliases: []
+  - term: "테디노트"
+    definition: "유튜버/강의 회사 운영자 (경록님), 기업 실무자 대상 RAG 강의 진행"
+    aliases: []
+  - term: "디캠프"
+    definition: "D.CAMP - 은행권 청년창업재단 운영 스타트업 지원 기관"
+    aliases: ["D.CAMP"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

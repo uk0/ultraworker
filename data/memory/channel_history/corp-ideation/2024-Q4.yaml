@@ -1,0 +1,120 @@
+channel:
+  id: C057EPS43QW
+  name: corp-ideation
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 5
+  total_threads: 5
+  active_users: 7
+  avg_messages_per_day: 0.05
+summary: |
+  2024-Q4 saw diverse ideation activity across corporate culture, product innovation, and
+  content strategy. Key topics included standardizing Slack profile formats for better
+  internal communication, a B2C side-project idea ("N-bbang Bot" for fair bill splitting
+  using LLM + vision), an internal AI knowledge-sharing session concept pairing experts
+  with non-experts, content marketing strategy discussions with plans to create tutorial
+  videos using Storm product, and CES demo preparation ideas. The quarter showed strong
+  creative energy with multiple team members proposing and collaborating on ideas.
+
+key_discussions:
+  - topic: "Slack Profile Format Standardization"
+    date: "2024-10-11"
+    participants:
+      - "김덕현 (Dekay)"
+      - "김혜원"
+      - "최병현 Hyune-c"
+    summary: |
+      Dekay proposed standardizing Slack profile formats as the team grew, making email
+      and verbal communication difficult. Suggested format: Korean name first with English
+      name in parentheses (e.g., '김덕현 (Dekay)'), plus adding email and emergency contact
+      to profiles. Guidelines were added to an existing Notion onboarding guide.
+    outcome: "Profile format guidelines documented in Notion onboarding page and shared with the team."
+
+  - topic: "N-bbang Bot - Fair Bill Splitting Service Idea"
+    date: "2024-10-28"
+    participants:
+      - "김혜원"
+      - "정세민 (Sem)"
+      - "hyunwoo"
+    summary: |
+      김혜원 proposed a B2C side-project idea called '공평한 엔빵봇' (Fair N-bbang Bot) that
+      uses LLM and vision AI to fairly split bills. Users upload a receipt photo, specify
+      attendees and special conditions (who arrived late, who did not drink, etc.), and the
+      bot calculates fair per-person amounts. The team agreed to build it as a web app as a
+      side project. 정세민 later created a Notion requirements doc, and hyunwoo volunteered
+      for frontend development using React Native.
+    outcome: |
+      Side project initiated. Notion requirements document created. Pending API spec
+      documentation for hyunwoo to begin frontend work. Plans to potentially use it as
+      a CES demo showcase.
+
+  - topic: "AI Knowledge Sharing Session Idea"
+    date: "2024-11-13"
+    participants:
+      - "김혜원"
+      - "Sigrid Jin / Jin Hyung Park"
+      - "정세민 (Sem)"
+      - "최병현 Hyune-c"
+    summary: |
+      김혜원 proposed an internal session concept where a non-expert explains AI concepts
+      with an expert (Sigrid Jin) providing real-time corrections and deeper explanations.
+      Inspired by Wired's '5 Levels' video format. The idea was to create accessible AI
+      education content that could also serve as YouTube material, building a non-expert
+      terminology glossary as a byproduct.
+    outcome: "Concept discussed positively. Suggested recording as potential YouTube content with GPT-assisted summaries."
+
+  - topic: "Content Marketing Strategy and CES Demo Planning"
+    date: "2024-12-10"
+    participants:
+      - "김혜원"
+      - "Sigrid Jin / Jin Hyung Park"
+      - "정세민 (Sem)"
+      - "Noah (고석현)"
+      - "최병현 Hyune-c"
+    summary: |
+      Coffee chat notes between 김혜원 and Sigrid Jin about content strategy for customer
+      acquisition. Discussed creating tutorial-style video content (like TeddyNote or Inflearn
+      courses) showing how to build engaging services using the Storm product. Ideas included
+      the N-bbang Bot and 'Storm Pudding' as showcase projects. Planned weekly meetings with
+      3 action items per person. Connected to CES demo preparation - decided to reuse
+      ideation project outputs as CES demos.
+    outcome: |
+      Action item set: each participant to bring 3 hooking product ideas to the next meeting.
+      Content planned for YouTube/Inflearn distribution. CES demo to leverage side projects.
+
+decisions:
+  - decision: "Standardize Slack profile format to Korean name (English name) with contact info"
+    date: "2024-10-11"
+    context: "Growing team size made identification difficult across communication channels"
+  - decision: "Build N-bbang Bot as a web application side project"
+    date: "2024-10-28"
+    context: "Mobile app requires 15 beta testers for app store; web is simpler and faster to ship"
+  - decision: "Create tutorial video content using Storm product to drive customer acquisition"
+    date: "2024-12-10"
+    context: "Product development alone not sufficient for customer growth; need content marketing"
+  - decision: "Reuse ideation project outputs as CES demo showcases"
+    date: "2024-12-10"
+    context: "Efficient use of side project work to also serve CES presentation needs"
+
+terminology:
+  - term: "엔빵"
+    definition: "Korean slang for splitting a bill equally among N people (N-bbang = N분의 1)"
+    aliases: ["N-bbang", "N빵"]
+  - term: "스톰푸딩"
+    definition: "Storm Pudding - one of the proposed demo service ideas built on the Storm product"
+    aliases: ["Storm Pudding"]
+  - term: "테디노트"
+    definition: "TeddyNote - a popular Korean YouTube channel for AI/ML tutorial content, referenced as a style model"
+    aliases: ["TeddyNote"]
+  - term: "인프런"
+    definition: "Inflearn - a Korean online education platform, considered as a distribution channel for tutorial content"
+    aliases: ["Inflearn"]
+
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-agent

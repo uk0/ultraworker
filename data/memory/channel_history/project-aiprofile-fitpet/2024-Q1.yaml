@@ -1,0 +1,44 @@
+channel:
+  id: C06K8G4P928
+  name: project-aiprofile-fitpet
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 23
+  total_threads: 11
+  active_users: 7
+  avg_messages_per_day: 2.3
+summary: |
+  FitPet(핏펫) AI 프로필 생성 프로젝트 진행. SDXL 모델 학습 기반 반려동물 AI 프로필 이미지 생성 서비스 개발.
+  동영상 프로필 기능 추가 논의, 체리픽(Cherry Pick) 기능 구현, API 문서 전달 및 슬랙 워크스페이스 초대 진행.
+  핏펫 측 피드백 대응 및 모델 품질 개선 작업 수행. 23개 메시지, 7명 참여, 11개 스레드.
+topics:
+  - AI 프로필 이미지 생성
+  - SDXL 모델 학습
+  - 동영상 프로필
+  - API 연동
+  - 핏펫 피드백 대응
+key_discussions:
+  - topic: SDXL 모델 학습 및 이미지 생성 품질
+    participants: [hhhssw, 정세민, 송명하]
+    summary: SDXL 기반 반려동물 프로필 이미지 생성 모델 학습 및 품질 개선 논의
+  - topic: 동영상 프로필 기능 추가
+    participants: [Noah, Sigrid Jin]
+    summary: 정적 이미지 외 동영상 프로필 생성 기능 확장 검토
+  - topic: API 문서 전달 및 연동
+    participants: [hhhssw, 정세민]
+    summary: 핏펫 측에 API 문서 전달 및 슬랙 워크스페이스 초대 진행
+terminology:
+  - term: FitPet(핏펫)
+    definition: 반려동물 헬스케어 플랫폼 기업. AI 프로필 생성 프로젝트의 고객사
+  - term: SDXL
+    definition: Stable Diffusion XL. 이미지 생성 AI 모델로, 반려동물 프로필 생성에 활용
+  - term: 체리픽(Cherry Pick)
+    definition: 생성된 이미지 중 품질이 좋은 결과물을 선별하는 기능
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

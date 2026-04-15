@@ -1,0 +1,50 @@
+channel:
+  id: C06L6H4DB2R
+  name: noah-thinks
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 4
+  active_users: 5
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q4 noah-thinks 채널에서 Noah는 경영 전략과 제품 비전에 대한 글을 다시 공유했다. 핵심 주제로는 '스타트업이
+  빅테크를 이기는 법'에 대한 전략적 분석, '가산편향(Addition Bias)'의 함정에 대한 사고 실험, 그리고 성공적인 제품의
+  핵심 요소 6가지(비전, 가치제안, 사용성, 기술 차별화, 시장 적합성, 성장 전략)에 대한 체계적 정리가 있었다. 5명이
+  참여하며 각 주제에 대해 코멘트와 토론이 이루어졌다.
+topics:
+  - 스타트업 vs 빅테크 전략
+  - 가산편향 (Addition Bias)
+  - 제품 핵심 요소 6가지
+  - 제품 비전과 방향성
+key_discussions:
+  - thread_ts: '1728500000.000000'
+    date: '2024-10-10'
+    reply_count: 3
+    text_preview: 스타트업이 빅테크를 이기는 법 - 소규모 팀의 전략적 우위 분석
+  - thread_ts: '1730500000.000000'
+    date: '2024-11-02'
+    reply_count: 2
+    text_preview: 가산편향의 함정 - 문제 해결 시 추가보다 제거가 효과적인 경우
+  - thread_ts: '1733000000.000000'
+    date: '2024-12-01'
+    reply_count: 3
+    text_preview: 제품 핵심 요소 6가지 - 성공적인 제품을 만드는 체계적 프레임워크
+terminology:
+  - term: 가산편향
+    definition: Addition Bias. 문제 해결 시 기존 요소를 제거하기보다 새로운 것을 추가하려는 인지적 편향
+    aliases:
+      - Addition Bias
+    context: Noah가 제품 개발과 조직 운영에서의 가산편향 위험성을 경고
+  - term: 제품 핵심 요소 6가지
+    definition: Noah가 정리한 성공 제품의 6가지 요소 - 비전, 가치제안, 사용성, 기술 차별화, 시장 적합성, 성장 전략
+    aliases: []
+    context: 2024-Q4 제품 전략 논의에서 체계적으로 정리
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

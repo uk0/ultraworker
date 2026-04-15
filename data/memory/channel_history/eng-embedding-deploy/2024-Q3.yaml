@@ -1,0 +1,40 @@
+channel:
+  id: C07BTSA1Z0Q
+  name: eng-embedding-deploy
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 3
+  active_users: 6
+  avg_messages_per_day: 9.0
+summary: |
+  2024-Q3에 eng-embedding-deploy 채널이 생성되었다. Sigrid Jin(진형)이 채널을 만들고
+  임베딩 모델 배포 관련 작업을 주도했다. 주요 작업으로 sionic-ai 계정으로 기존 모델들을
+  옮기고, 차트 수정 및 시크릿 업데이트 후 온프렘 test namespace에 배포했다.
+  배포 후 테스트 스크립트로 라이브 모델과 동일성을 검증했으며, NAS로 모델 파일 백업을
+  완료했다. Noah(고석현), 송명하에게 컨펌 후 rolling update로 교체 예정이었다.
+topics:
+  - 임베딩 모델 배포
+  - 온프렘 test namespace 배포
+  - 모델 마이그레이션 (sionic-ai 계정)
+  - 모델 동일성 검증
+key_discussions:
+  - thread_ts: '1720161585.067489'
+    date: '2024-07-05'
+    topic: 임베딩 모델 sionic-ai 계정 이전 및 온프렘 배포 테스트
+  - thread_ts: '1720156856.428059'
+    date: '2024-07-05'
+    topic: 현 상황 공유 및 채널 용도 설명
+terminology:
+  - term: rolling update
+    definition: 서비스 무중단 상태에서 모델을 순차적으로 교체하는 배포 방식
+  - term: 온프렘 (on-premise)
+    definition: 클라우드가 아닌 자체 서버 환경에서의 배포
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

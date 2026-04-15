@@ -1,0 +1,36 @@
+channel:
+  id: C06GZ8S0KQW
+  name: japanese-learning
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2024년 3분기에는 정기 수업이 중단된 상태에서 자율 학습 분위기가 형성되었다. 7월 초 마지막 수업 안내가 있었고,
+  8월에 박우명님이 JLPT 시험 도전을 제안하며 함께 공부할 동료를 모집하였다. N4 레벨 도전을 목표로 하였으며,
+  12월 1일 시험 접수(9/1~9/22, 비용 5만원)를 안내하였다. 시험 기반 학습(시험-driven) 방식의 필요성이 공유되었다.
+topics:
+  - JLPT 시험 준비
+  - 자율 학습 전환
+  - N4/N5 레벨 도전
+key_discussions:
+  - thread_ts: '1724807809.237449'
+    date: '2024-08-28'
+    topic: JLPT 시험 동반 도전 제안 (N4 목표), 12/1 시험 일정 및 접수 안내
+terminology:
+  - term: JLPT
+    definition: Japanese Language Proficiency Test, 일본어능력시험. N1(최상)~N5(최하) 5개 레벨
+  - term: N4
+    definition: JLPT 4급, 기초적인 일본어를 이해할 수 있는 수준
+  - term: N5
+    definition: JLPT 5급, 기초 일본어를 어느 정도 이해할 수 있는 수준
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

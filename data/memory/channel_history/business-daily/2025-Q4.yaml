@@ -1,0 +1,47 @@
+channel:
+  id: C08C9JX0DC7
+  name: business-daily
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 24
+  total_threads: 14
+  active_users: 6
+  avg_messages_per_day: 1.3
+summary: |
+  사업팀 일일 업무 채널. Q4에는 기존 프로젝트 마무리 및 신규 수주가 동시 진행.
+  오승희는 CEATEC 후속 작업, 일본 워크샵 준비, 유진투자증권 제안발표 준비, 삼성벤처스 중간보고, 사카나AI 콜드컨택 등 담당.
+  한시형은 유진투자증권 제안발표, 삼성 E&A 솔트룩스 계약서 작성, SKAX 구매정보시스템 수정, 시암 평가/계약이행보증, 네이버 사우디건 대응.
+  김수진은 현대차 PoC 데이터 검토/주간보고, 유진투자증권 제안서 작업, 평가 지표 측정 방법 고민.
+  최윤정은 리쿠르트 v3 개선, CS 챗봇 가이드 문서, 워크샵 세션 준비, OKI 전자 유즈케이스 자료 작성.
+  채널 활동량이 감소(24개 메시지)하여 주요 업무 논의가 다른 채널이나 대면으로 전환된 것으로 보임.
+topics:
+  - 유진투자증권 제안발표
+  - 삼성 E&A 계약
+  - SKAX 프로젝트
+  - 현대차 PoC 평가
+  - 리쿠르트 v3 에이전트
+  - 일본 워크샵 및 사카나AI
+key_discussions:
+  - date: '2025-10-28'
+    summary: '오승희 업무 정리 25개 답글 - CEATEC 후속, 일본 워크샵, 다수 프로젝트 관리'
+  - date: '2025-11-03'
+    summary: '오승희 업무 정리 10개 답글 - 유진 제안발표, 삼벤 중간보고 등'
+  - date: '2025-11-24'
+    summary: '한시형 - 유진 제안발표 준비, 삼성E&A 계약서, 시암 계약이행보증'
+  - date: '2025-12-24'
+    summary: '김수진 - 현대차 누락 데이터 확인, 평가 지표 측정 방법 고민'
+terminology:
+  - term: 'SKAX'
+    definition: '구매정보시스템 관련 프로젝트, 큐팁과 계약 체결'
+  - term: '리쿠르트 v3'
+    definition: '채용 관련 AI 에이전트의 3번째 버전, 사내용어 후처리 적용'
+  - term: '사카나AI'
+    definition: '일본 AI 스타트업, 콜드컨택 진행 중'
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

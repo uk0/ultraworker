@@ -1,0 +1,353 @@
+channel:
+  id: C08H8PU7VAQ
+  name: eng-frontend
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-26T10:08:27'
+statistics:
+  total_messages: 243
+  total_threads: 142
+  active_users: 14
+  avg_messages_per_day: 4.2
+summary: |
+  2026-Q1 eng-frontend channel (Jan 1 - Feb 26 data). 243 messages, 14 active participants, ~142 threads.
+  Major themes: stargate-web workflow refactoring and feature development (loop node, checklist/inspector, JSON soft block),
+  new team member onboarding (Park Jiwon joined ~Jan 23), design system setup (vanilla-extract, moving from tailwind/shadcn),
+  cybros-web (deploy platform) project kickoff, FE common module library setup, JP region deployment and Sentry alerts,
+  FSD (Feature-Sliced Design) architecture enforcement, i18n improvements, QA region configuration,
+  code review culture (weekly "Hundred Year Wars" code review sessions), and team building (workshop, coffee chats, psychological safety survey).
+topics:
+  - name: "Workflow refactoring & features"
+    description: "Major ongoing work on stargate-web workflow: JSON soft block, loop node design, checklist/inspector pattern, node copy/paste, post-processing node, variable editor with Tiptap, side panel resize, execution log domain entities"
+    frequency: high
+    related_terms:
+      - "JSON soft block"
+      - "loop node"
+      - "checklist/inspector"
+      - "OrderSheet"
+      - "Reactflow"
+      - "sub-flow"
+      - "WorkflowDraftState"
+  - name: "Design system & common modules"
+    description: "Design system setup discussions: moving from tailwind/shadcn to vanilla-extract, atomic design approach, CSS reset modernization, cybros-web repo created, common module library naming contest (khala), shared eslint/prettier/actions repos"
+    frequency: high
+    related_terms:
+      - "vanilla-extract"
+      - "tailwind"
+      - "shadcn"
+      - "Radix UI"
+      - "atomic design"
+      - "cybros-web"
+      - "khala"
+      - "design system"
+  - name: "FSD architecture enforcement"
+    description: "Feature-Sliced Design lint rules being upgraded from warning to error, weekly 'Hundred Year Wars' code review sessions to catch FSD import violations, cross-slice data sharing patterns discussed"
+    frequency: high
+    related_terms:
+      - "FSD"
+      - "Feature-Sliced Design"
+      - "lint rules"
+      - "import rules"
+  - name: "JP region deployment"
+    description: "Japan region (sionicstorm.jp) deployment pipeline setup: separate JP/SaaS deployments, Sentry alert configuration for JP, edge config jp-live settings, endpoint configurations for drone/arbiter/stargate"
+    frequency: medium
+    related_terms:
+      - "sionicstorm.jp"
+      - "jp-live"
+      - "Sentry"
+      - "edge config"
+  - name: "Release/Feature toggle improvement"
+    description: "Collaboration with ops team to improve release toggle: moving from Vercel edge config to JSON file-based config, git/vault versioning, trunk-based development documentation"
+    frequency: medium
+    related_terms:
+      - "feature toggle"
+      - "release toggle"
+      - "trunk-based development"
+      - "Vercel edge config"
+  - name: "i18n & localization"
+    description: "i18n improvements: i18n-ally VSCode plugin setup, translation bot repo (i18n-review-bot), JP localization issues (awkward Japanese expressions), useTranslation hook usage conventions"
+    frequency: medium
+    related_terms:
+      - "i18n-ally"
+      - "i18n-review-bot"
+      - "useTranslation"
+      - "tiptap"
+  - name: "QA region configuration"
+    description: "Discussion about separating dev/QA/preview environments: dev stargate API local only, preview and dev.sionicstorm.ai pointing to QA stargate API"
+    frequency: low
+    related_terms:
+      - "QA region"
+      - "dev.sionicstorm.ai"
+      - "preview"
+  - name: "OCI migration"
+    description: "DEV environment endpoint change from sionic.tech to sionic.im due to OCI (Oracle Cloud) migration from on-prem (Nexone) servers"
+    frequency: low
+    related_terms:
+      - "OCI"
+      - "sionic.tech"
+      - "sionic.im"
+      - "Nexone"
+  - name: "Team culture & onboarding"
+    description: "New member onboarding (Park Jiwon), psychological safety survey (Google Aristotle Project), coffee chats, FE weekly meetings, lean coffee format, workshop planning, seat arrangement, daily scrums"
+    frequency: medium
+    related_terms:
+      - "FE weekly"
+      - "lean coffee"
+      - "Google Aristotle Project"
+      - "workshop"
+      - "1on1"
+  - name: "AI & developer tools"
+    description: "Claude Code usage for team agents.md/claude.md, Codex app, Zed editor, PR review tools (newpr), react-doctor, AI-generated meeting notes with STORM"
+    frequency: low
+    related_terms:
+      - "Claude Code"
+      - "agents.md"
+      - "Zed"
+      - "Codex"
+      - "STORM"
+key_discussions:
+  - title: "Workflow JSON soft block architecture"
+    date: '2026-01-09'
+    participants:
+      - "U08GLL1NGBY"  # Jada Gwon
+    summary: "Major workflow refactoring: JSON soft block structure for RAG node, offline code review held. Large PR with significant structural changes to workflow handling."
+    thread_ts: '1767943249.891479'
+  - title: "Design system direction & common modules"
+    date: '2026-01-05'
+    participants:
+      - "U05T2RW7PE2"  # Kim Hyewon
+      - "U0A2GEL4FPZ"  # designer
+      - "U08GLL1NGBY"  # Jada Gwon
+    summary: "Discussion on design system cleanup: inconsistent margins, font sizes, varying UI across pages. Tailwind/shadcn usage analysis report generated by Claude. Led to vanilla-extract adoption discussion."
+    thread_ts: '1767598852.961129'
+  - title: "Common module library naming contest"
+    date: '2026-01-27'
+    participants:
+      - "U0A5FK3E7JT"  # Seo Maenggwan
+    summary: "Naming contest for reusable FE actions repo and common module library. Previously discussed with ops but decided FE team manages independently first. 61 replies in thread."
+    thread_ts: '1769480629.621889'
+  - title: "Release toggle improvement with ops team"
+    date: '2026-01-07'
+    participants:
+      - "U08GLL1NGBY"  # Jada Gwon
+    summary: "Proposal to improve feature toggle from Vercel edge config to JSON file-based config with git/vault versioning. Meeting with ops team scheduled."
+    thread_ts: '1767779964.974779'
+  - title: "FSD lint rules enforcement"
+    date: '2026-02-03'
+    participants:
+      - "U08GLL1NGBY"  # Jada Gwon
+    summary: "Upgrading FSD import lint rules from warning to error level. Manual human review was insufficient to catch violations in PRs."
+    thread_ts: '1770131369.804969'
+  - title: "Loop node design discussion"
+    date: '2026-01-26'
+    participants:
+      - "U0A5FK3E7JT"  # Seo Maenggwan
+      - "U08GLL1NGBY"  # Jada Gwon
+      - "U05T2RW7PE2"  # Kim Hyewon
+    summary: "Loop node implementation discussion with 53 replies. Complex design involving Reactflow sub-flows. Large PR (~3000 lines) considered for splitting into ~10 smaller PRs."
+    thread_ts: '1769415389.486019'
+  - title: "Tiptap editor adoption for variable editor"
+    date: '2026-01-30'
+    participants:
+      - "U0AAD58353N"  # Park Jiwon
+      - "U08GLL1NGBY"  # Jada Gwon
+    summary: "Decision to use Tiptap (Prosemirror-based) as text editor library for workflow variable input. Initial PR replaces textarea with Tiptap while maintaining same UI."
+    thread_ts: '1769744976.063039'
+  - title: "Workshop planning"
+    date: '2026-02-11'
+    participants:
+      - "U0A5FK3E7JT"  # Seo Maenggwan
+    summary: "Frontend team workshop planning with 42 replies for scheduling, 83 replies for preparation thread. Held around Feb 24-25."
+    thread_ts: '1770792298.927389'
+  - title: "vanilla-extract import style convention"
+    date: '2026-02-10'
+    participants:
+      - "U0A5FK3E7JT"  # Seo Maenggwan
+    summary: "Discussion on vanilla-extract CSS import convention: 'import * as style' vs named imports. Team leaning toward option 1 (import * as style) for consistency."
+    thread_ts: '1770715846.474819'
+  - title: "Undo/redo and test code need"
+    date: '2026-02-26'
+    participants:
+      - "U0AAD58353N"  # Park Jiwon
+    summary: "Proposal to add test code for undo/redo workflow feature. Recognition that testing is now critically needed as workflow complexity grows."
+    thread_ts: '1772094979.039369'
+  - title: "QA region environment separation"
+    date: '2026-02-26'
+    participants:
+      - "U08GLL1NGBY"  # Jada Gwon
+    summary: "Proposal to separate dev/QA/preview environments: dev stargate API local-only, preview and dev.sionicstorm.ai pointing to QA stargate API."
+    thread_ts: '1772100507.222519'
+  - title: "DEV endpoint migration (OCI)"
+    date: '2026-02-10'
+    participants:
+      - "U07RE9XKXPV"  # Lee Jaejun (Leo)
+      - "U06LJTDQREE"  # Baek Eunju
+    summary: "DEV environment stargate API endpoint change from dev-stargate.sionic.tech to dev-stargate.sionic.im for OCI migration. 57-reply coordination thread."
+    thread_ts: '1769687343.905029'
+  - title: "JP Sentry alert setup"
+    date: '2026-02-24'
+    participants:
+      - "U08GLL1NGBY"  # Jada Gwon
+    summary: "JP region Sentry alerts configured with error count-based notifications every 30 minutes. Live Sentry config fixed during setup."
+    thread_ts: '1771905140.474369'
+terminology:
+  - term: "stargate-web"
+    definition: "Main frontend repository for the STORM/Stargate platform (sionic-ai/stargate-web)"
+    aliases: ["SG web"]
+    context: "Primary codebase where most FE development happens"
+  - term: "cybros-web"
+    definition: "New deploy platform frontend repository (sionic-ai/cybros-web), separate from stargate-web"
+    aliases: ["deploy platform", "depl"]
+    context: "Kicked off in Q1 2026 as a separate product"
+  - term: "khala"
+    definition: "Shared frontend repository for common modules/libraries"
+    aliases: []
+    context: "Named via team contest, used for shared eslint, prettier, GitHub actions configs"
+  - term: "FSD"
+    definition: "Feature-Sliced Design - architectural methodology used in the frontend codebase"
+    aliases: ["Feature-Sliced Design"]
+    context: "Enforced via lint rules, subject of regular code review 'wars'"
+  - term: "vanilla-extract"
+    definition: "Zero-runtime CSS-in-TypeScript library adopted for the design system"
+    aliases: ["VE"]
+    context: "Chosen as the new styling approach for cybros-web and design system"
+  - term: "JSON soft block"
+    definition: "Workflow feature allowing JSON field editing with soft validation/blocking"
+    aliases: []
+    context: "Major workflow refactoring effort in Jan 2026, enabled RAG node functionality"
+  - term: "loop node"
+    definition: "Workflow node type for iteration/looping, using Reactflow sub-flows pattern"
+    aliases: []
+    context: "Complex feature requiring ~3000 line PR, design discussions with product team"
+  - term: "checklist/inspector"
+    definition: "Workflow validation system with Inspector (orchestration engine), Contract (business rules), Schema (structure), and Issue (validation results)"
+    aliases: ["workflow-inspector", "workflow-issue-state"]
+    context: "Renamed from 'checklist-state' to better reflect the validation pattern"
+  - term: "OrderSheet"
+    definition: "Workflow configuration/order sheet concept in the stargate-web workflow system"
+    aliases: []
+    context: "Referenced in tech spec for workflow refactoring"
+  - term: "Hundred Year Wars"
+    definition: "Weekly FE code review sessions where the team reviews code quality and patterns together"
+    aliases: ["baengnyeonjeonjaeng"]
+    context: "Regular team activity for maintaining code quality, mentioned as surprisingly fun"
+  - term: "edge config"
+    definition: "Vercel Edge Config - previously used for feature toggle storage, being replaced"
+    aliases: []
+    context: "Being migrated to JSON file-based config for better on-prem support"
+  - term: "Tiptap"
+    definition: "Prosemirror-based rich text editor library adopted for workflow variable input"
+    aliases: []
+    context: "Chosen for JSON highlighting and custom variable highlighting support"
+  - term: "sionicstorm.jp"
+    definition: "Japan region deployment of the STORM platform"
+    aliases: ["JP", "jp region"]
+    context: "Separate deployment pipeline from SaaS, requires dedicated Sentry monitoring"
+  - term: "Linear"
+    definition: "Project management tool used by the FE team for issue tracking"
+    aliases: []
+    context: "Views organized for WIP, Bugs, Backlog, Archive. Labels include FE categories"
+  - term: "drone"
+    definition: "Service component in the Stargate platform architecture"
+    aliases: []
+    context: "Referenced alongside arbiter and stargate for JP endpoint configuration"
+  - term: "arbiter"
+    definition: "Service component in the Stargate platform, has its own channel and SSE type registration"
+    aliases: []
+    context: "Arbiter-related PR for SSE type registration merged into stargate-web"
+  - term: "carrier"
+    definition: "Backend service that needs coordinated deployment with frontend"
+    aliases: []
+    context: "Deployment dependency issue: carrier-stargate must deploy before frontend for test page"
+  - term: "renovate"
+    definition: "Automated dependency update tool proposed for multi-repo management"
+    aliases: []
+    context: "Proposed as repos grow, alternative to Snyk (which is more security-focused)"
+active_participants:
+  - user_id: "U08GLL1NGBY"
+    name: "Jada Gwon (Gwon Hyeseon)"
+    role: "Frontend tech lead / workflow domain expert"
+    message_count_approx: 75
+  - user_id: "U0A5FK3E7JT"
+    name: "Seo Maenggwan"
+    role: "Frontend lead / team management, design system, onboarding"
+    message_count_approx: 55
+  - user_id: "U06LJTDQREE"
+    name: "Baek Eunju"
+    role: "Frontend engineer / deployment, chat file upload, common modules"
+    message_count_approx: 30
+  - user_id: "U0AAD58353N"
+    name: "Park Jiwon"
+    role: "Frontend engineer (new, joined ~Jan 23) / workflow variable editor, undo-redo"
+    message_count_approx: 28
+  - user_id: "U09NST7DHGS"
+    name: "Kim Juwon"
+    role: "Frontend engineer / post-processing node, onboarding docs, feature toggle"
+    message_count_approx: 22
+  - user_id: "U05T2RW7PE2"
+    name: "Kim Hyewon"
+    role: "Product/design lead for frontend"
+    message_count_approx: 5
+  - user_id: "U07RE9XKXPV"
+    name: "Lee Jaejun (Leo)"
+    role: "Ops/infra engineer (DEV endpoint migration, JP region)"
+    message_count_approx: 3
+  - user_id: "U08DJL0LXL0"
+    name: "Yang Hojin"
+    role: "Frontend engineer"
+    message_count_approx: 1
+  - user_id: "U05QCA7JTD5"
+    name: "Sigrid Jin / Jin Hyung Park"
+    role: "External contributor / shared resources"
+    message_count_approx: 2
+  - user_id: "U0A7EFLSTT2"
+    name: "Kim Jisu"
+    role: "Team member"
+    message_count_approx: 1
+  - user_id: "U09GR0CBCCC"
+    name: "Yun Juun"
+    role: "Frontend engineer (arbiter-related)"
+    message_count_approx: 1
+  - user_id: "U085SJW6X63"
+    name: "Lee Gangwook"
+    role: "QA / testing"
+    message_count_approx: 1
+  - user_id: "U05SJ36FBN2"
+    name: "Song Myungha"
+    role: "Engineering (shared actions discussion)"
+    message_count_approx: 1
+decisions:
+  - date: '2026-01-09'
+    decision: "Adopt JSON soft block pattern for workflow node configuration"
+    context: "Enables flexible field editing with validation in workflow nodes"
+  - date: '2026-01-14'
+    decision: "Convention documentation in Notion, including t() function usage rules"
+    context: "useTranslation hook return values restricted to component/hook scope only"
+  - date: '2026-01-23'
+    decision: "New member Park Jiwon onboarded, assigned password change then workflow tasks"
+    context: "First PR was FSD lint rule addition"
+  - date: '2026-01-27'
+    decision: "FE team to manage shared actions repo independently before company-wide alignment"
+    context: "Common module library repo created (khala/cybros-web)"
+  - date: '2026-01-30'
+    decision: "Adopt Tiptap as the rich text editor library for variable input"
+    context: "Needed for JSON highlighting and custom variable highlighting"
+  - date: '2026-02-03'
+    decision: "FSD lint rules upgraded from warning to error"
+    context: "Human review insufficient for catching import violations"
+  - date: '2026-02-10'
+    decision: "vanilla-extract import convention: 'import * as style' (option 1)"
+    context: "Team discussion on styling conventions for new design system"
+  - date: '2026-02-11'
+    decision: "JP and SaaS deployments remain separate pipelines"
+    context: "Discussed at engineer weekly due to JP region DB/stargate concerns"
+  - date: '2026-02-24'
+    decision: "JP Sentry alerts with 30-minute error count thresholds configured"
+    context: "Post-deployment monitoring improvement"
+metadata:
+  created_at: '2026-02-26T10:08:27'
+  synced_by: sync-channel-history
+  note: "Data covers Jan 1 - Feb 26, 2026. Quarter still in progress."

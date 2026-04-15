@@ -1,0 +1,112 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 85
+  total_threads: 52
+  active_users: 12
+  avg_messages_per_day: 1.9
+summary: |
+  2024년 2분기 announcement 채널은 팀 성장과 조직 운영 체계화가 핵심 주제였다.
+  신규 멤버가 다수 합류했으며, 학생인턴(김도균), ML Researcher(이성우), Backend Developer(장경훈 CEO Staff,
+  이수원), 김도균(학생인턴) 등이 팀에 합류했다. 한편 인턴 퇴사(김도균 학교 복귀)도 있었다.
+
+  조직 운영 측면에서 Flex 근태관리 시스템 도입, 공용법인카드 운용 시작, 창립기념일(5/30) 제정 및
+  창립기념 휴가(6/7) 부여, 재택용 장비 신청 제도, ChatGPT 팀 플랜 구독 시작 등이 이루어졌다.
+  내일채움공제 회사 청약이 완료되어 개인 연동이 진행되었다.
+
+  비즈니스 측면에서 매일경제신문과 선 크레딧 구매(10만건) 본 계약 체결이 이루어졌고, GPU 1억원어치 구매,
+  채용 드라이브 시작(채용 페이지 오픈), KPI 설정 미팅 등이 있었다. 사용하지 않는 에이전트 정리,
+  대시보드 지표 개선 논의 등 제품 관리도 진행되었다.
+
+  5월 10일 플레이샵(파티룸 요리대회), 4월 15일 타운홀 미팅(BBQ) 등 팀 행사가 있었고,
+  MetisX와의 기술 세미나 공동 개최, 산업안전보건법 게시 등 법적 의무 사항도 이행되었다.
+  테크 세미나에서는 SQL 첫걸음, 특허 작성, 배포 가이드, Pylon 실행하기 등이 발표되었다.
+topics:
+  - name: "신규 멤버 합류"
+    mention_count: 6
+    context: "장경훈(CEO Staff), 이수원(Backend), 이성우(ML), 김도균(인턴) 등 합류"
+  - name: "조직 운영 체계화"
+    mention_count: 10
+    context: "Flex 도입, 공용법카, 창립기념일 제정, 재택장비 신청, ChatGPT 팀 플랜"
+  - name: "매일경제 계약"
+    mention_count: 2
+    context: "매일경제신문 선 크레딧 구매(10만건) 본 계약 체결"
+  - name: "타운홀 미팅"
+    mention_count: 3
+    context: "4/15 투자 마무리 후 첫 타운홀 - 10개월 회고 및 목표 공유"
+  - name: "플레이샵"
+    mention_count: 4
+    context: "5/10 플랜잇513에서 천하제일 요리대회 및 파티"
+  - name: "테크 세미나"
+    mention_count: 8
+    context: "SQL 첫걸음, 특허 작성, 배포 가이드, Pylon 실행하기 등"
+  - name: "채용 드라이브"
+    mention_count: 2
+    context: "채용 페이지 오픈, Backend/ML/DevOps 포지션 모집"
+  - name: "조직문화"
+    mention_count: 5
+    context: "함께자라기 독서 모임, 조직문화 논의, KPI 설정 미팅"
+key_discussions:
+  - thread_ts: "1716182635.172439"
+    date: "2024-05-20"
+    reply_count: 12
+    text_preview: "매일경제신문 선 크레딧 구매(10만건) 본 계약 체결 공지"
+  - thread_ts: "1716796226.447829"
+    date: "2024-05-27"
+    reply_count: 22
+    text_preview: "내일채움공제 회사 청약 완료 및 개인 연동 안내"
+  - thread_ts: "1713343905.289159"
+    date: "2024-04-17"
+    reply_count: 37
+    text_preview: "김혜원 - 모든 팀원에게 제안하고 싶은 점 (조직문화 논의)"
+  - thread_ts: "1719302385.270529"
+    date: "2024-06-25"
+    reply_count: 22
+    text_preview: "대시보드 지표 재구성 - 에이전트별 호출 수, 고객별 호출 수 등 의견 수집"
+  - thread_ts: "1712129700.423719"
+    date: "2024-04-03"
+    reply_count: 16
+    text_preview: "플레이샵 날짜 투표 - 5/3 vs 5/10"
+  - thread_ts: "1713954418.781489"
+    date: "2024-04-24"
+    reply_count: 1
+    text_preview: "KPI 설정 미팅 - 사이오닉 방향성과 집중 영역 논의"
+terminology:
+  - term: "Flex"
+    definition: "근태관리 및 휴가 신청 서비스"
+    aliases: ["플렉스"]
+    context: "2024-Q2에 도입, 알림 수신 및 휴가 관리용"
+  - term: "Pylon"
+    definition: "사이오닉AI 내부 프로젝트 (검색/RAG 관련 엔진)"
+    aliases: []
+    context: "테크세미나에서 디버깅 실습 및 컨트리뷰터 모집"
+  - term: "타운홀 미팅"
+    definition: "전사 대상 목표 공유 및 방향성 논의 미팅"
+    aliases: ["Townhall"]
+    context: "투자 마무리 후 첫 개최 (4/15), BBQ 겸 진행"
+  - term: "플레이샵"
+    definition: "팀 빌딩 행사 (요리대회, 게임 등)"
+    aliases: []
+    context: "5/10 플랜잇513에서 진행, 미니게임 + 천하제일 요리대회"
+  - term: "내일채움공제"
+    definition: "중소기업 재직자 우대 저축공제 제도"
+    aliases: []
+    context: "회사 청약 완료 후 개인 연동 진행"
+  - term: "IRIS"
+    definition: "국가연구자번호 관리 시스템 (iris.go.kr)"
+    aliases: []
+    context: "MatisX 정부과제 참여를 위한 국가연구자번호 발급/조회"
+  - term: "CAIO"
+    definition: "IRIS 시스템에서의 사이오닉AI 소속 부서명"
+    aliases: []
+    context: "정부과제 관련 소속 부서 확인용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

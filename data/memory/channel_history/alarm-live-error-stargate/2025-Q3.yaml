@@ -1,0 +1,38 @@
+channel:
+  id: C05FKUZGB2A
+  name: alarm-live-error-stargate
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 749
+  total_threads: 22
+  active_users: 3
+  avg_messages_per_day: 10.9
+summary: |
+  Stargate API 운영 에러 알림 채널. 749개 메시지, 참여자 3명으로 대응 인력이 적었던 분기.
+  ERROR_WHILE_PROCESSING_CARRIER_RESPONSE(76건)가 압도적으로 많아 전체의 76%를 차지했다.
+  주요 원인은 context length 초과(400 Bad input), 모델 ID 유효성 문제(gemini-2.5-pro 미지원),
+  failover 전략 전체 실패 등이었다. INTERNAL_SERVER_ERROR(13건), POST_PROCESS(6건)도 발생.
+  live 환경(98%) 에러가 대부분이었으며, NewRelic Critical 알림이 9월에 집중 발생했다.
+  새로운 에러 유형인 ERROR_WHILE_SAVING_CHAT_LOGS도 처음 등장했다.
+topics:
+  - Carrier 응답 처리 에러 급증 (76건, context length 초과)
+  - Gemini 모델 ID 유효성 에러
+  - Failover 전략 전체 실패
+  - 채팅 로그 저장 에러 신규 발생
+  - NewRelic Critical 알림 집중 (9월)
+key_discussions: []
+terminology:
+  - term: "context length exceeded"
+    definition: "LLM 입력 컨텍스트 길이 제한 초과, max_tokens 조정 필요"
+  - term: "failover"
+    definition: "주 엔진 실패 시 대체 엔진으로 전환하는 전략, 모든 대체 전략 실패 시 에러"
+  - term: "ERROR_WHILE_SAVING_CHAT_LOGS"
+    definition: "채팅 로그 저장 중 발생한 에러, 이 분기에 신규 등장"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

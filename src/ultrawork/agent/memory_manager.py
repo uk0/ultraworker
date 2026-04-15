@@ -11,6 +11,21 @@ from typing import Any
 
 import yaml
 
+from ultrawork.memory.facet_index import FacetIndex
+from ultrawork.memory.linker import RecordLinker
+from ultrawork.memory.record_store import RecordStore
+from ultrawork.memory.save_policy import SaveContext, SavePolicyEngine
+from ultrawork.memory.search import MemorySearchEngine, SearchResult
+from ultrawork.models.ltm import (
+    HowStep,
+    RequestRecord,
+    WhyHypothesis,
+    WorkAction,
+    WorkRecord,
+    WorkWhere,
+    WorkWhy,
+    WorkWhyKind,
+)
 from ultrawork.models.memory import (
     ContextMemory,
     MemoryEntry,
@@ -587,3 +602,211 @@ class MemoryManager:
                 }
 
         return context
+
+    # === LTM: Record-based Long-Term Memory ===
+
+    def _ensure_ltm_initialized(self) -> None:
+        """Lazily initialize LTM subsystem components."""
+        if not hasattr(self, "_record_store"):
+            index_path = self.data_dir / "memory" / "index" / "facet_index.yaml"
+            self._facet_index = FacetIndex(index_path)
+            self._record_store = RecordStore(self.data_dir, self._facet_index)
+            self._save_policy = SavePolicyEngine()
+            self._linker = RecordLinker(self._record_store, self._facet_index)
+            self._search_engine = MemorySearchEngine(self._record_store, self._facet_index)
+
+    def get_record_store(self) -> RecordStore:
+        """Get the LTM record store.
+
+        Returns:
+            RecordStore instance
+        """
+        self._ensure_ltm_initialized()
+        return self._record_store
+
+    def get_search_engine(self) -> MemorySearchEngine:
+        """Get the LTM search engine.
+
+        Returns:
+            MemorySearchEngine instance
+        """
+        self._ensure_ltm_initialized()
+        return self._search_engine
+
+    def get_linker(self) -> RecordLinker:
+        """Get the LTM record linker.
+
+        Returns:
+            RecordLinker instance
+        """
+        self._ensure_ltm_initialized()
+        return self._linker
+
+    def create_request_record(
+        self,
+        who: str,
+        where: str,
+        what: str,
+        why: list[dict[str, Any]] | None = None,
+        how_steps: list[dict[str, Any]] | None = None,
+    ) -> RequestRecord:
+        """Create a new RequestRecord.
+
+        Args:
+            who: Requester identifier
+            where: Source channel/context
+            what: Concise description of the request
+            why: List of hypothesis dicts with keys: hypothesis, confidence, evidence
+            how_steps: List of step dicts with keys: step_id, goal, expected_artifacts
+
+        Returns:
+            Created RequestRecord (not yet committed)
+        """
+        self._ensure_ltm_initialized()
+        record_id = self._record_store.generate_request_id()
+
+        why_models = []
+        if why:
+            for h in why:
+                why_models.append(
+                    WhyHypothesis(
+                        hypothesis=h.get("hypothesis", ""),
+                        confidence=h.get("confidence", 0.5),
+                        evidence=h.get("evidence", []),
+                    )
+                )
+
+        how_models = []
+        if how_steps:
+            for s in how_steps:
+                how_models.append(
+                    HowStep(
+                        step_id=s.get("step_id", f"step-{len(how_models) + 1:02d}"),
+                        goal=s.get("goal", ""),
+                        expected_artifacts=s.get("expected_artifacts", []),
+                        related_queries=s.get("related_queries", []),
+                    )
+                )
+
+        return RequestRecord(
+            id=record_id,
+            who=who,
+            where=where,
+            what=what,
+            why=why_models,
+            how=how_models,
+        )
+
+    def create_work_record(
+        self,
+        request_id: str,
+        step_id: str | None = None,
+        who: str = "claude",
+        why_kind: str = "advance_step",
+        immediate_goal: str = "",
+        actions: list[dict[str, str]] | None = None,
+        inputs: list[str] | None = None,
+        outputs: list[str] | None = None,
+        evidence: list[str] | None = None,
+    ) -> WorkRecord:
+        """Create a new WorkRecord linked to a request.
+
+        Args:
+            request_id: Parent RequestRecord ID
+            step_id: Target step ID (combined with request_id for step_ref)
+            who: Executor identifier
+            why_kind: "advance_step", "discovery", or "maintenance"
+            immediate_goal: What this work aims to achieve
+            actions: List of action dicts with keys: action, output
+            inputs: Input file/URI list
+            outputs: Output file/URI list
+            evidence: Evidence strings
+
+        Returns:
+            Created WorkRecord (not yet committed)
+        """
+        self._ensure_ltm_initialized()
+        if not request_id or request_id == "auto":
+            request_id = "none"
+        work_id = self._record_store.generate_work_id(request_id)
+
+        step_ref = None
+        if step_id:
+            step_ref = f"{request_id}#{step_id}"
+
+        action_models = []
+        if actions:
+            for a in actions:
+                action_models.append(
+                    WorkAction(
+                        action=a.get("action", ""),
+                        output=a.get("output", ""),
+                    )
+                )
+
+        return WorkRecord(
+            id=work_id,
+            who=who,
+            why=WorkWhy(
+                kind=WorkWhyKind(why_kind),
+                step_ref=step_ref,
+                immediate_goal=immediate_goal,
+            ),
+            where=WorkWhere(
+                inputs=inputs or [],
+                outputs=outputs or [],
+            ),
+            what=action_models,
+            evidence=evidence or [],
+        )
+
+    def commit_record(
+        self,
+        record: RequestRecord | WorkRecord,
+        save_context: SaveContext,
+    ) -> bool:
+        """Evaluate save policy and commit record if approved.
+
+        Args:
+            record: The record to potentially commit
+            save_context: Context for policy evaluation
+
+        Returns:
+            True if committed, False if rejected by policy
+        """
+        self._ensure_ltm_initialized()
+
+        decision = self._save_policy.evaluate(save_context)
+        if not decision.should_commit:
+            return False
+
+        # Check for duplicates
+        dup_id = self._linker.check_duplicate(record)
+        if dup_id:
+            return False
+
+        # Save the record
+        if isinstance(record, RequestRecord):
+            self._record_store.save_request(record)
+        else:
+            self._record_store.save_work(record)
+
+        # Auto-update links
+        self._linker.update_shallow_links(record.id, max_links=7)
+
+        return True
+
+    def search_ltm(self, query: str, top_k: int = 10) -> list[SearchResult]:
+        """Search long-term memory records.
+
+        Uses the 3-query pack pattern with 1-hop expansion.
+
+        Args:
+            query: Natural language query
+            top_k: Maximum results
+
+        Returns:
+            Ranked list of SearchResult
+        """
+        self._ensure_ltm_initialized()
+        return self._search_engine.search(query, top_k=top_k)

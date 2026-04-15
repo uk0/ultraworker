@@ -1,0 +1,49 @@
+channel:
+  id: C08G1H180KV
+  name: lab-feedback-fine-tuning
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 27
+  total_threads: 3
+  active_users: 11
+  avg_messages_per_day: 2.5
+summary: |
+  2025-Q1에 lab-feedback-fine-tuning 채널이 개설되었으며, 고객 피드백 데이터를 활용해 임베딩 모델을 직접 개선하는 방법을 연구하는 채널이다. 주요 논의는 Stargate RAG 노드에 커스텀 임베딩 URL을 추가하는 개발 작업과, 피드백 데이터 399개를 증강하여 파인튜닝 성능 효과를 측정하는 실험이다. 파인튜닝 후 약 0.5% 정확도 향상이 확인되었으나, 통계적 유의성 검증 및 추가 실험(하이퍼파라미터 조정, 클래스별 지표 분석)의 필요성이 제기되었다.
+topics:
+  - name: "커스텀 임베딩 URL 연동"
+    mention_count: 5
+    description: "Stargate RAG 노드에 custom_embedding_url 파라미터를 추가하여 외부 임베딩 모델을 연동하는 개발 작업"
+  - name: "파인튜닝 성능 평가"
+    mention_count: 8
+    description: "피드백 데이터로 파인튜닝한 임베딩 모델의 성능 향상 폭 측정 및 통계적 유의성 검토"
+  - name: "피드백 데이터 증강"
+    mention_count: 4
+    description: "고객 피드백 399개 샘플을 수동 검수 후 파인튜닝 학습 데이터로 활용"
+key_discussions:
+  - thread_ts: '1741050480.000000'
+    date: '2025-03-04'
+    reply_count: 57
+    text_preview: "에이전트 및 쿼리셋 공유, 피드백 데이터 기반 파인튜닝 실험 계획 논의"
+  - thread_ts: '1741135200.000000'
+    date: '2025-03-05'
+    reply_count: 53
+    text_preview: "custom_embedding_url을 리퀘스트 바디에 추가, Notion 문서 공유"
+  - thread_ts: '1741952400.000000'
+    date: '2025-03-14'
+    reply_count: 58
+    text_preview: "피드백 데이터 399개 눈으로 검수 후 전달, 파인튜닝 후 성능향상 체크 요청"
+terminology:
+  - term: "파인튜닝(Fine-tuning)"
+    definition: "기존 임베딩 모델을 고객 피드백 데이터로 추가 학습하여 도메인 특화 성능을 높이는 방법"
+  - term: "custom_embedding_url"
+    definition: "Stargate RAG 시스템에서 외부 임베딩 모델 엔드포인트를 지정하는 설정 파라미터"
+  - term: "Hard Negative Mining(HNM)"
+    definition: "임베딩 학습 시 모델이 구분하기 어려운 고품질 네거티브 샘플을 선별하는 데이터 구성 기법"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

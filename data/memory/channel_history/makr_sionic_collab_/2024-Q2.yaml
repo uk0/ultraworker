@@ -1,0 +1,27 @@
+channel:
+  id: C06SX4Z5L5P
+  name: makr_sionic_collab_
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q2 기간에 makr_sionic_collab_ 채널이 생성되어 Makr와 Sionic AI 간의 협업 채널로 운영되기 시작하였다. 4월 초에 두 명의 멤버가 채널에 참여하여 협업 환경이 구축되었다. 이 채널은 Makr와 Sionic AI 양사 간의 비즈니스 협력 논의를 위한 공유 공간으로 설정되었다.
+topics:
+  - name: "파트너십 채널 설정"
+    mention_count: 1
+    description: "Makr-Sionic AI 협업을 위한 채널 초기 설정 및 멤버 합류"
+key_discussions: []
+terminology:
+  - term: "makr_sionic_collab_"
+    definition: "Makr와 Sionic AI 간의 비즈니스 협업 및 커뮤니케이션을 위한 공유 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

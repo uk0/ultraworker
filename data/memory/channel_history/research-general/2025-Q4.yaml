@@ -1,0 +1,115 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 46
+  total_threads: 22
+  active_users: 12
+  avg_messages_per_day: 0.5
+summary: >
+  2025 Q4는 리서치팀에 새로운 멤버(이상호)가 합류하고, 2026년 연구 계획 수립이 핵심 활동이었다. 이상호가
+  리서치팀 리드로 합류하여 팀 구조 파악, wandb/overleaf 공용 계정 세팅, 모델링 노하우 템플릿 구축 등
+  인프라를 정비하였다. "2026년 우린 무엇을 리서치 할 것인가"를 주제로 커피챗과 위클리 논의가 진행되었으며,
+  Foundation Model 연구 방향, VLM/LLM 개발 전략이 구체화되었다. 정석현이 ML/CV/NLP 학회 팔로업
+  체계를 정리하여 ICLR/ICML/NeurIPS/CVPR/ACL 등 주요 학회 추적 방법을 공유하였다. VQA 데이터셋
+  구축과 STORM Parse 성능 평가(LLM-as-a-judge), 과제 계획서 리뷰, LLM Forensics(HuRef/REEF
+  기반 모델 Fingerprinting) 연구 방향이 제시되었다. 연말 회고와 함께 2025년을 마무리하고 2026년 연구
+  방향을 수립하는 시기였다.
+topics:
+  - name: "2026년 연구 계획 수립"
+    count: 8
+    summary: "2026년 리서치 아이템 브레인스토밍. Foundation Model 연구 방향 정리. 커피챗을 통한 개인별 희망 연구 주제 취합. 초안 작성 및 리뷰."
+  - name: "이상호 합류 및 팀 인프라 정비"
+    count: 7
+    summary: "이상호 리서치팀 합류. wandb 공용 계정 세팅. overleaf 공용 계정 세팅. 모델링 노하우 노트 템플릿 구축. 위클리 미팅 운영 체계화."
+  - name: "Foundation Model 전략"
+    count: 5
+    summary: "Foundation Model 보유 필요성 논의. GPU 확보 시점과 규모 역산. 26년 1Q~2Q 시작 희망. 모티프와의 컨소시엄 가능성 검토."
+  - name: "ML 학회 팔로업 체계"
+    count: 3
+    summary: "ML/CV/NLP 주요 학회(ICLR/ICML/NeurIPS/CVPR/ACL/EMNLP) 팔로업 체계 정리. ICLR OpenReview 활용법. Trending Papers 소스."
+  - name: "VQA 데이터셋 및 STORM Parse 평가"
+    count: 4
+    summary: "AIHub 시각화 자료 VQA 데이터셋 구축(28,570문서). STORM Parse vs Qwen3-VL-8B vs Ministral 성능 비교. 실패 케이스 분석(구조 손실 41%, 수치 오류 39%)."
+  - name: "LLM Forensics"
+    count: 3
+    summary: "HuRef(NeurIPS 2024) 기반 모델 Fingerprinting. REEF(ICLR 2025) 계보 추적. 한국어 Foundation Model 5종 체계적 분석 계획."
+  - name: "특허 및 과제 계획서"
+    count: 4
+    summary: "특허 작업 현황 확인. 과제 계획서 리뷰 협조 요청. Sakana AI 기술 조사 요청."
+key_discussions:
+  - thread_ts: '1762421523'
+    date: '2025-11-06'
+    title: "2026년 리서치 방향 논의 시작"
+    summary: "이상호가 11/24 '2026년 우린 무엇을 리서치 할 것인가' 주제로 논의 계획 공유. 개인별 커피챗을 통해 희망 연구 주제를 취합하여 초안 작성 예정."
+    participants: ["U09QEFWEQ3W"]
+    decisions: ["11/24 2026년 연구 계획 논의"]
+    action_items: ["커피챗 진행", "희망 주제 취합"]
+    keywords: ["2026계획", "연구방향", "커피챗"]
+    relevance_score: 1.0
+  - thread_ts: '1764685310'
+    date: '2025-12-02'
+    title: "Foundation Model 보유 전략 논의"
+    summary: "이상호와 Noah 간 DM 내용 공유. Foundation Model 보유 시점과 규모 논의. 26년 1Q~2Q 시작 희망. GPU 확보는 데이터/실험 준비 후 역산하여 자원 요청."
+    participants: ["U057PR1ADCL", "U09QEFWEQ3W"]
+    decisions: ["26년 1Q~2Q Foundation Model 연구 시작"]
+    action_items: ["구체적 자원 요청 정리"]
+    keywords: ["Foundation Model", "GPU", "모델학습", "자원계획"]
+    relevance_score: 1.0
+  - thread_ts: '1763533147'
+    date: '2025-11-19'
+    title: "ML/CV/NLP 학회 팔로업 체계 정리"
+    summary: "정석현이 주요 학회 팔로업 방법 정리. ICLR OpenReview 기반 논문 공개, HuggingFace Trending Papers, 분야별 거물 팔로업 등. ML(ICLR/ICML/NeurIPS), CV(CVPR/ICCV/ECCV), NLP(ACL/EMNLP/NAACL)."
+    participants: ["U095HKJPKTK"]
+    decisions: []
+    action_items: ["ICLR 리뷰 기간 활용하여 논문 확인"]
+    keywords: ["학회", "ICLR", "CVPR", "ACL", "논문팔로업"]
+    relevance_score: 0.8
+  - thread_ts: '1766364818'
+    date: '2025-12-22'
+    title: "AIHub VQA 데이터셋 및 STORM Parse 평가"
+    summary: "이상호가 AIHub 시각화 자료 VQA 데이터셋 공개. Train 28,570문서, Val 3,581문서. LLM-as-a-Judge 기반 VLM 파싱 성능 비교: STORM Parse(4.72) > Qwen3-VL-8B(4.61) > Ministral(4.17). 실패 케이스 분석."
+    participants: ["U09QEFWEQ3W"]
+    decisions: []
+    action_items: ["표 구조 파싱 개선", "그래프 범례-데이터 매핑 정확도 향상"]
+    keywords: ["VQA", "AIHub", "STORM Parse", "VLM", "평가"]
+    relevance_score: 0.9
+  - thread_ts: '1764894607'
+    date: '2025-12-05'
+    title: "2025년 연말 회고 계획"
+    summary: "박우명이 12/22 마지막 리서치 미팅에서 연말 회고 제안. 올해 한 일, 잘한 일, 아쉬운 일, 배운 것 등을 공유하는 시간."
+    participants: ["U058A971Z8R"]
+    decisions: ["12/22 연말 회고 진행"]
+    action_items: []
+    keywords: ["회고", "연말", "2025"]
+    relevance_score: 0.7
+terminology:
+  - term: "HuRef"
+    definition: "Human Readable Fingerprint. LLM 가중치를 SVD 등으로 분석하여 모델 고유 지문을 생성하는 기법."
+    aliases: []
+    context: "NeurIPS 2024 poster. LLM Forensics 연구에 활용."
+  - term: "REEF"
+    definition: "모델 계보 추적 기법. ICLR 2025."
+    aliases: []
+    context: "LLM Forensics Phase 1에서 HuRef와 함께 활용 계획."
+  - term: "LLM Forensics"
+    definition: "LLM 모델의 체계적 분석. Fingerprinting, 계보 추적, 토큰 임베딩 분석, 레이어별 표현 분석 등을 포함."
+    aliases: []
+    context: "2026년 GPU 지원 과제의 핵심 연구 주제."
+  - term: "dragoon"
+    definition: "사이오닉의 document 처리 모듈. 딥러닝 모델 미포함."
+    aliases: []
+    context: "STORM Parse 파이프라인의 일부."
+  - term: "pepper"
+    definition: "Qwen2.5/3 VL 기반으로 학습 중인 VLM 모델. Gemini 등 상용 VLM 대체 목적."
+    aliases: []
+    context: "STORM Parse에서 VLM 대체를 위해 개발 중."
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

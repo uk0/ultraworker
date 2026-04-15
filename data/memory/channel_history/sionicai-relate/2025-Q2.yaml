@@ -1,0 +1,62 @@
+channel:
+  id: C083Z9S9Y9M
+  name: sionicai-relate
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 23
+  total_threads: 16
+  active_users: 4
+  avg_messages_per_day: 2.6
+summary: |
+  2025년 2분기 sionicai-relate 채널에서는 Relate/Spread 툴의 본격적인 온보딩과 실제 활용이 시작되었다. 4월 말 승희님이 채널에 참여하면서 연락처 일괄 업로드, Engage(시퀀스) 설정, Meeting scheduler, 이메일 CC 추가 등 다양한 기능에 대한 질의응답이 활발히 이루어졌다. 5월에는 Spread LINC(AI 이메일 마케팅 코파일럿) 출시 안내, Relate/모두싸인 공동 웨비나 안내, 유료 전환 관련 논의 등이 있었으며, 6월에는 서버 점검 공지와 한국어 UI 업데이트, Triggered Campaign 등 신기능 출시가 안내되었다.
+topics:
+  - name: "Engage 시퀀스 설정 및 질의응답"
+    mention_count: 8
+    description: "시퀀스 이메일 발송, 수신자 추가 시점, CC 추가, 테스트 메일 발송, 이메일 지연 이슈 등 상세 질의응답"
+  - name: "연락처 관리 및 업로드"
+    mention_count: 4
+    description: "연락처 일괄 업로드 엑셀 포맷, 그룹화 기능, List와 Engage 시퀀스 연동 방법"
+  - name: "신기능 출시 공지"
+    mention_count: 5
+    description: "Spread LINC AI 코파일럿, Triggered Campaign, 한국어 UI, 이메일 스레드 정렬 개선 등"
+  - name: "유료 전환 및 과금"
+    mention_count: 2
+    description: "Relate/Spread 유료 전환 관련 논의 및 과금 정책 질의"
+key_discussions:
+  - thread_ts: '1745820000.000000'
+    date: '2025-04-28'
+    reply_count: 19
+    text_preview: "연락처 일괄 업로드 엑셀 포맷 문의 및 그룹화 기능 질의"
+  - thread_ts: '1745908400.000000'
+    date: '2025-04-29'
+    reply_count: 15
+    text_preview: "List와 Engage 시퀀스 연동 관련 질의 - 시퀀스 발송 타이밍 및 연동 방법"
+  - thread_ts: '1746005400.000000'
+    date: '2025-04-30'
+    reply_count: 8
+    text_preview: "이메일 발송 지연 이슈 및 테스트 메일 발송 기능 문의"
+  - thread_ts: '1746154800.000000'
+    date: '2025-05-02'
+    reply_count: 13
+    text_preview: "유료 전환 관련 논의 - Engage 용어 정리 및 구독 조건"
+terminology:
+  - term: "Engage"
+    definition: "Relate의 시퀀스 이메일 기능. 자동 팔로업 이메일을 순차적으로 발송"
+    aliases: ["Sequences", "인게이지"]
+    context: "Sionic AI 아웃바운드 영업 자동화에 활용"
+  - term: "LINC"
+    definition: "Spread의 AI 이메일 마케팅 코파일럿. 이메일 초안 작성, 컨텐츠 최적화 지원"
+    aliases: []
+    context: "2025년 5월 신기능으로 출시 및 웨이트리스트 모집"
+  - term: "Triggered Campaign"
+    definition: "특정 트리거(연락처 추가, 폼 제출 등) 발생 시 자동으로 이메일을 발송하는 캠페인 기능"
+    aliases: []
+    context: "2025년 6월 신기능으로 출시"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

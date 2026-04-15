@@ -1,0 +1,58 @@
+channel:
+  id: C0873ELU31U
+  name: ces-contact-demo
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 7
+  active_users: 3
+  avg_messages_per_day: 5.5
+summary: |
+  2025년 2분기 CES 컨택 데모 채널이 보관 해제되면서 일본계 기업들을 대상으로 한 AI 솔루션 제안 활동이 재개되었다.
+  IKO日本トムソン, 日本ソフト開発株式会社, JAPAN AI株式会社, pluszero 등 일본 기업들을 대상으로 Sionic AI의 STORM Platform 기반 맞춤형 AI 솔루션을 제안하는 자동화 뉴스레터가 생성되었다.
+  7개의 스레드에서 각 기업별 AI 솔루션 상세 내용이 공유되었으며, Slack 채널 보관 관련 에러 해결 및 멤버 재초대가 이루어졌다.
+topics:
+  - name: "일본 기업 AI 솔루션 제안"
+    mention_count: 6
+    description: "일본계 기업 대상 STORM Platform 기반 맞춤형 AI 솔루션 자동 생성 및 공유"
+  - name: "채널 보관 해제"
+    mention_count: 2
+    description: "채널 아카이브 해제 및 관련 에러 해결"
+key_discussions:
+  - thread_ts: '1745828280.000000'
+    date: '2025-04-28'
+    reply_count: 1
+    text_preview: "AI Solutions for Sionic AI - STORM 플랫폼 기반 솔루션 제안"
+  - thread_ts: '1745828460.000000'
+    date: '2025-04-28'
+    reply_count: 1
+    text_preview: "AI Solutions for IKO日本トムソン - 일본 기업 AI 솔루션 제안"
+  - thread_ts: '1745829000.000000'
+    date: '2025-04-28'
+    reply_count: 2
+    text_preview: "AI Solutions for 日本ソフト開発株式会社 - 맞춤형 AI 솔루션 제안"
+  - thread_ts: '1745891400.000000'
+    date: '2025-04-29'
+    reply_count: 1
+    text_preview: "AI Solutions for pluszero - AI 솔루션 제안"
+  - thread_ts: '1745891460.000000'
+    date: '2025-04-29'
+    reply_count: 1
+    text_preview: "AI Solutions for JAPAN AI株式会社 - AI 솔루션 제안"
+terminology:
+  - term: "CES"
+    definition: "Consumer Electronics Show, Sionic AI가 참가한 세계 최대 가전/IT 전시회"
+  - term: "STORM Platform"
+    definition: "Sionic AI의 맞춤형 LLM 환경 구성 플랫폼"
+  - term: "STORM Answer"
+    definition: "Sionic AI의 기업 최적화 생성형 AI 서비스 (RAG 기능 포함)"
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation, 검색 증강 생성 기술"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

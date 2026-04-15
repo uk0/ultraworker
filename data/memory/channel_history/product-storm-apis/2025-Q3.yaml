@@ -1,0 +1,63 @@
+channel:
+  id: C07RCDTGW9E
+  name: product-storm-apis
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 203
+  total_threads: 150
+  active_users: 20
+  avg_messages_per_day: 3.8
+summary: |
+  2025-Q3는 Storm Parse API(parse-router) 신규 개발 및 라이브 출시가 이루어진 핵심 분기이다. 7월 초 신규 기획 논의를 시작으로 크레딧 시스템 설계, parse-router 테크스펙 작성, 8월 4~5일 라이브 배포 및 테디노트 행사를 통한 첫 외부 공개가 진행되었다. 라이브 직후 실시간 부하 테스트에서 PDF·이미지 처리 성능이 확인되었고, Dragoon 연동 에러 및 LibreOffice 다건 처리 이슈가 발견되어 대응이 이루어졌으며, Phase 2(크레딧 라이프사이클 검증)로 이어졌다.
+topics:
+  - name: "parse-router 개발 및 라이브 출시"
+    mention_count: 45
+    description: "Storm Parse API 신규 서비스 설계, 테크스펙 작성, 라이브 배포 및 모니터링"
+  - name: "크레딧 시스템 설계"
+    mention_count: 30
+    description: "API 사용량 기반 크레딧 충전·차감·환불 정책 및 시스템 아키텍처 설계"
+  - name: "부하 테스트 및 성능 검증"
+    mention_count: 25
+    description: "PDF·이미지·오피스 문서 처리에 대한 스파이크 부하 테스트 수행"
+  - name: "Dragoon 연동 에러 대응"
+    mention_count: 15
+    description: "parse-router와 Dragoon 간 통신 에러(Connection reset, 버퍼 초과) 발견 및 해결"
+  - name: "테디노트 행사 모니터링"
+    mention_count: 12
+    description: "테디노트 행사를 통한 첫 외부 사용자 유입 및 실시간 모니터링"
+key_discussions:
+  - thread_ts: '1752364727.000000'
+    date: '2025-07-13'
+    reply_count: 34
+    text_preview: "테크스펙 레벨 준비 완료, 전체 청사진 및 크레딧 설계 공유"
+  - thread_ts: '1752678000.000000'
+    date: '2025-07-16'
+    reply_count: 35
+    text_preview: "Phase 1 테크스펙 작성 중, parse_router 시퀀스 다이어그램 리뷰 예정"
+  - thread_ts: '1754448000.000000'
+    date: '2025-08-05'
+    reply_count: 46
+    text_preview: "dev 부하 테스트 준비, storm-apis-parse-router 라이브 배포 진행"
+  - thread_ts: '2025-08-06'
+    date: '2025-08-06'
+    reply_count: 67
+    text_preview: "테디노트 행사 간 모니터링, 첫 일반 고객 유입, 에러 유형 서머리"
+terminology:
+  - term: "parse-router"
+    definition: "Storm Parse API의 백엔드 서비스명으로, 문서(PDF·이미지·오피스) 파싱 요청을 처리하고 Dragoon·Vertex AI와 연동"
+  - term: "Dragoon"
+    definition: "사이오닉의 문서 레이아웃 분석 내부 서비스로 parse-router가 문서 구조 추출을 위해 호출"
+  - term: "크레딧"
+    definition: "Storm APIs 사용량 과금 단위로, 팀 단위로 충전하고 API 호출 시 차감되는 시스템"
+  - term: "테디노트"
+    definition: "Storm Parse API 첫 외부 공개 행사로 사용된 외부 발표/시연 이벤트명"
+  - term: "LibreOffice"
+    definition: "오피스 문서(doc, ppt 등)를 PDF로 변환하기 위해 parse-router에서 사용하는 오픈소스 라이브러리"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

@@ -1,0 +1,76 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 673
+  total_threads: 509
+  active_users: 31
+  avg_messages_per_day: 8.3
+summary: |
+  2025-Q1 random 채널은 사이오닉AI 전체 구성원의 일상 소통 및 업계 뉴스 공유 채널로 활발히 운영되었다.
+  주요 이벤트로는 CES 2025 참가(시형/명하/하담/성아/우명), CVPR 논문 채택(우명), 신규 입사자 온보딩(승희, 혜선),
+  석원/현우 송별, nohello 문화 도입 논의, 키보드 페스티벌 참석 등이 있었다.
+  AI 업계 뉴스로는 OpenAI Deep Research 출시, GPT-4.5 공개, Claude 3.7 Sonnet 발표, Gemma 3 릴리스,
+  Anthropic MCP(Model Context Protocol) 소개 등이 활발히 공유되었다.
+  사무실 생활은 미타(Midtown) 오피스 중심으로 커피/간식 나눔, 회의실 사용 조율, 택배 수령 등 일상적 소통이 이루어졌으며,
+  CES 블로그 포스트 작성, 회사 Slack 채널 정비, 기술 세미나 등 조직 문화 활동도 진행되었다.
+topics:
+  - CES 2025 참가 및 후기
+  - AI 모델 릴리스 뉴스 (GPT-4.5, Claude 3.7, Gemma 3, DeepSeek)
+  - CVPR 논문 채택 (우명)
+  - nohello 슬랙 문화 도입
+  - 신규 입사자 온보딩 (승희, 혜선)
+  - 석원/현우 송별
+  - 키보드 페스티벌
+  - Anthropic MCP 소개
+  - 미타 오피스 일상 (커피, 간식, 회의실)
+  - 사내 기술 세미나 및 블로그 작성
+key_discussions:
+  - date: '2025-01-09'
+    text_preview: 'CES 2025 참가 후기 및 부스 사진 공유 (시형/명하/하담/성아/우명 참가)'
+  - date: '2025-01-13'
+    text_preview: 'nohello 문화 도입 논의 - 슬랙에서 "안녕하세요"만 보내지 말고 용건을 함께 적자는 제안'
+  - date: '2025-02-07'
+    text_preview: 'OpenAI Deep Research 출시 소식 공유 및 사내 반응'
+  - date: '2025-02-20'
+    text_preview: 'CVPR 논문 채택 축하 (우명) - 리뷰 결과 공유'
+  - date: '2025-02-28'
+    text_preview: 'GPT-4.5 출시 소식 공유 및 성능 논의'
+  - date: '2025-03-05'
+    text_preview: 'Claude 3.7 Sonnet 발표 소식 및 사내 활용 논의'
+  - date: '2025-03-12'
+    text_preview: 'Anthropic MCP(Model Context Protocol) 소개 및 사내 공유'
+  - date: '2025-03-14'
+    text_preview: '석원님 송별 - 퇴사 및 감사 메시지 공유'
+  - date: '2025-03-21'
+    text_preview: 'Gemma 3 릴리스 소식 공유'
+  - date: '2025-03-28'
+    text_preview: '키보드 페스티벌 참석 후기 공유'
+terminology:
+  - term: '미타'
+    definition: 'Midtown - 사이오닉AI 본사 사무실 위치/별칭'
+    aliases: ['Midtown', '미드타운']
+  - term: 'nohello'
+    definition: '슬랙에서 인사만 보내지 말고 용건을 함께 적는 커뮤니케이션 문화'
+    aliases: ['노헬로']
+  - term: 'MCP'
+    definition: 'Model Context Protocol - Anthropic이 발표한 AI 모델 컨텍스트 프로토콜'
+    aliases: ['Model Context Protocol']
+  - term: 'CES'
+    definition: 'Consumer Electronics Show - 미국 라스베이거스에서 열리는 세계 최대 IT/전자 전시회'
+    aliases: ['Consumer Electronics Show']
+  - term: 'CVPR'
+    definition: 'Conference on Computer Vision and Pattern Recognition - 컴퓨터비전 분야 최상위 학회'
+    aliases: ['Computer Vision and Pattern Recognition']
+  - term: '깽이'
+    definition: '사무실 고양이 - 사이오닉AI 미타 오피스에 있는 고양이'
+    aliases: ['고양이']
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

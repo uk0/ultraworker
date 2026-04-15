@@ -1,0 +1,30 @@
+channel:
+  id: C06G345H2A0
+  name: onicsy-goods
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 3분기에 권혜선(Jada)님이 사무실(삼실)이 춥다며 플리스 굿즈 추가 발주를 요청하였다(8개 답글).
+  겨울 대비 방한용 굿즈 수요가 확인되었다. 신희수님이 새로 합류하였다.
+topics:
+  - 플리스 굿즈 추가 발주 요청
+  - 사무실 방한 대책
+key_discussions:
+  - thread_ts: '1757061293.004709'
+    date: '2025-09-05'
+    topic: 플리스 굿즈 추가 발주 요청 - 삼실 사무실 추위 대응 (8개 답글)
+terminology:
+  - term: 삼실
+    definition: 삼성역/잠실 근처 사무실 약칭으로 추정
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

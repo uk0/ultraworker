@@ -1,0 +1,45 @@
+channel:
+  id: C066D0B9WKC
+  name: alarm-live-error-pylon
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 807
+  total_threads: 22
+  active_users: 7
+  avg_messages_per_day: 16.8
+summary: |
+  Pylon 운영 에러 알림 채널. 807개 메시지, 참여자 7명으로 대응 인력이 적었던 분기.
+  주요 이벤트는 11월 Pylon 서버 장애로, 배포 파이프라인 오류로 인한 live 서비스 404 에러가 약 20분간 지속되었다.
+  EKS에서 이관된 후 기존 모니터링 엔드포인트(/api/v1/health)가 유효하지 않게 되어 v2로 변경이 필요했다.
+  암호화된 PDF 파일(EncryptedFileError) 처리 에러, Qdrant 컬렉션 중복 생성 에러(ALREADY_EXISTS)도 발생.
+  NewRelic 알림이 본격 활용되기 시작하여 DocumentAlreadyExistsError, TypeError 등이 감지되었다.
+  모니터링 봇의 NewRelic 완전 이관 논의가 진행되었다.
+topics:
+  - Pylon 배포 파이프라인 오류 (live 404 장애)
+  - EKS 이관 후 헬스체크 엔드포인트 변경 필요
+  - 암호화 PDF 파일 처리 에러 (EncryptedFileError)
+  - Qdrant 컬렉션 중복 생성 에러
+  - NewRelic 모니터링 이관 논의
+  - DocumentAlreadyExistsError 에러
+key_discussions:
+  - date: '2024-11-21'
+    summary: 'Pylon live 서비스 404 장애 - 배포 파이프라인 오류로 잘못된 버전 배포, Sigrid Jin 긴급 대응'
+  - date: '2024-11-19'
+    summary: 'EKS에서 이관 후 기존 모니터링 봇 헬스체크 URL 변경 필요, NewRelic 완전 이관 논의 (Sigrid Jin)'
+  - date: '2024-11-29'
+    summary: '암호화 PDF(ASME PTC 6.2.pdf) 반복 업로드 시도로 인한 EncryptedFileError 다수 발생'
+terminology:
+  - term: "EncryptedFileError"
+    definition: "암호화된 PDF 파일 업로드 시 발생하는 에러, 파일 복호화 불가"
+  - term: "DocumentAlreadyExistsError"
+    definition: "이미 존재하는 문서를 중복 생성 시도할 때 발생하는 에러"
+  - term: "live-pylon.sionic.tech"
+    definition: "Pylon live 서버 도메인, EKS 이관 후 sionic.im에서 변경됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

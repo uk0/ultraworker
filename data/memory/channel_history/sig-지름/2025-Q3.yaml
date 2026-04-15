@@ -1,0 +1,56 @@
+channel:
+  id: C06S3EQ9X1T
+  name: sig-지름
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 23
+  active_users: 9
+  avg_messages_per_day: 1.3
+summary: |
+  고가 가전/기기 구매와 취미 장비가 두드러진 분기. 이강욱이 Halliday 스마트 안경, Beats Studio Pro 헤드폰, 키체인 카메라 등을 공유하며 182개 답변이 달린 대형 스레드를 만들었다. Sigrid Jin은 해외결제 정기청구 확인으로 파산 직전이라며 2천불 Maven 강의 수강을 고민했고, 정세민은 킥스타터 AI 캐릭터 팟을 공유했다. Noah는 비타민, 위스키(독립병입자), 이상한 물건 구매를 계속했고, 송명하는 아이 생일선물 장난감을 공유했다. 김덕현은 오토바이 점화코일 부품을 구해야 하는 상황이 있었다. 조하담(Joy)은 침대에서 코드 보기 위해 빔프로젝터/스크린을 알아보았다.
+topics:
+  - 오디오/음향 (Beats Studio Pro)
+  - 스마트 안경 (Halliday)
+  - 카메라 (키체인 카메라)
+  - 교육/강의 (Maven 2천불 강의)
+  - 위스키 (독립병입자)
+  - 오토바이 부품
+  - 빔프로젝터
+  - 키보드 (손목 건강용)
+key_discussions:
+  - thread_ts: '1759295398.521009'
+    date: '2025-10-01'
+    topic: 키체인 카메라 예구(예약구매) 정보
+    reply_count: 182
+  - thread_ts: '1754553477.774759'
+    date: '2025-08-07'
+    topic: Halliday 스마트 안경 구매 고민
+    reply_count: 32
+  - thread_ts: '1758728842.739299'
+    date: '2025-09-24'
+    topic: Beats Studio Pro 구매 후기
+    reply_count: 30
+  - thread_ts: '1756826025.743659'
+    date: '2025-09-02'
+    topic: 2천불 Maven 강의 수강 고민
+    reply_count: 20
+  - thread_ts: '1752825859.282569'
+    date: '2025-07-18'
+    topic: 빔프로젝터/스크린 알아보기
+    reply_count: 17
+terminology:
+  - term: "Halliday"
+    definition: "스마트 안경 브랜드, AR 기능이 있는 일반 안경 형태의 기기"
+    context: "이강욱이 구매 고민"
+  - term: "독립병입자"
+    definition: "Independent Bottler, 증류소에서 원액을 사서 자체 숙성/병입하는 위스키 업체"
+    context: "Noah가 독립병입자 위스키 구매"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

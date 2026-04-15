@@ -1,0 +1,92 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 85
+  total_threads: 40
+  active_users: 17
+  avg_messages_per_day: 2.0
+summary: |
+  2024년 1분기 announcement 채널은 사무실 이전(미드타운 역삼 3층)과 관련된 공지가 핵심 주제였다.
+  2월 29일 패스트파이브에서 미드타운 역삼으로 이사를 진행했으며, 출입카드 발급, 사무실 이용정보 공유,
+  회의실 예약 방식 변경 등 새 사무실 정착을 위한 안내가 다수 이루어졌다.
+  매주 목요일 오후 2시 테크 세미나가 정기적으로 운영되었고, Medprompt, ComfyUI, 랭콘 Preview 등
+  다양한 주제가 발표되었다. Langcon 2024에 회사 후원사로 참여하여 고석현, 박우명, 허석원, 박진형이
+  발표했다. 1월 26일 첫 워크샵 겸 신년회가 판교레이크골프클럽에서 진행되었다.
+  신규 멤버로 조하담(백엔드), 정세민, 백은주, 재무 인턴이 합류했으며, 연말정산 안내, 급여 시스템 개편,
+  캘린더 통합 관리, 구매요청봇 도입 등 운영 관련 공지도 활발했다. 컬쳐 논의와 온보딩 가이드 정비 등
+  조직문화 개선 노력도 이루어졌다. 메티스엑스와 생성형 AI 기술 개발 MOU 체결 뉴스도 공유되었다.
+topics:
+  - name: "사무실 이전"
+    mention_count: 12
+    context: "패스트파이브에서 미드타운 역삼 3층으로 이사 (2024-02-29)"
+  - name: "테크 세미나"
+    mention_count: 10
+    context: "매주 목요일 오후 2시, Medprompt/ComfyUI/랭콘 Preview 등 발표"
+  - name: "Langcon 2024"
+    mention_count: 4
+    context: "2024-03-02 사이오닉 후원사 참여, 4명 발표 (생성 모델 튜닝)"
+  - name: "워크샵/신년회"
+    mention_count: 5
+    context: "1월 26일 판교레이크골프클럽에서 첫 워크샵 겸 회고"
+  - name: "신규 멤버 합류"
+    mention_count: 3
+    context: "조하담(백엔드), 정세민, 백은주, 재무 인턴 등 합류"
+  - name: "조직 운영"
+    mention_count: 8
+    context: "연말정산, 캘린더 관리, 구매요청봇, 온보딩 가이드 등"
+key_discussions:
+  - thread_ts: "1707920897.558189"
+    date: "2024-02-14"
+    reply_count: 1
+    text_preview: "사무실 이사 날짜 확정 공지 (2024/2/29), 이사 타임라인 안내"
+  - thread_ts: "1706169518.877989"
+    date: "2024-01-25"
+    reply_count: 25
+    text_preview: "1/26 워크샵 일정 세부 안내 - 판교레이크골프클럽, 등갈비, 차량 배정"
+  - thread_ts: "1707982801.018779"
+    date: "2024-02-15"
+    reply_count: 1
+    text_preview: "Langcon 2024 참여 신청 안내 - 사이오닉 후원사 참여, 3/2 개최"
+  - thread_ts: "1706860483.121069"
+    date: "2024-02-02"
+    reply_count: 12
+    text_preview: "연말정산 대상자 처리 기한 안내"
+  - thread_ts: "1709196690.051629"
+    date: "2024-02-29"
+    reply_count: 2
+    text_preview: "새 사무실 출입 관련 공지 - 출입카드 발급 전까지 임시 운영 방안"
+  - thread_ts: "1711675277.494139"
+    date: "2024-03-29"
+    reply_count: 9
+    text_preview: "구매요청 가이드 및 구매요청봇 도입 안내"
+terminology:
+  - term: "미드타운 역삼"
+    definition: "사이오닉AI 새 사무실 위치 (역삼 미드타운 3층)"
+    aliases: ["미타"]
+    context: "2024년 2월 29일 패스트파이브에서 이전"
+  - term: "Langcon"
+    definition: "랭체인 관련 기술 컨퍼런스"
+    aliases: ["랭콘"]
+    context: "2024-03-02 개최, 사이오닉 후원사 참여 및 4명 발표"
+  - term: "테크 세미나"
+    definition: "사내 기술 공유 세미나, 매주 목요일 오후 2시 진행"
+    aliases: ["Tech Seminar"]
+    context: "다양한 기술 주제 발표 및 신규 멤버 자기소개 시간"
+  - term: "패파"
+    definition: "패스트파이브 (이전 사무실 위치)"
+    aliases: ["패스트파이브"]
+    context: "2024년 2월까지 사용한 이전 사무실"
+  - term: "STORM"
+    definition: "사이오닉AI의 주요 제품 (검색 엔진 서비스)"
+    aliases: ["스톰", "Stargate"]
+    context: "스톰 앤서 콘솔을 통해 접근 가능"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

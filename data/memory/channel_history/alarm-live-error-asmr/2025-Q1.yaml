@@ -1,0 +1,65 @@
+channel:
+  id: C07F2EFA76K
+  name: alarm-live-error-asmr
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 79
+  total_threads: 18
+  active_users: 9
+  avg_messages_per_day: 6.1
+summary: |
+  2025년 1분기 alarm-live-error-asmr 채널에서는 OpenLLM API 오류가 지속적으로 발생하였으며, 주요 이슈로는 o1-mini 모델의 미지원(carrier 연동 관련), 슬랙 알림 속도 제한 초과, 채널명 변경(status-openllm -> status-asmr) 등이 있었다. 1월에는 개발 환경 오류 알림이 라이브 채널로 잘못 전달되는 설정 오류가 있었으며, 담당자(하담/귤진우)가 원인 분석 후 수정하였다. 2월에는 인간 스케줄러(수동 API 테스트)를 통한 테스트 완료 결과 공유와 Upstage 라이브 배포 전 fail 발생이 기록되었다. 3월에는 슬랙 알림 템플릿 개선 테스트가 진행되었다.
+topics:
+  - name: "OpenLLM API 오류 알림"
+    mention_count: 50
+    description: "1월~3월에 걸쳐 발생한 라이브 API 오류 알림. o1-mini 미지원, 속도 제한 등 다양한 원인"
+  - name: "개발 환경 오류 알림 잘못 설정"
+    mention_count: 5
+    description: "1월 중순 개발 환경 이관 작업 중 dev 오류 알림이 라이브 채널로 잘못 전달되는 설정 오류"
+  - name: "채널명 변경"
+    mention_count: 2
+    description: "2025년 2월 27일 채널명을 status-openllm에서 status-asmr로 변경. 채널 매니저 설정 요청"
+  - name: "인간 스케줄러 테스트"
+    mention_count: 3
+    description: "2월 17일 수동 API 테스트(인간 스케줄러) 완료. Upstage 배포 전 fail 포함"
+  - name: "슬랙 알림 템플릿 개선"
+    mention_count: 3
+    description: "3월 하담 담당자의 슬랙 알림 템플릿 개선 테스트 진행"
+key_discussions:
+  - thread_ts: '1736214000.000000'
+    date: '2025-01-07'
+    reply_count: 2
+    text_preview: "o1-mini 모델 미지원 오류 - carrier 연동 API 키 dev 환경에서 대량 실패. role system -> developer 변경 필요"
+  - thread_ts: '1737378600.000000'
+    date: '2025-01-17'
+    reply_count: 9
+    text_preview: "dev 오류 알림이 라이브 채널로 잘못 전달된 설정 오류 분석 및 수정"
+  - thread_ts: '1739768820.000000'
+    date: '2025-02-17'
+    reply_count: 5
+    text_preview: "인간 스케줄러 테스트 완료 - non-stream 기준, Upstage 배포 전 fail 포함"
+  - thread_ts: '1740624600.000000'
+    date: '2025-02-27'
+    reply_count: 2
+    text_preview: "채널명 status-openllm -> status-asmr 변경 요청 및 채널 매니저 설정"
+terminology:
+  - term: "인간 스케줄러"
+    definition: "자동화 스케줄러 없이 개발자가 수동으로 API 테스트를 진행하는 방식을 지칭하는 내부 용어"
+    aliases: []
+    context: "2025-02-17 Apidog 테스트 리포트와 함께 결과 공유"
+  - term: "o1-mini"
+    definition: "OpenAI의 추론 최적화 모델. function call 지원 방식 차이(system -> developer role)로 이슈 발생"
+    aliases: []
+    context: "carrier 연동 API 키 사용 시 발생한 모델 호환성 이슈"
+  - term: "status-asmr"
+    definition: "alarm-live-error-asmr 채널의 중간 이름. 2025-02-27에 status-openllm에서 변경"
+    aliases: []
+    context: "채널명 변경 히스토리"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

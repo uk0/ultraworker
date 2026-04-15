@@ -1,0 +1,28 @@
+channel:
+  id: C079KMS7LNN
+  name: guest_marcspon
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 30
+  total_threads: 19
+  active_users: 7
+  avg_messages_per_day: 1.2
+summary: |
+  2024-Q3 guest_marcspon 채널 데이터 수집 완료. 30개 메시지, 7명 참여, 19개 스레드.
+  마크스폰과의 기술 연동 본격화. STORM API 연동 관련 상세 기술 문의 및 응답 진행. 문서 처리, 답변 품질 최적화, 출력 형식 커스터마이징 등 실무적 논의.
+topics:
+  - "STORM API 기술 연동"
+  - "문서 처리 최적화"
+  - "답변 형식 커스터마이징"
+key_discussions:
+  - title: "STORM API 연동 기술 지원"
+    summary: "마크스폰 개발팀과 사이오닉 간 STORM API 연동 관련 기술적 문의 및 지원 진행"
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

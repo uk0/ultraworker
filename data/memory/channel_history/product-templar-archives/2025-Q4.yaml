@@ -1,0 +1,45 @@
+channel:
+  id: C09N7DUF2P6
+  name: product-templar-archives
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 4
+  active_users: 7
+  avg_messages_per_day: 2.2
+summary: |
+  2025-Q4 product-templar-archives 채널은 Storm APIs의 크레딧 이력·예약 정보 관리 서비스인 TA(Templar Archives)와 관련된 운영·개발 논의가 이루어졌다. 주요 내용은 Grafana 대시보드에 결제 정합성 검증 패널 추가, onprem 대시보드의 ClientKey 입력 기능 개선, 테스트 사용자 필터링 방법 논의 등이다. 채널 활동량은 적으나 Storm APIs 모니터링 인프라 기반을 다지는 분기였다.
+topics:
+  - name: "결제 정합성 모니터링"
+    mention_count: 4
+    description: "Grafana 대시보드에 체인검사·계산검사·잔액검사 및 예약 정합성 패널 추가"
+  - name: "onprem 대시보드 개선"
+    mention_count: 3
+    description: "ClientKey 입력창을 인풋 기반으로 수정하여 유연한 모니터링 지원"
+  - name: "테스트 사용자 필터링"
+    mention_count: 2
+    description: "의미 있는 실 사용자만 보이도록 대시보드 전체에 테스트 키 필터링 방법 논의"
+key_discussions:
+  - thread_ts: '1761190136.000000'
+    date: '2025-10-23'
+    reply_count: 12
+    text_preview: "onprem 대시보드 ClientKey 인풋창 개선, 디폴트값 설정 논의"
+  - thread_ts: '1764062700.000000'
+    date: '2025-11-25'
+    reply_count: 2
+    text_preview: "대시보드에서 테스트 사용자 등 표현 대상 외 필터링 방법 논의"
+terminology:
+  - term: "TA(Templar Archives)"
+    definition: "Storm APIs의 크레딧 이력, API 호출 이벤트, 예약 정보를 관리하는 내부 서비스"
+  - term: "결제 정합성 검증"
+    definition: "크레딧 트랜잭션의 체인·계산·잔액이 일관성을 유지하는지 Grafana 패널로 자동 검증하는 기능"
+  - term: "ClientKey"
+    definition: "Storm APIs 고객사별 API 접근 키. 대시보드에서 고객사별 사용량을 구분하는 기준"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

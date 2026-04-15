@@ -1,0 +1,66 @@
+channel:
+  id: C06G037GWV6
+  name: project-kt
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 85
+  total_threads: 54
+  active_users: 11
+  avg_messages_per_day: 2.0
+summary: |
+  KT 프로젝트의 가장 활발한 분기. 수협 대면 미팅 및 시연, KT 믿음(midm) 모델 테스트, SG그룹 프로젝트 제안 준비가 핵심 활동이었다.
+  수협 에이전트 품질 개선을 위해 다국어 임베딩 모델(v2) 교체, RAG 로직 수정, 프롬프트 최적화, 피드백 기능 개발 등 다각적인 기술 개선이 진행되었다.
+  KT 믿음(midm) 모델과 솔라(Solar) 모델의 STORM Answer 연동 테스트가 수행되었으며, chat 모드 호출 방식 확인 및 프롬프트 호환성 검증이 이루어졌다.
+  SG그룹 프로젝트 관련 견적 조정(3~3.5억), 인력 증빙, 제안서 작성, 제안 발표 준비 등 사업 관련 업무도 병행되었다.
+  6개 에이전트 설정, API 연동 규격 정리, top-k 파라미터 조정 등 기술 지원 요청이 빈번했다.
+topics:
+  - 수협 시연 및 품질 개선
+  - KT 믿음(midm) 모델 테스트
+  - 솔라(Solar) 모델 연동
+  - SG그룹 프로젝트 제안
+  - RAG 로직 개선
+  - 다국어 임베딩 모델 v2 적용
+  - 피드백 기능 개발
+  - 견적 협상
+key_discussions:
+  - thread_ts: '1712177685.259139'
+    date: '2024-04-03'
+    title: 수협 데이터 RAG 개선 실험 및 분석
+    summary: 수협 중복 문서 문제 분석, 다국어 임베딩 v2 모델 교체 검토, top-k 조정, RAG 로직 수정 등 다각적 개선 방안 도출. 단기/장기 로드맵 수립.
+  - thread_ts: '1714358117.324599'
+    date: '2024-04-29'
+    title: KT 믿음 및 솔라 모델 테스트 환경 제공
+    summary: KT로부터 믿음(base-midm-bitext-s-chat-085)과 솔라(solar_mini_tutorial_r) 모델 API 연동 정보 수신. 5/10까지 테스트 기간.
+  - thread_ts: '1717048722.645559'
+    date: '2024-05-30'
+    title: KT 내부부서(ktaicc) 요건 문의 대응
+    summary: KT AICC 부서의 추가 요건 검토. 검색 API, 모델 설정 권한 부여 등 논의.
+  - thread_ts: '1719536338.605029'
+    date: '2024-06-28'
+    title: SG그룹 프로젝트 견적 조정
+    summary: SG그룹 비용 절감 요청. 투입 M/M 3으로 조정, 총합 3억 마지노선 논의. 실제 PM은 김태환님 예정.
+  - thread_ts: '1718963319.161649'
+    date: '2024-06-21'
+    title: 6개 에이전트 지식 학습 오류 및 평가 프롬프트 공유 요청
+    summary: KT 계정의 6개 에이전트 지식 학습 불가 이슈. 평가 에이전트 프롬프트 구성에 대한 문의.
+terminology:
+  - term: 믿음(midm)
+    definition: KT에서 개발한 한국어 LLM 모델. base-midm-bitext-s-chat-085 등 여러 버전 존재
+    aliases: [midm, MIDM]
+  - term: 솔라(Solar)
+    definition: 업스테이지에서 개발한 LLM 모델. Solar Mini(10.6B), Solar Pro(36B) 등 라인업 보유
+    aliases: [Solar, solar_mini]
+  - term: SG그룹
+    definition: KT를 통해 STORM Answer RAG 솔루션 도입을 추진한 기업 고객
+  - term: top-k
+    definition: RAG 검색에서 반환하는 상위 청크 수. 값이 클수록 정확도 향상 가능하나 응답 시간 증가
+  - term: 리랭커(Reranker)
+    definition: 검색된 청크의 관련성을 재평가하여 순위를 재조정하는 모델
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

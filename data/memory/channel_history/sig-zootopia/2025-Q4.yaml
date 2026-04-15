@@ -1,0 +1,48 @@
+channel:
+  id: C085HPG2GEQ
+  name: sig-zootopia
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 14
+  active_users: 7
+  avg_messages_per_day: 1.6
+summary: |
+  핵심 멤버 중심으로 반려동물 일상이 꾸준히 공유된 분기. 김혜원이 깽이 미타(사무실) 출근 여부를 정세민에게 물어보는 스레드가 12개 답변을 받았다. 김수원은 몽자앨범 10월호/11월호를 연재하며 벽지 뜯기(7개 답변) 에피소드도 공유했다. 권혜선은 아루의 재택 풍경(테크스펙 리뷰해주는 고양이, 팔꿈치에 머리 박고 자기, 배꼽 사진)을 지속적으로 공유했다. 이강욱은 meow.camera(길고양이 급식소 실시간 카메라 사이트)를 공유했다. 정세민의 깽이 장난감 후기, 오승희의 깽이 애교 자랑 등 깽이가 여전히 채널의 인기 스타였다.
+topics:
+  - 반려묘 일상 (아루, 깽이, 산도)
+  - 반려견 일상 (몽자앨범 월간)
+  - 길고양이 (meow.camera)
+  - 재택 근무와 반려동물
+key_discussions:
+  - thread_ts: '1763116891.938369'
+    date: '2025-11-14'
+    topic: 깽이 미타 출근 여부
+    reply_count: 12
+  - thread_ts: '1760403760.936189'
+    date: '2025-10-14'
+    topic: 캐나다 야생동물
+    reply_count: 8
+  - thread_ts: '1760504946.103369'
+    date: '2025-10-15'
+    topic: 몽자앨범 10월호
+    reply_count: 7
+  - thread_ts: '1762844814.153349'
+    date: '2025-11-11'
+    topic: 벽지 또 뜯은 몽자
+    reply_count: 7
+terminology:
+  - term: "미타"
+    definition: "사무실/오피스를 의미하는 내부 용어"
+    context: "깽이가 미타(사무실)에 출근하는지 여부"
+  - term: "meow.camera"
+    definition: "길고양이 급식소 실시간 카메라 스트리밍 사이트"
+    context: "이강욱이 공유"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

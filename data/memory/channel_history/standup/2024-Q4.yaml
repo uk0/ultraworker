@@ -1,0 +1,112 @@
+channel:
+  id: C058VN1LUKE
+  name: standup
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1495
+  total_threads: 481
+  active_users: 27
+  avg_messages_per_day: 18.7
+summary: |
+  2024년 4분기는 IBK(기업은행) PoC 집중 대응, 글로벌 사업 확장, 연말 회고 준비가 핵심 테마였다.
+  IBK 관련 활동이 47건으로 압도적으로 많았으며, 문서 파싱 이슈 해결, 솔루션 제안 발표,
+  온프레미스 환경 세팅 등이 집중적으로 이루어졌다.
+  싱가폴 컨퍼런스 출장에서 바이트댄스, 구글 싱가폴, 현지 바이어 등 다수 파트너사를 만났으며,
+  RAG Ops 분야에서 경쟁사를 거의 찾지 못했다는 시장 인사이트를 얻었다.
+  Sigrid Jin은 고퍼콘 발표, IBK 임베딩 양자화/리트리벌 프로파일링, 태국 휴가 등을 진행했다.
+  Noah(고석현)는 supply(외장 검색기)에 리랭커, LLM 질의 확장기, 멀티모드를 추가 개발하고,
+  벡터 DB 제거 가능성을 탐색했다. llama 3.3 테스트도 수행했다.
+  사업적으로 현대차/LG엔솔 타겟 협력사 논의, 이랜드 IT 자회사 협업, 유진그룹 연결,
+  나무기술(클라우드사) 미팅, 오라클 미팅, 기보 분기보고 등을 진행했다.
+  채용에서는 합격자 처우 제안, 채용 사이트(sionicai.careers.team) 정비,
+  원티드 노드/PM/코틀린 공고 업로드 등이 수행되었다.
+  연말에는 회사 회고 준비(뤼튼 사례 사업 판단 미스, 고객사 실패 사례 등 교훈 중심)와
+  차기 제품 킬링포인트(GPTs 방향) 고민이 이루어졌다.
+topics:
+  - IBK(기업은행) PoC 집중 대응 (파싱 이슈, 제안 발표, 온프레미스 세팅)
+  - 싱가폴 컨퍼런스 출장 (바이트댄스, 구글, 나무기술 등 미팅)
+  - supply 외장 검색기 고도화 (리랭커, LLM 질의 확장, 멀티모드)
+  - 벡터 DB 제거 가능성 탐색
+  - llama 3.3 모델 테스트
+  - 현대차/LG엔솔 협력사 논의 (듀얼소프트텍스트넷)
+  - 이랜드 IT 자회사 협업 솔루션 공동 세일즈
+  - 나무기술 (VDI/쿠베 인프라 업체) 미팅
+  - unstructured-api-internals 파서 라이브러리 포크 및 기능 추가
+  - 채용 사이트 정비 및 다수 포지션 공고
+  - 투자사 분기보고 자산 정리
+  - 회사 연말 회고 준비 (실패/교훈 중심)
+  - 차기 제품 킬링포인트 구상 (GPTs 방향)
+  - 고퍼콘 발표
+  - 일본 사업 탐색 지속
+key_discussions:
+  - date: '2024-10-10'
+    summary: 싱가폴 출장 - 소프트뱅크, 현대엔지니어링, 바이트댄스, 구글 등 다수 미팅, RAG Ops 경쟁사 부재 확인
+    participants:
+      - Noah ( 고석현 )
+      - Sigrid Jin / Jin Hyung Park
+  - date: '2024-10-24'
+    summary: 현대차/LG엔솔 타겟 협력사 논의, 이랜드 IT 자회사 협업 솔루션 공동 세일즈 논의
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-10-25'
+    summary: IBK doc 97 문서 파싱 이슈 해결 (unstructured-api-internals 포크, Document AI 통합 논의)
+    participants:
+      - Sigrid Jin / Jin Hyung Park
+  - date: '2024-10-31'
+    summary: IBK 제안 발표 진행
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-11-20'
+    summary: 차기 제품 킬링포인트 구상 (GPTs 형태 방향 노션 문서 작성)
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-12-02'
+    summary: 채용 합격자 처우 제안, 채용 사이트 정리, 원티드 노드 공고 업로드
+    participants:
+      - Noah ( 고석현 )
+      - 김덕현 (Dekay)
+  - date: '2024-12-07'
+    summary: supply 외장 검색기에 리랭커/LLM 질의 확장기/앙상블러 추가, Docker/GPU 빌드 수정
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-12-12'
+    summary: supply 결과 성능 평가, 벡터 DB 제거 시스템 가능성 탐색
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-12-17'
+    summary: 연말 회고 준비 구상 (뤼튼 사업 판단 미스, 고객사 실패 사례 등 교훈 중심)
+    participants:
+      - Noah ( 고석현 )
+terminology:
+  - term: "supply"
+    definition: "Pylon을 변경하지 않고 SI성 RAG를 위한 커스텀 외장 검색기"
+    aliases: ["supply-tf-bge-m3", "외장 검색기"]
+  - term: "IBK"
+    definition: "기업은행 - 온프레미스 PoC 핵심 고객사 (4분기 최대 집중 프로젝트)"
+    aliases: ["기업은행"]
+  - term: "RAG Ops"
+    definition: "RAG 운영/관리 도구 및 플랫폼 영역 - 사이오닉의 핵심 차별화 분야"
+    aliases: []
+  - term: "unstructured-api-internals"
+    definition: "USIO에서 포크한 사이오닉 내부 코어 파서 라이브러리"
+    aliases: []
+  - term: "나무기술"
+    definition: "한국 VDI/쿠버네티스 인프라 업체, 코스닥 상장사, 싱가폴에서 접촉"
+    aliases: []
+  - term: "퓨리오사"
+    definition: "AI 추론 전용 칩 개발 회사, Storm 적용 검토"
+    aliases: []
+  - term: "고퍼콘"
+    definition: "Go 언어 한국 커뮤니티 컨퍼런스"
+    aliases: ["GopherCon Korea"]
+  - term: "GPTs"
+    definition: "사이오닉 차기 제품 방향으로 검토된 맞춤형 AI 에이전트 형태"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

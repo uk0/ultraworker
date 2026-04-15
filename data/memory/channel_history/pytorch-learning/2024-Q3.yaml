@@ -1,0 +1,48 @@
+channel:
+  id: C076888QFD0
+  name: pytorch-learning
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 5
+  active_users: 3
+  avg_messages_per_day: 1.1
+summary: |
+  2024년 3분기에는 논문 리뷰와 심화 학습 자료 공유가 주를 이루었다. COIL(Contextualized Inverted List) 논문 리뷰,
+  Dense Retrieval 논문 모음 공유, Unsloth의 Gemma 버그 분석을 통한 PyTorch 스터디 제안 등이 있었다.
+  Transformer Circuits 자료, AI Compiler 스터디 자료(시모님/태훈님 등 AI 스타분들의 자료) 등이 공유되었으며,
+  KAIST 수리과학과의 데이터 사이언스용 선형대수학 강의 영상도 공유되었다.
+  행렬 곱셈을 선형결합으로 이해하는 관점이 논의되었다.
+topics:
+  - 논문 리뷰 (COIL, Dense Retrieval)
+  - Transformer Circuits
+  - AI Compiler 스터디
+  - 데이터 사이언스 선형대수학
+  - Unsloth Gemma 버그 분석
+key_discussions:
+  - thread_ts: '1720403542.901449'
+    date: '2024-07-08'
+    topic: Unsloth Gemma 버그 분석을 통한 PyTorch 스터디 제안 (11개 답글)
+  - thread_ts: '1720942033.571849'
+    date: '2024-07-14'
+    topic: COIL 논문 리뷰 - Contextualized Inverted List 기반 정보 검색
+  - thread_ts: '1721234159.912039'
+    date: '2024-07-17'
+    topic: AI Compiler 스터디 자료 공유 (Notion)
+terminology:
+  - term: COIL
+    definition: Contextualized Inverted List, 문맥화된 역색인 기반 정보 검색 모델
+  - term: Dense Retrieval
+    definition: 밀집 벡터 기반 정보 검색 방식, 전통적 sparse 검색의 대안
+  - term: Transformer Circuits
+    definition: Anthropic의 트랜스포머 내부 작동 메커니즘 해석 연구
+  - term: Unsloth
+    definition: LLM 파인튜닝 최적화 라이브러리
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,60 @@
+channel:
+  id: C05UZB4MSSE
+  name: eng-ko-sllm
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 9
+  active_users: 4
+  avg_messages_per_day: 1.1
+summary: |
+  2024-Q3는 xionic 모델 고도화 및 리랭커 연구가 진행된 분기. dkyoon이 Qwen2-72B 기반 QLoRA 파인튜닝과 DPO(Direct Preference Optimization) 학습을 수행하며 LogicKor 벤치마크 성능 개선에 집중. Qwen 7B에 토큰 부스팅만 적용한 xionic-original 모델을 HuggingFace에 공개. Gemma 2 9B 모델의 한국어 DPO 학습도 시도. Noah가 리랭커 연구 베이스라인을 제안하고, xionic-1-72b-20240919 신규 모델 평가를 요청. Sigrid Jin이 vLLM에서 Gemma 2B의 sliding window attention 미지원으로 인한 max context window 제한(8192→4096) 이슈를 공유.
+topics:
+  - xionic 모델 시리즈 고도화
+  - Qwen2-72B QLoRA 파인튜닝
+  - DPO (Direct Preference Optimization) 학습
+  - LogicKor 벤치마크 평가
+  - 리랭커 (Reranker) 연구
+  - Gemma 2 한국어 최적화
+  - vLLM sliding window attention 이슈
+  - 토큰 부스팅 모델 HuggingFace 공개
+key_discussions:
+  - thread_ts: '1719811030.403269'
+    date: '2024-07-01'
+    title: 'Qwen2-72B-Chat ft + 가중치 내부화 모델 논의'
+    summary: 'Noah가 dkyoon에게 Qwen2-72B-Chat 모델의 파인튜닝 및 가중치 내부화 적용 여부 확인. 66개 답글로 활발한 기술 논의'
+  - thread_ts: '1720154184.165689'
+    date: '2024-07-05'
+    title: 'LogicKor 버전업 및 xionic 모델 결과 재등록'
+    summary: 'LogicKor 벤치마크 버전업으로 xionic 모델 결과가 사라진 문제 해결 논의. 44개 답글'
+  - thread_ts: '1720487942.012089'
+    date: '2024-07-09'
+    title: 'Qwen QLoRA + Maywel 데이터 1 epoch 재학습 결과'
+    summary: 'dkyoon이 Qwen 모델에 QLoRA로 Maywel 데이터 1 epoch 학습 후 LogicKor 성적 공유'
+  - thread_ts: '1723017102.914449'
+    date: '2024-08-07'
+    title: 'Gemma 2B vLLM max context window 제한 이슈'
+    summary: 'Sigrid Jin이 vLLM에서 sliding window attention 미지원으로 Gemma 2B의 context가 8192에서 4096으로 제한되는 문제 공유'
+  - thread_ts: '1726803567.551079'
+    date: '2024-09-20'
+    title: 'xionic-1-72b-20240919 신규 모델 평가 요청'
+    summary: 'Noah가 xionic 최신 72B 모델의 LogicKor 평가를 요청'
+terminology:
+  - term: 'QLoRA'
+    definition: 'Quantized Low-Rank Adaptation - 양자화된 모델에 LoRA를 적용하여 효율적으로 파인튜닝하는 기법'
+  - term: 'DPO'
+    definition: 'Direct Preference Optimization - 인간 선호도 데이터를 직접 활용한 LLM 최적화 방법'
+  - term: 'LogicKor'
+    definition: '한국어 LLM의 논리적 추론 능력을 평가하는 벤치마크'
+  - term: 'Maywel'
+    definition: '한국어 LLM 학습에 사용되는 데이터셋'
+  - term: 'xionic-original'
+    definition: 'Qwen 7B에 토큰 부스팅만 적용한 기본 모델 (leeloolee/xionic-original)'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

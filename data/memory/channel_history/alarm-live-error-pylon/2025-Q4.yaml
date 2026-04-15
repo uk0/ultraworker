@@ -1,0 +1,38 @@
+channel:
+  id: C066D0B9WKC
+  name: alarm-live-error-pylon
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1264
+  total_threads: 24
+  active_users: 6
+  avg_messages_per_day: 30.8
+summary: |
+  Pylon 운영 에러 알림 채널. 1264개 메시지로 에러가 급증한 분기.
+  GET_ANSWER_CONTEXT_ERROR가 주요 에러로, Gemini 임베딩 모델 설정 에러('gemini_embedding_001' 모델 미지원)가 핵심 원인이었다.
+  CREATE_DOCUMENT_PROCESS_ERROR도 지속 발생하여 400 Bad Request 에러(Unexpected Response)가 다수 확인되었다.
+  NewRelic에서 ValueError, HTTPException, DocumentAlreadyExistsError 등 다양한 예외가 감지되었다.
+  12월 말에 에러가 집중 발생하여 분기 후반 안정성이 저하되었으며,
+  임베딩 모델 설정 관련 Configuration Error가 새로운 에러 패턴으로 등장했다.
+topics:
+  - Gemini 임베딩 모델 설정 에러 (gemini_embedding_001)
+  - GET_ANSWER_CONTEXT_ERROR 급증
+  - CREATE_DOCUMENT_PROCESS_ERROR 지속 (400 Bad Request)
+  - NewRelic 다양한 예외 감지 (ValueError, HTTPException)
+  - 12월 에러 집중 발생
+key_discussions: []
+terminology:
+  - term: "gemini_embedding_001"
+    definition: "Gemini 임베딩 모델 ID, chunk routing strategy 설정에서 미지원 시 Configuration Error 발생"
+  - term: "Configuration Error"
+    definition: "모델/서비스 설정 오류, 지원하지 않는 모델 ID 사용 시 발생"
+  - term: "starlette.exceptions:HTTPException"
+    definition: "FastAPI/Starlette 프레임워크의 HTTP 예외, 요청 처리 중 에러 시 발생"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

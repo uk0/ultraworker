@@ -1,0 +1,27 @@
+channel:
+  id: C080M9RBHRC
+  name: storm-notify-call-count
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 22
+  total_threads: 0
+  active_users: 5
+  avg_messages_per_day: 5.5
+summary: |
+  Storm 서비스의 월간 API 호출 사용량 초과 알림을 자동으로 수신하는 채널이다. 2024-Q4에는 11월 18일에 "월간 호출 사용량 초과" 알림이 집중적으로 발생하였다(약 6건). 이 시점은 채널 초기 운영 단계로 특정 고객의 사용량 초과가 감지된 것으로 보인다. 실질적인 사용자 대화는 없고, 봇에 의한 자동 알림만 기록되었다.
+topics:
+  - 월간 API 호출 사용량 초과 알림
+  - 고객 사용량 모니터링
+key_discussions: []
+terminology:
+  - term: 월간 호출 사용량 초과
+    definition: Storm 서비스 고객이 월간 할당된 API 호출 횟수를 초과했을 때 발생하는 자동 알림
+    aliases: [call count exceeded]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

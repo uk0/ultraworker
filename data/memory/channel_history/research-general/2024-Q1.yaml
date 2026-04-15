@@ -1,0 +1,21 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 0
+  total_threads: 0
+  active_users: 0
+  avg_messages_per_day: 0.0
+summary: "No activity in this quarter. The research-common channel was created on 2024-06-12."
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

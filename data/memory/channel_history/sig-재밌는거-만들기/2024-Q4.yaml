@@ -1,0 +1,44 @@
+channel:
+  id: C085EJCJQ9G
+  name: sig-재밌는거-만들기
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 21
+  total_threads: 6
+  active_users: 5
+  avg_messages_per_day: 5.2
+summary: |
+  채널이 2024년 12월에 개설된 분기. 김혜원, 정세민(Sem), Sigrid Jin이 초기 멤버로 참여하여 사이드 프로젝트 아이디어를 브레인스토밍했다. 주요 프로젝트로 "Storm Fooding"(AI 음식 추천 서비스)이 논의되었으며, 구조도(Figma), DB 작업, RAG 1버킷/1청크 구조 등 역할 분담이 이루어졌다. 그 외 아이디어로 고스톱 점수 자동 계산 AI, 핫딜 관련 서비스, 인스타 셀럽 자동 답변, Roasting AI(Yapper) 등이 논의되었다. hyunwoo, dkyoon도 합류했다.
+topics:
+  - AI 음식 추천 (Storm Fooding)
+  - 사이드 프로젝트 아이디어
+  - AI 서비스 (고스톱 점수 계산, 셀럽 자동 답변)
+  - RAG/벡터DB
+key_discussions:
+  - thread_ts: '1734423128.962759'
+    date: '2024-12-17'
+    topic: 세민 푸딩(Storm Fooding) 프로젝트 논의
+    reply_count: 20
+  - thread_ts: '1734421674.065229'
+    date: '2024-12-17'
+    topic: 세미나 관련 아이디어
+    reply_count: 7
+  - thread_ts: '1734938628.902479'
+    date: '2024-12-23'
+    topic: 데이터 예시 공유
+    reply_count: 5
+terminology:
+  - term: "Storm Fooding"
+    definition: "AI 기반 점심 식당 추천 서비스 사이드 프로젝트"
+    context: "STORM 제품을 활용한 음식 추천"
+  - term: "세민 푸딩"
+    definition: "Storm Fooding의 별칭"
+    context: "정세민이 주도한 프로젝트"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

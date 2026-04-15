@@ -1,10 +1,11 @@
 """Task data model for workflow management."""
 
+import json
 from datetime import datetime
 from enum import Enum
-from typing import Literal
+from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class WorkflowStage(str, Enum):
@@ -91,6 +92,13 @@ class TraceEntry(BaseModel):
     details: str | None = None
     stage: str | None = None
     by: str | None = None
+
+    @field_validator("details", mode="before")
+    @classmethod
+    def coerce_details(cls, v: Any) -> str | None:
+        if isinstance(v, dict):
+            return json.dumps(v, ensure_ascii=False)
+        return v
 
 
 class TaskRecord(BaseModel):

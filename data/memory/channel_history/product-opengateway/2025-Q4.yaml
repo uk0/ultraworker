@@ -1,0 +1,79 @@
+channel:
+  id: C09CLS4BDHT
+  name: product-opengateway
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 89
+  total_threads: 58
+  active_users: 18
+  avg_messages_per_day: 3.0
+summary: |
+  2025년 4분기 product-opengateway 채널에서는 OpenGateway 제품의 MVP 개발이 본격적으로 시작되었다.
+  10월에 SIG로 시작했다가 12월에 product 채널로 격상되었으며, BizRouter(bizrouter.ai) 등 경쟁사 분석, 컨트롤 플레인 프론트엔드/백엔드 개발, Stripe 결제 연동, Langfuse 로깅 통합 등이 진행되었다.
+  사용자 인증(Auth0), 팀-회원 관계 설계, API key 관리, 과금 및 스케줄러 기반 잔액 차감 구조가 구현되었으며, Phase 1 목표인 1월 3주차 live 배포를 향해 개발이 빠르게 진행되었다.
+topics:
+  - name: "컨트롤 플레인 개발"
+    mention_count: 25
+    description: "opengateway-control-plane-frontend/backend 개발 - Auth0 구글 로그인, 팀-회원 구조, API key 관리, Stripe 결제"
+  - name: "경쟁사 분석"
+    mention_count: 8
+    description: "BizRouter, OpenRouter, Mozilla any-llm-gateway, AgentGateway 등 경쟁 제품 분석"
+  - name: "과금 시스템 설계"
+    mention_count: 6
+    description: "Stripe 결제 연동, 스케줄러 기반 잔액 차감, 모델별 단가 계산 구조 설계"
+  - name: "로깅 시스템"
+    mention_count: 5
+    description: "Langfuse 통합 검토(비용 대비 이점 부족 결론), 자체 로깅 아키텍처 개발"
+  - name: "제품 방향성"
+    mention_count: 8
+    description: "타겟 고객 페르소나 정의, 단기 사용자 확보 전략, LLM 라우팅 서비스 포지셔닝"
+key_discussions:
+  - thread_ts: '1732428480.000000'
+    date: '2025-11-24'
+    reply_count: 28
+    text_preview: "OpenGateway Hub 노션 공유 - LLM API 게이트웨이 제품 초기 기획"
+  - thread_ts: '1732428480.000100'
+    date: '2025-11-24'
+    reply_count: 20
+    text_preview: "BizRouter(bizrouter.ai) 경쟁사 분석 요청 - 고객사 현황 및 매출 조사"
+  - thread_ts: '1765418880.000000'
+    date: '2025-12-11'
+    reply_count: 4
+    text_preview: "opengateway.sionic.im live 배포 및 컨트롤 플레인 아키텍처 공유"
+  - thread_ts: '1766131200.000000'
+    date: '2025-12-19'
+    reply_count: 67
+    text_preview: "OpenRouter PDF 파싱 플러그인 출시 - 경쟁 서비스 현황 논의"
+  - thread_ts: '1766563820.000000'
+    date: '2025-12-30'
+    reply_count: 117
+    text_preview: "파운데이션 모델 무료 서빙 또는 LMArena 형태로 주목받는 방안 논의"
+terminology:
+  - term: "OpenGateway"
+    definition: "Sionic AI의 LLM API 게이트웨이 서비스, 다양한 LLM 제공자를 통합 관리"
+    aliases: ["오픈게이트웨이", "BizRouter"]
+    context: "opengateway.sionic.im으로 live 서비스 운영 중"
+  - term: "BizRouter"
+    definition: "LLM API 라우팅 서비스의 경쟁 제품(bizrouter.ai), OpenGateway의 주요 레퍼런스"
+    aliases: []
+    context: "가장 유사한 경쟁 제품으로 분석 대상"
+  - term: "OpenRouter"
+    definition: "대표적인 LLM API 라우팅 서비스, OSS 모델 사용량의 50% 이상이 롤플레잉"
+    aliases: ["openrouter.ai"]
+    context: "경쟁사이자 기능 레퍼런스로 활용"
+  - term: "컨트롤 플레인"
+    definition: "OpenGateway의 관리 콘솔, 팀 관리/API key/과금 등을 제공하는 웹 인터페이스"
+    aliases: ["control-plane", "control plane"]
+    context: "opengateway-control-plane-frontend/backend 레포지토리에서 개발"
+  - term: "Langfuse"
+    definition: "LLM 애플리케이션 관찰 및 분석 플랫폼, OpenGateway 로깅 통합 검토 후 제외"
+    aliases: []
+    context: "Spring AI와의 호환성 한계로 자체 로깅 구현으로 대체"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

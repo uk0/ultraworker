@@ -1,0 +1,72 @@
+channel:
+  id: C097NHNCYCF
+  name: 번역-번역검수
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 22
+  total_threads: 8
+  active_users: 9
+  avg_messages_per_day: 2.4
+summary: |
+  2025-Q3 번역-번역검수 채널이 신규 개설(기존 '번역검수-요청'에서 채널명 변경)되어 본격적인
+  번역 검수 업무가 시작되었다. 영어 검수는 양호진(Hojin Yang), 일본어 검수는 s.baek이 주로 담당하며,
+  백은주와 권혜선(Jada Gwon)이 프론트엔드 UI 문구의 번역 검수를 요청하는 구조로 운영되었다.
+
+  주요 검수 대상은 STORM 제품 관련 UI 문구로, 워크플로우 '변수 할당(Variable Assignment)' 노드 설명,
+  '정보 기록 노드' 설명, PDF 문서 뷰어 지원 안내 문구 등이 포함되었다. 김부교(Bekay)가 '홈페이지 개편'
+  관련 영어/일본어 검수를 요청하여 활발한 논의(영어 10회, 일본어 3회 답변)가 이루어졌다.
+
+  s.baek은 일본어 번역 시 워딩 수정 제안(예: '情報記録ノード' 표현 권고)과 영문에서 'workflow flow'
+  중복 표현 지적 등 품질 향상을 위한 피드백을 제공했다. STORM APIs 관련 번역 검수도 진행되었다.
+topics:
+  - STORM 제품 UI 번역
+  - 홈페이지 개편 번역
+  - 워크플로우 노드 설명 번역
+  - PDF 뷰어 안내 문구
+  - 영어/일본어 번역 검수 프로세스
+key_discussions:
+  - thread_ts: '1754376102.554239'
+    date: '2025-08-05'
+    reply_count: 10
+    text_preview: "홈페이지 개편 영어 검수 요청 드립니다."
+  - thread_ts: '1755854010.798169'
+    date: '2025-08-22'
+    reply_count: 5
+    text_preview: "번역 검수 요청 드립니다. (PDF 뷰어 관련)"
+  - thread_ts: '1758092224.206079'
+    date: '2025-09-17'
+    reply_count: 5
+    text_preview: "워딩 수정 요청드립니다 (프론트엔드팀 대상)"
+  - thread_ts: '1757384254.097179'
+    date: '2025-09-09'
+    reply_count: 4
+    text_preview: "번역 검수 요청드립니다"
+  - thread_ts: '1758536578.512299'
+    date: '2025-09-22'
+    reply_count: 4
+    text_preview: "storm apis 번역 검수 요청드립니다"
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 핵심 제품. 에이전트 기반 RAG 플랫폼으로, UI 문구가 한국어/영어/일본어로 번역됨"
+    aliases: ["STORM APIs", "스톰"]
+    context: "제품 UI 문구의 다국어 번역 및 검수가 이 채널에서 진행됨"
+  - term: "변수 할당"
+    definition: "STORM 워크플로우 내 노드 유형. 특정 변수에 값을 할당하여 이후 노드에서 참조 가능"
+    aliases: ["Variable Assignment", "変数割り当て"]
+    context: "워크플로우 노드 설명 번역 시 한/영/일 3개 언어로 검수 진행"
+  - term: "정보 기록 노드"
+    definition: "STORM 워크플로우 내 노드 유형. 특정 정보를 저장하여 후속 작업에서 참조 가능"
+    aliases: ["情報記録ノード"]
+    context: "s.baek이 일본어 표현으로 '情報記録ノード' 사용을 권고"
+  - term: "고위드"
+    definition: "홈페이지 개편 프로젝트에서 사용된 시스템 또는 도구"
+    aliases: ["GoWith"]
+    context: "홈페이지 개편 관련 번역 검수에서 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

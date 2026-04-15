@@ -1,0 +1,35 @@
+channel:
+  id: C094Y8ST71V
+  name: random-welcomee-25년하반기
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 0
+  active_users: 10
+  avg_messages_per_day: 6.5
+summary: |
+  2025년 7월 스타트업 하반기 신입사원 밍글링 채널이 새롭게 개설되어 10명의 신규 입사자들이 참여하였다.
+  채널 개설자가 "스타트업에서 귀하다는 동기들과 자유롭게 이야기하는 채널"이라는 목적을 설정하였으며, 기존 유사 채널을 참고하여 만들어졌다.
+  분기 내 스레드 없이 채널 참여 및 간단한 환영 메시지 위주로 활동이 이루어졌다.
+topics:
+  - name: "채널 개설"
+    mention_count: 5
+    description: "2025년 하반기 신입사원 밍글링 채널 신규 개설"
+  - name: "신입사원 참여"
+    mention_count: 8
+    description: "하반기 신규 입사자들의 채널 참여"
+  - name: "사내 문화"
+    mention_count: 2
+    description: "스타트업 동기 문화 조성 목적의 채널 운영"
+key_discussions: []
+terminology:
+  - term: "밍글링 채널"
+    definition: "신입사원들이 자유롭게 소통하기 위해 만든 비공식 사교 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

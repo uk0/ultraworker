@@ -1,0 +1,60 @@
+channel:
+  id: C06JJSRR9HV
+  name: guest-nurimedia-test1
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 67
+  total_threads: 53
+  active_users: 7
+  avg_messages_per_day: 8.4
+summary: |
+  누리미디어(Nurimedia) 고객사 테스트 채널 1. 2024년 2월에 채널이 생성되어 김혜원, kozistr833,
+  Sigrid Jin, 송명하, 박나희, jinu 등이 참여함. 누리미디어 담당자들의 Storm Answer 테스트를 위한
+  채널로 설명됨. 주요 테스트 내용: (1) 논문 기반 QA - MZ세대 조직원 연구 논문의 Q-Statements,
+  Factor 분석, 인터뷰 답변 비교 등 심층 질의, (2) 의과학 논문 QA - 미토콘드리아 기능 이상과 암/당뇨
+  관계 질의, (3) 다양한 페르소나 테스트(신문방송학과 교수 vs 3살 아이 요약 비교),
+  (4) Levenshtein distance 계산 등 정량 분석 질의, (5) Rust ownership 등 도메인 외 질문 테스트,
+  (6) 프롬프트 인젝션 방지 테스트. 김혜원이 test2/3은 외부 공유용이므로 테스트하지 말 것을
+  당부하는 메시지도 있음. kozistr833과 Sigrid Jin이 가장 활발하게 테스트 수행.
+topics:
+  - 누리미디어 Storm Answer 테스트
+  - 논문 기반 QA 테스트 (MZ세대 연구, 의과학)
+  - 페르소나 기반 응답 비교 테스트
+  - 프롬프트 인젝션 방지 검증
+  - 도메인 외 질문 처리 테스트
+key_discussions:
+  - thread_ts: '1708019111.673749'
+    date: '2024-02-15'
+    reply_count: 68
+    text_preview: "신문방송학과 교수 페르소나로 논문 요약 - 가장 활발한 테스트 스레드"
+  - thread_ts: '1708022308.751439'
+    date: '2024-02-15'
+    reply_count: 10
+    text_preview: "M7/Z4 문항 Levenshtein distance 계산 - 정량 분석 테스트"
+  - thread_ts: '1709054034.642879'
+    date: '2024-02-27'
+    reply_count: 9
+    text_preview: "AC2 교육 특성 질의 - 논문 내용 심층 테스트"
+  - thread_ts: '1708404127.013279'
+    date: '2024-02-20'
+    reply_count: 5
+    text_preview: "미토콘드리아 기능 이상과 암 관계 연구 - 의과학 논문 QA"
+terminology:
+  - term: "누리미디어"
+    definition: "Nurimedia. 학술 콘텐츠 및 전자도서관 서비스 기업"
+    aliases: ["Nurimedia"]
+    context: "Storm Answer 고객사. 논문 기반 QA 테스트 수행"
+  - term: "Q-방법론"
+    definition: "주관적 인식 분석을 위한 연구 방법론. Q-Statements와 Factor 분석 포함"
+    context: "MZ세대 조직원 연구 논문 테스트에서 사용"
+  - term: "AC2"
+    definition: "논문에서 언급된 교육 과정 유형"
+    context: "누리미디어 테스트 논문 내 용어"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

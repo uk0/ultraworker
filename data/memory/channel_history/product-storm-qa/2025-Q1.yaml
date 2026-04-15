@@ -1,0 +1,65 @@
+channel:
+  id: C07DU5YBH50
+  name: product-storm-qa
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 216
+  total_threads: 193
+  active_users: 15
+  avg_messages_per_day: 5.0
+summary: |
+  2025-Q1 product-storm-qa 채널에서는 STORM 제품의 스톰파스(Storm Parse) 기능 출시와 관련한 대규모 QA가 집중적으로 진행되었다. PDF 문서의 파싱 및 뷰어 기능, 스톰파스 편집/수정 기능, 출처 하이라이팅 기능 등에 대한 버그 발굴과 수정이 반복적으로 이루어졌다. 펑션콜(Function Call) 기능, 공용/임시 버킷, 캐리어 파서 전환 등 다수의 신기능이 QA를 거쳐 라이브에 배포되었으며, 15명의 팀원이 적극적으로 참여하였다.
+topics:
+  - name: "스톰파스 QA"
+    mention_count: 60
+    description: "PDF 파싱, 변환 결과 편집, 뷰어 기능의 버그 발굴 및 수정 반복 진행"
+  - name: "출처 하이라이팅"
+    mention_count: 30
+    description: "PDF 원본 문서 내 출처 청크 하이라이팅 기능의 정확도 개선 QA"
+  - name: "펑션콜 기능"
+    mention_count: 20
+    description: "솔라(Solar) LLM의 Function Call 기능 테스트 및 파라미터 복잡도 검증"
+  - name: "공용/임시 버킷"
+    mention_count: 15
+    description: "여러 에이전트가 공유하는 버킷 기능의 검색 정확도 및 중복 청크 이슈 확인"
+  - name: "캐리어 파서 전환"
+    mention_count: 10
+    description: "기존 파서에서 캐리어(Corsair) 파서로의 전환 테스트 및 품질 비교"
+key_discussions:
+  - thread_ts: '1736157849.000000'
+    date: '2025-01-06'
+    reply_count: 116
+    text_preview: "문서 8개 동시 업로드 중 멈춤 이슈 - 다중 업로드 시 파서 부하 문제 발견"
+  - thread_ts: '1736491026.000000'
+    date: '2025-01-10'
+    reply_count: 75
+    text_preview: "라이브 배포 스톰파스 빈 결과 반환 이슈 - 파서 실패/뷰어 연동 문제 파악"
+  - thread_ts: '1739458944.000000'
+    date: '2025-02-14'
+    reply_count: 76
+    text_preview: "doc 파일 동일 단어 반복 현상(경경경경/상상상상) - 캐리어 파서 doc 처리 버그"
+  - thread_ts: '1739950477.000000'
+    date: '2025-02-19'
+    reply_count: 16
+    text_preview: "펑션콜 파라미터 복잡 케이스 테스트 - 30개 이상 펑션 등록 시 판단 정확도 검증"
+terminology:
+  - term: "스톰파스 (Storm Parse)"
+    definition: "STORM 제품의 PDF/문서 파싱 기능. 문서 내용을 구조화하여 RAG에 활용하는 핵심 기능"
+  - term: "출처 하이라이팅"
+    definition: "RAG 응답 시 원본 PDF 문서에서 해당 청크 위치를 시각적으로 하이라이팅하는 기능"
+  - term: "캐리어 (Corsair)"
+    definition: "STORM에 도입된 새로운 문서 파서. 기존 파서 대비 성능 및 품질 개선 목적"
+  - term: "솔라 (Solar)"
+    definition: "Sionic AI의 LLM. 펑션콜 기능 테스트에 활용됨"
+  - term: "공용/임시 버킷"
+    definition: "여러 에이전트가 공유하여 문서를 검색할 수 있는 버킷 구조"
+  - term: "서플라이 (Supply)"
+    definition: "STORM의 문서 배포/운영 관련 컴포넌트"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

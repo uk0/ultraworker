@@ -1,0 +1,39 @@
+channel:
+  id: C07CLR2TCRZ
+  name: project-rag-wrtn
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 2
+  active_users: 5
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q1에는 뤼튼 프로젝트의 QSPM 관련 문서가 재공유되고, storm-perplexity(개밥먹기) 서비스 테스트가 진행되었다.
+  Sigrid Jin이 QSPM 관련 노션 문서를 송명하에게 공유하며, storm-perplexity.vercel.app에서 응답이 정상적으로 동작하는 것을
+  확인했다. 뤼튼 관련 중앙일보 기사가 공유되었으며, 뤼튼에 대한 부정적 기사 가능성도 언급되었다. 양호진(Hojin Yang)이
+  새로 채널에 참여했다.
+topics:
+  - QSPM 문서 재공유
+  - storm-perplexity 테스트
+  - 뤼튼 관련 뉴스 동향
+key_discussions:
+  - title: "QSPM 문서 공유 및 storm-perplexity 테스트"
+    date: "2025-01-16"
+    participants: ["Sigrid Jin", "송명하", "김덕현(Dekay)", "Noah(고석현)"]
+    summary: "QSPM 관련 노션 문서 재공유. storm-perplexity.vercel.app(개밥먹기)에서 응답 정상 확인."
+  - title: "뤼튼 관련 뉴스 동향"
+    date: "2025-01-06~09"
+    participants: ["Sigrid Jin"]
+    summary: "중앙일보 기자 관련 뤼튼 부정적 기사 가능성 언급. 뤼튼 옹호 세력 관련 논란."
+terminology:
+  - term: "storm-perplexity"
+    definition: "STORM 기반 Perplexity 유사 검색 서비스 (개밥먹기용)"
+    aliases: ["개밥먹기"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

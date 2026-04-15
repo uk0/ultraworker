@@ -1,0 +1,51 @@
+channel:
+  id: C097BGEC8F2
+  name: decamp-qna
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 17
+  total_threads: 5
+  active_users: 8
+  avg_messages_per_day: 2.4
+summary: |
+  2025-Q3에 디캠프 입주를 시작하면서 채널이 개설되고 8명의 멤버가 합류하였다. 주요 문의는 배달 음식 공동 주문, 점심식사 방법, 정수기 물통 배달 일정 등 디캠프 생활 편의와 관련된 내용이 많았다. 법인카드 사용 여부, 멀티탭 교체 요청, 타지점 방문 시 필요한 물품 확인 등 오피스 운영 관련 Q&A도 활발히 이루어졌다.
+topics:
+  - name: "디캠프 입주 초기 적응"
+    mention_count: 5
+    description: "디캠프 공간 이용 규칙, 시설 사용 방법 등 입주 초기 문의"
+  - name: "점심 식사 및 배달 주문"
+    mention_count: 4
+    description: "디캠프 내 점심 배달 주문 방법 및 공동 주문 조율"
+  - name: "사무 시설 문의"
+    mention_count: 3
+    description: "멀티탭, 정수기 등 시설 관련 불편 사항 접수 및 처리"
+key_discussions:
+  - thread_ts: '1753142093.000000'
+    date: '2025-07-22'
+    reply_count: 10
+    text_preview: "금돼지 돈카츠&마제소바 강남점으로 배달 주문 요청 및 조율"
+  - thread_ts: '1753239661.000000'
+    date: '2025-07-23'
+    reply_count: 5
+    text_preview: "디캠프에서 점심식사 방법 문의"
+  - thread_ts: '1753245661.000000'
+    date: '2025-07-23'
+    reply_count: 3
+    text_preview: "모니터 연결 멀티탭 불량으로 교체 요청"
+  - thread_ts: '1753568431.000000'
+    date: '2025-07-28'
+    reply_count: 4
+    text_preview: "디캠프용 법인카드 사용 여부 문의"
+terminology:
+  - term: "디캠프"
+    definition: "은행권청년창업재단이 운영하는 스타트업 지원 공간, 사이오닉AI 입주 공간"
+  - term: "미타"
+    definition: "미드타운 역삼의 약칭, 사이오닉AI의 기존 오피스 위치"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

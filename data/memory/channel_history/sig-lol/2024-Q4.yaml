@@ -1,0 +1,34 @@
+channel:
+  id: C07TMG88HMW
+  name: sig-lol
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 5.5
+summary: |
+  sig-lol 채널이 2024년 10월 처음 개설된 시기로, 리그 오브 레전드를 즐기는 팀원 3명이 참여하였다. 채널 개설 초기에는 희귀 스킨 자랑, 와드 이모지 공유 등 게임 관련 가벼운 대화가 주를 이루었으며, 팀원 간 게임 경력과 추억을 나누는 분위기였다.
+topics:
+  - name: "게임 스킨/아이템 자랑"
+    mention_count: 3
+    description: "희귀 LoL 스킨(2012년도 트런들 스킨 등) 자랑 및 페북 이벤트 추억 공유"
+  - name: "와드 이모지"
+    mention_count: 1
+    description: "LoL 와드 관련 이모지 공유"
+key_discussions: []
+terminology:
+  - term: "LoL"
+    definition: "리그 오브 레전드(League of Legends)"
+  - term: "와드"
+    definition: "LoL 게임 내 시야 확보 아이템"
+  - term: "트런들 스킨"
+    definition: "2012년 페이스북 이벤트를 통해 배포된 희귀 LoL 챔피언 스킨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

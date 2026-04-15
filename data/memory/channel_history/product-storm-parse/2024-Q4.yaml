@@ -1,0 +1,66 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 93
+  total_threads: 71
+  active_users: 17
+  avg_messages_per_day: 2.1
+summary: |
+  2024년 4분기에 Organize가 'Document AI'를 거쳐 최종적으로 'Storm Parse'로 브랜딩이 확정되었다. Document AI 데모 웹사이트가 제작/배포되었고(현우 프론트엔드 개발, 세민 서버 개발), load test를 통해 안정성이 검증되었다. 50건 동시 요청 시 100% 성공률을 달성했다.
+  Figma 기반 UI 디자인이 진행되었고, unstructured.io와의 비교 기능, 일본어/영어 다국어 지원, Vercel Web Analytics 적용이 논의되었다. Storm Parse API가 dev 환경에 배포되었고, 캐리어(Carrier) 기반 아키텍처로의 이관이 시작되었다. Vertex AI 쿼타를 분당 1200개에서 400만개로 대폭 증량받았으며, LlamaParse 호환 API 구성 아이디어도 제안되었다.
+topics:
+  - Document AI → Storm Parse 브랜딩 확정
+  - 데모 웹사이트 제작 및 배포
+  - Load Test (50건 100% 성공)
+  - Storm Parse API dev 배포
+  - 캐리어 이관 논의
+  - Vertex AI 쿼타 증량 (분당 400만건)
+  - 다국어 지원 (일본어/영어)
+  - 마켓팅 및 외부 공개 전략
+  - LlamaParse 호환 API 아이디어
+key_discussions:
+  - thread_ts: '1729763874.620309'
+    date: '2024-10-24'
+    reply_count: 61
+    text_preview: '경쟁사 OCR 비교 UI 추가 제안 (getomni.ai 참고)'
+  - thread_ts: '1733212082.475089'
+    date: '2024-12-03'
+    reply_count: 55
+    text_preview: 'LlamaParse compatible하게 Storm Parse API 구성 아이디어'
+  - thread_ts: '1729588923.336829'
+    date: '2024-10-22'
+    reply_count: 20
+    text_preview: '자연어 풀어내기 버전 Document AI 테스트'
+  - thread_ts: '1729646845.062749'
+    date: '2024-10-23'
+    reply_count: 49
+    text_preview: 'Document AI 서버 터짐 이슈 대응'
+  - thread_ts: '1729502810.601909'
+    date: '2024-10-21'
+    reply_count: 42
+    text_preview: 'Document AI 데모 라이브 배포 액션아이템 정리'
+  - thread_ts: '1728286918.701269'
+    date: '2024-10-07'
+    reply_count: 46
+    text_preview: 'Document AI 웹 디자인 (Figma)'
+terminology:
+  - term: Storm Parse
+    definition: 'Sionic의 문서 파싱 솔루션. PDF/이미지 등을 마크다운/자연어로 변환. Organize → Document AI → Storm Parse로 이름 변경'
+    aliases: ['스톰파스', '스톰 파스', 'Document AI', 'doc ai']
+  - term: Carrier
+    definition: 'Sionic의 서비스 운영 프레임워크. Storm Parse가 이관될 대상 아키텍처'
+    aliases: ['캐리어']
+  - term: Vertex AI
+    definition: 'Google Cloud의 AI 플랫폼. Gemini 모델 호출에 사용'
+  - term: vision-parse
+    definition: 'Vision Language Model을 사용하여 PDF를 markdown으로 변환하는 Python 패키지 (오픈소스)'
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

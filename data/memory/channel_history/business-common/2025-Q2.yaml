@@ -1,0 +1,96 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 301
+  total_threads: 247
+  active_users: 17
+  avg_messages_per_day: 4.4
+summary: |
+  2025-Q2에는 Storm Parse 상품화와 SaaS 과금 체계 확립이 핵심 제품 전략이었으며, 산업은행 Parse 도입과 아이티센엔텍 PoC 계약(6천만원) 등 실질적 매출 전환이 이루어졌다.
+  CubixAI 파트너십, NVIDIA Inception 프로그램 미팅, 초거대AI NIA 정부사업 등 기술 파트너십과 정부지원사업 대응이 활발했으며, 현대차 PoC 착수와 두산 데모, 키움증권 영업 등 대형 B2B 파이프라인도 지속 확대되었다.
+  사이오닉 핵심 기술 장표 제작과 기술강점 Full Loop 정리를 통해 영업 자료를 체계화했고, 스톰플랫폼 상표 출원공고와 디캠프 입주 등 사업 인프라도 강화되었다.
+topics:
+  - Storm Parse 상품화 및 SaaS 과금 체계 확립
+  - 산업은행 Parse 도입
+  - 아이티센엔텍 PoC 계약 (6천만원)
+  - CubixAI 파트너십 논의
+  - NVIDIA Inception 프로그램 미팅
+  - 초거대AI NIA 정부사업 대응
+  - 현대차 PoC 착수
+  - 두산 데모 진행
+  - 키움증권 영업 대응
+  - LG 문서변환 프로젝트
+  - 사이오닉 핵심 기술 장표 및 Full Loop 정리
+  - 스톰플랫폼 상표 출원공고
+  - IBK 창공 데모데이 참가
+  - 디캠프 입주
+  - 전략미팅 (사업 방향성)
+  - STORM Ops 운영 시스템 고도화
+key_discussions:
+  - thread_ts: '1749550180'
+    date: '2025-06-10'
+    reply_count: 63
+    text_preview: CubixAI 파트너십 논의 - AI 큐브 솔루션 연동 및 공동 시장 진출 전략
+  - thread_ts: '1750916843'
+    date: '2025-06-26'
+    reply_count: 57
+    text_preview: 스톰파스 SaaS 과금 체계 설계 - 크레딧 기반 요금제 및 티어별 가격 정책
+  - thread_ts: '1748858416'
+    date: '2025-06-02'
+    reply_count: 52
+    text_preview: 사이오닉 핵심 기술 장표 제작 - 차별화 포인트 및 기술 아키텍처 정리
+  - thread_ts: '1749439229'
+    date: '2025-06-09'
+    reply_count: 38
+    text_preview: 산업은행 Storm Parse 도입 - 금융 문서 파싱 요구사항 분석 및 PoC 결과 공유
+  - thread_ts: '1750573030'
+    date: '2025-06-22'
+    reply_count: 34
+    text_preview: 전략미팅 - 2025 하반기 사업 방향성 및 제품 로드맵 논의
+  - thread_ts: '1748494861'
+    date: '2025-05-29'
+    reply_count: 33
+    text_preview: 두산 데모 준비 및 진행 - 산업 문서 AI 분석 시연
+  - thread_ts: '1750844323'
+    date: '2025-06-25'
+    reply_count: 19
+    text_preview: Storm Parse 상품화 논의 - API 엔드포인트 설계 및 문서 지원 포맷 확정
+  - thread_ts: '1750822654'
+    date: '2025-06-25'
+    reply_count: 17
+    text_preview: 키움증권 영업 대응 - 증권사 리서치 보고서 AI 분석 니즈 파악
+  - thread_ts: '1751265758'
+    date: '2025-06-30'
+    reply_count: 17
+    text_preview: 아이티센엔텍 PoC 산출물 정리 및 최종 납품 준비
+terminology:
+  - term: Storm Parse
+    definition: 사이오닉AI의 문서 파싱/변환 제품으로 PDF, 이미지 등에서 구조화된 데이터를 추출
+    aliases: [스톰파스, StormParse]
+    context: SaaS 상품화 및 API 과금 체계 확립, 산업은행/아이티센엔텍 등에 납품
+  - term: CubixAI
+    definition: AI 솔루션 기업으로 사이오닉AI와 기술 파트너십을 논의한 파트너사
+    aliases: [큐빅스AI]
+    context: AI 큐브 솔루션 연동을 통한 공동 시장 진출 전략 논의
+  - term: NVIDIA Inception
+    definition: NVIDIA의 스타트업 지원 프로그램으로 GPU 크레딧 및 기술 지원 제공
+    aliases: [엔비디아 인셉션]
+    context: 사이오닉AI의 GPU 인프라 확보 및 NVIDIA 파트너 네트워크 진입
+  - term: 디캠프
+    definition: 은행권청년창업재단이 운영하는 스타트업 지원 공간
+    aliases: [D.CAMP]
+    context: 사이오닉AI 사무실 입주를 통한 스타트업 생태계 네트워킹
+  - term: NIA
+    definition: 한국지능정보사회진흥원으로 초거대AI 정부사업을 주관
+    aliases: [한국지능정보사회진흥원]
+    context: 초거대AI 정부사업 공모에 사이오닉AI 참여
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

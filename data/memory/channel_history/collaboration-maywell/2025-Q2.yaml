@@ -1,0 +1,40 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 56
+  total_threads: 13
+  active_users: 7
+  avg_messages_per_day: 4.3
+summary: |
+  사이오닉 관련 특허가 일본(特願2025-052770)과 미국(Application Number 19/088124)에 출원 완료. Maywell이 새 회사(벙커키즈)에서 백엔드/인프라 업무 시작(뉴렐릭 구축 등), 종강 후 근무 본격화. Gemini 2.5 Flash 파인튜닝 비용 이슈(2.0 Flash 추천). 사이오닉이 Wanot AI의 "AI API 플레이그라운드" SaaS 플랫폼을 인수하는 M&A 성사. 네이버 LogicKor 벤치마크 지속 인용. 네이버 인턴 추천 제안.
+topics:
+  - 일본/미국 특허 출원 완료
+  - Maywell 신규 회사(벙커키즈) 근무 시작
+  - Gemini 2.5 Flash 파인튜닝 비용 이슈
+  - Wanot AI M&A (사이오닉 인수)
+  - 네이버 LogicKor 벤치마크 인용
+  - KAIST 학기 종강
+key_discussions:
+  - title: "일본/미국 특허 출원 완료"
+    summary: "언어 모델 생성 방법 관련 특허. 일본 特願2025-052770, 미국 Application 19/088124"
+  - title: "Wanot AI SaaS 플랫폼 M&A"
+    summary: "사이오닉AI가 maywell이 개발한 Wanot AI의 AI API 플레이그라운드 SaaS 플랫폼을 인수"
+  - title: "Gemini 파인튜닝 비용 경고"
+    summary: "Gemini 2.5 Flash 파인튜닝이 비용 과다. 2.0 Flash로 대체 권고"
+terminology:
+  - term: "벙커키즈"
+    definition: "maywell이 새로 합류한 스타트업. 백엔드/인프라 담당"
+  - term: "Wanot AI"
+    definition: "maywell이 개발한 AI API 플레이그라운드 SaaS. 사이오닉이 인수"
+  - term: "뉴렐릭 (New Relic)"
+    definition: "애플리케이션 성능 모니터링(APM) 서비스"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

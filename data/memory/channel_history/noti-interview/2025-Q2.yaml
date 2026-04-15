@@ -1,0 +1,54 @@
+channel:
+  id: C08LQD0QGUC
+  name: noti-interview
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 27
+  total_threads: 8
+  active_users: 8
+  avg_messages_per_day: 1.2
+summary: |
+  2025년 2분기 noti-interview 채널은 사이오닉AI의 채용 인터뷰 일정을 매일 자동으로 알림하는 봇 채널로 운영되었다.
+  백엔드 개발자(Kotlin+Spring), AI/ML 리서치 엔지니어, 프로덕트 매니저, AI/ML 리서치 인턴 등 다양한 직군의 실무 인터뷰 및 컬쳐핏 인터뷰가 진행되었으며, 대면(미드타운 역삼 3층)과 비대면(Google Meet) 형식이 혼용되었다.
+  주요 면접관으로는 hyewon, dan, suwon.kim, dkyoon, max 등이 참여하였고, 4월과 6월에 인터뷰가 집중 배치되었다.
+topics:
+  - name: "채용 인터뷰 알림"
+    mention_count: 12
+    description: "봇이 매일 당일 예정된 인터뷰 일정을 자동 공지"
+  - name: "백엔드 개발자 채용"
+    mention_count: 4
+    description: "Kotlin+Spring 백엔드 개발자 실무 인터뷰"
+  - name: "AI/ML 연구원 채용"
+    mention_count: 3
+    description: "AI/ML Research Engineer 및 Research Intern 인터뷰"
+  - name: "프로덕트 매니저 채용"
+    mention_count: 4
+    description: "PM 직군 실무 및 컬쳐핏 인터뷰"
+key_discussions:
+  - thread_ts: '1743724800.000000'
+    date: '2025-04-04'
+    reply_count: 6
+    text_preview: "샘플 공고 김덕현 실무 인터뷰 - 미드타운 및 비대면 동시 진행 안내"
+  - thread_ts: '1744070400.000000'
+    date: '2025-04-08'
+    reply_count: 2
+    text_preview: "Product Manager 홍상선 실무 인터뷰 - Google Meet 및 미팅룸 B 병행"
+  - thread_ts: '1744156800.000000'
+    date: '2025-04-09'
+    reply_count: 2
+    text_preview: "Product Manager 이병주 실무 인터뷰 - 미드타운센터 역삼 3층 대면"
+terminology:
+  - term: "컬쳐핏 인터뷰"
+    definition: "문화적 적합성을 평가하는 인터뷰 단계, 실무 인터뷰 이후 진행"
+  - term: "실무 인터뷰"
+    definition: "직무 역량을 평가하는 기술 인터뷰 단계"
+  - term: "미드타운"
+    definition: "사이오닉AI 서울 강남구 역삼로17길 51 3층 오피스 (미드타운센터 역삼)"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

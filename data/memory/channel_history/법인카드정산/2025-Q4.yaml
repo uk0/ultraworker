@@ -1,0 +1,50 @@
+channel:
+  id: C09A3A133PT
+  name: 법인카드정산
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 3
+  active_users: 4
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q4 법인카드정산 채널에서는 월별 법인카드 경비 정산이 정기적으로 진행되었다.
+  홍성아가 고위드(GoWith) 입력 가이드를 신규 입문자 대상으로 재정리하여 Notion에 업데이트하고
+  공유했다. 9월 미정산자 독촉, 10월 분기결산 마감(10일까지), 11월 정산 요청 등 월별 정산 주기가
+  정착되었다. Noah(고석현)가 미정산 건수 처리를 직접 담당하겠다고 공지했으며, 최윤정이 신규로
+  채널에 참여했다. 12월에는 홍성아가 11월 카드 정산과 함께 10월 미제출 건도 함께 입력할 것을
+  요청했다. ai-crawler 봇도 자동 참여했다.
+topics:
+  - 월별 법인카드 정산 관리
+  - 고위드(GoWith) 가이드 업데이트
+  - 분기결산 마감
+key_discussions:
+  - thread_ts: '1759383347.834219'
+    date: '2025-10-02'
+    reply_count: 1
+    text_preview: "9월 고위드 입력 부탁드립니다~ 10월 분기결산으로 10일까지 해주시면 감사하겠습니다"
+  - thread_ts: '1760357920.477569'
+    date: '2025-10-13'
+    reply_count: 1
+    text_preview: "9월 안넣어주신분"
+  - thread_ts: '1764564012.415729'
+    date: '2025-12-01'
+    reply_count: 2
+    text_preview: "벌써 12월이네요.. 11월 카드 정산 해주시면 감사하겠습니다 (+10월 아직 제출 전이신 분들도 입력 부탁드립니다)"
+terminology:
+  - term: "고위드"
+    definition: "법인카드 경비 정산 시스템. 월별로 사용 내역을 입력하며 분기결산 시 마감 기한이 있음"
+    aliases: ["GoWith"]
+    context: "Notion에 입문자용 가이드가 재정리되어 공유됨"
+  - term: "분기결산"
+    definition: "분기 단위로 진행되는 경비 결산. 마감일이 10일로 설정됨"
+    aliases: []
+    context: "10월 분기결산 시 9월 정산 마감일이 10일"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,41 @@
+channel:
+  id: C057EPS43QW
+  name: corp-ideation
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 3
+  active_users: 8
+  avg_messages_per_day: 1.1
+summary: |
+  2024-Q1 corp-ideation 채널에서는 사내 운영 개선을 위한 다양한 아이디어가 제안되었다. FAQ/QnA 전용 채널 개설 아이디어, Google 캘린더를 외부 미팅용과 개인 일정용으로 분리하는 방안, 슬랙 프로필에 개인 연락처 기재 권장 등 사내 커뮤니케이션 효율화 제안이 주를 이루었다. 신규 멤버들이 합류하면서 채널이 활성화된 시기이다.
+topics:
+  - name: "FAQ/QnA 채널 신설 제안"
+    mention_count: 2
+    description: "채널 분류가 어려운 질문을 위한 통합 QnA 채널 개설 아이디어"
+  - name: "Google 캘린더 운영 개선"
+    mention_count: 3
+    description: "외부 미팅/공식 일정과 개인 일정을 분리 관리하는 캘린더 구조 제안"
+  - name: "슬랙 프로필 연락처 기재"
+    mention_count: 1
+    description: "워크샵 등 긴급 상황을 대비한 개인 연락처 슬랙 프로필 등록 권장"
+key_discussions:
+  - thread_ts: '1705590240.000000'
+    date: '2024-01-18'
+    reply_count: 1
+    text_preview: "FAQ/QnA 채널 신설 제안: 어느 채널에서 물어야 할지 모를 때 사용하는 통합 질문 채널"
+  - thread_ts: '1705629240.000000'
+    date: '2024-01-19'
+    reply_count: 10
+    text_preview: "Google 캘린더 분리 운영 제안: Common(외부/공식 일정) vs Personal(개인 일정) 구분"
+terminology:
+  - term: "Google Workspace"
+    definition: "사이오닉AI에서 사용하는 Google 기업 서비스 스위트 (@sionic.ai 계정)"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

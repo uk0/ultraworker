@@ -1,0 +1,30 @@
+channel:
+  id: C062GQYHWHG
+  name: poc_storm_ingstory
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024년 2분기 poc_storm_ingstory 채널은 4월 초에 멤버(U057PR1ADCL)가 채널에 합류하는 단일 활동만 기록되었다.
+  STORM과 Ingstory 간의 PoC 프로젝트를 위해 채널이 개설되었으나, 이 분기에는 실질적인 기술 논의나 통합 작업은 진행되지 않았다.
+topics:
+  - name: "채널 멤버 합류"
+    mention_count: 1
+    description: "채널 초기 멤버 합류"
+key_discussions: []
+terminology:
+  - term: "PoC"
+    definition: "Proof of Concept - 개념 증명 프로젝트"
+  - term: "Ingstory"
+    definition: "STORM과의 통합 PoC를 진행한 외부 서비스 또는 파트너"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

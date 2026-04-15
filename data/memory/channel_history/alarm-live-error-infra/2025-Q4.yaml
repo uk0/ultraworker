@@ -1,0 +1,43 @@
+channel:
+  id: C082JL1EV71
+  name: alarm-live-error-infra
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 398
+  total_threads: 316
+  active_users: 5
+  avg_messages_per_day: 11.1
+summary: |
+  운영 환경 인프라 에러 알림 채널. 398건으로 Q3 대비 2배 이상 급증, 일평균 11.1건.
+  "Pod is in a Pending state"(54건)가 "Pod has restarted"(8건)를 크게 초과 - Pending 상태 이슈 급증.
+  null Pending 알림 53건으로 Pod 이름이 누락된 비정상 알림 다수 발생.
+  Grafana 알림(31건)이 New Relic(65건) 외 추가 모니터링 소스로 합류.
+  corsair-qdrant 관련 다수 Pod에서 알림 발생, corsair 서비스 확장에 따른 인프라 부하 시사.
+  홍혁준, Sigrid Jin, 송명하 등이 대응 참여.
+topics:
+  - Pod Pending 상태 급증 (비정상)
+  - null Pending 알림 다수 발생
+  - Grafana 모니터링 알림 추가
+  - corsair-qdrant 다중 인스턴스 이슈
+  - stargate 간헐적 재시작
+  - storm-apis-parse-router 오류
+  - dragoon-server 신규 서비스 알림
+key_discussions: []
+terminology:
+  - term: "null Pending"
+    definition: "Pod 이름이 누락된 상태의 Pending 알림"
+    context: "Q4에서 53건 발생, 알림 시스템 설정 이슈 가능성"
+  - term: "corsair-qdrant"
+    definition: "Corsair 서비스의 Qdrant 벡터 DB 인스턴스들"
+    context: "다수의 live 세션별 Qdrant 인스턴스 운영 중"
+  - term: "dragoon-server"
+    definition: "신규 서비스 컴포넌트"
+    context: "Q4에서 처음 알림 등장"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

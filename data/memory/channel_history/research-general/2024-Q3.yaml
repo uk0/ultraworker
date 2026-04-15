@@ -1,0 +1,104 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 99
+  total_threads: 48
+  active_users: 12
+  avg_messages_per_day: 1.1
+summary: >
+  2024 Q3는 리서치팀의 연구 체계화와 방향 정립이 이루어진 시기이다. Research Weekly 미팅 운영 방식에 대한
+  깊이 있는 회고가 진행되어, 맥락 공유의 중요성과 연구 과제별 체계적인 공유 문화가 강조되었다. 주요 연구
+  주제로는 ColPali(비전 기반 문서 검색), GraphRAG, 하이브리드 검색, 리랭커 연구가 활발히 진행되었다.
+  알리바바 Qwen팀과의 기술 교류 미팅이 성사되었고, HCLT 학회 논문 제출이 완료되었다. AICA GPU 지원 사업
+  신청, NIPA 사업 참여, 데이콘 IR 대회 참가 등 외부 활동도 활발했다. Qwen2.5-72B 모델 출시와 함께
+  사내 서버에 xionic-mini 모델을 배포하여 테스트를 시작했다. 리서치 인턴 모집을 위한 과제 구체화 논의도
+  진행되었다.
+topics:
+  - name: "Research Weekly 운영 회고 및 개선"
+    count: 15
+    summary: "연구 공유 방식에 대한 깊이 있는 회고 진행. 맥락 공유 부재 문제 지적, 결론 통보가 아닌 판단 과정과 근거를 함께 공유하는 문화 필요성 강조. 노션 기반 현황판 운영 시작."
+  - name: "ColPali 및 비전 기반 문서 검색"
+    count: 8
+    summary: "ColPali 논문 분석, 비전 언어 모델 기반 문서 검색 연구. 멀티모달+LLM 방향의 중요성 논의."
+  - name: "GraphRAG"
+    count: 6
+    summary: "Microsoft GraphRAG 실험, Azure 원클릭 배포 테스트, 지식 그래프 기반 RAG 아키텍처 연구."
+  - name: "알리바바 Qwen팀 교류"
+    count: 5
+    summary: "Qwen팀과의 기술 미팅 성사. Qwen2.5-72B 출시 및 사내 인프라 세팅. 한국어 튜닝 관련 기술 교류."
+  - name: "리서치 인턴 과제 구체화"
+    count: 4
+    summary: "Retriever/Reranker, VLM for Document AI, Multi-modal DPO, Automatic Prompt Generation, LLM-as-a-judge 등 인턴 과제 후보 논의."
+  - name: "RAG 연구 방향"
+    count: 8
+    summary: "문서별 청킹 전략, 하이브리드 검색(BM25+벡터), CoT RAG, reranker fine-tuning 등 RAG 고도화 방향 논의."
+  - name: "GPU/외부 사업"
+    count: 5
+    summary: "AICA GPU 지원 사업 신청(미선정 후 재신청), NIPA 사업 참여, 고성능 컴퓨팅 추가 모집 선정."
+  - name: "HCLT 논문 및 기술 블로그"
+    count: 3
+    summary: "HCLT 학회 논문 제출 완료. LLM 머징 기법 블로그 초안 작성 및 검토."
+key_discussions:
+  - thread_ts: '1724121032'
+    date: '2024-08-20'
+    title: "Research Weekly 운영 방식 회고"
+    summary: "연구 공유 시 맥락 부재 문제에 대한 깊이 있는 회고. 결론만 전달하지 말고 판단 과정, 근거, 이유 등을 함께 공유해야 효과적 소통이 가능하다는 점 강조. 연구 업무의 특수성(깊은 몰입 필요)을 인정하면서도 회사 방향과의 align 중요성 역설."
+    participants: ["U058A971Z8R"]
+    decisions: ["맥락 중심의 공유 문화 정착", "연구 공유 시 why/how 포함 필수"]
+    action_items: ["공유 체계 개선안 각자 의견 제출"]
+    keywords: ["회고", "Research Weekly", "맥락공유", "소통"]
+    relevance_score: 1.0
+  - thread_ts: '1721956788'
+    date: '2024-07-26'
+    title: "리서치팀 스탠드업 도입 제안"
+    summary: "Noah가 리서치 채널에서 간단한 스탠드업을 진행하자고 제안. 각자 어떤 일을 하는지 공유하여 투명성 확보."
+    participants: ["U057PR1ADCL"]
+    decisions: ["리서치 채널 내 업무 공유 활성화"]
+    action_items: []
+    keywords: ["스탠드업", "업무공유", "투명성"]
+    relevance_score: 0.8
+  - thread_ts: '1721033862'
+    date: '2024-07-15'
+    title: "알리바바 Qwen팀 기술 미팅 추진"
+    summary: "Noah가 MoU 건과 IR/PR 목적으로 Qwen팀과 기술 미팅을 제안. 한국어 튜닝 관련 어려운 부분 문의 및 기술 교류 계획."
+    participants: ["U057PR1ADCL", "U058A971Z8R", "U07592QB78U", "U05QCA7JTD5"]
+    decisions: ["Qwen팀 미팅 추진 확정"]
+    action_items: ["질문 리스트 준비"]
+    keywords: ["Qwen", "알리바바", "기술미팅", "MoU"]
+    relevance_score: 0.9
+  - thread_ts: '1727226358'
+    date: '2024-09-25'
+    title: "리서치 인턴 과제 구체화"
+    summary: "인턴 모집 시 함께 할 연구 과제를 구체화. Retriever/Reranker, VLM for Document AI, Multi-modal DPO, Automatic Prompt Generation, LLM-as-a-judge 5가지 주제 제안."
+    participants: ["U058A971Z8R"]
+    decisions: ["인턴 과제 후보 5개 확정"]
+    action_items: ["각 주제별 담당자와 시너지 방안 논의"]
+    keywords: ["인턴", "리서치과제", "VLM", "리랭커", "DPO"]
+    relevance_score: 0.8
+terminology:
+  - term: "ColPali"
+    definition: "비전 언어 모델을 활용한 문서 검색 모델. 문서 페이지 이미지만으로 고품질 임베딩을 생성하여 late interaction 매칭으로 검색."
+    aliases: []
+    context: "Illuin Technology 2024년 7월 논문. ViDoRe 벤치마크에서 기존 파이프라인 능가."
+  - term: "AICA"
+    definition: "AI 고성능 컴퓨팅 GPU 대여 지원 사업."
+    aliases: []
+    context: "상반기 미선정 후 하반기 재신청."
+  - term: "xionic-mini"
+    definition: "사이오닉이 튜닝한 10B 미만 한국어 LLM 모델."
+    aliases: []
+    context: "사내 서버(worker6)에 배포하여 STORM 테스트 용도로 활용."
+  - term: "HCLT"
+    definition: "한국어 컴퓨터 언어학 학회. 한국어 NLP 관련 국내 학회."
+    aliases: []
+    context: "2024년 논문 제출 완료."
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

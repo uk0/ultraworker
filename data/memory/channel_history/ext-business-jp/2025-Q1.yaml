@@ -1,0 +1,70 @@
+channel:
+  id: C08D8A83BN1
+  name: ext-business-jp
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 58
+  total_threads: 24
+  active_users: 13
+  avg_messages_per_day: 3.2
+summary: |
+  일본 비즈니스 채널. 2025년 2월에 생성되어 Sionic AI의 일본 시장 진출을 위한 핵심 소통 채널로
+  활용됨. 한시형(Kevin), 박우명(Max), chbseung(승연), 최윤정, 오승희, fwa.heena(희나) 등이 참여.
+  Capgemini New Grads 조직의 heena가 일본 현지 파트너로 참여함. 주요 활동:
+  (1) 일본어 제품 소개 자료(PPT) 번역 및 검수 - heena와 승연이 공동 작업,
+  (2) Tokyo Boeki Group 데모 준비 - Storm 플랫폼의 일본어 데모 제작,
+  (3) Japan IT Week Spring 2025(4/23-25) 참가 준비 - 전시업체 사전 조사 요청,
+  (4) Invest Seoul Tokyo IR(5/7-9) 참가 준비,
+  (5) 주간 미팅 운영 및 업무 분담(Notion 기반),
+  (6) alt.AI와의 MoU 진행 상황 확인,
+  (7) Storm 플랫폼 일본어 사용자 테스트(heena가 sionicstorm.ai에서 테스트).
+  김혜원(PO)도 채널에 참여하여 Storm 제품 사용 지원을 제안함.
+topics:
+  - 일본 시장 진출 전략
+  - 일본어 제품 소개 자료 번역
+  - Tokyo Boeki Group 데모 제작
+  - Japan IT Week Spring 2025 준비
+  - Invest Seoul Tokyo IR 준비
+  - 주간 업무 미팅 운영
+key_discussions:
+  - thread_ts: '1740392838.214399'
+    date: '2025-02-24'
+    reply_count: 15
+    text_preview: "주간 미팅 - heena TODO 및 일본어 데크 작업 분배"
+  - thread_ts: '1740392890.376309'
+    date: '2025-02-24'
+    reply_count: 16
+    text_preview: "PPT 파일 공유 및 일본어 번역 작업"
+  - thread_ts: '1743416566.413479'
+    date: '2025-03-31'
+    reply_count: 10
+    text_preview: "To-do 정리 - JP 문서 번역, Boeki 데모, IT Week 준비"
+  - thread_ts: '1742296494.375899'
+    date: '2025-03-18'
+    reply_count: 9
+    text_preview: "Japan IT Week 전시업체 사전 조사 요청"
+terminology:
+  - term: "Boeki Group"
+    definition: "도쿄보에키그룹(東京貿易グループ). 일본 종합상사로 4개 사업 세그먼트 운영"
+    aliases: ["Tokyo Boeki", "貿易グループ"]
+    context: "Storm 플랫폼 일본어 데모의 첫 번째 대상 고객"
+  - term: "Japan IT Week"
+    definition: "일본 도쿄에서 매년 개최되는 대규모 IT 전시회"
+    context: "2025 Spring(4/23-25) 참가 예정"
+  - term: "Invest Seoul Tokyo IR"
+    definition: "서울시 주관 도쿄 IR 행사"
+    context: "2025년 5/7-9 참가 예정"
+  - term: "alt.AI"
+    definition: "일본 AI 기업. MoU 협의 진행 중"
+    context: "일본 파트너십 대상"
+  - term: "FUN Deal 2025"
+    definition: "잠재 고객/파트너 연결 이벤트"
+    context: "한시형이 소개 문구 작성하여 등록"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

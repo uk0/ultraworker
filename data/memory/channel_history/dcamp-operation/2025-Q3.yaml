@@ -1,0 +1,62 @@
+channel:
+  id: C096LRLD5NE
+  name: dcamp-operation
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 51
+  total_threads: 32
+  active_users: 12
+  avg_messages_per_day: 2.3
+summary: |
+  2025-Q3 dcamp-operation 채널은 사이오닉에이아이의 디캠프 이사 및 초기 정착 과정을 중심으로 활발한 소통이 이루어진 분기이다.
+  7월 21일 공식 이사를 기점으로 자리 확보, 출입증 발급, 모니터 7대 배송 및 설치, 키보드·마우스 등 사무용품 구매, 프린터·스캐너 사용법 공유 등 사무 환경 구축 관련 논의가 집중되었다.
+  이후 점심·저녁 식사 주문, 간식 구매, 비상 상비약 및 소화제 비치 등 일상적인 사무 공간 운영 소통이 정착되었으며, 명함 배달, 법인카드 비치, 회의실 예약 안내 등도 공유되었다.
+topics:
+  - name: "디캠프 이사 및 초기 환경 구축"
+    mention_count: 18
+    description: "7월 21일 공식 이사, 출입증 발급, 모니터 설치, 사무용품 구매 등 초기 정착 과정"
+  - name: "사무용품 및 비품 관리"
+    mention_count: 12
+    description: "키보드, 마우스, A4 용지, 스테이플러, 상비약 등 필요 물품 주문 및 관리"
+  - name: "식사 및 간식 주문"
+    mention_count: 10
+    description: "점심·저녁 배달 주문 및 간식 공동 구매 관련 소통"
+  - name: "시설 이용 안내"
+    mention_count: 8
+    description: "회의실 예약, 프린터·스캐너 사용법, 주차 안내, 와이파이 등 디캠프 시설 이용 정보 공유"
+key_discussions:
+  - thread_ts: '1721455380.000000'
+    date: '2025-07-20'
+    reply_count: 2
+    text_preview: "디캠프 이사 일정 및 준비 사항 안내 - 7명 인원·자리 확보, 카드키 발급, 업무기기 이전 계획"
+  - thread_ts: '1721455740.000000'
+    date: '2025-07-20'
+    reply_count: 8
+    text_preview: "디캠프 필요 비품·물품 목록 작성 스레드"
+  - thread_ts: '1721566584.000000'
+    date: '2025-07-21'
+    reply_count: 6
+    text_preview: "디캠프 입주 가이드 공유 - 와이파이, 주차, 냉난방 등 노션 문서"
+  - thread_ts: '1721649840.000000'
+    date: '2025-07-22'
+    reply_count: 4
+    text_preview: "모니터 7대 배송 확인 요청 및 설치 완료 보고"
+  - thread_ts: '1722838450.000000'
+    date: '2025-08-05'
+    reply_count: 8
+    text_preview: "디캠프 물품 신청 및 구매 완료, A4 용지 택배 확인 요청"
+terminology:
+  - term: "디캠프"
+    definition: "사이오닉에이아이가 2025년 7월에 이사한 스타트업 지원 공간 및 액셀러레이터"
+  - term: "입주 가이드"
+    definition: "디캠프 시설 이용(와이파이, 주차, 냉난방, 회의실 예약 등) 관련 노션 문서"
+  - term: "법인카드"
+    definition: "디캠프용 공용 법인카드, 공유 위치에 보관하여 사무용품 구매 등에 활용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

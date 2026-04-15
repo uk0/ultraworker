@@ -1,0 +1,28 @@
+channel:
+  id: C081TUD7MBM
+  name: alarm-live-error-stormchat
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 2
+  active_users: 6
+  avg_messages_per_day: 1.5
+summary: |
+  STORM Chat 500 에러 제보 채널. 에러 제보 4건 발생, 일평균 1.5건으로 낮은 빈도.
+  1월 16일 송명하, 김혜원, 이재준(Leo)이 채널에 추가 참여. Noah(고석현)도 합류.
+  2월 12일 에러 제보에 4건의 스레드 답글이 달려 비교적 활발한 대응이 있었음.
+  전반적으로 STORM Chat 서비스의 안정성이 양호한 분기.
+topics:
+  - STORM Chat 500 에러 간헐적 발생
+  - 에러 대응 팀 확대 (송명하, 이재준 등 합류)
+  - 2월 에러 집중 발생 및 대응
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

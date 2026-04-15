@@ -1,0 +1,73 @@
+channel:
+  id: C08GN320Q1G
+  name: thanks-sionic
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 36
+  total_threads: 23
+  active_users: 12
+  avg_messages_per_day: 1.4
+summary: |
+  2025년 3분기 thanks-sionic 채널은 시암(SIAM) 프로젝트, 제주도 워크샵, 파이콘 튜토리얼 등 굵직한 이벤트들 사이에서 팀원 간 감사가 활발하게 이루어진 분기였다.
+  7월에는 IBK 현장 전사들(덕현, 재준, 윤정)에 대한 감사와 강욱님의 러버덕 세션 감사, IR 자료 제작 감사 등이 공유되었다.
+  8월에는 시암 중간보고 성공 기념으로 기여자들(강욱님, 시형님, 혜원님 등)에 대한 감사가 이루어졌고, 제주도 플레이샵 인솔 담당자들에 대한 감사도 기록되었다.
+  9월에는 병무청 연구소 세팅 작업, 면접 진행, 그리팅 채용 도입에 대한 감사 메시지가 공유되었으며, 팀의 이타적 문화에 대한 감동적인 소회도 기록되었다.
+topics:
+  - name: "시암(SIAM) 프로젝트 기여 감사"
+    mention_count: 5
+    description: "시암 중간보고 성공을 위해 LangGraph, 에이전트 설계 등에 기여한 팀원들 감사"
+  - name: "IBK 현장 운영 감사"
+    mention_count: 4
+    description: "IBK 을지로 현장에서 장시간 야근한 전사들에 대한 감사"
+  - name: "제주도 플레이샵 감사"
+    mention_count: 3
+    description: "제주도 워크샵 기획 및 인솔 담당자들에 대한 감사"
+  - name: "기술 지원 및 코드 기여 감사"
+    mention_count: 6
+    description: "강욱님 오픈소스 기여, 성우님 Pylon 관련 기여, MCP/Claude Code 셋업 등 기술 지원 감사"
+key_discussions:
+  - thread_ts: '1753440000.000000'
+    date: '2025-07-25'
+    reply_count: 0
+    text_preview: "강욱님의 지식 distill 도움 감사"
+  - thread_ts: '1754050560.000000'
+    date: '2025-08-01'
+    reply_count: 6
+    text_preview: "배포 도움 및 전 직원 OPS화 시도하는 진형님께 감사"
+  - thread_ts: '1755826680.000000'
+    date: '2025-08-21'
+    reply_count: 22
+    text_preview: "시암 중간보고 성공 기념 수훈자 감사 - 강욱, 시형, 혜원, Claude Opus 포함"
+  - thread_ts: '1756265640.000000'
+    date: '2025-08-27'
+    reply_count: 3
+    text_preview: "제주도 플레이샵 기획 및 인솔 감사 - 혜원, 상민, 세민, 수원"
+  - thread_ts: '1757981940.000000'
+    date: '2025-09-18'
+    reply_count: 41
+    text_preview: "병무청 연구소 세팅 작업 혼자 하는 수원님께 감사 및 미안함"
+  - thread_ts: '1758131460.000000'
+    date: '2025-09-19'
+    reply_count: 11
+    text_preview: "DSL 만들고 데모 웹페이지까지 만든 진형님 감사 (강욱님 칭찬)"
+terminology:
+  - term: "시암 (SIAM)"
+    definition: "Sionic AI의 내부 프로젝트명, LangGraph 및 에이전트 기반 솔루션"
+    aliases: ["SIAM"]
+    context: "2025년 8월 중간보고 성공, Claude Opus 4.1이 코딩 기여로 감사 대상에 포함"
+  - term: "IBK"
+    definition: "IBK기업은행 관련 Sionic AI 현장 배포 프로젝트"
+    aliases: []
+    context: "을지로 현장에서 전사들이 하루 15시간 이상 작업"
+  - term: "플레이샵"
+    definition: "Sionic AI의 워크샵과 플레이를 결합한 팀 행사, 2025년 8월 제주도에서 진행"
+    aliases: []
+    context: "팀 빌딩 및 경쟁사 리서치 등 병행"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

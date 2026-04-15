@@ -1,0 +1,83 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1116
+  total_threads: 814
+  active_users: 29
+  avg_messages_per_day: 12.7
+summary: |
+  2025-Q2 random 채널은 분기 중 가장 활발한 활동(1116개 메시지)을 보였다.
+  만우절 슬랙 프로필 장난(심슨 캐릭터 변경), 헌법재판소 탄핵 선고 속보 공유 등 사회적 이벤트가 화제였다.
+  AI 업계에서는 Llama 4 출시, GPT-4.1/o3/o4-mini 발표, Claude 4 발표 등 굵직한 모델 릴리스가 연이어 있었다.
+  일본 IT Week 출장(진형/우명/승희), Nvidia 해커톤 참가, Sprint Camp 컨퍼런스 참석 등 대외 활동이 활발했다.
+  회사 성장 관련으로는 창립 2주년 기념, 블로그 트래픽 10만 돌파, 투자자 미팅 증가 등이 공유되었고,
+  SKT 해킹 사건 관련 보안 논의, NewRelic 파트너십 영상 촬영도 있었다.
+  신규 입사자(성우/부교/효주/기연/승현) 온보딩이 다수 진행되었으며, 병현의 치앙마이 워케이션 후기,
+  제주 워크샵 기획 논의, 병특(병역특례) 실사 등 구성원 관련 이벤트도 풍성했다.
+topics:
+  - 만우절 슬랙 프로필 장난 (심슨 캐릭터)
+  - 헌법재판소 탄핵 선고
+  - AI 모델 릴리스 (Llama 4, GPT-4.1, o3, o4-mini, Claude 4)
+  - 일본 IT Week 출장 (진형/우명/승희)
+  - Nvidia 해커톤 참가
+  - 사이오닉 창립 2주년
+  - SKT 해킹 사건 및 보안 논의
+  - 신규 입사자 온보딩 (성우/부교/효주/기연/승현)
+  - 병현 치앙마이 워케이션
+  - 제주 워크샵 기획
+  - NewRelic 파트너십 영상
+  - Sprint Camp 컨퍼런스
+  - 블로그 트래픽 10만 달성
+  - 병특(병역특례) 실사
+key_discussions:
+  - date: '2025-04-01'
+    text_preview: '만우절 슬랙 프로필 장난 - 전사 구성원 심슨 캐릭터로 프사 변경'
+  - date: '2025-04-04'
+    text_preview: '헌법재판소 탄핵 선고 속보 공유 및 사내 반응'
+  - date: '2025-04-07'
+    text_preview: 'Llama 4 출시 소식 공유 및 성능 논의'
+  - date: '2025-04-28'
+    text_preview: 'SKT 해킹 사건 공유 - 통신사 보안 이슈 논의'
+  - date: '2025-05-14'
+    text_preview: '일본 IT Week 출장 현장 소식 공유 (진형/우명/승희)'
+  - date: '2025-05-20'
+    text_preview: 'GPT-4.1 / o3 / o4-mini 릴리스 소식 및 비교 논의'
+  - date: '2025-05-27'
+    text_preview: 'Claude 4 발표 소식 공유 및 사내 활용 기대'
+  - date: '2025-06-01'
+    text_preview: '사이오닉AI 창립 2주년 축하 메시지'
+  - date: '2025-06-10'
+    text_preview: 'Nvidia 해커톤 참가 후기 공유'
+  - date: '2025-06-18'
+    text_preview: '블로그 트래픽 10만 돌파 축하 및 SEO 전략 논의'
+  - date: '2025-06-25'
+    text_preview: '제주 워크샵 일정 및 프로그램 기획 논의'
+terminology:
+  - term: 'IT Week'
+    definition: '일본 도쿄에서 열리는 IT 전시회 - 사이오닉AI가 부스 참가'
+    aliases: ['Japan IT Week']
+  - term: '병특'
+    definition: '병역특례 - 전문연구요원/산업기능요원 등 대체복무 제도'
+    aliases: ['병역특례', '전문연구요원']
+  - term: '워케이션'
+    definition: 'Work + Vacation - 원격 근무와 휴가를 병행하는 근무 형태'
+    aliases: ['workation']
+  - term: 'Sprint Camp'
+    definition: '스프린트 캠프 - IT/스타트업 컨퍼런스'
+    aliases: ['스프린트캠프']
+  - term: 'NewRelic'
+    definition: '클라우드 기반 옵저버빌리티 플랫폼 - 사이오닉AI 파트너사'
+    aliases: ['뉴렐릭']
+  - term: '디캠프'
+    definition: 'D.CAMP - 은행권청년창업재단 운영 스타트업 지원 공간, 사이오닉AI 입주 공간'
+    aliases: ['D.CAMP', '은행권청년창업재단']
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

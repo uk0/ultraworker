@@ -1,0 +1,74 @@
+channel:
+  id: C06PS33807Q
+  name: product-website
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 79
+  total_threads: 71
+  active_users: 12
+  avg_messages_per_day: 3.6
+summary: |
+  홈페이지 리뉴얼의 핵심 개발 및 QA 단계가 진행된 분기. 4월 초 디자인 완성본 리뷰 후 프론트엔드 개발(박나희, eun.juuu0)이 본격 시작되었다.
+  4월 첫째 주에 홈, 플랫폼, 앤서, 컴퍼니, 리서치(벡터/한국어데이터), 뉴스룸, 문의하기 등 전 페이지에 대한 집중 QA가 이루어졌다.
+  도메인 전환(sionic.jp -> sionic.ai) 작업이 4월 10일에 진행되었고, 메타데이터/SEO 이미지 추가, 404 페이지 디자인, Contact 페이지 슬랙봇 연동, 모바일 반응형 QA가 순차적으로 진행되었다.
+  5월에는 일본어 번역 적용이 주요 작업이었으며, 번역 QA 및 이미지 내 텍스트 번역 누락 수정이 이어졌다. 웹사이트 콜드스타트 성능 이슈도 발견되어 논의되었다.
+  6월에는 일본어 버전 모바일 대응 미비 및 테크블로그 언어 설정 버그가 제보되었다.
+topics:
+  - 홈페이지 개발 및 QA
+  - 도메인 전환 (sionic.jp -> sionic.ai)
+  - 일본어 번역 적용
+  - 모바일 반응형 대응
+  - SEO 메타데이터 추가
+  - Contact 페이지 슬랙봇 연동
+  - 콜드스타트 성능 이슈
+key_discussions:
+  - thread_ts: '1712625181.143519'
+    date: '2024-04-09'
+    reply_count: 58
+    text_preview: 'eun.juuu0 - 홈 페이지 QA (대규모 피드백)'
+  - thread_ts: '1712558946.052439'
+    date: '2024-04-08'
+    reply_count: 39
+    text_preview: 'eun.juuu0 - Platform 페이지 QA'
+  - thread_ts: '1712633279.419789'
+    date: '2024-04-09'
+    reply_count: 31
+    text_preview: '김혜원 - Career 노션 페이지 정리 논의'
+  - thread_ts: '1713329449.652069'
+    date: '2024-04-17'
+    reply_count: 30
+    text_preview: '김덕현 - 웹사이트 메타데이터 이슈 및 티켓 생성'
+  - thread_ts: '1711973805.428089'
+    date: '2024-04-01'
+    reply_count: 30
+    text_preview: '김혜원 - Contact 페이지 개발 관련 논의'
+  - thread_ts: '1712310204.640259'
+    date: '2024-04-05'
+    reply_count: 27
+    text_preview: 'hyerim9098 - 메인/플랫폼/한국어 페이지 일본어 번역 요청'
+  - thread_ts: '1712654011.346969'
+    date: '2024-04-09'
+    reply_count: 26
+    text_preview: '박나희 - 문의하기 페이지 QA 요청'
+  - thread_ts: '1712736604.764849'
+    date: '2024-04-10'
+    reply_count: 19
+    text_preview: '김덕현 - 도메인 전환 작업 진행'
+terminology:
+  - term: '콜드스타트'
+    definition: '웹사이트 초기 로딩 시 발생하는 지연 현상'
+    context: '2024년 5월 초 웹사이트 콜드스타트 이슈가 보고됨'
+  - term: 'QA'
+    definition: 'Quality Assurance, 품질 검증 작업'
+    context: '페이지별 디자인/기능 검증을 위한 QA 스레드가 다수 생성됨'
+  - term: 'Linear'
+    definition: '프로젝트 관리 도구, 이슈 트래킹에 사용'
+    context: '메타데이터 추가 등 작업이 Linear 티켓(STM-813)으로 관리됨'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

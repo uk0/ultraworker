@@ -1,0 +1,30 @@
+channel:
+  id: C06DZP8HASV
+  name: kims-bakery
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 2.0
+summary: |
+  2024년 1분기에 kozistr833님이 채널을 개설하였다. 채널명이 bon-up-ha-neun-got에서 kims-bakery로 변경되었다.
+  채널 설명은 "모델 굽는 곳"으로, 현업에서 모델 학습이 마치 베이킹과 같다는 비유에서 유래하였다.
+  이스트 1g, 습도/온도 1도 차이로 결과가 달라지는 것처럼 모델 학습의 민감성과 신비함을 표현하였다.
+topics:
+  - 채널 개설
+  - 모델 학습 (베이킹 비유)
+key_discussions: []
+terminology:
+  - term: kims-bakery
+    definition: 모델 학습(training)을 베이킹에 비유한 채널명, 하이퍼파라미터 민감도를 빵 굽기에 빗댐
+  - term: 굽다
+    definition: 모델을 학습(training)시키는 것을 빵을 굽는 것에 비유한 사내 은어
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

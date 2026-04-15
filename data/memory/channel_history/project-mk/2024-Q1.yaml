@@ -1,0 +1,60 @@
+channel:
+  id: C06FA5KDNKV
+  name: project-mk
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 50
+  total_threads: 27
+  active_users: 15
+  avg_messages_per_day: 2.6
+summary: |
+  매일경제(매경) 프로젝트 채널이 2024년 1월 24일에 개설되어 STORM Write 기능 개발이 시작된 분기.
+  매일경제 기자들의 기사 작성을 지원하는 AI Write 기능을 하이퍼클로바(하클) LLM 기반으로 개발하였다.
+  프롬프트 설계, 피그마 UI 기획, Write API 개발, 번역 검수 등이 진행되었으며, 3/22 매경 대면 시연이 성공적으로 이루어졌다.
+  하클 토큰 제한(2000자)으로 인한 기사 길이 문제, 교정 작업 품질 미달, RPM 제한 등 기술적 과제가 식별되었다.
+  2000자 초과 시 클로드(Claude) LLM을 대안으로 연동하는 방안이 검토되었으며, 하클 파인튜닝을 통한 교정 품질 개선도 시도되었으나 효과가 제한적이었다.
+topics:
+  - STORM Write 기능 개발
+  - 매경 시연 준비 및 실행
+  - 하이퍼클로바 프롬프트 최적화
+  - 교정 기능 품질 개선
+  - 클로드 연동 검토
+  - Write UI 개발
+  - 하클 토큰 제한 대응
+key_discussions:
+  - thread_ts: '1711091276.931019'
+    date: '2024-03-22'
+    title: 매경 미팅 및 시연 결과 공유
+    summary: 매경 대면 시연 진행. 2시~3시 시연 시간 동안 배포/수정 금지. 시연 후 피드백 수집.
+  - thread_ts: '1710996378.923639'
+    date: '2024-03-21'
+    title: Write 사용 후기 및 개선 논의
+    summary: Write 기능 테스트 후기 공유. 기사 작성은 양호하나 교정 작업은 LLM 한계로 어려움 확인.
+  - thread_ts: '1710921473.554309'
+    date: '2024-03-20'
+    title: Write 프롬프트 설계
+    summary: 피그마 기반 프롬프트 설계 논의. 세민님과 협업하여 프롬프트 최적화 진행.
+  - thread_ts: '1711614453.041729'
+    date: '2024-03-28'
+    title: Write 개선 필요 건 정리
+    summary: 매경 로고 삽입, 2000자 초과 시 클로드 사용, 후처리 로직 개발 등 개선 사항 도출.
+terminology:
+  - term: STORM Write
+    definition: 사이오닉AI의 AI 기사 작성 지원 서비스. 보도자료를 입력하면 헤드라인, 부제목, 본문을 자동 생성
+    aliases: [Write, 스톰 라이트]
+  - term: 하클(HCX)
+    definition: 네이버 하이퍼클로바X LLM. 매경 Write의 기본 모델로 사용. 토큰 수 제한이 주요 과제
+    aliases: [하이퍼클로바, HyperCLOVA]
+  - term: 매경
+    definition: 매일경제신문. STORM Write의 첫 번째 고객사
+    aliases: [매일경제, MK]
+  - term: Pylon
+    definition: 사이오닉AI의 백엔드 서비스 레이어. Write API 연동에 사용
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

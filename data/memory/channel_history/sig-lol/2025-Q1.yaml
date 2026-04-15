@@ -1,0 +1,29 @@
+channel:
+  id: C07TMG88HMW
+  name: sig-lol
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 2.5
+summary: |
+  2025년 1분기 sig-lol 채널에서는 스타크래프트 빨무(빠른무한) 게임 모임 제안이 등장하며, LoL 외 다른 게임에 대한 관심도 확인되었다. 4명의 멤버가 참여하였으며, 팀원 간 게임 실력에 관한 가벼운 대화가 이루어졌다.
+topics:
+  - name: "스타크래프트 빨무 모임"
+    mention_count: 2
+    description: "스타크래프트 빠른무한(빨무) 게임 모임 제안 및 팀원 실력 관련 대화"
+key_discussions: []
+terminology:
+  - term: "빨무"
+    definition: "스타크래프트의 '빠른무한' 맵 게임 모드"
+  - term: "sig-lol"
+    definition: "LoL(리그 오브 레전드) 관심사 그룹 채널 - 실제로는 다양한 게임 주제도 논의됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,63 @@
+channel:
+  id: C07DV25D3UY
+  name: research-competitions
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 36
+  total_threads: 22
+  active_users: 12
+  avg_messages_per_day: 2.2
+summary: |
+  2024-Q4 research-competitions 채널에서는 금융 도메인 RAG 대회인 ICAIF FinanceRAG에 팀이 집중적으로 참가하였다. 초기에는 stella + GTE reranker 조합으로 3위를 달성하였고, 이후 document chunking 전략 개선, encoder 모델 교체(FinLang finance-embeddings 등), reranker 앙상블, query expansion 등의 기법을 적용하여 validation score 0.5를 초과하는 성과를 거두었다. 최종 5위로 마무리되었으며, 팀은 상위권 제출물의 query expansion 기법 분석 및 파인튜닝 전략 등을 리캡 미팅에서 공유하였다. 연말에 신규 팀원 2명이 채널에 합류하였다.
+topics:
+  - name: "ICAIF FinanceRAG 대회"
+    mention_count: 22
+    description: "금융 도메인 RAG 벤치마크 대회. ConvFinQA, FinQABench, FinanceBench 등 7개 부분 벤치마크로 구성"
+  - name: "RAG 성능 최적화 실험"
+    mention_count: 10
+    description: "document chunking, encoder 모델 교체, reranker 앙상블, late chunking, Contextual Retrieval 등 기법 적용"
+  - name: "상위권 기법 분석"
+    mention_count: 4
+    description: "최종 5위 이후 상위권 제출물의 query expansion, Deepmind CoT-RAG 등 기법 분석 및 공유"
+key_discussions:
+  - thread_ts: '1729491225.000000'
+    date: '2024-10-21'
+    reply_count: 14
+    text_preview: "ICAIF Baseline Notion 공유 - RAG 대회 기초 설계 논의"
+  - thread_ts: '1729567323.000000'
+    date: '2024-10-22'
+    reply_count: 3
+    text_preview: "stella + GTE reranker 조합으로 리더보드 3위 달성"
+  - thread_ts: '1729743570.000000'
+    date: '2024-10-24'
+    reply_count: 25
+    text_preview: "reranking 결과 앙상블 코드 완성, 0.5 초과 달성. 상위 3개 어려운 데이터셋 분석"
+  - thread_ts: '1730423305.000000'
+    date: '2024-11-01'
+    reply_count: 13
+    text_preview: "Gemini Pro API 키로 context 생성 중 토큰 소진 이슈 발생"
+  - thread_ts: '1731206522.000000'
+    date: '2024-11-10'
+    reply_count: 13
+    text_preview: "최종 5위로 마무리. 상위권은 query expansion 기법 활용"
+terminology:
+  - term: "FinanceRAG"
+    definition: "금융 도메인 Retrieval-Augmented Generation 벤치마크 대회"
+  - term: "reranker"
+    definition: "초기 검색 결과를 재순위화하는 모델. GTE reranker, bge-m3 reranker 등이 사용됨"
+  - term: "query expansion"
+    definition: "원본 쿼리를 확장하여 검색 성능을 높이는 기법. 상위권 제출물에서 주로 활용됨"
+  - term: "Contextual Retrieval"
+    definition: "Anthropic이 제안한 검색 품질 향상 기법으로 문서 청크에 컨텍스트를 추가하는 방식"
+  - term: "late chunking"
+    definition: "문서를 나중에 청킹하여 전체 문서 임베딩 정보를 활용하는 검색 기법"
+  - term: "solbakk"
+    definition: "파인튜닝에 활용된 내부 도구 또는 프레임워크로 추정"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

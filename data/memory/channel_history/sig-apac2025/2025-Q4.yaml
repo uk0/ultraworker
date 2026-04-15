@@ -1,0 +1,23 @@
+channel:
+  id: C09NJDG5CJH
+  name: sig-apac2025
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 2
+  active_users: 4
+  avg_messages_per_day: 4.0
+summary: |
+  2025-Q4 sig-apac2025 채널은 APAC 관련 특별 관심 그룹(SIG) 채널로, 해당 분기에는 매우 제한적인 활동만 기록되었다.
+  4명의 참여자와 8개의 메시지가 있었으나, 실질적인 주제 토론이나 주요 의사결정은 확인되지 않았다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

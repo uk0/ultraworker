@@ -1,0 +1,71 @@
+channel:
+  id: C06S3EQ9X1T
+  name: sig-지름
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 69
+  total_threads: 47
+  active_users: 10
+  avg_messages_per_day: 1.8
+summary: |
+  채널 역사상 가장 활발한 분기(69개 메시지). 필름 카메라 열풍이 특히 두드러졌다. 이강욱이 필름카메라(Praktica BC1, Olympus XA, Olympus OM40) 판매/구매를 활발히 하며 필카 렌즈, 스트랩 등 관련 논의가 풍성했다. 정세민은 XREAL One AR 안경을 구매하고 짧은 사용 후기(110개 답변)를 남겼으며, 겔럭시 XR과 비교 고민을 공유했다. Sigrid Jin은 스타링크(위성 인터넷)를 구매하며 38개 답변의 큰 관심을 받았고, DJI Osmo Pocket3도 구매했다. 윤주운이 새 멤버로 합류하여 5090 GPU 두 번째 구매, NVLink 스나이핑, 데스크탑 업그레이드, 빔프로젝터 등 고가 기기를 적극적으로 구매했다. Noah는 미싱(재봉틀), 크리스마스 트리/곰인형을 구매했고, 김혜원은 크리스마스 선물 고민(57개 답변)이 있었다. 권혜선은 생빈 위스키(본인과 동갑)를 구매했다. 신희수는 새 운동화를 공유했고, 김덕현은 프리다이빙 숏핀과 이영도 신작을 공유했다. 연말 분위기로 선물/트리/파티 준비 관련 구매가 많았다.
+topics:
+  - 필름카메라 (Praktica BC1, Olympus XA, OM40, 렌즈, 필름)
+  - AR/XR (XREAL One, 겔럭시 XR)
+  - 스타링크 (위성 인터넷)
+  - GPU/PC (5090, NVLink, 데스크탑 업그레이드)
+  - 위스키 (생빈 위스키)
+  - 크리스마스 (트리, 곰인형, 선물)
+  - 재봉/미싱
+  - 카메라 액세서리 (DJI Osmo Pocket3)
+  - 한복 (천의무봉, 신서울, 리슬)
+  - 프리다이빙
+key_discussions:
+  - thread_ts: '1761236875.169729'
+    date: '2025-10-23'
+    topic: XREAL One AR 안경 구매 및 사용 후기
+    reply_count: 110
+  - thread_ts: '1764683032.604899'
+    date: '2025-12-02'
+    topic: 크리스마스 선물 고민
+    reply_count: 57
+  - thread_ts: '1762990036.802159'
+    date: '2025-11-12'
+    topic: 스타링크 미타 구매
+    reply_count: 38
+  - thread_ts: '1763874014.120739'
+    date: '2025-11-23'
+    topic: 모종의 결심(고가 기기 구매)
+    reply_count: 23
+  - thread_ts: '1766637718.740019'
+    date: '2025-12-25'
+    topic: 크리스마스 관련 공유
+    reply_count: 23
+  - thread_ts: '1761808611.325989'
+    date: '2025-10-30'
+    topic: Olympus XA 필름카메라 판매
+    reply_count: 15
+terminology:
+  - term: "XREAL One"
+    definition: "AR 안경 브랜드, 보조 모니터로 사용 가능한 XR 기기"
+    context: "정세민이 겔럭시 XR과 비교 후 구매"
+  - term: "스타링크"
+    definition: "SpaceX의 위성 인터넷 서비스"
+    context: "Sigrid Jin이 스타링크 미타 모델 구매"
+  - term: "NVLink"
+    definition: "NVIDIA GPU 간 고속 연결 기술/브릿지"
+    context: "윤주운이 매물 올라오자마자 스나이핑"
+  - term: "천의무봉"
+    definition: "한복 브랜드, 현대적 디자인의 한복 의류"
+    context: "이강욱이 철릭, 장나래 등 펀딩 공유"
+  - term: "생빈(Birth Year) 위스키"
+    definition: "본인의 출생 연도에 증류된 위스키"
+    context: "권혜선이 적금 만기 기념으로 구매"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

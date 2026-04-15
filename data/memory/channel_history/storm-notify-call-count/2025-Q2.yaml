@@ -1,0 +1,39 @@
+channel:
+  id: C080M9RBHRC
+  name: storm-notify-call-count
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 42
+  total_threads: 2
+  active_users: 3
+  avg_messages_per_day: 21.0
+summary: |
+  2025-Q2에는 5월 30일과 6월 23일에 "월간 호출 사용량 초과" 알림이 집중 발생하였다. 특히 5월 30일에는 수십 건의 초과 알림이 연속으로 발생하여 최병현이 김혜원에게 한도 증가 여부를 문의하였다. 최병현이 YF(유진투자증권 추정) 고객의 사용량을 분석하며 "Zia's Test" 외에 "Cake"이라는 새 에이전트가 생겨 열심히 사용 중임을 보고하였다. 6월 23일에는 "인센임"이라고 확인하여 특정 고객(인센)의 초과를 식별하였다.
+topics:
+  - 월간 호출 사용량 한도 증가 논의
+  - 고객별 사용량 추적 (YF, 인센)
+  - 에이전트별 사용 패턴 분석
+key_discussions:
+  - thread_ts: '1748578708.448009'
+    date: '2025-05-30'
+    title: 사용량 한도 증가 논의
+    summary: 최병현이 김혜원에게 대량 초과 발생 고객의 한도를 늘릴지 문의 (5개 답글)
+  - thread_ts: '1750665086.485159'
+    date: '2025-06-23'
+    title: 인센 고객 사용량 초과 확인
+    summary: 최병현이 월간 호출 초과 고객을 인센으로 식별 (3개 답글)
+terminology:
+  - term: YF
+    definition: 유진투자증권(추정) 고객의 내부 식별 코드
+    aliases: [7331500738964021248]
+  - term: 인센
+    definition: Storm 서비스의 고객사 중 하나로, 월간 호출 사용량을 초과한 고객
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

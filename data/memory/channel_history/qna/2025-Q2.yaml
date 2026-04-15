@@ -1,0 +1,123 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 276
+  total_threads: 259
+  active_users: 22
+  avg_messages_per_day: 3.7
+summary: |
+  2025년 2분기 qna 채널은 사상 최고 활동량을 기록했다. 기술적으로는 텐서플로우 학습(162건 답글의 대규모 스레드),
+  Pylon qdrant gRPC 연결 오류, corsair 로딩 이슈, 리랭커 max-batch-tokens 설정, 청크 사이즈 변경(128/512 -> 1024/512),
+  Supply 로컬 Docker 기동 GPU 이슈 등 심층 기술 논의가 활발했다. 제품 관련으로는 스톰파스 PDF 뷰어 글씨 소실,
+  bucket과 폴더 용어 혼재, 채널 연동 endpoint 라이브 설정, 카카오톡 활성화 계정 유형 문제 등이 논의되었다.
+  사업적으로는 IBK 프로젝트 대외비 여부, 뤼튼 프로젝트 중단 사유, 인프런 강의 업로드, 무신사 발표 자료,
+  SaaS LLM 호출 비용 산정 등이 다뤄졌다. 인프라 관련으로는 Azure OpenAI/Cohere Embed v4 세팅, 사내 워커 Wi-Fi SSH,
+  세콤 출입카드 조사, SW 저작권 확인 등 다양한 주제가 있었다.
+topics:
+  - 텐서플로우 학습/데모
+  - Pylon qdrant gRPC 연결 오류
+  - corsair 대시보드
+  - 리랭커 설정(max-batch-tokens)
+  - 청크 사이즈 최적화
+  - Supply 로컬 Docker/GPU 이슈
+  - 스톰파스 PDF 뷰어 이슈
+  - bucket/폴더 용어 통일
+  - IBK 대외비 관련
+  - 뤼튼 프로젝트 히스토리
+  - Azure OpenAI/Cohere Embed v4
+  - 사내 워커 SSH 포트
+  - 드라군(dragoon) PDF 파싱
+  - near miss(니어미스) 용어
+  - 장애 공지 채널/멘션 체계
+  - 폴라리스 오피스 API
+  - 채용 공고 분류 오류
+key_discussions:
+  - thread_ts: '1749568828.575979'
+    date: '2025-06-10'
+    reply_count: 162
+    text_preview: 텐서플로우 학습 및 회사 업무 접목 가능한 데모 주제 논의
+  - thread_ts: '1747807784.213479'
+    date: '2025-05-21'
+    reply_count: 57
+    text_preview: Pylon 로컬 환경에서 corsair qdrant gRPC 연결 오류
+  - thread_ts: '1747974637.921429'
+    date: '2025-05-23'
+    reply_count: 54
+    text_preview: 청크 잘림 현상 개선 방안 논의(정답 청크 중간 절단)
+  - thread_ts: '1748431547.206389'
+    date: '2025-05-28'
+    reply_count: 51
+    text_preview: 사내 워커 PC Wi-Fi SSH 포트 개방 및 외부 접속 방안
+  - thread_ts: '1750979055.826929'
+    date: '2025-06-27'
+    reply_count: 7
+    text_preview: 폴라리스 오피스 API 사용 계정 문의
+  - thread_ts: '1750812055.926549'
+    date: '2025-06-13'
+    reply_count: 30
+    text_preview: sionicstorm.ai 썸네일 리전별 다국어 대응 논의
+  - thread_ts: '1748257988.869409'
+    date: '2025-05-26'
+    reply_count: 36
+    text_preview: Supply 로컬 Docker 기동시 GPU warm-up killed 이슈
+  - thread_ts: '1747750850.464059'
+    date: '2025-05-20'
+    reply_count: 39
+    text_preview: dev storm agent 등록 문서 260개의 dhash 조회 방법
+  - thread_ts: '1751010184.944759'
+    date: '2025-06-27'
+    reply_count: 25
+    text_preview: 장애 공지 채널 및 멘션 대상 체계 논의(엔지니어 외 포함)
+  - thread_ts: '1748848886.177389'
+    date: '2025-06-02'
+    reply_count: 19
+    text_preview: 인프런 강의용 스톰파스 파싱/하이라이팅 잘 되는 PDF 문서 요청
+  - thread_ts: '1749403761.119939'
+    date: '2025-06-20'
+    reply_count: 19
+    text_preview: 팀즈 관리자 권한 요청
+  - thread_ts: '1748235638.152549'
+    date: '2025-05-26'
+    reply_count: 13
+    text_preview: 뤼튼 프로젝트 중단 사유 및 히스토리 확인 요청
+terminology:
+  - term: 텐서플로우(TensorFlow)
+    definition: 구글이 만든 머신러닝 프레임워크
+    aliases:
+      - TF
+    context: 사이오닉 업무 접목 가능한 데모 주제 논의에서 언급
+  - term: corsair
+    definition: 사이오닉의 벡터 DB 관리 서비스(qdrant 래퍼)
+    aliases: []
+    context: 대시보드 로딩 이슈, dev 환경 연결에서 언급
+  - term: 드라군(dragoon)
+    definition: 사이오닉의 Rust 기반 PDF 파싱 라이브러리
+    aliases: []
+    context: PDF 문자열 포지션 계산, 가로쓰기/LTR 관련에서 언급
+  - term: 니어미스(near miss)
+    definition: 실제 장애는 아니지만 장애로 이어질 뻔한 상황
+    aliases: []
+    context: 장애 대응 논의에서 용어 설명 요청
+  - term: 리랭커
+    definition: 검색 결과를 재순위화하는 모델(TEI 기반)
+    aliases:
+      - reranker
+    context: max-batch-tokens 설정, 청크 수 계산 등에서 언급
+  - term: 폴라리스 오피스
+    definition: 한컴그룹의 문서 편집/변환 서비스
+    aliases: []
+    context: API 사용 계정 문의에서 언급
+  - term: 오버마인드
+    definition: 사이오닉 내부 프로젝트/도구 이름
+    aliases: []
+    context: 투두리스트 확인 요청에서 언급
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

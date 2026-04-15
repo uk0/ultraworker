@@ -1,0 +1,47 @@
+channel:
+  id: C083Z9S9Y9M
+  name: sionicai-relate
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 16
+  total_threads: 2
+  active_users: 9
+  avg_messages_per_day: 3.2
+summary: |
+  2024년 4분기 sionicai-relate 채널은 2024년 12월 10일에 Relate 팀의 초대로 개설되었다. Sionic AI(시형, 윤정)와 Relate 팀(세희/Joy) 간의 초기 온보딩 세션이 이루어졌으며, Relate 툴 사용 가이드, 아웃바운드 이메일 도메인 기술 설정 가이드, Relate Week 웨비나 일정 안내 등이 공유되었다. 초기 로그인 이슈(pending invitation), 데이터 import 지원 제안 등이 있었으며, 연말 바쁜 시기로 실제 세팅 작업은 2025년 1월로 연기되었다.
+topics:
+  - name: "채널 개설 및 온보딩"
+    mention_count: 8
+    description: "2024-12-10 Relate 팀 초대로 채널 개설. 온보딩 가이드, 아웃바운드 이메일 기술 설정 가이드 공유"
+  - name: "Relate Week 웨비나"
+    mention_count: 3
+    description: "2024년 12월 10-13일 4일간 진행된 Relate Week 웨비나(B2B 세일즈, 고객 성공, 마케팅 주제)"
+  - name: "초기 로그인 이슈"
+    mention_count: 2
+    description: "pending invitation 오류, Google 계정 로그인 시 비밀번호 재설정 필요 현상"
+key_discussions:
+  - thread_ts: '1733818200.000000'
+    date: '2024-12-10'
+    reply_count: 0
+    text_preview: "Relate 팀 세희님의 온보딩 가이드 공유 - 한국어 가이드, 아웃바운드 도메인 기술 설정 가이드"
+  - thread_ts: '1733819400.000000'
+    date: '2024-12-10'
+    reply_count: 0
+    text_preview: "Relate Week 웨비나 소개 - 12/10~12/13 4일간 B2B GTM 플레이북 시리즈"
+terminology:
+  - term: "Relate"
+    definition: "B2B CRM 플랫폼. 2024-12-10 채널 개설 후 Sionic AI 영업팀에서 도입 검토"
+    aliases: ["Relate CRM"]
+    context: "Sionic AI 영업 파이프라인 관리 목적으로 도입"
+  - term: "Engage"
+    definition: "Relate 내 시퀀스 이메일(자동 팔로업) 기능"
+    aliases: []
+    context: "Sionic AI 아웃바운드 영업에 활용 예정"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

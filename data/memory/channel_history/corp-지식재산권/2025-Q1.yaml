@@ -1,0 +1,47 @@
+channel:
+  id: C06T556UPU5
+  name: corp-지식재산권
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 10
+  total_threads: 2
+  active_users: 7
+  avg_messages_per_day: 1.7
+summary: |
+  2025년 1분기 corp-지식재산권 채널에서 사이오닉 AI의 1호 특허 등록 결정이 발표되었다.
+  박우명이 1월 23일 "1호 특허 등록 결정되었습니다!"라고 공유하며 채널이 재활성화되었고,
+  송명하, hyunwoo, 홍성아, 백은주, 김수원 등이 새로 채널에 참여했다. 2월 11일에는
+  등록증이 공유되었으며, 2월 20일에는 storm parse 관련 자료를 변리사에게 전달하고
+  2/27 미팅 일정을 잡았다. 3월 17일에는 박우명이 윤도균에게 특허 관련 메일 포워딩에
+  대한 빠른 답변을 요청했다.
+topics:
+  - 1호 특허 등록 결정
+  - storm parse 특허 출원 준비
+  - 변리사 미팅
+  - 특허 등록증 공유
+key_discussions:
+  - thread_ts: '1737617741.434229'
+    date: '2025-01-23'
+    reply_count: 3
+    text_preview: '1호 특허 등록 결정 축하 스레드'
+  - thread_ts: '1740036196.943629'
+    date: '2025-02-20'
+    reply_count: 2
+    text_preview: 'storm parse 자료 전달 및 변리사 미팅 일정 조율'
+terminology:
+  - term: "storm parse"
+    definition: "사이오닉 AI의 문서 파싱 기술. 특허 출원 대상 기술 중 하나."
+    aliases: []
+    context: "변리사에게 자료 전달 후 특허 명세서 작성 진행"
+  - term: "1호 특허"
+    definition: "사이오닉 AI의 첫 번째 등록 특허. 2025년 1월 등록 결정."
+    aliases: []
+    context: "2025-Q1에 등록 결정, 등록증 공유"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

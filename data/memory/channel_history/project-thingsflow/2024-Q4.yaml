@@ -1,0 +1,38 @@
+channel:
+  id: C07QMG6FMAS
+  name: project-thingsflow
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 2
+  active_users: 5
+  avg_messages_per_day: 3.5
+summary: |
+  띵스플로우(Thingsflow) 프로젝트 채널이 개설된 분기.
+  김혜원이 이미지 생성 API 관련 기술 문의를 했으며, 생성 이미지 크기 확대 가능 여부에 대한 논의가 활발하게 진행되었다(28건 스레드).
+  정세민(Sem)이 이미지 생성 API를 띵스플로우에 전달한 상태였으며, ComfyUI 서버(comfyui.sionic.tech) 접속 문제에 대한 트러블슈팅도 있었다.
+  주요 참여자: 김혜원, 정세민, Noah, 송명하.
+topics:
+  - 이미지 생성 API
+  - ComfyUI 서버 운영
+  - 이미지 크기 확대
+key_discussions:
+  - thread_ts: '1728353932.459619'
+    date: '2024-10-08'
+    summary: '이미지 생성 API 크기 확대 가능 여부 논의 (28건 스레드)'
+  - thread_ts: '1728364053.887289'
+    date: '2024-10-08'
+    summary: 'ComfyUI 서버 접속 불가 이슈 트러블슈팅'
+terminology:
+  - term: 'ComfyUI'
+    definition: 'Stable Diffusion 기반 이미지 생성 워크플로우 도구. 노드 기반 UI 제공'
+  - term: '띵스플로우'
+    definition: 'Thingsflow. 헬로우봇 등을 운영하는 모바일 서비스 회사. 이미지 생성 API 고객사'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,35 @@
+channel:
+  id: C085EJCJQ9G
+  name: sig-재밌는거-만들기
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 2
+  active_users: 4
+  avg_messages_per_day: 3.0
+summary: |
+  활동이 줄어든 분기이나 의미 있는 논의가 있었다. 양호진(Hojin Yang)이 합류하여 "스톰 파스의 미래 버전"이라는 주제로 130개 답변이 달린 대규모 논의가 이루어졌다. 최병현(Hyune-c)이 합류하며 "딱 봐도 안재미있어 보이는 채널.."이라는 유머로 12개 답변이 달렸다. 제품의 미래 방향에 대한 깊은 논의가 특징적이었다.
+topics:
+  - STORM 파스 미래 방향
+  - 제품 비전
+key_discussions:
+  - thread_ts: '1744258721.308209'
+    date: '2025-04-10'
+    topic: 스톰 파스의 미래 버전 논의
+    reply_count: 130
+  - thread_ts: '1744265560.575869'
+    date: '2025-04-10'
+    topic: 채널 소개/유머
+    reply_count: 12
+terminology:
+  - term: "스톰 파스"
+    definition: "STORM Parse, 사이오닉AI의 문서 파싱/처리 제품"
+    context: "미래 버전에 대한 논의"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

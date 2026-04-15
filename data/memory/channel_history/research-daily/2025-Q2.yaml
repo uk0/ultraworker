@@ -1,0 +1,66 @@
+channel:
+  id: C08DKGNJ8P5
+  name: research-daily
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 160
+  total_threads: 48
+  active_users: 11
+  avg_messages_per_day: 2.6
+summary: |
+  2025년 2분기 research-daily 채널에서는 Carrier Storm Parse 고도화(엑셀 처리, e2e 테스트), GraphRAG 개발 킥오프, Pylon 리랭커 학습 파이프라인 구축, VoRA 논문 리뷰가 주요 활동이었다. 일본 IT Week 참가, 도쿄 법인 설립 관련 행정, 정부과제(디딤돌, 엔업, 현대차) 서류 작업이 병행되었으며, 11명이 매일 업무를 기록하였다.
+topics:
+  - name: "Carrier Storm Parse 고도화"
+    mention_count: 28
+    description: "엑셀 파일 처리 티켓(JVM 라이브러리 탐색), e2e 테스트 코드 작성, 아비케(IBK) 반입 대응, ghostscript 버전 이슈"
+  - name: "GraphRAG 개발"
+    mention_count: 15
+    description: "LightRAG + PostgreSQL 연동 실험, graphrag-sionic 레포 구축, 아이센텍 데이터 KG 구성(12시간 소요)"
+  - name: "Pylon 리랭커 학습"
+    mention_count: 12
+    description: "mxbai-rerank-large-v2(1.5B) 학습 파이프라인, IBK PoC 데이터셋 기반 RAFT 파이프라인 구축"
+  - name: "일본 출장 및 법인 설립"
+    mention_count: 14
+    description: "도쿄 IT Week 참가, CIC Tokyo 입주, 01booster 엑셀러레이터 미팅, 법인 계좌·주소 변경 행정"
+  - name: "정부과제 행정"
+    mention_count: 22
+    description: "디딤돌, 엔업, 현대차 등 정부과제 사업계획서 작성, 증빙서류 준비, 협약변경 관련 행정"
+  - name: "Gemma3 비중국 모델 대체 실험"
+    mention_count: 8
+    description: "Qwen을 대체할 비중국 모델(Gemma3 27B IT) 파싱 테스트, IBK 요구사항 대응"
+key_discussions:
+  - thread_ts: '1743818400.000000'
+    date: '2025-04-05'
+    reply_count: 4
+    text_preview: "Pylon 클라이언트에 Overmind 추가 및 Late Chunking API 관련 작업 논의"
+  - thread_ts: '1744135200.000000'
+    date: '2025-04-11'
+    reply_count: 1
+    text_preview: "GraphRAG 개발 킥오프: 5월 3주차까지 아이티센엔텍 시스템 연동 working demo 목표"
+  - thread_ts: '1744376400.000000'
+    date: '2025-04-17'
+    reply_count: 32
+    text_preview: "IBK에서 중국 모델(Qwen) 불가 요청, Gemma3 27B IT로 대체 실험 및 성능 테스트 논의"
+  - thread_ts: '1745395200.000000'
+    date: '2025-04-28'
+    reply_count: 4
+    text_preview: "VoRA 논문 리뷰(Qwen 7B에 vision encoder 추가), 비중국 모델의 저해상도 문서 파싱 한계 분석"
+terminology:
+  - term: "LightRAG"
+    definition: "그래프 기반 RAG 시스템으로 PostgreSQL과 연동하여 Knowledge Graph를 구성하는 오픈소스 프레임워크"
+  - term: "Pylon"
+    definition: "Sionic AI의 검색 엔진 서비스로, 임베딩·리랭킹·청킹 등 검색 파이프라인을 제공함"
+  - term: "VoRA"
+    definition: "Vision Retrieval Augmentation — Qwen 7B에 vision encoder를 추가한 비전 확장 모델"
+  - term: "RAFT"
+    definition: "Retrieval Augmented Fine-Tuning — 검색 결과를 학습 데이터로 활용하는 파인튜닝 방법론"
+  - term: "아이티센엔텍"
+    definition: "GraphRAG 파일럿 고객사로, 5월 3주차까지 시스템 연동 데모 목표로 협력"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,22 @@
+channel:
+  id: C05FM0Y94KB
+  name: storm-nonce
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q3에는 Notion AI 봇이 채널에 참여한 것 외에 실질적인 활동이 없었다. storm-nonce 채널은 Storm 서비스의 nonce(일회성 토큰) 관련 채널로 추정되나 이 분기에는 비활성 상태였다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,142 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 124
+  total_threads: 112
+  active_users: 27
+  avg_messages_per_day: 2.3
+summary: |
+  2025년 4분기 qna 채널은 고객 프로젝트 확대와 해외 진출 이슈가 두드러졌다. 신세계 I&C 문서 업로드 오류, Parse 구축
+  문의, 신세계 지식문서 한도 변경 등 신규 고객 대응이 활발했고, 야놀자클라우드 문의, 코덱스 데모 최신 버전 요청 등도
+  있었다. 기술적으로는 RAG 노드 이슈, 워크플로우 검색 노드 출처문서 표시 방식, 후처리 노드 문법, VLLM 서버 연결
+  실패, query encoder cross-lingual 학습, otel 서비스 필터링, Templar Archives 일본어 로그 미표시, 일본 회원가입
+  번역 오류 의심 등이 논의되었다. 조직 관련으로는 Sionic x InstructKR 해커톤(12/20), 디캠프 행사, maestro MCP
+  레포 공개, Claude Code 리밋/Premium 시트 요청, GPT Pro/Business 계정, llama/upstage API 키 발급, 명판날인 분실,
+  보일러 고장, 공용밥카 분실 등 다양한 주제가 다뤄졌다. 신규 합류자(이상호, 홍혁준, 박상욱 등) 온보딩과 동남아 진출
+  시 중국어 지원 여부 등 해외 확장 관련 질문도 등장했다.
+topics:
+  - 신세계 I&C 프로젝트
+  - 야놀자클라우드 문의
+  - RAG 노드 이슈
+  - 워크플로우 검색/후처리 노드
+  - VLLM 서버 연결
+  - query encoder cross-lingual 학습
+  - otel 모니터링 필터링
+  - Templar Archives 대시보드
+  - 일본 시장(회원가입 번역, 계정 만료)
+  - Sionic x InstructKR 해커톤
+  - maestro MCP 레포 공개
+  - Claude Code Premium/리밋
+  - GPT Pro/Business 계정
+  - llama/upstage API 키
+  - 나라장터 등록
+  - 명판날인/인감 관리
+  - 공용밥카 분실
+  - 동남아 진출/중국어 지원
+  - 피그마 프로젝트 권한
+  - findy 연동 보안
+key_discussions:
+  - thread_ts: '1761818224.498539'
+    date: '2025-10-30'
+    reply_count: 46
+    text_preview: 특수한 형태의 파일을 스톰에 올리는 방법 논의
+  - thread_ts: '1761243704.306859'
+    date: '2025-10-23'
+    reply_count: 33
+    text_preview: 개인 연구용 OpenAI API 키 발급 요청 및 정책 논의
+  - thread_ts: '1762327782.939539'
+    date: '2025-11-05'
+    reply_count: 32
+    text_preview: 스톰 플랫폼 로그인 오류 문의
+  - thread_ts: '1764469931.494729'
+    date: '2025-12-23'
+    reply_count: 29
+    text_preview: Templar Archives 대시보드 일본어 로그 미표시 원인 조사
+  - thread_ts: '1763066479.823449'
+    date: '2025-11-13'
+    reply_count: 26
+    text_preview: 회사 명판날인 분실 경위 및 위치 파악
+  - thread_ts: '1760960881.512749'
+    date: '2025-10-20'
+    reply_count: 26
+    text_preview: 신세계 I&C Parse 구축 관련 문의
+  - thread_ts: '1762997683.269529'
+    date: '2025-11-13'
+    reply_count: 27
+    text_preview: 연구용 GEMINI API KEY 발급 요청
+  - thread_ts: '1761647004.999999'
+    date: '2025-10-28'
+    reply_count: 22
+    text_preview: GitHub frontend team 생성 승인 요청
+  - thread_ts: '1762402482.016849'
+    date: '2025-11-06'
+    reply_count: 21
+    text_preview: Claude 계정 접속 불가 이슈 해결
+  - thread_ts: '1761296404.884199'
+    date: '2025-10-24'
+    reply_count: 20
+    text_preview: 코덱스 데모 웹사이트 최신 버전 요청
+  - thread_ts: '1765378490.754809'
+    date: '2025-12-10'
+    reply_count: 19
+    text_preview: 그룹메일로 메일 보내는 방법 문의
+  - thread_ts: '1763475415.134509'
+    date: '2025-11-18'
+    reply_count: 16
+    text_preview: Sionic x InstructKR 해커톤 튜토리얼/교육 자료 요청
+  - thread_ts: '1765820109.812029'
+    date: '2025-12-15'
+    reply_count: 16
+    text_preview: 일본 사용자 회원가입 이름 필드 번역 오류 의심
+  - thread_ts: '1761274052.423759'
+    date: '2025-10-24'
+    reply_count: 16
+    text_preview: 슬랙-노션 연동 AI 쿼리 확장 프롬프트 개선 요청
+terminology:
+  - term: Templar Archives
+    definition: 사이오닉의 로그/이벤트 수집 및 분석 시스템
+    aliases:
+      - TA
+    context: 그라파나 대시보드, 일본어 로그 필터링 등에서 언급
+  - term: maestro
+    definition: 사이오닉의 MCP 기반 스킬/도구 통합 시스템
+    aliases:
+      - sionic-maestro-skills
+    context: GitHub 레포 공개 요청에서 언급
+  - term: 코덱스(Codex)
+    definition: 사이오닉의 코드 관련 데모/도구
+    aliases: []
+    context: 최신 웹사이트 버전 요청에서 언급
+  - term: InstructKR
+    definition: 한국어 AI 교육/커뮤니티 조직
+    aliases: []
+    context: 12/20 해커톤 공동 개최에서 언급
+  - term: findy
+    definition: 일본의 개발자 채용 플랫폼
+    aliases: []
+    context: GitHub 연동 보안 관점 논의에서 언급
+  - term: otel
+    definition: OpenTelemetry, 분산 트레이싱/모니터링 표준
+    aliases:
+      - OpenTelemetry
+    context: 특정 서비스 이름 필터링 방법 질문에서 언급
+  - term: VLLM
+    definition: 고성능 LLM 서빙 프레임워크
+    aliases:
+      - vLLM
+    context: 서버 연결 실패 이슈에서 언급
+  - term: 나라장터
+    definition: 국가종합전자조달시스템(g2b.go.kr)
+    aliases:
+      - g2b
+    context: 입찰 등록/자격 요건 확인에서 언급
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

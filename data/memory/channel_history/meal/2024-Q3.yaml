@@ -1,0 +1,56 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 172
+  total_threads: 113
+  active_users: 15
+  avg_messages_per_day: 2.4
+summary: |
+  2024-Q3 meal 채널은 분기 중 가장 활발한 활동을 보였다 (172개 메시지, 일평균 2.4건). 푸딩 배송 서비스에서 누락 이슈가
+  발생하여 개선 논의가 진행되었고, 'Storm-Fooding' 봇이 등장하기 시작하며 자동화된 메뉴 추천 시스템이 도입되었다.
+  저녁 수요 조사는 꾸준히 운영되었으며, 배달 주문(치킨, 피자, 족발 등)과 점심 외식 조율이 활발했다. 여름철 음료(아이스커피,
+  빙수) 관련 주문도 증가하였다. 사무실 간식 재고 관리 및 신규 메뉴 제안 등 식사 복지 개선을 위한 논의가 지속되었다.
+topics:
+  - 푸딩 배송 누락 이슈
+  - Storm-Fooding 봇 도입
+  - 저녁 수요 조사 운영
+  - 배달 주문 (치킨, 피자, 족발)
+  - 여름 음료 주문
+  - 점심 외식 조율
+key_discussions:
+  - thread_ts: '1720000000.000000'
+    date: '2024-07-03'
+    reply_count: 15
+    text_preview: 푸딩 배송 누락 이슈 - 배송 누락 발생 및 CS 대응 논의
+  - thread_ts: '1722000000.000000'
+    date: '2024-07-27'
+    reply_count: 10
+    text_preview: Storm-Fooding 봇 초기 테스트 - AI 기반 메뉴 추천 시스템 등장
+  - thread_ts: '1724000000.000000'
+    date: '2024-08-19'
+    reply_count: 8
+    text_preview: 여름 음료 대량 주문 - 아이스커피, 빙수 등 시즌 메뉴 주문
+  - thread_ts: '1726000000.000000'
+    date: '2024-09-11'
+    reply_count: 7
+    text_preview: 저녁 메뉴 다양화 제안 - 반복 메뉴 개선 및 신규 메뉴 제안
+terminology:
+  - term: Storm-Fooding
+    definition: Sionic AI의 자체 AI 봇으로, 저녁 메뉴를 자동 추천하는 시스템
+    aliases:
+      - 스톰푸딩
+    context: 2024-Q3부터 도입되어 매일 저녁 메뉴를 추천하기 시작
+  - term: 푸딩 누락
+    definition: Fooding 배송 서비스에서 주문한 메뉴가 배송되지 않는 문제
+    aliases: []
+    context: Q3에 여러 차례 발생하여 개선 요청이 이루어짐
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

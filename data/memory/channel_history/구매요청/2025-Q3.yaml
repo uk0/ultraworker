@@ -1,0 +1,67 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 117
+  total_threads: 116
+  active_users: 5
+  avg_messages_per_day: 2.2
+summary: |
+  2025-Q3에는 디캠프 이전 준비에 따른 대규모 구매가 집중되었다. 디캠프용 모니터 7대(6,428,380원), 노트북거치대, 멀티탭, 사무용품 등이 한꺼번에 구매되었다. 제주 워케이션 숙소 및 업무공간 비용(약 512만원), Claude Code Max 구독 여러 건($200~$220) 등 AI 도구 구독도 급증하였으며, GoLand, Sentry Team Plan, JetBrains All Products Pack 등 개발 도구 구독도 다수 처리되었다.
+topics:
+  - name: "디캠프 이전 준비 구매"
+    mention_count: 10
+    description: "디캠프용 모니터 7대, 사무용품, 노트북거치대, 멀티탭 등 대규모 구매"
+  - name: "Claude Code Max 구독"
+    mention_count: 8
+    description: "여러 팀원의 Claude Code Max $200~$220 구독 요청"
+  - name: "제주 워케이션"
+    mention_count: 4
+    description: "마음스테이 숙소(394만원), 업무공간(118만원) 등 워케이션 비용"
+  - name: "개발 도구 구독"
+    mention_count: 6
+    description: "GoLand, Sentry Team Plan, JetBrains, MS Teams 유료 플랜 구독"
+  - name: "교육 서비스"
+    mention_count: 5
+    description: "Spring Batch, 코틀린 멀티모듈 강의, 분산트랜잭션 강의, 연구노트 등"
+key_discussions:
+  - thread_ts: '1751605200.000000'
+    date: '2025-07-04'
+    reply_count: 8
+    text_preview: "제주 워케이션 숙소(마음스테이) 3,940,000원 결제 요청"
+  - thread_ts: '1751608080.000000'
+    date: '2025-07-04'
+    reply_count: 31
+    text_preview: "제주 워케이션 업무공간 1,180,000원 계좌이체 요청"
+  - thread_ts: '1752908880.000000'
+    date: '2025-07-21'
+    reply_count: 3
+    text_preview: "디캠프 모니터 7대(6,428,380원) 기존 미타 스펙 동일 구매 요청"
+  - thread_ts: '1753175580.000000'
+    date: '2025-07-22'
+    reply_count: 31
+    text_preview: "JetBrains All Products Pack 구독 관련 논의"
+  - thread_ts: '1753439640.000000'
+    date: '2025-07-25'
+    reply_count: 3
+    text_preview: "월간 간식 347,000원 구매"
+terminology:
+  - term: "Claude Code Max"
+    definition: "Anthropic Claude Code 최상위 구독 플랜, 월 $200~$220"
+  - term: "디캠프"
+    definition: "은행권청년창업재단 운영 선릉 캠퍼스, 2025-Q3부터 사이오닉AI 입주"
+  - term: "워케이션"
+    definition: "Work + Vacation의 합성어, 제주도에서 팀 전체 합숙 근무"
+  - term: "GoLand"
+    definition: "JetBrains의 Go 언어 전용 IDE"
+  - term: "Sentry"
+    definition: "애플리케이션 에러 모니터링 서비스"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

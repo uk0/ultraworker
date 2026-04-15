@@ -1,0 +1,51 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 325
+  total_threads: 238
+  active_users: 21
+  avg_messages_per_day: 4.6
+summary: |
+  Q4에는 식사 주문 시스템이 진화하여 기존 3개 봇(샐러드/일반식/저녁수요)에 '헬스식 열차' 봇이 추가됨.
+  프로티너, 키토김밥, 닭가슴살볶음밥 등 단백질 위주 식단을 원하는 사람들을 위한 전용 열차 운영.
+  샐러드 열차도 메뉴 리스트가 확장되어 9개 이상 업체 목록 제공(새르 포케, 보울레시피, 그린레시피 등).
+  연말(12월 하순~31일) 활동 저조. 능이 누룽지 닭백숙, 편백 야채고기찜 등 계절 메뉴 등장.
+  커피 드립 원두/프로폴리스 사탕 등 간식/음료 관련 대화도 활발.
+  다른 층 음식 혼동 이슈 발생(이상호 메시지). 신규 참여자 이상호, 최소영, 안진혁 등 합류.
+topics:
+  - 점심 배달 주문
+  - 샐러드 열차 (메뉴 확장)
+  - 일반식 열차
+  - 헬스식 열차 (신규)
+  - 커피 드립
+  - 저녁 수요 조사
+key_discussions:
+  - title: 커피 드립 원두 논의
+    date: '2025-12-17'
+    summary: Noah가 드립 커피용 원두 가용 여부 질문, 41개 답글로 활발한 토론
+  - title: 능이 누룽지 닭백숙 공동주문
+    date: '2025-12-15'
+    summary: 정세민이 닭백숙 주문 모집(1시간 이상 소요), 14명 참여
+  - title: 다른 층 음식 혼동 이슈
+    date: '2025-12-16'
+    summary: 이상호가 다른 층 배달 음식을 가져온 실수에 대한 후기 공유
+terminology:
+  - term: 헬스식 열차
+    definition: Q4에 신규 추가된 단백질 위주 식단 공동주문 봇 (프로티너, 키토김밥 등)
+    aliases: [헬스식단열차, 근성장열차]
+  - term: 혜잘딱
+    definition: 김혜원이 알아서 잘 딱 골라주는 것의 줄임말 (샐러드 메뉴 선정)
+    aliases: []
+  - term: 호진당하다
+    definition: 양호진처럼 배고파서 음식을 빨리 먹는 상황을 묘사하는 표현
+    aliases: [호진해버리다]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

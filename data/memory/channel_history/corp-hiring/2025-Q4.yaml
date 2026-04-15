@@ -1,0 +1,69 @@
+channel:
+  id: C098FV4AG3D
+  name: corp-hiring
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 35
+  total_threads: 26
+  active_users: 10
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 4분기 corp-hiring 채널에서는 다양한 포지션 채용 활동과 온보딩이 활발히 진행되었다.
+  10월에 인턴(홍혁준, 김주원), 정규직(이상호, AI Research Engineer), 그리고 FE 인턴, 일본 비즈니스 인턴 등 복수의 신규 입사자 온보딩이 이루어졌다. 솔루션 엔지니어 직무 논의, 우아한테크코스 리크루팅 행사 안내, Golang 채용 스레드 등이 진행되었으며, 연말에는 기존 채용 채널 아카이빙 및 운영 방식 재정비 계획이 수립되었다.
+  캐리어 인턴 채용, 2026년 채용 박람회 참가 검토, 그리팅 채용 플랫폼 정착 등 채용 프로세스 체계화 노력도 이루어졌다.
+topics:
+  - name: "신규 입사자 온보딩"
+    mention_count: 8
+    description: "Q4 중 여러 인턴 및 정규직 신규 입사자 온보딩 진행"
+  - name: "솔루션 엔지니어 채용"
+    mention_count: 3
+    description: "솔루션 엔지니어(SE) 포지션 정의 및 채용 정책 논의"
+  - name: "채용 채널 아카이빙"
+    mention_count: 4
+    description: "채용 당사자 정보 보호를 위한 기존 채용 채널 정리 및 아카이빙 정책 수립"
+  - name: "그리팅 플랫폼"
+    mention_count: 5
+    description: "채용 관리 플랫폼 그리팅 활용 및 운영 개선 논의"
+  - name: "Golang 채용"
+    mention_count: 2
+    description: "Golang 개발자 채용 관련 스레드 논의"
+key_discussions:
+  - thread_ts: '1761213860.000000'
+    date: '2025-10-22'
+    reply_count: 46
+    text_preview: "솔루션 엔지니어 직무에 대한 고민 및 포지션 정의 논의"
+  - thread_ts: '1766444400.000000'
+    date: '2025-12-22'
+    reply_count: 35
+    text_preview: "종무식 일정 및 연말 행사 논의"
+  - thread_ts: '1766613800.000000'
+    date: '2025-12-24'
+    reply_count: 32
+    text_preview: "1/5 신규 입사자 4명 자리 배치 및 준비 논의"
+  - thread_ts: '1766735400.000000'
+    date: '2025-12-24'
+    reply_count: 12
+    text_preview: "채용 채널 아카이빙 및 운영 방식 재정비 공지, 새 채널 네이밍 규칙 수립"
+  - thread_ts: '1766812800.000000'
+    date: '2025-12-23'
+    reply_count: 35
+    text_preview: "캐리어 인턴 채용 스레드 논의"
+terminology:
+  - term: "그리팅"
+    definition: "채용 관리 전문 SaaS 플랫폼으로, 지원자 관리, 면접 일정 조율, 합격/불합격 통보 등 채용 전 과정을 지원"
+  - term: "온보딩"
+    definition: "신규 입사자가 회사에 적응할 수 있도록 진행하는 입사 초기 안내 및 교육 프로세스"
+  - term: "SE (Solution Engineer)"
+    definition: "솔루션 엔지니어, 고객사 기술 지원 및 솔루션 제안을 담당하는 직무"
+  - term: "캔디드"
+    definition: "AI 기반 채용 후보자 추천 서비스"
+  - term: "레퍼첵"
+    definition: "채용 과정에서 지원자의 전직장 동료나 지인을 통해 평판을 확인하는 절차 (레퍼런스 체크)"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

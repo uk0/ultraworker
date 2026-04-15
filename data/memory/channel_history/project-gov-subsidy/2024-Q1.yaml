@@ -1,0 +1,58 @@
+channel:
+  id: C06R0LPHHLJ
+  name: project-gov-subsidy
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 63
+  total_threads: 19
+  active_users: 10
+  avg_messages_per_day: 10.5
+summary: |
+  2024년 1분기에 정부지원사업 채널이 개설되어 글로벌 SaaS 육성 프로젝트(GSIP) 신청 준비가 집중적으로 이루어졌다. 과제 요건 분석, 발표자료 작성, 사업화 계획 수립, 인건비 산정, 클라우드 적용 계획 등 세부 사항이 광범위하게 논의되었다. 데이터 바우처 사업 적격 판정도 수령하였으며, 국가기록원 비정형 데이터 검색 프로젝트 제안도 검토하였으나 차별화 어려움으로 드롭되었다.
+topics:
+  - name: "글로벌 SaaS 육성 프로젝트(GSIP)"
+    mention_count: 30
+    description: "Storm SaaS 글로벌 진출 과제 신청 - 3/29 마감, 사업화 계획·클라우드 적용·인건비 등 논의"
+  - name: "데이터 바우처 사업"
+    mention_count: 8
+    description: "데이터 바우처 사업 적격 판정 수령"
+  - name: "국가기록원 프로젝트"
+    mention_count: 6
+    description: "국가기록원 비정형 데이터 검색 프로젝트 제안 검토 - 차별화 어려움으로 드롭"
+  - name: "병역특례"
+    mention_count: 4
+    description: "SW 병역특례 진행 상황 추적 및 노션 공유"
+key_discussions:
+  - thread_ts: '1711191600.000000'
+    date: '2024-03-23'
+    reply_count: 8
+    text_preview: "글로벌 SaaS 육성 프로젝트 주요 내용 정리 - 글로벌 진출 사업화 가능성 25점 등 평가 기준"
+  - thread_ts: '1711285260.000000'
+    date: '2024-03-24'
+    reply_count: 0
+    text_preview: "GSIP 회의 참가 Zoom 링크 공유 - 월요일 오후 4시"
+  - thread_ts: '1711338600.000000'
+    date: '2024-03-25'
+    reply_count: 13
+    text_preview: "중복 수혜 가능 여부 확인 필요 - 예창, 초창, 팁스 등 주요 사업과 중복 수혜 문의"
+terminology:
+  - term: "GSIP"
+    definition: "글로벌 SaaS 육성 프로젝트 - 과기부/NIA 주관 클라우드 SaaS 글로벌 진출 지원 사업"
+    aliases: ["글로벌 SaaS 육성 프로젝트"]
+    context: "Storm SaaS 글로벌 진출을 위한 과제 신청"
+  - term: "데이터 바우처"
+    definition: "중소기업 데이터 구매 및 가공 지원을 위한 정부 바우처 사업"
+    aliases: []
+    context: "수요기업으로 신청하여 적격 판정 수령"
+  - term: "3책5공"
+    definition: "과제 참여 제한 - 책임 연구원 3개, 공동 연구원 5개 이상 참여 불가"
+    aliases: []
+    context: "여러 과제 동시 참여 시 참여율 관리 기준"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

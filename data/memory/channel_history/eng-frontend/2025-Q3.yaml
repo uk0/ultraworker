@@ -1,0 +1,61 @@
+channel:
+  id: C08H8PU7VAQ
+  name: eng-frontend
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 148
+  total_threads: 89
+  active_users: 16
+  avg_messages_per_day: 2.9
+summary: |
+  2025-Q3 eng-frontend 채널은 워크플로우 리팩토링, 오더시트 노드 개발, 일본 리전 대응이 주요 주제였다.
+  1) 워크플로우 리팩토링 - useOrderSheetNode 개선, 렌더링 폭발/클로저 이슈 해결,
+     LLM 노드 폼 구현, onBlur vs onChange 시점 논의, 프론트엔드 아키텍처 시각화.
+  2) 배포/인프라 - sionicstorm.jp 일본 도메인 연결, QA 환경 구축(온프렘 빌드),
+     프로덕션 빌드 실패 다수 대응, SSE 이벤트 필드 변경 대응.
+  3) 조직/프로세스 - 프론트 채용 논의, 프론트-스게 일정 싱크 방안 제안,
+     주간 일감 정리/코드리뷰 리뷰, SIAM 환경 프론트 이슈 대응.
+  4) 기술 공유 - TC39 총회 정리, 웹 애니메이션 성능, PostCSS 관리 경험,
+     lokalise 다국어 PoC 준비, LangDiff 라이브러리 공개.
+  권혜선(Jada), 백은주 중심 운영. 김주원 신규 합류(11월부터 활동).
+topics:
+  - 워크플로우 리팩토링 (useOrderSheetNode)
+  - LLM 노드 개발
+  - 일본 리전/도메인 (sionicstorm.jp)
+  - 프로덕션 빌드 실패 대응
+  - 프론트엔드 채용
+  - SSE 이벤트 처리 변경
+  - 다국어 관리 (lokalise PoC)
+key_discussions:
+  - thread_ts: '1755162319.679639'
+    date: '2025-08-14'
+    topic: 워크플로우 리팩토링 - nodeProperty 위젯 하위 이동
+  - thread_ts: '1755501724.578729'
+    date: '2025-08-18'
+    topic: sionicstorm.jp 일본 도메인 Vercel 연결
+  - thread_ts: '1758532649.298709'
+    date: '2025-09-22'
+    topic: SIAM 환경 프론트 배포 이슈 대응
+  - thread_ts: '1759303070.010469'
+    date: '2025-10-01'
+    topic: 라이브 장애 대응 - 피처토글 정리 지연으로 인한 빌드 이슈
+  - thread_ts: '1754150928.967529'
+    date: '2025-11-26'
+    topic: 프론트-스게 일정 싱크 방안 (주간 싱크업 제안)
+terminology:
+  - term: SIAM
+    definition: Sionic AI의 내부 테스트/배포 환경
+  - term: lokalise
+    definition: 다국어 번역 관리 SaaS 도구
+  - term: LangDiff
+    definition: LLM 기반 스트리밍 UI 구현을 돕는 오픈소스 라이브러리 (팀 공개)
+  - term: 오더시트
+    definition: 워크플로우의 각 노드 속성을 설정하는 편집 폼
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

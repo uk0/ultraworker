@@ -1,0 +1,49 @@
+channel:
+  id: C07NQH3U7SN
+  name: noti-linear
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1548
+  total_threads: 2
+  active_users: 4
+  avg_messages_per_day: 18.9
+summary: |
+  Linear 이슈 트래커 알림 채널. 1548개 알림으로 꾸준한 개발이 이루어졌다.
+  새로운 주요 활동자로 홍혁준, 이승규, 김주원, 송명하가 등장하며 팀 구성에 변화가 있었다.
+  주요 이슈로는 apis-parse-router 관련 대규모 작업(apidog 테스트 시나리오 추가 STM-4429, 다양한 PDF 렌더링 로직 테스트 STM-4445,
+  vertexAI 요청 http2 커넥션풀 변경 STM-4425, ASMR-V2 전환 STM-4390, private sync parse API 추가 STM-4256),
+  에이전트 지식탐색 일본어 워딩 변경(STM-3727), 피드백 글자 수 제한(STM-3674),
+  로컬 스토리지 접근 시점 이슈(STM-3937) 등이 있었다.
+  12월 18일에 최병현과 이승규가 대규모 이슈 정리(Canceled/Done)를 수행했으며, 12월 19일에는 해커톤 준비(STM-4433)가 진행되었다.
+  Infra & DevOps 팀에서 송명하가 인프라 관련 이슈를 처리했다.
+topics:
+  - apis-parse-router 대규모 리팩토링
+  - PDF 렌더링 및 파싱 개선
+  - vertexAI http2 커넥션풀 최적화
+  - 일본어 국제화
+  - 해커톤 준비
+  - Infra & DevOps 작업
+key_discussions:
+  - title: apis-parse-router 대규모 작업
+    summary: 이승규, 홍혁준이 apis-parse-router의 apidog 테스트 시나리오 추가, PDF 렌더링 로직 테스트, vertexAI http2 커넥션풀 변경, ASMR-V2 전환 등 대규모 작업을 수행. 12월 18일에 대량의 이슈 정리가 이루어짐.
+  - title: 해커톤 준비 (STM-4433)
+    summary: 이승규가 12월 19일 해커톤 준비를 위한 apis-parse-router 관련 이슈를 진행.
+  - title: 에이전트 UI 일본어 지원
+    summary: 김주원이 에이전트 지식탐색 일본어 워딩 변경(STM-3727)과 피드백 글자 수 제한(STM-3674)을 처리.
+terminology:
+  - term: apis-parse-router
+    definition: Storm 플랫폼의 문서 파싱 라우터 서비스. PDF 렌더링, OCR, 텍스트 추출 등을 관리
+  - term: ASMR-V2
+    definition: Sionic AI의 모델 서빙 라우터 v2
+  - term: apidog
+    definition: API 테스트/문서화 도구
+  - term: vertexAI
+    definition: Google Cloud의 AI 플랫폼. Sionic AI에서 모델 호출에 활용
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

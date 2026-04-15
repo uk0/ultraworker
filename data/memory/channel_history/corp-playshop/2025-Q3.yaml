@@ -1,0 +1,72 @@
+channel:
+  id: C06RXLRRAAF
+  name: corp-playshop
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 79
+  total_threads: 62
+  active_users: 12
+  avg_messages_per_day: 2.7
+summary: |
+  2025년 3분기 corp-playshop 채널은 제주도 워크샵의 실행 단계로, 79건의 메시지와
+  매우 활발한 스레드 활동이 있었다. 주요 활동: (1) 한라산 등산팟 운영(강성우 주도,
+  성판악 코스 8/24 새벽 6시 출발, 36개 답글), (2) 레크레이션/세미나/해커톤 내용
+  기획(정세민-김혜원 논의, 92개 답글), (3) 숙소 방배정(오승희 2인실/1인실 혼동
+  이슈, 30개 답글), (4) 타운홀 준비(고석현 담당, 김혜원 월요일 타겟 요청, 27개 답글),
+  (5) 교통안내(안진혁 담당, 김포공항 집합), (6) 맛집/스노클링/활동 공유.
+  고석현(Noah)은 선발대로 먼저 제주에 도착하여 독채를 개인으로 빌려 술파티 공간을
+  마련하기도 했다. 비용 정산(안진혁 담당), 비행기 수하물 규정 확인, 홍성아 막차
+  합류 등 실무적 논의도 활발했다. 조하담의 안경집 분실 에피소드(20개 답글)도 있었다.
+topics:
+  - 제주도 플레이샵 실행
+  - 한라산 등산팟 (성판악 코스)
+  - 레크레이션/세미나/해커톤 기획
+  - 숙소 방배정
+  - 타운홀 준비
+  - 교통안내 및 공항 픽업
+  - 맛집 공유 및 식사 예약
+  - 스노클링 활동
+  - 비용 정산
+  - 워케이션 바우처 신청 (3회차)
+key_discussions:
+  - thread_ts: '1755585447.672839'
+    date: '2025-08-19'
+    reply_count: 92
+    text_preview: '레크레이션/세미나/해커톤 내용 기획 논의'
+  - thread_ts: '1754905973.930379'
+    date: '2025-08-11'
+    reply_count: 36
+    text_preview: '한라산 등산팟 성판악 코스 참가자 모집'
+  - thread_ts: '1755863855.315859'
+    date: '2025-08-22'
+    reply_count: 30
+    text_preview: '오승희 숙소 방배정 혼동 이슈'
+  - thread_ts: '1755779042.889359'
+    date: '2025-08-21'
+    reply_count: 27
+    text_preview: '타운홀 준비 - 고석현 담당'
+  - thread_ts: '1755903563.051919'
+    date: '2025-08-22'
+    reply_count: 17
+    text_preview: '고석현 선발대 현재 위치 확인 및 합류'
+  - thread_ts: '1756698143.371889'
+    date: '2025-09-01'
+    reply_count: 20
+    text_preview: '조하담 안경집 분실 에피소드'
+terminology:
+  - term: "성판악 코스"
+    definition: "한라산 등산 코스 중 하나. 플레이샵 등산팟이 이용한 코스."
+    aliases: []
+    context: "8/24 새벽 6시 출발로 계획"
+  - term: "선발대"
+    definition: "공식일정 전에 먼저 제주도에 도착하는 인원. 금토일 사전 도착."
+    aliases: []
+    context: "남성 7인 + 여성 1인(승희)이 선발대로 출발"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

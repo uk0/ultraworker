@@ -1,0 +1,100 @@
+channel:
+  id: C058VN1LUKE
+  name: standup
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 977
+  total_threads: 308
+  active_users: 22
+  avg_messages_per_day: 14.2
+summary: |
+  2024년 1분기 standup 채널은 팀원들의 일일 출퇴근 및 업무 현황 공유 채널로 활발히 운영되었다.
+  주요 활동으로는 김혜원의 Answer/Analyze 제품 QA 및 프롬프트 정비, 작심(Stargate) 서비스 세션기능 개발 및 배포,
+  KT 테스트 환경 구축, 하클(Hackle) A/B 테스트 도구 연동 작업이 진행되었다.
+  Noah(고석현)는 메티스(MetisX) xVector-Flasma 연동 개발, 랭콘(LangCon) 발표 준비, 투자(삼성/IMM) 관련 법무 처리,
+  신규 사무실 이전(전산실 전용선, 서버랙, 네트워크 공사) 등 경영 전반을 수행했다.
+  song은 Privit/xsum 데이터 공개 준비 및 KCI 논문 등재를 완료했다.
+  3월에는 서버 엔지니어 노진우(jinu)가 신규 입사했다.
+  전체적으로 제품 품질 개선(QA, 프롬프트, 청크 처리)과 인프라 이전이 핵심 테마였다.
+topics:
+  - Answer QA 및 프롬프트 정비
+  - 작심(Stargate) 세션기능 개발 및 라이브 배포
+  - Analyze 요약/카테고라이징 기능 개발
+  - 임베딩 모델 테스트 및 데이터 제작
+  - KT 테스트 환경 구축 및 가이드 작성
+  - 하클(Hackle) 연동 버그 수정
+  - 메티스(MetisX) xVector + Flasma FPGA 연동 개발
+  - 랭콘(LangCon) 발표 자료 준비
+  - 삼성/IMM 투자 관련 신주 발행 및 이사회
+  - 신규 사무실 이전 (전산실, 네트워크, 서버랙 공사)
+  - 워크스테이션 발주 및 인프라 세팅
+  - 신규 입사자 온보딩 (노진우, 서버 엔지니어)
+key_discussions:
+  - date: '2024-01-02'
+    summary: 연휴 기간 발생한 작심 이슈 처리 (문서 중복 업데이트, 세션기능 개발, 청크 인용 문제 해결)
+    participants:
+      - 김혜원
+  - date: '2024-01-12'
+    summary: Stargate 라이브 배포 및 bucket 라우팅 테스트 완료, 작심 매장 셋팅
+    participants:
+      - 김혜원
+  - date: '2024-02-22'
+    summary: 삼성/IMM 신주 발행 이사회, 초창패 지원 신청, 메티스 xVector 라이브러리 Flasma 머지 개발 예정
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-02-23'
+    summary: 신규 사무실 전산실 전용선 계약, 세콤 경비 계약, 메티스 FPGA 드라이버 빌드 및 테스트
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-03-04'
+    summary: 서버 엔지니어 노진우(jinu) 신규 입사
+    participants:
+      - jinu
+  - date: '2024-03-21'
+    summary: LG U+ 투자팀 방문, flasma-metisx xVector 연동 비공개 repo 업로드 및 API 테스트
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-03-26'
+    summary: 투자 등기 완료, 네트워크/WiFi AP 공사 완료, 워크스테이션 5대 발주, 삼성 발표 예정
+    participants:
+      - Noah ( 고석현 )
+  - date: '2024-03-29'
+    summary: 청년창업 지원사업 제출 준비, KCI 논문 등재 완료
+    participants:
+      - song
+terminology:
+  - term: "작심"
+    definition: "Stargate 기반의 RAG 챗봇 서비스 (매장용)"
+    aliases: ["Stargate"]
+  - term: "Answer"
+    definition: "Storm 플랫폼의 질의응답(Q&A) 제품"
+    aliases: []
+  - term: "Analyze"
+    definition: "Storm 플랫폼의 문서 분석/요약/카테고라이징 제품"
+    aliases: []
+  - term: "Flasma"
+    definition: "사이오닉 AI의 벡터 검색 엔진 라이브러리"
+    aliases: []
+  - term: "xVector"
+    definition: "메티스(MetisX)의 FPGA 가속 벡터 연산 라이브러리"
+    aliases: []
+  - term: "하클"
+    definition: "Hackle - A/B 테스트 및 피처 플래그 관리 도구"
+    aliases: ["Hackle"]
+  - term: "패파"
+    definition: "사이오닉 AI 사무실 (이전 전 사무실)"
+    aliases: []
+  - term: "미타"
+    definition: "사이오닉 AI 사무실 (이전 후 또는 별도 공간)"
+    aliases: []
+  - term: "초창패"
+    definition: "초기창업패키지 - 정부 창업 지원 사업 (약 1억 규모)"
+    aliases: ["초기창업패키지"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

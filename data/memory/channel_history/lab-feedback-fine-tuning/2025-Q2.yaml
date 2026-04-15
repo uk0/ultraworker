@@ -1,0 +1,41 @@
+channel:
+  id: C08G1H180KV
+  name: lab-feedback-fine-tuning
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q2 기간 동안 lab-feedback-fine-tuning 채널에 파인튜닝 관련 피드백 데이터 가용성에 대한 희소식이 공유되었다. 스페이스 웨이비 서비스에서 "잘했어요" 피드백 200여 개와 "아쉬워요" 피드백 800여 개가 축적되었고, 작심 서비스에서도 유사한 규모의 피드백이 등록되어 도메인별 파인튜닝 테스트가 가능한 데이터셋이 마련되었음이 확인되었다.
+topics:
+  - name: "피드백 데이터 현황 공유"
+    mention_count: 1
+    description: "스페이스 웨이비 및 작심 서비스의 긍정/부정 피드백 데이터 축적 현황 및 파인튜닝 활용 가능성 논의"
+key_discussions:
+  - thread_ts: '1744288860.000000'
+    date: '2025-04-10'
+    reply_count: 4
+    text_preview: "스페이스 웨이비 잘했어요 200여 개, 아쉬워요 800여 개 - 도메인별 파인튜닝 테스트 가능"
+terminology:
+  - term: "파인튜닝"
+    definition: "사전학습된 LLM을 특정 도메인이나 태스크에 맞게 추가 학습시키는 기법"
+    aliases: ["fine-tuning"]
+    context: "서비스 피드백 데이터를 활용한 LLM 파인튜닝 연구"
+  - term: "스페이스 웨이비"
+    definition: "Sionic AI의 서비스 중 하나로, 사용자 피드백(잘했어요/아쉬워요) 데이터가 수집된 제품"
+    aliases: []
+    context: "파인튜닝용 피드백 데이터 수집 서비스"
+  - term: "작심"
+    definition: "Sionic AI의 또 다른 서비스로, 파인튜닝 학습 데이터로 활용 가능한 피드백이 축적된 제품"
+    aliases: []
+    context: "파인튜닝 데이터셋 마련을 위한 서비스"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

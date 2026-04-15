@@ -1,0 +1,60 @@
+channel:
+  id: C06R31BQSNB
+  name: etc-deploybot-gocd
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 62
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 15.5
+summary: |
+  2024년 2분기 etc-deploybot-gocd 채널에서는 GoCD 기반 배포봇의 신규 설계 및 구현 논의가 활발하게 이루어졌다.
+  Rust로 작성된 기존 배포봇을 대체하기 위한 Python/FastAPI 기반 신규 봇 개발이 시작되었으며, TICK 스택(Telegraf, InfluxDB, Chronograf, Kapacitor) 기반 모니터링 도입 방안도 함께 논의되었다.
+  4월에 신규 채널이 생성된 이후 5월에 추가 팀원이 합류하였으며, MLOps Now 컨퍼런스 발표 준비 등 팀 외부 활동도 공유되었다.
+topics:
+  - name: "배포봇 개발"
+    mention_count: 15
+    description: "GoCD 연동 Slack 배포봇 신규 구현 - slash command 대신 태그 기반으로 변경, 배포 이력/상태 확인 기능 포함"
+  - name: "TICK 스택 모니터링"
+    mention_count: 8
+    description: "Telegraf+InfluxDB+Chronograf+Kapacitor 기반 모니터링 시스템 도입 논의 및 ELK 스택과 비교"
+  - name: "MLOps 컨퍼런스 발표"
+    mention_count: 4
+    description: "MLOps Now 컨퍼런스 발표 준비 - GPU/NPU 환경에서의 벡터 검색 배포 전략"
+  - name: "온프레미스 모니터링"
+    mention_count: 3
+    description: "Qdrant 온프레미스 환경에 InfluxDB+Grafana 기반 노드 메트릭 모니터링 구성"
+key_discussions:
+  - thread_ts: '1712777160.000000'
+    date: '2024-04-10'
+    reply_count: 0
+    text_preview: "배포봇 개선 계획 메모 - slash command 대신 태그 방식으로 변경, GoCD URL 업데이트 등"
+  - thread_ts: '1712798340.000000'
+    date: '2024-04-11'
+    reply_count: 7
+    text_preview: "TICK 스택 vs ELK 스택 모니터링 비교 논의 및 Qdrant 온프레미스 적용 가능성"
+  - thread_ts: '1714697880.000000'
+    date: '2024-05-03'
+    reply_count: 0
+    text_preview: "MLOps Now 컨퍼런스 발표 준비 - 멀티 임베딩, 앙상블 검색, GPU/NPU 배포 전략"
+terminology:
+  - term: "TICK Stack"
+    definition: "Telegraf, InfluxDB, Chronograf, Kapacitor로 구성된 시계열 데이터 모니터링 스택"
+    aliases: ["tick stack", "틱 스택"]
+    context: "ELK 스택의 대안으로 서비스 메트릭 모니터링에 활용 논의"
+  - term: "GoCD"
+    definition: "오픈소스 CI/CD 파이프라인 도구, 배포 자동화에 사용"
+    aliases: []
+    context: "배포봇과 연동되는 핵심 CI/CD 도구"
+  - term: "DeployBot"
+    definition: "GoCD pipeline schedule 호출 후 배포 상태를 Slack으로 알려주는 봇, github.com/sionic-ai/deploy-bot"
+    aliases: ["배포봇", "deploy-bot"]
+    context: "Rust에서 Python/FastAPI 기반으로 재개발 중"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

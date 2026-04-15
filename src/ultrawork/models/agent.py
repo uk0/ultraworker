@@ -80,6 +80,9 @@ class AgentSession(BaseModel):
     exploration_id: str | None = None
     task_id: str | None = None
     spec_file: str | None = None
+    forked_from: str | None = None  # session_id of fork source
+    external_session_id: str | None = None  # Claude-internal session ID (forked runs)
+    runner_pid: int | None = None  # Local subprocess PID for runtime health checks
 
     # Workflow tracking
     workflow_type: Literal["simple", "full"] | None = None

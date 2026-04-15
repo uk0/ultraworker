@@ -1,0 +1,31 @@
+channel:
+  id: C070AQCSZ0C
+  name: alarm-dev-error-pylon
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 283
+  total_threads: 26
+  active_users: 7
+  avg_messages_per_day: 7.9
+summary: |
+  Pylon 개발 환경 에러 알림 채널. 283개 메시지로 에러가 감소한 분기.
+  CREATE_DOCUMENT_PROCESS_ERROR가 주요 에러로, unstructured-io 파싱 실패(nohara sinnoske.pdf 반복 시도)와
+  Qdrant 컬렉션 NOT_FOUND gRPC 에러가 발생했다. 12월 23일에 gRPC _InactiveRpcError가 집중 발생하여
+  NewRelic에서 자동 감지되었다. 전반적으로 이전 분기 대비 안정화된 모습을 보였다.
+topics:
+  - CREATE_DOCUMENT_PROCESS_ERROR (unstructured-io 파싱 실패)
+  - Qdrant gRPC NOT_FOUND 에러
+  - NewRelic 자동 감지 (gRPC _InactiveRpcError)
+  - 에러 감소 추세
+key_discussions: []
+terminology:
+  - term: "_InactiveRpcError"
+    definition: "gRPC 클라이언트에서 비활성 RPC 호출 시 발생하는 에러, 서비스 연결 실패 의미"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

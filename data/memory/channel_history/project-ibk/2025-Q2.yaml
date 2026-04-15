@@ -1,0 +1,95 @@
+channel:
+  id: C07LHF65Z6E
+  name: project-ibk
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 510
+  total_threads: 421
+  active_users: 20
+  avg_messages_per_day: 7.8
+summary: |
+  IBK 본사업 핵심 개발 및 운영 안정화 기간. 가장 활발한 분기(510개 메시지, 20명 참여).
+  운영계/개발계 동시 관리하며 대규모 문서 학습(1차 3만개, 2차 5만개) 진행. 서플라이 인덱서
+  코어덤프, vLLM 부하 테스트, SSE 통신 이슈 등 인프라 안정성 문제 집중 대응. Qwen 72B/32B
+  VLM 기반 문서 파싱, xionic-vl 모델 반입, pepper-vl 기동 등 VLM 활용 확대. 하이라이팅
+  기능 개선(형광펜 스타일, 띄어쓰기 무시), 출처 문서 검토 기능, PDF 뷰어 CJK 폰트 이슈 대응.
+  부하테스트(RPS 2에서 성능 저하 확인, 35-40초부터 SSE 지연), 워크플로우 구간별 평균 수행속도
+  측정. 서플라이 인덱서 파켓파일 스토리지 관리(300GB 초과 문제), aux bucket 참조 이슈,
+  문서 삭제/재학습 시 qdrant 벡터 잔존 문제 등 운영 이슈 다수 발생. 코드파일럿 아이콘 디자인,
+  피드백 삭제 버그 수정, FAQ 100개 골든청크 평가 등 품질 관리 작업 수행. 페이스메이커(DB 이중화)
+  테스트 일정 조율, 그라파나 대시보드 GPU 사용량 지표 추가 요청 등 인프라 운영 고도화.
+topics:
+  - 대규모 문서 학습 (3만~5만개)
+  - 서플라이 인덱서 안정화
+  - vLLM 부하 테스트 및 성능 최적화
+  - SSE 통신 이슈 대응
+  - Qwen 72B/32B VLM 파싱
+  - 하이라이팅 및 출처 문서 기능 개선
+  - PDF 뷰어 CJK 폰트 이슈
+  - 부하테스트 (RPS, 동시접속)
+  - 서플라이 파켓파일 스토리지 관리
+  - 페이스메이커 DB 이중화
+  - 코드파일럿 운영
+  - FAQ 골든청크 평가
+key_discussions:
+  - thread_ts: '1750915935.086699'
+    date: '2025-06-26'
+    title: '재학습 시 청크 검색 변화 분석'
+    summary: '129개 리플라이. 72B vs 32B 재학습 후 청크 검색 품질 변화 심층 분석'
+  - thread_ts: '1749723072.479349'
+    date: '2025-06-12'
+    title: '라이브 질의 답변 미출력 이슈'
+    summary: '87개 리플라이. 운영계에서 질의 시 답변이 나오지 않는 심각한 이슈 대응'
+  - thread_ts: '1750739308.786949'
+    date: '2025-06-24'
+    title: '골든청크 검색 실패 분석'
+    summary: '72개 리플라이. 파일런/서플라이 청크 포함 여부 확인 및 개선 방안'
+  - thread_ts: '1750845908.630869'
+    date: '2025-06-25'
+    title: 'IBK 인프라 SSE 통신 이슈'
+    summary: '60개 리플라이. L4 스위치, 리버스프록시 환경에서 SSE 스트리밍 문제 해결'
+  - thread_ts: '1749645107.974379'
+    date: '2025-06-11'
+    title: 'GPU 할당 비율 및 급속 학습 논의'
+    summary: '58개 리플라이. H100 GPU MIG 설정, 문서 학습과 추론 간 리소스 배분'
+  - thread_ts: '1750864806.222339'
+    date: '2025-06-25'
+    title: '서플라이 운영계 코어덤프 오류'
+    summary: '47개 리플라이. 첫 질의 시 서플라이 종료 오류, 캐리어 로그 분석'
+  - thread_ts: '1750927065.801289'
+    date: '2025-06-26'
+    title: '캐리어 DNS 설정 미적용 이슈'
+    summary: '47개 리플라이. API 호출 시 도메인 검색 실패 문제 해결'
+terminology:
+  - term: 'vLLM'
+    definition: '고성능 LLM 추론 서버. IBK에서 Qwen 72B/32B 모델 서빙에 사용'
+    aliases: ['vllm']
+  - term: '페이스메이커'
+    definition: 'Pacemaker. Linux HA 클러스터링 도구. PostgreSQL DB 이중화(A-S)에 사용'
+    aliases: ['Pacemaker']
+  - term: '파켓파일'
+    definition: 'Parquet 파일. 서플라이 인덱서가 생성하는 캐시 데이터. 용량 관리 필요'
+    aliases: ['parquet']
+  - term: 'aux bucket'
+    definition: 'Auxiliary Bucket. 보조 지식 버킷. 기본 에이전트 외 추가 문서 참조용'
+    aliases: ['보조 버킷']
+  - term: '아비케'
+    definition: 'IBK 기업은행 데이터센터. 을지로 본점 지하2층 등에 서버 위치'
+    aliases: ['IBK DC']
+  - term: 'xionic-vl'
+    definition: '사이오닉 AI의 비전-언어 모델. 문서 이미지 인식/파싱에 활용'
+    aliases: []
+  - term: 'pepper-vl'
+    definition: 'VLM 추론 서버. vLLM 기반. 기동 시간 이슈(2분->4분) 있음'
+    aliases: []
+  - term: 'RPS'
+    definition: 'Requests Per Second. 부하테스트 지표. IBK에서 RPS 2에서 성능 저하 확인'
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

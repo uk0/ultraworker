@@ -1,0 +1,62 @@
+channel:
+  id: C08DKGNJ8P5
+  name: research-daily
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 104
+  total_threads: 71
+  active_users: 14
+  avg_messages_per_day: 3.9
+summary: |
+  2025년 1분기에 research-daily 채널이 처음 개설되어 14명이 매일 업무 기록을 공유하는 채널로 운영되기 시작하였다. 주요 활동은 멀티모달 GRPO 학습 파이프라인 구축, 리랭커 학습 데이터셋 파이프라인 개발, SAE 기반 임베딩 연구, 정부과제(AI 반도체 응용실증, 규제특례 신산업창출) 지원서 작성이었다. 스레드 수(71개)가 메시지 수(104개)에 비해 매우 높아 활발한 토론이 이루어진 분기였다.
+topics:
+  - name: "멀티모달 GRPO 학습"
+    mention_count: 20
+    description: "Qwen2-VL 기반 GRPO 파이프라인 구축, KL divergence NaN 이슈 디버깅, 7B→32B 모델 전환"
+  - name: "리랭커 학습 파이프라인"
+    mention_count: 12
+    description: "mxbai-rerank-large-v2 학습 파이프라인, IBK PoC 데이터셋 기반 RAFT 파이프라인 초안 작성"
+  - name: "SAE 임베딩 연구"
+    mention_count: 8
+    description: "Sparse Autoencoder(SAE) 기반 embedding steering 연구, Gated SAE·batch top-k 방법 실험, EMNLP 제출 준비"
+  - name: "정부과제 지원"
+    mention_count: 18
+    description: "AI 반도체 응용실증(w/퓨리오사), 규제특례 신산업창출(w/킥더허들), 창업도약패키지 지원서 작성"
+  - name: "일본 출장 및 사업 개발"
+    mention_count: 10
+    description: "인베스트서울 도쿄 IR 참가, CIC Tokyo 입주 계약, 01booster 멘토링, 법인 설립 행정"
+  - name: "Late Chunking 특허화"
+    mention_count: 5
+    description: "예원님의 Late Chunking 실험 결과 특허화 추진, 변리사 미팅 일정 및 명세서 정리"
+key_discussions:
+  - thread_ts: '1740614400.000000'
+    date: '2025-03-10'
+    reply_count: 1
+    text_preview: "창업도약패키지 지원 검토, AI 반도체·규제특례 계획서 작성 현황, Late Chunking 특허화 추진"
+  - thread_ts: '1742298000.000000'
+    date: '2025-03-18'
+    reply_count: 2
+    text_preview: "AI 반도체 응용실증 최종 제출, 규제특례 신산업창출 최종 제출(킥더허들 경유)"
+  - thread_ts: '1742861100.000000'
+    date: '2025-03-25'
+    reply_count: 12
+    text_preview: "pylon에 overmind 추가 로컬 실험, 변리사 미팅 자료 전달"
+terminology:
+  - term: "SAE"
+    definition: "Sparse Autoencoder — 임베딩 모델의 특징(feature)을 희소 표현으로 분해하는 해석 가능성 연구 방법론"
+  - term: "Late Chunking"
+    definition: "문서를 청킹 후 각 청크에 문서 전체 컨텍스트를 반영하는 임베딩 기법 — 예원님이 실험 및 특허화 추진"
+  - term: "킥더허들"
+    definition: "규제특례 신산업창출 과제 공동 지원 파트너사"
+  - term: "퓨리오사"
+    definition: "AI 반도체 응용실증 사업 공동 지원 파트너사 (AI 반도체 업체)"
+  - term: "EMNLP"
+    definition: "자연어처리 분야 주요 학회 — SAE 임베딩 관련 논문 제출 목표"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

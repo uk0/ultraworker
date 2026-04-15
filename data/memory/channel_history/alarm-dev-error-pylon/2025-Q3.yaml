@@ -1,0 +1,34 @@
+channel:
+  id: C070AQCSZ0C
+  name: alarm-dev-error-pylon
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 6766
+  total_threads: 3
+  active_users: 4
+  avg_messages_per_day: 123.0
+summary: |
+  Pylon 개발 환경 에러 알림 채널. 6766개 메시지(일평균 123건)로 높은 에러 빈도 지속.
+  dev-stargate 서버 연결 실패(HTTPSConnectionPool 에러)가 9월에 집중 발생하여 개발 환경 인프라 문제가 확인되었다.
+  unstructured-io 파싱 실패와 GET_ANSWER_CONTEXT_ERROR(검색 후보 조회 실패)가 주요 에러였다.
+  DocumentAlreadyExistsError도 NewRelic에서 감지되었으며, 스레드 수는 3개로 사람의 개입이 거의 없었다.
+topics:
+  - dev-stargate 서버 연결 실패 (HTTPSConnectionPool)
+  - unstructured-io 파싱 실패 지속
+  - GET_ANSWER_CONTEXT_ERROR (검색 후보 조회 실패)
+  - DocumentAlreadyExistsError
+  - 높은 에러 빈도 지속 (일평균 123건)
+key_discussions: []
+terminology:
+  - term: "HTTPSConnectionPool"
+    definition: "HTTPS 연결 풀 에러, Max retries exceeded 시 서버 연결 불가"
+  - term: "dev-stargate"
+    definition: "개발 환경 Stargate 서버, Pylon과 연동되는 API 게이트웨이"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

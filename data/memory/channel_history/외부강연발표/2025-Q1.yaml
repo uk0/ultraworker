@@ -1,0 +1,61 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 51
+  total_threads: 32
+  active_users: 8
+  avg_messages_per_day: 1.6
+summary: |
+  2025년 1분기에는 인스트럭트한국 1월 밋업(사이오닉AI 다과 후원), 랭콘 2025 발표, 토비살롱 출연, AWSKRUG 밋업, 데브시스터즈 엔지니어링 데이, AI 에이전트 세미나(스파르타빌더스), OCI 웨비나 등 다양한 외부 발표 활동이 진행되었다. AX & 하이퍼오토메이션 코리아 2025 Spring 발표, 경희대 GDGOC 행사, MCP 관련 발표 기회도 증가하였다. 일본 커뮤니티 발표 진출도 계획되었다.
+topics:
+  - name: "인스트럭트한국 밋업"
+    mention_count: 10
+    description: "1/25 인스트럭트한국 밋업 - 사이오닉AI 다과 후원 및 세민님 발표"
+  - name: "OCI/Oracle 웨비나"
+    mention_count: 6
+    description: "OCI 고객 사례 웨비나 패널 초청, AX 관련 발표 준비"
+  - name: "AI 에이전트 세미나"
+    mention_count: 5
+    description: "스파르타빌더스 AI 에이전트 세미나, MCP 관련 발표 증가"
+  - name: "랭콘 2025"
+    mention_count: 4
+    description: "랭콘 2025 LLM과 어떻게 살아갈 것인가 발표 참여"
+  - name: "일본 발표 활동"
+    mention_count: 3
+    description: "일본 커뮤니티 발표 진출 계획 및 connpass 행사 정보 공유"
+key_discussions:
+  - thread_ts: '1737554460.000000'
+    date: '2025-01-22'
+    reply_count: 9
+    text_preview: "인스트럭트한국 1/25 밋업 - 사이오닉AI 다과 후원, 장표 준비 완료"
+  - thread_ts: '1740060200.000000'
+    date: '2025-02-20'
+    reply_count: 36
+    text_preview: "데브시스터즈 엔지니어링 데이 발표 준비 및 진행"
+  - thread_ts: '1742208000.000000'
+    date: '2025-03-13'
+    reply_count: 34
+    text_preview: "OCI 고객 사례 웨비나 패널 초청 건 논의"
+  - thread_ts: '1743062460.000000'
+    date: '2025-03-26'
+    reply_count: 4
+    text_preview: "AX & 하이퍼오토메이션 코리아 2025 Spring 발표 - 에이전트 중심으로 준비"
+terminology:
+  - term: "MCP"
+    definition: "Model Context Protocol - AI 에이전트가 외부 도구와 통신하는 프로토콜, 2025년 핫 트렌드"
+    aliases: ["Model Context Protocol"]
+    context: "2025년 1분기 가장 주목받는 AI 기술 트렌드로 발표 주제로 급부상"
+  - term: "토비살롱"
+    definition: "토비 이일민님이 운영하는 개발자 살롱 행사"
+    aliases: []
+    context: "진형님 출연 예정"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

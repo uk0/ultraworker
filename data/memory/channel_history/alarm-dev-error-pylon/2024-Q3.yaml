@@ -1,0 +1,36 @@
+channel:
+  id: C070AQCSZ0C
+  name: alarm-dev-error-pylon
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 2222
+  total_threads: 21
+  active_users: 9
+  avg_messages_per_day: 31.7
+summary: |
+  Pylon 개발 환경 에러 알림 채널. 2222개 메시지로 에러 증가한 분기.
+  CREATE_DOCUMENT_PROCESS_ERROR가 주요 에러로, 다양한 원인이 확인되었다:
+  page_number 관련 에러, S3 서버 연결/통신 실패, unstructured-io 파싱 에러(422 Unprocessable Entity),
+  요청 파라미터 오타(fiels→files) 등 개발 단계 버그가 포함되었다.
+  ENRICH_DOCUMENT_PROCESS_ERROR도 발생하여 NoneType과 int 비교 에러 등 타입 관련 버그가 확인되었다.
+  에러 코드 체계가 구조화(CREATE_DOCUMENT_PROCESS_ERROR, ENRICH_DOCUMENT_PROCESS_ERROR)되어 사용되었다.
+topics:
+  - CREATE_DOCUMENT_PROCESS_ERROR 다수
+  - S3 서버 연결 실패
+  - unstructured-io 파싱 에러 (422)
+  - ENRICH_DOCUMENT_PROCESS_ERROR (타입 에러)
+  - 개발 단계 파라미터 오타 버그
+key_discussions: []
+terminology:
+  - term: "ENRICH_DOCUMENT_PROCESS_ERROR"
+    definition: "문서 보강(임베딩/메타데이터 추가) 프로세스 에러"
+  - term: "422 Unprocessable Entity"
+    definition: "PDF 파서 API가 요청을 처리할 수 없을 때 반환하는 HTTP 에러"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

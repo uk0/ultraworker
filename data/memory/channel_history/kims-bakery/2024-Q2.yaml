@@ -1,0 +1,30 @@
+channel:
+  id: C06DZP8HASV
+  name: kims-bakery
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 2.0
+summary: |
+  2024년 2분기에 고석현(Noah)님, Sigrid Jin님, 송명하님이 채널을 발견하고 합류하였다.
+  Noah님이 모든 채널을 탐색하다가 발견하였으며, kozistr833님은 "나작채(나만의 작은 채널)였는데 들킨 느낌"이라고
+  반응하였다. 실질적인 모델 학습 관련 논의보다는 채널 발견과 합류가 주요 활동이었다.
+topics:
+  - 채널 발견 및 신규 멤버 합류
+key_discussions:
+  - thread_ts: '1713776749.213699'
+    date: '2024-04-22'
+    topic: 나작채(나만의 작은 채널) 발견 - Noah님이 모든 채널 탐색 중 발견
+terminology:
+  - term: 나작채
+    definition: 나만의 작은 채널, 개인적으로 조용히 운영하던 채널이 발견되었을 때 사용하는 표현
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

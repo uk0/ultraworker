@@ -1,0 +1,79 @@
+channel:
+  id: C08NUL5CGFN
+  name: sig-album
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 167
+  total_threads: 67
+  active_users: 16
+  avg_messages_per_day: 4.9
+summary: |
+  연말 행사로 가장 활발한 분기(167개 메시지). 이강욱이 필름 카메라로 촬영한 사진을 대량 공유하며
+  채널의 핵심 기여자로 활동. 타운홀(12/1-2) 사진이 23개 답글의 대형 스레드를 형성하고,
+  해커톤(12/24) 필름 사진 시리즈도 다수 공유(발표, 수상, 뒷정리, 고심하는 저지들 등).
+  강성우(Claude kang)의 단체사진 최종본이 12개 답글을 받으며 인기.
+  김덕현이 타운홀 사진 스레드를 별도로 운영. 권혜선이 이강욱 필름 색감을 칭찬하며
+  필름 종류를 물어보는 9개 답글 대화. Noah의 '강욱님 사진 센스의 반만 스캇이 있었으면'이라는
+  찬사. Sigrid Jin 군대 사지방 앨범 공유, OpenAI 오피셜 앨범 속 팀원 사진 발견 등
+  다양한 에피소드. 정세민 이집트 사진, 이재준 건물 퀴즈, 김혜원 깽발자국 사진 등 풍성한 콘텐츠.
+topics:
+  - 타운홀 행사 사진 (12/1-2)
+  - 해커톤 필름 사진 (12/24)
+  - 필름 카메라 촬영 (이강욱)
+  - 크리스마스/연말 사진
+  - OpenAI 앨범 속 팀원 발견
+  - 사무실/미타 일상 사진
+  - 단체사진 (강성우 최종본)
+key_discussions:
+  - thread_ts: '1764661511.508639'
+    date: '2025-12-02'
+    reply_count: 23
+    text_preview: '이강욱 - 강욱 타운홀 사진 타래'
+  - thread_ts: '1764389835.116589'
+    date: '2025-11-29'
+    reply_count: 13
+    text_preview: '이강욱 - 깽혜 (고양이 사진)'
+  - thread_ts: '1764845853.016589'
+    date: '2025-12-04'
+    reply_count: 12
+    text_preview: '강성우 - 최최종 (단체사진)'
+  - thread_ts: '1766549435.222809'
+    date: '2025-12-24'
+    reply_count: 9
+    text_preview: '권혜선 - 이강욱 필름 종류 질문'
+  - thread_ts: '1764228470.762089'
+    date: '2025-11-27'
+    reply_count: 7
+    text_preview: 'Noah - 강욱님 사진 센스의 반만 스캇이 있었으면'
+  - thread_ts: '1764719104.323619'
+    date: '2025-12-14'
+    reply_count: 6
+    text_preview: 'Sigrid Jin - 사진 공유'
+  - thread_ts: '1765264077.153199'
+    date: '2025-12-09'
+    reply_count: 6
+    text_preview: '이재준 - 사진 공유'
+terminology:
+  - term: "깽"
+    definition: "사무실 고양이의 이름"
+    context: "이강욱, 김혜원 등이 고양이 사진을 공유할 때 사용"
+  - term: "미타"
+    definition: "사이오닉AI의 사무실/오피스 이름"
+    context: "미타 자리가 부족해 박스에서 일하는 재준, 미타식사 등"
+  - term: "스캇"
+    definition: "사이오닉AI의 또다른 사무실 공간 또는 관련 인물"
+    context: "Noah가 스캇에도 이강욱의 사진 센스가 있으면 좋겠다고 언급"
+  - term: "타운홀"
+    definition: "사이오닉AI의 전사 모임 행사"
+    context: "12월 초 타운홀 행사에서 많은 사진이 촬영됨"
+  - term: "덕솊"
+    definition: "덕현+소프트의 합성어, 김덕현의 애칭"
+    context: "이강욱, 이재준이 김덕현을 부르며 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

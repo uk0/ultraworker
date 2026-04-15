@@ -1,0 +1,80 @@
+channel:
+  id: C0647GT3MK7
+  name: eng-probe
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 113
+  total_threads: 76
+  active_users: 12
+  avg_messages_per_day: 3.4
+summary: |
+  2024-Q1은 Probe(AI 이미지 생성 서비스) 프로젝트의 핵심 개발 및 운영 분기. 뤼튼(Wrtn)과의 AI 프로필 서비스 협업이 주요 활동이었음. (1) V2 모델 개발: 정세민이 얼굴 모델 V2를 리서치하고 inswapper_128 + LoRA 학습 기반 파이프라인 구축. Noah가 모델 파일 용량 92% 감소(2000MB→150MB) 달성. (2) ComfyUI 기반 워크플로우: Sigrid Jin과 정세민이 ComfyUI를 활용한 인퍼런스 파이프라인을 구축하고, 워크플로우별 리소스 모니터링과 JSON 규격화 작업 진행. (3) 인프라 최적화: RunPod GPU 서버 비용 관리(시간당 $11.44), Cloud Run 인스턴스 스케일링, PostgreSQL 커넥션 풀 최적화(100→10) 등. (4) 뤼튼 협업: AI 프로필 시즌2 정식 출시 준비, 펫 모델 API 개발, Stability AI Japan 협업 검토. (5) 운영: 트레이닝 큐 적체(40개), Cloud Storage 비용 100% 상승, 라이브 이슈 대응 등 다양한 운영 이슈 처리.
+topics:
+  - AI 프로필 V2 모델 개발 (얼굴/펫)
+  - ComfyUI 인퍼런스 파이프라인
+  - 뤼튼(Wrtn) AI 프로필 시즌2 출시
+  - RunPod GPU 인프라 관리
+  - 펫 스튜디오 (Pet Studio) 개발
+  - PostgreSQL 커넥션 풀 최적화
+  - Cloud Run 인스턴스 스케일링
+  - 인퍼런스 Pod 다이어트
+  - Cloud Storage 비용 최적화
+  - LoRA/inswapper 기반 얼굴 생성
+  - Probe Tech Spec 작성
+  - Jira 스프린트 관리
+key_discussions:
+  - thread_ts: '1705311844.955549'
+    date: '2024-01-15'
+    title: 'V2 인물/펫 prod 적용 스케줄 및 고려사항'
+    summary: '뤼튼 서비스 정식 출시를 위한 V2 모델 적용 일정과 기술적 고려사항 논의. 47개 답글'
+  - thread_ts: '1705113371.200449'
+    date: '2024-01-13'
+    title: '시드 이미지 리사이징 및 인퍼런스 설정'
+    summary: 'Sigrid Jin과 송명하가 512x512 시드 이미지 처리 및 인퍼런스 리사이징 방법 논의. 49개 답글'
+  - thread_ts: '1705134499.245459'
+    date: '2024-01-13'
+    title: 'Pet 모델 학습 및 인퍼런스'
+    summary: '송명하가 펫 모델 학습/인퍼런스 프로세스 공유. 38개 답글'
+  - thread_ts: '1706753474.989409'
+    date: '2024-02-01'
+    title: '정식 버전 배포 전 체크리스트'
+    summary: 'Sigrid Jin과 송명하가 정식 버전 배포 전 필수 체크리스트 작성. 33개 답글'
+  - thread_ts: '1707936004.208499'
+    date: '2024-02-14'
+    title: '해시드 코파운더 출신 진우님 관련 논의'
+    summary: '외부 인사와의 네트워킹 및 사업 기회 논의. 32개 답글'
+  - thread_ts: '1704779262.497099'
+    date: '2024-01-09'
+    title: '얼굴 모델 V2 리서치 공유'
+    summary: '정세민이 LoRA 학습 세팅(얼굴 mask:기본=3:1) + brav5 베이스 모델 + inswapper_128 기반 V2 파이프라인 공유. 18개 답글'
+  - thread_ts: '1706511470.298229'
+    date: '2024-01-29'
+    title: '뤼튼 AI 프로필 시즌2 서비스 변경사항'
+    summary: '뤼튼 측 AI 프로필 시즌2 변경사항(주기 변경, 생성 수 조정, API 변경) 요청 공유. 19개 답글'
+terminology:
+  - term: 'Probe'
+    definition: 'Sionic AI의 AI 이미지 생성 서비스 프로젝트. 뤼튼 AI 프로필 등에 활용'
+  - term: 'ComfyUI'
+    definition: '노드 기반 Stable Diffusion GUI. Probe 인퍼런스 워크플로우에 활용'
+  - term: 'inswapper_128'
+    definition: '얼굴 교체(face swap) 모델. V2 인퍼런스 파이프라인에서 사용'
+  - term: 'gen-img'
+    definition: 'Probe의 이미지 생성 백엔드 레포지토리 (sionic-ai/gen-img)'
+  - term: 'RunPod'
+    definition: 'GPU 클라우드 서비스. Probe 학습/인퍼런스에 사용'
+  - term: 'brav5'
+    definition: 'V2 얼굴 모델의 베이스 Stable Diffusion 모델'
+  - term: 'kohya_ss'
+    definition: 'LoRA 학습용 프레임워크. Sionic AI에서 커스텀 포크 사용'
+  - term: 'arcface'
+    definition: '얼굴 인식/임베딩 모델. 토픽 생성 및 대표 이미지 선정에 활용'
+  - term: 'pet studio'
+    definition: '뤼튼 AI 프로필의 반려동물 버전 서비스'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -17,6 +17,7 @@ class InteractionType(str, Enum):
     USER_INPUT = "user_input"  # User's Slack mention
     BOT_RESPONSE = "bot_response"  # Bot's Slack response
     PROCESSING_STARTED = "processing_started"  # Claude processing started
+    PROCESSING_HEARTBEAT = "processing_heartbeat"  # Claude processing still running
     PROCESSING_COMPLETED = "processing_completed"  # Claude processing completed
     PROCESSING_FAILED = "processing_failed"  # Claude processing failed
     SESSION_RESUMED = "session_resumed"  # Session was resumed (not new)
@@ -214,6 +215,35 @@ class InteractionLogger:
 
         return self.log(
             interaction_type=interaction_type,
+            session_id=session_id,
+            channel_id=channel_id,
+            thread_ts=thread_ts,
+            content=content,
+            metadata=meta,
+        )
+
+    def log_processing_heartbeat(
+        self,
+        session_id: str,
+        channel_id: str,
+        thread_ts: str,
+        elapsed_seconds: int,
+        pid: int | None = None,
+        metadata: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        """Log processing heartbeat while a long-running command is active."""
+        content = (
+            f"Still running (elapsed={elapsed_seconds}s, pid={pid})"
+            if pid
+            else f"Still running (elapsed={elapsed_seconds}s)"
+        )
+        meta = metadata or {}
+        meta["elapsed_seconds"] = elapsed_seconds
+        if pid:
+            meta["pid"] = pid
+
+        return self.log(
+            interaction_type=InteractionType.PROCESSING_HEARTBEAT,
             session_id=session_id,
             channel_id=channel_id,
             thread_ts=thread_ts,

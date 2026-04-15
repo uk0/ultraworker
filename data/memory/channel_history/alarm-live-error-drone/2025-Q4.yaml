@@ -1,0 +1,31 @@
+channel:
+  id: C09NTRXA38E
+  name: alarm-live-error-drone
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 7
+  total_threads: 0
+  active_users: 6
+  avg_messages_per_day: 1.8
+summary: |
+  2025-Q4 초에 alarm-live-error-drone 채널이 신설되어 드론 서비스 라이브 환경의 에러 알림을 수신하기 위한 notification-bot 연동이 설정되었다.
+  10월 말 채널 개설 후 팀원 5명이 참여하였으며, 분기 내 실제 에러 알림보다는 채널 초기 설정과 멤버 구성에 집중된 시기였다.
+  드론 라이브 에러 전용 모니터링 채널로서 향후 운영을 위한 준비 단계로 보인다.
+topics:
+  - name: "채널 초기화 및 설정"
+    mention_count: 6
+    description: "채널 개설, notification-bot 연동, 팀원 초대 및 참여"
+key_discussions: []
+terminology:
+  - term: "notification-bot"
+    definition: "드론 라이브 환경의 에러 이벤트를 Slack 채널에 자동으로 알리는 봇"
+    aliases: ["알림봇"]
+    context: "alarm-live-error-drone 채널에 연동되어 라이브 에러를 실시간 알림"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

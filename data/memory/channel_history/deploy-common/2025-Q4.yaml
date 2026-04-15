@@ -1,0 +1,81 @@
+channel:
+  id: C07A18SADUP
+  name: deploy-common
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2350
+  total_threads: 1254
+  active_users: 24
+  avg_messages_per_day: 26.4
+summary: |
+  2025년 4분기 deploy-common 채널은 /sionic-deploy 봇을 통한 자동화 배포가 폭발적으로 증가하여 하루 평균 26.4건의 배포 이벤트가 기록되었다. carrier, carrier-storm-parse, asmr-v2, bgeserver, langgraph, drone, overmind 등 핵심 서비스들이 onprem, oci, eks 클러스터에 지속적으로 배포되었으며, IBK 고객사 전용 주간 빌드(ibk.25.XXw)가 정기적으로 릴리즈되었다. OCI 인프라로의 전환 작업이 가속화되면서 다중 클러스터 배포 관리가 주요 운영 과제로 부상하였고, 24명의 팀원이 실시간으로 배포 상태를 모니터링하였다.
+topics:
+  - name: "서비스 배포 자동화"
+    mention_count: 350
+    description: "/sionic-deploy 봇을 통한 carrier, asmr-v2, bgeserver 등 핵심 서비스 자동 배포"
+  - name: "OCI 클러스터 배포"
+    mention_count: 180
+    description: "Oracle Cloud Infrastructure(OCI) 환경으로의 서비스 마이그레이션 및 신규 배포"
+  - name: "IBK 주간 빌드"
+    mention_count: 80
+    description: "IBK(기업은행) 고객사 전용 주간 릴리즈 빌드(ibk.25.XXw) 정기 배포"
+  - name: "langgraph 서비스"
+    mention_count: 60
+    description: "LangGraph 기반 워크플로우 서비스 배포 및 운영 업데이트"
+  - name: "overmind 신규 배포"
+    mention_count: 45
+    description: "Q4 신규 도입된 overmind 서비스의 배포 및 안정화"
+key_discussions:
+  - thread_ts: '1727827200.000000'
+    date: '2025-10-02'
+    reply_count: 6
+    text_preview: "carrier-storm-parse onprem 배포 후 빌드 파이프라인 실패 이슈 논의 및 재배포"
+  - thread_ts: '1730505600.000000'
+    date: '2025-11-02'
+    reply_count: 9
+    text_preview: "asmr-v2 OCI 클러스터 신규 배포 및 환경 설정 마이그레이션"
+  - thread_ts: '1733184000.000000'
+    date: '2025-12-03'
+    reply_count: 7
+    text_preview: "overmind 서비스 초기 배포 및 모니터링 알람 설정"
+  - thread_ts: '1735603200.000000'
+    date: '2025-12-30'
+    reply_count: 3
+    text_preview: "ibk.25.52w 연말 최종 빌드 배포 완료 확인"
+terminology:
+  - term: "/sionic-deploy"
+    definition: "Sionic AI 내부 배포 자동화 봇 명령어. 형식: /sionic-deploy {서비스} {환경} {커밋} {클러스터} [--skip-build]"
+    aliases: ["deploy bot", "배포봇"]
+    context: "deploy-common 채널의 핵심 CI/CD 자동화 도구"
+  - term: "onprem"
+    definition: "사내 온프레미스 쿠버네티스 클러스터 환경"
+    aliases: ["on-premise", "온프렘"]
+    context: "주요 서비스 운영 클러스터"
+  - term: "oci"
+    definition: "Oracle Cloud Infrastructure 기반 클라우드 쿠버네티스 클러스터"
+    aliases: ["Oracle Cloud", "오라클 클라우드"]
+    context: "2025년 AWS/EKS 대체 인프라로 전환 중"
+  - term: "carrier-storm-parse"
+    definition: "Carrier 워크플로우 엔진의 문서 파싱 처리 서비스 컴포넌트"
+    aliases: ["storm-parse", "스톰파스"]
+    context: "가장 빈번하게 배포되는 서비스 중 하나"
+  - term: "asmr-v2"
+    definition: "Sionic AI의 LLM 프록시/라우팅 서비스 2세대 버전"
+    aliases: ["asmr"]
+    context: "Q4에 v2로 업그레이드되어 OCI 배포 전환"
+  - term: "ibk.25.XXw"
+    definition: "IBK(기업은행) 고객사 전용 주간 릴리즈 버전 태그. XX는 주차 번호"
+    aliases: ["IBK 빌드", "ibk weekly"]
+    context: "매주 정기 배포되는 IBK 전용 빌드"
+  - term: "overmind"
+    definition: "2025년 Q4에 신규 도입된 Sionic AI 내부 서비스"
+    aliases: []
+    context: "Q4에 처음 배포 시작된 신규 컴포넌트"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,54 @@
+channel:
+  id: C07GMQK7V8W
+  name: alarm-dev-error-asmr
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 294
+  total_threads: 84
+  active_users: 10
+  avg_messages_per_day: 11.8
+summary: |
+  2024년 3분기에 alarm-dev-error-asmr 채널이 개설되어 ASMR dev 서비스 오류 모니터링이 시작되었다. 초기에는 New Relic 기반 Critical/High Priority 알림 시스템이 도입되었으며, 8월 중순부터 Openllm API Error 알림이 대량으로 전송되기 시작하였다. 8월 20일에는 활동량 폭증으로 Slack 레이트 리밋이 발동하기도 하였다. 스레드 84건으로 팀원들이 적극적으로 오류 대응한 분기이다.
+topics:
+  - name: "채널 개설 및 모니터링 시스템 구축"
+    mention_count: 10
+    description: "alarm-dev-error-asmr 채널 개설, incoming-webhook 통합, New Relic 알림 정책 설정"
+  - name: "New Relic Critical/High Priority Alert"
+    mention_count: 80
+    description: "Memory Used % 초과, Error Rate Alert 등 New Relic 기반 알림 — Critical(빨간색)·High(주황색) 우선순위 구분"
+  - name: "Openllm API Error 급증"
+    mention_count: 183
+    description: "8월 14일부터 Openllm API Error 대량 발생 시작 — 8월 20일 Slack 레이트 리밋 발동"
+  - name: "팀원 Acknowledge/Close 대응"
+    mention_count: 84
+    description: "New Relic 알림 스레드에 팀원이 직접 확인·종료 처리한 스레드 84건"
+key_discussions:
+  - thread_ts: '1723600320.000000'
+    date: '2024-08-14'
+    reply_count: 0
+    text_preview: "채널명 변경(status-openllm-dev→status-dev-openllm), incoming-webhook 통합 추가"
+  - thread_ts: '1724140800.000000'
+    date: '2024-08-20'
+    reply_count: 0
+    text_preview: "활동량 폭증으로 Slack 레이트 리밋 발동 — 일부 메시지 표시 제한"
+  - thread_ts: '1725008940.000000'
+    date: '2024-08-30'
+    reply_count: 0
+    text_preview: "New Relic Critical Priority — Memory Used % 90% 초과 알림 테스트 (DBA Team workflow)"
+terminology:
+  - term: "alarm-dev-error-asmr"
+    definition: "ASMR dev 환경 오류 전용 알림 채널 — 2024년 8월 개설, New Relic 및 incoming-webhook 통합"
+  - term: "New Relic"
+    definition: "APM/인프라 모니터링 플랫폼 — Critical/High Priority 알림을 Slack 채널로 전송"
+  - term: "open-llm-dev"
+    definition: "ASMR 서비스의 개발 환경 OpenLLM 인스턴스 — New Relic 에러율 모니터링 대상"
+  - term: "incoming-webhook"
+    definition: "Slack 수신 웹훅 통합 — B07GUASCS91 봇이 Openllm API Error 메시지를 채널로 전송하는 데 사용"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

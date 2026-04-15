@@ -1,0 +1,80 @@
+channel:
+  id: C08GN320Q1G
+  name: thanks-sionic
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 36
+  total_threads: 26
+  active_users: 15
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 4분기 thanks-sionic 채널은 일본 CC CRM 이벤트, 삼성 벤처 데모, 이디에스(IDS) 워크샵, 신세계 그룹 데모 등 굵직한 외부 행사들을 소화하며 팀원 간 감사가 이어진 분기였다.
+  10월에는 스톰 엔터프라이즈, Rust PR 머지, 컨테이너 Jupyter 노트북 이슈 해결 등에 대한 감사가 공유되었다.
+  11월에는 일본 CC CRM 이벤트에서 음성 데모를 성공적으로 진행한 성우님, 진형님, 윤정님, 승현님에 대한 집중적인 감사 메시지가 쏟아졌으며, 삼성 벤처 데모 준비를 위한 덕현님과 세민님의 야간 작업도 감사 대상이 되었다.
+  12월에는 타운홀 준비, 신규 온보딩 커피챗, 강욱님의 종신 칭찬, 옵스 팀(명하님)에 대한 감사 등이 기록되었다.
+topics:
+  - name: "일본 CC CRM 이벤트 감사"
+    mention_count: 8
+    description: "2025년 11월 12일 CIC Tokyo CC CRM 이벤트에서 음성 데모 성공에 기여한 팀원들 감사"
+  - name: "삼성 벤처 데모 감사"
+    mention_count: 3
+    description: "삼성 벤처 데모 준비를 위한 야간 작업 팀원들에 대한 감사"
+  - name: "기술 기여 및 문제 해결 감사"
+    mention_count: 7
+    description: "Rust PR, 보고서 작성 에이전트, Jupyter 노트북 이슈 해결 등 기술적 기여 감사"
+  - name: "옵스 팀 감사"
+    mention_count: 4
+    description: "명하님 등 옵스 팀의 사전 준비 및 즉각 대응에 대한 감사"
+  - name: "이디에스 워크샵 감사"
+    mention_count: 2
+    description: "이디에스(IDS) 워크샵 준비 및 진행 협력 감사"
+key_discussions:
+  - thread_ts: '1761537120.000000'
+    date: '2025-10-23'
+    reply_count: 2
+    text_preview: "storm-enterprise-local 잘 만든 제품 - 명하님 칭찬"
+  - thread_ts: '1762202340.000000'
+    date: '2025-11-04'
+    reply_count: 10
+    text_preview: "대진형의 감초 역할 - ITCEN 이슈 해결 지원 이메일 공유"
+  - thread_ts: '1763040780.000000'
+    date: '2025-11-15'
+    reply_count: 20
+    text_preview: "CC CRM 일본 음성 데모 성공 - 성우님과 진형님, 윤정님, 승현님께 감사"
+  - thread_ts: '1763490480.000000'
+    date: '2025-11-18'
+    reply_count: 0
+    text_preview: "새벽 2시 ASMR 하담님의 빠른 지원으로 Gemini 3 Pro Preview 연동 성공"
+  - thread_ts: '1763861040.000000'
+    date: '2025-11-21'
+    reply_count: 9
+    text_preview: "삼성 벤처 데모 - 덕현님과 세민님의 야간 작업 덕분에 데모 생명 연장"
+  - thread_ts: '1764726000.000000'
+    date: '2025-12-01'
+    reply_count: 9
+    text_preview: "타운홀 준비를 빈틈없이 챙겨준 수원님께 감사 - 케이터링, 공간 셋팅"
+terminology:
+  - term: "CC CRM"
+    definition: "콜센터 및 고객 관계 관리 이벤트, 2025년 11월 일본 CIC Tokyo에서 개최"
+    aliases: []
+    context: "Sionic AI voiceRAG 음성 데모가 현장에서 성공적으로 시연된 이벤트"
+  - term: "삼성 벤처"
+    definition: "삼성 관련 벤처/투자 미팅 또는 데모, 정확한 명칭은 삼성VC 온톨로지 데모"
+    aliases: ["삼벤", "samsung-vc-ontology"]
+    context: "덕현님과 세민님이 야간 작업으로 데모 생명 1주일 연장"
+  - term: "이디에스 (IDS)"
+    definition: "Sionic AI와 협력하는 기업 또는 프로젝트명"
+    aliases: ["IDS", "이디에스"]
+    context: "11월 말 워크샵 Q&A 세션 진행"
+  - term: "ASMR"
+    definition: "Sionic AI의 LLM API 서비스"
+    aliases: []
+    context: "하담님이 새벽 2시 Gemini 3 Pro Preview 연동 지원"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

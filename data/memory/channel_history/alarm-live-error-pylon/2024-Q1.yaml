@@ -1,0 +1,33 @@
+channel:
+  id: C066D0B9WKC
+  name: alarm-live-error-pylon
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 1029
+  total_threads: 61
+  active_users: 10
+  avg_messages_per_day: 22.4
+summary: |
+  Pylon 운영 에러 알림 채널. 1029개 메시지로 주로 staging 환경의 문서 파싱 에러가 집중 발생했다.
+  대부분 Pylon Staging Error 형태로, 문서 파싱 실패(한화생명 보험약관 PDF 등)가 반복적으로 알림되었다.
+  에러 메시지에 담당자(@U05QCA7JTD5 Sigrid Jin, @U061V8PBS9M)가 자동 멘션되는 구조였으며,
+  knowledge.py의 save_document 함수에서 ValueError가 주요 에러 발생 지점이었다.
+  사람의 개입 메시지는 거의 없는 자동 알림 위주 채널이었다.
+topics:
+  - 문서 파싱 실패 (save_document ValueError)
+  - staging 환경 Pylon Error 집중
+  - PDF/HWP 파일 파싱 오류
+key_discussions: []
+terminology:
+  - term: "Pylon"
+    definition: "Sionic AI의 문서 처리 및 검색 엔진 서비스, 문서 파싱/임베딩/검색 담당"
+  - term: "save_document"
+    definition: "Pylon의 knowledge.py에서 문서 저장 처리 함수, 파싱 실패 시 ValueError 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

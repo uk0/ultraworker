@@ -1,0 +1,101 @@
+channel:
+  id: C057EN4BL4W
+  name: random
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 305
+  total_threads: 216
+  active_users: 26
+  avg_messages_per_day: 4.2
+summary: |
+  2024년 3분기 random 채널은 회사의 대외 활동과 언론 노출이 크게 늘어난 시기였다.
+  사이오닉에이아이 관련 기사가 네이버 메인에 노출되었고, 뤼튼과의 MOU 체결, 디캠프 협력 등이 진행되었다.
+  OpenAI o1 모델 출시, Meta Llama 3.2 출시 등 AI 업계 주요 뉴스가 활발히 공유되었다.
+  토스 SlashDay 24 컨퍼런스 참석(온프렘 인프라 유사점 발견), Upstage 글로벌 AI 해커톤 멘토 참여,
+  알리바바 APSARA 2024 컨퍼런스 출장, 발표 데이 등 대외 활동이 활발했다.
+  팀원 1주년 기념(진형 입사 1년: 1623회 배포, 하루 평균 5회 / 영숙님 1주년),
+  해솔이 100일 축하, 시형님 생일 등 팀 마일스톤이 다수 있었다.
+  폴 그레이엄의 'Founder Mode' 글 공유로 창업자 리더십에 대한 논의가 있었고,
+  고객 정적 데이터(엑셀/CSV) SQL 변환 POC, 디노티시아 벡터 DB 국책과제 수주 등 기술 트렌드도 공유되었다.
+  추석 선물 배송, 오라클 와인 선물, 알리바바 기념품 나눔 등 시즌 이벤트가 있었다.
+topics:
+  - name: "언론 노출/PR"
+    count: 6
+    description: "네이버 메인 노출, 뤼튼 MOU 기사, 디캠프 협력, etnews·머니투데이 등 기사 게재."
+  - name: "AI 모델 출시"
+    count: 5
+    description: "OpenAI o1, Meta Llama 3.2(11B/90B), Perplexity 관련 뉴스."
+  - name: "컨퍼런스/행사 참여"
+    count: 8
+    description: "SlashDay 24(토스), Upstage AI 해커톤, APSARA 2024(알리바바), 에모리 AI 심포지엄."
+  - name: "팀 마일스톤"
+    count: 6
+    description: "진형 입사 1주년(1623회 배포), 영숙님 1주년, 해솔이 100일, 시형님 생일."
+  - name: "사업 개발"
+    count: 4
+    description: "고객 정적 데이터 SQL 변환 POC, 뤼튼 MOU, Perplexity 갑코 투자 소식."
+  - name: "창업자 리더십"
+    count: 2
+    description: "폴 그레이엄 Founder Mode 글 공유 - 위임보다 디테일 챙기기."
+key_discussions:
+  - thread_ts: '1726161535.936889'
+    date: '2024-09-12'
+    reply_count: 28
+    text_preview: "OpenAI o1 모델 출시 관련 논의."
+  - thread_ts: '1725439158.761169'
+    date: '2024-09-04'
+    reply_count: 14
+    text_preview: "진형 입사 1주년 - 1623회 배포, 하루 평균 5회. sionic-ai에만 2932 commit."
+  - thread_ts: '1727337883.293099'
+    date: '2024-09-26'
+    reply_count: 25
+    text_preview: "한국 오라클 레드 와인 선물 추첨."
+  - thread_ts: '1727148591.704169'
+    date: '2024-09-24'
+    reply_count: 20
+    text_preview: "송명하 라이브 발표 시청."
+  - thread_ts: '1726205023.068519'
+    date: '2024-09-13'
+    reply_count: 17
+    text_preview: "8년전 덕현님 사진 발굴 - 팀 분위기 조성."
+  - thread_ts: '1725285734.839239'
+    date: '2024-09-25'
+    reply_count: 12
+    text_preview: "Llama 3.2 출시 - 11B 하이쿠 수준, 90B 4o-mini 수준."
+  - thread_ts: '1726128122.554589'
+    date: '2024-09-12'
+    reply_count: 10
+    text_preview: "토스 SlashDay 24 참석기 - 온프렘 환경 유사성, 옵스 중심 발표."
+  - thread_ts: '1727358918.254489'
+    date: '2024-09-26'
+    reply_count: 9
+    text_preview: "고객 정적 데이터(엑셀/CSV) 스키마·SQL 생성 POC."
+terminology:
+  - term: "Founder Mode"
+    definition: "폴 그레이엄이 제안한 창업자 리더십 모드. 위임보다 디테일까지 직접 챙기는 방식."
+    aliases: ["창업자 모드"]
+    context: "에어비앤비 창업자 사례 - 위임식 관리가 최악의 효과를 냈다는 경험."
+  - term: "SlashDay"
+    definition: "토스에서 주최하는 기술 컨퍼런스."
+    aliases: ["슬래시"]
+    context: "옵스/인프라 중심 발표. 사이오닉 온프렘 환경과 유사한 고민 공유."
+  - term: "APSARA"
+    definition: "알리바바 클라우드 연례 기술 컨퍼런스."
+    aliases: []
+    context: "2024년 컨퍼런스 출장. 알리바바 기념품 티셔츠 가져옴."
+  - term: "VDPU"
+    definition: "Vector Data Processing Unit. 디노티시아가 개발 중인 벡터 DB 전용 가속 반도체 칩."
+    aliases: []
+    context: "160억 원 규모 국책과제 수주."
+  - term: "Seahorse"
+    definition: "디노티시아의 오픈소스 벡터 데이터베이스 소프트웨어."
+    aliases: []
+    context: "VDPU와 함께 제공 예정."
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

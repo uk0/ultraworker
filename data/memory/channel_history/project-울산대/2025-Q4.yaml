@@ -1,0 +1,62 @@
+channel:
+  id: C09MXECQ0A3
+  name: project-울산대
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 31
+  total_threads: 13
+  active_users: 11
+  avg_messages_per_day: 1.7
+summary: |
+  울산대학교 AI 검색 시스템 구축 사업 관련 채널로, 2025-Q4에 제안서 작성 및 입찰 준비가 진행되었다. 1차년도 과업제안서 작성 후 송부 완료하였으며, 한국이디에스(파트너사)와의 협업으로 과업 범위 정의 및 과업지시서 수정 작업이 이루어졌다. 입찰 공고는 12월 말~1월 초로 예상되었으며, 딥리서치 기능 문의, 크롤링 기능 논의, 결과물 샘플 시안 요청 등 기술적 요구사항이 논의되었다.
+topics:
+  - name: "과업제안서 작성"
+    mention_count: 6
+    description: "1차년도 및 2차년도 과업제안서 작성, 스프레드시트 기반 공동 편집"
+  - name: "한국이디에스 협업"
+    mention_count: 5
+    description: "파트너사 이디에스와 과업 범위 정의, 과업지시서 수정 협의 미팅"
+  - name: "입찰 일정 관리"
+    mention_count: 4
+    description: "협상에 의한 계약 방식, 입찰 공고 12월 말~1월 초 예정"
+  - name: "기술 요구사항 논의"
+    mention_count: 4
+    description: "딥리서치 기능, 크롤링 기능, 인재 데이터 DB 구축 모듈 검토"
+key_discussions:
+  - thread_ts: '1761361200.000000'
+    date: '2025-10-24'
+    reply_count: 30
+    text_preview: "과업제안서 스프레드시트 공유 및 개발 검토 요청"
+  - thread_ts: '1762208058.000000'
+    date: '2025-10-29'
+    reply_count: 27
+    text_preview: "251029 회의록 공유 및 논의"
+  - thread_ts: '1763945340.000000'
+    date: '2025-11-24'
+    reply_count: 11
+    text_preview: "크롤링 기능 도입 논의"
+  - thread_ts: '1764842280.000000'
+    date: '2025-12-01'
+    reply_count: 27
+    text_preview: "학교 측에서 결과물 예시/시안 샘플 요청"
+  - thread_ts: '1764857880.000000'
+    date: '2025-12-03'
+    reply_count: 20
+    text_preview: "파트너사 이디에스의 딥리서치 기능 문의"
+terminology:
+  - term: "울산대"
+    definition: "울산대학교, AI 검색 시스템 구축 사업 발주처"
+  - term: "한국이디에스 (이디에스)"
+    definition: "울산대 프로젝트의 파트너사, 과업 범위 정의 및 기술 협의 담당"
+  - term: "협상에 의한 계약"
+    definition: "일반 경쟁입찰이 아닌 협상 방식으로 계약하는 공공 조달 방식"
+  - term: "딥리서치"
+    definition: "심층 검색 및 분석 기능, 울산대 프로젝트에서 요구사항으로 논의된 기능"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

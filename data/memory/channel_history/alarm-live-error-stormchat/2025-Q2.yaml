@@ -1,0 +1,28 @@
+channel:
+  id: C081TUD7MBM
+  name: alarm-live-error-stormchat
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  STORM Chat 에러 제보 채널 최소 활동 분기. 총 3건 메시지, 스레드 없음.
+  4월 3일, 4월 16일에 chat500 에러 제보 각 1건 발생. 대응 스레드 없이 단발성 에러.
+  6월 18일 채널명이 "storm-chat-error-report"에서 "alarm-live-error-stormchat"으로 변경됨 (알림 채널 네이밍 컨벤션 통일).
+  STORM Chat 서비스가 가장 안정적이었던 분기.
+topics:
+  - STORM Chat 500 에러 최소 발생
+  - 채널명 변경 (alarm-live-error-stormchat)
+  - 알림 채널 네이밍 규칙 통일
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

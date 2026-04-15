@@ -1,0 +1,40 @@
+channel:
+  id: C07F2EFA76K
+  name: alarm-live-error-asmr
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 57
+  total_threads: 10
+  active_users: 3
+  avg_messages_per_day: 2.7
+summary: |
+  2025년 3분기 alarm-live-error-asmr 채널은 활동이 비교적 조용한 분기였으며, OpenLLM API 오류 알림이 간헐적으로 발생하였다. 7월 초, 8월 중순, 9월 초·중순에 산발적인 오류 알림이 수신되었고, 9월 11일에는 30개의 스레드 답변이 달린 집중적인 오류 사건이 있었다. 9월 26일에도 대량 오류 및 담당자 답변이 이루어졌다. 활성 사용자 수가 3명으로 감소한 것으로 보아 알림 자동화 수준이 높아지고 수동 대응이 줄어든 것으로 보인다.
+topics:
+  - name: "OpenLLM API 오류 알림"
+    mention_count: 50
+    description: "라이브 환경 OpenLLM API 오류 알림. 7월, 8월, 9월에 걸쳐 산발적으로 발생"
+  - name: "집중 오류 발생 이벤트"
+    mention_count: 5
+    description: "9월 11일 대량 오류 발생(30개 스레드 답변), 9월 26일 오류 및 담당자 분석"
+key_discussions:
+  - thread_ts: '1757548800.000000'
+    date: '2025-09-11'
+    reply_count: 30
+    text_preview: "OpenLLM API 오류 집중 발생 - 30개의 스레드 답변이 달린 주요 사건"
+  - thread_ts: '1758038400.000000'
+    date: '2025-09-26'
+    reply_count: 14
+    text_preview: "OpenLLM API 오류 및 담당자 분석 대응"
+terminology:
+  - term: "OpenLLM"
+    definition: "Sionic AI 내부 LLM API 게이트웨이"
+    aliases: ["openllm"]
+    context: "라이브 오류 알림의 주 발원 시스템"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

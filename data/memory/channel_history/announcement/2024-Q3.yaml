@@ -1,0 +1,106 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 68
+  total_threads: 43
+  active_users: 10
+  avg_messages_per_day: 1.6
+summary: |
+  2024년 3분기 announcement 채널은 팀 확장과 기술 공유 활동이 활발했던 시기였다.
+  신규 멤버로 백상원(AI/ML Developer, 멀티모달 연구), 최병현(Backend Developer, 코틀린/JVM) 등이
+  합류했으며, 태은님 굿바이 파티도 진행되었다.
+
+  테크 세미나가 꾸준히 운영되어 CUDA 강의(박진형/정세민), Model Merging(백상원), Multi-modal
+  model overview(도균), LLM 기초(도균), KoGrammary(태은), Storm Fooding(세민),
+  Prompt Recovery 등 다양한 AI/ML 주제가 발표되었다. 블로그도 한국어/일본어에 이어 영어 블로그가
+  추가 운영되기 시작했다.
+
+  운영 측면에서는 중소기업 취업자 소득세 감면 신청, 추석 선물(직접 선택형), 직무발명 심의위원 선출(김덕현
+  당선), 기업부설연구소 사진 촬영 등이 진행되었다. 사무실 인프라로는 통신실 전기설비 확장 공사,
+  에어컨 공사, 코로나 검사키트 비치 등이 있었다.
+
+  비즈니스 관련으로는 기업은행 B2B 딜 문서 작성, 기능/기술 요소 명세 작성, 법무검토 채널 일원화 등이
+  이루어졌다. SaaS 비용 절감(어도비 해지, 피그마 미사용 시트 정리), 슬랙 프로필 직함 기재,
+  신규 입사자 자동 채널 초대 봇 등 운영 효율화도 진행되었다. 파이콘 한국(10/26-27) 참여사 참가
+  신청도 이 시기에 시작되었다.
+topics:
+  - name: "신규 멤버 합류"
+    mention_count: 2
+    context: "백상원(AI/ML, 멀티모달), 최병현(Backend, 코틀린/JVM) 합류"
+  - name: "테크 세미나"
+    mention_count: 10
+    context: "CUDA 강의, Model Merging, Multi-modal, LLM 기초, KoGrammary 등"
+  - name: "직무발명 심의위원"
+    mention_count: 4
+    context: "종업원 위원 투표 진행, 김덕현 100% 동의로 선발"
+  - name: "운영 효율화"
+    mention_count: 6
+    context: "SaaS 비용 절감, 슬랙 프로필 직함, 신규 입사자 자동 채널 초대"
+  - name: "소득세 감면"
+    mention_count: 2
+    context: "중소기업 취업자 소득세 감면 신청 안내 (청년 90% 감면)"
+  - name: "블로그 운영"
+    mention_count: 3
+    context: "한국어/일본어/영어 3개 언어로 블로그 운영 시작"
+  - name: "기업은행 B2B"
+    mention_count: 2
+    context: "IBK 관련 B2B 딜 문서 작성, 기술요소 및 아이디어 수집"
+  - name: "추석 선물"
+    mention_count: 3
+    context: "선물24를 통한 직접 선택형 추석 선물 제공"
+key_discussions:
+  - thread_ts: "1725874332.723619"
+    date: "2024-09-09"
+    reply_count: 56
+    text_preview: "중소기업 취업자 소득세 감면 신청 안내 - 청년 최대 200만원 한도 90% 감면"
+  - thread_ts: "1721889106.346379"
+    date: "2024-07-25"
+    reply_count: 10
+    text_preview: "푸딩 대체 서비스 - 오늘수거 도입, 배달 쓰레기 수거 시스템 구축"
+  - thread_ts: "1724658759.354749"
+    date: "2024-08-26"
+    reply_count: 8
+    text_preview: "기능/기술 요소 명세 작성 - 전 구성원 참여하여 노션에 기능 명세 정리"
+  - thread_ts: "1724651768.213559"
+    date: "2024-08-26"
+    reply_count: 8
+    text_preview: "기업은행 B2B 딜 문서 작성 - 기술요소 및 아이디어 의견 수집"
+  - thread_ts: "1724312193.246509"
+    date: "2024-08-22"
+    reply_count: 11
+    text_preview: "Claude 사용 관련 공지 - claude@sionic.ai 그룹으로 관리 전환"
+  - thread_ts: "1721717308.508239"
+    date: "2024-07-23"
+    reply_count: 10
+    text_preview: "안 쓰는 SaaS 정리 - 어도비 해지, 피그마 미사용 시트 정리"
+terminology:
+  - term: "Storm Fooding"
+    definition: "STORM 제품의 데이터 입력/색인 프로세스"
+    aliases: ["푸딩"]
+    context: "세민님이 테크세미나에서 발표, 스톰 점심 배달에도 활용"
+  - term: "오늘수거"
+    definition: "배달 쓰레기 수거 서비스"
+    aliases: []
+    context: "배달 음식 쓰레기 분리수거를 위해 도입한 외부 서비스"
+  - term: "KoGrammary"
+    definition: "한국어 문법 교정 관련 프로젝트/발표 주제"
+    aliases: []
+    context: "태은님이 테크세미나에서 발표"
+  - term: "Templar-Archives"
+    definition: "엔지니어링 아카이브/문서화 프로젝트"
+    aliases: []
+    context: "최병현님이 테크 스펙 초안으로 공유"
+  - term: "기업부설연구소"
+    definition: "사이오닉AI의 R&D 조직 공식 등록 형태"
+    aliases: []
+    context: "사진 촬영 및 병무청 현장 실사를 위한 대회의실 연구소 세팅"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

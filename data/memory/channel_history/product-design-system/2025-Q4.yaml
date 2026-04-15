@@ -1,0 +1,23 @@
+channel:
+  id: C06Q90GS5LL
+  name: product-design-system
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  채널 활동 없음. 신규 멤버 참여(김수원, ai-crawler)만 기록됨. 디자인 시스템 관련 논의나 작업은 이루어지지 않음.
+  채널이 사실상 비활성 상태로, 디자인 시스템 주요 작업이 2024년에 완료된 이후 별도의 추가 작업이 진행되지 않고 있음.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

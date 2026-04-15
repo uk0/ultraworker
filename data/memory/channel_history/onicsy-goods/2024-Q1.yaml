@@ -1,0 +1,51 @@
+channel:
+  id: C06G345H2A0
+  name: onicsy-goods
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 42
+  total_threads: 17
+  active_users: 16
+  avg_messages_per_day: 3.8
+summary: |
+  2024년 1분기에 회사 굿즈 채널이 활발히 운영되었다. 정세민(Sem)님이 주도하여 회사 단체티 시안 디자인,
+  맨투맨 제작(모모티 업체), 랭콘용 텀블러(스텐 이중 텀블러 500ml, 레이저 인쇄, 150개/742,500원) 제작을 진행하였다.
+  텀블러는 투표를 통해 "NEW 로리 304 이중 스텐텀블러 500ml"로 결정되었다. 사무실 현판 투표(아크릴, 스카시, 고무,
+  스텐 입체형, 박스형/에폭시 조명, 후광 현판 중 선택)도 진행되었다. 브로셔 봉투 디자인 투표(32개 답글)와
+  하클 스티커 레퍼런스도 공유되었다. 채널 설명은 "kubectl get pods -n sionic"으로 설정되었다.
+topics:
+  - 회사 단체티 제작
+  - 텀블러 굿즈 제작
+  - 사무실 현판 투표
+  - 브로셔 봉투 디자인
+  - 하클 스티커
+key_discussions:
+  - thread_ts: '1711617649.168079'
+    date: '2024-03-28'
+    topic: 브로셔 봉투 디자인 투표 (32개 답글, 손잡이 흰색)
+  - thread_ts: '1708490562.188949'
+    date: '2024-02-21'
+    topic: 텀블러 디자인 투표 (11개 답글)
+  - thread_ts: '1708500714.459839'
+    date: '2024-02-21'
+    topic: 스텐 이중 텀블러 500ml 최종 결정 - 레이저 인쇄, 150개/742,500원
+  - thread_ts: '1706593837.115729'
+    date: '2024-01-30'
+    topic: 회사 티셔츠 시안 디자인 검토
+terminology:
+  - term: 모모티
+    definition: 단체 맞춤 의류 제작 업체
+  - term: 랭콘
+    definition: 회사 행사/컨퍼런스 관련 약어로 추정
+  - term: 하클
+    definition: HyperCLOVA의 약어, 네이버 AI 관련 스티커 레퍼런스로 언급됨
+  - term: onicsy
+    definition: Sionic을 거꾸로 읽은 것, 회사 굿즈 채널명에 사용
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

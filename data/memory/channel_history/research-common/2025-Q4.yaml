@@ -1,0 +1,71 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 46
+  total_threads: 33
+  active_users: 7
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 4분기 research-common 채널에서는 2026년 리서치 방향 수립과 Foundation 모델 연구 계획이 주요 의제로 다뤄졌다.
+  VLM(Visual Language Model) 기반 STORM 파서 개선을 위한 Qwen3-VL 활용 실험, AIHub 시각화 자료 VQA 데이터셋 평가, W&B artifacts를 통한 데이터셋 버전 관리 도입 등이 진행되었다.
+  Overleaf 공용 계정 세팅, 특허 출원 논의, 논문 팔로업 방법 정리 등이 이루어졌으며, 연말에는 연간 회고 및 2026년 연구 플랜 수립을 위한 워크숍이 진행되었다.
+topics:
+  - name: "2026년 리서치 플랜"
+    mention_count: 12
+    description: "Foundation 모델 연구 방향, 2026년 연구 아이템 선정 및 리소스 계획"
+  - name: "VLM 파싱 성능 평가"
+    mention_count: 8
+    description: "AIHub VQA 데이터셋 기반 STORM Parse vs Qwen3-VL-8B vs Ministral 성능 비교, LLM-as-a-Judge 활용"
+  - name: "데이터셋 버전 관리"
+    mention_count: 5
+    description: "W&B artifacts를 활용한 학습 데이터셋 lineage 및 버전 관리 체계 구축"
+  - name: "특허 출원"
+    mention_count: 4
+    description: "신규 특허 아이디어 모집 및 변리사 미팅을 통한 출원 진행"
+  - name: "논문 팔로업"
+    mention_count: 4
+    description: "ICLR, CVPR, NeurIPS 등 주요 ML/CV/NLP 학회 논문 추적 방법 공유"
+key_discussions:
+  - thread_ts: '1731915580.000000'
+    date: '2025-10-21'
+    reply_count: 8
+    text_preview: "Qwen3-VL-32B-Instruct 모델 출시 - VLM 대체 모델로서의 활용 가능성 논의"
+  - thread_ts: '1731915580.147659'
+    date: '2025-11-10'
+    reply_count: 21
+    text_preview: "W&B artifacts를 활용한 데이터셋 버전 관리 방안 - PDF 기반 LLM 생성 데이터셋"
+  - thread_ts: '1732601580.000000'
+    date: '2025-11-19'
+    reply_count: 17
+    text_preview: "ML/CV/NLP 학회 논문 팔로업 방법 정리 - ICLR OpenReview, HuggingFace Trending 활용"
+  - thread_ts: '1734836040.000000'
+    date: '2025-12-22'
+    reply_count: 3
+    text_preview: "AIHub 시각화 자료 VQA 데이터셋 및 VLM 파싱 평가 결과 공유 - STORM Parse 4.72점으로 1위"
+terminology:
+  - term: "STORM Parse"
+    definition: "Sionic AI의 문서 파싱 시스템, VLM 기반으로 표/그래프 구조 추출"
+    aliases: ["스톰 파스", "Storm Parser"]
+    context: "VLM 대체 모델 개발 및 파싱 성능 평가의 핵심 대상"
+  - term: "Pepper"
+    definition: "Gemini 같은 VLM을 대체하기 위해 Qwen2.5/3 VL 기반으로 학습 중인 내부 모델"
+    aliases: []
+    context: "STORM Parse에서 VLM 역할을 담당할 자체 개발 모델"
+  - term: "W&B"
+    definition: "Weights & Biases, 모델 학습 실험 추적 및 데이터셋 버전 관리 플랫폼"
+    aliases: ["wandb", "Weights and Biases"]
+    context: "리서치팀 공용 계정으로 데이터셋 artifact 관리에 활용"
+  - term: "Foundation Model"
+    definition: "대규모 사전학습 언어/멀티모달 모델, 2026년 리서치 핵심 연구 방향"
+    aliases: ["파운데이션 모델"]
+    context: "2026년 연구 계획의 중점 주제로 GPU 리소스 계획과 연계"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

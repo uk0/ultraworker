@@ -1,0 +1,28 @@
+channel:
+  id: C058FGC6DK2
+  name: guest-sionic
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 6
+  active_users: 5
+  avg_messages_per_day: 1.4
+summary: |
+  2025-Q4 guest-sionic 채널 데이터 수집 완료. 11개 메시지, 5명 참여, 6개 스레드.
+  노진우님 결혼 안내 공지(역삼 인근 식당에서 사이오닉 인연 초대). Cheonseong Kang의 재능기부 활동 소개. 사이오닉 관련 유튜브 영상 홍보(댓글 알고리즘 부스팅 요청). 진우님의 세차 사업 이유 밝혀짐.
+topics:
+  - "노진우 결혼 공지"
+  - "유튜브 영상 홍보"
+  - "커뮤니티 교류"
+key_discussions:
+  - title: "노진우님 결혼 안내"
+    summary: "12월 초 역삼 인근 식당에서 사이오닉 인연 초대 결혼 행사. shesaid.yesjinu.com 웹사이트 공유"
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,30 @@
+channel:
+  id: C079AAU6265
+  name: deploy-asmr
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 22
+  total_threads: 21
+  active_users: 2
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 2분기에는 ASMR 서비스 배포가 안정적으로 이루어졌다. 조하담(Joy)님이 거의 모든 배포를 담당하였으며,
+  /sionic-deploy asmr 커맨드를 사용하여 dev(onprem)와 live(oci) 환경에 정기적으로 배포하였다.
+  still3028님이 새로 합류하여 배포에 참여하기 시작하였다. 배포 패턴이 dev 배포 후 검증 -> live 배포(--skip-build)
+  순서로 안정화되었다.
+topics:
+  - ASMR 정기 배포
+  - dev -> live 배포 프로세스 안정화
+key_discussions:
+  - thread_ts: '1751265273.942889'
+    date: '2025-06-30'
+    topic: ASMR dev 배포 및 이슈 대응 (12개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

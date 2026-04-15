@@ -1,0 +1,85 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 244
+  total_threads: 113
+  active_users: 13
+  avg_messages_per_day: 3.7
+summary: |
+  2024-Q2에는 현대차 5억 견적 제출, BCG/롯데카드 PoC 제안, 삼성 계열 금융사 4곳 동시 미팅 등 대형 B2B 영업이 본격화되었다.
+  NextRise 2024 Seoul 전시회 참가와 싱가포르 전시 신청, 알리바바 MOU 등 국내외 마케팅/파트너십 활동이 활발했으며, 매경 800만원 계약과 아이엔지스토리 계약 체결 등 실제 매출 전환도 이루어졌다.
+  뤼튼 RAG Pipeline 견적, 누리미디어 100만건 논문요약, 마크스폰 ESG 보고서 등 신규 유즈케이스 논의도 다양하게 진행되었다.
+topics:
+  - 현대차 견적(5억) 제출 및 입찰 대응
+  - BCG/롯데카드 PoC 제안 및 발표
+  - 삼성 계열 금융사(삼성생명/삼성증권/삼성화재/삼성벤처투자) 미팅
+  - NextRise 2024 Seoul 전시회 참가
+  - 싱가포르 빅데이터 AI 전시회 신청
+  - 알리바바 클라우드 MOU 추진
+  - 뤼튼 RAG Pipeline 견적
+  - 누리미디어 100만건 논문요약 테스트
+  - 마크스폰 ESG 보고서 자동생성
+  - 매경 계약(800만원) 체결
+  - 아이엔지스토리 계약 추진
+  - IBK기업은행 미팅 (업스테이지 컨소시엄)
+  - 테디노트 마케팅 검토
+key_discussions:
+  - thread_ts: '1719291318.879499'
+    date: '2024-06-25'
+    reply_count: 53
+    text_preview: marcspon 관련 ESG 보고서 자동생성 프롬프트 최적화 및 견적 논의
+  - thread_ts: '1719218065.545349'
+    date: '2024-06-24'
+    reply_count: 38
+    text_preview: 누리미디어 논문요약 100만건 처리시간 및 Gemini Pro/Flash 비용 비교 테스트
+  - thread_ts: '1717028966.160829'
+    date: '2024-05-30'
+    reply_count: 27
+    text_preview: NextRise 2024 Seoul 부스 준비 점검 및 전시 일정 공유
+  - thread_ts: '1718694281.836879'
+    date: '2024-06-18'
+    reply_count: 24
+    text_preview: 삼성 계열 금융사 보험사 4곳과 동시 미팅, AI 미들웨어 도입 검토
+  - thread_ts: '1719136182.788289'
+    date: '2024-06-23'
+    reply_count: 21
+    text_preview: 뤼튼 RAG Pipeline 시나리오 정리 및 MSP형 견적 논의
+  - thread_ts: '1717576472.459659'
+    date: '2024-06-05'
+    reply_count: 19
+    text_preview: 브로셔 구성원 사진 및 이미지 소스 확인, 전시 준비 자료 점검
+  - thread_ts: '1718084594.610259'
+    date: '2024-06-11'
+    reply_count: 16
+    text_preview: 알리바바 클라우드 MOU 진행상황 - 법무팀 검토 대기중
+  - thread_ts: '1718855880.768569'
+    date: '2024-06-20'
+    reply_count: 12
+    text_preview: 업스테이지 부사장 홍준님 연락, 소프트뱅크 언급 및 일본/미국 시장 관심
+terminology:
+  - term: Storm Analyze
+    definition: 사이오닉AI의 데이터 분석/분류/요약/감정분석 제품
+    aliases: [애널라이즈]
+    context: BCG/롯데카드 PoC에서 고객응대 시나리오 분류/요약에 활용
+  - term: NextRise
+    definition: 서울에서 개최되는 스타트업 전시 행사
+    aliases: [넥스트라이즈]
+    context: 2024년 6월 13-14일 B홀 참가, 1:1 Meetup 출입증 발급
+  - term: 마크스폰
+    definition: ESG 컨설팅 기업으로 ISSB 보고서 자동생성을 희망하는 고객사
+    aliases: [marcspon]
+    context: Storm Write 활용 ESG 보고서 초안 자동생성 PoC 논의
+  - term: 뤼튼
+    definition: AI 서비스 기업으로 RAG Pipeline을 사이오닉에 외주 의뢰
+    aliases: [Wrtn]
+    context: 월 60만건 요청 규모, MSP형 인프라 구성 및 OCR 포함 요청
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

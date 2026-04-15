@@ -43,6 +43,15 @@ class DashboardConfig:
     refresh_seconds: float = 1.0
 
 
+@dataclass(frozen=True)
+class SessionLogResolution:
+    """Resolved worktree artifacts for a session."""
+
+    log_path: Path | None
+    log_source: str = "missing"
+    mention_dir: Path | None = None
+
+
 _process_lock = threading.Lock()
 _running_processes: dict[str, subprocess.Popen[str]] = {}
 
@@ -307,6 +316,40 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
                 self._send_json(payload)
                 return
 
+            # === LTM (Long-Term Memory) Endpoints ===
+            if parsed.path == "/api/ltm/records":
+                query = parse_qs(parsed.query)
+                type_filter = _first(query.get("type"))
+                topic_filter = _first(query.get("topic"))
+                payload = _build_ltm_records(config, type_filter, topic_filter)
+                self._send_json(payload)
+                return
+
+            ltm_record_match = re.match(r"^/api/ltm/records/([^/]+)$", parsed.path)
+            if ltm_record_match:
+                record_id = ltm_record_match.group(1)
+                payload = _build_ltm_record_detail(config, record_id)
+                self._send_json(payload)
+                return
+
+            if parsed.path == "/api/ltm/graph":
+                payload = _build_ltm_graph(config)
+                self._send_json(payload)
+                return
+
+            if parsed.path == "/api/ltm/search":
+                query = parse_qs(parsed.query)
+                q = _first(query.get("q")) or ""
+                top_k = _parse_int(_first(query.get("top_k")), default=20)
+                payload = _build_ltm_search(config, q, top_k)
+                self._send_json(payload)
+                return
+
+            if parsed.path == "/api/ltm/stats":
+                payload = _build_ltm_stats(config)
+                self._send_json(payload)
+                return
+
             self.send_response(404)
             self.end_headers()
 
@@ -436,6 +479,7 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
 
             offsets: dict[Path, int] = {}
             last_scan = 0.0
+            resolved_log_paths: list[Path] | None = None  # session별 resolved 경로 캐시
 
             # Initialize interaction logger for reading interactions
             interaction_logger = InteractionLogger(cfg.data_dir)
@@ -445,7 +489,24 @@ def _make_handler(config: DashboardConfig) -> type[BaseHTTPRequestHandler]:
                 while True:
                     now = time.time()
                     if now - last_scan > 2.0:
-                        log_paths = _get_log_paths(cfg, session=session)
+                        if session and resolved_log_paths is None:
+                            # ultrawork session_id → external Claude session_id 매핑
+                            mention_record = _find_mention_for_session(cfg.data_dir, session)
+                            session_obj = _get_session_manager(cfg).get_session(session)
+                            resolution = _resolve_session_log(
+                                config=cfg,
+                                session_id=session,
+                                mention_record=mention_record,
+                                session_obj=session_obj,
+                                command_ts=None,
+                            )
+                            if resolution.log_path:
+                                resolved_log_paths = [resolution.log_path]
+                        log_paths = (
+                            resolved_log_paths
+                            if resolved_log_paths
+                            else _get_log_paths(cfg, session=session)
+                        )
                         for path in log_paths:
                             offsets.setdefault(path, 0)
                         last_scan = now
@@ -616,6 +677,7 @@ def _build_requests(
     manager: ContextManager,
     limit: int = 5,
 ) -> list[dict[str, Any]]:
+    _ = log_index
     mentions_root = config.data_dir / "mentions"
     if not mentions_root.exists():
         return []
@@ -678,10 +740,31 @@ def _build_requests(
             or input_data.get("session_id")
         )
         session_id = str(session_id) if session_id else ""
-        session_candidates = _session_candidates(session_id, channel_id, thread_ts)
-        resolved_session_id, log_path = _resolve_log_path(log_index, session_candidates)
-
-        log_status = _activity_status(log_path.stat().st_mtime) if log_path else "missing"
+        mention_record = {
+            "mention_path": mention_dir,
+            "message_ts": message_ts,
+            "created_at": created_at,
+        }
+        resolution = _resolve_session_log(
+            config=config,
+            session_id=session_id,
+            mention_record=mention_record,
+            session_obj=None,
+            command_ts=created_at,
+        )
+        log_path = resolution.log_path
+        execution_artifact = _first_execution_artifact_path(mention_dir)
+        resolved_session_id = log_path.stem if log_path else (session_id or "")
+        log_available = bool(log_path or execution_artifact)
+        if log_path:
+            log_status = _activity_status(log_path.stat().st_mtime)
+            log_path_text = _relative_path(log_path, config.log_root)
+        elif execution_artifact:
+            log_status = "executor"
+            log_path_text = str(execution_artifact.relative_to(config.data_dir))
+        else:
+            log_status = "missing"
+            log_path_text = ""
 
         requests.append(
             {
@@ -704,9 +787,10 @@ def _build_requests(
                 "task_titles": [task.title for task in linked_tasks],
                 "session_id": session_id,
                 "log_session_id": resolved_session_id,
-                "log_available": bool(log_path),
+                "log_available": log_available,
                 "log_status": log_status,
-                "log_path": _relative_path(log_path, config.log_root) if log_path else "",
+                "log_path": log_path_text,
+                "log_source": resolution.log_source if log_path else ("executor" if execution_artifact else ""),
                 "session_status": str(session_data.get("status") or ""),
                 "response_success": bool(response_data.get("success")) if response_data else None,
                 "response_completed_at": str(response_data.get("completed_at") or ""),
@@ -975,6 +1059,7 @@ def _iter_mention_records(data_dir: Path) -> list[dict[str, Any]]:
             {
                 "request_id": mention_dir.name,
                 "mention_dir": mention_dir.name,
+                "mention_path": mention_dir,
                 "channel_id": channel_id,
                 "thread_ts": thread_ts,
                 "message_ts": message_ts,
@@ -1083,7 +1168,7 @@ def _derive_thread_status(
     request_statuses: list[str],
 ) -> str:
     statuses = [str(status or "").lower() for status in session_statuses + request_statuses]
-    if any(status in {"active", "initializing", "running"} for status in statuses):
+    if any(status in {"active", "initializing", "running", "stalled"} for status in statuses):
         return "active"
     if any(status in {"waiting_feedback", "waiting", "paused"} for status in statuses):
         return "waiting"
@@ -1099,45 +1184,88 @@ def _derive_thread_status(
 def _resolve_session_status(
     primary_status: str | None,
     events: list[dict[str, Any]],
+    *,
+    now_ts: float,
+    stalled_threshold_seconds: int,
+    mention_data: dict[str, Any] | None = None,
 ) -> str:
+    # mention_data가 있으면 session.yaml/response.yaml의 완료 상태를 우선 확인
+    if mention_data is not None:
+        if str(mention_data.get("session_status") or "").lower() == "completed":
+            return "completed"
+        if mention_data.get("response_success") is True:
+            return "completed"
+
     normalized = str(primary_status or "").strip().lower()
     if normalized:
         if normalized in {"cancelled"}:
             return "cancelled"
-        if normalized in {"error"}:
+        if normalized in {"error", "failed"}:
             return "failed"
-        if normalized in {"running", "initializing"}:
-            return "active"
         if normalized in {"waiting_feedback"}:
             return "waiting"
         if normalized in {"success", "done"}:
             return "completed"
+        if normalized == "stalled":
+            return "stalled"
         if normalized in {
-            "active",
             "waiting",
             "completed",
-            "failed",
             "pending",
             "paused",
-            "cancelled",
+            "waiting_feedback",
         }:
             return normalized
 
     if not events:
+        if normalized in {"active", "running", "initializing"}:
+            return "active"
         return "pending"
 
-    has_error = any(
-        str(event.get("kind") or "") == "tool_result"
+    tool_error_indices = [
+        i
+        for i, event in enumerate(events)
+        if str(event.get("kind") or "") == "tool_result"
         and str(event.get("status") or "").lower() == "error"
-        for event in events
-    )
-    if has_error:
+    ]
+    if tool_error_indices:
+        last_error_idx = max(tool_error_indices)
+        # 에러 이후에 assistant_output이 존재하면 복구된 것으로 간주 → failed 아님
+        recovered = any(
+            str(events[i].get("kind") or "") == "assistant_output"
+            for i in range(last_error_idx + 1, len(events))
+        )
+        if not recovered:
+            return "failed"
+
+    runtime = _extract_runtime_markers(events, now_ts)
+    last_terminal_type = str(runtime.get("last_terminal_type") or "")
+    if last_terminal_type == "processing_failed":
         return "failed"
+    if last_terminal_type == "processing_completed":
+        return "completed"
 
     last_event = events[-1]
     last_kind = str(last_event.get("kind") or "")
     last_status = str(last_event.get("status") or "").lower()
-    if last_status in {"running"} or last_kind == "tool_call":
+
+    has_running_signal = (
+        last_status in {"running"}
+        or last_kind == "tool_call"
+        or bool(runtime["last_started_ts"])
+        or bool(runtime["last_heartbeat_ts"])
+    )
+    if has_running_signal:
+        last_started = float(runtime["last_started_ts"] or 0.0)
+        last_progress = float(runtime["last_heartbeat_ts"] or 0.0) or last_started
+        has_terminal_after_start = bool(runtime["has_terminal_after_start"])
+        if (
+            last_started > 0.0
+            and not has_terminal_after_start
+            and last_progress > 0.0
+            and (now_ts - last_progress) > stalled_threshold_seconds
+        ):
+            return "stalled"
         return "active"
     if last_kind == "assistant_output":
         return "completed"
@@ -1147,6 +1275,54 @@ def _resolve_session_status(
     ):
         return "active"
     return "pending"
+
+
+def _extract_runtime_markers(events: list[dict[str, Any]], now_ts: float) -> dict[str, Any]:
+    """Extract running-state timestamps from session events."""
+    last_started_ts = 0.0
+    last_heartbeat_ts = 0.0
+    last_terminal_ts = 0.0
+    last_terminal_type = ""
+    elapsed_seconds = 0
+    heartbeat_pid: int | None = None
+
+    for event in events:
+        raw = event.get("raw")
+        if not isinstance(raw, dict):
+            continue
+        interaction_type = str(raw.get("type") or "")
+        event_ts = _to_time_value(event.get("ts") or raw.get("timestamp"))
+        metadata = raw.get("metadata")
+        metadata_dict = metadata if isinstance(metadata, dict) else {}
+
+        if interaction_type == "processing_started":
+            last_started_ts = max(last_started_ts, event_ts)
+        elif interaction_type == "processing_heartbeat":
+            last_heartbeat_ts = max(last_heartbeat_ts, event_ts)
+            if isinstance(metadata_dict.get("elapsed_seconds"), int | float):
+                elapsed_seconds = max(elapsed_seconds, int(metadata_dict.get("elapsed_seconds") or 0))
+            pid_val = metadata_dict.get("pid")
+            if isinstance(pid_val, int):
+                heartbeat_pid = pid_val
+        elif interaction_type in {"processing_completed", "processing_failed"}:
+            if event_ts >= last_terminal_ts:
+                last_terminal_ts = event_ts
+                last_terminal_type = interaction_type
+
+    if elapsed_seconds <= 0:
+        reference = last_heartbeat_ts or last_started_ts
+        if reference > 0.0 and now_ts >= reference:
+            elapsed_seconds = int(now_ts - reference)
+
+    return {
+        "last_started_ts": last_started_ts,
+        "last_heartbeat_ts": last_heartbeat_ts,
+        "last_terminal_ts": last_terminal_ts,
+        "last_terminal_type": last_terminal_type,
+        "has_terminal_after_start": last_terminal_ts >= last_started_ts and last_started_ts > 0.0,
+        "elapsed_seconds": max(0, elapsed_seconds),
+        "heartbeat_pid": heartbeat_pid,
+    }
 
 
 def _build_thread_title(text: str, fallback: str) -> str:
@@ -1172,7 +1348,7 @@ def _is_valid_thread_key(value: str | None) -> bool:
 
 def _is_live_session_status(value: str | None) -> bool:
     status = str(value or "").strip().lower()
-    return status in {"active", "initializing", "running", "waiting_feedback"}
+    return status in {"active", "initializing", "running", "waiting_feedback", "stalled"}
 
 
 def _to_time_value(value: Any) -> float:
@@ -1317,6 +1493,9 @@ def _build_thread_sessions(
     ]
     index_session_ids = _normalize_session_ids(index_map.get(thread_key))
     session_ids = _unique_preserve(mention_session_ids + index_session_ids)
+    runtime_cfg = get_config().executor
+    stalled_threshold_seconds = max(60, int(runtime_cfg.stalled_threshold_seconds or 600))
+    now_ts = time.time()
 
     sessions: list[dict[str, Any]] = []
     for session_id in session_ids:
@@ -1336,11 +1515,14 @@ def _build_thread_sessions(
             session_id=session_id,
             command_text=command_text,
             command_ts=command_ts,
+            mention_record=mention_for_session,
         )
         counts = summarize_event_counts(events)
 
         model_status = None
         session_obj = session_mgr.get_session(session_id)
+        external_session_id = ""
+        runner_pid: int | None = None
         if session_obj:
             model_status = str(session_obj.status.value)
             created_at = (
@@ -1349,6 +1531,8 @@ def _build_thread_sessions(
             updated_at = (
                 session_obj.updated_at.isoformat() if session_obj.updated_at else created_at
             )
+            external_session_id = str(getattr(session_obj, "external_session_id", "") or "")
+            runner_pid = getattr(session_obj, "runner_pid", None)
         else:
             model_status = (
                 str(mention_for_session.get("status") or "pending")
@@ -1358,7 +1542,16 @@ def _build_thread_sessions(
             created_at = command_ts or ""
             updated_at = created_at
 
-        status = _resolve_session_status(model_status, events)
+        runtime_markers = _extract_runtime_markers(events, now_ts)
+        if runner_pid is None and isinstance(runtime_markers.get("heartbeat_pid"), int):
+            runner_pid = int(runtime_markers.get("heartbeat_pid"))
+        status = _resolve_session_status(
+            model_status,
+            events,
+            now_ts=now_ts,
+            stalled_threshold_seconds=stalled_threshold_seconds,
+            mention_data=mention_for_session,
+        )
 
         summary_source = next(
             (
@@ -1391,6 +1584,9 @@ def _build_thread_sessions(
                 "request_full": request_full,
                 "request_preview": _trim(request_preview, 220),
                 "is_live": _is_live_session_status(status),
+                "external_session_id": external_session_id,
+                "runner_pid": runner_pid,
+                "elapsed_seconds": int(runtime_markers.get("elapsed_seconds") or 0),
             }
         )
 
@@ -1441,6 +1637,7 @@ def _build_session_worktree(
         session_id=session_id,
         command_text=command_text,
         command_ts=command_ts,
+        mention_record=mention_for_session,
     )
 
     sorted_events = sorted(events, key=lambda event: int(event.get("seq") or 0))
@@ -1497,16 +1694,35 @@ def _get_session_worktree_events(
     session_id: str,
     command_text: str | None,
     command_ts: str | None,
+    mention_record: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
     thread_key = f"{channel_id}_{thread_ts}"
-    log_path = _resolve_session_log_path(config.log_root, session_id)
+    session_mgr = _get_session_manager(config)
+    session_obj = session_mgr.get_session(session_id)
+    resolution = _resolve_session_log(
+        config=config,
+        session_id=session_id,
+        mention_record=mention_record,
+        session_obj=session_obj,
+        command_ts=command_ts,
+    )
     events = parse_session_worktree_events(
         session_id=session_id,
         thread_key=thread_key,
-        log_path=log_path,
+        log_path=resolution.log_path,
         command_text=command_text,
         command_ts=command_ts,
     )
+
+    if not any(event.get("kind") != "user_command" for event in events):
+        events = _append_execution_log_fallback_events(
+            events=events,
+            session_id=session_id,
+            thread_key=thread_key,
+            mention_dir=resolution.mention_dir,
+            mention_record=mention_record,
+            session_obj=session_obj,
+        )
 
     events = _append_interaction_fallback_events(
         config=config,
@@ -1517,11 +1733,52 @@ def _get_session_worktree_events(
         thread_ts=thread_ts,
     )
 
+    events = _append_missing_log_placeholder_event(
+        events=events,
+        session_id=session_id,
+        thread_key=thread_key,
+        mention_dir=resolution.mention_dir,
+        mention_record=mention_record,
+        session_obj=session_obj,
+    )
+
     events.sort(key=lambda event: int(event.get("seq") or 0))
     return events
 
 
+def _find_mention_for_session(
+    data_dir: Path, session_id: str
+) -> dict[str, Any] | None:
+    """data/mentions/ 디렉토리에서 session_id가 일치하는 mention record를 반환."""
+    mentions_root = data_dir / "mentions"
+    if not mentions_root.exists():
+        return None
+    try:
+        dirs = sorted(
+            (d for d in mentions_root.iterdir() if d.is_dir()),
+            key=lambda d: d.stat().st_mtime,
+            reverse=True,
+        )
+    except OSError:
+        return None
+    for mention_dir in dirs:
+        s_data = _read_yaml(mention_dir / "session.yaml")
+        if str(s_data.get("session_id") or "") == session_id:
+            message_ts = mention_dir.name.replace("_", ".", 1)
+            return {
+                "mention_path": mention_dir,
+                "message_ts": message_ts,
+                "created_at": str(s_data.get("created_at") or ""),
+                "session_id": session_id,
+                "session_status": str(s_data.get("status") or ""),
+                "response_success": _read_yaml(mention_dir / "response.yaml").get("success"),
+            }
+    return None
+
+
 def _resolve_session_log_path(log_root: Path, session_id: str) -> Path | None:
+    if not session_id:
+        return None
     if not log_root.exists():
         return None
     matches = [path for path in log_root.rglob(f"{session_id}.jsonl") if path.is_file()]
@@ -1529,6 +1786,385 @@ def _resolve_session_log_path(log_root: Path, session_id: str) -> Path | None:
         return None
     matches.sort(key=lambda path: path.stat().st_mtime, reverse=True)
     return matches[0]
+
+
+def _resolve_session_log(
+    *,
+    config: DashboardConfig,
+    session_id: str,
+    mention_record: dict[str, Any] | None,
+    session_obj: Any,
+    command_ts: str | None,
+) -> SessionLogResolution:
+    mention_dir = _coerce_mention_dir(mention_record)
+    candidate_pairs: list[tuple[str, str]] = []
+
+    def add_candidate(source: str, value: Any) -> None:
+        candidate = str(value or "").strip()
+        if not candidate:
+            return
+        if any(existing == candidate for _, existing in candidate_pairs):
+            return
+        candidate_pairs.append((source, candidate))
+
+    add_candidate("session_id", session_id)
+    if session_obj is not None:
+        add_candidate("external_session_id", getattr(session_obj, "external_session_id", None))
+    if mention_dir is not None:
+        session_data = _read_yaml(mention_dir / "session.yaml")
+        response_data = _read_yaml(mention_dir / "response.yaml")
+        add_candidate("mention_external_session_id", session_data.get("external_session_id"))
+        add_candidate("response_external_session_id", response_data.get("external_session_id"))
+
+    for source, candidate in candidate_pairs:
+        log_path = _resolve_session_log_path(config.log_root, candidate)
+        if log_path is not None:
+            return SessionLogResolution(
+                log_path=log_path,
+                log_source=source,
+                mention_dir=mention_dir,
+            )
+
+    message_ts = str((mention_record or {}).get("message_ts") or "").strip()
+    created_at = str((mention_record or {}).get("created_at") or "").strip()
+    if not created_at and session_obj is not None and getattr(session_obj, "created_at", None):
+        created_at = session_obj.created_at.isoformat()
+    if not created_at:
+        created_at = str(command_ts or "")
+
+    log_path = _resolve_session_log_path_by_message_ts(
+        config.log_root,
+        message_ts=message_ts,
+        created_at=created_at,
+    )
+    if log_path is not None:
+        return SessionLogResolution(
+            log_path=log_path,
+            log_source="message_ts",
+            mention_dir=mention_dir,
+        )
+
+    return SessionLogResolution(log_path=None, mention_dir=mention_dir)
+
+
+def _coerce_mention_dir(record: dict[str, Any] | None) -> Path | None:
+    if not record:
+        return None
+    raw = record.get("mention_path")
+    if isinstance(raw, Path):
+        return raw
+    text = str(raw or "").strip()
+    return Path(text) if text else None
+
+
+def _resolve_session_log_path_by_message_ts(
+    log_root: Path,
+    *,
+    message_ts: str,
+    created_at: str,
+    scan_limit: int = 200,
+    read_limit: int = 256_000,
+) -> Path | None:
+    if not message_ts or not log_root.exists():
+        return None
+
+    target_ts = _to_time_value(created_at)
+    candidates: list[tuple[float, float, Path]] = []
+    log_files = _iter_log_files(log_root)
+    log_files.sort(key=lambda path: path.stat().st_mtime, reverse=True)
+
+    for path in log_files[:scan_limit]:
+        try:
+            stat = path.stat()
+        except OSError:
+            continue
+        if target_ts and stat.st_mtime < target_ts - 1800:
+            continue
+
+        text = _read_text_prefix(path, read_limit)
+        if message_ts not in text:
+            continue
+
+        distance = abs(stat.st_mtime - target_ts) if target_ts else 0.0
+        candidates.append((distance, -stat.st_mtime, path))
+
+    if not candidates:
+        return None
+
+    candidates.sort(key=lambda item: (item[0], item[1]))
+    return candidates[0][2]
+
+
+def _read_text_prefix(path: Path, limit: int) -> str:
+    try:
+        with path.open("rb") as handle:
+            return handle.read(limit).decode("utf-8", errors="ignore")
+    except OSError:
+        return ""
+
+
+def _append_execution_log_fallback_events(
+    *,
+    events: list[dict[str, Any]],
+    session_id: str,
+    thread_key: str,
+    mention_dir: Path | None,
+    mention_record: dict[str, Any] | None,
+    session_obj: Any,
+) -> list[dict[str, Any]]:
+    if mention_dir is None or not mention_dir.exists():
+        return events
+
+    session_data = _read_yaml(mention_dir / "session.yaml")
+    response_data = _read_yaml(mention_dir / "response.yaml")
+    seq = max((int(event.get("seq") or 0) for event in events), default=0)
+    existing_ids = {str(event.get("event_id") or "") for event in events}
+    staged_entries: list[dict[str, Any]] = []
+
+    for stage, default_title in (("fork_failed", "Fork Failed"), ("main", "Assistant Output")):
+        result_data = _read_yaml(mention_dir / f"result_{stage}.yaml")
+        sections = _parse_execution_log_sections(mention_dir / f"execution_{stage}.log")
+        if not result_data and not any(sections.values()):
+            continue
+
+        ts = str(
+            result_data.get("executed_at")
+            or response_data.get("completed_at")
+            or session_data.get("completed_at")
+            or session_data.get("created_at")
+            or (mention_record or {}).get("created_at")
+            or ""
+        )
+        returncode = result_data.get("returncode")
+        success = result_data.get("success")
+        stdout = sections.get("stdout", "")
+        stderr = sections.get("stderr", "")
+        return_code_text = sections.get("return_code", "")
+
+        if stage == "fork_failed":
+            message = stderr or stdout or _build_execution_status_summary(returncode, return_code_text)
+            if message:
+                staged_entries.append(
+                    {
+                        "sort_ts": _to_time_value(ts),
+                        "ts": ts,
+                        "kind": "assistant_observation",
+                        "status": "error",
+                        "title": default_title,
+                        "summary": _trim(message, 160),
+                        "preview": _trim(message, 800),
+                        "raw": {
+                            "source": "execution_log",
+                            "stage": stage,
+                            "result": result_data,
+                            "path": str(mention_dir / f"execution_{stage}.log"),
+                        },
+                    }
+                )
+            continue
+
+        if stdout:
+            staged_entries.append(
+                {
+                    "sort_ts": _to_time_value(ts),
+                    "ts": ts,
+                    "kind": "assistant_output",
+                    "status": "ok" if success is not False else "error",
+                    "title": default_title,
+                    "summary": _trim(stdout, 160),
+                    "preview": _trim(stdout, 800),
+                    "raw": {
+                        "source": "execution_log",
+                        "stage": stage,
+                        "result": result_data,
+                        "path": str(mention_dir / f"execution_{stage}.log"),
+                    },
+                }
+            )
+
+        if stderr:
+            staged_entries.append(
+                {
+                    "sort_ts": _to_time_value(ts) + 0.001,
+                    "ts": ts,
+                    "kind": "assistant_observation",
+                    "status": "error",
+                    "title": "Execution Error",
+                    "summary": _trim(stderr, 160),
+                    "preview": _trim(stderr, 800),
+                    "raw": {
+                        "source": "execution_log",
+                        "stage": stage,
+                        "result": result_data,
+                        "path": str(mention_dir / f"execution_{stage}.log"),
+                    },
+                }
+            )
+        elif success is False:
+            failure_summary = _build_execution_status_summary(returncode, return_code_text)
+            staged_entries.append(
+                {
+                    "sort_ts": _to_time_value(ts) + 0.001,
+                    "ts": ts,
+                    "kind": "assistant_observation",
+                    "status": "error",
+                    "title": "Execution Failed",
+                    "summary": _trim(failure_summary, 160),
+                    "preview": _trim(failure_summary, 800),
+                    "raw": {
+                        "source": "execution_log",
+                        "stage": stage,
+                        "result": result_data,
+                        "path": str(mention_dir / f"execution_{stage}.log"),
+                    },
+                }
+            )
+
+    staged_entries.sort(key=lambda item: (item.get("sort_ts") or 0.0, str(item.get("title") or "")))
+
+    for index, entry in enumerate(staged_entries):
+        event_id = f"{session_id}:executor:{index}"
+        if event_id in existing_ids:
+            continue
+        seq += 1
+        events.append(
+            {
+                "event_id": event_id,
+                "thread_key": thread_key,
+                "session_id": session_id,
+                "seq": seq,
+                "ts": entry.get("ts") or "",
+                "kind": entry.get("kind"),
+                "status": entry.get("status"),
+                "title": entry.get("title"),
+                "summary": entry.get("summary"),
+                "preview": entry.get("preview"),
+                "parent_event_id": None,
+                "tool_use_id": None,
+                "raw": entry.get("raw") or {},
+            }
+        )
+        existing_ids.add(event_id)
+
+    return events
+
+
+def _parse_execution_log_sections(path: Path) -> dict[str, str]:
+    if not path.exists():
+        return {}
+
+    try:
+        content = path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return {}
+
+    sections: dict[str, list[str]] = {}
+    current: str | None = None
+    for raw_line in content.splitlines():
+        line = raw_line.rstrip("\n")
+        if line.startswith("=== ") and line.endswith(" ==="):
+            header = line[4:-4].strip().lower().replace(" ", "_")
+            current = header
+            sections.setdefault(current, [])
+            continue
+        if current is not None:
+            sections.setdefault(current, []).append(line)
+
+    return {
+        key: "\n".join(lines).strip()
+        for key, lines in sections.items()
+        if "\n".join(lines).strip()
+    }
+
+
+def _build_execution_status_summary(returncode: Any, return_code_text: str) -> str:
+    if returncode is not None:
+        return f"Execution failed with return code {returncode}"
+    if return_code_text:
+        return f"Execution finished with return code {return_code_text}"
+    return "Execution finished without a recoverable Claude JSONL."
+
+
+def _first_execution_artifact_path(mention_dir: Path | None) -> Path | None:
+    if mention_dir is None or not mention_dir.exists():
+        return None
+    for candidate in (
+        mention_dir / "execution_main.log",
+        mention_dir / "execution_fork_failed.log",
+        mention_dir / "result_main.yaml",
+        mention_dir / "result_fork_failed.yaml",
+    ):
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def _append_missing_log_placeholder_event(
+    *,
+    events: list[dict[str, Any]],
+    session_id: str,
+    thread_key: str,
+    mention_dir: Path | None,
+    mention_record: dict[str, Any] | None,
+    session_obj: Any,
+) -> list[dict[str, Any]]:
+    if any(event.get("kind") != "user_command" for event in events):
+        return events
+
+    session_status = ""
+    created_at = str((mention_record or {}).get("created_at") or "")
+    if session_obj is not None:
+        session_status = str(getattr(getattr(session_obj, "status", None), "value", "") or "")
+        if not created_at and getattr(session_obj, "created_at", None):
+            created_at = session_obj.created_at.isoformat()
+
+    if mention_dir is not None and mention_dir.exists():
+        session_data = _read_yaml(mention_dir / "session.yaml")
+        response_data = _read_yaml(mention_dir / "response.yaml")
+        if not session_status:
+            session_status = _derive_mention_status(session_data, response_data)
+        if not created_at:
+            created_at = str(
+                session_data.get("created_at")
+                or response_data.get("completed_at")
+                or ""
+            )
+
+    normalized_status = session_status.strip().lower()
+    if normalized_status in {"active", "initializing", "running", "started", "pending"}:
+        title = "Claude Log Pending"
+        status = "running"
+        text = "Session started, but no Claude JSONL or executor output is available yet."
+    elif normalized_status in {"completed", "success"}:
+        title = "Claude Log Missing"
+        status = "info"
+        text = "Session completed, but no Claude JSONL or executor output was saved."
+    elif normalized_status in {"failed", "error", "cancelled"}:
+        title = "Execution Failed"
+        status = "error"
+        text = "Session ended without a recoverable Claude JSONL."
+    else:
+        return events
+
+    seq = max((int(event.get("seq") or 0) for event in events), default=0) + 1
+    events.append(
+        {
+            "event_id": f"{session_id}:placeholder",
+            "thread_key": thread_key,
+            "session_id": session_id,
+            "seq": seq,
+            "ts": created_at,
+            "kind": "assistant_observation",
+            "status": status,
+            "title": title,
+            "summary": _trim(text, 160),
+            "preview": _trim(text, 800),
+            "parent_event_id": None,
+            "tool_use_id": None,
+            "raw": {"source": "placeholder", "status": normalized_status},
+        }
+    )
+    return events
 
 
 def _append_interaction_fallback_events(
@@ -1594,6 +2230,8 @@ def _append_interaction_fallback_events(
                     kind = "assistant_observation"
                     title = "Processing Started"
                     status = "running"
+                elif interaction_type == "processing_heartbeat":
+                    continue  # heartbeat는 UI 카드로 표시하지 않음
                 elif interaction_type == "processing_completed":
                     kind = "assistant_observation"
                     title = "Processing Completed"
@@ -2550,10 +3188,10 @@ def _start_manual_session_executor(
     try:
         runtime_cfg = get_config()
         claude_cmd = str(runtime_cfg.executor.claude_command or "claude")
-        timeout_seconds = int(runtime_cfg.executor.agentic_timeout_seconds or 1800)
+        timeout_seconds = int(runtime_cfg.executor.agentic_timeout_seconds or 86400)
     except Exception:
         claude_cmd = "claude"
-        timeout_seconds = 1800
+        timeout_seconds = 86400
 
     command = [
         claude_cmd,
@@ -2713,6 +3351,8 @@ def _build_agent_sessions(
                 "transition_count": len(session.role_transitions),
                 "exploration_id": session.exploration_id,
                 "task_id": session.task_id,
+                "external_session_id": getattr(session, "external_session_id", None),
+                "runner_pid": getattr(session, "runner_pid", None),
             }
         )
 
@@ -2768,6 +3408,9 @@ def _build_agent_session_detail(
         ],
         "context_memory_id": session.context_memory_id,
         "pending_feedback": session.pending_feedback,
+        "forked_from": session.forked_from,
+        "external_session_id": getattr(session, "external_session_id", None),
+        "runner_pid": getattr(session, "runner_pid", None),
     }
 
 
@@ -3516,4 +4159,469 @@ def _build_memory_context(
         "entries": entries_data,
         "total": len(entries_data),
         "by_key": list(memory.by_key.keys()),
+    }
+
+
+# === LTM (Long-Term Memory) API Helpers ===
+
+
+def _get_ltm_store(config: DashboardConfig) -> Any:
+    """Lazily create a RecordStore for LTM access."""
+    from ultrawork.memory.record_store import RecordStore
+
+    return RecordStore(config.data_dir)
+
+
+def _serialize_request_record(rec: Any) -> dict[str, Any]:
+    """Serialize a RequestRecord to a JSON-friendly dict."""
+    return {
+        "id": rec.id,
+        "type": "request",
+        "who": rec.who,
+        "when": rec.when.isoformat() if rec.when else "",
+        "where": rec.where,
+        "what": rec.what,
+        "topics": rec.topics,
+        "how_steps": len(rec.how),
+        "links_count": len(rec.links),
+        "causality_count": len(rec.causality),
+        "created_at": rec.created_at.isoformat() if rec.created_at else "",
+        "updated_at": rec.updated_at.isoformat() if rec.updated_at else "",
+    }
+
+
+def _serialize_work_record(rec: Any) -> dict[str, Any]:
+    """Serialize a WorkRecord to a JSON-friendly dict."""
+    actions_summary = ", ".join(a.action for a in rec.what[:3]) if rec.what else ""
+    return {
+        "id": rec.id,
+        "type": "work",
+        "who": rec.who,
+        "when": rec.when.isoformat() if rec.when else "",
+        "what_summary": actions_summary,
+        "request_ref": rec.request_ref or "",
+        "step_ref": rec.why.step_ref or "",
+        "purpose": rec.why.immediate_goal,
+        "topics": rec.topics,
+        "inputs": rec.where.inputs,
+        "outputs": rec.where.outputs,
+        "links_count": len(rec.links),
+        "causality_count": len(rec.why.causality),
+        "created_at": rec.created_at.isoformat() if rec.created_at else "",
+        "updated_at": rec.updated_at.isoformat() if rec.updated_at else "",
+    }
+
+
+def _serialize_semantic_record(rec: Any) -> dict[str, Any]:
+    """Serialize a semantic record (knowledge/decision/insight/event) for the API."""
+    return {
+        "id": rec.id,
+        "type": rec.type,
+        "who": rec.who,
+        "when": rec.when.isoformat() if rec.when else "",
+        "where": rec.where if hasattr(rec, "where") else "",
+        "what": rec.what or "",
+        "topics": rec.topics,
+        "links_count": len(rec.links),
+        "causality_count": 0,
+        "created_at": rec.created_at.isoformat() if rec.created_at else "",
+        "updated_at": rec.updated_at.isoformat() if rec.updated_at else "",
+    }
+
+
+# Semantic types to iterate when loading all records
+_SEMANTIC_TYPES = ("knowledge", "decision", "insight", "event")
+
+
+def _build_ltm_records(
+    config: DashboardConfig,
+    type_filter: str | None = None,
+    topic_filter: str | None = None,
+) -> dict[str, Any]:
+    """Build a list of all LTM records."""
+    store = _get_ltm_store(config)
+    records: list[dict[str, Any]] = []
+
+    if not type_filter or type_filter == "request":
+        for req in store.list_requests():
+            if topic_filter and topic_filter not in req.topics:
+                continue
+            records.append(_serialize_request_record(req))
+
+    if not type_filter or type_filter == "work":
+        for wrk in store.list_works():
+            if topic_filter and topic_filter not in wrk.topics:
+                continue
+            records.append(_serialize_work_record(wrk))
+
+    for sem_type in _SEMANTIC_TYPES:
+        if type_filter and type_filter != sem_type:
+            continue
+        for rec in store.list_semantic(sem_type):
+            if topic_filter and topic_filter not in rec.topics:
+                continue
+            records.append(_serialize_semantic_record(rec))
+
+    # Sort by created_at descending
+    records.sort(key=lambda r: r.get("created_at", ""), reverse=True)
+
+    return {
+        "records": records,
+        "total": len(records),
+    }
+
+
+def _build_ltm_record_detail(
+    config: DashboardConfig,
+    record_id: str,
+) -> dict[str, Any]:
+    """Build detailed view of a single LTM record."""
+    import frontmatter as fm
+
+    store = _get_ltm_store(config)
+
+    # Try loading as request first, then work, then semantic
+    req = store.load_request(record_id)
+    if req:
+        data = _serialize_request_record(req)
+        data["why"] = [{"hypothesis": h.hypothesis, "confidence": h.confidence} for h in req.why]
+        data["how"] = [
+            {
+                "step_id": s.step_id,
+                "goal": s.goal,
+                "done": s.done,
+                "expected_artifacts": s.expected_artifacts,
+            }
+            for s in req.how
+        ]
+        data["links"] = [
+            {"target_id": ln.target_id, "relation": ln.relation.value, "weight": ln.weight}
+            for ln in req.links
+        ]
+        data["causality"] = [
+            {"target_id": cl.target_id, "relation": cl.relation.value, "reason": cl.reason}
+            for cl in req.causality
+        ]
+        data["facet_keys"] = req.facet_keys
+        data["touched_uris"] = req.touched_uris
+        data["produced_uris"] = req.produced_uris
+        data["save_signals"] = (
+            {
+                "novelty": req.save_signals.novelty,
+                "actionability": req.save_signals.actionability,
+                "persistence": req.save_signals.persistence,
+                "connectedness": req.save_signals.connectedness,
+                "score": req.save_signals.score,
+            }
+            if req.save_signals
+            else None
+        )
+        # Read raw body from file
+        file_path = store.requests_dir / f"{record_id}.md"
+        if file_path.exists():
+            post = fm.load(str(file_path))
+            data["body"] = post.content
+        else:
+            data["body"] = ""
+        return data
+
+    wrk = store.load_work(record_id)
+    if wrk:
+        data = _serialize_work_record(wrk)
+        data["what_actions"] = [{"action": a.action, "output": a.output} for a in wrk.what]
+        data["why_detail"] = {
+            "kind": wrk.why.kind.value,
+            "step_ref": wrk.why.step_ref or "",
+            "immediate_goal": wrk.why.immediate_goal,
+            "causality": [
+                {"target_id": cl.target_id, "relation": cl.relation.value, "reason": cl.reason}
+                for cl in wrk.why.causality
+            ],
+        }
+        data["links"] = [
+            {"target_id": ln.target_id, "relation": ln.relation.value, "weight": ln.weight}
+            for ln in wrk.links
+        ]
+        data["facet_keys"] = wrk.facet_keys
+        data["evidence"] = wrk.evidence
+        data["touched_uris"] = wrk.touched_uris
+        data["produced_uris"] = wrk.produced_uris
+        data["save_signals"] = (
+            {
+                "novelty": wrk.save_signals.novelty,
+                "actionability": wrk.save_signals.actionability,
+                "persistence": wrk.save_signals.persistence,
+                "connectedness": wrk.save_signals.connectedness,
+                "score": wrk.save_signals.score,
+            }
+            if wrk.save_signals
+            else None
+        )
+        file_path = store.works_dir / f"{record_id}.md"
+        if file_path.exists():
+            post = fm.load(str(file_path))
+            data["body"] = post.content
+        else:
+            data["body"] = ""
+        return data
+
+    # Try semantic record types
+    sem = store.load_semantic(record_id)
+    if sem:
+        data = _serialize_semantic_record(sem)
+        data["links"] = [
+            {"target_id": ln.target_id, "relation": ln.relation.value, "weight": ln.weight}
+            for ln in sem.links
+        ]
+        data["facet_keys"] = sem.facet_keys
+        data["save_signals"] = (
+            {
+                "novelty": sem.save_signals.novelty,
+                "actionability": sem.save_signals.actionability,
+                "persistence": sem.save_signals.persistence,
+                "connectedness": sem.save_signals.connectedness,
+                "score": sem.save_signals.score,
+            }
+            if sem.save_signals
+            else None
+        )
+        # Type-specific extra fields
+        for field in (
+            "summary", "source", "period", "context", "alternatives",
+            "rationale", "outcome", "pattern", "evidence", "implication",
+            "severity", "impact", "resolution",
+        ):
+            val = getattr(sem, field, None)
+            if val:
+                data[field] = val
+        # Read raw body from file
+        type_name = store._detect_type(record_id)
+        if type_name and type_name in store._type_registry:
+            dir_path = store._type_registry[type_name][0]
+            file_path = dir_path / f"{record_id}.md"
+            if file_path.exists():
+                post = fm.load(str(file_path))
+                data["body"] = post.content
+            else:
+                data["body"] = ""
+        else:
+            data["body"] = ""
+        return data
+
+    return {"error": "Record not found", "record_id": record_id}
+
+
+def _build_ltm_graph(config: DashboardConfig) -> dict[str, Any]:
+    """Build graph data (nodes + edges) for D3 visualization."""
+    store = _get_ltm_store(config)
+    nodes: list[dict[str, Any]] = []
+    edges: list[dict[str, Any]] = []
+    node_ids: set[str] = set()
+
+    for req in store.list_requests():
+        nodes.append(
+            {
+                "id": req.id,
+                "type": "request",
+                "label": req.what[:50] if req.what else req.id,
+                "topics": req.topics,
+                "created_at": req.created_at.isoformat() if req.created_at else "",
+            }
+        )
+        node_ids.add(req.id)
+
+    for wrk in store.list_works():
+        label = wrk.why.immediate_goal[:50] if wrk.why.immediate_goal else wrk.id
+        nodes.append(
+            {
+                "id": wrk.id,
+                "type": "work",
+                "label": label,
+                "topics": wrk.topics,
+                "request_ref": wrk.request_ref or "",
+                "created_at": wrk.created_at.isoformat() if wrk.created_at else "",
+            }
+        )
+        node_ids.add(wrk.id)
+
+    for sem_type in _SEMANTIC_TYPES:
+        for rec in store.list_semantic(sem_type):
+            nodes.append(
+                {
+                    "id": rec.id,
+                    "type": rec.type,
+                    "label": (rec.what[:50] if rec.what else rec.id),
+                    "topics": rec.topics,
+                    "created_at": rec.created_at.isoformat() if rec.created_at else "",
+                }
+            )
+            node_ids.add(rec.id)
+
+    # Build edges from all link types
+    for req in store.list_requests():
+        # ShallowLinks
+        for ln in req.links:
+            if ln.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": req.id,
+                        "target": ln.target_id,
+                        "type": "shallow",
+                        "relation": ln.relation.value,
+                        "weight": ln.weight,
+                    }
+                )
+        # CausalLinks
+        for cl in req.causality:
+            if cl.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": req.id,
+                        "target": cl.target_id,
+                        "type": "causal",
+                        "relation": cl.relation.value,
+                        "reason": cl.reason,
+                    }
+                )
+
+    for wrk in store.list_works():
+        # request_ref edge
+        if wrk.request_ref and wrk.request_ref in node_ids:
+            edges.append(
+                {
+                    "source": wrk.id,
+                    "target": wrk.request_ref,
+                    "type": "request_ref",
+                    "relation": "implements",
+                }
+            )
+        # ShallowLinks
+        for ln in wrk.links:
+            if ln.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": wrk.id,
+                        "target": ln.target_id,
+                        "type": "shallow",
+                        "relation": ln.relation.value,
+                        "weight": ln.weight,
+                    }
+                )
+        # CausalLinks from why
+        for cl in wrk.why.causality:
+            if cl.target_id in node_ids:
+                edges.append(
+                    {
+                        "source": wrk.id,
+                        "target": cl.target_id,
+                        "type": "causal",
+                        "relation": cl.relation.value,
+                        "reason": cl.reason,
+                    }
+                )
+
+    # Semantic record links
+    for sem_type in _SEMANTIC_TYPES:
+        for rec in store.list_semantic(sem_type):
+            for ln in rec.links:
+                if ln.target_id in node_ids:
+                    edges.append(
+                        {
+                            "source": rec.id,
+                            "target": ln.target_id,
+                            "type": "shallow",
+                            "relation": ln.relation.value,
+                            "weight": ln.weight,
+                        }
+                    )
+
+    return {
+        "nodes": nodes,
+        "edges": edges,
+        "node_count": len(nodes),
+        "edge_count": len(edges),
+    }
+
+
+def _build_ltm_search(
+    config: DashboardConfig,
+    query: str,
+    top_k: int = 20,
+) -> dict[str, Any]:
+    """Search LTM records with weighted facet matching."""
+    if not query.strip():
+        return {"results": [], "total": 0, "query": query}
+
+    from ultrawork.memory.search import MemorySearchEngine
+
+    store = _get_ltm_store(config)
+    engine = MemorySearchEngine(store, store.facet_index)
+    results = engine.search(query, top_k=top_k)
+
+    return {
+        "results": [
+            {
+                "record_id": r.record_id,
+                "record_type": r.record_type,
+                "score": round(r.score, 3),
+                "matched_facets": r.matched_facets,
+                "snippet": r.snippet,
+            }
+            for r in results
+        ],
+        "total": len(results),
+        "query": query,
+    }
+
+
+def _build_ltm_stats(config: DashboardConfig) -> dict[str, Any]:
+    """Build LTM system statistics."""
+    store = _get_ltm_store(config)
+    requests = store.list_requests()
+    works = store.list_works()
+
+    # Collect all topics
+    topic_counts: dict[str, int] = {}
+    for req in requests:
+        for t in req.topics:
+            topic_counts[t] = topic_counts.get(t, 0) + 1
+    for wrk in works:
+        for t in wrk.topics:
+            topic_counts[t] = topic_counts.get(t, 0) + 1
+
+    # Count causal links
+    causal_count = sum(len(r.causality) for r in requests) + sum(
+        len(w.why.causality) for w in works
+    )
+
+    # Count shallow links
+    shallow_count = sum(len(r.links) for r in requests) + sum(len(w.links) for w in works)
+
+    # Semantic type counts
+    semantic_counts: dict[str, int] = {}
+    total_semantic = 0
+    for sem_type in _SEMANTIC_TYPES:
+        sem_records = store.list_semantic(sem_type)
+        semantic_counts[sem_type] = len(sem_records)
+        total_semantic += len(sem_records)
+        for rec in sem_records:
+            for t in rec.topics:
+                topic_counts[t] = topic_counts.get(t, 0) + 1
+            shallow_count += len(rec.links)
+
+    # Sort topics by count
+    sorted_topics = sorted(topic_counts.items(), key=lambda x: x[1], reverse=True)
+
+    return {
+        "request_count": len(requests),
+        "work_count": len(works),
+        "knowledge_count": semantic_counts.get("knowledge", 0),
+        "decision_count": semantic_counts.get("decision", 0),
+        "insight_count": semantic_counts.get("insight", 0),
+        "event_count": semantic_counts.get("event", 0),
+        "total_count": len(requests) + len(works) + total_semantic,
+        "causal_link_count": causal_count,
+        "shallow_link_count": shallow_count,
+        "topics": [{"name": name, "count": count} for name, count in sorted_topics],
+        "topic_count": len(topic_counts),
     }

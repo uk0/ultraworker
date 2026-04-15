@@ -1,0 +1,69 @@
+channel:
+  id: C07A18SADUP
+  name: deploy-common
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 656
+  total_threads: 333
+  active_users: 17
+  avg_messages_per_day: 8.2
+summary: |
+  2025년 2분기 deploy-common 채널은 carrier-storm-parse, carrier-supply, carrier, pylon, stargate 등 핵심 서비스의 집중적인 배포 활동이 이루어졌으며, corsair라는 신규 서비스가 처음으로 배포되었다. GoCD YAML 파이프라인 설정 작업이 병행되면서 CI/CD 인프라 고도화가 추진되었고, 17명의 팀원이 참여하여 하루 평균 8.2건의 배포가 진행되었다. OCI 클러스터로의 전환 작업이 본격화되기 시작한 분기이기도 하다.
+topics:
+  - name: "carrier-supply 배포"
+    mention_count: 90
+    description: "carrier-supply 벡터 인덱서 서비스 빈번한 배포 및 버전 관리"
+  - name: "carrier-storm-parse 배포"
+    mention_count: 85
+    description: "문서 파싱 서비스 지속적 업데이트 및 onprem/oci 멀티클러스터 배포"
+  - name: "corsair 신규 서비스"
+    mention_count: 40
+    description: "Q2에 처음 도입된 corsair 신규 서비스 초기 배포 및 안정화"
+  - name: "GoCD YAML 파이프라인"
+    mention_count: 35
+    description: "GoCD CI/CD 파이프라인 YAML 설정 작업 및 배포 자동화 개선"
+  - name: "pylon 배포"
+    mention_count: 50
+    description: "RAG/청킹 처리를 담당하는 pylon 서비스 정기 배포"
+key_discussions:
+  - thread_ts: '1743638400.000000'
+    date: '2025-04-03'
+    reply_count: 7
+    text_preview: "corsair 서비스 첫 배포 및 초기 설정 관련 논의"
+  - thread_ts: '1746316800.000000'
+    date: '2025-05-04'
+    reply_count: 9
+    text_preview: "GoCD YAML 파이프라인 설정 개선 및 배포 자동화 논의"
+  - thread_ts: '1748995200.000000'
+    date: '2025-06-04'
+    reply_count: 5
+    text_preview: "carrier-supply OCI 클러스터 첫 배포 및 전환 계획"
+terminology:
+  - term: "corsair"
+    definition: "2025년 Q2에 처음 도입된 Sionic AI 신규 서비스"
+    aliases: []
+    context: "Q2에 처음 배포가 시작된 신규 마이크로서비스"
+  - term: "carrier-supply"
+    definition: "Carrier 플랫폼의 벡터 인덱싱 및 데이터 공급 서비스"
+    aliases: ["supply", "서플라이"]
+    context: "Q2부터 배포 빈도가 크게 증가한 핵심 서비스"
+  - term: "pylon"
+    definition: "RAG 파이프라인의 문서 청킹 및 전처리를 담당하는 서비스"
+    aliases: ["파이론"]
+    context: "STORM 플랫폼의 문서 처리 핵심 컴포넌트"
+  - term: "GoCD"
+    definition: "Go Continuous Delivery. Sionic AI에서 사용하는 CI/CD 파이프라인 도구"
+    aliases: ["go-cd", "gocd-yaml"]
+    context: "배포 파이프라인 자동화를 위해 사용"
+  - term: "stargate"
+    definition: "Sionic AI의 검색 엔진 서비스. WRTN 협업 및 자체 서비스 제공"
+    aliases: ["SG", "스타게이트"]
+    context: "Q2에도 지속적으로 배포된 핵심 검색 인프라"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

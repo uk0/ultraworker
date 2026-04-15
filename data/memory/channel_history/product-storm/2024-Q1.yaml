@@ -1,0 +1,90 @@
+channel:
+  id: C05BUTMULMD
+  name: product-storm
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 404
+  total_threads: 334
+  active_users: 17
+  avg_messages_per_day: 5.9
+summary: |
+  2024년 1분기 product-storm 채널에서는 Storm Answer 제품의 0.8.0 라이브 배포를 중심으로 활발한 개발 및 QA 활동이 진행되었다.
+  Pylon 임베딩 서버 이관(논스 -> GPU worker 6), Qdrant 1.8.1 버전 업그레이드, Stargate EKS 이관 등 인프라 고도화 작업이 주요 이슈였다.
+  프론트엔드에서는 권한 관리 페이지 기획, 피드백 등록 기능, 일본어 지원, 스트리밍/중지 기능 등이 개발되었고 다수의 버그 수정 및 QA가 이루어졌다.
+  고객사 수협(KT) 데모 대응, HyperCLOVA X RPM 상향, Stargate 어드민 페이지(Retool) 구축 등 비즈니스 관련 논의도 활발했다.
+topics:
+  - name: "Storm Answer 0.8.0 배포"
+    count: 25
+    description: "라이브 배포 준비, PR 정리, 순단 배포 일정 조율 및 QA 진행"
+  - name: "Pylon 임베딩 서버 이관"
+    count: 15
+    description: "논스에서 GPU worker 6으로 임베딩 서버 이관, 한국어/일본어 모델 로드밸런싱"
+  - name: "Qdrant 버전 업그레이드"
+    count: 12
+    description: "Qdrant 1.8.1 업그레이드, 스냅샷 백업, 롤링 업데이트 전략 논의"
+  - name: "프론트엔드 QA 및 버그 수정"
+    count: 40
+    description: "문서 다운로드, 피드백 등록, 스트리밍 기능 등 다수의 QA 및 버그 수정"
+  - name: "권한 관리 기획"
+    count: 8
+    description: "팀별 접근권한, 공유 URL 권한 처리 기획 및 개발"
+  - name: "일본어 지원"
+    count: 10
+    description: "일본어 에이전트 생성, 번역 검수, 다국어 처리"
+  - name: "고객사 대응"
+    count: 8
+    description: "수협(KT) 데모, HyperCLOVA X RPM 상향, 고객 피드백 대응"
+key_discussions:
+  - thread_ts: '1710917890.001599'
+    date: '2024-03-20'
+    reply_count: 105
+    text_preview: "배포 타겟 시간 언제일까용 - 0.8.0 라이브 배포 일정 조율"
+  - thread_ts: '1711516880.550099'
+    date: '2024-03-27'
+    reply_count: 69
+    text_preview: "혹시 배포중일까요? 작심 시연중인데 답이 안나와서용 - 라이브 장애 대응"
+  - thread_ts: '1711620588.856209'
+    date: '2024-03-28'
+    reply_count: 63
+    text_preview: "권한 관리 페이지 기획 - 팀별 접근권한 설계"
+  - thread_ts: '1711692938.112129'
+    date: '2024-03-29'
+    reply_count: 60
+    text_preview: "gpt 4-0314버전의 종료일 관련 논의 - LLM 모델 마이그레이션"
+  - thread_ts: '1710994708.606649'
+    date: '2024-03-21'
+    reply_count: 54
+    text_preview: "문서 다운로드 관련 - 프론트/백엔드 연동 이슈"
+  - thread_ts: '1711518291.466089'
+    date: '2024-03-27'
+    reply_count: 57
+    text_preview: "피드백 등록 기능 QA 요청 - 피드백 CRUD 기능 검증"
+terminology:
+  - term: "Pylon"
+    definition: "Sionic AI의 RAG 엔진 백엔드 서비스. 문서 파싱, 임베딩, 검색, LLM 호출을 담당"
+    aliases: ["파일론"]
+    context: "Storm Answer의 핵심 백엔드 컴포넌트"
+  - term: "Stargate"
+    definition: "Storm 제품의 API 서버 및 웹 프론트엔드 서비스"
+    aliases: ["스타게이트", "스게"]
+    context: "사용자 인터페이스와 API를 제공하는 서비스 레이어"
+  - term: "Qdrant"
+    definition: "벡터 데이터베이스. 문서 임베딩을 저장하고 유사도 검색에 사용"
+    aliases: []
+    context: "RAG 파이프라인에서 벡터 검색을 담당하는 외부 솔루션"
+  - term: "HyperCLOVA X"
+    definition: "네이버클라우드의 LLM 모델. KT 고객사에서 사용"
+    aliases: ["HCX"]
+    context: "RPM/TPM 상향 요청 등 고객사 PoC 대응에서 주로 논의"
+  - term: "Retool"
+    definition: "내부 어드민 도구 구축 플랫폼. Stargate 어드민 페이지 제작에 사용"
+    aliases: ["리툴"]
+    context: "유저 대화 내역, 참고 context, 사용된 Document 조회용 어드민 구축"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

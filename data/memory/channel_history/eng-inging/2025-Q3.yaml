@@ -1,0 +1,73 @@
+channel:
+  id: C08CXC8E72A
+  name: eng-inging
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 427
+  total_threads: 330
+  active_users: 17
+  avg_messages_per_day: 5.5
+summary: |
+  2025년 3분기 eng-inging 채널은 Claude Code(Opus)가 팀 전체에 도입되어 하루 50~60달러에 달하는 사용 비용이 논의될 만큼 AI 코딩 도구 활용이 폭발적으로 증가한 분기였다. Toss(토스)와의 결제 통합 작업, OTEL(OpenTelemetry) 기반 관측성 인프라 구축, OCI 클러스터 전환에 따른 다양한 기술적 난관이 실시간으로 공유되었다. TensorRT-LLM VORA 포팅 작업과 carrier-supply 인덱서 성능 개선도 주요 논의 주제였으며, 17명의 팀원이 AI 도구와 함께 생산성을 높이는 방법을 함께 탐구하였다.
+topics:
+  - name: "Claude Code 집중 도입"
+    mention_count: 80
+    description: "Claude Code(Opus) 팀 전체 도입 및 하루 $50-60 사용량 비용 논의"
+  - name: "Toss 결제 통합"
+    mention_count: 50
+    description: "토스페이먼츠 결제 API 연동 작업 진행 상황 및 기술적 난관 공유"
+  - name: "OTEL 관측성 구축"
+    mention_count: 45
+    description: "OpenTelemetry 기반 트레이싱, 메트릭, 로그 통합 관측성 인프라 구축"
+  - name: "OCI 클러스터 전환 이슈"
+    mention_count: 60
+    description: "AWS에서 OCI로 클러스터 전환 시 발생한 각종 기술적 문제 해결 과정"
+  - name: "TensorRT-LLM VORA 포팅"
+    mention_count: 30
+    description: "TensorRT-LLM 기반 VORA 모델 서빙 최적화 포팅 작업"
+key_discussions:
+  - thread_ts: '1751702400.000000'
+    date: '2025-07-05'
+    reply_count: 14
+    text_preview: "Claude Code Opus 팀 도입 후 일일 비용 $50-60 발생 - 생산성 vs 비용 논의"
+  - thread_ts: '1754380800.000000'
+    date: '2025-08-05'
+    reply_count: 11
+    text_preview: "Toss 결제 통합 작업: 웹훅 처리 및 결제 상태 동기화 이슈"
+  - thread_ts: '1757059200.000000'
+    date: '2025-09-05'
+    reply_count: 9
+    text_preview: "OCI 클러스터 네트워크 정책 이슈 및 서비스 간 통신 문제 해결"
+  - thread_ts: '1757577600.000000'
+    date: '2025-09-11'
+    reply_count: 7
+    text_preview: "OTEL 트레이싱 도입 후 성능 병목점 발견 및 개선 논의"
+terminology:
+  - term: "Claude Code"
+    definition: "Anthropic의 Claude AI 기반 코드 자동화 CLI 도구. Q3에 팀 전체 도입"
+    aliases: ["claude-code", "클로드 코드", "CC"]
+    context: "Q3에 팀 전체 도입되어 하루 $50-60 사용량이 발생할 만큼 적극 활용"
+  - term: "OTEL"
+    definition: "OpenTelemetry. 분산 시스템의 트레이싱, 메트릭, 로그를 통합하는 관측성 표준"
+    aliases: ["OpenTelemetry", "오픈텔레메트리"]
+    context: "Q3에 관측성 인프라 구축을 위해 도입"
+  - term: "TensorRT-LLM"
+    definition: "NVIDIA의 LLM 추론 최적화 라이브러리. GPU 기반 모델 서빙 가속화"
+    aliases: ["TRT-LLM"]
+    context: "VORA 모델 포팅 작업에 활용"
+  - term: "VORA"
+    definition: "Sionic AI의 내부 LLM 모델 또는 모델 서빙 서비스"
+    aliases: []
+    context: "TensorRT-LLM으로 포팅하여 성능 최적화 진행"
+  - term: "Toss"
+    definition: "토스페이먼츠. 한국 핀테크 결제 서비스. Q3에 Sionic AI 서비스와 통합 작업 진행"
+    aliases: ["토스", "토스페이먼츠", "Toss Payments"]
+    context: "Q3 결제 기능 통합을 위한 파트너사"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

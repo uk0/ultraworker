@@ -1,0 +1,66 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 85
+  total_threads: 42
+  active_users: 10
+  avg_messages_per_day: 2.1
+summary: |
+  2024-Q2에는 Stargate API가 v0.9.0에서 v0.19.0까지, WEB이 v0.9.0에서 v1.5.1까지 대폭 진화했다.
+  핵심 기능으로는 피드백(Advice) 등록/수정/삭제, Chat 스트리밍 중지, 배포(Deploy) 기능 v1.0.0,
+  모니터링 UI 전면 개편, 굿/배드(chat-advice) 기능, Write 기사 작성 기능, 디자인 시스템 컴포넌트 개발이 있다.
+  Pylon은 v0.9.0에서 v1.1.0으로 메이저 업그레이드를 달성하며, 새로운 임베딩/리랭커 모델 도입,
+  Cohere reranker fadeout(비용 절감), Storm Organize v1, 커스텀 프롬프트 지원, LLM 스트리밍,
+  Vault 도입(secret 관리), GPT-4-Turbo 전환(비용 3~4배 절감) 등을 구현했다.
+  인프라에서는 Qdrant GKE 재이관, on-prem k8s 이전, Dockerfile 빌드 최적화가 진행되었다.
+  배포 자동화로 GitHub Actions 기반 Release Drafter가 안정화되어 자동 릴리즈 노트가 생성되기 시작했다.
+topics:
+  - Stargate Deploy(배포) 기능 v1.0.0 출시
+  - Pylon v1.0.0 메이저 릴리즈
+  - 피드백/Advice 시스템 전면 개편
+  - 모니터링 UI 리뉴얼
+  - 굿/배드(chat-advice) 기능
+  - Storm Write/Organize 기능
+  - 새로운 임베딩/리랭커 모델 도입
+  - GPT-4-Turbo 전환 및 비용 절감
+  - Qdrant 인프라 이관 (GKE)
+  - Vault secret 관리 도입
+key_discussions:
+  - thread_ts: '1713170612.019419'
+    date: '2024-04-15'
+    topic: Pylon v0.11.0 배포 - feedback 템플릿, GPT-4-Turbo 전환, 97개 댓글의 대규모 배포 논의
+  - thread_ts: '1714010230.194499'
+    date: '2024-04-25'
+    topic: Deploy 기능 배포 - Stargate 1.0.0/Pylon 1.0.0 동시 출시
+  - thread_ts: '1716890521.761229'
+    date: '2024-05-28'
+    topic: Stargate API v0.13.0 - chat-advice, 모니터링 대규모 업데이트 (41개 댓글)
+  - thread_ts: '1718687032.214569'
+    date: '2024-06-18'
+    topic: Storm Organize 초기 버전 + custom user prompt 라이브 배포 (44개 댓글)
+terminology:
+  - term: "Storm Deploy"
+    definition: "에이전트 버전 관리 및 라이브 배포 기능"
+    aliases: ["배포"]
+  - term: "chat-advice"
+    definition: "채팅 응답에 대한 굿/배드 피드백 시스템"
+    aliases: ["굿배드"]
+  - term: "Storm Organize"
+    definition: "문서 구조화/정리 기능 (Document AI)"
+    aliases: []
+  - term: "Cohere Reranker"
+    definition: "검색 결과 재순위화를 위한 외부 API (fadeout 진행중)"
+    aliases: []
+  - term: "trust_score"
+    definition: "RAG 답변의 신뢰도 점수"
+    aliases: ["신뢰도"]
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

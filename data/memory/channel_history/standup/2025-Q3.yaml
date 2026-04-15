@@ -1,0 +1,97 @@
+channel:
+  id: C058VN1LUKE
+  name: standup
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2521
+  total_threads: 513
+  active_users: 37
+  avg_messages_per_day: 28.3
+summary: |
+  2025-Q3 standup 채널은 37명이 참여하며 일평균 28.3개 메시지가 교환되었다.
+  근무 거점이 다양화되어 미타(본사), 디캠프, 아비케, IBK, 의왕 현대차, 세종 아이티센 등 다중 거점 체제로 운영되었다.
+  세종 국세청/아이티센 출장(이재준, 송명하, Sigrid Jin)이 빈번했으며, 의왕 현대차 미팅(김혜원, 김부교, 원성준)도 진행되었다.
+  대우건설 미팅(양호진, 강성우)이 건설적으로 마무리되며 Storm/파스 제품 소개가 이루어졌다.
+  신규 멤버로 안진혁, 윤주운, Jeonghwan Park, 정석현, 유대곤 등이 합류하여 팀 규모가 계속 확대되었다.
+  IR(투자 유치) 관련 업무가 증가했으며, Noah(고석현)가 IR 자료 준비에 집중하는 모습이 보였다.
+  법률실사 자료 제출(홍성아), 정부 감독 대응(한시형) 등 규제/컴플라이언스 관련 업무가 본격화되었다.
+  에이티넘 투자사 팔로우업(한시형), 포브스 행사, 코스맥스 미팅 등 투자/영업 외근이 활발했다.
+  클로드 코드 세팅 및 사용법 강의(Sigrid Jin -> 김혜원)가 진행되어 AI 코딩 도구 도입이 확산되었다.
+  박우명이 삿포로/도쿄 출장을 다녀왔으며, 팀 전반적으로 운동(복싱, 수영, 헬스) 후 업무 복귀 패턴이 정착되었다.
+topics:
+  - name: "다중 거점 근무"
+    count: 60
+    description: "미타, 디캠프, 아비케, IBK, 의왕현대차, 세종아이티센, 넥원 등 다양한 근무지"
+  - name: "세종/국세청 출장"
+    count: 15
+    description: "이재준, 송명하, Sigrid Jin 세종 국세청/아이티센 사무실 출장"
+  - name: "IR/투자 활동"
+    count: 20
+    description: "Noah IR 자료 준비, 에이티넘 팔로우업, 포브스 행사 등 투자 유치 활동"
+  - name: "법률실사/규제 대응"
+    count: 10
+    description: "법률실사 자료 제출, 정부 감독 대응, SGI 요청서류 등"
+  - name: "대우건설 미팅"
+    count: 5
+    description: "양호진, 강성우 대우건설 외근. Storm/파스 소개"
+  - name: "현대차 프로젝트"
+    count: 10
+    description: "의왕 현대차 미팅 및 프로젝트 수행(김혜원, 김부교, 원성준)"
+  - name: "클로드 코드 도입"
+    count: 3
+    description: "Sigrid Jin이 김혜원에게 클로드 코드 세팅/사용법 교육"
+key_discussions:
+  - thread_ts: '1759296259.688629'
+    date: '2025-10-01'
+    reply_count: 14
+    text_preview: "대우건설 미팅 매우 건설적으로 마무리. Storm 파스 소개. 카페에서 보고서 작업"
+  - thread_ts: '1753879429.927519'
+    date: '2025-07-30'
+    reply_count: 7
+    text_preview: "Sigrid Jin 새벽 코딩 후 씻고 복귀 패턴"
+  - thread_ts: '1753784507.953049'
+    date: '2025-07-29'
+    reply_count: 9
+    text_preview: "양호진 '싱싱 미역 상태'로 조기 퇴근 후 공부. 팀 건강/컨디션 관리 대화"
+  - thread_ts: '1753850430.010139'
+    date: '2025-07-30'
+    reply_count: 5
+    text_preview: "정기연 주관기관 예산 3번 갈아엎기. 정부 과제 행정 업무 고충"
+  - thread_ts: '1753759106.895259'
+    date: '2025-07-29'
+    reply_count: 11
+    text_preview: "김혜원 미타 출근 관련 스레드. 팀 내 활발한 커뮤니케이션"
+  - thread_ts: '1753710531.560909'
+    date: '2025-07-28'
+    reply_count: 2
+    text_preview: "혜원님에게 클로드 코드 세팅 도와드리고 사용법 강의. AI 도구 팀 내 확산"
+terminology:
+  - term: "넥원"
+    definition: "넥스트원(Next1). 사이오닉 AI 관련 거점/프로젝트 공간"
+    aliases: []
+  - term: "디캠프"
+    definition: "은행권청년창업재단 운영 D.CAMP. 사이오닉 AI 주요 거점 중 하나"
+    aliases: ["디캠"]
+  - term: "파스"
+    definition: "사이오닉 AI의 문서 처리/파싱 서비스"
+    aliases: []
+  - term: "클로드 코드"
+    definition: "Anthropic의 AI 코딩 도구. 팀 내 개발 생산성 향상 목적으로 도입"
+    aliases: []
+  - term: "아이티센"
+    definition: "IT 서비스 기업. 세종 사무실에서 협업 진행"
+    aliases: ["아이티센엔텍"]
+  - term: "BSK인베"
+    definition: "BSK Investment. 투자사"
+    aliases: []
+  - term: "삼벤"
+    definition: "삼성벤처투자 관련 업무"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

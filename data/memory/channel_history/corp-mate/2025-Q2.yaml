@@ -1,0 +1,54 @@
+channel:
+  id: C08J8HH1TT5
+  name: corp-mate
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 7
+  active_users: 7
+  avg_messages_per_day: 1.1
+summary: |
+  2025-Q2에는 서반석님 신규 입사에 따른 온보딩 활동이 중심이었다. 온보딩 계정 관련 체크리스트 정비 필요성 제기, 전체 위클리에서의 신입 자기소개 일정 조율, 코드 리뷰 그라운드 룰 공유 등이 이루어졌다. 피드백 커피챗 진행 및 '웰컴 90일 플랜' 템플릿 실제 적용이 시작되었으며, GoCD 배포 실습 등 실무 적응 지원도 이어졌다.
+topics:
+  - name: "신규 입사자 온보딩"
+    mention_count: 5
+    description: "서반석님 온보딩 지원: 계정 발급 체크리스트 필요성, 위클리 자기소개 일정, GoCD 배포 실습 지원"
+  - name: "코드 리뷰 그라운드 룰 공유"
+    mention_count: 2
+    description: "신규 입사자에게 코드 리뷰 p1/p2/p3 등 그라운드 룰 노션 문서 재공유"
+  - name: "피드백 커피챗"
+    mention_count: 3
+    description: "성우님 대상 피드백 커피챗 진행 및 회고 문서 작성 논의"
+  - name: "웰컴 90일 플랜 실적용"
+    mention_count: 2
+    description: "템플릿 최초 작성 시작, 덕현님과 성우님이 함께 작성 예정"
+key_discussions:
+  - thread_ts: '1743470131.000000'
+    date: '2025-04-01'
+    reply_count: 6
+    text_preview: "온보딩에 계정 관련 체크리스트들이 있으면 좋을 것 같습니다"
+  - thread_ts: '1743560357.000000'
+    date: '2025-04-02'
+    reply_count: 4
+    text_preview: "반석님과 성우님의 자기소개를 차주(4월 8일) 전체 위클리 끝나고 진행하고자 합니다"
+  - thread_ts: '1744343008.000000'
+    date: '2025-04-14'
+    reply_count: 6
+    text_preview: "반석님 gocd config에 아무거나 하나 새로 띄워서 배포를 하실 수 있게 도와주세용"
+  - thread_ts: '1744706791.000000'
+    date: '2025-04-22'
+    reply_count: 16
+    text_preview: "성우님 피드백 커피챗 관련"
+terminology:
+  - term: "GoCD"
+    definition: "사이오닉AI에서 사용하는 CI/CD 배포 도구. 신규 입사자 온보딩 시 배포 실습 과제로 활용됨"
+    aliases: []
+    context: "서반석님 온보딩 시 GoCD config 설정 및 배포 실습"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,70 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 16
+  total_threads: 11
+  active_users: 2
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 3분기 corp-blog-devrel 채널은 활동 팀원이 2명으로 줄어들었으나 DevRel 채널로서의 방향성은 유지되었다.
+  7월에 ML 리서치 인턴의 글이 발행되었고, 블로그 페이지뷰 수치 모니터링(65.3K→3.32K 급감)과 인프런 활용 전략 논의가 이루어졌다.
+  7월 29~31일 인프런과 공동 퇴근길 밋업 개최가 추진되었으며, 인프런에서 일본 인기 키워드(Power Automate Desktop, Felo AI, Vuetify)를 공유받았다.
+  8월에는 파이콘 튜토리얼 자료와 네이버 커넥트재단 AI 무료 강의 정보 공유, 한국스프링개발자모임 팔로업이 이루어졌다.
+  9월에는 구글 AI GDE(Google Developer Expert) 지원 관련 상세 가이드가 공유되어 개인 브랜딩 방향에 대한 논의가 이루어졌다.
+topics:
+  - name: "블로그 페이지뷰 급감 및 관리"
+    mention_count: 3
+    description: "65.3K에서 3.32K로 블로그 페이지뷰 급감, 관리 필요성 논의"
+  - name: "인프런 밋업 및 글로벌 협업"
+    mention_count: 4
+    description: "인프런과 퇴근길 밋업 공동 개최 및 일본 키워드 전략 논의"
+  - name: "구글 AI GDE 지원 가이드"
+    mention_count: 2
+    description: "ML 커뮤니티 멤버십 및 Google Developer Expert AI 트랙 지원 전략 공유"
+  - name: "ML 리서치 인턴 블로그 발행"
+    mention_count: 2
+    description: "Sionic AI ML Research Intern이 작성한 블로그 글 발행"
+key_discussions:
+  - thread_ts: '1751597940.000000'
+    date: '2025-07-04'
+    reply_count: 31
+    text_preview: "ML 리서치 인턴 예원님 블로그 글 발행"
+  - thread_ts: '1752034860.000000'
+    date: '2025-07-08'
+    reply_count: 6
+    text_preview: "블로그 페이지뷰 65.3K→3.32K 급감 - 관리 필요"
+  - thread_ts: '1753352460.000000'
+    date: '2025-07-24'
+    reply_count: 0
+    text_preview: "해커톤 하이라이트 블로그 준비 - 참여 팀 모집"
+  - thread_ts: '1754016000.000000'
+    date: '2025-07-31'
+    reply_count: 0
+    text_preview: "인프런 일본 키워드 공유 - Power Automate Desktop, Felo AI, Vuetify"
+  - thread_ts: '1757736000.000000'
+    date: '2025-09-23'
+    reply_count: 1
+    text_preview: "구글 AI GDE 지원 전략 상세 가이드 공유 - ML 커뮤니티 멤버십 컨트리뷰션"
+terminology:
+  - term: "AI GDE"
+    definition: "Google Developer Expert AI 트랙, 구글이 인정하는 AI 분야 전문가 프로그램"
+    aliases: ["Google Developer Expert", "GDE"]
+    context: "7~8개월 ML 커뮤니티 컨트리뷰션으로 지원 기회 획득 가능"
+  - term: "인프런"
+    definition: "국내 개발자 교육 플랫폼, Sionic AI Spring AI 강의 및 밋업 파트너"
+    aliases: []
+    context: "퇴근길 밋업, 글로벌 콘텐츠 협업, 일본 키워드 전략 공유"
+  - term: "파이콘"
+    definition: "Python 개발자 커뮤니티 컨퍼런스 PyCon Korea"
+    aliases: ["PyCon"]
+    context: "2025년 파이콘 튜토리얼 자료 공유"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

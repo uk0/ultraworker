@@ -1,0 +1,41 @@
+channel:
+  id: C07GMQK7V8W
+  name: alarm-dev-error-asmr
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 833
+  total_threads: 6
+  active_users: 8
+  avg_messages_per_day: 18.1
+summary: |
+  2025년 4분기에 alarm-dev-error-asmr 채널에서는 하루 평균 18.1건의 알림이 발생하여 분기 전체 833건이 기록되었다. 주요 오류 유형은 Openllm API Error로, 10월과 11월에 연속 대량 발생(1회에 20건 이상) 패턴이 반복되었다. 11월 말에는 ASMR v2 Slack 알림 시스템 개선 테스트(에러 포맷 구조화)가 진행되었으며, 스레드 수가 6건으로 크게 줄어 알림 대응 프로세스가 간소화된 것으로 보인다.
+topics:
+  - name: "Openllm API Error 대량 발생"
+    mention_count: 820
+    description: "ASMR(dev) 서비스의 OpenLLM API 오류 — 10월 20일, 11월 25~26일에 집중적으로 대량 발생"
+  - name: "알림 시스템 개선 테스트"
+    mention_count: 6
+    description: "2025-11-20 에러 메시지 포맷 구조화 테스트(짧은 메시지 vs 실제 Vertex AI 스택, CHAT_ENGINE_FAILED 등)"
+  - name: "멤버 변경"
+    mention_count: 2
+    description: "신규 멤버 2명 채널 참여"
+key_discussions:
+  - thread_ts: '1732600800.000000'
+    date: '2025-11-26'
+    reply_count: 0
+    text_preview: "ASMR v2 Slack 알림 시스템 구조화 테스트 — source/environment/engine/statusCode/errorCode/body 포맷 포함한 상세 알림"
+terminology:
+  - term: "ASMR"
+    definition: "Sionic AI의 AI 서비스 중 하나 — OpenLLM API를 통해 LLM 추론을 제공하며, dev 환경 오류가 이 채널로 전송됨"
+  - term: "Openllm API Error"
+    definition: "ASMR 서비스의 OpenLLM API 호출 실패 알림 — CHAT_ENGINE_FAILED 등 오류 코드와 함께 Slack으로 전송"
+  - term: "CHAT_ENGINE_FAILED"
+    definition: "OpenLLM API 오류 코드 중 하나 — 채팅 엔진 처리 실패를 의미하며 500 상태 코드와 함께 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

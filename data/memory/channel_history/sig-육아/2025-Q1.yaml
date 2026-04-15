@@ -1,0 +1,44 @@
+channel:
+  id: C07KHG3C8N6
+  name: sig-육아
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 33
+  total_threads: 10
+  active_users: 12
+  avg_messages_per_day: 2.4
+summary: |
+  채널이 크게 성장한 분기(12명 참여). 송명하가 합류하며 아들 하준이의 어린이집 알림장, 운동(배 단련) 이야기를 공유하기 시작했다. 신희수는 해솔이 200일 사진, 첫 곤지곤지, 격해지는 활동량을 공유했다. Noah는 나혼랩(나 혼자만 레벨업) 13권까지 사서 책장에 꽂아주는 등 육아 관련 구매도 공유했다. 최윤정, 김혜원, 김수원, 양호진, 이재준(Leo), 백은주, 권혜선 등 많은 새 멤버가 합류하며 "희수님 육아일기"라는 평가를 받았다. 정세민은 "이게 육아다", "sig-해솔 채널"이라며 반응했다.
+topics:
+  - 아기 성장 (해솔이 200일, 곤지곤지)
+  - 어린이집 (하준이 알림장)
+  - 운동/체력 (배 단련)
+  - 육아 일기
+key_discussions:
+  - thread_ts: '1741683443.790489'
+    date: '2025-03-11'
+    topic: 송명하 아이 사진/영상 공유
+    reply_count: 14
+  - thread_ts: '1741775142.654329'
+    date: '2025-03-12'
+    topic: 배 단련의 중요성
+    reply_count: 10
+  - thread_ts: '1743208723.817559'
+    date: '2025-03-29'
+    topic: 송명하 아이 사진 공유
+    reply_count: 9
+terminology:
+  - term: "하준"
+    definition: "송명하의 아들 이름"
+    context: "어린이집 다니는 아이, sig-육아 주인공 중 하나"
+  - term: "나혼랩"
+    definition: "나 혼자만 레벨업, 웹소설/만화 작품"
+    context: "Noah가 책장에 꽂아줌"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

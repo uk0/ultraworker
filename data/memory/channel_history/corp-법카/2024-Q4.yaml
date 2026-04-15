@@ -1,0 +1,50 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 65
+  total_threads: 9
+  active_users: 7
+  avg_messages_per_day: 1.7
+summary: |
+  2024년 4분기 corp-법카 채널은 법인카드 사용 내역을 기록하는 채널로, 7명이 참여하여 65개의 메시지와 9개의 스레드가 발생하였다. 주요 사용 목적은 식사(점심/저녁), 커피챗, 기타(커피 구매, 출장) 등이었으며, 봇을 통해 사용자, 사용일, 사용목적, 사용한 사람들이 자동 기록되었다. IBK 출장 시 법카 사용 공유, 회사 사용 가능 인원 식사 등 팀 단위 사용이 많았다.
+topics:
+  - name: "법인카드 식사 사용"
+    mention_count: 35
+    description: "팀원들의 점심 및 저녁 식사에 법인카드 사용 기록"
+  - name: "커피 구매"
+    mention_count: 10
+    description: "코삼이 카페 등에서 팀원 커피 구매 기록"
+  - name: "커피챗/미팅"
+    mention_count: 5
+    description: "외부 인사와의 커피챗 및 비즈니스 미팅 식사 기록"
+  - name: "출장 법카 사용"
+    mention_count: 3
+    description: "IBK 출장 등 외부 출장 시 법인카드 사용 공유"
+key_discussions:
+  - thread_ts: '1728280752.000000'
+    date: '2024-10-07'
+    reply_count: 1
+    text_preview: "식사 사용 - 출근 인원"
+  - thread_ts: '1729160580.000000'
+    date: '2024-10-17'
+    reply_count: 0
+    text_preview: "재준, 명하, 현우, 하담, 진형 저녁식사"
+terminology:
+  - term: "법카"
+    definition: "법인카드(법인 신용카드)의 줄임말로 회사 공용 카드"
+    aliases: ["법인카드"]
+    context: "팀 식사, 커피챗, 사무용품 구매 등에 사용하며 사용 내역을 Slack 봇으로 기록"
+  - term: "코삼이"
+    definition: "회사 근처의 카페 이름"
+    aliases: []
+    context: "커피 구매 목적으로 법카 사용 시 자주 등장"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,72 @@
+channel:
+  id: C057PUSB1S8
+  name: fyi-geeknews
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1008
+  total_threads: 164
+  active_users: 13
+  avg_messages_per_day: 11.2
+summary: |
+  2025년 1분기에는 MCP(Model Context Protocol)가 업계 최대 화제로 부상했다. Google 공식 MCP 서버,
+  Playwright MCP, OpenAI Agents SDK MCP 지원 등 MCP 생태계가 급속히 확장되었다.
+  AI 모델 측면에서는 Gemini 2.5 Pro(코딩 SOTA), OpenAI 4o 이미지 생성, DeepSeek v3(MIT 라이선스 변경),
+  Qwen2.5-VL-32B, Kimi K2.5 등이 출시되었다. "Vibe Coding" 개념이 등장하여 AI 코딩의 미래에 대한
+  활발한 토론이 이루어졌다. 보안 측면에서는 GitHub Actions 공급망 공격(tj-actions/changed-files),
+  Next.js CVE, Kubernetes NGINX ingress 취약점 등 심각한 이슈들이 공유되었다.
+  팀원 참여가 매우 활발했으며, 최병현님의 DDD 독후감, Playwright MCP 소개, Next.js 보안 이슈 공유,
+  권혜선님의 styled-components 메인터넌스 모드 전환, Toss RN Bedrock 소개,
+  이강욱님의 K8s NGINX ingress 취약점 분석, GPU 모니터링 도구 등이 돋보였다.
+topics:
+  - MCP(Model Context Protocol) 생태계 확장
+  - Vibe Coding 개념 등장과 AI 코딩 미래 논의
+  - AI 모델 대거 출시 (Gemini 2.5 Pro, DeepSeek v3, Qwen, Kimi K2.5)
+  - 보안 이슈 (GitHub Actions 공급망 공격, Next.js CVE, K8s ingress)
+  - 프론트엔드 생태계 변화 (styled-components 종료, Toss overlay-kit, TanStack Router)
+  - 백엔드/인프라 (DDD, 코드 리뷰 봇 CodeRabbit, istio authorization)
+  - 개발 문화 (에이전틱 코딩, 개발자 역량)
+key_discussions:
+  - thread_ts: '1743037670.399599'
+    date: '2025-03-27'
+    topic: 'Toss RN Bedrock와 타입세이프 라우팅'
+    summary: '권혜선님의 Toss React Native 프레임워크 소개와 타입세이프 라우팅에 대한 매우 활발한 기술 토론 (46개 답글)'
+  - thread_ts: '1742880253.915129'
+    date: '2025-03-25'
+    topic: 'MCP 생태계 확산'
+    summary: '최병현님의 MCP 관련 소식 공유와 팀 내 MCP 활용 논의 (7개 답글)'
+  - thread_ts: '1743412815.780479'
+    date: '2025-03-31'
+    topic: '기술 공유 문화와 본인만의 정답 공유'
+    summary: '리서치와 경험에서 나온 의견 공유의 가치에 대한 논의 (7개 답글)'
+  - thread_ts: '1742785035.013699'
+    date: '2025-03-24'
+    topic: 'Next.js CVE 보안 취약점'
+    summary: '최병현님의 Next.js 보안 이슈 공유와 프론트엔드 보안 논의 (4개 답글)'
+  - thread_ts: '1743089948.692749'
+    date: '2025-03-27'
+    topic: '델타 레이크 설계 사상'
+    summary: 'Noah님의 Delta Lake 아키텍처 분석 공유와 데이터 엔지니어링 논의 (4개 답글)'
+terminology:
+  - term: "MCP"
+    definition: "Model Context Protocol. AI 모델이 외부 도구와 데이터 소스에 접근할 수 있게 하는 표준 프로토콜. 2025년 초 급속히 확산"
+    aliases: ["Model Context Protocol"]
+  - term: "Vibe Coding"
+    definition: "AI와 함께 코딩하는 새로운 개발 방식. 자연어 프롬프트로 코드를 생성하고 AI가 주도적으로 구현"
+    aliases: ["바이브 코딩"]
+  - term: "Playwright MCP"
+    definition: "Microsoft에서 공개한 LLM을 위한 웹 브라우저 자동화용 MCP 서버"
+    aliases: []
+  - term: "CodeRabbit"
+    definition: "AI 기반 코드 리뷰 봇. 인프런 기술블로그에서 소개"
+    aliases: []
+  - term: "Toss Bedrock"
+    definition: "Toss에서 개발한 React Native 프레임워크. 타입세이프한 라우팅 등 DX 향상 기능 제공"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

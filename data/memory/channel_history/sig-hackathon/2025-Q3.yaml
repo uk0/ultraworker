@@ -1,0 +1,48 @@
+channel:
+  id: C08M5FURWUF
+  name: sig-hackathon
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 14
+  total_threads: 4
+  active_users: 5
+  avg_messages_per_day: 2.0
+summary: |
+  AI Champion 대회 제출서류 작성 및 해커톤 후속 활동 분기. 정기연(Kay)이 AI Champion 제출서류
+  정리를 주도하며 71개 답글의 대형 스레드 형성(마감: 7월 23일 수 17:00). 양호진은 parse API
+  상품화에 집중하게 되어 AI Champion 참여가 어렵다고 전달. 정세민이 제안서 작성 및 검토를 완료.
+  AI Champion 액션 아이템: AR 모델 -> Diffusion 변환 (tess-2 기반, Qwen3 적용, 멀티턴 지원).
+  Kaggle Gemma 3n 해커톤, aitop100.org 등 새로운 대회 정보도 공유됨.
+topics:
+  - AI Champion 제출서류 작성 (마감 7/23)
+  - Diffusion LLM 멀티턴 지원 개발
+  - tess-2 코드베이스 활용
+  - parse API 상품화
+  - Kaggle 해커톤 정보 공유
+key_discussions:
+  - thread_ts: '1752212231.469939'
+    date: '2025-07-11'
+    reply_count: 71
+    text_preview: '정기연 - AI Champion 제출서류 정리 (~7/23 마감)'
+  - thread_ts: '1758645823.479079'
+    date: '2025-09-23'
+    reply_count: 3
+    text_preview: '정세민 - aitop100.org 공유'
+terminology:
+  - term: "AI Champion"
+    definition: "AI 관련 정부/기관 지원 대회"
+    context: "팀이 Diffusion LLM 주제로 참가 준비"
+  - term: "tess-2"
+    definition: "hamishivi/tess-2, Diffusion LLM 오픈소스 프레임워크"
+    context: "AI Champion 코드베이스로 활용, 현재 mistral만 지원"
+  - term: "parse API"
+    definition: "사이오닉AI의 문서 파싱 API 서비스"
+    context: "양호진이 상품화에 집중하게 되어 해커톤 참여 축소"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

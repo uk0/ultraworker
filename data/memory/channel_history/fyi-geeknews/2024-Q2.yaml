@@ -1,0 +1,54 @@
+channel:
+  id: C057PUSB1S8
+  name: fyi-geeknews
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 852
+  total_threads: 40
+  active_users: 7
+  avg_messages_per_day: 9.4
+summary: |
+  2024년 2분기에는 AI 모델 경쟁이 본격화되었다. Claude 3.5 Sonnet 출시(GPT-4o 성능 초과),
+  Gemma 2 공개, Meta LLM Compiler 발표 등 주요 AI 모델 소식이 주를 이루었다.
+  웹 프론트엔드 분야에서는 TypeScript 5.5, ECMAScript 2024 승인, CSS if() 조건문 추가 예정 등
+  중요한 표준 업데이트가 있었다. 보안 이슈로는 Polyfill.js 공급망 공격(10만+ 사이트 영향),
+  KT 웹하드 악성코드 공격, 카카오톡 원클릭 익스플로잇 등이 공유되었다.
+  Anthropic의 Claude Projects 기능 추가, OpenAI의 Rockset 인수 등 AI 기업 동향도 활발히 논의되었다.
+topics:
+  - AI 모델 경쟁 (Claude 3.5 Sonnet, Gemma 2, Meta LLM Compiler)
+  - 웹 표준 업데이트 (TypeScript 5.5, ECMAScript 2024, CSS if())
+  - 보안 이슈 (Polyfill.js 공급망 공격, KT 악성코드)
+  - 프로그래밍 언어 동향 (Zig vs Rust, Ruby 셸 스크립팅)
+  - AI 기업 동향 (OpenAI Rockset 인수, Ilya Sutskever SSI 창업)
+  - 개발자 도구 및 생산성
+key_discussions:
+  - thread_ts: '1719455037.257189'
+    date: '2024-06-27'
+    topic: 'Anthropic Claude Projects 기능 추가'
+    summary: 'Claude Projects 기능에 대한 팀원 간 토론 (7개 답글)'
+  - thread_ts: '1718845118.813239'
+    date: '2024-06-20'
+    topic: 'Amphi - 오픈소스 파이썬 ETL'
+    summary: 'Python ETL 도구 Amphi에 대한 논의'
+  - thread_ts: '1718844219.839149'
+    date: '2024-06-20'
+    topic: 'Token Cost - LLM 토큰 비용 계산'
+    summary: '400+개 LLM의 토큰당 비용 계산 도구에 대한 논의'
+terminology:
+  - term: "Claude 3.5 Sonnet"
+    definition: "Anthropic이 출시한 AI 모델로, GPT-4o를 뛰어넘는 성능을 보여줌"
+    aliases: []
+  - term: "Polyfill.js"
+    definition: "웹 호환성 라이브러리. 2024년 6월 공급망 공격으로 10만+ 사이트가 영향을 받음"
+    aliases: ["polyfill"]
+  - term: "ECMAScript 2024"
+    definition: "2024년 승인된 JavaScript 공식 표준 (ES2024)"
+    aliases: ["ES2024"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

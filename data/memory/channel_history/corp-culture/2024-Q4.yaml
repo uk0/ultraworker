@@ -1,0 +1,37 @@
+channel:
+  id: C068QA2F44W
+  name: corp-culture
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2024년 4분기는 최소한의 활동만 있었으며, 두 가지 주요 논의가 있었다.
+  김덕현(Dekay)이 전사 회고 방법을 고민하며 적절한 회고 방식을 탐색했고(18건의 답글로 활발한 논의),
+  김혜원이 카카오 출신 조직문화 전문가를 소개받아 외부 컬쳐 전문가와의 네트워킹을 추진했다.
+topics:
+  - 전사 회고 방법 탐색
+  - 외부 조직문화 전문가 네트워킹
+key_discussions:
+  - thread_ts: '1734954655.226929'
+    date: '2024-12-23'
+    reply_count: 18
+    text_preview: 적절한 전사 회고 방법 생각중...
+  - thread_ts: '1730875483.302379'
+    date: '2024-11-06'
+    reply_count: 6
+    text_preview: 조직문화 관련해서 카카오쪽에서 컬쳐 업무 많이 하신 분 소개 받아서 이야기중
+terminology:
+  - term: "전사 회고"
+    definition: "회사 전체 구성원이 참여하는 회고(Retrospective) 활동"
+    context: "2024년 말 적절한 전사 회고 방법론을 찾기 위한 논의"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

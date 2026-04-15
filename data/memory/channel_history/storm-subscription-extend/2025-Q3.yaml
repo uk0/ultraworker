@@ -1,0 +1,36 @@
+channel:
+  id: C080TTP7V0S
+  name: storm-subscription-extend
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 4
+  active_users: 4
+  avg_messages_per_day: 1.1
+summary: |
+  2025-Q3에는 구독 연장 문의가 4건으로 이전 분기 대비 증가하였다. 7월 25일, 8월 25-27일, 9월 17일, 9월 25-26일에 걸쳐 알림이 발생하였다. 김혜원이 9월에 채널에 참여하여 구독 연장 대응에 합류하였다. 원성준도 8월에 참여하여 모니터링 인원이 확대되었다.
+topics:
+  - 구독 연장 문의 증가 추세
+  - 구독 관리 담당자 확대
+key_discussions:
+  - thread_ts: '1753435593.906879'
+    date: '2025-07-25'
+    title: 7월 구독 연장 문의 대응
+    summary: 7월 구독 연장 문의에 대한 팀 대응 논의 (6개 답글)
+  - thread_ts: '1758760541.552219'
+    date: '2025-09-25'
+    title: 9월 구독 연장 문의 대응
+    summary: 9월 말 구독 연장 문의에 대한 대응 (7개 답글)
+  - thread_ts: '1758086419.900529'
+    date: '2025-09-17'
+    title: 구독 연장 관련 논의
+    summary: 구독 연장 문의에 대한 대응 방안 논의 (6개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

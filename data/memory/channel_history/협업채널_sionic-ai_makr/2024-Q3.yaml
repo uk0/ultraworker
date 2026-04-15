@@ -1,0 +1,25 @@
+channel:
+  id: C06SJD3SGJF
+  name: 협업채널_sionic-ai_makr
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 2.0
+summary: |
+  마커-LLM 조직과 bwook이 채널에서 자신을 제거함. AutoRAG PoC 프로젝트가 Q2에 완료되어
+  마커 AI 측 멤버들이 채널을 떠난 것으로 보임.
+topics:
+  - 외부 조직 채널 이탈
+  - PoC 프로젝트 종료
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

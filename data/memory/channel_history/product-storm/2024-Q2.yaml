@@ -1,0 +1,97 @@
+channel:
+  id: C05BUTMULMD
+  name: product-storm
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 444
+  total_threads: 323
+  active_users: 20
+  avg_messages_per_day: 6.3
+summary: |
+  2024년 2분기 product-storm 채널에서는 Storm Answer 제품의 기능 고도화와 안정화 작업이 집중적으로 진행되었다.
+  RAG on/off 기능 추가, LLM 모델 설정 및 프롬프트 커스텀 기능 기획, KT 믿음(MiDM) 스트리밍 지원, 대시보드 화면 기획 등 주요 신규 기능이 개발되었다.
+  Pylon API v2 마이그레이션, SSE 스트리밍 안정화, 피드백 학습 상태 이슈 등 기술적 개선과 함께 카카오톡 봇 연동, 암호화 기반 인증 기능 등 채널 연동 작업이 추진되었다.
+  Qdrant 장애 대응, OpenAI 모델 상태 불안정 이슈 등 운영 안정성 관련 논의도 다수 이루어졌다.
+topics:
+  - name: "RAG on/off 기능"
+    count: 15
+    description: "에이전트별 RAG 활성화/비활성화 옵션 추가 및 skip_rag 파라미터 구현"
+  - name: "LLM 모델 설정 및 프롬프트 커스텀"
+    count: 20
+    description: "모델 파라미터 설정, custom_user_template, extra_query 기능 기획 및 개발"
+  - name: "대시보드 기획"
+    count: 10
+    description: "호출 성공/실패수, 유니크 유저수, 신뢰도 분석 등 분석지표 기획"
+  - name: "SSE 스트리밍 안정화"
+    count: 12
+    description: "SSE 끊김 이슈, Pylon 응답 타이밍 문제, 답변 출처 로딩 이슈 해결"
+  - name: "채널 연동 (카카오톡)"
+    count: 8
+    description: "카카오톡 봇 연동, 채널별 에이전트 배포 버전 관리"
+  - name: "KT 믿음(MiDM) 지원"
+    count: 6
+    description: "KT 믿음 LLM 모델 스트리밍 지원 개발 및 배포"
+  - name: "모니터링 기능"
+    count: 10
+    description: "질의 응답 모니터링 UI 개발, 필터 기능, 일본어 검수"
+  - name: "API 응답 속도 개선"
+    count: 8
+    description: "slow query 최적화, APM 도입 논의, 비동기 처리 검토"
+key_discussions:
+  - thread_ts: '1719296163.131349'
+    date: '2024-06-25'
+    reply_count: 60
+    text_preview: "에이전트별로 rag on/off 할 수 있게 옵션을 추가할 수 있을까여 - RAG 기능 토글 구현"
+  - thread_ts: '1718779070.990139'
+    date: '2024-06-19'
+    reply_count: 57
+    text_preview: "지금 앤서에서 llm호출하는 상세 스펙들이 궁금합니당 - LLM 호출 스펙 논의"
+  - thread_ts: '1719221482.923929'
+    date: '2024-06-24'
+    reply_count: 52
+    text_preview: "Pylon 파라미터 구조 변경 제안 - LLM 파라미터 유연한 전달 방식"
+  - thread_ts: '1718206793.005989'
+    date: '2024-06-12'
+    reply_count: 36
+    text_preview: "스트리밍으로 응답을 만드는데 출처는 전부 완성된뒤에 그려지는데 - 답변 출처 표시 타이밍"
+  - thread_ts: '1718690869.032809'
+    date: '2024-06-18'
+    reply_count: 34
+    text_preview: "뭔가 gpt 상태 오락가락하는 것 같지 않나여 - OpenAI 모델 불안정 이슈"
+  - thread_ts: '1719364619.028349'
+    date: '2024-06-26'
+    reply_count: 32
+    text_preview: "테스트페이지 입력 700자 제한 관련 - 쿼리 텍스트 길이 제한 논의"
+terminology:
+  - term: "RAG"
+    definition: "Retrieval Augmented Generation. 문서 검색 기반 답변 생성 기술"
+    aliases: []
+    context: "Storm Answer의 핵심 기술. on/off 토글 기능이 Q2에 추가됨"
+  - term: "MiDM"
+    definition: "KT의 자체 LLM 모델 (믿음). base-midm-bitext-s-chat-085 모델을 지원"
+    aliases: ["믿음", "KT 믿음"]
+    context: "KT 고객사 대응을 위한 LLM 통합"
+  - term: "SSE"
+    definition: "Server-Sent Events. 서버에서 클라이언트로 실시간 데이터 스트리밍 프로토콜"
+    aliases: []
+    context: "답변 스트리밍, 답변 출처 전달 등에 사용"
+  - term: "extra_query"
+    definition: "Pylon API에서 사용자가 LLM 파라미터를 자유롭게 override할 수 있는 기능"
+    aliases: ["extra body"]
+    context: "Answer API 요청 시 body, header, query parameter를 재정의"
+  - term: "Open LLM"
+    definition: "Sionic AI 내부의 LLM 라우팅/프록시 서비스. 다양한 벤더 모델을 통합 관리"
+    aliases: ["오픈엘엘엠", "어시밀"]
+    context: "GPT, Claude, HyperCLOVA X 등 다양한 모델의 통합 엔드포인트"
+  - term: "custom_user_template"
+    definition: "system prompt와 별도로 user role 부분을 커스텀할 수 있는 기능"
+    aliases: []
+    context: "프롬프트 커스터마이징 확장을 위해 Q2에 추가됨"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

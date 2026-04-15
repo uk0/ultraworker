@@ -49,7 +49,7 @@ The setup wizard guides you through:
 1. Claude Code authentication
 2. Slack token configuration
 3. Trigger mode selection (mention vs. keyword)
-4. MCP server installation
+4. MCP server installation (including one-shot install for `memory-search` and `agent-browser`)
 5. Dashboard launch
 
 ### Manual Configuration
@@ -181,7 +181,29 @@ workflow:
 
 ## MCP Server Setup
 
+`uv run ultrawork setup` automatically installs and wires supported MCP servers (including `memory-search` from `vendor/memory-search`). If Rust is missing, setup bootstraps it via `rustup` automatically.
+
+`memory-search` now uses:
+- `bb25` sparse ranking (with Unicode tokenizer patch)
+- `BGE-M3` embeddings via local TEI runtime
+- local Qdrant vector index
+
+Runtime behavior:
+- TEI: local `text-embeddings-router` binary autostart first, Docker fallback (both configurable via `.env`)
+- Qdrant: local `qdrant` binary autostart first, Docker fallback
+
 ```bash
+# TEI local install (Apple Silicon / Homebrew)
+brew install text-embeddings-inference
+text-embeddings-router --model-id BAAI/bge-m3 --port 8080
+
+# Qdrant local install (macOS arm64 example)
+curl -L https://github.com/qdrant/qdrant/releases/download/v1.17.0/qdrant-aarch64-apple-darwin.tar.gz -o /tmp/qdrant.tar.gz
+tar -xzf /tmp/qdrant.tar.gz -C /tmp qdrant && install -m 0755 /tmp/qdrant ~/.local/bin/qdrant
+QDRANT__STORAGE__STORAGE_PATH=/absolute/path/to/ultraworker/data/memory/index/qdrant/storage \
+QDRANT__SERVICE__HTTP_PORT=6333 \
+qdrant
+
 # Slack (Personal Token)
 claude mcp add slack -- npx -y @jtalk22/slack-mcp
 
@@ -193,6 +215,12 @@ claude mcp add playwright -- npx -y @playwright/mcp@latest
 
 # Context7 (Library docs)
 claude mcp add context7 -- npx -y @upstash/context7-mcp@latest
+
+# Memory Search (manual fallback when not using setup wizard)
+claude mcp add memory-search -- /absolute/path/to/ultraworker/vendor/memory-search/target/release/memory-search serve --data-dir /absolute/path/to/ultraworker/data
+
+# agent-browser CLI install (used by electron skill/workflows)
+npm install -g agent-browser
 ```
 
 ---
@@ -208,6 +236,13 @@ uv run ultrawork end                 # Stop all background daemons (poll + sdk d
 uv run ultrawork start                # Start poller daemon + dashboard together (agentic mode by default)
 uv run ultrawork slack:sync          # Sync channels/users
 uv run ultrawork task:list           # List all tasks
+uv run ultrawork research:init       # Initialize research orchestration scaffold/store
+uv run ultrawork research:job-template -o contracts/job_spec.example.yaml
+uv run ultrawork research:job-submit contracts/job_spec.example.yaml
+uv run ultrawork research:manifest-create contracts/job_spec.example.yaml --data-hash <hash>
+uv run ultrawork research:eval data/research_orchestrator/reports/<report>.json
+uv run ultrawork research:decision-log <job_id> --hypothesis ... --change ... --result ... --next-action ...
+uv run ultrawork research:review-record <job_id> --patch-ref <ref> --decision approve
 ```
 
 ---

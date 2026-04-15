@@ -1,0 +1,28 @@
+channel:
+  id: C07QMG6FMAS
+  name: project-thingsflow
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  활동이 적었던 분기. Noah(고석현)가 IT조선 기사 링크를 공유한 것이 유일한 실질적 대화.
+  띵스플로우 프로젝트 관련 업데이트가 이 채널에서는 거의 이루어지지 않았다.
+  봇(대신 해주는 새) 참여 메시지도 포함되어 있다.
+topics:
+  - 업계 동향 공유
+key_discussions:
+  - thread_ts: '1736224387.690239'
+    date: '2025-01-07'
+    summary: 'IT조선 관련 기사 링크 공유'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

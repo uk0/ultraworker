@@ -1,0 +1,50 @@
+channel:
+  id: C0A4CMNN0DP
+  name: ext-sionic-falkordb
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 25
+  total_threads: 3
+  active_users: 10
+  avg_messages_per_day: 3.1
+summary: |
+  2025년 4분기에 Sionic AI와 FalkorDB 간 외부 협업 채널이 개설되어 파트너십이 시작되었다. 양측은 FalkorDB를 활용한 고객 쇼케이스 소개 및 웨비나 개최 방안을 논의하였으며, 세민님이 2026년 1월 중순 국내 최대 테크 미디어 요즘IT(yozmit)에서 FalkorDB 소개 및 Sionic AI 활용 사례를 발표할 예정으로 합의하였다. APAC 리전 전용 FalkorDB 공급자로서의 MOU 가능성도 함께 협의되었다.
+topics:
+  - name: "파트너십 및 MOU"
+    mention_count: 6
+    description: "Sionic AI의 APAC 리전 전용 FalkorDB 공급자 파트너십 협의, MOU 체결 가능성 논의"
+  - name: "웨비나 개최"
+    mention_count: 5
+    description: "요즘IT(yozmit) 플랫폼에서 FalkorDB 소개 및 Sionic AI 활용 사례 웨비나 기획"
+  - name: "마케팅 자료 공유"
+    mention_count: 4
+    description: "FalkorDB 측에서 블로그 포스트·Canva 발표 자료 공유, 상호 홍보 협력 방안 논의"
+  - name: "상업 계약"
+    mention_count: 3
+    description: "FalkorDB 측 Alex/Dan과 상업 계약 논의 진행 예정"
+key_discussions:
+  - thread_ts: '1735036800.000000'
+    date: '2025-12-24'
+    reply_count: 19
+    text_preview: "FalkorDB를 활용한 고객 쇼케이스 아젠다 논의, 웨비나 및 Sionic AI 블로그 게재 계획 합의"
+  - thread_ts: '1735544400.000000'
+    date: '2025-12-30'
+    reply_count: 1
+    text_preview: "FalkorDB 마케팅 자료(Canva, 블로그 4편) 공유 및 EMEA ISV 상업 파트너십 사례 공유"
+terminology:
+  - term: "FalkorDB"
+    definition: "그래프 데이터베이스 솔루션으로, Knowledge Graph 구축 및 에이전트 메모리 기능을 제공하는 외부 파트너사"
+  - term: "APAC"
+    definition: "Asia-Pacific 아시아태평양 리전; Sionic AI가 FalkorDB의 APAC 전용 공급자 역할 협의 중"
+  - term: "yozmit"
+    definition: "요즘IT — APAC 최대 테크 미디어 플랫폼으로, 웨비나 발표 예정 채널"
+  - term: "VCPedia"
+    definition: "FalkorDB가 자체 구축한 지식그래프 기반 VC 데이터베이스 — Sionic AI 구축 시스템과 유사한 사례로 언급됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

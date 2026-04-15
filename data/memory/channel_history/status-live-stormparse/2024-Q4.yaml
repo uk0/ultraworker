@@ -1,0 +1,42 @@
+channel:
+  id: C083U6JJ928
+  name: status-live-stormparse
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 3.0
+summary: |
+  2024년 12월 5일 status-live-stormparse 채널이 신설되었으며, 덕현님(U057MCDJHDY)이 채널을 생성하고 Sionic Monitoring 앱을 연동하여 StormParse 라이브 환경 장애 알림 수신을 위한 웹훅 URL을 설정하였다.
+  채널 개설 당일 U07RASZTPFA, U0789L45ULV가 참여하였고, 12월 12일에는 서반석님(U05QCA7JTD5)이 추가로 합류하였다.
+  이 분기는 채널 초기 셋업 단계에 해당하며 실제 파싱 오류 알림 발생 기록은 없다.
+topics:
+  - name: "채널 개설 및 Sionic Monitoring 연동"
+    mention_count: 3
+    description: "2024-12-05 덕현님이 status-live-stormparse 채널을 생성하고 Sionic Monitoring 앱과 웹훅 URL을 등록하여 StormParse 라이브 알림 수신 체계 구축"
+  - name: "채널 멤버 온보딩"
+    mention_count: 3
+    description: "채널 개설일(12/5) U07RASZTPFA, U0789L45ULV 참여, 12/12 서반석님(U05QCA7JTD5) 추가 합류"
+key_discussions:
+  - thread_ts: '1733374740.000000'
+    date: '2024-12-05'
+    reply_count: 1
+    text_preview: "웹훅 URL 설정: https://hooks.slack.com/services/T058B1MTT4Y/B084EFA1R0Q/... - Sionic Monitoring 연동 완료"
+terminology:
+  - term: "Sionic Monitoring"
+    definition: "사이오닉AI의 라이브 서비스 상태를 모니터링하고 이상 발생 시 슬랙 채널로 알림을 전송하는 내부 모니터링 봇 애플리케이션"
+    aliases: []
+    context: "status-live-stormparse 채널에 연동되어 StormParse 라이브 파싱 오류 알림 전송에 사용"
+  - term: "status-live-stormparse"
+    definition: "StormParse 라이브(운영) 환경의 파싱 오류 및 장애 알림을 수신하는 슬랙 채널. 2024년 12월 5일 개설"
+    aliases: []
+    context: "Sionic Monitoring 웹훅을 통해 자동 알림 수신"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

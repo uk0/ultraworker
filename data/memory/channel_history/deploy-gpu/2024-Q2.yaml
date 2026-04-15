@@ -1,0 +1,72 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 50
+  total_threads: 31
+  active_users: 9
+  avg_messages_per_day: 1.6
+summary: |
+  2024-Q2 deploy-gpu 채널 데이터 수집 완료. 50개 메시지, 9명 참여, 31개 스레드.
+  Q2에는 온프레미스 Kubernetes 통합이 본격화되어 worker1, worker2, worker10-14가 K8s 클러스터에
+  추가되었다. VESSL에 H100 서버가 새로 도입되었고, Alibaba A100에서 xionic-ko-llama-3-70b
+  모델이 배포되었다. L40s GPU 구매 계획 및 조달이 진행되었다. 데이터센터 이전으로 A100 서버의
+  IP가 221.147.100.200에서 61.73.27.196으로 변경되었다. worker6에서 bge-m3 임베딩/리랭커
+  모델이 운영되었다. worker5/6에서 NVIDIA 드라이버 NVML 버전 불일치 이슈가 발생하여
+  kozistr833이 상세 디버깅을 수행하였다. Pylon 임베딩이 Kubernetes로 이전되어 kubectl get pods로
+  ko-embedding-v2, ja-embedding, ko-reranker Pod가 확인되었다. dkyoon, taeeunk1208,
+  Jeonghwan Park이 새로 합류하였다.
+topics:
+  - 온프레미스 Kubernetes 통합 (worker10-14 추가)
+  - VESSL H100 도입 및 Alibaba xionic-ko-llama-3-70b 배포
+  - L40s GPU 구매 및 조달
+  - 데이터센터 이전 (IP 변경)
+  - NVIDIA 드라이버 NVML 버전 불일치 이슈
+  - Pylon 임베딩 Kubernetes 이전
+key_discussions:
+  - thread_ts: '1713000000.000000'
+    date: '2024-04-14'
+    reply_count: 6
+    text_preview: 온프레미스 K8s 클러스터 확장 - worker10-14 노드 추가
+  - thread_ts: '1715000000.000000'
+    date: '2024-05-07'
+    reply_count: 8
+    text_preview: worker5/6 NVIDIA 드라이버 NVML 버전 불일치 디버깅 (kozistr833)
+  - thread_ts: '1717000000.000000'
+    date: '2024-05-30'
+    reply_count: 4
+    text_preview: L40s GPU 구매 계획 논의 및 스펙 비교
+  - thread_ts: '1718200000.000000'
+    date: '2024-06-12'
+    reply_count: 5
+    text_preview: Pylon 임베딩 서비스 Kubernetes 이전 완료 - Pod 상태 확인
+terminology:
+  - term: "NVML"
+    definition: "NVIDIA Management Library - GPU 모니터링 및 관리 라이브러리"
+    aliases: []
+    context: "드라이버와 라이브러리 버전 불일치 시 GPU 인식 실패 발생"
+  - term: "bge-m3"
+    definition: "BAAI에서 개발한 다국어 임베딩/리랭킹 모델"
+    aliases: []
+    context: "worker6에서 서빙, Pylon 서비스와 연동"
+  - term: "xionic-ko-llama-3-70b"
+    definition: "Sionic AI에서 파인튜닝한 한국어 LLaMA 3 70B 모델"
+    aliases: []
+    context: "Alibaba A100 GPU에서 배포 및 서빙"
+  - term: "L40s"
+    definition: "NVIDIA L40S GPU - 추론 및 트레이닝 겸용 고성능 GPU"
+    aliases: []
+    context: "Q2에 구매 계획 수립, 추후 worker100/101에 장착"
+  - term: "MDC"
+    definition: "Midtown Data Center - NDC(Nonce)에서 이전한 새 데이터센터"
+    aliases: ["Midtown"]
+    context: "IP 61.73.27.196, NDC에서 이전된 서버들이 위치"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

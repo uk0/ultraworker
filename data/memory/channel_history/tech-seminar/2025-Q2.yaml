@@ -1,0 +1,69 @@
+channel:
+  id: C08G54E9K8Q
+  name: tech-seminar
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 10
+  active_users: 11
+  avg_messages_per_day: 1.7
+summary: |
+  2025년 2분기 tech-seminar 채널은 AI 에이전트 및 도구 생태계에 대한 관심이 집중된 분기였다. OpenManus, MCP(Model Context Protocol), Claude Code 등 에이전틱 AI 프레임워크 소개가 주요 주제로 다루어졌으며, LightRAG와 hiRAG 등 고급 RAG 기법도 발표되었다. 일본 출장 후 기술 트렌드 공유, pylon 청킹 알고리즘 개선 소개, supply 인덱서 아키텍처 발표도 이루어졌다. 11명의 팀원이 활발하게 참여하여 최신 AI 기술 트렌드를 내재화하였다.
+topics:
+  - name: "에이전틱 AI"
+    mention_count: 8
+    description: "OpenManus, MCP, Claude Code 등 AI 에이전트 프레임워크 소개 및 실습"
+  - name: "고급 RAG 기법"
+    mention_count: 6
+    description: "LightRAG, hiRAG 등 차세대 RAG 아키텍처 비교 발표"
+  - name: "pylon 청킹 개선"
+    mention_count: 4
+    description: "pylon 서비스의 문서 청킹 알고리즘 개선 사항 내부 발표"
+  - name: "supply 인덱서 아키텍처"
+    mention_count: 3
+    description: "carrier-supply 벡터 인덱서 아키텍처 설계 및 구현 소개"
+  - name: "일본 기술 트렌드"
+    mention_count: 3
+    description: "일본 출장 후 현지 AI/기술 트렌드 및 컨퍼런스 내용 공유"
+key_discussions:
+  - thread_ts: '1743811200.000000'
+    date: '2025-04-05'
+    reply_count: 4
+    text_preview: "OpenManus와 MCP를 활용한 AI 에이전트 구축 실습 발표"
+  - thread_ts: '1746403200.000000'
+    date: '2025-05-05'
+    reply_count: 3
+    text_preview: "LightRAG vs hiRAG 비교: 그래프 기반 RAG의 실전 성능 분석"
+  - thread_ts: '1749081600.000000'
+    date: '2025-06-05'
+    reply_count: 2
+    text_preview: "pylon 청킹 알고리즘 개선 및 supply 인덱서 아키텍처 공유"
+terminology:
+  - term: "MCP"
+    definition: "Model Context Protocol. Anthropic이 정의한 AI 모델과 외부 도구 연동 표준 프로토콜"
+    aliases: ["Model Context Protocol"]
+    context: "Claude Code와 함께 에이전틱 AI 세미나에서 소개"
+  - term: "OpenManus"
+    definition: "오픈소스 AI 에이전트 프레임워크"
+    aliases: []
+    context: "Q2 세미나에서 에이전틱 AI 구현 도구로 소개"
+  - term: "LightRAG"
+    definition: "그래프 구조를 활용한 경량 RAG 시스템"
+    aliases: ["Light RAG"]
+    context: "hiRAG와 비교 분석 세미나에서 발표"
+  - term: "hiRAG"
+    definition: "계층적(hierarchical) 구조를 활용한 고성능 RAG 시스템"
+    aliases: ["hi-RAG", "hierarchical RAG"]
+    context: "LightRAG와 함께 비교 분석된 차세대 RAG 기법"
+  - term: "Claude Code"
+    definition: "Anthropic의 Claude AI 기반 코드 자동화 CLI 도구"
+    aliases: ["claude-code", "클로드 코드"]
+    context: "Q2 세미나에서 에이전틱 AI 활용 도구로 소개"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

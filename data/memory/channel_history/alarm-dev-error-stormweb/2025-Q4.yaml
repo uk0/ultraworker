@@ -1,0 +1,33 @@
+channel:
+  id: C09MDGRRUDU
+  name: alarm-dev-error-stormweb
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 5
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 1.7
+summary: |
+  2025년 4분기 alarm-dev-error-stormweb 채널은 SaaS 개발(Dev) 환경의 StormWeb Sentry 에러를 수신하기 위해 10월 중순에 신설된 채널이다. 4명이 참여하였으며 채널 주제 설정과 초기 멤버 구성이 주된 활동이었다. 메시지 수가 5개로 적어 채널 설정 완료 후 실제 Sentry 알람 수신 체계 구축이 시작된 단계이다.
+topics:
+  - name: "채널 초기 설정"
+    mention_count: 3
+    description: "StormWeb Sentry 에러 알람 수신을 위한 채널 주제 설정 및 멤버 구성"
+key_discussions: []
+terminology:
+  - term: "StormWeb"
+    definition: "사이오닉 AI의 Storm 플랫폼 프론트엔드 웹 서비스"
+    aliases: ["스톰웹"]
+    context: "SaaS Dev 환경의 Sentry 에러 모니터링 대상"
+  - term: "Sentry"
+    definition: "프론트엔드/백엔드 애플리케이션 에러를 실시간으로 모니터링하는 오류 추적 플랫폼"
+    aliases: []
+    context: "StormWeb의 에러 알람을 Slack으로 전송하는 데 사용"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

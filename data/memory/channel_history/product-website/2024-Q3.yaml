@@ -1,0 +1,42 @@
+channel:
+  id: C06PS33807Q
+  name: product-website
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 4
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  홈페이지 리뉴얼 후 유지보수 단계로 활동이 크게 감소한 분기(5건 메시지). 주요 이슈는 다국어 관련 버그 수정이었다.
+  영문 홈페이지 Company 페이지에 한국어가 그대로 노출되는 문제가 제보되었고, 영문 이름 표기 오류(Han Sihyeung) 수정이 요청되었다.
+  구글 검색 SEO 관련으로 문서 제목이 비정상적으로 표시되는 문제가 논의되었으며, 구글에서 'Sionic AI' 검색 시 홈페이지가 바로 노출되지 않는 SEO 이슈도 보고되었다.
+topics:
+  - 다국어 표시 버그
+  - SEO 검색 노출 문제
+  - 영문 이름 표기 수정
+key_discussions:
+  - thread_ts: '1722232425.035519'
+    date: '2024-07-29'
+    reply_count: 32
+    text_preview: '최윤정 - 영문이름 표기 오류(Han Sihyeung) 수정 요청'
+  - thread_ts: '1722573959.256119'
+    date: '2024-08-02'
+    reply_count: 19
+    text_preview: '최윤정 - 구글 검색에서 Sionic AI 홈페이지 미노출 이슈'
+  - thread_ts: '1725350740.839939'
+    date: '2024-09-03'
+    reply_count: 10
+    text_preview: '최윤정 - 영어판 Company 페이지 한국어 노출 버그'
+terminology:
+  - term: 'SEO'
+    definition: 'Search Engine Optimization, 검색 엔진 최적화'
+    context: '구글 검색 노출 및 문서 제목 표시 관련 이슈 논의'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

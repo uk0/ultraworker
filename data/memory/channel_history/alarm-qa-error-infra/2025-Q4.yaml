@@ -1,0 +1,42 @@
+channel:
+  id: C090GJ7546L
+  name: alarm-qa-error-infra
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 3.0
+summary: |
+  2025-Q4 alarm-qa-error-infra 채널에서는 QA 환경의 인프라 에러 알림이 소수 기록되었다.
+  11월 16일 stargate-web Pod 재시작 및 ta-event-collector-api Pod 재시작 High 우선순위 이슈가 New Relic을 통해 알림되었으며, 신규 멤버(Q29)가 채널에 참여하였다.
+topics:
+  - name: "Pod 재시작 알림"
+    mention_count: 2
+    description: "stargate-web, ta-event-collector-api의 QA 환경 Pod 재시작 High 이슈"
+key_discussions:
+  - thread_ts: '1763251960.000000'
+    date: '2025-11-16'
+    reply_count: 1
+    text_preview: "stargate-web Pod 재시작 - QA Namespace, sionicai-onprem-cluster, InfraAlert(qa)"
+  - thread_ts: '1763251960.000001'
+    date: '2025-11-16'
+    reply_count: 1
+    text_preview: "ta-event-collector-api Pod 재시작 - QA Namespace, High priority, InfraAlert(qa)"
+terminology:
+  - term: "InfraAlert(qa)"
+    definition: "QA 환경 인프라 모니터링 정책으로 Pod 재시작 등의 이벤트를 감지"
+    aliases: []
+    context: "New Relic 기반 sionicai-onprem-cluster QA 환경 알람 정책"
+  - term: "status-qa-k8s"
+    definition: "QA 환경 Kubernetes 상태를 모니터링하고 Slack에 알림을 보내는 워크플로우"
+    aliases: []
+    context: "New Relic 워크플로우로 Pod 재시작 등 이벤트 발생 시 alarm-qa-error-infra 채널에 알림"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

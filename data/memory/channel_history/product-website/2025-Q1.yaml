@@ -1,0 +1,55 @@
+channel:
+  id: C06PS33807Q
+  name: product-website
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 4
+  active_users: 7
+  avg_messages_per_day: 1.2
+summary: |
+  채용 사이트 통합과 홈페이지 콘텐츠 업데이트 필요성이 제기된 분기(7건 메시지).
+  1월에 김덕현(Dekay)이 career.sionic.ai 도메인을 Oopy(노션) 기반에서 Flex 채용 사이트로 리다이렉션하는 작업을 배포했다. Oopy 구독료 절약과 채용 사이트 단일화가 목적이었다.
+  3월에는 박우명이 홈페이지 솔루션 페이지(STORM Answer, Analyze, Organize 등)의 정보가 구식이며 TBD 상태로 남아있어 업데이트가 필요하다는 제안을 했고, 20개의 답글로 활발한 논의가 이루어졌다.
+  STORM Console의 일본 버전 존재 여부, 홈페이지 한국어 페이지에서 영어 시연 영상 노출 등 다국어 관련 이슈도 논의되었다.
+topics:
+  - 채용 사이트(career.sionic.ai) Flex 전환
+  - Oopy 구독 해지
+  - 솔루션 페이지 업데이트 제안
+  - STORM Console 다국어 지원
+  - 홈페이지 콘텐츠 현행화
+key_discussions:
+  - thread_ts: '1741320252.457569'
+    date: '2025-03-07'
+    reply_count: 20
+    text_preview: '박우명 - 홈페이지 솔루션 페이지 업데이트 제안 (TBD 상태 지적)'
+  - thread_ts: '1741157579.695129'
+    date: '2025-03-05'
+    reply_count: 14
+    text_preview: '최병현 - 한국어 페이지에서 영어 시연 영상 노출 어색함 지적'
+  - thread_ts: '1735821999.820309'
+    date: '2025-01-02'
+    reply_count: 12
+    text_preview: '김덕현 - career.sionic.ai Flex 채용 사이트 리다이렉션 배포'
+  - thread_ts: '1741063549.399759'
+    date: '2025-03-04'
+    reply_count: 4
+    text_preview: '한시형 - STORM Console 일본어 버전 존재 여부 질문'
+terminology:
+  - term: 'Oopy'
+    definition: '노션 기반 웹사이트 빌더 서비스'
+    context: '기존 채용 사이트가 Oopy로 운영되었으나 Flex로 전환됨'
+  - term: 'Flex'
+    definition: 'HR/채용 관리 플랫폼, 채용 웹사이트 기능 제공'
+    context: 'career.sionic.ai가 Flex 채용 사이트로 리다이렉션되도록 변경'
+  - term: 'STORM Console'
+    definition: 'STORM 제품의 관리자/사용자 콘솔 (sionicstorm.ai)'
+    context: '일본 사용자를 위한 다국어 지원 여부가 논의됨'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

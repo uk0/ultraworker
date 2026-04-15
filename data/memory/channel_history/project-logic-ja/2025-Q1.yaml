@@ -1,0 +1,66 @@
+channel:
+  id: C072ZMLPG3A
+  name: project-logic-ja
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 40
+  total_threads: 24
+  active_users: 11
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q1은 LogicJa 프로젝트의 가장 활발한 시기였다. dasolchoi가 일본어 데이터셋을 추가 생성하고 HuggingFace에 업로드했으며,
+  LogicJa 웹사이트(logicja.sionic.ai)를 구축하여 배포했다. DeepSeek 모델 평가, Judge 모델 선정(GPT-4o vs Claude 3.5 Sonnet),
+  think 태그 처리 문제 등 평가 방법론에 대한 심도 있는 논의가 이루어졌다. LLM-as-a-Judge의 언어별 평가 편향 발견이 주요 성과였으며,
+  이를 바탕으로 학술 논문(ACL/NAACL) 작성이 시작되었다. hyunwoo(현우)가 프론트엔드 개발에 참여했고, 이강욱이 로딩 속도 개선 PR을
+  제출했다. 박우명이 LogicJa 리더보드 공개 계획과 홍보 전략을 논의했다.
+topics:
+  - LogicJa 웹사이트 구축 및 배포
+  - HuggingFace 데이터셋 공개
+  - DeepSeek 모델 평가
+  - LLM-as-a-Judge 언어별 편향 분석
+  - ACL/NAACL 논문 작성
+  - Judge 모델 선정 (GPT-4o vs Claude)
+  - think 태그 처리 문제
+  - 리더보드 공개 전략
+key_discussions:
+  - title: "LogicJa 웹사이트 배포 및 피드백"
+    date: "2025-02-21"
+    participants: ["dasolchoi", "hyunwoo"]
+    summary: "logicja.sionic.ai 웹페이지 완성 및 배포. 피드백 수렴. Display Private Model 체크박스 버그 발견."
+  - title: "DeepSeek 모델 평가 및 think 태그 문제"
+    date: "2025-02-03~04"
+    participants: ["dasolchoi", "박우명"]
+    summary: "DeepSeek distill 모델의 think 태그 형식이 일관되지 않아 평가 시 처리 어려움. 태그 제거 시 0.4점 상승 확인."
+  - title: "LLM-as-a-Judge 언어별 편향 발견"
+    date: "2025-01-15~16"
+    participants: ["박우명", "dasolchoi", "song"]
+    summary: "동일 답변을 한국어/일본어로 평가 시 점수 역전 현상 발견. 언어에 따른 LLM Judge 평가 편향 확인. 논문화 추진(ACL/NAACL)."
+  - title: "리더보드 공개 계획 논의"
+    date: "2025-02-25"
+    participants: ["박우명", "dasolchoi", "Sigrid Jin", "Noah(고석현)"]
+    summary: "LogicJa 리더보드 공개를 위한 최소 정보, LogicKor와의 관계, 홍보 채널 전략 논의."
+  - title: "일본 LLM 연구회 및 커뮤니티 조사"
+    date: "2025-03-07~23"
+    participants: ["Sigrid Jin"]
+    summary: "일본 LLM 연구회(llm-jp.nii.ac.jp), zenn.dev, qiita.com 등 일본 기술 커뮤니티 조사 및 공유."
+terminology:
+  - term: "logicja.sionic.ai"
+    definition: "LogicJa 리더보드 웹사이트 URL"
+    aliases: []
+  - term: "LLM-as-a-Judge"
+    definition: "LLM을 평가자로 활용하여 다른 LLM의 출력 품질을 평가하는 방법론"
+    aliases: ["Judge 모델"]
+  - term: "DeepSeek"
+    definition: "중국 AI 기업의 LLM 모델, distill 버전 포함"
+    aliases: ["DeepSeek-R1"]
+  - term: "think 태그"
+    definition: "추론 모델이 생성하는 사고과정 태그 (<think>...</think>)"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

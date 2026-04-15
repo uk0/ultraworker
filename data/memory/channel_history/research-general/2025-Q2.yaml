@@ -1,0 +1,107 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 57
+  total_threads: 28
+  active_users: 12
+  avg_messages_per_day: 0.6
+summary: >
+  2025 Q2는 CVPR 발표 준비와 GraphRAG 연구, 검색 기술 심화가 주요 흐름이었다. CVPR 억셉 이후 발표
+  준비가 진행되었으며, 내슈빌 출장 일정 조정과 네트워킹 대상 리스트업이 이루어졌다. GraphRAG/LightRAG가
+  재부상하여 아이티센엔틱 연동 작업이 시작되었고, 도균님이 기술 메인을 맡게 되었다. IBK 프로젝트에서
+  검색 성능 고도화가 지속되었으며, 숫자 검색 문제, 문서명/고유 단어 매칭 이슈 등이 발견되었다. Sparse
+  retrieval 연구가 본격화되어 Efficient Inverted Indexes, miniCOIL, sentence-transformers sparse
+  encoder 등이 분석되었다. VLM 모델 전략으로 STORM 파서용 자체 VLM 개발 방향이 논의되었고, Gemma 3n
+  Matryoshka Transformer가 주목받았다. 리서치 미팅이 금요일로 변경되었다가 집중도/참석률 저하로 다시
+  월요일로 복귀를 검토하게 되었다. Embed 4(Cohere) 출시, SentenceTransformers v4.1.0 ONNX 백엔드
+  등 외부 동향도 활발히 공유되었다.
+topics:
+  - name: "CVPR 발표 준비"
+    count: 6
+    summary: "CVPR 내슈빌 출장 준비. 네트워킹 대상 리스트업. 리서치 미팅 시차 조정(14시간). 출장 비용 절감 논의."
+  - name: "GraphRAG/LightRAG"
+    count: 8
+    summary: "GraphRAG 키워드 우선순위 상승. LightRAG 분석. 아이티센엔틱 연동 작업 시작. 도균님 기술 메인 담당."
+  - name: "IBK 검색 성능 고도화"
+    count: 7
+    summary: "숫자 검색 문제, 문서명 매칭 이슈 발견. 두산 보고서 생성 데모에서 토크나이징/렉시컬 검색 문제. 한자/한글 매칭(電文/전문) 이슈."
+  - name: "Sparse Retrieval 연구"
+    count: 6
+    summary: "Efficient Inverted Indexes for Sparse Representations 논문 분석. miniCOIL 분석. sentence-transformers sparse encoder 준비. Dense retriever 편향 분석."
+  - name: "VLM 전략 및 모델"
+    count: 5
+    summary: "STORM 파서용 VLM 개발 방향(온프렘 탑재). Gemma 3n Matryoshka Transformer. Embed 4 멀티모달 검색. xi-vl 네이밍 변경 논의."
+  - name: "리서치 미팅 운영"
+    count: 5
+    summary: "금요일 오후로 미팅 시간 변경. 2달 운영 후 집중도/참석률 저하 확인. 월요일 복귀 검토."
+  - name: "GRPO 데이터 및 학습"
+    count: 3
+    summary: "fnguide PDF GRPO 데이터셋 HuggingFace 공개. VL 모델 RL 학습 진행. Late CLS Chunking 특허 명세서 검토."
+key_discussions:
+  - thread_ts: '1744180499'
+    date: '2025-04-09'
+    title: "Graph RAG 태스크 착수"
+    summary: "Graph 관련 태스크가 한달~한달반 안에 필요해짐. 도균님이 기술 메인, 아이티센엔틱 연동 작업 지원 인력 필요. LightRAG 분석 시작."
+    participants: ["U058A971Z8R", "U07592QB78U", "U08DJL0LXL0", "U08GLL0SK2S"]
+    decisions: ["도균님 기술 메인 담당", "Graph RAG 한달반 내 완료 목표"]
+    action_items: ["git repo/노션 공유", "연동 작업 지원자 확정"]
+    keywords: ["GraphRAG", "LightRAG", "아이티센엔틱"]
+    relevance_score: 0.9
+  - thread_ts: '1746778413'
+    date: '2025-05-09'
+    title: "대외 기술 성과물 공개 논의"
+    summary: "사이오닉의 대외 기술 성과물 공개 시점과 방식에 대한 논의. 매우 활발한 토론(58개 답글)."
+    participants: ["U057PR1ADCL"]
+    decisions: []
+    action_items: []
+    keywords: ["기술PR", "성과물", "공개"]
+    relevance_score: 0.8
+  - thread_ts: '1748346812'
+    date: '2025-05-27'
+    title: "중단기 기술 전략 방향성 Align"
+    summary: "STORM 파서를 위한 VLM 개발 방향. 온프렘 탑재 목표. VLM과 별개로 LLM도 개발 필요(정부 사업 요건). 방법론: 기존 VLM 경량화 vs LLM에 비전인코더 직접 연결."
+    participants: ["U08GCAT3Q31"]
+    decisions: ["VLM 자체 개발 방향 확정", "LLM 개발은 후순위"]
+    action_items: ["VLM 개발 방법론 구체화"]
+    keywords: ["VLM", "LLM", "STORM파서", "온프렘", "기술전략"]
+    relevance_score: 1.0
+  - thread_ts: '1747732874'
+    date: '2025-05-20'
+    title: "Sparse Retrieval 효율적 인덱스 구조"
+    summary: "Efficient Inverted Indexes for Sparse Representations 논문 심층 분석. 기존 검색 엔진 구조가 Sparse Vector와 호환되지만 효율이 좋지 않은 문제를 해결하는 새로운 검색 엔진 구조 제시."
+    participants: ["U05QCA7JTD5"]
+    decisions: []
+    action_items: []
+    keywords: ["Sparse Retrieval", "인덱스", "검색엔진", "Inverted Index"]
+    relevance_score: 0.8
+terminology:
+  - term: "LightRAG"
+    definition: "경량 GraphRAG 프레임워크. HKUDS에서 개발."
+    aliases: []
+    context: "GraphRAG 태스크에서 분석 대상."
+  - term: "Gemma 3n"
+    definition: "Google의 Matryoshka Transformer 기반 경량 멀티모달 모델."
+    aliases: []
+    context: "2025년 5월 출시. 중첩 구조로 효율적인 서빙 가능."
+  - term: "miniCOIL"
+    definition: "Qdrant에서 제안한 경량 ColBERT 변형. 효율적인 sparse representation."
+    aliases: []
+    context: "Sparse retrieval 연구의 일환으로 분석."
+  - term: "xi-vl"
+    definition: "사이오닉의 VLM 모델. Qwen-VL 기반."
+    aliases: []
+    context: "네이밍 변경 논의 진행(중국스러운 이름 탈피)."
+  - term: "GRPO"
+    definition: "Group Relative Policy Optimization. DeepSeek R1에서 사용한 강화학습 기법."
+    aliases: []
+    context: "VLM 학습 및 GRPO 데이터셋 구축에 활용."
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

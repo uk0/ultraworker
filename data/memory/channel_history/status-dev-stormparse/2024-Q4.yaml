@@ -1,0 +1,43 @@
+channel:
+  id: C083RLRDERG
+  name: status-dev-stormparse
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 851
+  total_threads: 1
+  active_users: 6
+  avg_messages_per_day: 94.6
+summary: |
+  2024년 4분기 StormParse 상태 모니터링 채널이 12월 초 개설되어 Sionic Monitoring 봇이 연동되었으며, 이후 Probe Alert가 대량으로 발생하였다.
+  특히 12월 18~19일에 단 시간 내 수백 건의 Probe Alert가 집중 발생하는 이상 현상이 관측되었고, 팀원이 이를 확인하는 이모지 반응을 남겼다.
+  하루 평균 94.6건의 메시지가 기록될 정도로 알림 빈도가 높았으며, 이는 StormParse 서비스의 초기 불안정 상태 또는 모니터링 임계값 조정 문제로 추정된다.
+topics:
+  - name: "StormParse Probe Alert"
+    mention_count: 845
+    description: "Sionic Monitoring 봇이 발송한 StormParse 서비스 프로브 알림"
+  - name: "모니터링 채널 설정"
+    mention_count: 3
+    description: "채널 개설 및 Sionic Monitoring 웹훅 연동"
+  - name: "대량 알림 발생"
+    mention_count: 5
+    description: "12월 18~19일 단시간 수백 건 집중 알림 발생"
+key_discussions:
+  - thread_ts: '1733378940.000000'
+    date: '2024-12-05'
+    reply_count: 1
+    text_preview: "채널 개설 및 Sionic Monitoring 웹훅 설정 - 웹훅 URL 공유"
+terminology:
+  - term: "StormParse"
+    definition: "Sionic AI STORM 플랫폼의 파싱 서비스"
+  - term: "Probe Alert"
+    definition: "서비스 가용성 모니터링 프로브(Probe)가 이상을 감지했을 때 발송하는 알림"
+  - term: "Sionic Monitoring"
+    definition: "Sionic AI 내부 서비스 모니터링 봇"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

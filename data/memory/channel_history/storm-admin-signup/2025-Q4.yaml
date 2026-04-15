@@ -1,0 +1,34 @@
+channel:
+  id: C07T22TQZT9
+  name: storm-admin-signup
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 519
+  total_threads: 40
+  active_users: 11
+  avg_messages_per_day: 7.3
+summary: |
+  2025-Q4에는 가입 알림이 519건으로 전 분기 대비 대폭 증가하며 Storm 서비스의 성장세가 확인되었다. 특히 12월 20일에 하루에 수십 건의 가입이 집중 발생하여 폭발적인 성장을 보였다. 가입 요청-이메일 발송-완료의 2단계 자동 알림이 안정적으로 운영되었으며, 일평균 7.3건의 메시지가 발생하였다. 해외 가입 건도 지속적으로 관찰되었고, 연말에 걸쳐 글로벌 유입이 두드러졌다.
+topics:
+  - 가입 유입 폭발적 성장 (Q3 대비 85% 증가)
+  - 12월 대량 가입 러시
+  - 글로벌 가입 유입 증가
+  - 자동 알림 시스템 안정 운영
+key_discussions:
+  - thread_ts: '1767197040.620349'
+    date: '2025-12-31'
+    title: 연말 신규 가입 모니터링
+    summary: 12월 말 해외 포함 다수 가입 건 관찰 및 고객 정보 확인 (3개 답글)
+  - thread_ts: '1766743876.758359'
+    date: '2025-12-26'
+    title: 크리스마스 연휴 가입 건
+    summary: 연휴 기간 중 가입 발생에 대한 모니터링 (1개 답글)
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

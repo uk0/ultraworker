@@ -1,0 +1,96 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:47'
+statistics:
+  total_messages: 36
+  total_threads: 28
+  active_users: 13
+  avg_messages_per_day: 0.8
+key_discussions:
+- thread_ts: '1767764074.661899'
+  date: '2026-01-07'
+  reply_count: 121
+  text_preview: 'gemini-2.5-flash 서비스 정지 대책 고민중 cc <@U093DG8SMD1> <@U08GCAT3Q31>
+
+    • gemini 3 flash로 옮기고 가격을 옮기거나/마진율을 '
+- thread_ts: '1768195550.745929'
+  date: '2026-01-12'
+  reply_count: 118
+  text_preview: <https://sionicai.slack.com/archives/C05BUTMULMD/p1768195474600989?thread_ts=1768195149.476099&amp;c
+- thread_ts: '1767329683.187609'
+  date: '2026-01-02'
+  reply_count: 50
+  text_preview: '현재 폴라리스 오피스에 요청을 보내면 아래처럼 Invalid License라고 응답이 오는데
+
+    혹시 폴라리스 오피스에 계약기간이 2025년까지 였나요?
+
+    <!subteam^S08HT5'
+- thread_ts: '1770956663.028729'
+  date: '2026-02-13'
+  reply_count: 47
+  text_preview: '`dev` parse-router 에서 보는 모델 opengatway 로 꺽기 &gt;&gt;'
+- thread_ts: '1769796057.521589'
+  date: '2026-01-31'
+  reply_count: 45
+  text_preview: '<https://x.com/i/status/2016855194705793204|https://x.com/i/status/2016855194705793204>
+
+    이렇게도 팔 수 있군여'
+- thread_ts: '1770808031.162589'
+  date: '2026-02-11'
+  reply_count: 39
+  text_preview: '<@U09M73LM65R> pdf파일 500장 정도 되는거 문서 학습 실패 떴는데 이유를 알 수 있을까요?
+
+    에이전트 주소: <https://www.sionicstorm.ai/ko/'
+- thread_ts: '1768904799.717549'
+  date: '2026-01-20'
+  reply_count: 36
+  text_preview: 스톰파스 기능 수준 문의 &gt;&gt;
+- thread_ts: '1770189946.856779'
+  date: '2026-02-04'
+  reply_count: 30
+  text_preview: 'poc 최종 산출물로 파싱된 결과를 보내야하는 상황입니다.
+
+    에이전트에서 등록한 모든 문서의 파싱된 결과를 얻고자 하는데 도움을 받을 수 있을까요? <@U09M73LM65R> <!s'
+- thread_ts: '1769511448.020019'
+  date: '2026-01-27'
+  reply_count: 30
+  text_preview: gemini 2.5 flash 학습 버전과 이전 버전 비교 &gt;&gt;
+- thread_ts: '1768549644.457619'
+  date: '2026-01-16'
+  reply_count: 28
+  text_preview: '<@U09M73LM65R> 1~2일전 플레이그라운드에 업로드된 파일을 내려 받아 주실 수 있을까?
+
+
+    신용회복위원회 직원이 테스트를 위해 금융 관련 내용이 포함된 파일을 업로드했었습'
+- thread_ts: '1769060158.628529'
+  date: '2026-01-22'
+  reply_count: 21
+  text_preview: 파스 이엔에이 이슈 정리
+- thread_ts: '1770702838.966349'
+  date: '2026-02-10'
+  reply_count: 20
+  text_preview: 파스 모델명 논의
+- thread_ts: '1770806893.706269'
+  date: '2026-02-11'
+  reply_count: 17
+  text_preview: '<@U09M73LM65R> parse-router 에서 보는 모델을 opengateway 로 경유할 수 있도록 준비
+    부탁 드립니다.
+
+    • 작은 문서로 해보고 말해주세요. 현재 서버 '
+- thread_ts: '1768291518.302579'
+  date: '2026-01-13'
+  reply_count: 15
+  text_preview: <@U08DJL0LXL0> <@U09M73LM65R> 지금 삼성이엔에이 프로젝트에서 발생하는 이슈 좀 모아서 공유주세요.
+- thread_ts: '1767966426.697469'
+  date: '2026-01-09'
+  reply_count: 15
+  text_preview: <@U057MCDJHDY> 저희 정식계약 준비해야할듯요? 폴라리스
+metadata:
+  created_at: '2026-02-13T16:27:47'
+  synced_by: sync_fast.py

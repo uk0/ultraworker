@@ -1,0 +1,76 @@
+channel:
+  id: C06HUFQ8EKA
+  name: noti-spec-review
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 6
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 Q4에는 STORM-WEB 프론트엔드 프로젝트의 스펙이 집중적으로 등록되었다. 워크플로우
+  관련으로는 워크플로우 리비전 설계, OrderSheet-Workflow 리팩토링(복잡한 상태 흐름 개선,
+  Immutable 업데이트 손실/경쟁 상태 문제), 변수 할당 노드 편집 폼 등이 다루어졌다. 실행 로그
+  관련으로는 상세 로그 Phase 1, 실행 로그 1-2(웹 필드 정의) 등 로그 시스템 설계 스펙이
+  공유되었다. 또한 예상 비용 계산기 설계(폴더 구조, 흐름도)도 논의되었다. 이 시기에는 활동이
+  주로 STORM-WEB 프론트엔드 팀에 집중되어 있었으며, 참여자 1명으로 집계되었으나 리뷰어
+  태그를 통해 다수가 리뷰에 참여한 것으로 보인다.
+topics:
+  - 워크플로우 리비전 설계
+  - OrderSheet-Workflow 리팩토링
+  - 상세 로그 Phase 1
+  - 실행 로그 웹 필드 정의
+  - 예상 비용 계산기 설계
+  - 변수 할당 노드 편집 폼
+key_discussions:
+  - thread_ts: '1765793606.080259'
+    date: '2025-12-15'
+    title: '실행로그 1-2'
+    summary: '웹에서 필요한 필드 정의 및 개발 계획. 34개 답글.'
+    reply_count: 34
+  - thread_ts: '1762412519.031159'
+    date: '2025-11-06'
+    title: '예상 비용 계산기 설계'
+    summary: '예상 비용 계산기 폴더 구조 및 흐름도 설계. 9개 답글.'
+    reply_count: 9
+  - thread_ts: '1763355620.363579'
+    date: '2025-11-17'
+    title: '상세 로그 Phase 1'
+    summary: '상세 로그 시스템 첫 번째 단계 스펙. 6개 답글.'
+    reply_count: 6
+  - thread_ts: '1763618108.123549'
+    date: '2025-11-20'
+    title: '워크플로우 리비전'
+    summary: '워크플로우 리비전 관련 설계. 5개 답글.'
+    reply_count: 5
+  - thread_ts: '1764123080.534819'
+    date: '2025-11-26'
+    title: 'OrderSheet-Workflow 리팩토링'
+    summary: '복잡한 상태 흐름 개선 및 Immutable 문제 해결. 4개 답글.'
+    reply_count: 4
+  - thread_ts: '1762328901.132839'
+    date: '2025-11-05'
+    title: '변수 할당 노드 편집 폼'
+    summary: '구현 방향 결론 위주로 리뷰 요청. 3개 답글.'
+    reply_count: 3
+terminology:
+  - term: "STORM-WEB"
+    definition: "Storm 플랫폼의 웹 프론트엔드 프로젝트. 워크플로우 편집기, 로그 뷰어 등 UI 담당."
+    aliases: []
+  - term: "워크플로우 리비전"
+    definition: "워크플로우의 버전 관리 시스템. 변경 이력 추적 및 롤백 기능."
+    aliases: ["Revision"]
+  - term: "OrderSheet"
+    definition: "워크플로우 설정을 관리하는 시트. 프론트엔드에서 직접 관리."
+    aliases: ["오더시트"]
+  - term: "Soft-block"
+    definition: "워크플로우 업데이트 시 경쟁 상태를 방지하는 기법. 별도 테크스펙 준비 중."
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,102 @@
+channel:
+  id: C05BUTMULMD
+  name: product-storm
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 297
+  total_threads: 262
+  active_users: 18
+  avg_messages_per_day: 4.5
+summary: |
+  2025-Q2에는 오더시트 리팩토링(V0->V1 스키마 전환)과 워크플로우 캔버스 GUI 도구 개발(Phase 1~2)이 핵심 작업이었다.
+  PDF 뷰어 하이라이팅 개선, LLM 청크 식별(출처 검증) 기능 기획, 팀즈(Teams) 연동 1차 기획이 시작되었으며, storm-parse v2 분리 작업도 착수되었다.
+  IBK 5만건 문서 검색 성능 저하 이슈, 오더시트 스키마 버전 불일치로 인한 에이전트 먹통 장애, 파일론 대규모 동시 학습 시 콜백 유실 등 운영 이슈가 발생하여 긴급 대응이 이루어졌다.
+  에이전트 템플릿 다국어(ko/en/ja/th) 시스템 프롬프트 분리, Apidog 최소 시나리오 자동 테스트 도입, 추론 모델 응답 처리 방식 논의도 진행되었다.
+topics:
+  - name: "오더시트 리팩토링"
+    mention_count: 20
+    description: "V0->V1 스키마 전환, if-else 문법 개선, 커스텀 변수 지원, GUI 캔버스 도구 개발"
+  - name: "워크플로우 캔버스 GUI"
+    mention_count: 18
+    description: "노드 편집, 포트 위치 계산, if-else 시각화, Phase 1-2 개발 및 QA"
+  - name: "PDF 뷰어/하이라이팅"
+    mention_count: 12
+    description: "하이라이팅 정확도 개선, 확대/축소 기능, 유사도 비교 기반 하이라이팅 방식 탐색"
+  - name: "LLM 청크 식별"
+    mention_count: 8
+    description: "LLM이 답변에 활용한 청크를 식별하는 기능 기획 - 출처 검증 강화"
+  - name: "팀즈 연동"
+    mention_count: 6
+    description: "Microsoft Teams 봇 연동 1차 기획 및 플로우 검토"
+  - name: "IBK 대규모 문서 검색"
+    mention_count: 10
+    description: "5만건 문서 검색 성능 저하, 청크 검색 실패 현상 분석"
+  - name: "에이전트 템플릿 다국어"
+    mention_count: 7
+    description: "ko/en/ja/th 언어별 system_template 분리 및 자유 대화 템플릿 개선"
+  - name: "storm-parse v2"
+    mention_count: 5
+    description: "캐리어에서 storm-parse를 분리하여 demo-api, internal-api, external-api 3개 애플리케이션으로 재구성"
+key_discussions:
+  - thread_ts: '1750394702.520399'
+    date: '2025-06-20'
+    reply_count: 134
+    text_preview: "추론 모델 응답 관련 - SSE 스트리밍 처리 및 추론 모델별 동작 차이 논의"
+  - thread_ts: '1750743224.388439'
+    date: '2025-06-24'
+    reply_count: 123
+    text_preview: "라이브 환경 10건 이상 채팅 응답 불가 - 오더시트 V1 스키마 불일치 장애 긴급 대응"
+  - thread_ts: '1750753696.287799'
+    date: '2025-06-24'
+    reply_count: 114
+    text_preview: "파일론 이슈 - 대규모 문서 환경에서 검색 성능 저하 원인 분석"
+  - thread_ts: '1750629249.743179'
+    date: '2025-06-11'
+    reply_count: 86
+    text_preview: "오더시트 리팩토링 if-else 문법 최종본 확인 및 캐리어 연동"
+  - thread_ts: '1749793528.281109'
+    date: '2025-06-13'
+    reply_count: 94
+    text_preview: "템플릿별 오더시트 관리 및 V1 스키마 기준 수정 작업"
+  - thread_ts: '1750239280.458399'
+    date: '2025-06-18'
+    reply_count: 92
+    text_preview: "LLM이 답변에 활용한 청크 식별 방법론 - 프롬프팅 기반 접근 논의"
+  - thread_ts: '1750484038.082209'
+    date: '2025-06-21'
+    reply_count: 71
+    text_preview: "IBK 주말 대량 문서 학습 중 이슈 체크 및 파일론 에러 대응"
+  - thread_ts: '1750400141.171539'
+    date: '2025-06-20'
+    reply_count: 68
+    text_preview: "일본어 테스트 페이지 엔터 동작 변경(Shift+Enter) 요청 및 다국어 입력 UX 논의"
+terminology:
+  - term: "오더시트 V1 스키마"
+    definition: "리팩토링된 워크플로우 설정 스키마로, 기존 V0 대비 if-else 분기, 커스텀 변수 선언 등을 지원"
+    aliases: ["schema_version: 1", "v1"]
+  - term: "워크플로우 캔버스"
+    definition: "오더시트를 시각적으로 편집할 수 있는 GUI 도구로, 노드 기반 워크플로우 편집기"
+    aliases: ["캔버스", "GUI 도구"]
+  - term: "캐리어(Carrier)"
+    definition: "오더시트를 해석하고 실행하는 워크플로우 엔진"
+    aliases: ["Carrier"]
+  - term: "Apidog"
+    definition: "API 자동 테스트 도구로, 최소 시나리오 자동 수행에 사용"
+    aliases: []
+  - term: "aux 버킷"
+    definition: "보조 버킷으로, 메인 에이전트 외 추가 문서를 검색하기 위한 별도 저장소"
+    aliases: ["보조 버킷"]
+  - term: "SSE"
+    definition: "Server-Sent Events - 서버에서 클라이언트로 실시간 스트리밍 응답을 전달하는 프로토콜"
+    aliases: []
+  - term: "DFT"
+    definition: "검색 모델 파인튜닝 기능으로, 에이전트별 검색 성능을 개선하기 위한 도구"
+    aliases: ["검색모델 파인튜닝"]
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

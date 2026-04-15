@@ -1,0 +1,154 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T00:00:00'
+statistics:
+  total_messages: 285
+  total_threads: 98
+  active_users: 18
+  avg_messages_per_day: 3.1
+summary: >
+  2024년 1분기는 사이오닉 엔지니어링팀의 인프라 대전환기였다. GKE에서 EKS로의 인프라 이관이 본격적으로
+  추진되었으며, Terraform 기반 IaC 도입이 시작되었다. 프로덕트 스펙/테크 스펙 작성 문화가 도입되어
+  개발 프로세스가 체계화되기 시작했고, 프로덕트 위클리 미팅이 정기적으로 운영되기 시작했다.
+  Linear로의 프로젝트 관리 도구 이전, PR 리뷰 컨벤션 수립, 배포 프로세스 정비 등 개발 문화
+  전반에 걸친 개선이 이루어졌다. 알리바바 클라우드, Azure, MS Founders Hub 등
+  멀티 클라우드 전략이 활발히 논의되었으며, GPU 인프라 관리와 사내 네트워크 고도화(100G 포설)도
+  진행되었다. Storm Enterprise 아키텍처 초안이 논의되었고, 스프린트 체제로의 전환이 시작되었다.
+topics:
+  - name: "인프라 이관 (GKE -> EKS)"
+    count: 35
+    summary: "GKE에서 EKS로의 대규모 인프라 이관 작업. Terraform 기반 EKS 구축, Stargate/Pylon staging 및 live 이관, Qdrant 스냅샷 테스트, ECR 이미지 풀 테스트 등이 진행됨."
+  - name: "개발 프로세스 정비"
+    count: 30
+    summary: "프로덕트 스펙/테크 스펙 도입, PR 리뷰 컨벤션 수립(3인 리뷰/2인 승인), 배포 체크리스트 작성, 스프린트 체제 전환, Linear 이관 등 개발 문화 체계화."
+  - name: "프로덕트 위클리 운영"
+    count: 15
+    summary: "매주 월요일 프로덕트 위클리 미팅이 정기적으로 운영되기 시작. 기획/개발 태스크 분배, 배포 일정 싱크 등을 논의."
+  - name: "클라우드 비용 및 멀티클라우드"
+    count: 12
+    summary: "알리바바 클라우드 네트워크 비용 최적화(Pay-By-Traffic 전환), MS Founders Hub 스타트업 프로그램 승인, OpenAI 한도 500->1000$ 증설, Runpod 팀 관리."
+  - name: "GPU/하드웨어 인프라"
+    count: 10
+    summary: "A100 GPU 드라이버 이슈, NVIDIA 클린설치 스크립트 공유, 100G 사내 네트워크 포설 완료, 서버실 장비 정리, MinIO/Harbor NAS 세팅."
+  - name: "장애 대응 및 회고"
+    count: 8
+    summary: "작심 라이브 URL 변경 후 카카오톡 대화 불가 장애. DB migration 히스토리 관리 필요성 인식, API/DB 하위호환성 유지 원칙 수립."
+key_discussions:
+  - thread_ts: '1705351760'
+    date: '2024-01-16'
+    title: "Worker 1 접속 불가 / Pylon 전체 장애"
+    summary: "Worker 1 서버 접속 불가로 Pylon 전체 서비스 장애 발생. 네트워크 이슈 확인 및 대응."
+    participants: ["U05QCA7JTD5"]
+    decisions: ["장애 대응 프로세스 필요성 인식"]
+    action_items: []
+    keywords: ["Pylon", "장애", "worker1", "네트워크"]
+    relevance_score: 0.9
+  - thread_ts: '1706512023'
+    date: '2024-01-29'
+    title: "Storm Enterprise 아키텍처 초안 하드웨어 스펙 논의"
+    summary: "Storm Enterprise 배포를 위한 하드웨어 스펙 논의. 사업비 대비 충분한 장비 사양 확보 필요성 강조."
+    participants: ["U057MCDJHDY", "U057PR1ADCL", "U05QCA7JTD5"]
+    decisions: ["전체 사업비 대비 충분한 금액으로 장비 스펙 설정"]
+    action_items: ["하드웨어 스펙 확정"]
+    keywords: ["Storm Enterprise", "하드웨어", "아키텍처"]
+    relevance_score: 0.8
+  - thread_ts: '1706515347'
+    date: '2024-01-29'
+    title: "테크 스펙과 프로덕트 스펙 도입"
+    summary: "테크 스펙/프로덕트 스펙 작성 문화 도입 논의. 1pager 형식 제안, 대규모 기능에 한정하여 작성. 프로세스 제안 포함."
+    participants: ["U05T2RW7PE2", "U057MCDJHDY"]
+    decisions: ["큰 단위 기능에 한정하여 스펙 작성", "1pager 형식 채택"]
+    action_items: ["프로세스 정립", "첫 사례 적용"]
+    keywords: ["테크스펙", "프로덕트스펙", "1pager", "개발 프로세스"]
+    relevance_score: 0.9
+  - thread_ts: '1710234328'
+    date: '2024-03-12'
+    title: "스프린트 체제 전환 및 Linear 이관"
+    summary: "Jira에서 Linear로 프로젝트 관리 도구 이관. 스프린트 기반 개발 체제로 전환 논의. Estimate 포인트 체계 도입."
+    participants: ["U05T2RW7PE2", "U05QCA7JTD5", "U057MCDJHDY"]
+    decisions: ["Linear로 이관 확정", "스프린트 체제 전환", "배포 주기 주 2회(월/수)"]
+    action_items: ["Linear 팀 생성", "스프린트 작업 대상 논의"]
+    keywords: ["Linear", "Jira", "스프린트", "프로젝트 관리"]
+    relevance_score: 0.9
+  - thread_ts: '1711004551'
+    date: '2024-03-21'
+    title: "개발 회고 및 프로세스 정비"
+    summary: "스프린트 회고 진행. API/DB 하위 호환성 유지, 배포 프로세스 정비, QA 방식 정립, 배포 체크리스트 도입 등 핵심 원칙 수립."
+    participants: ["U05T2RW7PE2", "U057MCDJHDY", "U05SJ36FBN2"]
+    decisions: ["API/DB 하위 호환성 항상 유지", "점진적 삭제 원칙", "보수적 버전 업그레이드", "배포 전 DB 스냅샷 필수"]
+    action_items: ["배포 체크리스트 작성", "migration.sql 히스토리 관리", "deploy 채널 공지"]
+    keywords: ["회고", "배포 프로세스", "하위 호환성", "QA"]
+    relevance_score: 1.0
+  - thread_ts: '1711070553'
+    date: '2024-03-21'
+    title: "Stargate EKS 이관 작업"
+    summary: "Stargate staging ECS에서 EKS로 이관 완료. Live 이관은 3/26 새벽 진행. Terraform PR 리뷰 공유."
+    participants: ["U05SJ36FBN2", "U057MCDJHDY"]
+    decisions: ["EKS로 전면 이관"]
+    action_items: ["Live EKS 이관 진행"]
+    keywords: ["EKS", "이관", "Stargate", "인프라", "Terraform"]
+    relevance_score: 0.9
+  - thread_ts: '1711095762'
+    date: '2024-03-22'
+    title: "환경 통일 및 도메인 정리"
+    summary: "Dev/Staging/Live 환경 도메인 통일. Web Vercel 도메인 3개 구분 설정. Pylon dev/staging EKS 이관 진행."
+    participants: ["U05SJ36FBN2", "U05QCA7JTD5", "U057MCDJHDY"]
+    decisions: ["도메인 3개(live/staging/dev)로 구분", "환경별 도메인 통일"]
+    action_items: ["Pylon 이관 진행", "PubSub 사용 확인"]
+    keywords: ["환경 통일", "도메인", "Pylon", "이관"]
+    relevance_score: 0.8
+  - thread_ts: '1711512338'
+    date: '2024-03-27'
+    title: "배포 개선사항 논의 (릴리즈 노트 자동화)"
+    summary: "배포 프로세스 엔지니어링 측면 개선 논의. 릴리즈 노트 자동화, staging 브랜치 필요성 검토."
+    participants: ["U057MCDJHDY", "U06M8SPDZP1"]
+    decisions: ["릴리즈 노트 자동화 추진"]
+    action_items: ["릴리즈 관련 논의 계속"]
+    keywords: ["배포", "릴리즈 노트", "자동화", "staging"]
+    relevance_score: 0.7
+terminology:
+  - term: "Pylon"
+    definition: "사이오닉의 RAG 파이프라인 엔진. 문서 처리, 임베딩, 검색, 답변 생성을 담당."
+    aliases: ["파일론"]
+    context: "Stargate와 함께 Storm 제품의 핵심 백엔드 서비스."
+  - term: "Stargate"
+    definition: "사이오닉의 메인 API 서버. 프론트엔드와 통신하며 에이전트, 문서, 팀 관리 등을 담당."
+    aliases: ["스타게이트", "스게"]
+    context: "Storm 제품의 API 레이어."
+  - term: "Storm"
+    definition: "사이오닉의 주력 AI 검색/답변 제품."
+    aliases: ["스톰"]
+    context: "기업용 AI 검색 솔루션."
+  - term: "EKS"
+    definition: "AWS Elastic Kubernetes Service. 사이오닉의 주요 운영 인프라."
+    aliases: []
+    context: "GKE에서 EKS로 이관 진행."
+  - term: "GKE"
+    definition: "Google Kubernetes Engine. 이전에 사용하던 쿠버네티스 환경."
+    aliases: []
+    context: "EKS로 이관 후 점진적 폐기 예정."
+  - term: "GoCD"
+    definition: "CI/CD 파이프라인 도구. 빌드 및 배포 자동화에 사용."
+    aliases: []
+    context: "배포 파이프라인 관리에 사용."
+  - term: "Linear"
+    definition: "프로젝트 관리 도구. Jira에서 이관하여 사용."
+    aliases: ["리니어"]
+    context: "스프린트 관리 및 태스크 트래킹."
+  - term: "IaC"
+    definition: "Infrastructure as Code. Terraform 기반 인프라 코드화."
+    aliases: []
+    context: "SDN 컨트롤러, Terraform 등 인프라 자동화 추진."
+  - term: "Qdrant"
+    definition: "벡터 데이터베이스. 임베딩 벡터 저장 및 유사도 검색에 사용."
+    aliases: ["쿼드란트"]
+    context: "Pylon의 벡터 검색에 사용."
+metadata:
+  created_at: '2026-02-13T00:00:00'
+  synced_by: claude-manual

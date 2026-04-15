@@ -1,0 +1,68 @@
+channel:
+  id: C09TYHXRUHZ
+  name: sig-해커톤
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 98
+  total_threads: 53
+  active_users: 22
+  avg_messages_per_day: 6.1
+summary: |
+  2025년 4분기 sig-해커톤 채널은 12월 20일 개최된 InstructKR x Sionic AI 해커톤 준비와 실행을 위해 생성된 채널로, 22명이 참여하였다.
+  약 300명 규모의 행사로 요즘IT가 미디어 파트너로 참여하였으며, OpenAI solution architect 팀이 심사위원으로 합류하였다.
+  해커톤 당일에는 STORM 플랫폼 접속 폭주로 인한 장애 대응, 멘토링 신청 및 결과물 제출 폼 운영, 만족도 조사 등이 이루어졌으며, 이후 행사 인사이트 및 개선점이 공유되었다.
+topics:
+  - name: "해커톤 준비"
+    mention_count: 20
+    description: "InstructKR x Sionic AI 해커톤 사전 준비 - 신청자 관리, 네트워크 환경 구축, API key 발급 체계 수립"
+  - name: "해커톤 당일 운영"
+    mention_count: 40
+    description: "12/20 해커톤 행사 운영 - 교육 세션, 멘토링, 결과물 제출, 심사, STORM 장애 대응"
+  - name: "STORM 장애 대응"
+    mention_count: 8
+    description: "해커톤 중 PDF 100개 동시 학습으로 인한 STORM pod 재시작 장애 및 500에러 대응"
+  - name: "행사 후 정리"
+    mention_count: 10
+    description: "만족도 조사, 버그 리포트 팔로업, 수상팀 사례 공유, LinkedIn 게시물 등"
+key_discussions:
+  - thread_ts: '1732672500.000000'
+    date: '2025-11-20'
+    reply_count: 20
+    text_preview: "InstructKR x Sionic AI 해커톤 11/21 Kickoff 미팅 - 참여 인원 31명, 4시간 빌딩 타임"
+  - thread_ts: '1733121600.000000'
+    date: '2025-12-01'
+    reply_count: 15
+    text_preview: "해커톤 신청자 현황 공유 및 행사 슬랙 채널 운영 계획"
+  - thread_ts: '1766209696.000000'
+    date: '2025-12-20'
+    reply_count: 9
+    text_preview: "해커톤 당일 STORM 플랫폼 500에러 및 pod 재시작 장애 긴급 대응"
+  - thread_ts: '1766221200.000000'
+    date: '2025-12-20'
+    reply_count: 4
+    text_preview: "해커톤 마무리 후 정리 - 수고 인사 및 개선 사항 논의"
+  - thread_ts: '1766369880.000000'
+    date: '2025-12-21'
+    reply_count: 15
+    text_preview: "해커톤 후기 블로그, LinkedIn 게시물 공유 - 1등 팀 4시간 만에 Multi-Agent 시스템 구현"
+terminology:
+  - term: "InstructKR"
+    definition: "대한민국 최대 규모 AI/LLM 커뮤니티, Sionic AI와 공동으로 해커톤 주최"
+    aliases: ["인스트럭트한국", "instruct-kr"]
+    context: "2025년 12월 해커톤 공동 주최 파트너"
+  - term: "STORM Parse"
+    definition: "Sionic AI의 문서 파싱 API, 해커톤 참가자들이 PDF 파싱에 활용"
+    aliases: ["Storm Parse", "스톰파스"]
+    context: "해커톤에서 100개 동시 업로드로 장애 발생"
+  - term: "요즘IT"
+    definition: "IT 미디어 플랫폼, 해커톤 미디어 파트너로 참여"
+    aliases: []
+    context: "서면 인터뷰를 통해 행사 홍보"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

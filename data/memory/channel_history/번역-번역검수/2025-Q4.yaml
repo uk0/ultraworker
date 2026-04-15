@@ -1,0 +1,100 @@
+channel:
+  id: C097NHNCYCF
+  name: 번역-번역검수
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 10
+  active_users: 5
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q4 번역-번역검수 채널에서는 STORM 제품의 다양한 기능에 대한 번역 검수가 활발하게 진행되었다.
+  백은주가 주로 검수 요청을 발행하고, 양호진(영어), s.baek(일본어), 최소영(신규 참여, 일본어)이
+  검수를 담당했다. 김주원도 번역 검수 요청자로 새로 참여했다.
+
+  주요 검수 항목은 다음과 같다:
+  - 모델 파인튜닝(モデルチューニング) 관련 UI 문구 (10월)
+  - 크레딧 충전 관련 번역 (10월, 19개 답변으로 활발한 논의)
+  - 팀즈 채널 추가 기능 번역 (11월, 24개 답변으로 가장 활발)
+  - 지식 페이지 파일 업로드 다이얼로그 및 PDF 뷰어 안내 문구 (11월)
+  - STORM APIs 크레딧 페이지 할인 혜택 문구 변경 (12월, 기한 날짜 관련)
+  - 실행 로그 관련 번역 (12월)
+
+  s.baek이 템플릿 번역 반영 오류(CS 챗봇과 보고서 작성 템플릿 문구가 뒤바뀜)를 발견하여
+  프론트엔드팀에 수정을 요청하는 등 품질 관리도 이루어졌다. STORM Parser, VisionLLM 등
+  기술 용어의 번역 처리 방침도 논의되었다.
+topics:
+  - 모델 파인튜닝 번역
+  - 크레딧 충전 UI 번역
+  - 팀즈(Teams) 채널 추가 기능 번역
+  - 지식 페이지 파일 업로드 문구
+  - PDF 뷰어 호환성 안내 문구
+  - STORM APIs 할인 혜택 문구
+  - 실행 로그 번역
+  - 템플릿 번역 오류 수정
+key_discussions:
+  - thread_ts: '1762758879.206359'
+    date: '2025-11-10'
+    reply_count: 24
+    text_preview: "팀즈 채널 추가 검수 요청 드립니다"
+  - thread_ts: '1761285578.838499'
+    date: '2025-10-24'
+    reply_count: 19
+    text_preview: "크레딧 충전 관련 번역 검수 요청드립니다"
+  - thread_ts: '1766477749.927479'
+    date: '2025-12-23'
+    reply_count: 17
+    text_preview: "실행 로그 쪽, 검수 요청드립니다"
+  - thread_ts: '1764042843.542489'
+    date: '2025-11-25'
+    reply_count: 16
+    text_preview: "검수 요청드립니다 (지식페이지 파일업로드, PDF뷰어 툴팁)"
+  - thread_ts: '1765791830.431709'
+    date: '2025-12-15'
+    reply_count: 11
+    text_preview: "STORM-APIs 크레딧 페이지 할인 혜택 문구가 변경되었습니다"
+  - thread_ts: '1765520754.471099'
+    date: '2025-12-12'
+    reply_count: 9
+    text_preview: "번역 검수 요청 드립니다 (시간되실때 천천히 해주세요)"
+  - thread_ts: '1760340777.634789'
+    date: '2025-10-13'
+    reply_count: 9
+    text_preview: "모델 파인튜닝 번역 검수 요청드립니다"
+  - thread_ts: '1760583017.158759'
+    date: '2025-10-16'
+    reply_count: 7
+    text_preview: "번역 검수 요청드립니다"
+  - thread_ts: '1763516016.644859'
+    date: '2025-11-19'
+    reply_count: 5
+    text_preview: "템플릿 번역 반영이 잘못된 것 같습니다! (CS 챗봇 / 보고서 작성 뒤바뀜)"
+terminology:
+  - term: "STORM Parser"
+    definition: "VisionLLM을 활용한 문서 파싱 엔진. 복잡한 표와 이미지를 포함한 문서를 AI가 해석 가능한 형식으로 변환"
+    aliases: ["스톰 파서"]
+    context: "지식 페이지 파일 업로드 시 문서 처리에 사용됨"
+  - term: "VisionLLM"
+    definition: "STORM Parser에서 사용하는 비전 기반 LLM 기술"
+    aliases: []
+    context: "문서의 표, 이미지 등을 해석하는 데 활용"
+  - term: "모델 파인튜닝"
+    definition: "STORM 제품 내 모델 커스터마이징 기능"
+    aliases: ["Model Fine-tuning", "モデルチューニング", "モデルファインチューニング"]
+    context: "일본어 번역 시 'チューニング'와 'ファインチューニング' 중 표현 선택이 논의됨"
+  - term: "크레딧 충전"
+    definition: "STORM APIs 사용을 위한 크레딧 결제 기능"
+    aliases: ["Credit Recharge"]
+    context: "할인 혜택 문구 변경 시 기한 날짜 등 정확한 번역이 중요"
+  - term: "팀즈 채널"
+    definition: "Microsoft Teams 연동 채널 추가 기능. STORM 제품에서 Teams 통합을 지원"
+    aliases: ["Teams Channel"]
+    context: "팀즈 채널 추가 UI 문구의 다국어 번역 검수 진행"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

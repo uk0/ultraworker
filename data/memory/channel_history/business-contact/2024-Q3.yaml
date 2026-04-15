@@ -1,0 +1,82 @@
+channel:
+  id: C05QCGG1E5V
+  name: business-contact
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 13
+  total_threads: 9
+  active_users: 1
+  avg_messages_per_day: 1.1
+summary: |
+  2024-Q3는 한국 대기업 및 일본 기업으로부터의 문의가 두드러진 시기이다. 총 13건의 메시지가
+  접수되었으며, 문의의 질이 높아진 것이 특징이다.
+
+  주요 문의 유형:
+  1) 대기업 솔루션 도입 문의: 카카오(문서 분석 기술), KB국민카드(솔루션 소개), 로앤굿(법률 RAG 챗봇)
+  2) LLM 모델 직접 구매/사용 문의: 원프레딕트(한국어 LLM 모델 구매), 인스웨이브시스템즈(llama3.1 API 상태)
+  3) 일본 전시회/이벤트 초대: 日本経済新聞社 GenAI/SUM 피치 콘테스트(2회 연속), DXPO 전시회,
+     타나카기획 영업대행 제안
+  4) STORM Answer/Platform 대기자: KT, 카카오, IBK시스템, 액세스나인
+
+  특히 카카오에서 2건의 문의(문서 분석 기술, STORM Answer)가 있었고, 로앤굿 임진주 변호사의
+  법률 챗봇 RAG 문의는 40개의 답글이 달릴 만큼 활발한 논의가 이루어졌다. 또한 원프레딕트에서
+  한국어 pretrained LLM 모델 단독 구매 가능 여부를 문의하여 14개 답글이 달렸다.
+  일본 닛케이 신문사의 GenAI/SUM 피치 콘테스트 참가 안내가 반복적으로 접수되었다.
+topics:
+  - 대기업 AI 솔루션 도입 (카카오, KB국민카드)
+  - 법률 RAG 챗봇 구축 (로앤굿)
+  - 한국어 LLM 모델 구매/API 문의
+  - 일본 GenAI/SUM 피치 콘테스트
+  - 일본 전시회 초대 (DXPO)
+  - STORM Answer 대기자 신청
+  - 문서 분석 기술 공급 문의
+key_discussions:
+  - thread_ts: '1720430516.966799'
+    date: '2024-07-08'
+    reply_count: 40
+    text_preview: '로앤굿 임진주 변호사 - 법률 RAG 챗봇 인프라 제공 문의'
+  - thread_ts: '1722487428.212699'
+    date: '2024-08-01'
+    reply_count: 14
+    text_preview: '원프레딕트 김동섭 - 한국어 pretrained LLM 모델 구매 문의'
+  - thread_ts: '1722575593.114909'
+    date: '2024-08-02'
+    reply_count: 8
+    text_preview: '카카오 김수환 - 다양한 포맷 문서 분석 기술 자료 요청'
+  - thread_ts: '1720588518.470839'
+    date: '2024-07-10'
+    reply_count: 4
+    text_preview: 'KB국민카드 이충근 - 솔루션 소개자료 요청'
+  - thread_ts: '1726787456.317729'
+    date: '2024-09-19'
+    reply_count: 3
+    text_preview: '액세스나인 송길준 - 기사 자료/보도 관련 문의'
+  - thread_ts: '1719797744.239959'
+    date: '2024-07-01'
+    reply_count: 3
+    text_preview: '카카오 강지훈 - STORM Answer 대기자 신청'
+terminology:
+  - term: "GenAI/SUM"
+    definition: "日本経済新聞社가 주최하는 생성AI 서밋. 2024년 10월 7-9일 도쿄 구단시타에서 개최 예정"
+    aliases: ["ジェンエーアイサム", "생성AI서밋"]
+    context: "Sionic AI에 피치 콘테스트 참가 및 협찬 안내가 반복 접수됨"
+  - term: "DXPO"
+    definition: "AI활용/DX추진 테마의 일본 전시회. 후쿠오카, 도쿄, 오사카, 나고야 등 전국 순회 개최"
+    aliases: ["AI活用・DX推進展"]
+    context: "Sionic AI에 출전 제안이 접수됨"
+  - term: "RAG"
+    definition: "Retrieval-Augmented Generation. 문서 검색 기반으로 LLM 답변 정확도를 높이는 기술"
+    aliases: []
+    context: "로앤굿 법률 챗봇, IBK시스템 문서 기반 답변 등에서 핵심 기술로 언급됨"
+  - term: "Document AI"
+    definition: "다양한 포맷의 문서를 AI로 분석/처리하는 기술. Sionic AI의 핵심 기술 중 하나"
+    aliases: ["문서 분석 기술"]
+    context: "카카오에서 다양한 포맷 문서 분석 기술 자료를 요청함"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,50 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 55
+  total_threads: 26
+  active_users: 14
+  avg_messages_per_day: 2.5
+summary: |
+  2024년 2분기 corp-법카 채널은 4월 말에 채널이 신설되어 법인카드 사용 내역을 기록하기 시작하였다. 14명이 참여한 가운데 55개의 메시지와 26개의 스레드가 발생하였으며, 초기에는 시스템 테스트 메시지가 있었고 이후 봇 기반 사용 내역 자동 기록이 정착되었다. 식사(점심/저녁), 기타(팀 미팅, 사무용품, 외부 업체 미팅) 등 다양한 목적의 법인카드 사용이 기록되었다. 사이오닉 AI와 레블업 간의 미팅 식사도 기록되었다.
+topics:
+  - name: "채널 초기 설정"
+    mention_count: 5
+    description: "법인카드 사용 내역 봇 시스템 초기 테스트 및 포맷 검증"
+  - name: "법인카드 식사 사용"
+    mention_count: 25
+    description: "팀원들의 점심 및 저녁 식사에 법인카드 사용 기록"
+  - name: "외부 미팅 식사"
+    mention_count: 8
+    description: "레블업 등 외부 업체와의 미팅 및 비즈니스 식사 기록"
+  - name: "기타 목적 사용"
+    mention_count: 10
+    description: "식사 이외 커피, 사무용품 등 기타 목적 법카 사용"
+key_discussions:
+  - thread_ts: '1713933120.000000'
+    date: '2024-04-24'
+    reply_count: 0
+    text_preview: "김혜원 테스트 - 법인카드 사용 봇 시스템 초기 테스트"
+  - thread_ts: '1716818100.000000'
+    date: '2024-05-27'
+    reply_count: 1
+    text_preview: "김덕현 외 6명 - 기타 목적 법카 사용"
+terminology:
+  - term: "법카"
+    definition: "법인카드의 줄임말로 회사 공용 신용카드"
+    aliases: ["법인카드"]
+    context: "2024년 4월 말에 Slack 봇 기반 사용 내역 자동 기록 시스템이 도입됨"
+  - term: "레블업"
+    definition: "사이오닉 AI와 협력 관계에 있는 외부 업체"
+    aliases: []
+    context: "2분기에 합동 미팅 식사 법카 사용 기록이 있음"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

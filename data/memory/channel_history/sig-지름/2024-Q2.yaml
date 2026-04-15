@@ -1,0 +1,42 @@
+channel:
+  id: C06S3EQ9X1T
+  name: sig-지름
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 47
+  total_threads: 16
+  active_users: 6
+  avg_messages_per_day: 3.1
+summary: |
+  sig-지름 채널이 2024년 4월에 개설되어 활발하게 운영되기 시작한 분기. Noah(고석현)가 채널을 만들고 가스 커피콩 로스터기, 해먹, 바벨/슬링랙 등 다양한 물건을 공유했다. 정세민(Sem)은 마커스 선물용 현판, 스마트 수영고글 등을 공유하고, 김혜원은 서재페 티켓, 치이카와 캐릭터 굿즈, 다이슨 에어랩을 구매했다. 김덕현(Dekay)은 키보드를 10년 쓸 생각으로 구매하고, 회사용 커피머신(Noah 개인명의 계약), 백팩 추천 논의도 활발했다. 채널명 sig의 의미(Special Interest Group)에 대한 질문도 있었다.
+topics:
+  - 커피/로스팅 (가스 로스터기, 에어 로스터)
+  - 가전/생활용품 (다이슨 에어랩, 해먹, 바벨)
+  - 키보드
+  - 선물 (형찬님 선물, 마커스 현판)
+  - 캐릭터 굿즈 (치이카와)
+key_discussions:
+  - thread_ts: '1718018221.941689'
+    date: '2024-06-10'
+    topic: 다이슨 에어랩 구매 후기 및 추천
+    reply_count: 32
+  - thread_ts: '1718598562.433689'
+    date: '2024-06-17'
+    topic: 소소한 지름 공유
+    reply_count: 14
+  - thread_ts: '1712115760.136359'
+    date: '2024-04-03'
+    topic: 형찬님 생일 선물 구매
+    reply_count: 11
+terminology:
+  - term: "sig"
+    definition: "Special Interest Group의 약자. 관심사별 소그룹 채널"
+    context: "sig-지름은 구매/쇼핑 관심 그룹"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

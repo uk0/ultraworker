@@ -1,0 +1,81 @@
+channel:
+  id: C078JJHPC1W
+  name: research-general
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-26'
+statistics:
+  total_messages: 22
+  total_threads: 12
+  active_users: 8
+  avg_messages_per_day: 0.2
+summary: >
+  2025 Q3는 메시지 수가 적어 상대적으로 조용한 분기였으나, Gemini Embedding 테스트, VLM 관련 특허 작업,
+  LLM-as-a-judge 평가 체계, 벡터 검색 threshold 조정 등의 논의가 이어졌다. 진형님이 Gemini Embedding
+  테스트 결과를 공유하며 "무조건 써야함"이라는 강력한 의견을 제시하였고, 테크스펙 작성도 진행되었다.
+  정석현님이 합류하여 LLM-as-a-judge 기반 평가 활용 여부를 문의하고, InternVL 논문의 instruction
+  tuning prompt template을 분석하였다. 특허 출원 아이디어 모집과 데이터 인수인계 작업이 진행되었으며,
+  리서치 미팅은 서면 대체가 잦았다. 허깅페이스 조직 관리(시트 정리), Qwen3-VL-32B 출시 분석도 이루어졌다.
+topics:
+  - name: "Gemini Embedding 테스트"
+    count: 3
+    summary: "Gemini Embedding 테스트 결과 공유. 강력 추천 의견과 함께 테크스펙 작성 진행."
+  - name: "LLM-as-a-judge 평가"
+    count: 2
+    summary: "LLM-as-a-judge 기반 평가 체계 활용 여부 논의. 기존 활용 사례 확인."
+  - name: "벡터 검색 threshold"
+    count: 2
+    summary: "벡터 서치를 통한 유사도 threshold 조정 방식에 대한 스레드 논의."
+  - name: "VLM 관련 특허/모델"
+    count: 3
+    summary: "특허 출원 아이디어 모집. Qwen3-VL-32B 출시 분석. InternVL instruction tuning prompt template 분석."
+  - name: "리서치 미팅 운영"
+    count: 5
+    summary: "서면 대체 빈번. 미팅 시간 조정. 일본 출장으로 인한 일정 변경."
+key_discussions:
+  - thread_ts: '1752677177'
+    date: '2025-07-16'
+    title: "Gemini Embedding 테스트 결과"
+    summary: "Sigrid Jin이 Gemini Embedding 테스트 결과를 노션에 정리하여 공유. '무조건 써야함'이라는 강력한 의견 제시. 테크스펙 작성 진행."
+    participants: ["U05QCA7JTD5", "U05T2RW7PE2"]
+    decisions: ["Gemini Embedding 도입 검토"]
+    action_items: ["테크스펙 작성"]
+    keywords: ["Gemini", "Embedding", "테스트", "벤치마크"]
+    relevance_score: 0.9
+  - thread_ts: '1753348249'
+    date: '2025-07-24'
+    title: "대규모 연구 주제 논의"
+    summary: "Noah가 관심과 시간이 있는 연구원을 모집하는 스레드. 매우 활발한 토론(91개 답글)."
+    participants: ["U057PR1ADCL"]
+    decisions: []
+    action_items: []
+    keywords: ["연구주제", "모집"]
+    relevance_score: 0.8
+  - thread_ts: '1754361692'
+    date: '2025-08-05'
+    title: "특허 출원 아이디어 모집"
+    summary: "특허 출원 속도가 떨어져 아이디어를 모집. 18개 답글로 활발한 제안."
+    participants: ["U058A971Z8R"]
+    decisions: []
+    action_items: ["특허 아이디어 제출"]
+    keywords: ["특허", "아이디어", "출원"]
+    relevance_score: 0.7
+terminology:
+  - term: "Gemini Embedding"
+    definition: "Google Gemini의 임베딩 모델. 기존 임베딩 모델 대비 높은 성능."
+    aliases: []
+    context: "테스트 결과 강력 추천. 테크스펙 작성 진행."
+  - term: "InternVL"
+    definition: "오픈소스 Vision-Language 모델. QA/지시문에 대한 instruction tuning prompt template 제공."
+    aliases: []
+    context: "CVPR 2024 논문. VQA 파인튜닝 참고 자료."
+  - term: "Qwen3-VL-32B"
+    definition: "Qwen의 32B VLM(Vision-Language Model) 모델."
+    aliases: []
+    context: "2025년 10월 출시. 양호진님 관심."
+metadata:
+  created_at: '2026-02-26'
+  synced_by: claude-manual

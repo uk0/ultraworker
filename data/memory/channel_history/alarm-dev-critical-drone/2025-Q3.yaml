@@ -1,0 +1,34 @@
+channel:
+  id: C09GGJ8KD33
+  name: alarm-dev-critical-drone
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 15
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 15.0
+summary: |
+  2025-Q3 alarm-dev-critical-drone 채널은 Drone 서비스의 결제 시스템 관련 크리티컬 알람 채널로, 해당 분기에 채널이 생성되고 notification-bot이 연동되었다. 주요 알람 내용은 TossPayments 연동 결제의 정합성 불일치 문제로, DB와 API 간 결제 상태 불일치로 인한 자동 취소 실패 및 RuntimeException 오류가 반복적으로 발생하였다. 모든 알람은 수동 처리가 필요한 긴급 상황으로 분류되었으며, 테스트 환경(team_test_*)에서 발생한 이벤트가 대부분이었다.
+topics:
+  - name: "결제 정합성 불일치 오류"
+    mention_count: 10
+    description: "DB와 TossPayments API 간 결제 상태(IN_PROGRESS vs DONE) 불일치로 인한 자동 취소 실패 알람"
+  - name: "TossPayments API 오류"
+    mention_count: 3
+    description: "TossPayments API 호출 중 RuntimeException 발생, 결제 상태가 IN_PROGRESS로 유지되는 오류"
+key_discussions: []
+terminology:
+  - term: "alarm-dev-critical-drone"
+    definition: "Drone 서비스의 크리티컬 레벨 장애 알람 채널. notification-bot이 자동으로 결제 오류 및 시스템 장애를 전송"
+  - term: "정합성 불일치"
+    definition: "DB와 외부 결제 API(TossPayments) 간 결제 상태 또는 금액이 일치하지 않는 상태"
+  - term: "TossPayments"
+    definition: "Sionic AI 서비스에서 사용하는 외부 결제 PG사"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

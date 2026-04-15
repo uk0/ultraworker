@@ -1,0 +1,105 @@
+channel:
+  id: C057KN2911V
+  name: eng-common
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 207
+  total_threads: 142
+  active_users: 14
+  avg_messages_per_day: 3.3
+summary: |
+  2024-Q4에는 NewRelic Pro 플랜 전환과 모니터링 대시보드 구축이 가장 큰 화제였다.
+  OCI draft 작업 완료, Supply 프로젝트(LFU 캐시, JVM 검색엔진) 배포, Templar Archives(TA) 대시보드 구축 등 인프라와 제품 양면에서 진전이 있었다.
+  OpenAI 장애 대응 체계 정비, VPN 세팅, 민감정보 솔루션 리서치 등 보안/안정성 강화가 이루어졌다.
+  연말 전사 회고를 통해 DRI 문화, 동료 업무 관심 등 조직 문화 개선 방향이 논의되었으며, 채용(코틀린-JVM) 과제 공유도 진행되었다.
+topics:
+  - NewRelic Pro 플랜 전환
+  - OCI draft 작업
+  - Supply 프로젝트 (LFU 캐시, JVM)
+  - Templar Archives(TA) 대시보드
+  - OpenAI 장애 대응
+  - VPN 세팅
+  - 민감정보 솔루션 리서치
+  - 전사 회고
+  - Qdrant Active-Standby (IBK)
+  - istio sticky session
+  - Storm Parse 배포
+  - 아키텍처 문서화
+key_discussions:
+  - thread_ts: '1734593186.914219'
+    date: '2024-12-19'
+    reply_count: 77
+    text_preview: '프로덕트 위클리 및 전사 회고 - 피그마 회고보드 작성, DRI 문화 논의'
+  - thread_ts: '1733710495.705379'
+    date: '2024-12-09'
+    reply_count: 52
+    text_preview: 'Supply 프로젝트 배포 지원 - GoCD 파이프라인 설정 및 배포 이슈 해결'
+  - thread_ts: '1733056584.377929'
+    date: '2024-12-01'
+    reply_count: 44
+    text_preview: 'Supply 검색엔진 완성 - Java-GPU 기반 단일 테넌트 검색 서비스'
+  - thread_ts: '1733133925.432669'
+    date: '2024-12-02'
+    reply_count: 35
+    text_preview: '테크 세미나 준비 스레드'
+  - thread_ts: '1732153442.651159'
+    date: '2024-11-21'
+    reply_count: 31
+    text_preview: '기술 논의 및 리뷰 관련 스레드'
+  - thread_ts: '1731910124.199479'
+    date: '2024-11-18'
+    reply_count: 21
+    text_preview: '배포 금지령 - 마크스폰 데모 시연 일정 대비 배포 제한'
+  - thread_ts: '1734405083.555379'
+    date: '2024-12-17'
+    reply_count: 19
+    text_preview: 'Supply LFU 캐시 구현 - JVM 인메모리 검색 데이터 캐싱 전략 논의'
+  - thread_ts: '1733374842.170149'
+    date: '2024-12-05'
+    reply_count: 18
+    text_preview: 'OpenLLM 에러 감지 - TA 대시보드 모니터링 중 failure 이벤트 발견'
+  - thread_ts: '1733583143.012599'
+    date: '2024-12-19'
+    reply_count: 17
+    text_preview: '서비스 이름 논의 - Assimilator를 TA처럼 짧은 약어로 변경'
+  - thread_ts: '1734403587.345779'
+    date: '2024-12-17'
+    reply_count: 16
+    text_preview: '연말 회고 방법론 논의 - 회고 문화 도입 킥오프'
+terminology:
+  - term: "NewRelic Pro"
+    definition: "NewRelic APM의 유료 Pro 플랜"
+    aliases: ["뉴렐릭 프로"]
+    context: "POC 기간 적용, Basic/Full user 정책, 월 $600→$900 비용 증가"
+  - term: "OCI"
+    definition: "Oracle Cloud Infrastructure"
+    aliases: []
+    context: "draft 작업 완료 후 공유 세션 진행"
+  - term: "Supply"
+    definition: "단일 테넌트용 검색엔진 서비스 (Java-GPU 기반)"
+    aliases: []
+    context: "LFU 캐시, BM25, 임베딩 모델, Qdrant 통합 컨테이너"
+  - term: "TA"
+    definition: "Templar Archives - 서비스 모니터링/분석 대시보드"
+    aliases: ["Templar Archives"]
+    context: "OpenLLM 호출 통계, 에러 추적, Grafana 기반 대시보드"
+  - term: "Storm Parse"
+    definition: "문서 AI 처리 서비스 (구 document-ai-api)"
+    aliases: ["document-ai", "STORM Parse"]
+    context: "NewRelic 연동, live 배포 정비, repo명 변경"
+  - term: "DRI"
+    definition: "Directly Responsible Individual - 직접 책임자"
+    aliases: []
+    context: "연말 회고에서 DRI 문화 도입 논의"
+  - term: "Assimilator"
+    definition: "데이터 통합/처리 서비스 (이름 변경 논의중)"
+    aliases: ["ASMR", "어씨밀"]
+    context: "이름이 길어 약어 변경 논의 진행"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

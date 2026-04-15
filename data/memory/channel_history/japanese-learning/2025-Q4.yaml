@@ -1,0 +1,49 @@
+channel:
+  id: C06GZ8S0KQW
+  name: japanese-learning
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 29
+  total_threads: 9
+  active_users: 14
+  avg_messages_per_day: 2.6
+summary: |
+  2025년 4분기에 일본어 학습 채널이 대대적으로 부활하였다. 강성우님이 새로운 멤버들을 초대하며 채널을 재활성화하였고,
+  최소영님이 일본어 강사 역할을 맡아 정기적인 학습 콘텐츠를 제공하였다. 색깔 단어, 일상 단어, 비즈니스 인삿말 및
+  스몰톡 표현 등 실용적인 일본어를 학습하였다. 일본인 사원(준야상, 카타오상) 방문 대비 인삿말도 공유되었다.
+  양호진님은 일본어 학습 목표 설정에 대한 논의(53개 답글)를 이끌었고, 듀오링고 등 자율 학습 도구도 공유되었다.
+  또한 유대곤님이 일본어 질문 전처리(Original vs Preprocessed) 자연스러움 검증을 요청하는 등 업무 관련 활용도 있었다.
+topics:
+  - 일본어 채널 부활
+  - 비즈니스 일본어 인삿말
+  - 일본어 색깔/일상 단어
+  - 일본어 학습 목표 설정
+  - 일본어 질문 전처리 검증
+key_discussions:
+  - thread_ts: '1763653432.771849'
+    date: '2025-11-20'
+    topic: 일본어 학습 목표 설정 토론 (53개 답글, JLPT/듀오링고 등 다양한 방법 논의)
+  - thread_ts: '1765871673.336729'
+    date: '2025-12-16'
+    topic: 비즈니스 일본어 인삿말 및 스몰톡 표현 정리 (일본인 사원 방문 대비)
+  - thread_ts: '1766165166.506049'
+    date: '2025-12-19'
+    topic: 일본어 질문 전처리 자연스러움 검증 요청 (Original vs Preprocessed)
+  - thread_ts: '1764042135.646959'
+    date: '2025-11-25'
+    topic: 일본어 색깔 단어 리스트 공유 (赤色, 青色 등)
+terminology:
+  - term: 듀오링고
+    definition: 외국어 학습 앱, 게임화된 방식으로 언어를 학습할 수 있는 플랫폼
+  - term: 청해
+    definition: JLPT 듣기 시험 파트 (리스닝 영역)
+  - term: お疲れさまです
+    definition: 오츠카레사마데스, 일본 직장에서 가장 흔히 사용하는 인삿말 (수고하셨습니다/수고하세요)
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

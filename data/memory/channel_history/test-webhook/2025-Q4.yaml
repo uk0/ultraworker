@@ -1,0 +1,51 @@
+channel:
+  id: C08S9EL0REX
+  name: test-webhook
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 668
+  total_threads: 357
+  active_users: 11
+  avg_messages_per_day: 13.4
+summary: |
+  2025년 4분기 test-webhook 채널은 ArgoCD 기반의 애플리케이션 동기화 알림과 Slack 웹훅 기능 테스트가 혼재된 채널이었다. 668개의 메시지와 357개의 스레드가 발생하였으며, ArgoCD에서 dev-asmr-v2, shuttle, dev-openobserve 등 다양한 애플리케이션의 동기화 성공/실패 알림이 주를 이루었다. 10월 초에 Claude Code 팀장님이 채널에 참여하여 봇 응답 테스트(수영 시간, 부대 위치 등 반복 질문)도 진행되었다.
+topics:
+  - name: "ArgoCD 동기화 알림"
+    mention_count: 400
+    description: "dev-asmr-v2, shuttle, dev-openobserve, dev-dragoon-server 등의 ArgoCD 앱 동기화 성공/실패 알림"
+  - name: "봇 응답 테스트"
+    mention_count: 50
+    description: "Slack 봇 기능 테스트 - 수영 시간, 부대 위치 등 반복 질문을 통한 응답 검증"
+  - name: "웹훅 기능 개발"
+    mention_count: 30
+    description: "웹훅 URL 및 알림 메시지 포맷 테스트"
+key_discussions:
+  - thread_ts: '1728719580.000000'
+    date: '2025-10-12'
+    reply_count: 4
+    text_preview: "정세민의 수영시간은 언제일까요오? - 봇 응답 반복 테스트"
+  - thread_ts: '1729000600.000000'
+    date: '2025-10-04'
+    reply_count: 0
+    text_preview: "dev-openobserve 동기화 실패 - namespace가 종료 중이어서 리소스 생성 불가"
+terminology:
+  - term: "ArgoCD"
+    definition: "Kubernetes 기반 GitOps 지속적 배포 도구"
+    aliases: []
+    context: "사이오닉 AI의 다양한 애플리케이션 배포 관리에 사용"
+  - term: "dev-asmr-v2"
+    definition: "ASMR v2 개발 환경 ArgoCD 애플리케이션"
+    aliases: []
+    context: "4분기에 가장 빈번하게 동기화 알림이 발생한 앱"
+  - term: "shuttle"
+    definition: "사이오닉 AI의 내부 서비스 컴포넌트 (배포 워크플로우 관련)"
+    aliases: []
+    context: "ArgoCD 동기화 대상 애플리케이션"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

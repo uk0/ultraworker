@@ -1,0 +1,27 @@
+channel:
+  id: C0647GT3MK7
+  name: eng-probe
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q3은 eng-probe 채널 활동이 매우 저조한 분기. 김덕현(Dekay)이 사이오닉 타임라인 정리를 위해 뤼튼 서비스 시작일(약 2023년 12월 28일)을 확인하는 단일 스레드만 존재. Probe 프로젝트가 사실상 운영 안정화 단계에 접어든 것으로 보임.
+topics:
+  - 사이오닉 타임라인 정리
+key_discussions:
+  - thread_ts: '1719809889.628939'
+    date: '2024-07-01'
+    title: '뤼튼 서비스 시작일 확인'
+    summary: '김덕현이 사이오닉 타임라인 정리를 위해 뤼튼 서비스 시작일을 송명하, Sigrid Jin에게 확인. 2개 답글'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

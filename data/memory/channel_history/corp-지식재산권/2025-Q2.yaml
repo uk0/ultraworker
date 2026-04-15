@@ -1,0 +1,44 @@
+channel:
+  id: C06T556UPU5
+  name: corp-지식재산권
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 3
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 2분기 corp-지식재산권 채널에서 사이오닉 AI의 첫 해외 특허 출원이 이루어졌다.
+  4월 8일 박우명이 "첫 해외 출원 특허(일본)가 생겼습니다~"라고 발표했으며, 4월 17일에는
+  미국 특허 출원도 완료되었다. 4월 22일에는 storm parse 명세서 초안이 도착하여
+  윤도균과 정세민에게 검토를 요청했다. 임주희가 새로 채널에 참여했다.
+topics:
+  - 해외 특허 출원 (일본, 미국)
+  - storm parse 명세서 초안 검토
+  - 국제 특허 확장
+key_discussions:
+  - thread_ts: '1744103838.609119'
+    date: '2025-04-08'
+    reply_count: 2
+    text_preview: '첫 해외 출원 특허(일본) 발표'
+  - thread_ts: '1745309608.915219'
+    date: '2025-04-22'
+    reply_count: 2
+    text_preview: 'storm parse 명세서 초안 검토 요청 (도균, 세민)'
+  - thread_ts: '1744879826.884619'
+    date: '2025-04-17'
+    reply_count: 1
+    text_preview: '미국 특허 출원 완료'
+terminology:
+  - term: "해외 출원"
+    definition: "국내 특허를 기반으로 해외(일본, 미국 등) 특허 출원을 진행하는 것."
+    aliases: ["해외 특허"]
+    context: "2025-Q2에 일본과 미국에 첫 해외 특허 출원 완료"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

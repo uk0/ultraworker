@@ -1,0 +1,40 @@
+channel:
+  id: C06RXLRRAAF
+  name: corp-playshop
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 10
+  total_threads: 4
+  active_users: 6
+  avg_messages_per_day: 10.0
+summary: |
+  2024년 1분기에 corp-playshop 채널이 생성되고 플레이샵 위원회가 결성되었다. 혜원님이 돈을 잘 쓰고 잘 놀 것 같은 멤버(세민·수진)를 초대하여 플레이샵 기획을 위임하였다. 제주도 워케이션(1인 25만원 지원)·부산 워케이션(1인 30만원 + 5만원 관광 바우처) 옵션이 검토되었으며, 2분기에 본격 행사가 진행될 기반을 마련하였다.
+topics:
+  - name: "플레이샵 위원회 결성"
+    mention_count: 4
+    description: "대표 혜원님이 세민·수진님을 플레이샵 위원회로 임명, 기획 권한 위임"
+  - name: "워케이션 옵션 검토"
+    mention_count: 6
+    description: "제주도(4박5일, 1인 25만원 숙박 지원)·부산(5박6일, 1인 30만원 + 5만원 바우처) 비교 검토"
+key_discussions:
+  - thread_ts: '1711690800.000000'
+    date: '2024-03-29'
+    reply_count: 18
+    text_preview: "플레이샵 위원회 결성 및 지금까지 결정된 내용 공유"
+  - thread_ts: '1711693200.000000'
+    date: '2024-03-29'
+    reply_count: 15
+    text_preview: "제주도·부산 워케이션 지원 내용 비교 — 제주도 25만원 vs 부산 30만원+바우처"
+terminology:
+  - term: "플레이샵"
+    definition: "Sionic AI 팀 빌딩 문화 활동 — 워케이션, 요리, 레크레이션 등 체험 중심 이벤트"
+  - term: "워케이션"
+    definition: "Work + Vacation — 업무와 휴가를 결합한 형태로, 제주도·부산 등 지자체 지원 프로그램 활용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

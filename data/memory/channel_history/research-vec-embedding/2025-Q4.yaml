@@ -1,0 +1,63 @@
+channel:
+  id: C07MK1QMWV6
+  name: research-vec-embedding
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 53
+  total_threads: 36
+  active_users: 7
+  avg_messages_per_day: 1.6
+summary: |
+  2025-Q4 research-vec-embedding 채널에서는 최신 임베딩 논문 리뷰와 멀티모달·ColBERT 계열 모델 실험이 활발히 논의되었다. Hard Negative Mining 개선(SyNeg, SimANS), 위치 편향 해결(position bias), 평균 편향 보정(mean bias), Late Interaction(ColBERT/ColQwen), 멀티모달 임베딩과 Storm Parse 비교 실험 등이 주요 주제였다. KaKao Kanana, Voyage 3, Google EmbeddingGemma, LiquidAI LFM2-ColBERT 등 신규 모델 공유도 이루어졌다.
+topics:
+  - name: "Hard Negative Mining 개선"
+    mention_count: 10
+    description: "SyNeg(LLM 기반 합성 하드 네거티브 생성), SimANS(애매한 네거티브 샘플링) 등 최신 방법론 리뷰"
+  - name: "위치 편향 및 평균 편향 보정"
+    mention_count: 8
+    description: "Dwell in the Beginning 논문 기반 임베딩 위치 편향 분석, 평균 편향 보정 리노말라이제이션 방법론"
+  - name: "멀티모달 임베딩 실험"
+    mention_count: 10
+    description: "ColQwen2.5 vs Storm Parse 비교(ViDoRE v3), SERVAL 논문 기반 멀티모달 임베딩 대안 평가"
+  - name: "ColBERT 및 Late Interaction 연구"
+    mention_count: 8
+    description: "LFM2-ColBERT 다국어 지원, Token Importance 논문, Luxical 경량 모델 리뷰"
+  - name: "신규 임베딩 모델 공유"
+    mention_count: 7
+    description: "Google EmbeddingGemma-300M, Voyage 3, Jasper-Token-Compression, NetraEmbed 등 신규 공개 모델 소개"
+key_discussions:
+  - thread_ts: '1762012800.000000'
+    date: '2025-10-22'
+    reply_count: 2
+    text_preview: "Dwell in the Beginning: 임베딩 모델의 위치 편향 분석 논문 공유"
+  - thread_ts: '1763184000.000000'
+    date: '2025-11-18'
+    reply_count: 38
+    text_preview: "Correcting Mean Bias in Text Embeddings 논문 공유 및 논의"
+  - thread_ts: '1763904000.000000'
+    date: '2025-11-25'
+    reply_count: 9
+    text_preview: "SimANS 논문(Microsoft): 위치 편향 완화 방법 리뷰"
+  - thread_ts: '2025-12-15'
+    date: '2025-12-15'
+    reply_count: 2
+    text_preview: "멀티모달 임베딩 vs Storm Parse 비교 실험 결과 공유 (Storm parse 방식이 ViDoRE v2에서 우월)"
+terminology:
+  - term: "Hard Negative Mining(HNM)"
+    definition: "임베딩 학습 시 모델이 구분하기 어려운 고품질 네거티브 샘플을 선별하는 데이터 구성 기법"
+  - term: "ColBERT / Late Interaction"
+    definition: "문서의 모든 토큰 벡터를 저장하고 MaxSim 연산으로 정밀 매칭하는 다중 벡터 검색 방식"
+  - term: "Matryoshka Embedding"
+    definition: "고정 차원 대신 다양한 축소 차원에서 동일하게 동작하는 임베딩 학습 기법으로 저장 비용 절감"
+  - term: "ViDoRE"
+    definition: "시각적 문서 임베딩 성능을 평가하는 멀티모달 벤치마크 데이터셋"
+  - term: "SERVAL"
+    definition: "VLM으로 문서 이미지를 설명 텍스트로 변환 후 텍스트 임베딩으로 검색하는 Zero-shot 방식 (Storm Parse 논문)"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,24 @@
+channel:
+  id: C07TMG88HMW
+  name: sig-lol
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  sig-lol 채널의 2025년 3분기는 신규 멤버 참여 기록 1건만 존재하는 비활성 분기였다. 게임 관련 실질적인 논의나 모임 제안은 없었다.
+topics: []
+key_discussions: []
+terminology:
+  - term: "sig-lol"
+    definition: "LoL(리그 오브 레전드) 관심사 그룹 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,41 @@
+channel:
+  id: C07T22TQZT9
+  name: storm-admin-signup
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 280
+  total_threads: 57
+  active_users: 8
+  avg_messages_per_day: 5.3
+summary: |
+  2025-Q3에는 가입 알림이 280건으로 지속 증가하였다. 대부분의 메시지가 봇에 의한 자동 알림("Admin 가입 완료 알림", "Admin 가입 요청 완료, 이메일 발송")이며, 가입-이메일발송-완료의 2단계 프로세스가 안정적으로 운영되었다. 9월에 특히 가입이 집중되었으며, 일부 가입 건에 대해 팀원들이 스레드에서 고객 정보를 확인하고 대응 여부를 논의하였다. 해외(GMT 시간대 등) 가입 건도 관찰되었다.
+topics:
+  - 가입 유입 지속 증가
+  - 자동 가입 알림 시스템 안정 운영
+  - 해외 고객 가입 관찰
+  - 신규 고객 모니터링
+key_discussions:
+  - thread_ts: '1757398665.840849'
+    date: '2025-09-09'
+    title: 대량 가입 건 분석
+    summary: 9월 9일 발생한 가입 건에 대한 고객 정보 확인 및 대응 논의 (14개 답글)
+  - thread_ts: '1750563528.996709'
+    date: '2025-06-22'
+    title: 신규 가입 고객 검토
+    summary: 가입 고객의 유효성 확인 및 후속 조치 논의 (9개 답글)
+  - thread_ts: '1758354853.936869'
+    date: '2025-09-20'
+    title: 주말 가입 건 모니터링
+    summary: 주말에 발생한 가입 건에 대한 관찰 및 대응 (5개 답글)
+terminology:
+  - term: GMT
+    definition: Greenwich Mean Time, 해외 고객의 가입 시간대를 나타내는 표현
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

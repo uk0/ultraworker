@@ -1,0 +1,73 @@
+channel:
+  id: C06814P5L5D
+  name: business-common-global
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 35
+  total_threads: 23
+  active_users: 5
+  avg_messages_per_day: 1.8
+summary: |
+  2024년 3분기 글로벌 비즈니스 채널은 일본 진출을 위한 초기 기반 마련에 집중된 분기이다. 소프트뱅크 네트워킹, 캐논마케팅재팬 연계, 일본 법인 설립 준비, 디캠프 일본 멘토링, AI Smiley 박람회 참가 등이 주요 활동이었다. 일본 현지 콜드이메일 발송(상사 기업 리스트 작성), 한국기업연합회 소개, Headwaters/Hakky 등 경쟁사 리서치, ASCII STARTUP 미디어 PR 시도, 레이더랩(일본판 마크스폰)과의 TCFD 에이전트 협업 등 다각적인 시도가 있었다. 8월에는 일본 출장(이사고 오피스 방문, KOSME 도쿄, AIX 미팅)이 진행되었다.
+topics:
+  - name: "일본 콜드 이메일 발송"
+    mention_count: 8
+    description: "상사 기업 리스트 작성 및 일본 법인 대상 콜드이메일 발송. 이메일 작성 팁(두줄 요약, 이미지 제외) 공유"
+  - name: "일본 출장(8월)"
+    mention_count: 10
+    description: "8월 이사고 오피스 방문, KOSME 도쿄(김병훈 센터장), AIX(마케팅/현지화), 레이더랩 교육 진행"
+  - name: "일본 경쟁사 및 파트너사 리서치"
+    mention_count: 6
+    description: "Hakky(리테일 LLM 환경 구축), Headwaters(모델 튜닝, AI 솔루션), AI Smiley 박람회 60개사 정리"
+  - name: "일본 법인 설립"
+    mention_count: 3
+    description: "가상오피스 등기 검토, 법인 설립 관련 사항 정리. 지점 등기 여부 확인"
+  - name: "레이더랩 협업"
+    mention_count: 4
+    description: "일본판 마크스폰인 레이더랩과 TCFD 거버넌스 에이전트 개발 및 테스트 계정 제공"
+key_discussions:
+  - thread_ts: '1722517200.000000'
+    date: '2024-08-02'
+    reply_count: 21
+    text_preview: "이사고상 8/9 오피스 방문 가능 여부 및 동행자 모집"
+  - thread_ts: '1724902800.000000'
+    date: '2024-08-29'
+    reply_count: 5
+    text_preview: "KOSME 도쿄 김병훈 센터장 미팅 - 한국기업연합회, AI 스마일리 소개"
+  - thread_ts: '1724915200.000000'
+    date: '2024-08-29'
+    reply_count: 5
+    text_preview: "AIX 민경준 대표 미팅 - 마케팅/현지화 서비스 협력"
+  - thread_ts: '1725249000.000000'
+    date: '2024-09-02'
+    reply_count: 1
+    text_preview: "AI Smiley 박람회 60개사 리서치 결과 정리 - RAG/챗봇 빌더 업체 증가 추세"
+  - thread_ts: '1725850400.000000'
+    date: '2024-09-09'
+    reply_count: 10
+    text_preview: "레이더랩 TCFD 거버넌스 에이전트 생성 및 일본어 테스트 결과 공유"
+terminology:
+  - term: "이사고"
+    definition: "일본 소프트뱅크 관련 인맥. Gen-AX 이사고 대표. Sionic AI 일본 진출 초기 네트워킹 대상"
+    aliases: []
+    context: "2024-Q3 일본 진출의 주요 연결고리"
+  - term: "레이더랩"
+    definition: "일본의 ESG 보고서 솔루션 스타트업. 마크스폰의 일본 버전으로 지칭"
+    aliases: []
+    context: "TCFD 에이전트 협업 파트너. 테스트 계정 제공"
+  - term: "AI Smiley"
+    definition: "일본 AI 니즈 기업-솔루션 매칭 플랫폼. 2024년 8-9월 박람회 개최"
+    aliases: []
+    context: "일본 AI 생태계 파악 및 파트너사 발굴 목적 참가"
+  - term: "Hakky"
+    definition: "일본 리테일 기업용 LLM 환경 구축 업체(리테일 SaaS 도입 기업 수 5년 연속 1위)"
+    aliases: ["st-hakky"]
+    context: "잠재 경쟁사 또는 파트너사로 분류"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,51 @@
+channel:
+  id: C05801FL29F
+  name: corp-etc
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 3
+  active_users: 6
+  avg_messages_per_day: 1.1
+summary: |
+  2024년 2분기 corp-etc 채널에서는 회사 KPI 설정, 채용 개선, 채용 바이럴 아티클 작성 등 다양한 회사 운영 관련 논의가 이루어졌다.
+  투자 목표, 일본 사업 목표, 국내 사업 목표를 포함한 KPI 초안이 공유되었으며, 커피챗 채용 실패 사례 분석 및 복지 개선을 통한 채용 활성화 방안이 논의되었다.
+  분기 말에는 채용 바이럴을 위한 아티클 작성 스레드가 생성되었고, 신규 멤버 3명이 채널에 합류하였다.
+topics:
+  - name: "KPI 설정"
+    mention_count: 4
+    description: "목적조직 셋팅 및 투자/일본/국내 사업 목표 포함 KPI 초안 논의"
+  - name: "채용 전략"
+    mention_count: 3
+    description: "커피챗 채용 실패 사례 분석 및 채용 활성화를 위한 복지 방안 논의"
+  - name: "채용 바이럴"
+    mention_count: 2
+    description: "채용 홍보를 위한 아티클 작성 계획"
+key_discussions:
+  - thread_ts: '1713320160.000000'
+    date: '2024-04-17'
+    reply_count: 10
+    text_preview: "목적조직 셋팅 및 힘조절 KPI 만들기 - 투자/일본/국내 사업 목표 초안 공유"
+  - thread_ts: '1714039200.000000'
+    date: '2024-04-25'
+    reply_count: 16
+    text_preview: "커피챗 채용 실패 케이스 분석 및 채용 활성화를 위한 복지 탐색"
+  - thread_ts: '1718323200.000000'
+    date: '2024-06-14'
+    reply_count: 12
+    text_preview: "채용 바이럴을 위한 아티클 작성 스레드"
+terminology:
+  - term: "KPI"
+    definition: "Key Performance Indicator, 핵심 성과 지표"
+  - term: "커피챗"
+    definition: "채용 후보자와 비공식적으로 커피를 마시며 진행하는 사전 미팅"
+  - term: "목적조직"
+    definition: "특정 목적이나 프로젝트 중심으로 구성된 조직 구조"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

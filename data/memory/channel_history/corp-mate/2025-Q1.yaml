@@ -1,0 +1,65 @@
+channel:
+  id: C08J8HH1TT5
+  name: corp-mate
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 11
+  active_users: 13
+  avg_messages_per_day: 3.2
+summary: |
+  2025-Q1은 corp-mate 채널이 "random-mate"에서 이름을 변경하며 공식 출범한 분기로, 신규 입사자 온보딩을 담당하는 메이트 시스템의 운영이 본격화되었다. 성우님(강성우)의 입사와 함께 메이트 배정, 자기소개 일정 조율, 코드 리뷰 그라운드 룰 공유, Pylon API 문서 이관 작업 등 실무 온보딩 활동이 활발히 이루어졌다. 메이트 간 주간 활동 공유, 피드백 커피챗 진행, 부속합의서 워딩 개선('웰컴 90일 플랜') 등 온보딩 프로세스 고도화 논의도 병행되었다.
+topics:
+  - name: "신규 입사자 온보딩"
+    mention_count: 8
+    description: "강성우(성우님) 입사에 따른 메이트 배정, 자기소개 일정 조율, 아키텍처 설명 일정 협의 등 온보딩 활동"
+  - name: "코드 리뷰 그라운드 룰"
+    mention_count: 3
+    description: "p1~p3 등 코드 리뷰 코멘트 의미 정리 노션 문서 공유 및 신규 입사자에게 안내"
+  - name: "메이트 활동 공유"
+    mention_count: 4
+    description: "주간 메이트 활동 보고(진형-호진, 은주-혜선, 시형-승희 등 페어별 활동 내용 공유)"
+  - name: "온보딩 프로세스 개선"
+    mention_count: 3
+    description: "부속합의서를 '웰컴 90일 플랜'으로 리네이밍, 피드백 커피챗 도입, 자기소개 일정 조율 아이디어"
+  - name: "Pylon API 문서 이관"
+    mention_count: 2
+    description: "Postman의 Pylon API를 apidog의 pylon_knowledge로 이관, 환경변수 설정 및 deprecated API 정리"
+key_discussions:
+  - thread_ts: '1742289852.000000'
+    date: '2025-03-18'
+    reply_count: 0
+    text_preview: "채널 이름을 'random-mate'에서 'corp-mate'로 변경, 메이트 활동 관련 채널 설명 설정"
+  - thread_ts: '1742380810.000000'
+    date: '2025-03-19'
+    reply_count: 14
+    text_preview: "성우님 메이트는 저(성우님)랑 진형님이 할 거 같습니다"
+  - thread_ts: '1742729244.000000'
+    date: '2025-03-26'
+    reply_count: 1
+    text_preview: "성우님에게 Pylon API Documents 노션 문서, 파일론 온보딩 문서 전달 및 apidog 이관 작업 요청"
+  - thread_ts: '1743047497.000000'
+    date: '2025-03-31'
+    reply_count: 8
+    text_preview: "서반석님 메이트 혹시 배정하셧나욤?"
+terminology:
+  - term: "corp-mate"
+    definition: "메이트 분들이 온보딩 프로세스 관련 이야기를 나누는 채널. 신규 입사자의 적응을 돕는 메이트 시스템 운영 채널"
+    aliases: ["random-mate"]
+    context: "신규 입사자 온보딩, 메이트 배정, 피드백 커피챗 등 논의"
+  - term: "웰컴 90일 플랜"
+    definition: "기존 '부속합의서'를 대체하는 신규 입사자 온보딩 업무 계획서의 새로운 명칭"
+    aliases: ["부속합의서"]
+    context: "신규 입사자 온보딩 문서 워딩 개선 논의"
+  - term: "Pylon"
+    definition: "사이오닉AI의 내부 지식베이스/RAG 파이프라인 관련 서비스. Pylon API 문서가 apidog으로 이관됨"
+    aliases: ["파일론", "Pylon_Knowledge"]
+    context: "성우님 온보딩 시 Pylon API 문서 이관 작업 과제로 부여됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

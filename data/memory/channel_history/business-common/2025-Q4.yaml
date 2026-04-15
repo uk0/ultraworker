@@ -1,0 +1,73 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 160
+  total_threads: 130
+  active_users: 18
+  avg_messages_per_day: 2.6
+summary: |
+  2025년 4분기 비즈니스 공통 채널에서는 삼성벤처투자, 신세계I&C, 유진투자증권, GS건설, 한국전력기술 등 주요 기업을 대상으로 한 영업·수주 활동이 활발히 진행되었다. 삼성벤처투자 2.17억 원 규모 수주, 신세계I&C 법무 에이전트 PoC, 롯데이노베이트-은행연합회 연계 파서 납품 등이 주요 성과로 기록되었다. OpenAI DevDay 부스 참가, SKAX 온톨로지+에이전트 자문, 국과수 POC 등 다양한 파트너십·사업 추진도 병행되었으며, 스톰 플랫폼의 과금 정책, 워크플로우 리비전 기능 배포, 스톰파스 엑셀 지원 완료 등 제품 업데이트도 공유되었다.
+topics:
+  - name: "영업 및 수주 활동"
+    mention_count: 45
+    description: "삼성벤처투자, 신세계I&C, 유진투자증권, GS건설, 롯데이노베이트 등 주요 기업 대상 영업·수주 논의"
+  - name: "스톰 플랫폼 업데이트"
+    mention_count: 20
+    description: "워크플로우 리비전 기능, 변수 편집 화면, 스톰파스 엑셀 지원, 과금안 업데이트 등 제품 개선 공유"
+  - name: "파트너십 및 협력"
+    mention_count: 18
+    description: "솔트룩스, 한국이디에스, SKAX, 동국시스템즈, 대우건설 등 파트너사와의 협력 논의"
+  - name: "PoC 및 프로젝트"
+    mention_count: 15
+    description: "신세계I&C 법무 에이전트 PoC, 마사회 PoC, 국과수 POC, GS건설 과제 제안 등"
+  - name: "스톰 과금 정책"
+    mention_count: 10
+    description: "스톰파스 과금안, 예상 비용 계산기, 스톰파스 엑셀 과금 기준 논의"
+key_discussions:
+  - thread_ts: '1728888000.000000'
+    date: '2025-10-14'
+    reply_count: 5
+    text_preview: "삼성벤처투자 수주 완료 - 프로젝트 수행비용 2.17억(부가세 별도), 4개월 후 월 SaaS 사용료 1000만원"
+  - thread_ts: '1730728400.000000'
+    date: '2025-10-30'
+    reply_count: 63
+    text_preview: "OpenAI DevDay 부스 준비 관련 논의 - 전시 준비, 데모 자료 작성 등"
+  - thread_ts: '1732406400.000000'
+    date: '2025-11-24'
+    reply_count: 39
+    text_preview: "하나원큐 애자일랩 17기 선발 건 - 워크샵 리허설 및 EDS 교육 준비"
+  - thread_ts: '1733278200.000000'
+    date: '2025-12-04'
+    reply_count: 25
+    text_preview: "롯데이노베이트와 은행연합회 파서 납품 관련 협의 - 솔트룩스 재하도급 구조"
+  - thread_ts: '1733622000.000000'
+    date: '2025-12-08'
+    reply_count: 12
+    text_preview: "SKAX 온톨로지+에이전트 자문 프로젝트 진행 현황 공유"
+terminology:
+  - term: "스톰파스"
+    definition: "Sionic AI의 문서 파싱 솔루션. 엑셀, PDF 등 다양한 문서 형식을 구조화 데이터로 변환"
+    aliases: ["Storm Parse", "StormParse"]
+    context: "B2B 영업 및 파트너십 논의에서 자주 언급되는 핵심 제품"
+  - term: "스톰 플랫폼"
+    definition: "Sionic AI의 올인원 AI 에이전트 빌더 플랫폼. 워크플로우 설계, RAG, 챗봇 구축 기능 포함"
+    aliases: ["STORM Platform", "Storm"]
+    context: "엔터프라이즈 고객 대상 SaaS 및 구축형 제품"
+  - term: "PoC"
+    definition: "Proof of Concept. 개념 검증 단계로, 본 사업 전 소규모 실증 진행"
+    aliases: ["POC"]
+    context: "신세계I&C, 마사회, 국과수, GS건설 등 다수 고객사 대상 PoC 언급"
+  - term: "SKAX"
+    definition: "SK그룹의 AX(AI Transformation) 조직. Sionic AI와 온톨로지+에이전트 자문 프로젝트 협업"
+    aliases: ["SK AX"]
+    context: "2025-Q4 주요 파트너사로 등장"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

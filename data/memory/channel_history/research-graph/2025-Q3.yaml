@@ -1,0 +1,56 @@
+channel:
+  id: C08N0JJRPUM
+  name: research-graph
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 11
+  total_threads: 4
+  active_users: 5
+  avg_messages_per_day: 1.1
+summary: |
+  2025년 3분기 research-graph 채널은 상대적으로 활동이 적었으나, 주요 그래프 기술 동향이 공유되었다.
+  GUG 세미나 자료 배포, LightRAG 운영 실무 논의, OpenAI의 시간 기반 지식 그래프 cookbook 공유가 이루어졌으며,
+  TuringDB 등 차세대 그래프 데이터베이스 엔진에 대한 관심도 등장하였다.
+topics:
+  - name: "GUG 세미나 자료"
+    mention_count: 3
+    description: "GUG 7회 세미나 자료 공유, 다음 온라인 세미나(hypergraph 주제) 예고"
+  - name: "LightRAG 운영"
+    mention_count: 3
+    description: "LightRAG 운영 실무 고려사항 및 매니징 가능한 구조 논의"
+  - name: "시간 기반 지식 그래프"
+    mention_count: 2
+    description: "OpenAI cookbook: Temporal Agents with Knowledge Graphs 공유"
+  - name: "고성능 그래프 DB"
+    mention_count: 2
+    description: "TuringDB: Neo4j 대비 100배 빠른 C++ 기반 그래프 데이터베이스 소개"
+key_discussions:
+  - thread_ts: '1751501155.000000'
+    date: '2025-07-03'
+    reply_count: 1
+    text_preview: "아이티센엔텍 최종 결과물 보고서 공유 및 성우님 cc"
+  - thread_ts: '1754430780.000000'
+    date: '2025-08-05'
+    reply_count: 1
+    text_preview: "OpenAI Temporal Agents with Knowledge Graphs cookbook 공유"
+  - thread_ts: '1758135060.000000'
+    date: '2025-09-17'
+    reply_count: 2
+    text_preview: "그래프 꿈은 이루어진다 - 그래프 기술 성숙에 대한 감회"
+terminology:
+  - term: "TuringDB"
+    definition: "Neo4j 대비 약 100배 빠른 deep multihop 쿼리를 지원하는 C++ 기반 그래프 DB 엔진"
+    aliases: []
+    context: "차세대 그래프 데이터베이스로 소개, 반도체 업계의 그래프 기술에서 영감"
+  - term: "Temporal Knowledge Graph"
+    definition: "시간 정보를 포함한 지식 그래프, 동일한 사실의 시간적 변화를 추적"
+    aliases: ["시간 기반 지식 그래프"]
+    context: "OpenAI cookbook에서 소개된 시간 인식 에이전트 구현 방법"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

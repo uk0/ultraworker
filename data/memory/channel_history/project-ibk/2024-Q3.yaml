@@ -1,0 +1,69 @@
+channel:
+  id: C07LHF65Z6E
+  name: project-ibk
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 50
+  total_threads: 26
+  active_users: 14
+  avg_messages_per_day: 3.6
+summary: |
+  IBK(기업은행) 생성형 AI PoC 프로젝트 초기 세팅 및 현장 설치 기간. 2024년 9월 초 채널이 개설되어
+  을지로 IBK 본점 데이터센터에 서버 반입 및 설치를 진행함. 폐쇄망 환경에서 Docker Compose 기반
+  패키징, SSD/USB를 통한 이미지 전달, Solar LLM(업스테이지) 연동, Pylon/Stargate/USIO 등
+  스톰 솔루션 컴포넌트 조립 작업 수행. PoC용 문서(956개) 업로드 후 Libreoffice 이슈(188개),
+  파싱 실패, 암호화 파일 등으로 약 203개 실패 확인. IBK 측에서 문서 2만개 업로드 및 멀티턴
+  지원 요청이 있었으며, 문서 수 제한 협의 필요성 대두. 데이터센터 출입증 발급, 개인정보 동의서
+  작성 등 행정 절차도 병행됨.
+topics:
+  - IBK PoC 설치 및 세팅
+  - 폐쇄망 Docker 패키징
+  - Solar LLM 연동
+  - 문서 파싱 실패 대응
+  - Pylon 온프렘 환경변수 설정
+  - 데이터센터 출입 행정
+key_discussions:
+  - thread_ts: '1725868226.379779'
+    date: '2024-09-09'
+    title: 'IBK PoC 초기 인프라 세팅 논의'
+    summary: '서버 반입 장비 스펙, 업스테이지 Solar 모델 사전 설치, 입출력 방식 협의'
+  - thread_ts: '1726204450.406529'
+    date: '2024-09-13'
+    title: 'IBK PoC 폐쇄망/SSD 반입 관련 문의'
+    summary: '폐쇄망 여부, SSD 반입 가능 여부, 네트워크 포트, Solar API 스펙 확인'
+  - thread_ts: '1726735864.986449'
+    date: '2024-09-19'
+    title: 'IBK PoC 체크리스트 작성 및 담당자 배정'
+    summary: 'Web/SG API/Pylon 등 컴포넌트별 담당자 배정 및 노션 체크리스트 공유'
+  - thread_ts: '1727694178.305429'
+    date: '2024-09-30'
+    title: 'IBK PoC 문서 수 제한 협의'
+    summary: '1만개 문서 요청에 대한 성능 우려, 적절한 선에서 끊어가는 협의 필요'
+  - thread_ts: '1727701062.758499'
+    date: '2024-09-30'
+    title: 'IBK 문서 파싱 진행상황 공유'
+    summary: '956개 중 203개 실패(Libreoffice, 파싱에러, 암호화 등), 대응 방안 논의'
+terminology:
+  - term: 'IBK'
+    definition: '기업은행(Industrial Bank of Korea). 생성형 AI 플랫폼 PoC/본사업 고객사'
+    aliases: ['기업은행', '아이비케이']
+  - term: 'Solar'
+    definition: '업스테이지(Upstage)에서 개발한 LLM. IBK 내부 H100 장비에 사전 설치'
+    aliases: ['Solar API', '솔라']
+  - term: 'Pylon'
+    definition: '사이오닉 AI의 검색/RAG 엔진 컴포넌트. 온프렘 환경변수 조정 필요'
+    aliases: ['파일런']
+  - term: 'USIO'
+    definition: '사이오닉 AI의 문서 파싱/처리 컴포넌트'
+    aliases: []
+  - term: '폐쇄망'
+    definition: 'IBK 내부 보안 네트워크. 외부 인터넷 접근 불가, USB/SSD로 자료 반입'
+    aliases: ['행내망']
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

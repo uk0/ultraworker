@@ -1,0 +1,43 @@
+channel:
+  id: C07KHG3C8N6
+  name: sig-육아
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 18
+  total_threads: 15
+  active_users: 3
+  avg_messages_per_day: 1.1
+summary: |
+  Noah, 신희수, 송명하 세 명의 아빠가 육아 일상을 꾸준히 공유한 분기. Noah의 아이는 곧 9kg, 이어서 10kg(체중 상위 3%)을 달성하며 먹방 재능을 보였고, 고양이/강아지와 함께 자라며 특유의 행동을 보이기 시작했다. 갸웃 스킬이 생기고, "착한척" 하는 모습도 공유되었다. 신희수의 해솔이는 핑크퐁 상위리스너가 되었고, 눕기 시작하는 모습이 화제였다. 송명하의 하준이는 버스에서 잠든 모습, 치킨을 사과주스에 찍어먹는 독특한 식습관, 선물 받고 도파민 폭발하는 춤사위를 공유했다.
+topics:
+  - 아기 성장 (체중 9-10kg, 상위 3%)
+  - 먹방/식습관 (치킨+사과주스)
+  - 반려동물과 아기 (고양이, 강아지)
+  - 음악/미디어 (핑크퐁)
+  - 새로운 스킬 (갸웃)
+key_discussions:
+  - thread_ts: '1764845358.906549'
+    date: '2025-12-04'
+    topic: 신희수 아이 사진/영상 공유
+    reply_count: 15
+  - thread_ts: '1760082323.270609'
+    date: '2025-10-10'
+    topic: 곧 9kg 달성
+    reply_count: 9
+  - thread_ts: '1764667412.825629'
+    date: '2025-12-02'
+    topic: 핑크퐁 상위리스너
+    reply_count: 9
+  - thread_ts: '1759395593.345429'
+    date: '2025-10-02'
+    topic: 먹방에 재능을 보이는 아기
+    reply_count: 9
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

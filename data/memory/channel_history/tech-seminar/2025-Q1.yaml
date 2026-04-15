@@ -1,0 +1,59 @@
+channel:
+  id: C08G54E9K8Q
+  name: tech-seminar
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 22
+  total_threads: 9
+  active_users: 11
+  avg_messages_per_day: 2.8
+summary: |
+  2025년 1분기 tech-seminar 채널은 2025년 2월 28일에 신규 개설되어 첫 기술 세미나가 시작된 분기이다. 채널 개설 후 배포 파이프라인 소개, Terraform 인프라 자동화, Pylon과 Supply 서비스 아키텍처를 비개발 팀원들도 이해할 수 있도록 소개하는 세미나가 열렸다. 11명의 팀원이 초기 참여자로 함께하며 팀 내 기술 지식 공유 문화의 씨앗을 뿌렸다.
+topics:
+  - name: "배포 파이프라인 소개"
+    mention_count: 6
+    description: "Sionic AI CI/CD 배포 파이프라인 구조 및 /sionic-deploy 봇 사용법 소개"
+  - name: "Terraform 인프라 자동화"
+    mention_count: 4
+    description: "Terraform을 활용한 인프라 코드화(IaC) 및 클러스터 자동화 소개"
+  - name: "Pylon/Supply 아키텍처"
+    mention_count: 5
+    description: "비개발 팀원 대상 Pylon RAG 파이프라인 및 Supply 인덱서 아키텍처 설명"
+key_discussions:
+  - thread_ts: '1740700800.000000'
+    date: '2025-02-28'
+    reply_count: 4
+    text_preview: "tech-seminar 채널 개설 공지 및 첫 세미나 일정 안내"
+  - thread_ts: '1741305600.000000'
+    date: '2025-03-07'
+    reply_count: 3
+    text_preview: "배포 파이프라인 소개 세미나: /sionic-deploy 봇 동작 원리와 GoCD 파이프라인 설명"
+  - thread_ts: '1741910400.000000'
+    date: '2025-03-14'
+    reply_count: 2
+    text_preview: "Pylon과 Supply 서비스 아키텍처 비개발자 대상 세미나 개최"
+terminology:
+  - term: "tech-seminar"
+    definition: "Sionic AI 팀 내 기술 지식 공유를 위해 2025년 2월 28일 개설된 주간 세미나 채널"
+    aliases: ["기술 세미나", "테크 세미나"]
+    context: "2025년 Q1에 신규 개설된 내부 기술 교육 채널"
+  - term: "Terraform"
+    definition: "HashiCorp의 인프라 코드화(IaC) 도구. 클라우드 인프라를 코드로 관리"
+    aliases: ["테라폼", "IaC"]
+    context: "Q1 세미나에서 인프라 자동화 도구로 소개"
+  - term: "Pylon"
+    definition: "RAG 파이프라인의 문서 청킹 및 전처리 서비스. STORM 플랫폼의 핵심 컴포넌트"
+    aliases: ["파이론", "pylon-api"]
+    context: "Q1 세미나에서 비개발 팀원 대상으로 아키텍처 소개"
+  - term: "Supply"
+    definition: "carrier-supply. 벡터 인덱싱 및 데이터 공급 서비스. STORM 플랫폼의 데이터 레이어"
+    aliases: ["carrier-supply", "서플라이"]
+    context: "Q1 세미나에서 Pylon과 함께 아키텍처 소개"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

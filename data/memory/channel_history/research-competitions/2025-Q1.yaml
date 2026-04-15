@@ -1,0 +1,22 @@
+channel:
+  id: C07DV25D3UY
+  name: research-competitions
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q1 research-competitions 채널은 이전 분기의 활발한 대회 참가 이후 비교적 조용한 시기를 보냈다. 3명의 팀원이 채널에 합류하는 메시지가 기록되었으며, 새로운 대회 참가나 실질적인 기술 논의는 이 분기에 이루어지지 않았다. 이 기간은 이전 대회 결과를 정리하고 다음 연구 방향을 준비하는 전환 단계로 추정된다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

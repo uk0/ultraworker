@@ -1,0 +1,98 @@
+channel:
+  id: C05BUTMULMD
+  name: product-storm
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 216
+  total_threads: 197
+  active_users: 19
+  avg_messages_per_day: 3.3
+summary: |
+  2025-Q3에는 워크플로우 캔버스 고도화(API 노드, if-else 노드, 변수 할당 노드, 커스텀 변수 관리 기능)가 집중적으로 개발되었다.
+  팀즈(Teams) 연동 개발이 본격 진행되어 기능 가시화 및 화면 싱크 작업이 이루어졌고, DFT(검색 모델 파인튜닝) 화면 기획이 완료되었다.
+  에이전트 템플릿에서 LLM 파라미터 제거(Claude 4.5 호환성 대응), 쉐도우 계정 기능 준비, 디버그 기능 개발 배포, 답변 생성 시간 단축 논의 등 제품 운영 효율화 작업도 진행되었다.
+  deprecated Gemini 모델 제거, HyperCLOVA HCX-005/007 모델 추가, max_tokens 기본값 증가 등 LLM 모델 관리 작업이 이루어졌다.
+topics:
+  - name: "워크플로우 캔버스 고도화"
+    mention_count: 25
+    description: "API 노드, if-else 노드, 변수 할당 노드, 커스텀 변수 선언/관리 기능 개발"
+  - name: "팀즈(Teams) 연동"
+    mention_count: 12
+    description: "Teams 봇 연동 개발, 화면 싱크, 고객사 조건 부합 확인 미팅"
+  - name: "DFT 검색 모델 파인튜닝"
+    mention_count: 8
+    description: "DFT 화면 기획 완료 및 JSON 데이터 정리"
+  - name: "LLM 모델 관리"
+    mention_count: 10
+    description: "Claude 4.5 파라미터 호환성, Gemini deprecated 모델 제거, HCX 모델 추가"
+  - name: "쉐도우 계정"
+    mention_count: 7
+    description: "고객사 에이전트를 내부에서 모니터링하기 위한 쉐도우 계정 기능 준비"
+  - name: "에이전트 템플릿 관리"
+    mention_count: 8
+    description: "템플릿화 논의, 에이전트 템플릿 교체, LLM 파라미터 최적화"
+  - name: "답변 생성 시간 단축"
+    mention_count: 5
+    description: "답변 생성 속도 개선을 위한 최적화 방안 논의"
+key_discussions:
+  - thread_ts: '1757063596.018719'
+    date: '2025-08-13'
+    reply_count: 95
+    text_preview: "워크플로우 캔버스 데이터 꼬임 문제 분석 및 리팩토링 진행"
+  - thread_ts: '1750305511.193309'
+    date: '2025-06-19'
+    reply_count: 60
+    text_preview: "PDF 뷰어 하이라이팅 - 유사도 비교 기반 텍스트 매칭 방식 논의"
+  - thread_ts: '1757582160.343579'
+    date: '2025-09-11'
+    reply_count: 70
+    text_preview: "답변 생성 시간 단축을 위한 최적화 방안 - 파이프라인 병목 분석"
+  - thread_ts: '1757075899.675069'
+    date: '2025-09-05'
+    reply_count: 49
+    text_preview: "변수 노드 화면 기획 1차 초안 공유 및 피드백"
+  - thread_ts: '1757657748.037059'
+    date: '2025-09-12'
+    reply_count: 50
+    text_preview: "시스템 변수(date/time) 및 펑션콜 출력 변수 추가 요청"
+  - thread_ts: '1757525586.701009'
+    date: '2025-09-10'
+    reply_count: 46
+    text_preview: "ragSkip 에이전트에서 RAG 노드 추가 시 contexts 전달 이슈"
+  - thread_ts: '1756996233.021259'
+    date: '2025-09-16'
+    reply_count: 45
+    text_preview: "쉐도우 유저 기능 요구사항 정의 및 기대 기능 논의"
+terminology:
+  - term: "API 노드"
+    definition: "워크플로우 캔버스에서 외부 API를 호출할 수 있는 노드 타입"
+    aliases: []
+  - term: "변수 할당 노드"
+    definition: "워크플로우 실행 중 커스텀 변수의 값을 수정/가공하는 노드"
+    aliases: ["Variable Assignment", "변수 수정"]
+  - term: "커스텀 변수"
+    definition: "사용자가 워크플로우에서 직접 정의하여 사용하는 변수"
+    aliases: ["custom variables"]
+  - term: "시스템 변수"
+    definition: "시스템에서 미리 정의한 변수 (query, chats, extra, sys.date 등)"
+    aliases: ["system variables"]
+  - term: "출력 변수"
+    definition: "워크플로우 노드 실행 결과로 생성되는 변수 (context:3, body:2, result:4 등)"
+    aliases: ["런타임 변수", "노드 변수"]
+  - term: "쉐도우 계정"
+    definition: "고객사의 에이전트를 내부에서 모니터링/테스트하기 위한 특수 계정"
+    aliases: ["shadow account"]
+  - term: "ragSkip"
+    definition: "RAG 노드 없이 LLM만으로 동작하는 에이전트 모드"
+    aliases: ["skipRag"]
+  - term: "Dify"
+    definition: "경쟁 제품으로 참고하는 오픈소스 LLM 앱 빌더 플랫폼"
+    aliases: []
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

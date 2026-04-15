@@ -1,0 +1,55 @@
+channel:
+  id: C06R0LPHHLJ
+  name: project-gov-subsidy
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 5
+  active_users: 5
+  avg_messages_per_day: 1.5
+summary: |
+  2024년 3분기는 정부지원사업 채널에서 활동이 비교적 조용한 분기였다. 7월 초 과학기술분야 연구기획과제(제3차) 공모에 제출을 완료하였으며, 셀렉트스타와의 데이터 바우처 킥오프 미팅이 성공적으로 진행되었다. 9월 말에는 2025년도 대비 주요 정부과제 공모 목록을 정리하고 내부 공유하여 다음 분기 준비를 시작하였다.
+topics:
+  - name: "과학기술분야 연구기획과제"
+    mention_count: 4
+    description: "2024년도 제3차 과학기술분야 연구기획과제 공모 제출 완료"
+  - name: "셀렉트스타 킥오프"
+    mention_count: 2
+    description: "데이터 바우처 사업 관련 셀렉트스타와 킥오프 미팅"
+  - name: "2025년 정부과제 목록 정리"
+    mention_count: 3
+    description: "NIA 초거대AI, 초격차 스타트업, 창업성장 디딤돌 등 2025년 주요 과제 목록 정리"
+key_discussions:
+  - thread_ts: '1720137000.000000'
+    date: '2024-07-05'
+    reply_count: 4
+    text_preview: "과학기술분야 연구기획과제 공모 제출 완료 - 영숙님, 도균님 수고"
+  - thread_ts: '1720597800.000000'
+    date: '2024-07-10'
+    reply_count: 1
+    text_preview: "셀렉트스타와 데이터 바우처 킥오프 미팅 완료"
+  - thread_ts: '1727399400.000000'
+    date: '2024-09-27'
+    reply_count: 2
+    text_preview: "2025년 정부과제 목록 정리 - NIA 초거대AI, 초격차 스타트업, 디딤돌 등 포함"
+terminology:
+  - term: "초거대AI 확산 생태계 조성 사업"
+    definition: "NIA(한국지능정보사회진흥원) 주관 초거대AI 활용 및 보급 지원 사업"
+    aliases: ["NIA 초거대AI"]
+    context: "2025년 신청 후보 과제로 목록에 포함"
+  - term: "초격차 스타트업 1000+"
+    definition: "중기부 주관 AI 분야 스타트업 집중 육성 프로젝트"
+    aliases: ["초격차"]
+    context: "2025년 신청 후보 과제로 목록에 포함"
+  - term: "셀렉트스타"
+    definition: "데이터 바우처 사업의 공급기관 파트너사"
+    aliases: []
+    context: "데이터 바우처 킥오프 미팅 진행"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

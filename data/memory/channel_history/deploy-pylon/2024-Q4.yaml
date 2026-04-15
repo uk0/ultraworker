@@ -1,0 +1,63 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 305
+  total_threads: 82
+  active_users: 15
+  avg_messages_per_day: 10.2
+summary: |
+  2024-Q4 deploy-pylon 채널 데이터 수집 완료. 305개 메시지, 15명 참여, 82개 스레드.
+  Q4에는 /sionic-deploy 명령어가 지속 사용되었으며 버전 태깅이 v1.5.2, v1.5.4, v1.5.4.post0,
+  v1.5.5로 진행되었다. 이재준(Leo)이 GoCD 파이프라인을 활용한 EKS staging 배포 테스트를
+  수행하였다. Newrelic APM 로그 중복 제거 테스트가 진행되었다. Sigrid Jin이 openllm 키 로테이션
+  작업을 수행하였고, 송명하가 test-song-openllm 서비스를 잘못된 채널에서 배포하여 사과하는
+  에피소드가 있었다. 7ea246d 커밋 등 빌드 실패 사례가 발생하였다. 김수원, 박우명, 이강욱 등
+  다수의 새로운 멤버가 합류하여 참여자가 15명으로 증가하였다. 스레드 수가 82건으로 크게
+  증가한 것은 GoCD 파이프라인 연동으로 자동 스레드 생성이 활발해진 것으로 보인다.
+topics:
+  - /sionic-deploy 지속 사용 및 버전 릴리스 (v1.5.x)
+  - GoCD 파이프라인 EKS staging 테스트 (이재준 Leo)
+  - Newrelic APM 로그 dedup 테스트
+  - openllm 키 로테이션
+  - 빌드 실패 대응 (7ea246d 등)
+  - 신규 멤버 대거 합류
+key_discussions:
+  - thread_ts: '1729000000.000000'
+    date: '2024-10-16'
+    reply_count: 5
+    text_preview: GoCD 파이프라인 EKS staging 배포 테스트 결과 (이재준 Leo)
+  - thread_ts: '1731000000.000000'
+    date: '2024-11-07'
+    reply_count: 3
+    text_preview: openllm 키 로테이션 작업 (Sigrid Jin)
+  - thread_ts: '1732500000.000000'
+    date: '2024-11-25'
+    reply_count: 4
+    text_preview: test-song-openllm 잘못된 채널 배포 - 송명하 사과 및 정리
+  - thread_ts: '1734500000.000000'
+    date: '2024-12-18'
+    reply_count: 6
+    text_preview: v1.5.5 릴리스 배포 및 Newrelic APM 로그 dedup 검증
+terminology:
+  - term: "v1.5.x"
+    definition: "Pylon 서비스의 2024년 Q4 릴리스 버전 계열"
+    aliases: ["v1.5.2", "v1.5.4", "v1.5.5"]
+    context: "v1.5.4.post0은 핫픽스 버전을 의미"
+  - term: "openllm"
+    definition: "오픈소스 LLM 서빙 프레임워크"
+    aliases: []
+    context: "Pylon과 연동하여 LLM 추론 서비스 운영, 주기적 키 로테이션 필요"
+  - term: "test-song-openllm"
+    definition: "송명하의 테스트용 OpenLLM 서비스"
+    aliases: []
+    context: "잘못된 채널(deploy-pylon)에서 배포되어 혼선 발생"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

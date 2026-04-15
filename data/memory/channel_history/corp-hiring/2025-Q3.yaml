@@ -1,0 +1,77 @@
+channel:
+  id: C098FV4AG3D
+  name: corp-hiring
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 88
+  total_threads: 59
+  active_users: 22
+  avg_messages_per_day: 3.8
+summary: |
+  2025년 3분기는 corp-hiring 채널이 처음 개설되어 본격적인 채용 활동이 시작된 분기이다.
+  8월 초 채널 개설 후 FE, 디자이너, TPM(Technical Project Manager) 등 다양한 포지션 채용 논의가 진행되었으며, 22명의 팀원이 채용 프로세스에 참여하였다.
+  그리팅(Greetinghr) 플랫폼 도입을 통해 기존 플렉스+원티드 체계에서 채용 관리 일원화를 추진하였으며, 면접 일정 조율, 과제 전형 프로세스 개선, 내부 추천 활성화 등 채용 프로세스 전반의 체계화가 이루어졌다.
+  9월에는 원티드-그리팅 연동 재설정, 캔디드를 통한 추천 활성화, 레퍼런스 체크 정책 안내 등이 진행되었다.
+topics:
+  - name: "그리팅 플랫폼 도입"
+    mention_count: 18
+    description: "플렉스에서 그리팅으로 채용 관리 플랫폼 이관 및 설정 작업"
+  - name: "FE 채용"
+    mention_count: 8
+    description: "프론트엔드 개발자 채용 공고 게시 및 면접 프로세스 진행"
+  - name: "디자이너 채용"
+    mention_count: 7
+    description: "프로덕트 디자이너 채용 공고 및 면접 진행, 컬처핏 인터뷰어 선정"
+  - name: "TPM 포지션 논의"
+    mention_count: 3
+    description: "Technical Project Manager 포지션 필요성 및 JD 검토"
+  - name: "IBK 평가 알바"
+    mention_count: 2
+    description: "IBK 관련 단순 평가 작업 단기 채용 공지"
+  - name: "캔디드 연동"
+    mention_count: 3
+    description: "AI 기반 후보자 추천 서비스 캔디드를 통한 채용 후보자 유입"
+key_discussions:
+  - thread_ts: '1754053800.000000'
+    date: '2025-08-01'
+    reply_count: 17
+    text_preview: "FE 포지션 공고 업로드 관련 논의 및 채널 개설"
+  - thread_ts: '1754380800.000000'
+    date: '2025-08-05'
+    reply_count: 11
+    text_preview: "TPM(테크니컬 프로젝트 매니저) 포지션 필요성 논의"
+  - thread_ts: '1754655600.000000'
+    date: '2025-08-08'
+    reply_count: 15
+    text_preview: "IBK 데이터 평가 알바 단기 채용 공지"
+  - thread_ts: '1756332000.000000'
+    date: '2025-08-28'
+    reply_count: 7
+    text_preview: "원티드-플렉스-그리팅 채용 플랫폼 통합 및 그리팅 이관 제안"
+  - thread_ts: '1757977200.000000'
+    date: '2025-09-16'
+    reply_count: 29
+    text_preview: "vessel 1번 CUDA 버전 업그레이드 검토 (12.1 -> 12.8)"
+terminology:
+  - term: "그리팅 (Greetinghr)"
+    definition: "채용 관리 전문 SaaS 플랫폼으로, 지원자 관리, 면접 일정 조율 등 채용 전 과정 지원"
+  - term: "플렉스 (Flex)"
+    definition: "HR 및 채용 관리 통합 플랫폼으로, 사이오닉에서 기존에 채용 관리 용도로 사용하던 서비스"
+  - term: "원티드 (Wanted)"
+    definition: "공개 채용 플랫폼으로 채용 공고 노출 및 지원자 유입에 활용"
+  - term: "캔디드 (Candid)"
+    definition: "AI 기반 채용 후보자 추천 서비스"
+  - term: "TPM"
+    definition: "Technical Project Manager, 기술 프로젝트 매니저"
+  - term: "레퍼첵"
+    definition: "채용 과정에서 지원자의 전직장 동료나 지인을 통해 평판을 확인하는 절차"
+  - term: "컬처핏"
+    definition: "지원자가 회사 문화에 맞는지 평가하는 면접 단계"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

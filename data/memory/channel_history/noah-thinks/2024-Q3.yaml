@@ -1,0 +1,28 @@
+channel:
+  id: C06L6H4DB2R
+  name: noah-thinks
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q3 noah-thinks 채널은 거의 휴면 상태였다. 2개 메시지만 기록되었으며, 주로 외부 방문자(Sigrid Jin)의
+  채널 참여 관련 메시지만 있었다. CEO Noah의 사유 공유가 일시적으로 중단된 분기로, Q4에 다시 활동이 재개되었다.
+topics:
+  - 채널 휴면
+key_discussions:
+  - thread_ts: '1721000000.000000'
+    date: '2024-07-15'
+    reply_count: 1
+    text_preview: Sigrid Jin 채널 방문 - 외부 인사의 채널 참여 메시지
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

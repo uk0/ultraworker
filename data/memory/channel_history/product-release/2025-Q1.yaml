@@ -1,0 +1,65 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 65
+  total_threads: 26
+  active_users: 8
+  avg_messages_per_day: 1.8
+summary: |
+  2025-Q1에는 Stargate API가 v0.34.4에서 v0.36.11까지, WEB이 v1.17.5에서 v1.19.12까지 발전했다.
+  새로운 제품인 Carrier(Storm Parse 캐리어)가 v1.0.1~v1.2.0으로 등장하여 문서 파싱 파이프라인을
+  내재화하고 다국어 분기 처리 기능을 추가했다. ASMR 1.0.0도 출시되었다.
+  Stargate WEB에서는 출처 하이라이팅 UI 대폭 개선, Office 뷰어(PPT/DOC) 연결,
+  에이전트 템플릿/오더시트 기능, 유진 데모(회의록 생성), 온프레미스 지원(S3 프록시, ECR 업로드),
+  민감정보 학습 실패 처리, Clarity 분석 도구 연결이 이루어졌다.
+  Pylon은 v1.6.0에서 v1.7.1로 업그레이드되며, 특정 문서 전체 청크 반환 API,
+  피드백 청크 선택 기능, 임시/공용 버킷 관련 개선, HWP 청크 이슈 핫픽스가 적용되었다.
+  김수원(대 수원님)이 Pylon 코드 오너십을 인수받았으며, 온프레미스 배포를 위한
+  ECR 업로드 워크플로우, masterUser 환경변수화 등 인프라 개선이 진행되었다.
+topics:
+  - Carrier(Storm Parse) 신규 제품 출시 (v1.0.1~v1.2.0)
+  - 출처 하이라이팅 UI 대폭 개선
+  - Office 뷰어 (PPT/DOC) 연결
+  - 에이전트 템플릿 및 오더시트 기능
+  - 온프레미스 배포 지원 강화
+  - Pylon 코드 오너십 이전 (김수원)
+  - 유진 데모 화면 (회의록 생성)
+  - 민감정보 학습 실패 처리
+  - Clarity 분석 도구 연결
+  - ASMR 1.0.0 출시
+key_discussions:
+  - thread_ts: '1743409166.237189'
+    date: '2025-03-31'
+    topic: Stargate WEB v1.19.12 - onprem CSV, Clarity 부활, 문서 뷰어 에러 처리 (13개 댓글)
+  - thread_ts: '1735024781.477739'
+    date: '2024-12-24'
+    topic: Stargate WEB v1.15.5 - 다운로드 실패 알럿, 최근 팀 랜딩 기능
+  - thread_ts: '1733473731.392539'
+    date: '2024-12-06'
+    topic: Pylon v1.5.5 - Answer DI 적용, 암호화 PDF 검증 로직 개선
+terminology:
+  - term: "Carrier"
+    definition: "Storm Parse를 내재화한 문서 파싱 파이프라인 서비스"
+    aliases: ["Storm Parse 캐리어"]
+  - term: "ASMR"
+    definition: "Sionic AI의 새로운 서비스/모듈 (1.0.0 출시)"
+    aliases: []
+  - term: "오더시트"
+    definition: "에이전트 설정을 위한 JSON 기반 주문서 형태의 설정"
+    aliases: ["Order Sheet"]
+  - term: "Clarity"
+    definition: "Microsoft의 웹 분석 도구 (사용자 행동 추적)"
+    aliases: []
+  - term: "온프레미스"
+    definition: "고객사 자체 인프라에 배포하는 방식"
+    aliases: ["onprem", "on-prem"]
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

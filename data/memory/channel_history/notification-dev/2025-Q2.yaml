@@ -1,0 +1,41 @@
+channel:
+  id: C08H8TY7LCA
+  name: notification-dev
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 109
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 13.6
+summary: |
+  2025년 2분기 notification-dev 채널은 Apidog 자동화 알림 봇을 통해 Storm OpenAPI 문서 변경 이벤트와 자동화 테스트 결과가 기록된 알림 전용 채널로 운영되었다.
+  5월 말부터 Storm 내부 API의 자동화 스케줄 테스트(STORM 최소 시나리오)가 매분 실행되어 결과가 채널에 쌓이기 시작했으며, 26개 테스트 중 25개 통과(96.15% 통과율)가 안정적으로 유지되었다.
+  일본어 버전 API 문서 작업, 문서 학습 요청 API 명세 업데이트 등이 병행되었다.
+topics:
+  - name: "자동화 테스트 결과"
+    mention_count: 80
+    description: "STORM 최소 시나리오 스케줄 테스트 - 매분 실행, 26개 중 25개 통과(96.15%), 평균 응답시간 약 550ms"
+  - name: "Storm OpenAPI 문서 업데이트"
+    mention_count: 20
+    description: "Storm OpenAPI 한국어 및 일본어 버전 문서 수정 - 주요 개념, API 명세 업데이트"
+  - name: "신규 API 명세"
+    mention_count: 9
+    description: "문서 학습 요청 by file/url API 상태 Released로 변경 및 명세 업데이트"
+key_discussions: []
+terminology:
+  - term: "STORM 최소 시나리오"
+    definition: "Storm InternalAPI의 핵심 기능 26개를 자동으로 테스트하는 스케줄 테스트"
+    aliases: []
+    context: "매분 자동 실행되며 96.15% 통과율 유지"
+  - term: "Apidog"
+    definition: "API 문서 관리 및 자동화 테스트 플랫폼"
+    aliases: []
+    context: "Storm OpenAPI 문서 관리 및 자동화 테스트 실행 도구"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

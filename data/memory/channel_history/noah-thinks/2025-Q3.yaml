@@ -1,0 +1,39 @@
+channel:
+  id: C06L6H4DB2R
+  name: noah-thinks
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  Q3에는 Noah가 제품화 아이디어를 공유한 1개의 메시지만 게시됨.
+  파서 단독상품(B2C), RAG 전용 MCP 서비스, 엑셀 TEXT2SQL MCP 등
+  3가지 제품 아이디어를 제시하여 24개 답글로 활발한 토론 진행.
+topics:
+  - 제품 아이디어
+  - MCP (Model Context Protocol)
+  - 파서 단독상품
+  - TEXT2SQL
+key_discussions:
+  - title: 제품화 아이디어 3가지
+    date: '2025-07-11'
+    summary: |
+      1) 파서 단독상품(B2C 타겟), 2) RAG만 서비스하는 MCP,
+      3) 엑셀 파일 TEXT2SQL MCP. 24개 답글로 토론.
+terminology:
+  - term: MCP
+    definition: Model Context Protocol. AI 모델에 컨텍스트를 제공하는 프로토콜/서비스
+    aliases: []
+  - term: TEXT2SQL
+    definition: 자연어를 SQL 쿼리로 변환하는 기술
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

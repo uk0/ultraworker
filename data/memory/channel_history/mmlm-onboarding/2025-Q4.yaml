@@ -1,0 +1,23 @@
+channel:
+  id: C0922U1U1RB
+  name: mmlm-onboarding
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 4분기 mmlm-onboarding 채널은 신규 멤버 한 명이 채널에 참여하는 메시지만 기록되어 실질적인 활동이 없었다.
+  멀티모달 LLM 온보딩 관련 논의는 이 분기에 발생하지 않았다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

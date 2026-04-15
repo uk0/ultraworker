@@ -1,0 +1,36 @@
+channel:
+  id: C09GGJ8KD33
+  name: alarm-dev-critical-drone
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 9
+  total_threads: 0
+  active_users: 9
+  avg_messages_per_day: 2.2
+summary: |
+  2025년 4분기 Drone 서비스 크리티컬 개발 알림 채널에는 여러 멤버가 새롭게 참여하는 메시지가 주로 기록되었다.
+  10월 중 하담 테스트 관련 구분선 메시지와 함께 다수의 신규 멤버들이 채널에 합류하였으며, 실제 크리티컬 알림보다는 채널 구성원 정비 위주의 활동이 이루어졌다.
+  스레드 없이 9건의 메시지가 9명의 멤버에 의해 기록된 비교적 조용한 분기였다.
+topics:
+  - name: "신규 멤버 참여"
+    mention_count: 7
+    description: "Drone 서비스 크리티컬 알림 채널에 신규 멤버 다수 합류"
+  - name: "하담 테스트"
+    mention_count: 1
+    description: "하담 관련 테스트 구분선 메시지 기록"
+key_discussions: []
+terminology:
+  - term: "Drone"
+    definition: "Sionic AI의 드론 관련 서비스 또는 프로젝트"
+  - term: "하담"
+    definition: "Sionic AI 내부 프로젝트 또는 서비스명으로 추정"
+  - term: "Critical Alert"
+    definition: "서비스 운영 중 즉각 대응이 필요한 심각한 수준의 장애 알림"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

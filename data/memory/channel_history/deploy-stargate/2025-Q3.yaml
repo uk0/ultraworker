@@ -1,0 +1,47 @@
+channel:
+  id: C06S5LBR3K3
+  name: deploy-stargate
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 137
+  total_threads: 134
+  active_users: 9
+  avg_messages_per_day: 3.4
+summary: |
+  2025년 3분기 deploy-stargate 채널은 9명이 참여하여 137개의 메시지와 134개의 스레드가 발생하였다. stargate의 onprem(dev) 배포가 매일 이루어졌으며, 7월 중순과 7월 말에 OCI live 배포가 진행되었다. 8월에는 일본(jp) OCI 라이브 배포와 함께 ASMR 파이프라인 이관 관련 테스트 배포가 있었다. OpenLLM에서 ASMR로 파이프라인을 이관하는 과정에서의 검증 배포가 특징적이었다.
+topics:
+  - name: "Stargate dev 배포"
+    mention_count: 90
+    description: "개발 환경(onprem)에 stargate 배포 - 거의 매일 수행"
+  - name: "Stargate live 배포 (OCI)"
+    mention_count: 15
+    description: "7월 및 8월에 OCI live 환경 배포"
+  - name: "ASMR 파이프라인 이관"
+    mention_count: 5
+    description: "OpenLLM에서 ASMR로 파이프라인 이관 과정 중 영향 확인 테스트 배포"
+key_discussions:
+  - thread_ts: '1752637800.000000'
+    date: '2025-07-16'
+    reply_count: 5
+    text_preview: "stargate live OCI 배포 (ab58eca)"
+  - thread_ts: '1754022000.000000'
+    date: '2025-08-01'
+    reply_count: 5
+    text_preview: "stargate dev와 live OCI 동시 배포 - jp OCI 라이브 배포 예정 안내"
+terminology:
+  - term: "ASMR"
+    definition: "사이오닉 AI의 AI 모델 서빙 인프라 또는 파이프라인 시스템"
+    aliases: []
+    context: "OpenLLM에서 ASMR로 파이프라인 이관 작업이 3분기에 진행됨"
+  - term: "Stargate"
+    definition: "사이오닉 AI의 검색 엔진 서비스"
+    aliases: ["SG"]
+    context: "dev(onprem)와 live(OCI) 환경에서 운영, 매일 배포"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

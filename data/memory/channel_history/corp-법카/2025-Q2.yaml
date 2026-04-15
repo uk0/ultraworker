@@ -1,0 +1,59 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 73
+  total_threads: 23
+  active_users: 2
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 2분기 corp-법카 채널은 73건의 메시지로 1분기 대비 사용량이 크게 증가했다.
+  홍성아가 "공용법카 사용내역이 업데이트가 안되고 있다"며 전체 채널에 사용 내역 등록을
+  독려하는 공지를 올렸다(4/21). 주요 사용 목적은 식사, 커피챗, 기타(커피 구매, 주차권,
+  약국, 티셔츠 220장 대량 구매 등)였다. U06CLS6E694가 세민과 함께 식사/야식을 가장
+  빈번하게 사용했으며, 오승희, 송명하, 양호진, 권혜선, 김혜원 등도 활발히 사용했다.
+  특이 사항으로 openrouter 50$ 크레딧 결제, 플라밍고 고객사 주차권, 주차 할인권
+  대량 구매 등 비식사 경비 사용이 눈에 띄었다. "지랩" 결제 건에 대해 홍성아가 확인을
+  요청하기도 했다.
+topics:
+  - 법인카드 사용 내역
+  - 법카 사용 내역 등록 독려 공지
+  - 식사 (점심/저녁/야식)
+  - 커피챗
+  - 기타 경비 (티셔츠, 주차권, openrouter 크레딧)
+  - 대량 구매 (티셔츠 220장)
+key_discussions:
+  - thread_ts: '1747394398.093419'
+    date: '2025-05-16'
+    reply_count: 14
+    text_preview: '티셔츠 220장 대량 구매 - 활발한 스레드 논의'
+  - thread_ts: '1746205112.663549'
+    date: '2025-05-02'
+    reply_count: 9
+    text_preview: '임예원 기타 사용 - 스레드 논의'
+  - thread_ts: '1745207892.052449'
+    date: '2025-04-21'
+    reply_count: 6
+    text_preview: '홍성아 공용법카 사용내역 등록 독려 공지'
+  - thread_ts: '1749710117.352599'
+    date: '2025-06-12'
+    reply_count: 5
+    text_preview: '정기연 기타 사용 - 스레드 논의'
+terminology:
+  - term: "openrouter"
+    definition: "AI 모델 API 통합 서비스. 법인카드로 크레딧을 구매하여 업무에 사용."
+    aliases: []
+    context: "50$ 크레딧 결제가 Q2, Q3에 걸쳐 반복 발생"
+  - term: "플라밍고"
+    definition: "사이오닉 AI의 고객사 중 하나."
+    aliases: []
+    context: "고객사 주차권 구매 시 언급"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

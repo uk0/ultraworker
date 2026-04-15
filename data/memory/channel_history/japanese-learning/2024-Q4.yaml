@@ -1,0 +1,40 @@
+channel:
+  id: C06GZ8S0KQW
+  name: japanese-learning
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 4
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024년 4분기에는 JLPT 시험 준비와 실제 응시가 이루어졌다. 박우명님과 정세민님이 함께 모의고사 문제를 출력하여
+  풀어보는 등 적극적으로 준비하였다. N3 모의고사 문제도 공유되었다. 12월 1일 JLPT 시험을 치렀으며,
+  박우명님은 어휘/문법/독해는 잘 진행되었으나 듣기(청해) 파트에서 어려움을 겪었다고 후기를 공유하였다.
+topics:
+  - JLPT 시험 준비 및 응시
+  - 모의고사 풀기
+  - 시험 후기 공유
+key_discussions:
+  - thread_ts: '1729218105.011379'
+    date: '2024-10-18'
+    topic: JLPT 시험 대비 학습 자료 공유 및 문제 출력
+  - thread_ts: '1731632146.877199'
+    date: '2024-11-15'
+    topic: N3 모의고사 문제 같이 풀기 제안
+  - thread_ts: '1733097918.123339'
+    date: '2024-12-02'
+    topic: JLPT 시험 후기 - 어휘/문법/독해 양호, 듣기 부진
+terminology:
+  - term: N3
+    definition: JLPT 3급, 일상적인 일본어를 어느 정도 이해할 수 있는 중급 수준
+  - term: 청해
+    definition: JLPT 듣기 시험 파트 (리스닝)
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

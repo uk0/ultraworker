@@ -171,6 +171,18 @@ After implementation:
 
 #### After Code Work Approval
 
+After approving code_work, you MUST save a WorkRecord to LTM capturing the implementation:
+
+```
+/remember work --request-ref "{req_id}" \
+  --purpose "Implementation of {task_title}" \
+  --action implementation --topics "{topic1},{topic2}" \
+  --files-modified "{modified_files}" \
+  --files-created "{created_files}"
+```
+
+Then output:
+
 ```
 ## Code Work Approved
 

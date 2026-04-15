@@ -1,0 +1,63 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 59
+  total_threads: 56
+  active_users: 5
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q1 구매요청 채널에서는 신규 입사자 업무 장비 구매, 구독 서비스 갱신 및 신규 구독이 주를 이루었다. 1password 비즈니스 플랜 업그레이드, LilysAI Pro, Super.so Pro, Mermaid Chart, Nitro PDF 등 SaaS 서비스 신규 구독이 이루어졌으며, 수거24 음식물 수거 미납금(912,450원) 처리와 긱사 전기/가스/수도 공과금 납부가 이루어졌다. 코틀린 아카데미 도서 3종, RAG 관련 도서 구매 등 기술 교육 투자도 계속되었다.
+topics:
+  - name: "SaaS 구독 서비스 신규 가입"
+    mention_count: 8
+    description: "LilysAI, Super.so, Mermaid Chart, Nitro PDF, 슬랙봇, Casdoor IdP 등"
+  - name: "1password 비즈니스 플랜 전환"
+    mention_count: 2
+    description: "기존 패밀리 플랜에서 비즈니스 플랜으로 연간 구독 업그레이드"
+  - name: "긱사 운영 비용"
+    mention_count: 5
+    description: "수거24 음식물 수거 미납금, 전기/가스/수도 공과금, 침구 세트 구매"
+  - name: "신규 입사자 장비"
+    mention_count: 3
+    description: "신규 입사자 표준 업무 장비 구매(노트북, 모니터 등)"
+  - name: "교육 도서 및 강의"
+    mention_count: 4
+    description: "코틀린 아카데미 도서, RAG 도서, RabbitMQ 강의, 로그 관리 강의"
+key_discussions:
+  - thread_ts: '1736310720.000000'
+    date: '2025-01-07'
+    reply_count: 3
+    text_preview: "LilysAI Pro 구독(월 63,900원) 요청"
+  - thread_ts: '1737119400.000000'
+    date: '2025-01-17'
+    reply_count: 3
+    text_preview: "수거24 음식물 수거 미납금 912,450원(9월~12월) 처리 요청"
+  - thread_ts: '1740474000.000000'
+    date: '2025-02-20'
+    reply_count: 2
+    text_preview: "1password 비즈니스 플랜 연간 구독 업그레이드($95.88+tax/seat)"
+  - thread_ts: '1741940400.000000'
+    date: '2025-03-13'
+    reply_count: 0
+    text_preview: "외부 시연 및 IBK 출장용 유선 테더링 모뎀 구매 요청"
+terminology:
+  - term: "LilysAI"
+    definition: "AI 기반 영상/콘텐츠 요약 서비스, 월 63,900원 Pro 구독"
+  - term: "Super.so"
+    definition: "노션 기반 블로그/웹사이트 호스팅 서비스, 사이오닉AI 블로그 개편용"
+  - term: "Casdoor"
+    definition: "오픈소스 기반 IdP(Identity Provider) SaaS, 사내 인증 시스템 PoC용"
+  - term: "수거24"
+    definition: "음식물 쓰레기 수거 정기 서비스"
+  - term: "긱사"
+    definition: "사이오닉AI 직원 기숙사 시설"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

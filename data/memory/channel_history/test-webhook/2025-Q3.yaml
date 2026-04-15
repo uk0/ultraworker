@@ -1,0 +1,51 @@
+channel:
+  id: C08S9EL0REX
+  name: test-webhook
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 501
+  total_threads: 2
+  active_users: 5
+  avg_messages_per_day: 15.2
+summary: |
+  2025년 3분기 test-webhook 채널은 5명이 참여하여 501개의 메시지와 2개의 스레드가 발생하였다. 주요 활동은 dragoon-server 빌드 알림 테스트, corsair-qdrant 동기화 알림, test-opensearch 및 test-opensearch-dashboards ArgoCD 동기화 테스트였다. OpenSearch 동기화 실패(Operation terminated) 이슈가 발생하여 반복 재시도 후 해결되었다. 스레드 수가 2개로 매우 적은 것은 대부분의 메시지가 자동화 봇 알림이었기 때문이다.
+topics:
+  - name: "dragoon-server 빌드 알림"
+    mention_count: 50
+    description: "dragoon-server dev/develop 브랜치 빌드 성공/실패 알림"
+  - name: "test-opensearch 동기화"
+    mention_count: 100
+    description: "test-opensearch 및 test-opensearch-dashboards, data-prepper의 ArgoCD 동기화 테스트"
+  - name: "corsair-qdrant 동기화"
+    mention_count: 30
+    description: "corsair-qdrant-dev 환경 ArgoCD 동기화 알림"
+key_discussions:
+  - thread_ts: '1751537700.000000'
+    date: '2025-07-03'
+    reply_count: 0
+    text_preview: "dragoon-server dev/develop 브랜치 빌드 실패 후 재시도 성공"
+  - thread_ts: '1752032820.000000'
+    date: '2025-07-08'
+    reply_count: 0
+    text_preview: "test-opensearch 동기화 실패 - Operation terminated (retried 4 times), 재시도 후 성공"
+terminology:
+  - term: "dragoon-server"
+    definition: "사이오닉 AI의 드라군 파서 서버 컴포넌트"
+    aliases: []
+    context: "dev-dragoon-server ArgoCD 앱으로 배포 관리"
+  - term: "corsair-qdrant"
+    definition: "Corsair 서비스의 Qdrant 벡터 데이터베이스 컴포넌트"
+    aliases: []
+    context: "dev 환경에서 ArgoCD 동기화 테스트"
+  - term: "OpenSearch"
+    definition: "오픈소스 검색 및 분석 엔진 (Elasticsearch 포크)"
+    aliases: []
+    context: "test 환경에서 ArgoCD 동기화 테스트 진행"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

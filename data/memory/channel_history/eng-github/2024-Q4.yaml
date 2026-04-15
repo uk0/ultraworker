@@ -1,0 +1,49 @@
+channel:
+  id: C06AR8W6H8E
+  name: eng-github
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1789
+  total_threads: 592
+  active_users: 10
+  avg_messages_per_day: 23.2
+summary: |
+  2024년 4분기 eng-github 채널은 안정적인 개발 활동을 유지하였다.
+  총 1789개 메시지, 10명 참여, 592개 스레드가 발생하였다.
+  일 평균 23.2개 메시지로 3분기 대비 개발 활동이 다소 감소하였으나 꾸준한 수준을 유지하였다.
+  GitHub 앱의 사용자명 표시 방식에 대한 질문이 있었으며 (일부는 본명, 일부는 GitHub ID로 표시),
+  신규 팀원(이강욱)이 채널에 합류하였다.
+  연말 시기임에도 불구하고 592개의 스레드가 생성되어 지속적인 코드 리뷰 활동이 이루어졌다.
+topics:
+  - name: "PR/코드 리뷰 활동"
+    message_count: 1400
+    description: "지속적인 PR 생성, 리뷰, 머지 활동 (592개 스레드)"
+  - name: "GitHub 앱 설정 논의"
+    message_count: 10
+    description: "GitHub 앱의 사용자명 표시 방식에 대한 논의"
+  - name: "커밋/릴리스 알림"
+    message_count: 379
+    description: "각종 리포지토리의 커밋 및 릴리스 알림"
+key_discussions:
+  - date: '2024-12-27'
+    summary: "GitHub 앱 사용자명 표시 방식 질문 - 일부는 본명, 일부는 GitHub ID로 표시되는 이유에 대한 논의 (최병현)"
+    participants: ["최병현 (Hyune-c)"]
+  - date: '2024-12-23'
+    summary: "신규 팀원 이강욱 채널 합류"
+    participants: ["이강욱"]
+  - date: '2024-12-26'
+    summary: "4개 reply를 가진 PR 리뷰 스레드"
+    participants: ["GitHub Bot"]
+terminology:
+  - term: "GitHub 앱"
+    definition: "Slack과 GitHub를 연동하여 알림을 전달하는 통합 애플리케이션"
+    aliases: ["GitHub Bot", "GitHub Integration"]
+    context: "사용자 표시명이 GitHub 프로필 설정에 따라 본명 또는 GitHub ID로 표시됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

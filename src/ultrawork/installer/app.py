@@ -1091,6 +1091,7 @@ class Step7Finish(Screen):
                     update_status(f"📦 Installing {defn.get('name', mcp_id)}...")
                     ok, err = run_with_progress(
                         shlex.split(install_cmd),
+                        cwd=project_dir,
                         heartbeat_label=f"Installing {defn.get('name', mcp_id)}...",
                     )
                     if ok:

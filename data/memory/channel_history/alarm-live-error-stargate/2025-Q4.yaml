@@ -1,0 +1,38 @@
+channel:
+  id: C05FKUZGB2A
+  name: alarm-live-error-stargate
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1057
+  total_threads: 89
+  active_users: 6
+  avg_messages_per_day: 15.1
+summary: |
+  Stargate API 운영 에러 알림 채널. 1057개 메시지, 89개 스레드로 에러 빈도가 증가한 분기.
+  ERROR_WHILE_PROCESSING_CARRIER_RESPONSE(56건)가 주요 에러로, 빈 메시지 content 관련 에러
+  ("all messages must have non-empty content")가 반복적으로 발생했다.
+  INTERNAL_SERVER_ERROR(24건), POST_PROCESS(7건), FROM_PYLON(6건), SEND_TO_PYLON(5건) 순이었다.
+  live 환경(98%) 에러가 대부분이었고, /callback/documents, /callback/agents, /buckets 등 다양한 경로에서 에러 발생.
+  12월에 NewRelic Critical 알림이 집중 발생했으며, 에러 패턴이 다양화되는 추세를 보였다.
+topics:
+  - Carrier 응답 에러 - 빈 메시지 content 문제
+  - 다양한 API 경로에서 에러 분산 발생
+  - NewRelic Critical 알림 (12월 집중)
+  - INTERNAL_SERVER_ERROR 지속
+  - 에러 패턴 다양화 추세
+key_discussions: []
+terminology:
+  - term: "non-empty content"
+    definition: "LLM API 호출 시 메시지 content가 비어있으면 안 되는 제약, 빈 메시지 전송 시 에러"
+  - term: "/callback/agents"
+    definition: "에이전트 관련 콜백 경로, 에이전트 설정/처리 중 에러 발생"
+  - term: "/buckets"
+    definition: "문서 버킷(저장소) 관련 경로, 버킷 생성/조회 중 에러 발생"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

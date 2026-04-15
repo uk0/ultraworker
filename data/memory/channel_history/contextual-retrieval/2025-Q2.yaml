@@ -1,0 +1,44 @@
+channel:
+  id: C08SCPZC2JG
+  name: contextual-retrieval
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 26
+  total_threads: 12
+  active_users: 6
+  avg_messages_per_day: 2.6
+summary: |
+  Contextual Retrieval 기술 실험 및 개발 채널. Anthropic의 Contextual Retrieval 방법론을 Storm 검색 엔진에 적용하는 프로젝트를 진행함.
+  김혜원이 PM 역할로 평가 결과 분석을 주도, 정세민(Sem)이 청크 분석 및 평가 테스트, 강성우(Claude kang)가 Pylon 브랜치 구현 및 배포 담당.
+  주요 성과: 100개 문항 테스트에서 Storm(A) 36점 vs Contextual Retrieval(B) 50점으로 Contextual 적용 후 22개 문항 추가 정답, 8개 오답 발생. 다만 API 비용 15만원(5억 토큰) 소진 이슈 발생.
+  청크 머징 이슈 발견 (원본 대비 Contextual 청크 글자수 3.2배로 비정상, 정상은 1.5배). Late Chunking 관련 논문도 공유됨.
+topics:
+  - Contextual Retrieval
+  - Storm 검색 엔진
+  - 청크 머징
+  - RAG 최적화
+  - Pylon
+key_discussions:
+  - title: Contextual Retrieval 100문항 평가 결과
+    summary: Storm 36점 vs Contextual 50점, 22개 추가 정답/8개 추가 오답. API 비용 15만원(5억 토큰) 소진
+  - title: 청크 머징 이슈 발견
+    summary: Contextual 청크에 Original 청크가 2~3번 중복 포함되어 글자수 3.2배 비정상 증가
+  - title: Pylon 브랜치 작업
+    summary: 강성우가 Pylon 브랜치 분리 후 Contextual Retrieval 구현 및 부하테스트 계획
+terminology:
+  - term: Contextual Retrieval
+    definition: Anthropic이 제안한 검색 품질 향상 방법론으로, 청크에 문맥 정보를 추가하여 검색 정확도를 높이는 기술
+  - term: Pylon
+    definition: Sionic AI의 검색/인덱싱 엔진 컴포넌트
+  - term: 청크 머징
+    definition: 검색용 텍스트 청크를 합치는 과정
+  - term: Late Chunking
+    definition: Contextual Retrieval 대안으로 제안된 방법론 (약간의 훈련만으로 더 나은 성능 주장)
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

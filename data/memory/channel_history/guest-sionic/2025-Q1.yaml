@@ -1,0 +1,30 @@
+channel:
+  id: C058FGC6DK2
+  name: guest-sionic
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 9
+  active_users: 5
+  avg_messages_per_day: 1.6
+summary: |
+  2025-Q1 guest-sionic 채널 데이터 수집 완료. 11개 메시지, 5명 참여, 9개 스레드.
+  최다솔님의 미국 방문기(우당탕당 미국일기) 공유. 박나희님 졸업 축하. 노진우님의 카라멜 세차 서비스 프로모션 공유(왁스 코팅 2만원 쿠폰). 게스트 간 가벼운 교류 지속.
+topics:
+  - "최다솔 미국 방문기"
+  - "박나희 졸업"
+  - "카라멜 세차 서비스 프로모션"
+key_discussions:
+  - title: "카라멜 세차 서비스 프로모션"
+    summary: "노진우님의 출장세차 스타트업 카라멜에서 봄맞이 프로모션. 왁스 코팅 2만원 쿠폰 제공"
+terminology:
+  - term: "카라멜"
+    definition: "노진우님이 만든 출장세차 SaaS 서비스 (caramel.thetrive.com)"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

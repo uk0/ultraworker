@@ -1,0 +1,58 @@
+channel:
+  id: C0620SP7YJW
+  name: random-운동
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 20
+  total_threads: 14
+  active_users: 8
+  avg_messages_per_day: 1.3
+summary: |
+  2025년 1분기에는 수영이 채널의 핵심 주제였다. Noah가 전국 수영장 지도(jasumap.netlify.app)를
+  공유하고 평택 시립수영장 원정, 수원 월드컵 수영장 설날 핀수영 일정 등을 알렸다.
+  김덕현이 수영을 새로 등록하여 본격적으로 시작했고(11개 답글), 김혜원은 수영 레일 승급과
+  수영 스타트 기술을 배웠다. Sigrid Jin의 메시지에 19개 답글이 달리며 활발한 교류가 있었다.
+  한시형은 미타(사무실) 올 때마다 어시스티드 풀업을 하기로 선언했고,
+  dasolchoi가 헬스를 재시작하며 올해 목표 -6kg을 설정했다(6개 답글).
+  김혜원은 매일 밤 하는 플랭크 루틴 유튜브 영상을 공유하고, 운동 후 기분이 좋아진다는 소감을 남겼다(13개 답글).
+  신희수와 권혜선(Jada)이 새로 채널에 합류했으며, 권혜선은 수영 초보('수린이')로 참여를 시작했다.
+  Noah가 서울시 자전거 대회 등록 링크를 공유하여 63개 답글의 역대 최대 스레드가 생성되었다.
+topics:
+  - 수영 (수영장 지도, 레일 승급, 스타트 기술, 핀수영)
+  - 헬스 (풀업, 플랭크 루틴, 체중 감량 목표)
+  - 자전거 대회 (서울시 자전거 대회 참가 모집)
+  - 운동 습관 (매일 운동, 기분 개선 효과)
+key_discussions:
+  - thread_ts: '1736152057.622469'
+    date: '2025-01-06'
+    title: '서울시 자전거 대회 참가 모집'
+    summary: 'Noah가 서울시 자전거 대회 등록 링크를 공유. 63개 답글로 역대 최대 호응.'
+  - thread_ts: '1738561946.817299'
+    date: '2025-02-03'
+    title: '김덕현 수영 등록'
+    summary: '김덕현이 수영을 새로 등록하여 시작. 11개 답글로 환영과 팁 교류.'
+  - thread_ts: '1738845784.323769'
+    date: '2025-02-06'
+    title: 'Sigrid Jin 운동 이야기'
+    summary: 'Sigrid Jin의 운동 관련 대화에 19개 답글. 활발한 교류.'
+  - thread_ts: '1740659295.034609'
+    date: '2025-02-27'
+    title: '운동 후 기분 개선 효과'
+    summary: '김혜원이 운동 후 기분이 좋아진다는 소감 공유. 13개 답글.'
+terminology:
+  - term: '수린이'
+    definition: '수영 초보자를 뜻하는 신조어. 수영 + 어린이.'
+  - term: '핀수영'
+    definition: '오리발(핀)을 착용하고 하는 수영.'
+  - term: '미타'
+    definition: '사이오닉 사무실/오피스를 지칭하는 표현.'
+  - term: '어시스티드 풀업'
+    definition: '보조 밴드를 이용한 턱걸이 운동.'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

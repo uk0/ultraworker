@@ -1,0 +1,55 @@
+channel:
+  id: C05801FL29F
+  name: corp-etc
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 5
+  active_users: 4
+  avg_messages_per_day: 1.1
+summary: |
+  2025년 1분기 corp-etc 채널에서 다양한 회사 운영 관련 논의가 있었다. 김덕현이
+  Microsoft for Startups Founders Hub 현황을 공유하며 "크레딧 부자가 되었다"고
+  발표했다(1/2). 오라클 관련 PR 기사 초안이 전달되었고(1/14), 러너스 채용 페이지가
+  내려간 것도 언급되었다. 김혜원이 "고객의 대외비 정보에 대한 커뮤니케이션 방법"
+  논의를 시작하여 13개 답글이 달렸다(2/11). 조하담이 sionic.ai/ko/answer 링크가
+  노션에서 멘션 시 다른 사람 이름이 붙는 이슈를 발견하여 보고했다(2/18). 김덕현이
+  OpenAI API Key를 정리하며, 기본 프로젝트에 존재하는 키들을 용도별 프로젝트로
+  분리하고 마지막 사용일자가 24년도인 키들을 삭제하는 작업을 공유했다(3/22).
+topics:
+  - MS Founders Hub 크레딧 현황
+  - 오라클 PR 기사
+  - 고객 대외비 커뮤니케이션
+  - sionic.ai 웹사이트 링크 이슈
+  - OpenAI API Key 정리
+  - 러너스 채용 페이지
+key_discussions:
+  - thread_ts: '1739261971.778769'
+    date: '2025-02-11'
+    reply_count: 13
+    text_preview: '고객 대외비 정보 커뮤니케이션 방법 논의'
+  - thread_ts: '1739851710.834449'
+    date: '2025-02-18'
+    reply_count: 13
+    text_preview: 'sionic.ai 링크 노션 멘션 시 이름 표시 이슈'
+  - thread_ts: '1735826666.418629'
+    date: '2025-01-02'
+    reply_count: 4
+    text_preview: 'MS Founders Hub 현황 공유'
+  - thread_ts: '1742630016.093799'
+    date: '2025-03-22'
+    reply_count: 2
+    text_preview: 'OpenAI API Key 정리 - 24년도 미사용 키 삭제'
+terminology:
+  - term: "MS Founders Hub"
+    definition: "Microsoft for Startups Founders Hub. 스타트업에 Azure 크레딧 등을 지원하는 프로그램."
+    aliases: ["Microsoft for Startups", "Founders Hub"]
+    context: "사이오닉 AI가 크레딧을 확보하여 활용 중"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

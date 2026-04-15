@@ -1,0 +1,38 @@
+channel:
+  id: C07KHG3C8N6
+  name: sig-육아
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 32
+  total_threads: 10
+  active_users: 7
+  avg_messages_per_day: 2.0
+summary: |
+  신희수의 아기 해솔이의 급성장이 기록된 분기. 뒤집기 성공, 생애 첫 자두 시식, 100일 사진 촬영, 치발기 사용, 앞으로 가기, 이 나기 시작(아랫니 2개), 다리 떼기 등 주요 성장 이정표가 공유되었다. 조하담(Joy), 박우명, song 등 새 멤버들이 합류하며 "핫한 채널"이라는 평가를 받았다. Sigrid Jin은 "raise a baby"를 프로그래밍 용어로 비유하는 유머를 남겼다.
+topics:
+  - 아기 성장 (뒤집기, 이 나기, 다리 떼기)
+  - 100일 기념 사진
+  - 이유식/음식 (첫 자두 시식)
+  - 치발기
+key_discussions:
+  - thread_ts: '1731645507.096649'
+    date: '2024-11-15'
+    topic: 이 나기 시작
+    reply_count: 4
+  - thread_ts: '1730719255.235839'
+    date: '2024-11-04'
+    topic: 아기 사진 공유
+    reply_count: 4
+  - thread_ts: '1730956610.769679'
+    date: '2024-11-07'
+    topic: 다리 떼기 시작
+    reply_count: 3
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

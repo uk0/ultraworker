@@ -1,0 +1,39 @@
+channel:
+  id: C071JQM69PT
+  name: corp-hiring-mlbe
+  type: private
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:12'
+statistics:
+  total_messages: 7
+  total_threads: 4
+  active_users: 2
+  avg_messages_per_day: 0.2
+key_discussions:
+- thread_ts: '1767923861.105109'
+  date: '2026-01-09'
+  reply_count: 14
+  text_preview: '<@U07RASZTPFA> <@U057PR1ADCL>
+
+    <https://app.greetinghr.com/workspace/16371/opening/174048/kanban|ML B'
+- thread_ts: '1769135193.942469'
+  date: '2026-01-23'
+  reply_count: 8
+  text_preview: 김관희님 &gt;&gt;
+- thread_ts: '1768377161.799759'
+  date: '2026-01-14'
+  reply_count: 7
+  text_preview: '*강지훈님 메이트 매칭 >>>*
+
+    <@U08DJL0LXL0> cc. <@U095L163Q5Q><@U05T2RW7PE2>'
+- thread_ts: '1770090508.821969'
+  date: '2026-02-03'
+  reply_count: 2
+  text_preview: '*<https://app.greetinghr.com/workspace/16371/opening/174051/kanban?applicant=6728794|김관희
+    지원자>* 다음 스테'
+metadata:
+  created_at: '2026-02-13T16:29:12'
+  synced_by: sync_fast.py

@@ -1,0 +1,57 @@
+channel:
+  id: C090FGSSRFT
+  name: alarm-dev-info
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 80
+  total_threads: 12
+  active_users: 17
+  avg_messages_per_day: 3.1
+summary: |
+  2025-Q2는 alarm-dev-info 채널이 기존 status-k8s 채널에서 이전된 STORM 최소 시나리오 자동 테스트 알림을 처음으로 수신하기 시작한 분기다. 6월 5일 채널 창설 및 17명 입장과 함께 notification-bot이 연동되었으며, 초기에는 26개 테스트 전체 통과(100%)를 기록했다. 6월 9일에는 QA 환경이 추가되어 스케줄 테스트 범위가 확장되었고, 6월 14일에는 dev 환경 실패(92.31%, 2개 실패) 및 DEV 리랭커 중단 이슈가 발생하여 재시작 조치가 이루어졌다. 6월 10일부터는 live 환경 테스트도 별도 스케줄로 추가되었다.
+topics:
+  - name: "채널 개설 및 notification-bot 연동"
+    mention_count: 5
+    description: "info-k8s/noti-k8s에서 alarm-dev-info로 채널명 최종 결정, notification-bot 연동, 17명 참여"
+  - name: "STORM 최소 시나리오 자동 테스트"
+    mention_count: 50
+    description: "Apidog notification-bot이 dev 환경에서 매일 STORM InternalAPI 최소 시나리오를 자동 실행. 초기 26개 테스트 100% 통과"
+  - name: "QA 환경 테스트 추가"
+    mention_count: 8
+    description: "6월 9일 이재준님이 QA존 생성 후 테스트 결과 공유, apidog 환경에 qa 추가 및 매일 오전 10시 스케줄 설정"
+  - name: "live 환경 테스트 추가"
+    mention_count: 5
+    description: "6월 10일부터 live 환경 13개 테스트 시나리오 별도 스케줄 추가(매일 오전 1시)"
+  - name: "DEV 리랭커 장애 대응"
+    mention_count: 3
+    description: "6월 14일 DEV 환경 테스트 실패(92.31%) - DEV 리랭커 중단이 원인, 재시작 조치 및 자동 재시작 설정 예정"
+key_discussions:
+  - thread_ts: '1749093725.000000'
+    date: '2025-06-05'
+    reply_count: 27
+    text_preview: "noti-k8s-e2e 또는 noti-k8s-test 요런 이름으로 바꾸는 것은 어떨까요?"
+  - thread_ts: '1749430364.000000'
+    date: '2025-06-09'
+    reply_count: 15
+    text_preview: "QA존 생성후 테스트해본 결과입니다 - apidoc 환경에 qa 환경을 추가했습니다"
+  - thread_ts: '1749869040.000000'
+    date: '2025-06-14'
+    reply_count: 16
+    text_preview: "원인: 파일런 테스트 중 DEV 리랭커 중단 / 1차 대응: DEV 리랭커 재시작"
+terminology:
+  - term: "alarm-dev-info"
+    definition: "개발 환경 info 레벨 알림 채널. 기존 status-k8s에서 화들짝 놀라는 분들을 위해 별도 분리된 채널"
+    aliases: ["noti-k8s", "info-k8s"]
+    context: "STORM 최소 시나리오 테스트 결과 알림 수신 채널"
+  - term: "DEV 리랭커"
+    definition: "STORM 개발 환경의 리랭킹 서비스. 중단 시 파일런 테스트 실패 원인이 됨"
+    aliases: []
+    context: "6월 14일 DEV 테스트 실패 원인으로 지목됨"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

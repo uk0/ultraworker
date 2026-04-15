@@ -1,0 +1,40 @@
+channel:
+  id: C06RXLRRAAF
+  name: corp-playshop
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 4
+  active_users: 5
+  avg_messages_per_day: 2.2
+summary: |
+  2024년 2분기에 corp-playshop 채널이 개설되어 제1회 Sionic AI 플레이샵이 기획되고 실행되었다. 5월 10일(금) 일정으로 공유주방 키친99도(38평)에서 팀 요리 행사가 진행되었으며, 재료 빼앗기 레크레이션과 함께 약 12~13명이 3인 1팀으로 참여하였다. 행사 후 상품권 결제 등 행정 처리가 이루어졌다.
+topics:
+  - name: "제1회 플레이샵 기획 및 진행"
+    mention_count: 8
+    description: "공유주방 키친99도(38평) 예약, 팀 요리 레크레이션, 5/10 날짜 확정 및 진행"
+  - name: "장소 물색"
+    mention_count: 3
+    description: "spacecloud에서 공유주방 후보 탐색, 38평·파티룸 인접 조건 고려"
+key_discussions:
+  - thread_ts: '1712208000.000000'
+    date: '2024-04-04'
+    reply_count: 41
+    text_preview: "공유주방 키친99도 38평 장소 확정 논의 — 5시간 13만원, 파티룸 이동 편의성 장점"
+  - thread_ts: '1714032000.000000'
+    date: '2024-04-25'
+    reply_count: 77
+    text_preview: "5/10 플레이샵 준비 최종 점검 및 준비물 논의"
+terminology:
+  - term: "플레이샵"
+    definition: "Sionic AI 회사 문화 활동 — 팀 빌딩을 위한 요리·레크레이션 이벤트로, 매 분기 또는 반기별 진행 예정"
+  - term: "spacecloud"
+    definition: "공간 대여 플랫폼 — 공유주방, 파티룸 등 다양한 공간을 시간 단위로 예약 가능"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

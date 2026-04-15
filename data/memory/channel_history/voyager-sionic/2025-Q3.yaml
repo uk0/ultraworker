@@ -1,0 +1,36 @@
+channel:
+  id: C094R70LR1D
+  name: voyager-sionic
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 0
+  active_users: 6
+  avg_messages_per_day: 4.0
+summary: |
+  2025년 3분기에 voyager-sionic 채널이 개설되어 6명의 멤버가 참여하였다. 외부 파트너(대표) 측과 Sionic AI 팀 간의 소통 채널로서 업데이트 공유, IR 자료 요청, 밸류애드 협력(고객사·인력 소개, 아이디어 공유) 등을 목적으로 운영되었다.
+topics:
+  - name: "채널 개설 및 협력 목적 안내"
+    mention_count: 4
+    description: "효율적인 소통 및 밸류애드(고객사 소개, 인력 소개, 새로운 아이디어 공유) 목적의 채널 소개"
+  - name: "IR 자료 요청"
+    mention_count: 2
+    description: "Sionic AI 방문 후 IR 자료 공유 요청"
+key_discussions:
+  - thread_ts: '1752112800.000000'
+    date: '2025-07-10'
+    reply_count: 0
+    text_preview: "Sionic AI 방문 감사 인사 및 채널 목적(효율적 소통, 밸류애드) 안내, 요청사항 공유 독려"
+terminology:
+  - term: "Voyager"
+    definition: "Sionic AI 외부 파트너 협업 채널 — 고객사 소개·인력 소개·아이디어 공유 등 밸류애드 목적으로 운영"
+  - term: "밸류애드"
+    definition: "고객사 소개, 인력 소개, 새로운 아이디어 공유 등 파트너십을 통해 부가 가치를 창출하는 활동"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

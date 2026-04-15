@@ -1,0 +1,68 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 55
+  total_threads: 27
+  active_users: 16
+  avg_messages_per_day: 2.0
+summary: |
+  2024-Q1은 product-release 채널이 신설(1월 12일)되어 본격적으로 릴리즈 노트를 공유하기 시작한 시기이다.
+  Stargate(Storm Answer 콘솔)는 v0.4.5에서 v0.8.3까지 빠르게 진화하며, 에이전트 Advice/Feedback, Chat 스트리밍,
+  HWP 파일 지원, Datadog RUM 연결, 매경 Write 데모 페이지, SSE 정상화 등 핵심 기능을 잇달아 출시했다.
+  Pylon(RAG 엔진)은 v0.6.0~v0.8.1로 업그레이드되며 문서 학습 속도 2배 개선, 메모리 최적화, Claude LLM 지원,
+  Cohere v5 마이그레이션, Storm Analyze 5개 API, Storm Write API 등을 추가했다.
+  Probe Service(이미지 생성)는 뤼튼 V2 남성/여성/Pet Studio 모델을 도입하고 ComfyUI 기반 인퍼런스를 적용했다.
+  인프라 측면에서는 GKE에서 EKS/ECS로의 이관 준비, 임베딩 서버 Runpod 이전, CI 파이프라인 속도 개선이 이루어졌다.
+  주 2회(화/목) 정기 배포 체계가 운영되었고, 16명의 참여자가 활발히 릴리즈 현황을 공유했다.
+topics:
+  - Stargate API/WEB 릴리즈 (v0.4.5~v0.8.3)
+  - Pylon RAG 엔진 업그레이드 (v0.6.0~v0.8.1)
+  - Probe Service 이미지 생성 (뤼튼 V2)
+  - Storm Analyze/Write API 개발
+  - 문서 학습 속도 및 메모리 최적화
+  - HWP/HWPX 한글 파일 지원
+  - Chat 스트리밍 기능
+  - EKS/ECS 인프라 이관
+  - Datadog 모니터링 도입
+key_discussions:
+  - thread_ts: '1711599716.934259'
+    date: '2024-03-28'
+    topic: Stargate 0.8.3 배포 스케줄 (목요일 정기 배포)
+  - thread_ts: '1710149030.424319'
+    date: '2024-03-11'
+    topic: Pylon 0.7.0 릴리즈 - 문서 학습 속도 2배 개선, Answer 스트리밍, 일본어 지원
+  - thread_ts: '1705391576.275799'
+    date: '2024-01-16'
+    topic: Probe Service 0.1.1 - 뤼튼 V2 여성/남성 인퍼런스 고객경험 개선
+  - thread_ts: '1709053913.216509'
+    date: '2024-02-27'
+    topic: Stargate 0.6.0 - SSE 정상화, 답변 스트리밍, AWS 전환
+terminology:
+  - term: "Stargate"
+    definition: "Sionic AI의 RAG 기반 AI 답변 서비스 콘솔 (API + WEB)"
+    aliases: ["스게", "Storm Answer"]
+  - term: "Pylon"
+    definition: "Sionic AI의 RAG 엔진 백엔드 서비스 (문서 학습, 답변 생성)"
+    aliases: []
+  - term: "Probe Service"
+    definition: "Sionic AI의 이미지 생성 서비스 (뤼튼 고객사 대상)"
+    aliases: ["gen-img"]
+  - term: "Storm Analyze"
+    definition: "문서 요약, 키워드 추출, 카테고리 분류 등의 분석 API"
+    aliases: []
+  - term: "USIO"
+    definition: "파일 전처리(파싱) 서버"
+    aliases: []
+  - term: "Advice"
+    definition: "에이전트에 추가하는 피드백/지식 데이터"
+    aliases: ["Feedback"]
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

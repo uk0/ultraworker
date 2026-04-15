@@ -1,0 +1,65 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 50
+  total_threads: 45
+  active_users: 14
+  avg_messages_per_day: 1.4
+summary: |
+  2025년 4분기 product-storm-parse 채널에서는 14명이 참여하여 문서 파싱 품질 개선 및 안정화 작업이 주로 논의되었다. 엑셀 파싱 가능 형태 문의, 학습 실패 이슈(20~30분 대기 문제), PDF 변환 결과 뷰어 이미지 미출력, storm-parse-router에서 Vertex AI 직접 호출 vs ASMR 경유 방안, 다국어 응답 언어 혼입 이슈, OOM 방지 작업 등이 주요 논의 주제였다. 스톰파스 마크다운 엔드포인트 장애 및 지원 확장자 정리도 이루어졌다.
+topics:
+  - name: "학습 실패 및 파싱 지연 이슈"
+    mention_count: 15
+    description: "문서 업로드 후 20~30분 이상 파싱 대기 또는 학습 실패 발생"
+  - name: "ASMR 통합 논의"
+    mention_count: 10
+    description: "storm-parse-router에서 Vertex AI 직접 호출을 ASMR로 이관하는 방안 검토"
+  - name: "엑셀 파싱 개선"
+    mention_count: 8
+    description: "엑셀 파일 처리 방식, 손상된 엑셀 처리, 마크다운 변환 개선"
+  - name: "스톰파스 API 상품화"
+    mention_count: 5
+    description: "스톰파스 데모 페이지 모니터링, Parse 데이터 정책, 지원 확장자 정리"
+  - name: "OOM 방지"
+    mention_count: 5
+    description: "dev 환경에서 OOM 방지를 위한 메모리 최적화 테스트"
+key_discussions:
+  - thread_ts: '1761436200.000000'
+    date: '2025-10-17'
+    reply_count: 37
+    text_preview: "STORM에서 PDF 문서 변환된 결과가 특이함 - 확인 요청"
+  - thread_ts: '1761698880.000000'
+    date: '2025-10-23'
+    reply_count: 72
+    text_preview: "지식에 문서를 올리고 20분 지났는데 아직 파싱 중인 이슈"
+  - thread_ts: '1762303920.000000'
+    date: '2025-11-05'
+    reply_count: 71
+    text_preview: "storm-parse-router에서 vertex 직접 호출 vs ASMR 통한 호출 의견 논의"
+  - thread_ts: '1764389376.000000'
+    date: '2025-11-28'
+    reply_count: 30
+    text_preview: "스톰파스 마크다운 엔드포인트 장애 확인"
+terminology:
+  - term: "StormParse"
+    definition: "사이오닉 AI의 문서 파싱 엔진으로 PDF, Excel, Word 등 다양한 문서를 마크다운으로 변환"
+    aliases: ["스톰파스", "storm-parse"]
+    context: "Gemini 또는 내부 VLM 모델을 사용하여 문서 내용 추출"
+  - term: "Dragoon"
+    definition: "사이오닉 AI의 문서 파싱 전처리 컴포넌트 (Document Processing)"
+    aliases: ["드라군", "DP"]
+    context: "PDF를 마크다운으로 변환하는 파서 컴포넌트"
+  - term: "ASMR"
+    definition: "사이오닉 AI의 AI 모델 서빙 인프라로 API 키 통합관리 및 사용 로그 적재 기능 제공"
+    aliases: []
+    context: "storm-parse-router의 Vertex AI 호출을 ASMR로 이관하는 방안 논의"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

@@ -1,0 +1,47 @@
+channel:
+  id: C090FGSSRFT
+  name: alarm-dev-info
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 153
+  total_threads: 4
+  active_users: 3
+  avg_messages_per_day: 1.8
+summary: |
+  2025-Q4에는 Apidog의 notification-bot이 STORM InternalAPI 최소 시나리오 스케줄 테스트 결과를 dev/qa 환경 대상으로 매일 자동 알림하는 패턴이 지속되었다. 분기 초반에는 18개 테스트 중 17개 통과(통과율 94.44%)로 1개 실패가 반복되다가, 10월 20일 수동 재실행 이후 18/18 전체 통과(100%)로 개선되었다. 이후 분기 전체 동안 100% 통과율이 유지되었으며, qa 환경은 격주 토요일에 별도 스케줄 테스트가 추가 실행되었다.
+topics:
+  - name: "STORM 최소 시나리오 자동 테스트"
+    mention_count: 145
+    description: "Apidog notification-bot이 dev/qa 환경에서 매일 오전 1시(한국시간) STORM InternalAPI 최소 시나리오 18개를 자동 실행하여 결과를 알림"
+  - name: "테스트 실패 대응"
+    mention_count: 4
+    description: "10월 초~중순 1개 테스트 지속 실패 상태, 10월 20일 신희수 담당자가 수동 재실행 후 전체 통과로 복구"
+  - name: "qa 환경 스케줄 테스트"
+    mention_count: 4
+    description: "격주 토요일(10/5, 10/12, 10/19 등) 오전 3시에 qa 환경 별도 스케줄 테스트 실행"
+key_discussions:
+  - thread_ts: '1760003100.000000'
+    date: '2025-10-20'
+    reply_count: 0
+    text_preview: "Tester: 신희수 - Total: 18, Passed: 18, Failed: 0, Passing Rate: 100.00%"
+terminology:
+  - term: "STORM 최소 시나리오"
+    definition: "STORM InternalAPI의 핵심 기능 18개를 검증하는 최소 테스트 시나리오. Apidog에서 매일 자동 실행됨"
+    aliases: ["Storm 최소 시나리오"]
+    context: "alarm-dev-info 채널의 주요 알림 내용"
+  - term: "Apidog"
+    definition: "API 테스트 및 문서화 도구. notification-bot을 통해 스케줄 테스트 결과를 Slack에 자동 전송"
+    aliases: ["apidog"]
+    context: "STORM API 자동화 테스트 및 결과 알림에 사용"
+  - term: "apidog_general_runner"
+    definition: "Apidog에서 사용하는 테스트 실행 러너 이름"
+    aliases: []
+    context: "STORM 최소 시나리오 테스트 실행 환경"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

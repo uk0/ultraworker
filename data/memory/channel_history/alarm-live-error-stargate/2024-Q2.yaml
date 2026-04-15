@@ -1,0 +1,37 @@
+channel:
+  id: C05FKUZGB2A
+  name: alarm-live-error-stargate
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 768
+  total_threads: 55
+  active_users: 12
+  avg_messages_per_day: 17.1
+summary: |
+  Stargate API 운영 에러 알림 채널. 이 분기에는 live 환경(64건) 에러가 staging(3건)보다 크게 증가했다.
+  FROM_PYLON 에러(30건)와 INTERNAL_SERVER_ERROR(16건)가 주요 유형이었고, FAILED_TO_HANDLE_CHAT_STREAM(14건)과 SEND_TO_PYLON(7건)도 빈번했다.
+  /callback/write 경로 에러가 24건으로 가장 많아 문서 저장 관련 이슈가 두드러졌고, /answer 경로에서 LLM 응답 실패도 발생했다.
+  6월 24일에는 Stargate 파드 재시작으로 인한 503 헬스체크 실패와 서비스 일시 중단이 있었으며, 팀원들이 직접 대응했다.
+topics:
+  - LLM 응답 실패 (FAILED_TO_HANDLE_CHAT_STREAM)
+  - Pylon 문서 콜백 에러 (FROM_PYLON)
+  - Stargate 파드 재시작 및 503 에러
+  - /callback/write 경로 에러 집중
+key_discussions:
+  - date: '2024-06-24'
+    summary: 'Stargate 파드 죽음 - 503 헬스체크 실패 발생, 팀원(송명하, Sigrid Jin) 대응'
+terminology:
+  - term: "FAILED_TO_HANDLE_CHAT_STREAM"
+    definition: "채팅 스트림 처리 중 발생한 에러, 주로 LLM 응답 실패와 관련"
+  - term: "Health Check"
+    definition: "Stargate 서비스 가용성 확인, 503 응답 시 서비스 장애 의미"
+  - term: "/callback/write"
+    definition: "Pylon에서 문서 쓰기 완료 후 Stargate로 콜백하는 경로"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

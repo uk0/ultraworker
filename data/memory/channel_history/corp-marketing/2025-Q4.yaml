@@ -1,0 +1,34 @@
+channel:
+  id: C09UE003TK4
+  name: corp-marketing
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 2.5
+summary: |
+  2025년 4분기 corp-marketing 채널은 11월에 신규 개설되어 기업 홍보 활동 논의가 시작되었다.
+  11월 21일 채널 개설과 함께 팀원 3명이 합류하였으며, 기업 홍보 영상 제작에 관한 스레드가 시작되었다.
+  12월에 추가로 1명이 채널에 합류하였으며, 전반적으로 채널 초기 설정 단계에 있다.
+topics:
+  - name: "기업 홍보영상 제작"
+    mention_count: 1
+    description: "회사 홍보 영상 제작 관련 논의 스레드 시작"
+  - name: "채널 개설 및 팀원 합류"
+    mention_count: 4
+    description: "2025년 11월 마케팅 채널 신규 개설 및 팀원 참여"
+key_discussions:
+  - thread_ts: '1763694240.000000'
+    date: '2025-11-21'
+    reply_count: 1
+    text_preview: "기업 홍보영상 제작 스레드 시작"
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

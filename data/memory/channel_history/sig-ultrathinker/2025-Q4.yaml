@@ -1,0 +1,95 @@
+channel:
+  id: C096C3V2RFS
+  name: sig-ultrathinker
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 103
+  total_threads: 62
+  active_users: 11
+  avg_messages_per_day: 2.0
+summary: |
+  2025-Q4 sig-ultrathinker 채널에서는 Claude Code, Codex, Gemini CLI 등 AI 코딩 에이전트 비교 및 실험이 활발히 이루어졌다. Claude Code Skills 마이그레이션, Antigravity(구글 에이전트 빌더), oh-my-opencode, sionic-maestro-mcp 등 새로운 도구 탐색과 실험 결과 공유가 주를 이루었다.
+  Opus 4.5, Gemini 3.0, GPT 5.2 Codex 등 최신 모델들의 첫인상 공유와 Claude Code vs Codex 성능 비교 실험, Anthropic 사용자 밋업 2회차 연사 참여 등 AI 개발 도구 커뮤니티로서의 활발한 토론이 이루어졌다.
+topics:
+  - name: "Claude Code vs Codex vs Gemini CLI"
+    mention_count: 25
+    description: "세 AI 코딩 에이전트의 성능, 비용, 사용성 비교 및 실전 사용 후기 공유"
+  - name: "새로운 AI 도구 탐색"
+    mention_count: 15
+    description: "Antigravity, oh-my-opencode, sionic-maestro-mcp, Letta, HumanLayer 등 신규 도구 실험"
+  - name: "최신 AI 모델 평가"
+    mention_count: 12
+    description: "Opus 4.5, Gemini 3.0, GPT 5.2 Codex 등 최신 모델 첫인상 및 성능 비교"
+  - name: "Claude Code Skills"
+    mention_count: 8
+    description: "Claude Code Skills 기능 마이그레이션, LSP 서버 지원, codex skills 비교"
+  - name: "AI 코딩 커뮤니티"
+    mention_count: 6
+    description: "Anthropic 사용자 밋업 연사 참여, zen-mcp 대체제 오픈소스 개발 제안"
+  - name: "Gemini 3.0 멀티모달 실험"
+    mention_count: 5
+    description: "Gemini 3.0의 동영상 기반 웹사이트 구현 실험 및 멀티모달 능력 평가"
+key_discussions:
+  - thread_ts: '1761897000.000000'
+    date: '2025-10-05'
+    reply_count: 45
+    text_preview: "GLM Coding Plan 실험 및 Claude Code vs Codex 성능 비교"
+  - thread_ts: '1762335000.000000'
+    date: '2025-11-01'
+    reply_count: 37
+    text_preview: "kubectl get 명령 처리 시 Codex-high vs Claude Sonnet 4.5 비교"
+  - thread_ts: '1763600000.000000'
+    date: '2025-11-20'
+    reply_count: 11
+    text_preview: "Antigravity가 스스로 브라우저를 켜고 기능 전부 검사하는 시연"
+  - thread_ts: '1763700000.000000'
+    date: '2025-11-23'
+    reply_count: 18
+    text_preview: "Gemini 3와 Codex xhigh의 협업 코드 구현 및 상호 피드백"
+  - thread_ts: '1763750000.000000'
+    date: '2025-11-23'
+    reply_count: 20
+    text_preview: "Gemini CLI 사용 후기: Compact 없이 컨텍스트 충분, 계획 방식 차이"
+  - thread_ts: '1764300000.000000'
+    date: '2025-12-01'
+    reply_count: 31
+    text_preview: "zen-mcp 대체제 오픈소스 개발 제안 및 Anthropic 사용자 밋업 2회차 연사"
+  - thread_ts: '1764500000.000000'
+    date: '2025-12-03'
+    reply_count: 43
+    text_preview: "vibe modeling 팁 및 IS_SANDBOX=1 claude 활용 방법"
+  - thread_ts: '1765500000.000000'
+    date: '2025-12-16'
+    reply_count: 11
+    text_preview: "sionic-maestro-mcp 개발 완료 및 리뷰 요청"
+  - thread_ts: '1766200000.000000'
+    date: '2025-12-21'
+    reply_count: 17
+    text_preview: "oh-my-opencode 사용 후기 및 Claude Code와의 비교"
+  - thread_ts: '1766700000.000000'
+    date: '2025-12-29'
+    reply_count: 15
+    text_preview: "CS146S Modern Software Developer 강의 공유, Claude Code 엔지니어 강의 예정"
+terminology:
+  - term: "Antigravity"
+    definition: "구글이 만든 에이전트 빌더, 스스로 브라우저를 켜고 픽셀 단위 검증까지 수행"
+  - term: "sionic-maestro-mcp"
+    definition: "Sionic AI 오픈소스 MCP 도구"
+  - term: "oh-my-opencode"
+    definition: "Claude Code 대체 AI 코딩 CLI 도구"
+  - term: "vibe modeling"
+    definition: "IS_SANDBOX=1 환경에서의 Claude Code 모델링 방식"
+  - term: "zen-mcp"
+    definition: "AI 코딩 에이전트용 MCP 도구, Sionic AI에서 오픈소스 대체제 개발 제안"
+  - term: "Codex xhigh"
+    definition: "OpenAI Codex의 최고 사양 실행 모드"
+  - term: "ultrathink"
+    definition: "사이오닉 AI에서 사용하는 깊은 사고 프롬프트 기법, 당근마켓 사내세미나에서도 소개됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,60 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 22
+  total_threads: 14
+  active_users: 6
+  avg_messages_per_day: 1.2
+summary: |
+  2025년 3분기 research-common 채널은 비교적 조용한 분기로, 주간 리서치 미팅 진행 및 모델 관련 업무 논의가 주를 이루었다.
+  Gemini Embedding 성능 테스트 결과 공유, VL 모델 네이밍 변경(xi-vl 등) 논의, HuggingFace 메인 계정 organization 탈퇴 처리 등이 다루어졌다.
+  외부 출장(일본, CVPR 등)으로 인해 일부 미팅이 서면 대체되었으며, 9월부터 새로운 팀원이 합류하였다.
+topics:
+  - name: "Gemini Embedding 성능 평가"
+    mention_count: 4
+    description: "Gemini Embedding 테스트 결과 공유 - 높은 성능으로 적극 활용 권장"
+  - name: "VL 모델 개발"
+    mention_count: 3
+    description: "VL 모델 네이밍 변경 논의(xi-vl 탈중국 이미지), InternVL 기반 instruction tuning prompt 연구"
+  - name: "주간 리서치 미팅"
+    mention_count: 5
+    description: "월요일 오후 5시 주간 리서치 미팅 진행, 외부 일정으로 서면 대체 다수"
+  - name: "HuggingFace 관리"
+    mention_count: 2
+    description: "sionic-ai HuggingFace organization 계정 관리 - 메인 계정 탈퇴 처리"
+key_discussions:
+  - thread_ts: '1752654480.000000'
+    date: '2025-07-16'
+    reply_count: 15
+    text_preview: "Gemini Embedding 테스트 결과 - 무조건 써야 함, 기술스펙 업데이트 예정"
+  - thread_ts: '1753156890.000000'
+    date: '2025-07-24'
+    reply_count: 91
+    text_preview: "관심 있는 분 대상 신규 연구 주제 제안 공유"
+  - thread_ts: '1757050560.000000'
+    date: '2025-09-05'
+    reply_count: 6
+    text_preview: "HuggingFace 메인 계정 organization 탈퇴 - 불필요한 seat 절감"
+terminology:
+  - term: "xi-vl"
+    definition: "내부 VL 모델의 초기 네이밍, 중국스러운 이미지로 인해 변경 논의"
+    aliases: []
+    context: "VL 모델 브랜딩 전략 논의에서 언급"
+  - term: "Gemini Embedding"
+    definition: "Google Gemini 기반 텍스트 임베딩 모델, 테스트 결과 높은 성능 확인"
+    aliases: []
+    context: "STORM 서비스에 적극 활용 권장된 외부 임베딩 모델"
+  - term: "InternVL"
+    definition: "오픈소스 Vision-Language 모델 시리즈"
+    aliases: []
+    context: "instruction tuning prompt template 참조 대상"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

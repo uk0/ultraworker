@@ -1,0 +1,34 @@
+channel:
+  id: C06LUUP56E6
+  name: guest-nurimedia-test3
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 5.0
+summary: |
+  누리미디어 테스트 채널 3. 외부 공유용 채널로, 채널 설명에 "청년층의 다양한 우울 변화유형 확인"이
+  명시됨. 2024년 2월에 김혜원이 채널을 생성하고 Storm 봇으로 논문 문서를 등록한 후,
+  "논문 내용을 자세히 요약해줘" 질의를 테스트함. test2(미토콘드리아-암)와 함께
+  누리미디어 외부 데모용으로 각기 다른 논문을 등록하여 다양한 도메인 QA를 시연한 것으로 보임.
+topics:
+  - 누리미디어 외부 공유용 테스트
+  - 심리학 논문 QA (청년층 우울 변화)
+key_discussions:
+  - thread_ts: '1709046049.012759'
+    date: '2024-02-27'
+    reply_count: 3
+    text_preview: "논문 내용 상세 요약 요청 - 청년층 우울 변화유형 논문"
+terminology:
+  - term: "누리미디어 test3"
+    definition: "외부 공유용 테스트 채널. 청년층 우울 변화유형 논문 전용"
+    context: "test2와 함께 다양한 도메인 데모 목적"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

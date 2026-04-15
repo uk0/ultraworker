@@ -1,0 +1,40 @@
+channel:
+  id: C057EPS43QW
+  name: corp-ideation
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 3
+  active_users: 7
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q2 corp-ideation 채널에서는 Zoom을 Google Meet으로 대체하는 방안과 RAG 구성 도구인 Databricks Mosaic AI 소개가 주요 토픽이었다. Google Meet은 이미 Google Workspace를 사용 중이므로 별도 비용 없이 사용 가능하다는 점에서 활용 검토가 이루어졌으며, Databricks의 블록 단위 RAG 구성 및 평가 기능이 팀 내에 공유되었다.
+topics:
+  - name: "Google Meet 전환 검토"
+    mention_count: 3
+    description: "Zoom 1계정 공유 문제 해결을 위해 Google Meet 활용 방안 논의"
+  - name: "Databricks Mosaic AI"
+    mention_count: 2
+    description: "블록 단위 RAG 구성, 배포, Evaluation 기능 소개 및 공유"
+key_discussions:
+  - thread_ts: '1716832920.000000'
+    date: '2024-05-28'
+    reply_count: 8
+    text_preview: "구글밋 전환 제안: Zoom 1계정 공유 문제 해결, Google Workspace 기반 무료 사용 가능"
+  - thread_ts: '1718323580.000000'
+    date: '2024-06-14'
+    reply_count: 12
+    text_preview: "Databricks Mosaic AI 소개: 블록 단위 RAG 구성/배포/평가 기능 캡처 공유"
+terminology:
+  - term: "Mosaic AI"
+    definition: "Databricks가 발표한 RAG 구성, 배포, 평가 도구 플랫폼"
+  - term: "Google Meet"
+    definition: "Google Workspace에 포함된 화상 회의 서비스, Zoom 대안으로 검토"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

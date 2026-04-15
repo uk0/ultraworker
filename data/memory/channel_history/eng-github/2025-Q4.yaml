@@ -1,0 +1,50 @@
+channel:
+  id: C06AR8W6H8E
+  name: eng-github
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3008
+  total_threads: 1280
+  active_users: 6
+  avg_messages_per_day: 33.1
+summary: |
+  2025년 4분기 eng-github 채널은 전체 관측 기간 중 가장 활발한 개발 활동을 기록하였다.
+  총 3008개 메시지, 6명 참여, 1280개 스레드가 발생하여 역대 최고치를 달성하였다.
+  일 평균 33.1개 메시지로 이전 분기 대비 약 41% 증가하였으며, 1280개 스레드는 전 분기 대비 46% 증가하였다.
+  6명의 핵심 개발자가 인당 평균 213개 이상의 스레드에 관여하여 매우 높은 코드 리뷰 밀도를 보였다.
+  연말 릴리스 준비, 대규모 기능 개발 또는 기술 부채 해소를 위한 집중 작업이 이루어진 것으로 추정된다.
+  sionic-ai 조직의 제품 안정화 및 신규 기능 출시를 위한 개발 스프린트가 집중된 분기였다.
+topics:
+  - name: "대규모 PR/코드 리뷰 활동"
+    message_count: 2200
+    description: "역대 최다 1280개 스레드 - 집중적인 코드 리뷰 및 PR 활동"
+  - name: "연말 릴리스 준비"
+    message_count: 500
+    description: "연말 목표 달성을 위한 집중적인 개발 및 배포 활동"
+  - name: "커밋/배포/이슈 알림"
+    message_count: 308
+    description: "다수 리포지토리의 커밋, 배포, 이슈 관련 자동 알림"
+key_discussions:
+  - date: '2025-10-01'
+    summary: "4분기 시작 - 역대 최대 규모의 개발 활동 기간 진입"
+    participants: ["GitHub Bot"]
+  - date: '2025-12-31'
+    summary: "분기 내 3008개 메시지, 1280개 스레드 달성 - 역대 최고 활동량"
+    participants: ["GitHub Bot"]
+terminology:
+  - term: "개발 스프린트"
+    definition: "집중적인 개발 작업을 수행하는 일정 기간"
+    aliases: ["sprint"]
+    context: "2025-Q4에 역대 최고 활동량을 기록하며 집중 개발 스프린트가 진행됨"
+  - term: "기술 부채"
+    definition: "코드 품질 개선이나 리팩토링이 필요한 축적된 기술적 과제"
+    aliases: ["tech debt"]
+    context: "연말 대규모 PR 활동은 기술 부채 해소 작업을 포함했을 가능성이 있음"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

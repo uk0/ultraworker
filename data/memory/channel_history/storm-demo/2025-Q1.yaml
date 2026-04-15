@@ -1,0 +1,44 @@
+channel:
+  id: C05D9LZJ63H
+  name: storm-demo
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 5
+  active_users: 5
+  avg_messages_per_day: 1.6
+summary: |
+  CES 데모 배포 후 운영 및 마무리 작업이 진행된 분기이다. hyunwoo가 ces.sionic.ai 서비스 배포를 완료하고, co.kr 도메인 URL 처리 문제를 사전에 공지하였다. 정세민이 co.kr 도메인(현대엔지니어링 등)의 502 에러 및 응답 지연(51초) 문제를 보고하고 디버깅하였다. 송명하가 API 엔드포인트를 live 서버(live-ces-demo-api.sionic.tech)로 변경 요청하였다. 데모 명칭 및 하단 예시 아이템 추가 등 UI 개선이 완료되었으며, ces-contact-demo 채널에서 사용자 생성 결과를 확인할 수 있도록 연동하였다. 이후 채널은 비활성화되었다.
+topics:
+  - CES 데모 배포 및 운영
+  - co.kr 도메인 에러 대응
+  - API 엔드포인트 Live 전환
+  - 데모 UI 개선
+key_discussions:
+  - thread_ts: '1735989943.421299'
+    date: '2025-01-04'
+    title: Storm 데모 명칭 변경 논의
+    summary: 데모 서비스 명칭 및 도메인 네이밍 변경 관련 논의 (34개 답글)
+  - thread_ts: '1736134313.103029'
+    date: '2025-01-06'
+    title: CES 데모 최종 업데이트
+    summary: 영어 문법 수정, 모바일 로딩 이슈 해결, 하단 예시 아이템 추가 등 최종 개선 사항 (18개 답글)
+  - thread_ts: '1736139565.784589'
+    date: '2025-01-06'
+    title: co.kr 도메인 502 에러 디버깅
+    summary: 정세민이 현대엔지니어링(hec.co.kr) URL의 502 에러 보고 및 Postman 테스트 결과 공유 (17개 답글)
+terminology:
+  - term: live-ces-demo-api
+    definition: CES 데모 API의 라이브 서버 엔드포인트 (live-ces-demo-api.sionic.tech)
+    aliases: []
+  - term: ces-contact-demo
+    definition: CES 데모에서 사용자가 생성한 결과물을 확인할 수 있는 연동 채널
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

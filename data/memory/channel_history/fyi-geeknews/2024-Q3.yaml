@@ -1,0 +1,59 @@
+channel:
+  id: C057PUSB1S8
+  name: fyi-geeknews
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 711
+  total_threads: 24
+  active_users: 6
+  avg_messages_per_day: 7.7
+summary: |
+  2024년 3분기에는 OpenAI o1 모델(Strawberry) 출시가 최대 화제였으며, chain-of-thought 추론 방식에 대한
+  심층 논의가 이루어졌다. 최병현(Hyune-c)님의 활발한 기술 공유가 두드러졌는데, RESTful API 가이드라인(Zalando 사례),
+  백엔드 아키텍처(MSA vs Modular Monoliths), Jest 테스트 강의 등 백엔드 개발 관련 양질의 자료가 공유되었다.
+  Apple 생태계(iOS 18, macOS Sequoia, iPhone 16, JPEG XL 채택)와 프로그래밍 언어 업데이트(Python 3.13 JIT/GIL,
+  Swift 6, PostgreSQL 17)도 주요 토픽이었다. WordPress-WP Engine 분쟁, Agile/Jira 비판 등
+  소프트웨어 산업 이슈에 대한 관심도 높았다.
+topics:
+  - OpenAI o1 모델과 chain-of-thought 추론
+  - 백엔드 아키텍처 (MSA vs Modular Monoliths, RESTful API)
+  - Apple 생태계 (iOS 18, macOS Sequoia, iPhone 16)
+  - 프로그래밍 언어 업데이트 (Python 3.13, Swift 6, PostgreSQL 17)
+  - WordPress-WP Engine 분쟁
+  - AI 모델 동향 (Meta Llama 3.2, Qwen2.5, Anthropic Contextual Retrieval)
+  - 소프트웨어 개발 방법론 (Agile/Jira 비판, Scrum 스트레스)
+key_discussions:
+  - thread_ts: '1727330373.727789'
+    date: '2024-09-26'
+    topic: '백엔드 아키텍처 표준과 Modular Monoliths'
+    summary: '최병현님이 공유한 백엔드 아키텍처 관련 자료와 빅테크 유스케이스, Modular Monoliths 추천에 대한 활발한 토론 (32개 답글)'
+  - thread_ts: '1727675187.229249'
+    date: '2024-09-30'
+    topic: 'OpenAI o1 모델 분석'
+    summary: 'o1 모델이 GPT 시리즈와 다른 점, 페르소나 설정 불필요성 등 실용적 인사이트 공유'
+  - thread_ts: '1727496816.761179'
+    date: '2024-09-28'
+    topic: 'RESTful API 가이드라인 (Zalando 사례)'
+    summary: 'Zalando사의 RESTful API 가이드라인과 실무 적용 팁 공유'
+  - thread_ts: '1727196829.648109'
+    date: '2024-09-24'
+    topic: 'Jest 테스트 강의 공유'
+    summary: 'Stargate API 테스트 추가를 위한 Jest 강의 추천'
+terminology:
+  - term: "o1"
+    definition: "OpenAI의 추론 특화 모델. GPT 시리즈와는 별개 라인으로, 수학/코딩에 특화. 페르소나 설정 없이 사용이 권장됨"
+    aliases: ["Strawberry"]
+  - term: "Modular Monoliths"
+    definition: "MSA의 복잡성 없이 모듈화된 구조를 유지하는 아키텍처 패턴. 운영 공수가 부족할 때 MSA보다 나은 선택"
+    aliases: []
+  - term: "Contextual Retrieval"
+    definition: "Anthropic이 공개한 문맥 기반 검색 기술로 RAG 성능 개선에 활용"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

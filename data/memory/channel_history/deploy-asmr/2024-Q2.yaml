@@ -1,0 +1,42 @@
+channel:
+  id: C079AAU6265
+  name: deploy-asmr
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 224
+  total_threads: 30
+  active_users: 5
+  avg_messages_per_day: 56.0
+summary: |
+  2024년 2분기에 deploy-openllm(현 deploy-asmr) 채널이 활발히 운영되었다. OpenLLM API 서비스의 dev/live 환경
+  배포가 /deploy 슬래시 커맨드를 통해 빈번하게 이루어졌다. 주로 jinu님, Sigrid Jin님, 송명하님이 배포를 수행하였다.
+  GoCD 기반 배포 파이프라인이 사용되었으며, 빌드 후 배포(build + deploy) 또는 빌드 스킵 배포(--skip-build)가
+  지원되었다. 배포 실패 시 재시도 패턴이 자주 관찰되었으며, GoCD 409 에러(파이프라인 진행 중 충돌) 등의 이슈도 있었다.
+  NestJS 기반 애플리케이션으로 AuthModule, LlmModule, DashboardModule 등이 포함되어 있었다.
+topics:
+  - OpenLLM API 배포
+  - GoCD 배포 파이프라인
+  - dev/live 환경 관리
+  - 배포 실패 및 재시도
+key_discussions:
+  - thread_ts: '1718945668.588739'
+    date: '2024-06-21'
+    topic: OpenLLM live 배포 실패 및 반복 재시도 (11개 답글)
+  - thread_ts: '1718947519.513439'
+    date: '2024-06-21'
+    topic: live OpenLLM 리소스 삭제 후 재생성 시도
+terminology:
+  - term: OpenLLM
+    definition: Sionic AI의 LLM API 서비스, NestJS 기반
+  - term: GoCD
+    definition: CI/CD 파이프라인 도구, 배포 자동화에 사용
+  - term: --skip-build
+    definition: 이미 빌드된 이미지로 배포만 수행하는 옵션
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

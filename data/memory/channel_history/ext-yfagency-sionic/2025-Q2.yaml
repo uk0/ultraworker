@@ -1,0 +1,64 @@
+channel:
+  id: C08UCFAPUJY
+  name: ext-yfagency-sionic
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 97
+  total_threads: 17
+  active_users: 12
+  avg_messages_per_day: 6.5
+summary: |
+  YF Agency(도쿄 소재 브랜딩/크리에이티브 에이전시)와의 협업 채널. 2025년 5월에 Sigrid Jin이
+  YF Agency의 bb(대표), zfirouz7(Zia, 개발자)를 초대하여 채널 개설. 주요 활동:
+  (1) Cake(커스텀 저지 제작 브랜드) 웹사이트에 Storm 기반 AI 챗봇 통합 프로젝트,
+  (2) Shopify 플러그인 연동 - Storm API를 Shopify App Bridge로 연결,
+  (3) AI 에이전트 개발 진행(80% 완성 상태) - 이미지 생성 기능, 장바구니 연동 구현,
+  (4) API 응답 속도 문제 논의 - 스트리밍 미지원으로 인한 지연 이슈(37개 답변의 대형 스레드),
+  (5) AIBB 컨퍼런스(6/5) 초대 및 Sigrid Jin의 GDG Tokyo 발표,
+  (6) 한시형(Kevin) 도쿄 방문(6/16-19) 시 YF Agency 시부야 사무실 방문 및 비즈니스 미팅,
+  (7) 파트너십 계약서 및 NDA 논의. Storm 플랫폼 STORM API/Console 가이드 영문판 공유.
+  Cake 웹사이트가 shop.madebycake.ooo에서 madebycake.ooo로 도메인 변경됨.
+topics:
+  - YF Agency 파트너십
+  - Cake AI 챗봇 개발
+  - Shopify Storm API 연동
+  - API 응답 속도 최적화
+  - AIBB 컨퍼런스 참가
+  - 비즈니스 미팅 (도쿄)
+key_discussions:
+  - thread_ts: '1750214765.689539'
+    date: '2025-06-18'
+    reply_count: 37
+    text_preview: "API 응답 속도 문제 - 스트리밍 미지원으로 인한 지연"
+  - thread_ts: '1749607807.259669'
+    date: '2025-06-11'
+    reply_count: 22
+    text_preview: "AI 에이전트 배포 준비 - 이미지 기능 구현"
+  - thread_ts: '1749615449.020589'
+    date: '2025-06-11'
+    reply_count: 20
+    text_preview: "API 키 토큰 인증 오류 해결"
+  - thread_ts: '1748843008.474439'
+    date: '2025-06-02'
+    reply_count: 8
+    text_preview: "AI 에이전트 80% 완성 - 요구사항 및 코드 공유"
+terminology:
+  - term: "YF Agency"
+    definition: "도쿄 시부야 소재 브랜딩/크리에이티브 에이전시. bb(대표)와 Zia(개발자) 운영"
+    aliases: ["YF"]
+    context: "Storm 플랫폼 일본 파트너사. Cake 브랜드 AI 챗봇 개발"
+  - term: "Cake"
+    definition: "YF Agency 운영 커스텀 저지/의류 제작 브랜드"
+    aliases: ["madebycake"]
+    context: "Storm AI 챗봇을 Shopify 웹사이트에 통합하는 프로젝트"
+  - term: "AIBB Conference"
+    definition: "AI 관련 컨퍼런스. 2025년 6월 5일 도쿄 개최"
+    context: "Sigrid Jin이 발표, YF Agency 초대"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

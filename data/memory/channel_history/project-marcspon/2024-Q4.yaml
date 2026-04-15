@@ -1,0 +1,46 @@
+channel:
+  id: C07E6J350KH
+  name: project-marcspon
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 4
+  active_users: 4
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q4에는 마크스폰 대외용 API 개발이 완료되어 dev 환경에 배포되었다. jinu가 Stream/Non-stream Chat API v2를 구현하고
+  API 문서를 공유했다. 최병현(Hyune-c)이 개발 스펙과 일정 가안을 마크스폰 측에 전달했으며, 내부 일정 공유 순서에 대한 반성도
+  있었다. 김혜원은 마크스폰 측 개발자 채용 소식을 전하며 개발 스펙 맞춤 미팅을 조율했다. 백은주도 채널에 참여했다.
+topics:
+  - 마크스폰용 공개 API 개발 완료
+  - Chat API v2 (Stream/Non-stream) 구현
+  - 개발 스펙 및 일정 공유
+  - 마크스폰 개발자 채용 소식
+key_discussions:
+  - title: "마크스폰용 공개 API 작업 완료"
+    date: "2024-10-18"
+    participants: ["jinu", "김혜원", "최병현(Hyune-c)", "Noah(고석현)"]
+    summary: "마크스폰용 API dev 배포 완료. OpenAI 스타일의 Chat API v2 (stream/non-stream) 개발. sre-platform에서 테스트 진행."
+  - title: "개발 스펙 및 일정 전달"
+    date: "2024-10-11"
+    participants: ["최병현(Hyune-c)", "김혜원", "jinu"]
+    summary: "개발 스펙 기반 일정 가안을 마크스폰에 전달. 내부 공유 우선 필요성 인식."
+  - title: "마크스폰 개발자 채용 및 미팅 조율"
+    date: "2024-10-02"
+    participants: ["김혜원", "한시형", "최병현(Hyune-c)", "jinu"]
+    summary: "마크스폰 측 개발자 채용 완료. 차주 월요일 개발 스펙 맞춤 미팅 예정."
+terminology:
+  - term: "sre-platform"
+    definition: "최병현(Hyune-c)이 만든 내부 테스트 플랫폼"
+    aliases: []
+  - term: "Stargate"
+    definition: "Sionic AI의 API 게이트웨이/백엔드 서비스"
+    aliases: ["스게", "SG"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

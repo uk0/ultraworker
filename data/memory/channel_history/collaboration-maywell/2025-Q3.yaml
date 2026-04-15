@@ -1,0 +1,50 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 67
+  total_threads: 29
+  active_users: 12
+  avg_messages_per_day: 2.0
+summary: |
+  Maywell 사업자 등록 및 엘린(Elyn) 캐릭터 채팅 서비스 운영 본격화. 국내 특허 등록 결정, 인스타그램 마케팅 성과 공유. HyperCLOVAX-SEED-Think-14B 컨텍스트 확장 논의. 5090 GPU P2P 패치, 한국어 eval 벤치마크 리스트 공유(KRETA, K-DTCBench, KOFFVQA). FineVision 데이터셋(400K) 한국어 적용 제안. CAPOT 임베딩 드리프트 억제 논문 공유. 카투사 합격. ultrabanana.ai 서비스 소개. LINE의 LogicKor 활용.
+topics:
+  - Maywell 사업자 등록
+  - 엘린(Elyn) 캐릭터 채팅 서비스 마케팅
+  - 국내 특허 등록 결정
+  - HyperCLOVAX-SEED-Think-14B 컨텍스트 확장
+  - 5090 GPU P2P 드라이버 패치
+  - 한국어 VLM 벤치마크 공유 (KRETA, K-DTCBench, KOFFVQA)
+  - FineVision 데이터셋 한국어 적용 제안
+  - 바이브코딩 실전 영상
+  - ultrabanana.ai 서비스
+  - 카투사 합격
+key_discussions:
+  - title: "엘린 서비스 마케팅 및 인스타그램 광고"
+    summary: "캐릭터 채팅 서비스 엘린의 인스타그램 광고 성과가 좋음. 내실+마케팅 사이클로 사업성 검증 중"
+  - title: "한국어 eval 벤치마크 리스트 공유"
+    summary: "KRETA, K-DTCBench(NCSOFT), KOFFVQA(마음AI) 등 한국어 평가 벤치마크 정리. VLM 데이터 증강 논의"
+  - title: "국내 특허 등록 결정"
+    summary: "언어 모델 생성 방법 관련 특허 국내 등록 결정. 일본/미국 출원에 이어 국내도 확정"
+  - title: "LINE의 LogicKor 활용"
+    summary: "LINE(LY Corp)에서 LogicKor 벤치마크를 공식 활용. 대기업의 소상공인 영향 논의"
+terminology:
+  - term: "엘린 (Elyn)"
+    definition: "maywell이 개발/운영하는 AI 캐릭터 채팅 서비스. DCInside 흥갤에서도 화제"
+  - term: "HyperCLOVAX-SEED-Think"
+    definition: "네이버의 14B 파라미터 사고형 LLM. 컨텍스트 확장 여지 논의"
+  - term: "REAP"
+    definition: "Cerebras의 MoE expert 프루닝 방법론. 25-40% 프루닝에도 성능 유지"
+  - term: "ultrabanana.ai"
+    definition: "maywell 관련 AI API 서비스"
+  - term: "FineVision"
+    definition: "HuggingFace M4의 400K 멀티모달 데이터셋. Claude/GPT로 생성"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

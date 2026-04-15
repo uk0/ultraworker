@@ -1,0 +1,33 @@
+channel:
+  id: C080B41CUGG
+  name: dev-strom-subscription-extend
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 1.7
+summary: |
+  2025년 1분기 dev-strom-subscription-extend 채널에는 구독 연장 문의 알림이 소수 발생하였으며, 신규 팀원이 채널에 참여하였다.
+  1월 10일에 봇 알림이 연속으로 수신되었고, 이후 새로운 멤버가 채널에 합류하였다.
+topics:
+  - name: "구독 연장 문의 알림"
+    mention_count: 3
+    description: "2025년 1월 구독 연장 문의 알림 수신"
+  - name: "채널 멤버 합류"
+    mention_count: 2
+    description: "신규 팀원 채널 참여"
+key_discussions: []
+terminology:
+  - term: "구독 연장 문의"
+    definition: "STORM 서비스 사용자의 구독 기간 연장 요청 및 문의"
+    aliases: []
+    context: "Slack 알림 봇을 통해 팀에 실시간으로 전달되는 고객 요청"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

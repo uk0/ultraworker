@@ -1,0 +1,32 @@
+channel:
+  id: C08LZ85CLVA
+  name: business-inging
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 14
+  total_threads: 11
+  active_users: 5
+  avg_messages_per_day: 1.2
+summary: |
+  비공식 감정 표현 채널. Q4에는 활동량 감소(14개 메시지, 5명 참여).
+  주요 내용: 모델 파인 튜닝 세션 후기 공유, 시암 기능명세 문서 작업 방법, Claude Code skills 활용 인수인계 슬라이드 자동 생성,
+  제품팀 성과 공유, 윤여준님 메이트 배정 문의 등.
+  채널 활동이 점차 줄어들며 주요 소통이 다른 채널로 이동한 것으로 보임.
+topics:
+  - 팀 소통 및 감정 공유
+  - Claude Code 활용
+  - 모델 파인 튜닝
+key_discussions:
+  - date: '2025-10-15'
+    summary: '모델 파인 튜닝 세션 후기 - 기술이 귀엽고 혜원님이 훌륭하다는 평가'
+  - date: '2025-11-18'
+    summary: 'Claude Code skills 활용하여 인수인계 슬라이드 자동 생성'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,35 @@
+channel:
+  id: C08DRP6LD6E
+  name: guest-marcspon2
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 1
+  active_users: 7
+  avg_messages_per_day: 3.0
+summary: |
+  마크스폰(Marcspon) 고객사 테스트 채널. 2025년 2월에 채널이 생성되었으며, 기존 "guest-marcspon"
+  채널에서 "guest-marcspon2"로 이름이 변경됨. 김혜원이 채널을 생성하고 Sigrid Jin, 윤찬흠,
+  김완희, 이민영, 김수원, 마크스폰_편금희 등이 참여함. 김혜원이 윤찬흠에게 기존 채널의 대화
+  기록을 공유하는 스레드가 있었으며, 이는 채널 이전/재설정 과정으로 보임.
+topics:
+  - 마크스폰 고객사 채널 설정
+  - 채널 이전 및 대화 기록 공유
+key_discussions:
+  - thread_ts: '1739864825.081519'
+    date: '2025-02-18'
+    reply_count: 2
+    text_preview: "기존 채널의 대화 기록 공유 - 채널 이전 과정"
+terminology:
+  - term: "마크스폰"
+    definition: "Marcspon. 고객사/파트너사"
+    aliases: ["Marcspon"]
+    context: "Storm 서비스 테스트 대상 고객사"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

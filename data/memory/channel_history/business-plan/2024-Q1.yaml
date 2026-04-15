@@ -1,0 +1,38 @@
+channel:
+  id: C05G0E02F60
+  name: business-plan
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 9
+  total_threads: 6
+  active_users: 6
+  avg_messages_per_day: 1.3
+summary: |
+  사업 기획 채널. Q1에는 외부 미팅 및 정부 지원사업 정보 공유가 주요 활동.
+  강남언니 일본법인 대표(임현근님) 점심 미팅 계획, 핏펫 미팅 메모 공유(Answer 제품 관련),
+  펄송(펫 관련 업체) 미팅 - 펫모델 건당 요금 방식 및 Answer 테스트 환경 제안,
+  SaaS 개발 지원 사업 CSP/MSP Pool 모집 공고, AI바우처 지원사업 공고, 초창패 정보 공유 등.
+topics:
+  - 외부 파트너사 미팅
+  - 정부 지원사업 정보
+  - Answer 제품 영업
+key_discussions:
+  - date: '2024-01-30'
+    summary: '강남언니 일본법인 대표 미팅 계획 - 일본 시장 진출 초기 탐색'
+  - date: '2024-02-16'
+    summary: '핏펫 미팅 메모 공유 - Answer 제품 관련 내용 포함'
+  - date: '2024-02-21'
+    summary: '펄송 미팅 - 펫모델 건당 요금 방식 긍정적 검토, Answer 테스트 환경 제안'
+terminology:
+  - term: 'Answer'
+    definition: '사이오닉 AI의 QA/RAG 제품'
+  - term: '초창패'
+    definition: '초기창업패키지, KISED 주관 정부 지원사업'
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

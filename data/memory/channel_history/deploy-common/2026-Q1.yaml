@@ -1,0 +1,79 @@
+channel:
+  id: C07A18SADUP
+  name: deploy-common
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:31'
+statistics:
+  total_messages: 857
+  total_threads: 675
+  active_users: 19
+  avg_messages_per_day: 19.9
+key_discussions:
+- thread_ts: '1768910958.109559'
+  date: '2026-01-20'
+  reply_count: 38
+  text_preview: /sionic-deploy carrier-supply dev 844a12b onprem
+- thread_ts: '1768917378.204379'
+  date: '2026-01-20'
+  reply_count: 33
+  text_preview: /sionic-deploy carrier-supply dev 844a12b onprem --skip-build
+- thread_ts: '1770916066.517759'
+  date: '2026-02-13'
+  reply_count: 29
+  text_preview: /sionic-deploy samsung-vc-ontology-demo dev c1cb3f1e0a3d9a26e48cbfd0f3914ae0f37b0004
+    onprem
+- thread_ts: '1768968422.759119'
+  date: '2026-01-21'
+  reply_count: 27
+  text_preview: /sionic-deploy carrier-supply dev 844a12b onprem --skip-build
+- thread_ts: '1770278581.711389'
+  date: '2026-02-05'
+  reply_count: 22
+  text_preview: /sionic-deploy-new samsung-vc-ontology-demo dev 1c978d2 oci
+- thread_ts: '1769506914.256349'
+  date: '2026-01-27'
+  reply_count: 20
+  text_preview: /sionic-deploy-new storm-apis-parse-router dev 99d50b8 oci --auto-deploy
+- thread_ts: '1767854916.497079'
+  date: '2026-01-08'
+  reply_count: 19
+  text_preview: /sionic-deploy-new logicrag dev f0f8529 oci
+- thread_ts: '1770020575.726819'
+  date: '2026-02-02'
+  reply_count: 17
+  text_preview: /sionic-deploy-new arbiter dev response_format oci --auto-deploy
+- thread_ts: '1769608012.066309'
+  date: '2026-01-28'
+  reply_count: 17
+  text_preview: /sionic-deploy-new agent-rag dev 882080d onprem --auto-deploy
+- thread_ts: '1770718379.484169'
+  date: '2026-02-10'
+  reply_count: 16
+  text_preview: /sionic-deploy-new arbiter dev 464bcdf oci
+- thread_ts: '1767884520.204439'
+  date: '2026-01-09'
+  reply_count: 15
+  text_preview: /sionic-deploy-new carrier dev b12741f onprem --auto-deploy
+- thread_ts: '1770571628.133259'
+  date: '2026-02-09'
+  reply_count: 14
+  text_preview: /sionic-deploy-new scala-supply dev c0111a6 oci
+- thread_ts: '1768545610.995109'
+  date: '2026-01-16'
+  reply_count: 14
+  text_preview: '*asmr-v2* :heavy_plus_sign: Deploy requested *dev* <https://argocd.sionic.tech/applications/asmr-v2|'
+- thread_ts: '1767662305.671259'
+  date: '2026-01-06'
+  reply_count: 14
+  text_preview: /sionic-deploy-new storm-apis-parse-router dev 487055f oci --auto-deploy
+- thread_ts: '1770950781.428529'
+  date: '2026-02-13'
+  reply_count: 13
+  text_preview: /sionic-deploy samsung-vc-ontology-demo dev 8bbb38d3 oci
+metadata:
+  created_at: '2026-02-13T16:29:31'
+  synced_by: sync_fast.py

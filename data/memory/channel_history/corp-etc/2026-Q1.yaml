@@ -1,0 +1,40 @@
+channel:
+  id: C05801FL29F
+  name: corp-etc
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:26:08'
+statistics:
+  total_messages: 8
+  total_threads: 6
+  active_users: 6
+  avg_messages_per_day: 0.2
+key_discussions:
+- thread_ts: '1769043425.298249'
+  date: '2026-01-22'
+  reply_count: 16
+  text_preview: 이러한 우편물이 와서 마왕님 자리에 두었습니다. <@U057PR1ADCL>
+- thread_ts: '1770362429.122239'
+  date: '2026-02-06'
+  reply_count: 11
+  text_preview: 'flex 이런 기능 이용하고 있나요?
+
+    <https://guide.flex.team/ko/articles/10283338-%EC%82%B0%EC%97%85%EA%B8%B0%EB%8A'
+- thread_ts: '1769475232.757809'
+  date: '2026-01-27'
+  reply_count: 7
+  text_preview: 태일회계법인과 병무청에서 우편와서 마왕님 자리에 두엇습니다. cc <@U057PR1ADCL>
+- thread_ts: '1767970216.258209'
+  date: '2026-01-09'
+  reply_count: 7
+  text_preview: 월요일 오전 또는 이른 오후에 퀵 보내주실 귀인 찾습니다...
+- thread_ts: '1768540813.267139'
+  date: '2026-01-16'
+  reply_count: 3
+  text_preview: 하나원큐 여의도 오피스 지원 &gt;&gt;
+metadata:
+  created_at: '2026-02-13T16:26:08'
+  synced_by: sync_fast.py

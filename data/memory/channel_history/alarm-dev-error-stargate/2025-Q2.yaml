@@ -1,0 +1,47 @@
+channel:
+  id: C07GDDBPGJU
+  name: alarm-dev-error-stargate
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 3986
+  total_threads: 17
+  active_users: 10
+  avg_messages_per_day: 63.3
+summary: |
+  2025-Q2 기간 동안 Stargate API 개발 환경 에러 채널에서 하루 평균 63건의 알림이 발생하였다. 주요 오류로는 Redis 읽기 전용 복제본에 쓰기 시도로 인한 READONLY 오류, Carrier의 어드바이스 처리 실패(advice not related to chat), INTERNAL_SERVER_ERROR 등이 관측되었다. 2025년 4월 초 신규 팀원이 채널에 합류하였으며, Redis 클러스터 설정 관련 이슈가 새롭게 등장하였다.
+topics:
+  - name: "Redis READONLY 오류"
+    mention_count: 25
+    description: "Redis 읽기 전용 복제본에 쓰기를 시도할 때 발생하는 READONLY 오류"
+  - name: "어드바이스 처리 오류"
+    mention_count: 20
+    description: "특정 advice ID가 채팅과 연결되지 않아 발생하는 SOMETHING_WRONG 오류"
+  - name: "INTERNAL_SERVER_ERROR"
+    mention_count: 18
+    description: "Stargate API에서 발생하는 다양한 내부 서버 오류"
+key_discussions:
+  - thread_ts: '1743652800.000000'
+    date: '2025-04-03'
+    reply_count: 1
+    text_preview: "Redis READONLY 오류 - 읽기 전용 복제본에 쓰기 시도(user_script:308)"
+  - thread_ts: '1743667620.000000'
+    date: '2025-04-03'
+    reply_count: 4
+    text_preview: "advice 7313487821222305792 is not related to chat - SOMETHING_WRONG 오류"
+terminology:
+  - term: "READONLY"
+    definition: "Redis 읽기 전용 복제본에 쓰기 작업을 시도할 때 발생하는 오류, Redis 클러스터 구성 문제 시 발생"
+    aliases: []
+    context: "Redis 복제본 설정이 잘못되거나 마스터/슬레이브 역할 전환 시 발생"
+  - term: "SOMETHING_WRONG"
+    definition: "Stargate 내부 오류 코드로, 예상치 못한 비즈니스 로직 오류 시 사용"
+    aliases: []
+    context: "어드바이스 ID와 채팅 연결 불일치 등의 경우에 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

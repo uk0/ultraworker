@@ -1,0 +1,123 @@
+channel:
+  id: C06F9ERKJTA
+  name: qna
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 173
+  total_threads: 150
+  active_users: 23
+  avg_messages_per_day: 3.0
+summary: |
+  2025년 1분기 qna 채널은 활동량이 전 분기 대비 3배 가까이 급증했다. IBK 기업은행 프로젝트 관련 질문이 다수 등장하며
+  (부하 테스트, 오더시트, Supply 발표 장표), 사이오닉의 주요 고객 프로젝트로 자리 잡았다. 기술적으로는 MCP(Model
+  Context Protocol) 연동, BGE-M3 임베딩 모델 TF32/TF64 충돌, Supply 서비스 초기 실행 시간, Pylon Postman 권한,
+  dev 환경 403/internal service error 등 인프라 이슈가 활발히 논의되었다. 조직적으로는 copilot vs Claude Code 등
+  AI 개발 도구 활용 방식에 대한 조사, Linear 라벨/그룹 체계화, 사이오닉 유튜브 채널 개설 제안, 회사 슬로건 및 BI 관련
+  논의가 있었다. SaaS 내부 계정 정리, DB 계정 분리, 그라파나 이중 운영 등 시스템 관리 이슈도 다뤄졌다.
+  신규 입사자(양호진, 오승희, 강성우, 권혜선 등) 합류로 온보딩 관련 질문(프린터, wandb, 소득세 감면 등)도 증가했다.
+topics:
+  - IBK 기업은행 프로젝트
+  - MCP(Model Context Protocol) 연동
+  - BGE-M3 임베딩 모델
+  - Supply(carrier-supply) 서비스
+  - copilot vs Claude Code 도구 비교
+  - Linear 라벨/그룹 체계화
+  - 사이오닉 유튜브 채널 제안
+  - 회사 슬로건/BI 업데이트
+  - SaaS 내부 계정 정리
+  - DB 계정 분리
+  - 그라파나 이중 운영
+  - 스톰 콘솔 OG 태그 설정
+  - 서부발전 S3 네트워크 차단 이슈
+  - 크롬 낮은 버전 호환성
+  - Vercel 배포 미반영 이슈
+  - 밀버스 마케팅 협업
+key_discussions:
+  - thread_ts: '1742441868.352989'
+    date: '2025-03-20'
+    reply_count: 71
+    text_preview: 스톰 콘솔 OG 태그(이미지/타이틀/설명) 설정 방법 논의
+  - thread_ts: '1742365029.282169'
+    date: '2025-03-19'
+    reply_count: 58
+    text_preview: Linear BUG 라벨 신설 및 라벨 복수 사용 정책 논의
+  - thread_ts: '1742549213.648589'
+    date: '2025-02-26'
+    reply_count: 42
+    text_preview: 스톰 플랫폼 반복 장애 사례 줄이기 방안 논의
+  - thread_ts: '1741826593.291109'
+    date: '2025-03-13'
+    reply_count: 39
+    text_preview: 서부발전 내부 문서 출처 미리보기 S3 네트워크 차단 이슈
+  - thread_ts: '1742428802.607189'
+    date: '2025-03-20'
+    reply_count: 34
+    text_preview: storm parse API URL 확인 및 사용법 문의
+  - thread_ts: '1741766588.792219'
+    date: '2025-03-12'
+    reply_count: 27
+    text_preview: 크롬 낮은 버전 또는 스톰 콘솔 초느림 현상 조사
+  - thread_ts: '1742904988.290839'
+    date: '2025-03-25'
+    reply_count: 26
+    text_preview: BGE-M3 TF 버전 신규 임베딩 모델 TF32/TF64 충돌 이슈
+  - thread_ts: '1741151838.382649'
+    date: '2025-03-05'
+    reply_count: 25
+    text_preview: 스톰 플랫폼 가이드 다국어 버전 미지원 문제
+  - thread_ts: '1740640701.223379'
+    date: '2025-02-27'
+    reply_count: 23
+    text_preview: SaaS 내부 인원 계정/팀 삭제 영향도 분석
+  - thread_ts: '1741944903.849979'
+    date: '2025-03-14'
+    reply_count: 23
+    text_preview: 밀버스 마케팅팀 협업 포인트 및 영어 세일즈 덱 요청
+  - thread_ts: '1741680825.057959'
+    date: '2025-03-11'
+    reply_count: 22
+    text_preview: 회사 공식 슬로건 업데이트 여부 확인
+  - thread_ts: '1742202741.388249'
+    date: '2025-03-17'
+    reply_count: 22
+    text_preview: 아비케(Abu Dhabi 전시회)에서 GPT류 LLM 우회 사용 방법
+terminology:
+  - term: IBK
+    definition: IBK 기업은행, 사이오닉의 주요 온프레미스 고객
+    aliases:
+      - 기업은행
+    context: 프로젝트 부하 테스트, 오더시트, Supply 발표 등에서 언급
+  - term: Supply
+    definition: carrier-supply, 사이오닉의 문서 인덱싱/검색 서비스
+    aliases:
+      - carrier-supply
+    context: API 호출, 초기 실행 시간, 발표 장표 등에서 언급
+  - term: MCP
+    definition: Model Context Protocol, AI 모델에 외부 도구를 연결하는 프로토콜
+    aliases: []
+    context: 스톰 쿼리 MCP 연동, Claude Code MCP 등에서 언급
+  - term: BGE-M3
+    definition: 사이오닉에서 사용하는 다국어 임베딩 모델
+    aliases: []
+    context: TF32/TF64 충돌, 신규 모델 파일 교체 등에서 언급
+  - term: 아비케
+    definition: 중동 아부다비에서 열리는 전시회/행사
+    aliases:
+      - ADIBF
+    context: 출장 준비, LLM 사용, 키보드 구매 등에서 언급
+  - term: Linear
+    definition: 사이오닉이 사용하는 프로젝트/이슈 관리 도구
+    aliases: []
+    context: 라벨/그룹 체계화, 어드민 권한 요청 등에서 언급
+  - term: dp/sp
+    definition: storm parse 내부 약어(dp=document parse, sp=storm parse)
+    aliases: []
+    context: 용어 통일 논의에서 언급
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

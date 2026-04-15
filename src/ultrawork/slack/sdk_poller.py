@@ -21,6 +21,7 @@ Usage:
 import asyncio
 import logging
 import os
+import re
 import shutil
 import signal
 import subprocess
@@ -37,7 +38,7 @@ from slack_sdk.errors import SlackApiError
 from ultrawork.agent.session_manager import SessionManager
 from ultrawork.config import get_config
 from ultrawork.events.interaction_logger import InteractionLogger
-from ultrawork.models.agent import AgentRole
+from ultrawork.models.agent import AgentRole, SessionStatus
 from ultrawork.slack.downloader import SlackFileDownloader
 from ultrawork.slack.reaction_approval import ReactionApprovalHandler
 from ultrawork.slack.state import PollingStateManager
@@ -193,6 +194,18 @@ class SlackSDKPoller:
         self._running = False
         self._stop_event = asyncio.Event()
         self._startup_ts: str | None = None
+        self._last_stale_cleanup_at = 0.0
+
+        # Concurrency limit: max 2 simultaneous Claude subprocesses to prevent RAM exhaustion
+        max_concurrent = int(os.environ.get("ULTRAWORK_MAX_CONCURRENT_AGENTS", "2"))
+        self._agent_semaphore = threading.Semaphore(max_concurrent)
+        logger.info(f"[Poller] Max concurrent agents: {max_concurrent}")
+
+        runtime_cfg = get_config().executor
+        self.heartbeat_interval_seconds = max(5, int(runtime_cfg.heartbeat_interval_seconds))
+        self.fork_max_age_seconds = max(0, int(runtime_cfg.fork_max_age_seconds))
+        self.stalled_threshold_seconds = max(60, int(runtime_cfg.stalled_threshold_seconds))
+        self.stale_cleanup_interval_seconds = max(60, min(300, self.stalled_threshold_seconds))
 
         # Ensure directories exist
         (self.data_dir / "logs").mkdir(parents=True, exist_ok=True)
@@ -540,6 +553,190 @@ class SlackSDKPoller:
 
         logger.info(f"Saved execution result to {mention_dir}")
 
+    @staticmethod
+    def _save_yaml(path: Path, payload: dict) -> None:
+        """Persist a YAML payload atomically enough for dashboard readers."""
+        with open(path, "w", encoding="utf-8") as handle:
+            yaml.dump(payload, handle, allow_unicode=True, default_flow_style=False)
+
+    def _move_pending_mention(self, message_ts: str, target: str) -> None:
+        """Move a pending mention record to completed/failed."""
+        pending_file = self.data_dir / "mentions" / "pending" / f"{message_ts.replace('.', '_')}.yaml"
+        if not pending_file.exists():
+            return
+        destination_dir = self.data_dir / "mentions" / target
+        destination_dir.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(pending_file), str(destination_dir / pending_file.name))
+
+    @staticmethod
+    def _is_process_alive(pid: int | None) -> bool:
+        """Return True if a process is alive."""
+        if not pid or pid <= 0:
+            return False
+        try:
+            os.kill(pid, 0)
+        except OSError:
+            return False
+        return True
+
+    @staticmethod
+    def _terminate_process(process: subprocess.Popen[str] | None) -> None:
+        """Best-effort terminate/kill helper."""
+        if process is None:
+            return
+        if process.poll() is not None:
+            return
+        try:
+            process.terminate()
+            process.wait(timeout=3)
+            return
+        except subprocess.TimeoutExpired:
+            pass
+        except OSError:
+            return
+        try:
+            process.kill()
+            process.wait(timeout=2)
+        except (subprocess.TimeoutExpired, OSError):
+            pass
+
+    @staticmethod
+    def _extract_external_session_id(text: str) -> str | None:
+        """Extract UUID-like Claude session IDs from text blobs."""
+        if not text:
+            return None
+        patterns = [
+            r'"sessionId"\s*:\s*"([0-9a-f-]{36})"',
+            r'"session_id"\s*:\s*"([0-9a-f-]{36})"',
+            r"sessionId=([0-9a-f-]{36})",
+            r"session_id=([0-9a-f-]{36})",
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return str(match.group(1))
+        return None
+
+    def _detect_external_session_id_from_claude_logs(
+        self,
+        *,
+        message_ts: str,
+        started_unix: float,
+    ) -> str | None:
+        """Find Claude internal session id by scanning recent local Claude logs."""
+        project_root = self.data_dir.parent.resolve()
+        project_slug = "-" + str(project_root).lstrip("/").replace("/", "-")
+        project_logs = Path.home() / ".claude" / "projects" / project_slug
+        if not project_logs.exists():
+            return None
+
+        try:
+            candidates = sorted(
+                project_logs.glob("*.jsonl"),
+                key=lambda path: path.stat().st_mtime,
+                reverse=True,
+            )
+        except OSError:
+            return None
+
+        for path in candidates[:40]:
+            try:
+                stat = path.stat()
+            except OSError:
+                continue
+            if stat.st_mtime < started_unix - 5:
+                continue
+            try:
+                with path.open(encoding="utf-8", errors="ignore") as handle:
+                    text = handle.read(256_000)
+            except OSError:
+                continue
+            if message_ts and message_ts not in text:
+                continue
+            detected = self._extract_external_session_id(text)
+            if detected:
+                return detected
+            # Fallback: use filename if it is UUID-like.
+            if re.fullmatch(r"[0-9a-fA-F-]{36}", path.stem):
+                return path.stem
+        return None
+
+    def _run_claude_command(
+        self,
+        *,
+        cmd: list[str],
+        timeout_seconds: int,
+        env: dict[str, str],
+        mention_dir: Path,
+        session_id: str,
+        channel_id: str,
+        thread_ts: str,
+        heartbeat_metadata: dict[str, object] | None = None,
+    ) -> tuple[subprocess.CompletedProcess[str], int | None]:
+        """Run claude command with periodic heartbeat logging."""
+        process = subprocess.Popen(  # noqa: S603
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            cwd=str(self.data_dir.parent),
+            env=env,
+        )
+        pid = process.pid
+        started = time.monotonic()
+        meta = dict(heartbeat_metadata or {})
+        meta["pid"] = pid
+
+        self.session_manager.update_runtime_metadata(session_id, runner_pid=pid)
+        self.session_manager.add_memory_entry(
+            session_id=session_id,
+            key="runner_pid",
+            value=pid,
+            summary=f"Claude subprocess PID: {pid}",
+            source="sdk_poller",
+        )
+
+        while True:
+            elapsed = time.monotonic() - started
+            remaining = timeout_seconds - elapsed
+            if remaining <= 0:
+                self._terminate_process(process)
+                stdout, stderr = process.communicate()
+                raise subprocess.TimeoutExpired(
+                    cmd=cmd,
+                    timeout=timeout_seconds,
+                    output=stdout,
+                    stderr=stderr,
+                )
+
+            try:
+                wait_window = max(1.0, min(float(self.heartbeat_interval_seconds), remaining))
+                stdout, stderr = process.communicate(timeout=wait_window)
+                completed = subprocess.CompletedProcess(
+                    args=cmd,
+                    returncode=process.returncode if process.returncode is not None else 1,
+                    stdout=stdout,
+                    stderr=stderr,
+                )
+                return completed, pid
+            except subprocess.TimeoutExpired:
+                elapsed_seconds = int(time.monotonic() - started)
+                self.interaction_logger.log_processing_heartbeat(
+                    session_id=session_id,
+                    channel_id=channel_id,
+                    thread_ts=thread_ts,
+                    elapsed_seconds=elapsed_seconds,
+                    pid=pid,
+                    metadata=meta,
+                )
+                logger.info(
+                    "[Agentic] Heartbeat session=%s elapsed=%ss pid=%s mention_dir=%s",
+                    session_id,
+                    elapsed_seconds,
+                    pid,
+                    mention_dir,
+                )
+
     def _try_context_recovery(
         self,
         base_cmd: list[str],
@@ -766,6 +963,16 @@ class SlackSDKPoller:
         message_ts = message.get("ts", "")
         user_id = message.get("user", "")
         text = message.get("text", "")
+        thread_ts = str(message.get("thread_ts") or message_ts)
+        mention_dir = self.data_dir / "mentions"
+        session_id = ""
+        session_file: Path | None = None
+        session_data: dict = {}
+        complexity = "simple"
+        is_workflow_task = False
+        is_forking = False
+        fork_source = None
+        external_session_id: str | None = None
 
         try:
             # Save mention info to file and get directory
@@ -778,16 +985,29 @@ class SlackSDKPoller:
             complexity = mention_data.get("complexity", "simple")
             logger.info(f"[Agentic] Complexity: {complexity}")
 
-            # Policy: create a new session for every mention event (same thread can have many sessions).
+            # Check for a previous completed session in the same thread for fork
+            is_thread_reply = thread_ts != message_ts
+            fork_source = None
+            if is_thread_reply:
+                fork_source = self.session_manager.get_forkable_session_for_thread(
+                    channel_id,
+                    thread_ts,
+                    max_age_seconds=self.fork_max_age_seconds,
+                )
+                if fork_source:
+                    logger.info(f"[Agentic] Fork source: {fork_source.session_id}")
+
+            # Create a new session for every mention event.
             agent_session = self.session_manager.create_session(
                 channel_id=channel_id,
                 thread_ts=thread_ts,
                 user_id=user_id,
                 message=text,
                 trigger_type="mention",
+                forked_from=fork_source.session_id if fork_source else None,
             )
             session_id = agent_session.session_id
-            is_resuming = False
+            is_forking = fork_source is not None
 
             # Register thread-session mapping for thread-level history view.
             self.session_manager.register_thread_session(channel_id, thread_ts, session_id)
@@ -802,8 +1022,9 @@ class SlackSDKPoller:
                 user_id=user_id,
                 metadata={
                     "complexity": complexity,
-                    "is_resuming": is_resuming,
-                    "is_new_thread": thread_ts == message_ts,
+                    "is_forking": is_forking,
+                    "forked_from": fork_source.session_id if fork_source else None,
+                    "is_new_thread": not is_thread_reply,
                 },
             )
 
@@ -812,8 +1033,13 @@ class SlackSDKPoller:
                 session_id=session_id,
                 channel_id=channel_id,
                 thread_ts=thread_ts,
-                is_resuming=is_resuming,
-                metadata={"complexity": complexity},
+                is_resuming=False,
+                metadata={
+                    "complexity": complexity,
+                    "is_forking": is_forking,
+                    "forked_from": fork_source.session_id if fork_source else None,
+                    "fork_max_age_seconds": self.fork_max_age_seconds,
+                },
             )
 
             # Store initial context in memory
@@ -832,11 +1058,14 @@ class SlackSDKPoller:
                 "thread_ts": thread_ts,
                 "complexity": complexity,
                 "status": "started",
+                "is_forking": is_forking,
+                "forked_from": fork_source.session_id if fork_source else None,
+                "external_session_id": None,
+                "runner_pid": None,
                 "created_at": datetime.now().isoformat(),
             }
             session_file = mention_dir / "session.yaml"
-            with open(session_file, "w", encoding="utf-8") as f:
-                yaml.dump(session_data, f, allow_unicode=True)
+            self._save_yaml(session_file, session_data)
 
             # Build prompt using /respond-mention skill with workflow trigger
             input_file = mention_dir / "input.yaml"
@@ -848,8 +1077,7 @@ class SlackSDKPoller:
                 yaml.dump(mention_data, f, allow_unicode=True, default_flow_style=False)
 
             session_data["workflow_task"] = is_workflow_task
-            with open(session_file, "w", encoding="utf-8") as f:
-                yaml.dump(session_data, f, allow_unicode=True)
+            self._save_yaml(session_file, session_data)
 
             # Download files from the thread (if any)
             files_context = self._download_thread_files(channel_id, thread_ts, mention_dir)
@@ -880,6 +1108,19 @@ This request has been classified as complex and will proceed through a step-by-s
                     if files_context
                     else ""
                 }
+## Long-Term Memory
+
+You MUST use `/remember` and `/recall` to manage long-term memory at each major step:
+
+- **Before exploration**: `/recall --what "relevant keywords"` to find related past requests/work
+- **After exploration**: `/remember req --who "{mention_data["user"]}" --where "{
+                    channel_id
+                }" --what "exploration summary" --topics "topic1,topic2"`
+- **After TODO creation**: `/remember work --purpose "TODO creation for task" --action create_todo`
+- **After any skill completion**: `/remember work --purpose "skill result summary" --action "skill_name"`
+
+This ensures all work is recorded in long-term memory for future reference.
+
 ## 📌 Required Execution Order
 
 ### Step 1: Initial Response (MUST send - Block Kit)
@@ -993,8 +1234,19 @@ Example Block Kit structure for a response:
 2. If Block Kit `blocks` parameter is not supported by the MCP tool, fall back to plain `text` only
 3. If slack MCP fails, use slack-bot MCP:
    - mcp__slack-bot__slack_reply_to_thread(channel_id, thread_ts, text)
-4. Write responses naturally following Human Framework rules
-5. Even if no context found, send a response like "I couldn't find related information"
+4. If BOTH MCP tools fail, use Python SDK as final fallback (Bash tool):
+```python
+import os, sys
+sys.path.insert(0, 'src')
+from slack_sdk import WebClient
+token = os.environ.get('SLACK_TOKEN')
+cookie = os.environ.get('SLACK_COOKIE', '')
+headers = {{'Cookie': f'd={{cookie}}'}} if token and token.startswith('xoxc-') and cookie else {{}}
+client = WebClient(token=token, headers=headers)
+client.chat_postMessage(channel='{channel_id}', text='YOUR_MESSAGE', thread_ts='{thread_ts}')
+```
+5. Write responses naturally following Human Framework rules
+6. Even if no context found, send a response like "I couldn't find related information"
 
 ## Response Style
 - Friendly and natural language
@@ -1039,6 +1291,9 @@ Example Block Kit structure for a response:
                 "Read",
                 "Write",
                 "Glob",
+                # Bash/Grep needed for /remember skill Python execution
+                "Bash",
+                "Grep",
             ]
             base_cmd = [
                 "claude",
@@ -1047,47 +1302,103 @@ Example Block Kit structure for a response:
             ] + allowed_tools
 
             # Build command based on session mode
-            if is_resuming:
-                # Resume existing session: claude -r <session_id> "query"
-                # This preserves conversation context from previous interactions
-                cmd = base_cmd + ["-r", session_id, prompt]
-                logger.info(f"[Agentic] Resuming session {session_id} with claude -r")
+            if is_forking:
+                # Fork from previous session: inherits conversation context
+                fork_from_id = fork_source.session_id
+                cmd = base_cmd + ["--resume", fork_from_id, "--fork-session", prompt]
+                logger.info(f"[Agentic] Forking {fork_from_id} → {session_id}")
             else:
-                # New session: claude --session-id <uuid> -p "prompt"
+                # Fresh session: no prior context
                 cmd = base_cmd + ["--session-id", session_id, "-p", prompt]
-                logger.info(f"[Agentic] Starting new session {session_id}")
+                logger.info(f"[Agentic] Starting fresh session {session_id}")
 
             logger.info(f"[Agentic] Running claude (complexity={complexity}): {mention_dir}")
 
-            # Get timeout from config (default 30 minutes, configurable via ULTRAWORK_AGENTIC_TIMEOUT env)
-            agentic_timeout = get_config().executor.agentic_timeout_seconds
+            # Get timeout from config (default 24 hours, configurable via ULTRAWORK_AGENTIC_TIMEOUT env)
+            runtime_cfg = get_config().executor
+            agentic_timeout = runtime_cfg.agentic_timeout_seconds
 
             # Set IS_SANDBOX=1 to allow --dangerously-skip-permissions with root/sudo
             env = os.environ.copy()
             env["IS_SANDBOX"] = "1"
 
-            result = subprocess.run(
-                cmd,
-                timeout=agentic_timeout,
-                capture_output=True,
-                text=True,
-                cwd=str(self.data_dir.parent),  # Project root
+            fork_failed = False
+            runner_pid: int | None = None
+            claude_started_unix = time.time()
+            result, runner_pid = self._run_claude_command(
+                cmd=cmd,
+                timeout_seconds=agentic_timeout,
                 env=env,
+                mention_dir=mention_dir,
+                session_id=session_id,
+                channel_id=channel_id,
+                thread_ts=thread_ts,
+                heartbeat_metadata={
+                    "complexity": complexity,
+                    "is_workflow_task": is_workflow_task,
+                    "is_forking": is_forking,
+                    "forked_from": fork_source.session_id if fork_source else None,
+                },
             )
+            session_data["runner_pid"] = runner_pid
+            self._save_yaml(session_file, session_data)
 
-            # Handle "Prompt is too long" error with /compact or /clear
-            prompt_too_long = (
-                result.returncode != 0
-                and result.stderr
-                and "prompt is too long" in result.stderr.lower()
-            )
-            if prompt_too_long and is_resuming:
+            # Handle fork failure: fall back to fresh start
+            if is_forking and result.returncode != 0:
                 logger.warning(
-                    f"[Agentic] Prompt too long for session {session_id}, trying /compact..."
+                    f"[Agentic] Fork failed (exit={result.returncode}), "
+                    f"falling back to fresh start. stderr: {(result.stderr or '')[:200]}"
                 )
-                result = self._try_context_recovery(
-                    base_cmd, session_id, prompt, agentic_timeout, env, mention_dir
+                self._save_execution_result(mention_dir, result, "fork_failed")
+                fork_failed = True
+
+                # Retry as a fresh session without fork
+                cmd = base_cmd + ["--session-id", session_id, "-p", prompt]
+                logger.info(f"[Agentic] Retrying as fresh session {session_id}")
+                claude_started_unix = time.time()
+                result, runner_pid = self._run_claude_command(
+                    cmd=cmd,
+                    timeout_seconds=agentic_timeout,
+                    env=env,
+                    mention_dir=mention_dir,
+                    session_id=session_id,
+                    channel_id=channel_id,
+                    thread_ts=thread_ts,
+                    heartbeat_metadata={
+                        "complexity": complexity,
+                        "is_workflow_task": is_workflow_task,
+                        "is_forking": False,
+                        "fork_failed": True,
+                        "forked_from": fork_source.session_id if fork_source else None,
+                    },
                 )
+                session_data["runner_pid"] = runner_pid
+                self._save_yaml(session_file, session_data)
+
+            # Capture Claude-internal session id for forked executions.
+            external_session_id = self._extract_external_session_id(
+                f"{result.stdout or ''}\n{result.stderr or ''}"
+            )
+            if not external_session_id and is_forking:
+                external_session_id = self._detect_external_session_id_from_claude_logs(
+                    message_ts=message_ts,
+                    started_unix=claude_started_unix,
+                )
+            if external_session_id:
+                self.session_manager.update_runtime_metadata(
+                    session_id,
+                    runner_pid=runner_pid,
+                    external_session_id=external_session_id,
+                )
+                self.session_manager.add_memory_entry(
+                    session_id=session_id,
+                    key="external_session_id",
+                    value=external_session_id,
+                    summary=f"Claude external session id: {external_session_id}",
+                    source="sdk_poller",
+                )
+                session_data["external_session_id"] = external_session_id
+                self._save_yaml(session_file, session_data)
 
             # Save execution result
             self._save_execution_result(mention_dir, result, "main")
@@ -1100,6 +1411,9 @@ Example Block Kit structure for a response:
 
             # Update session status via SessionManager
             if result.returncode == 0:
+                # Save LTM records directly (safety net independent of complete_session)
+                self._save_mention_ltm(mention_data, session_id)
+
                 # Transition role based on workflow type
                 if is_workflow_task:
                     self.session_manager.transition_role(
@@ -1122,15 +1436,25 @@ Example Block Kit structure for a response:
                 metadata={
                     "complexity": complexity,
                     "is_workflow_task": is_workflow_task,
-                    "is_resuming": is_resuming,
+                    "is_forking": is_forking,
+                    "fork_failed": fork_failed,
+                    "forked_from": fork_source.session_id if fork_source else None,
+                    "external_session_id": external_session_id,
                 },
             )
 
             # Update session file (for backward compatibility)
             session_data["status"] = "completed" if result.returncode == 0 else "failed"
             session_data["completed_at"] = datetime.now().isoformat()
-            with open(session_file, "w", encoding="utf-8") as f:
-                yaml.dump(session_data, f, allow_unicode=True)
+            session_data["runner_pid"] = None
+            if external_session_id:
+                session_data["external_session_id"] = external_session_id
+            self._save_yaml(session_file, session_data)
+            self.session_manager.update_runtime_metadata(
+                session_id,
+                runner_pid=None,
+                external_session_id=external_session_id,
+            )
 
             # Update reactions based on result
             self._remove_reaction(channel_id, message_ts, EMOJI_PROCESSING)
@@ -1141,7 +1465,9 @@ Example Block Kit structure for a response:
                 "complexity": complexity,
                 "session_id": session_id,
                 "workflow_task": is_workflow_task,
-                "is_resuming": is_resuming,
+                "is_forking": is_forking,
+                "fork_failed": fork_failed,
+                "forked_from": fork_source.session_id if fork_source else None,
                 "response_length": len(result.stdout) if result.stdout else 0,
                 "completed_at": datetime.now().isoformat(),
             }
@@ -1153,13 +1479,7 @@ Example Block Kit structure for a response:
                 self._add_reaction(channel_id, message_ts, EMOJI_DONE)
                 logger.info(f"[Agentic] Successfully handled: {message_ts}")
 
-                # Move pending file to completed
-                pending_file = (
-                    self.data_dir / "mentions" / "pending" / f"{message_ts.replace('.', '_')}.yaml"
-                )
-                if pending_file.exists():
-                    completed_file = self.data_dir / "mentions" / "completed" / pending_file.name
-                    shutil.move(str(pending_file), str(completed_file))
+                self._move_pending_mention(message_ts, "completed")
 
                 return True
             else:
@@ -1168,27 +1488,125 @@ Example Block Kit structure for a response:
                     f"[Agentic] Failed: {result.stderr[:200] if result.stderr else 'no stderr'}"
                 )
 
-                # Move pending file to failed
-                pending_file = (
-                    self.data_dir / "mentions" / "pending" / f"{message_ts.replace('.', '_')}.yaml"
-                )
-                if pending_file.exists():
-                    failed_file = self.data_dir / "mentions" / "failed" / pending_file.name
-                    shutil.move(str(pending_file), str(failed_file))
+                self._move_pending_mention(message_ts, "failed")
 
                 return False
 
-        except subprocess.TimeoutExpired:
+        except subprocess.TimeoutExpired as e:
             logger.error(f"[Agentic] Timeout for {message_ts}")
+            if session_id:
+                timeout_result = subprocess.CompletedProcess(
+                    args=e.cmd or [],
+                    returncode=124,
+                    stdout=e.output or "",
+                    stderr=e.stderr or "Process timed out",
+                )
+                if mention_dir.exists():
+                    self._save_execution_result(mention_dir, timeout_result, "timeout")
+                self.session_manager.complete_session(session_id, success=False)
+                self.interaction_logger.log_processing_completed(
+                    session_id=session_id,
+                    channel_id=channel_id,
+                    thread_ts=thread_ts,
+                    success=False,
+                    exit_code=124,
+                    metadata={
+                        "complexity": complexity,
+                        "is_workflow_task": is_workflow_task,
+                        "is_forking": is_forking,
+                        "forked_from": fork_source.session_id if fork_source else None,
+                        "error": "timeout",
+                        "external_session_id": external_session_id,
+                    },
+                )
+                if session_file:
+                    session_data["status"] = "failed"
+                    session_data["completed_at"] = datetime.now().isoformat()
+                    session_data["runner_pid"] = None
+                    session_data["error"] = "timeout"
+                    self._save_yaml(session_file, session_data)
+                self.session_manager.update_runtime_metadata(
+                    session_id,
+                    runner_pid=None,
+                    external_session_id=external_session_id,
+                )
             self._remove_reaction(channel_id, message_ts, EMOJI_PROCESSING)
             self._add_reaction(channel_id, message_ts, EMOJI_ERROR)
+            self._move_pending_mention(message_ts, "failed")
             return False
 
         except Exception as e:
             logger.error(f"[Agentic] Error: {e}")
+            if session_id:
+                error_result = subprocess.CompletedProcess(
+                    args=[],
+                    returncode=1,
+                    stdout="",
+                    stderr=str(e),
+                )
+                if mention_dir.exists():
+                    self._save_execution_result(mention_dir, error_result, "exception")
+                self.session_manager.complete_session(session_id, success=False)
+                self.interaction_logger.log_processing_completed(
+                    session_id=session_id,
+                    channel_id=channel_id,
+                    thread_ts=thread_ts,
+                    success=False,
+                    exit_code=1,
+                    metadata={
+                        "complexity": complexity,
+                        "is_workflow_task": is_workflow_task,
+                        "is_forking": is_forking,
+                        "forked_from": fork_source.session_id if fork_source else None,
+                        "error": str(e),
+                        "external_session_id": external_session_id,
+                    },
+                )
+                if session_file:
+                    session_data["status"] = "failed"
+                    session_data["completed_at"] = datetime.now().isoformat()
+                    session_data["runner_pid"] = None
+                    session_data["error"] = str(e)
+                    self._save_yaml(session_file, session_data)
+                self.session_manager.update_runtime_metadata(
+                    session_id,
+                    runner_pid=None,
+                    external_session_id=external_session_id,
+                )
             self._remove_reaction(channel_id, message_ts, EMOJI_PROCESSING)
             self._add_reaction(channel_id, message_ts, EMOJI_ERROR)
+            self._move_pending_mention(message_ts, "failed")
             return False
+
+    def _save_mention_ltm(self, mention_data: dict, session_id: str) -> None:
+        """Save a RequestRecord to LTM directly from the SDK poller.
+
+        This acts as a safety net independent of complete_session()'s own
+        LTM save, ensuring at least one record is created per mention.
+        """
+        try:
+            from ultrawork.agent.memory_manager import MemoryManager
+            from ultrawork.memory.save_policy import SaveContext
+
+            mm = MemoryManager(self.data_dir)
+
+            req = mm.create_request_record(
+                who=mention_data.get("user", "unknown"),
+                where=mention_data.get("channel_id", "unknown"),
+                what=mention_data.get("text", "")[:200],
+            )
+            req_ctx = SaveContext(
+                record_type="request",
+                content_summary=mention_data.get("text", "")[:200],
+                is_novel=True,
+                led_to_decision=True,
+                scope="cross_session",
+            )
+            mm.commit_record(req, req_ctx)
+            logger.info(f"[LTM] Saved RequestRecord {req.id} for session {session_id}")
+
+        except Exception:
+            logger.debug("[LTM] Mention LTM save failed", exc_info=True)
 
     def _process_mention_agentic(self, message: dict, channel_id: str) -> bool:
         """Process a mention using claude -p skill (non-blocking)."""
@@ -1200,10 +1618,18 @@ Example Block Kit structure for a response:
         # Add 👀 reaction to indicate processing
         self._add_reaction(channel_id, message_ts, EMOJI_PROCESSING)
 
+        def _run_with_semaphore():
+            acquired = self._agent_semaphore.acquire(blocking=True)
+            if not acquired:
+                return
+            try:
+                self._process_mention_agentic_sync(message, channel_id)
+            finally:
+                self._agent_semaphore.release()
+
         # Run in background thread so polling continues
         thread = threading.Thread(
-            target=self._process_mention_agentic_sync,
-            args=(message, channel_id),
+            target=_run_with_semaphore,
             daemon=True,
         )
         thread.start()
@@ -1222,6 +1648,65 @@ Example Block Kit structure for a response:
             self._process_mention_agentic(message, channel_id)
         else:
             self._process_mention_simple(message, channel_id)
+
+    def _reap_stale_active_sessions(self) -> int:
+        """Fail stale active sessions whose runner is no longer alive."""
+        now = time.time()
+        reaped = 0
+        active_sessions = self.session_manager.list_sessions(
+            status=SessionStatus.ACTIVE,
+            limit=1000,
+        )
+
+        for session in active_sessions:
+            if str(getattr(session, "trigger_type", "") or "") != "mention":
+                continue
+            runner_pid = getattr(session, "runner_pid", None)
+            if self._is_process_alive(runner_pid):
+                continue
+
+            updated_at = session.updated_at or session.created_at
+            if not updated_at:
+                continue
+            age_seconds = now - updated_at.timestamp()
+            if age_seconds < self.stalled_threshold_seconds:
+                continue
+
+            if not self.session_manager.complete_session(session.session_id, success=False):
+                continue
+
+            self.interaction_logger.log_processing_completed(
+                session_id=session.session_id,
+                channel_id=session.channel_id or "",
+                thread_ts=session.thread_ts or "",
+                success=False,
+                exit_code=1,
+                metadata={
+                    "error": "stale_session_reaped",
+                    "age_seconds": int(age_seconds),
+                    "runner_pid": runner_pid,
+                },
+            )
+            self.session_manager.update_runtime_metadata(session.session_id, runner_pid=None)
+            reaped += 1
+            logger.warning(
+                "[Agentic] Reaped stale active session %s (age=%ss, pid=%s)",
+                session.session_id,
+                int(age_seconds),
+                runner_pid,
+            )
+
+        return reaped
+
+    def _maybe_reap_stale_sessions(self, *, force: bool = False) -> None:
+        """Run stale-session cleanup periodically."""
+        now = time.time()
+        if not force and (now - self._last_stale_cleanup_at) < self.stale_cleanup_interval_seconds:
+            return
+        self._last_stale_cleanup_at = now
+        reaped = self._reap_stale_active_sessions()
+        if reaped:
+            logger.info("[Agentic] Stale cleanup reaped %s session(s)", reaped)
 
     async def poll_once(self) -> dict:
         """Execute a single poll cycle."""
@@ -1309,6 +1794,7 @@ Example Block Kit structure for a response:
         # Record daemon start
         self.state_manager.set_daemon_running(os.getpid())
         self._prime_new_only_baseline()
+        self._maybe_reap_stale_sessions(force=True)
         logger.info(f"Daemon started (PID: {os.getpid()})")
 
         # Initialize cron runner
@@ -1354,6 +1840,7 @@ Example Block Kit structure for a response:
         try:
             while self._running:
                 try:
+                    self._maybe_reap_stale_sessions()
                     await self.poll_once()
                 except Exception as e:
                     logger.error(f"Poll error: {e}")

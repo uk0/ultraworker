@@ -1,0 +1,70 @@
+channel:
+  id: C07EJLJSVUG
+  name: product-supply
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 28
+  total_threads: 14
+  active_users: 14
+  avg_messages_per_day: 2.3
+summary: |
+  2025-Q1은 Supply 검색 성능 고도화와 모델 변환 이슈 해결에 집중한 분기이다.
+  BGE-M3 + GTE 리랭커 기준으로 ColBERT가 베이스라인 대비 11%p 이상 성능 향상을 보였으며,
+  query expansion 결과도 평가에 추가되었다. GTE 리랭커 TensorFlow 변환 모델에서 패딩 입력 시
+  정확도가 불안정해지는 심각한 이슈가 발견되어 해결 작업이 진행되었고, BGE-M3 TF 변환 코드에서도
+  attention masking 미적용 오류가 발견되어 수정되었다. health check 엔드포인트 정비(/_health만 유지),
+  Kotlin 기반 Supply 서버 기동 성공, 쿼리 익스펜션(query expansion) 적용 및 테스트,
+  컨텍스츄얼 리트리벌(contextual retrieval) 논의 및 역할 분배,
+  Supply가 문서명을 기반으로 검색하는 로직 구현 등이 진행되었다.
+topics:
+  - ColBERT 적용으로 검색 성능 11%p 향상
+  - GTE 리랭커 TF 변환 시 패딩 정확도 이슈 해결
+  - BGE-M3 TF 변환 코드 attention masking 오류 수정
+  - Kotlin 기반 Supply 서버 기동
+  - 쿼리 익스펜션(Query Expansion) 적용 및 테스트
+  - 컨텍스츄얼 리트리벌(Contextual Retrieval) 논의
+  - 문서명 기반 검색 로직 구현
+  - health check 엔드포인트 정비
+key_discussions:
+  - date: '2025-01-06'
+    summary: GTE 리랭커 TF 변환 모델 패딩 시 정확도 불안정 이슈 발견 및 해결 (84 replies)
+  - date: '2025-01-08'
+    summary: BGE-M3 TF 변환 코드 attention masking 미적용 오류 발견 - PR 제출 (47 replies)
+  - date: '2025-01-17'
+    summary: ColBERT 적용 시 베이스라인 대비 11%p 성능 향상 확인 - query expansion 결과 업데이트 예정 (27 replies)
+  - date: '2025-01-17'
+    summary: health check 엔드포인트 정비 요청 - /_health만 남기고 나머지 정리
+  - date: '2025-03-04'
+    summary: Kotlin 기반 Supply 서버 기동 성공 (4 replies)
+  - date: '2025-03-18'
+    summary: 쿼리 익스펜션 적용 관련 논의 및 테스트 (57 replies)
+  - date: '2025-03-24'
+    summary: Supply 파일명 기반 검색 로직 구현 - metadata 컬렉션 vs document 컬렉션 논의 (42 replies)
+  - date: '2025-03-25'
+    summary: query expansion 에러 발생 및 디버깅 (73 replies)
+  - date: '2025-03-31'
+    summary: 컨텍스츄얼 리트리벌 역할 분배 및 팔로업 (50 replies)
+terminology:
+  - term: ColBERT
+    definition: 토큰 레벨 상호작용 기반 검색 모델. Supply에서 BGE-M3 위에 적용하여 성능 향상 달성
+  - term: Query Expansion
+    definition: 사용자 쿼리를 확장하여 검색 재현율을 높이는 기법. Supply에서 LLM 기반으로 구현
+    aliases:
+      - 쿼리 익스펜션
+      - QE
+  - term: Contextual Retrieval
+    definition: 문맥을 고려한 검색 기법. 문서 청크에 문맥 정보를 추가하여 검색 품질 향상
+    aliases:
+      - 컨텍스츄얼 리트리벌
+  - term: Parquet
+    definition: 컬럼 기반 파일 포맷. Supply에서 벡터 데이터 저장에 활용
+    aliases:
+      - 파퀘
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

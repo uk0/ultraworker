@@ -1,0 +1,36 @@
+channel:
+  id: C06HSVDS87P
+  name: eng-model-ensemble
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 2
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q3은 eng-model-ensemble 채널 활동이 저조한 분기. Sigrid Jin이 Qdrant 1.10의 RRF 네이티브 지원 기능을 공유하고, 정세민/박우명과 함께 관련 기술 토크를 진행. Qdrant의 prefetch 기반 sparse+dense 벡터 RRF 퓨전 코드 예시가 공유되어 기존 수동 앙상블 대비 간소화 가능성이 확인됨.
+topics:
+  - Qdrant 1.10 RRF 네이티브 지원
+  - Sparse + Dense 벡터 퓨전
+key_discussions:
+  - thread_ts: '1720106065.797539'
+    date: '2024-07-04'
+    title: 'Qdrant 1.10 RRF 지원 공유'
+    summary: 'Sigrid Jin이 Qdrant 1.10의 RRF 네이티브 지원 기능과 prefetch 기반 sparse+dense 퓨전 코드 공유. 13개 답글'
+  - thread_ts: '1720161713.800879'
+    date: '2024-07-05'
+    title: '모델 앙상블 관련 기술 토크'
+    summary: 'Sigrid Jin이 정세민, 박우명과 모델 앙상블 관련 기술 토크 일정 조율. 16개 답글'
+terminology:
+  - term: 'Qdrant'
+    definition: '오픈소스 벡터 데이터베이스. Sionic AI에서 검색 인프라로 활용'
+  - term: 'Fusion'
+    definition: '여러 검색 전략의 결과를 통합하는 기법. Qdrant 1.10에서 RRF 방식 네이티브 지원'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

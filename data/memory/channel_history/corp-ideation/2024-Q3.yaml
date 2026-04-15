@@ -1,0 +1,68 @@
+channel:
+  id: C057EPS43QW
+  name: corp-ideation
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 8
+  avg_messages_per_day: 0.01
+summary: |
+  2024-Q3 was dominated by a single major thread: preparation for the September 4th investor
+  shareholder meeting. The thread had 67 replies and involved extensive cross-functional
+  coordination covering company goods/merchandise ordering (standard kits with keyrings,
+  smart-tok, mugs), brochure printing, demo video preparation, product design system
+  finalization, Starbucks catering, welcome card messaging, and Notion-based task tracking.
+  The meeting targeted 4-8 investor attendees and included branded paper bags, company
+  brochures, and goods kits as takeaway materials.
+
+key_discussions:
+  - topic: "Investor Shareholder Meeting Preparation (9/4)"
+    date: "2024-08-12"
+    participants:
+      - "Noah (고석현)"
+      - "최윤정"
+      - "김혜원"
+      - "백은주"
+      - "정세민 (Sem)"
+      - "한시형"
+      - "hhhssw"
+    summary: |
+      Comprehensive planning thread for the September 4th investor shareholder meeting.
+      Covered logistics including merchandise ordering (standard kits from bethegoods.shop
+      with keyrings, smart-tok, mugs - 15 sets at 29,900 KRW each), custom paper bags,
+      Korean brochure reprinting, product demo video recording (timed with design system
+      completion), Starbucks catering delivery, and welcome card message drafting. Noah
+      (CEO) wrote the welcome card emphasizing the company mission of enabling all
+      enterprises to leverage AI. Coordination tracked via a Notion page.
+    outcome: |
+      All items procured and prepared before the September 4th event. Goods kits, brochures,
+      and mugs packaged in branded paper bags. Starbucks catering ordered for delivery.
+      Demo video recorded after design system deployment. Welcome card drafted by CEO.
+
+decisions:
+  - decision: "Order 15 standard goods kits from bethegoods.shop with keyrings, smart-tok, and mugs"
+    date: "2024-08-12"
+    context: "Needed branded takeaway items for investor shareholder meeting attendees"
+  - decision: "Reprint Korean brochures using existing design from previous vendor"
+    date: "2024-08-12"
+    context: "New brochure printing would take 2 weeks; existing design could be delivered in time"
+  - decision: "Prioritize design system completion over other frontend backlog items"
+    date: "2024-08-12"
+    context: "Design system needed for demo video recording before the shareholder meeting"
+
+terminology:
+  - term: "주주 간담회"
+    definition: "Investor shareholder meeting - a gathering for SionicAI's investors to review company progress"
+    aliases: ["shareholder meeting"]
+  - term: "디자인시스템"
+    definition: "SionicAI's product design system being applied to the Storm product UI"
+
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-agent

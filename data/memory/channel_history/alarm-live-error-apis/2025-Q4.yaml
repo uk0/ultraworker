@@ -1,0 +1,54 @@
+channel:
+  id: C09DQ2Y239C
+  name: alarm-live-error-apis
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 496
+  total_threads: 38
+  active_users: 13
+  avg_messages_per_day: 20.7
+summary: |
+  2025년 4분기 alarm-live-error-apis 채널은 라이브 API 환경(apis-manager, apis-parse-router)에서 발생한 에러 알람을 수신하는 채널로, 496개의 메시지와 38개의 스레드가 발생하였다. NewRelic을 통한 Critical 우선순위 이슈 알람이 주를 이루었으며, 주요 에러는 CLIENT_KEY_ACCOUNT_NOT_LINKED(계좌 미연결), 400 Bad Request 등 API 오류였다. APIS-PARSE-ROUTER-DEV 및 라이브 환경의 에러로그 알람 정책이 활발히 동작하였으며 13명이 모니터링에 참여하였다.
+topics:
+  - name: "NewRelic 에러 알람"
+    mention_count: 200
+    description: "NewRelic에서 발송되는 Critical/High 우선순위 API 에러 알람"
+  - name: "CLIENT_KEY_ACCOUNT_NOT_LINKED"
+    mention_count: 30
+    description: "Client Key에 연결된 계좌가 없을 때 발생하는 400 Bad Request 에러"
+  - name: "APIS-PARSE-ROUTER"
+    mention_count: 50
+    description: "파스 라우터 API의 에러 로그 알람 및 Signal Lost 이슈"
+  - name: "Signal Lost 알람"
+    mention_count: 20
+    description: "에러로그 알람 신호가 1분 이상 손실될 때 발생하는 알람"
+key_discussions:
+  - thread_ts: '1730369400.000000'
+    date: '2025-10-31'
+    reply_count: 1
+    text_preview: "Signal lost for 1 minutes on APIS-PARSE-ROUTER-DEV-에러로그알람, CLIENT_KEY_ACCOUNT_NOT_LINKED 에러"
+  - thread_ts: '1730678054.000000'
+    date: '2025-11-04'
+    reply_count: 1
+    text_preview: "Critical priority issue active - APIS-PARSE-ROUTER 에러로그 알람 발생"
+terminology:
+  - term: "APIS-PARSE-ROUTER"
+    definition: "문서 파싱 요청을 라우팅하는 API 서버로 라이브 및 개발 환경에서 운영됨"
+    aliases: ["apis-parse-router"]
+    context: "스톰파스 API 연동의 핵심 라우팅 컴포넌트"
+  - term: "CLIENT_KEY_ACCOUNT_NOT_LINKED"
+    definition: "Client Key에 연결된 계좌가 없을 때 반환되는 API 에러 코드"
+    aliases: []
+    context: "400 Bad Request 응답으로 반환되며 데모 키 사용 시 주로 발생"
+  - term: "Signal Lost"
+    definition: "NewRelic 알람 신호가 일정 시간 이상 수신되지 않을 때 발생하는 알람 상태"
+    aliases: []
+    context: "에러로그 알람 정책의 한 유형"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

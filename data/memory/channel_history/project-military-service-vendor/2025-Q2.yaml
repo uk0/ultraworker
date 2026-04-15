@@ -1,0 +1,29 @@
+channel:
+  id: C06SQS126NM
+  name: project-military-service-vendor
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  전문연구요원 제도 신청을 위한 서류 준비가 진행된 분기.
+  박우명이 전문연 신청에 필요한 서류 목록을 공유했으며, 6월 11일부터 신청 기간이 시작됨을 안내했다.
+  필요 서류: 법인 등기사항전부증명서(말소사항 포함, 25.5.1 이후 발급분), 윤도균 소득자별 근로소득원천징수부(24년6월~25년5월분) 등.
+topics:
+  - 전문연구요원 신청
+  - 서류 준비
+key_discussions:
+  - thread_ts: '1749101737.663539'
+    date: '2025-06-05'
+    summary: '전문연 신청 필요 서류 목록 공유 (법인등기, 원천징수부 등)'
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

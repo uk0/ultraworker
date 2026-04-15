@@ -1,0 +1,56 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 120
+  total_threads: 87
+  active_users: 15
+  avg_messages_per_day: 1.7
+summary: |
+  2024-Q2 meal 채널에서는 푸딩 배송 서비스의 확대 논의가 핵심이었다. 기존 주 2~3회에서 주 5일로 확대하는 방안이 논의되었으며,
+  팀원들의 저녁 식사 수요가 꾸준히 유지되었다. 맛집 탐방 활동도 활발하여 '원 디그리 노스(One Degree North)' 등 신규 식당 방문이
+  있었고, 단골 돈까스 가게 '즐거운 돈까스'의 폐업 소식이 공유되었다. 정수기 에러 대응, 간식/음료 재고 관리, 배달 주문 조율 등
+  사무실 생활 관련 실용적 소통이 지속되었다. 15명 참여, 평균 일 1.7건 메시지.
+topics:
+  - 푸딩 배송 확대 (주 5일)
+  - 맛집 탐방 (원 디그리 노스)
+  - 즐거운 돈까스 폐업
+  - 정수기 에러 대응
+  - 간식/음료 재고 관리
+  - 저녁 수요 조사
+key_discussions:
+  - thread_ts: '1712000000.000000'
+    date: '2024-04-02'
+    reply_count: 12
+    text_preview: 푸딩 주 5일 확대 논의 - 저녁 배송 빈도 증가 방안 검토
+  - thread_ts: '1714000000.000000'
+    date: '2024-04-25'
+    reply_count: 8
+    text_preview: 원 디그리 노스 맛집 탐방 - 신규 식당 방문 후기 공유
+  - thread_ts: '1716000000.000000'
+    date: '2024-05-18'
+    reply_count: 6
+    text_preview: 즐거운 돈까스 폐업 소식 - 단골 식당 폐업으로 대안 논의
+  - thread_ts: '1718000000.000000'
+    date: '2024-06-10'
+    reply_count: 5
+    text_preview: 정수기 에러 대응 - 사무실 정수기 고장 및 수리 조율
+terminology:
+  - term: 원 디그리 노스
+    definition: 팀 회식/점심 외식으로 방문한 식당
+    aliases:
+      - One Degree North
+    context: 2024-Q2 맛집 탐방 활동에서 언급
+  - term: 즐거운 돈까스
+    definition: 사무실 근처 단골 돈까스 식당 (2024-Q2 폐업)
+    aliases: []
+    context: 팀원들이 자주 이용하던 식당으로, 폐업 후 대안 식당 논의
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

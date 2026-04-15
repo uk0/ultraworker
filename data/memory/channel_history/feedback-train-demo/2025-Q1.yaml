@@ -1,0 +1,49 @@
+channel:
+  id: C08D5ANVDEE
+  name: feedback-train-demo
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 14
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 7.0
+summary: |
+  2025년 1분기 feedback-train-demo 채널은 임베딩 피드백 기반 모델 트레이닝 기능의 데모를 위해 2월에 신설된 채널이다.
+  채널 생성자가 "/sionic-train 46172636 dev embedding feedback" 형식의 Slack 커맨드 아이디어를 제안하였으며, 이를 통해 피드백 기반 임베딩 트레이닝을 트리거하고 임베딩 URL을 반환하는 기능 구현을 목표로 하였다.
+  CronJob YAML 작성, GitHub 저장소 연계, 월요일 데모 발표 계획 등이 논의되었다. 이 채널은 "마왕 님"이 제안하였으나 후속 작업이 없었던 피드백 트레이닝 기능을 구현하기 위해 시작되었다.
+topics:
+  - name: "임베딩 피드백 트레이닝 Slack 커맨드"
+    mention_count: 5
+    description: "/sionic-train 커맨드로 임베딩 피드백 트레이닝을 트리거하는 기능 개발"
+  - name: "CronJob YAML 작성"
+    mention_count: 2
+    description: "배치 잡 실행을 위한 Kubernetes CronJob YAML 구성 작업"
+  - name: "데모 발표 준비"
+    mention_count: 2
+    description: "월요일 데모에서 슬랙 커맨드와 임베딩 URL 반환까지 보여주는 1차 성공 목표 설정"
+key_discussions:
+  - thread_ts: '1739420520.000000'
+    date: '2025-02-13'
+    reply_count: 0
+    text_preview: "/sionic-train 슬랙 커맨드 아이디어 제안 및 채널 초기 논의"
+  - thread_ts: '1739511240.000000'
+    date: '2025-02-14'
+    reply_count: 0
+    text_preview: "robust-m3-benchmark CronJob YAML 작성 중 공유"
+terminology:
+  - term: "sionic-train"
+    definition: "임베딩 피드백 트레이닝을 트리거하는 Slack 커맨드 (개발 중)"
+    aliases: ["/sionic-train"]
+    context: "dev 환경에서 특정 문서 ID에 대한 embedding feedback 트레이닝 실행"
+  - term: "마왕"
+    definition: "임베딩 피드백 트레이닝 기능을 최초 제안한 팀원의 별명"
+    aliases: []
+    context: "피드백 트레이닝 소망을 제안하였으나 후속 구현이 없었던 상황에서 채널이 시작됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

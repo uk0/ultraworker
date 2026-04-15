@@ -1,0 +1,94 @@
+channel:
+  id: C099MU6530R
+  name: business-common-japan
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 169
+  total_threads: 107
+  active_users: 18
+  avg_messages_per_day: 3.1
+summary: |
+  2025-Q4 일본 비즈니스 채널에서는 CEATEC(막하리 메쎄) 부스 전시 준비 및 운영, ZeeVaa·Fujita·Logit·Mizuho 등 일본 기업과의 미팅 조율, AIエージェント博(AI 에이전트 박람회) 참가 준비가 활발히 진행되었다.
+  STORM의 Microsoft Teams 통합 기능 출시 및 토큰 비용 계산기(cost-per-token estimator) 개발 완료 소식이 공유되었으며, 일본 비즈니스팀용 Notion 데이터베이스(Customer DB·Partner DB·Deal DB)가 신규 구축되었다.
+  K-AI Cloud Alliance 일본 시장 진출 프로그램 참여, 채용 관련 JD 관리, JETRO 시장 리포트 수신 등 일본 시장 개발 전반에 걸친 운영 업무가 다수 논의되었다.
+topics:
+  - name: "CEATEC 전시 참가"
+    mention_count: 12
+    description: "2025년 10월 막하리 메쎄에서 열린 CEATEC 부스 설치, 운영, 데모 자료 준비"
+  - name: "AIエージェント博 참가"
+    mention_count: 8
+    description: "12월 AI 에이전트 박람회 Silver Sponsor 참가 및 발표 준비"
+  - name: "STORM 제품 업데이트"
+    mention_count: 6
+    description: "Microsoft Teams 통합 기능 출시, 토큰 비용 계산기 완성, STORM 이용 가이드 갱신"
+  - name: "일본 파트너사 미팅"
+    mention_count: 10
+    description: "ZeeVaa, Fujita, Logit, Mizuho, Kataoka 등과의 미팅 조율 및 NDA 검토"
+  - name: "K-AI Cloud Alliance"
+    mention_count: 5
+    description: "2025 K-AI Cloud Alliance 일본 시장 진출 프로그램 참여 및 서류 제출"
+  - name: "Japan Biz DB 구축"
+    mention_count: 4
+    description: "영어 기반 일본 비즈니스팀 Notion DB(Customer/Partner/Deal) 신규 구축"
+  - name: "CC CRM 행사"
+    mention_count: 4
+    description: "일본 최대 콜센터 산업 행사 CC CRM 참가 및 ZeeVaa AI 음성 데모 준비"
+  - name: "채용 및 HR"
+    mention_count: 3
+    description: "일본 사업개발 인턴/신입 채용 JD 관리, Indeed 채용 공고, TalentNode 활용 검토"
+key_discussions:
+  - thread_ts: '1760532056.889249'
+    date: '2025-10-22'
+    reply_count: 6
+    text_preview: "STORM 내 Stripe 결제 모듈 연동 관련 일본 법인 계정 대표자 등록 문제 논의"
+  - thread_ts: '1761036990.000000'
+    date: '2025-10-22'
+    reply_count: 10
+    text_preview: "Regza 미팅 어젠다 및 데모 준비 내용 공유"
+  - thread_ts: '1761200000.000000'
+    date: '2025-10-27'
+    reply_count: 9
+    text_preview: "ZeeVaa CC CRM 행사 AI 음성 데모 제작 계획 및 일정 논의"
+  - thread_ts: '1761571050.232829'
+    date: '2025-10-28'
+    reply_count: 2
+    text_preview: "STORM 일본 시장용 가이드라인에 요금제 포함 여부 검토"
+  - thread_ts: '1762320136.893089'
+    date: '2025-11-05'
+    reply_count: 18
+    text_preview: "dev-agent-eval 데모 페이지 공개 및 STORM 에이전트 키 발급 안내"
+  - thread_ts: '1763090000.000000'
+    date: '2025-11-06'
+    reply_count: 7
+    text_preview: "일본 비즈니스팀용 Notion DB(Customer/Partner/Deal) 신규 구축 안내"
+  - thread_ts: '1763800000.000000'
+    date: '2025-11-17'
+    reply_count: 8
+    text_preview: "Dify와 STORM 기능 비교 분석 요청"
+  - thread_ts: '1765939755.000000'
+    date: '2025-12-05'
+    reply_count: 0
+    text_preview: "토큰 비용 계산기 개발 완료 및 파트너별 접근 권한 관리 방안 안내"
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 엔터프라이즈 AI 워크플로우 플랫폼"
+  - term: "ZeeVaa"
+    definition: "일본 파트너사, AI 음성 솔루션 관련 협력"
+  - term: "CEATEC"
+    definition: "일본 최대 IT·전자 전시회 (막하리 메쎄 개최)"
+  - term: "CC CRM"
+    definition: "일본 최대 콜센터 산업 전시회"
+  - term: "AIエージェント博"
+    definition: "AI 에이전트 박람회, 2025년 12월 御茶ノ水 소라시티 개최"
+  - term: "K-AI Cloud Alliance"
+    definition: "한국 AI 기업의 일본 시장 진출 지원 프로그램"
+  - term: "cost-per-token estimator"
+    definition: "STORM 플랫폼의 토큰당 비용 계산기 기능"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

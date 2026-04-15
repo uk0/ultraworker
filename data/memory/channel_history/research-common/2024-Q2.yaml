@@ -1,0 +1,52 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 16
+  total_threads: 6
+  active_users: 7
+  avg_messages_per_day: 2.3
+summary: |
+  2024년 6월에 신설된 research-common 채널의 초기 운영 기간. 박우명이 research-general 채널과 분리하여 업무 논의 전용 채널로 개설하였다.
+  주요 활동으로는 Research Weekly 미팅 운영, 평가 파이프라인 타임라인 논의(Sigrid Jin), Research Topics 관련 PPT 공유(박우명), 특허 정리 작업 등이 진행되었다.
+  채널 멤버는 박우명, Sigrid Jin, 정세민, dkyoon, Noah(고석현), song, taeeunk1208 등 7명이 참여하였다.
+topics:
+  - name: "채널 신설 및 운영 체계"
+    mention_count: 3
+    description: "research-common 채널을 업무 논의용으로 신설하고 research-general과 분리"
+  - name: "Research Weekly 미팅"
+    mention_count: 3
+    description: "매주 월요일 4시에 진행하는 리서치 주간 미팅 운영"
+  - name: "평가 파이프라인"
+    mention_count: 1
+    description: "Sigrid Jin과 박우명이 논의한 평가 파이프라인 타임라인"
+  - name: "특허 정리"
+    mention_count: 1
+    description: "인턴(정환) 아이디어 관련 특허 정리 작업"
+key_discussions:
+  - date: "2024-06-13"
+    topic: "research-common 채널 신설"
+    participants: ["박우명"]
+    summary: "research-general에 여러 내용이 섞여 업무 논의용 채널을 별도로 개설"
+  - date: "2024-06-25"
+    topic: "평가 파이프라인 타임라인"
+    participants: ["Sigrid Jin", "박우명"]
+    summary: "평가 파이프라인 관련 타임라인 공유 및 논의 (14개 스레드 답변)"
+  - date: "2024-06-27"
+    topic: "Research Topics PPT 공유"
+    participants: ["박우명"]
+    summary: "Research Weekly에서 다룬 Research Topics를 PPT로 정리하여 공유"
+terminology:
+  - term: "Research Weekly"
+    definition: "리서치팀 주간 미팅으로 매주 진행되며 노션 페이지에 공유 내용을 작성"
+    aliases: ["리서치 위클리"]
+    context: "리서치팀 정기 미팅 운영"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

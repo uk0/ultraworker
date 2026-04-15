@@ -1,0 +1,65 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 13
+  total_threads: 7
+  active_users: 4
+  avg_messages_per_day: 0.1
+summary: |
+  2024-Q3에는 기술 블로그 아티클의 번역 검수와 퍼블리시 활동이 중심이었다.
+  song(영숙)이 주도하여 프롬프트 리커버리, 멀티모달 문서 검색 Embedding, LLM 모델 병합 등
+  다양한 기술 아티클을 퍼블리시했다. 최윤정이 번역 검수를 담당하여 Red Teaming, LLM Self-Discover
+  등의 논문 번역 아티클을 검토했다. baeksw98(백승우)은 LLM 모델 병합 실험 아티클을 작성하여
+  퍼블리시되었고, 테이블 추출 관련 외부 참고 자료도 공유했다. 기술 글쓰기 전문가(Technical Writer)에
+  대한 관심도 공유되었다.
+topics:
+  - blog article publishing
+  - translation review (번역 검수)
+  - prompt recovery
+  - multimodal document search embedding
+  - LLM model merging (모델 병합)
+  - Red Teaming language models
+  - LLM Self-Discover
+  - technical writing profession
+  - table extraction deep learning
+key_discussions:
+  - thread_ts: '1721121036.827979'
+    date: '2024-07-16'
+    topic: Liner Ranker 관련 블로그 글 공유 및 자사 블로그 활성화 독려
+    participants: [song]
+    reply_count: 11
+  - thread_ts: '1726816974.828079'
+    date: '2024-09-20'
+    topic: Red Teaming Language Models 아티클 번역 검수 완료 및 피드백
+    participants: [최윤정, song]
+    reply_count: 3
+  - thread_ts: '1723536819.083699'
+    date: '2024-08-13'
+    topic: LLM 모델 병합 기법 아티클 퍼블리시
+    participants: [song, baeksw98]
+    reply_count: 1
+  - thread_ts: '1721799040.957959'
+    date: '2024-07-24'
+    topic: LLM Self-Discover 아티클 번역 검수 완료
+    participants: [최윤정, song]
+    reply_count: 1
+terminology:
+  - term: "프롬프트 리커버리"
+    definition: "Prompt Recovery 관련 기술 블로그 아티클 주제"
+    aliases: ["prompt recovery"]
+  - term: "모델 병합"
+    definition: "여러 LLM을 합치는 기법에 대한 고찰과 실험 아티클"
+    aliases: ["model merging", "LLM 합치기"]
+  - term: "Technical Writer"
+    definition: "기술 문서 전문 작성자, HyperCLOVA X 리포트에 21명 참여 사례 언급"
+    aliases: ["테크니컬 라이터"]
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: sync-channel-history

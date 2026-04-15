@@ -1,0 +1,63 @@
+channel:
+  id: C07GDDBPGJU
+  name: alarm-dev-error-stargate
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 763
+  total_threads: 6
+  active_users: 7
+  avg_messages_per_day: 19.6
+summary: |
+  2025년 4분기 alarm-dev-error-stargate 채널은 Stargate 개발 환경에서 발생한 API 에러 알림이 자동으로 쌓이는 알림 채널로, 하루 평균 약 20건의 에러가 기록되었다.
+  주요 에러 유형은 Carrier 통신 오류(ERROR_WHILE_PROCESSING_CARRIER_RESPONSE), 서버 응답 시간 초과, Connection refused, COLLECTION_NOT_FOUND(Qdrant 컬렉션 미존재) 등이었다.
+  현대 에이전트, 사이오닉 슬랙 에이전트 등 다양한 에이전트 테스트 과정에서 발생한 에러가 다수 포함되었으며, Excel 내보내기 시 텍스트 길이 초과(32767자) 에러도 발생하였다.
+topics:
+  - name: "Carrier 통신 오류"
+    mention_count: 400
+    description: "ERROR_WHILE_PROCESSING_CARRIER_RESPONSE - RAG 노드, APICALL 노드, FUNCTION 노드에서 발생한 Carrier 서버 통신 실패"
+  - name: "서버 응답 시간 초과"
+    mention_count: 150
+    description: "서버 응답 시간 초과(timeout) 에러, RAG 및 APICALL 노드에서 주로 발생"
+  - name: "COLLECTION_NOT_FOUND"
+    mention_count: 80
+    description: "Qdrant 벡터 DB 컬렉션 미존재 오류 - 테스트 에이전트의 컬렉션 삭제 후 접근 시 발생"
+  - name: "Connection 오류"
+    mention_count: 50
+    description: "Connection refused, Connection reset by peer 등 네트워크 연결 오류"
+  - name: "INTERNAL_SERVER_ERROR"
+    mention_count: 30
+    description: "내부 서버 에러 - Excel 내보내기 시 텍스트 32767자 초과, 외부 테스트 계정 관련"
+key_discussions:
+  - thread_ts: '1759361400.000000'
+    date: '2025-10-14'
+    reply_count: 0
+    text_preview: "INTERNAL_SERVER_ERROR - Excel 내보내기 시 텍스트 길이(32767자) 초과 에러, xlsx 라이브러리 제한"
+  - thread_ts: '1760428620.000000'
+    date: '2025-10-15'
+    reply_count: 0
+    text_preview: "COLLECTION_NOT_FOUND - eunju_stop_test 에이전트의 Qdrant 컬렉션 미존재 에러 반복 발생"
+terminology:
+  - term: "Stargate"
+    definition: "Sionic AI의 핵심 검색/에이전트 플랫폼 서비스"
+    aliases: ["스타게이트", "STORM", "stargate"]
+    context: "개발 환경에서 발생하는 API 에러를 이 채널에서 모니터링"
+  - term: "Carrier"
+    definition: "Stargate 내부의 에이전트 실행 엔진/컴포넌트"
+    aliases: ["캐리어"]
+    context: "대부분의 에러가 Carrier와의 통신 실패로 발생"
+  - term: "ERROR_WHILE_PROCESSING_CARRIER_RESPONSE"
+    definition: "Carrier 응답 처리 중 발생하는 에러 타입, 가장 빈번한 에러 분류"
+    aliases: []
+    context: "alarm-dev-error-stargate 채널 최다 빈도 에러"
+  - term: "COLLECTION_NOT_FOUND"
+    definition: "Qdrant 벡터 DB에서 요청한 컬렉션이 존재하지 않을 때 발생하는 에러"
+    aliases: []
+    context: "테스트 에이전트 삭제 후 재접근 시 반복 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

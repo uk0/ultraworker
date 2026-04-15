@@ -1,0 +1,82 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 88
+  total_threads: 42
+  active_users: 19
+  avg_messages_per_day: 1.8
+summary: |
+  2025년 2분기 announcement 채널은 신규 입사자 온보딩, 테크세미나 운영, 기술 홍보 기준 수립, 제주도 워크샵 기획, 법정의무교육 등 전사 운영 공지가 중심이었다.
+  신규 입사자 4명(서반석 백엔드, 임주희 세무/파이낸스, 정기연 R&D Manager, 김부교 Product Planner 인턴)이 합류하였다.
+  기술 홍보에 대한 기준이 새로 정립되었는데, 깊이 있는 콘텐츠만 작성하고 오픈카톡방 등에 무분별하게 공유하지 않으며 진형님 중심으로 geeknews 등 주요 채널만 활용하는 방침이 수립되었다.
+  테크세미나 주제는 Ops팀 소개, LIGHT RAG·hiRAG 소개, Pylon 청킹 전략, 사이오닉 일본 진출 브리핑, 악사파서 대안 소개 등 다양하게 진행되었다.
+  EDS(이디에스) 고객사 대상 STORM 설명회가 진행되었고, 일본(+글로벌) 사업 관련 사용자 그룹(@Japan)이 생성되었다.
+  OCI LoadBalancer 교체 인프라 작업(STORM SaaS 탭 6개 제한 이슈 해결)이 야간에 진행되었다.
+  제주도 워크샵(플레이샵) 8/25~27 일정이 확정되었고, 비행기/숙소 예약이 시작되었다.
+  법정의무교육(성희롱예방, 개인정보보호) 6/30 마감 안내, 2025 건강검진 대상자 공지, 명함 취합 등 HR·총무 공지도 다수 진행되었다.
+  슬랙 상태 이모티콘(근무중/재택/자리비움) 활용 제안과 신규 버그 제보 채널(#product-bug-report) 개설이 있었다.
+  GenAI/SUM 2025 Impact Pitch 예선 합격 소식과 투표 요청이 공유되었다.
+topics:
+  - 신규 입사자 온보딩
+  - 기술 홍보 기준 수립
+  - 테크세미나 운영
+  - 제주도 워크샵(플레이샵) 기획
+  - 일본 사업 진출
+  - OCI 인프라 작업
+  - 법정의무교육
+  - 건강검진
+  - 슬랙 상태 이모티콘 활용
+  - EDS 고객 STORM 설명회
+  - 버그 제보 채널 개설
+  - 메가존 홍보영상 촬영
+key_discussions:
+  - thread_ts: '1745831929.991209'
+    date: '2025-04-28'
+    reply_count: 85
+    text_preview: '법정의무교육(성희롱예방/개인정보보호) 수강 및 수료증 제출 안내'
+  - thread_ts: '1750833938.511569'
+    date: '2025-06-25'
+    reply_count: 69
+    text_preview: '제주도 워크샵 항공편/숙박 참여일정 조사'
+  - thread_ts: '1744787020.579699'
+    date: '2025-04-16'
+    reply_count: 36
+    text_preview: '메가존 홍보영상 촬영 5/23 출근 협조 요청'
+  - thread_ts: '1749032141.438609'
+    date: '2025-06-04'
+    reply_count: 35
+    text_preview: '명함 한/영/일 필요 인원 취합'
+  - thread_ts: '1750911047.129429'
+    date: '2025-06-26'
+    reply_count: 29
+    text_preview: '도균님/예원님 CVPR 1저자 굿바이 송별회 일정'
+  - thread_ts: '1748842413.847419'
+    date: '2025-06-02'
+    reply_count: 27
+    text_preview: '2025년 건강검진 대상자 명단 공지 (12/31까지 완료)'
+terminology:
+  - term: "EDS"
+    definition: "이디에스. 사이오닉의 고객사 중 하나. STORM 제품 설명회 진행 대상"
+    aliases: ["이디에스"]
+  - term: "LIGHT RAG"
+    definition: "경량화된 RAG 접근 방식. 세민님이 테크세미나에서 hiRAG와 함께 소개"
+    aliases: []
+  - term: "hiRAG"
+    definition: "계층적 RAG 접근 방식. LIGHT RAG와 함께 테크세미나에서 소개됨"
+    aliases: []
+  - term: "GenAI/SUM 2025"
+    definition: "Nikkei 주최 AI 피치 대회. 사이오닉이 Impact Pitch 예선 합격"
+    aliases: []
+  - term: "OCI"
+    definition: "Oracle Cloud Infrastructure. 사이오닉 인프라가 운영되는 클라우드 환경"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

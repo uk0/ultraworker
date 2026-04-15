@@ -1,0 +1,33 @@
+channel:
+  id: C07PE5Y36C8
+  name: project-한국은행
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 1
+  active_users: 7
+  avg_messages_per_day: 4.0
+summary: |
+  한국은행 프로젝트 채널이 개설된 분기.
+  김혜원이 채널을 생성하고 주요 멤버(한시형, 박우명, Noah, hhhssw, 최윤정)를 초대했다.
+  한국은행 관련 테스트 시점을 확인하는 논의가 있었으며, 10월 말을 목표로 온프렘(On-premise) 환경 준비를 계획했다.
+  프로젝트 초기 단계로, 향후 일정 가시화를 위한 사전 조율이 이루어졌다.
+topics:
+  - 한국은행 프로젝트 킥오프
+  - 온프렘 환경 준비
+  - 테스트 일정 조율
+key_discussions:
+  - thread_ts: '1727163695.518739'
+    date: '2024-09-24'
+    summary: '한국은행 테스트 시점 확인 및 온프렘 준비 계획 논의'
+terminology:
+  - term: '온프렘'
+    definition: 'On-premise. 클라우드가 아닌 고객사 자체 서버에 설치하는 배포 방식'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

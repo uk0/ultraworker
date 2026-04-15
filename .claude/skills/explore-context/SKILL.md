@@ -40,6 +40,17 @@ ToolSearch: "slack"
 ToolSearch: "+slack-bot"
 ```
 
+### Step 0.5: Search Existing Memory
+
+Before starting exploration, search LTM for related past requests/work to avoid duplicate analysis and build on prior context.
+
+```
+/recall --what "relevant keywords from the trigger"
+/recall --where "channel name or file path if known"
+```
+
+If related records are found, incorporate their context into the exploration (skip re-analyzing threads that were already explored).
+
 ### Step 1: Analyze Trigger
 
 If thread ID is given:
@@ -250,6 +261,34 @@ Implementation details discussion in #engineering channel:
 3. **Add monitoring dashboard** (effort: low)
    - Cache hit rate, response time metrics
    - Alert configuration
+```
+
+### Step 6: Save to Long-Term Memory
+
+After exploration is complete and saved, you MUST save a RequestRecord to LTM using `/remember`.
+
+RequestRecord fields to save:
+- **who**: The user who made the request (from the trigger message)
+- **where**: The Slack channel/thread where the request originated
+- **what**: Concise summary of the exploration findings
+- **why**: The original purpose/reason for the request
+- **topics**: Key technical topics discovered during exploration
+- **intents**: Recommended actions (from the exploration results)
+
+```
+/remember req --who "{requester_user_id}" --where "{channel_name}" \
+  --what "{exploration_summary}" --topics "{topic1},{topic2}" \
+  --why "{original_request_purpose}" \
+  --intents "{action1};{action2};{action3}"
+```
+
+Example:
+```
+/remember req --who U06CLS6E694 --where eng-common \
+  --what "API response time improvement: Redis caching strategy already decided, implementation needed" \
+  --topics caching,redis,api-performance \
+  --why "API response time approaching SLA violation" \
+  --intents "Implement Redis caching middleware;Add cache invalidation;Add monitoring dashboard"
 ```
 
 ## Output Example

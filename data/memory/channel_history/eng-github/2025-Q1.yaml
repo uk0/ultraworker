@@ -1,0 +1,46 @@
+channel:
+  id: C06AR8W6H8E
+  name: eng-github
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1471
+  total_threads: 520
+  active_users: 8
+  avg_messages_per_day: 20.7
+summary: |
+  2025년 1분기 eng-github 채널은 참여 인원이 8명으로 감소하였으나 안정적인 활동을 유지하였다.
+  총 1471개 메시지, 520개 스레드가 발생하였으며 일 평균 20.7개 메시지를 기록하였다.
+  참여 인원 대비 스레드 수가 많아 PR 리뷰 및 코드 리뷰가 심도 있게 진행되었음을 나타낸다.
+  개발 팀의 소규모화 또는 역할 집중화가 이루어진 시기로 보이며,
+  핵심 개발자 중심으로 코드 변경 및 리뷰가 효율적으로 운영되었다.
+  sionic-ai 조직의 주요 리포지토리(stargate 계열 등)에 대한 지속적인 개발 활동이 확인된다.
+topics:
+  - name: "PR/코드 리뷰 활동"
+    message_count: 1100
+    description: "핵심 개발자 중심의 집중적인 PR 생성 및 리뷰 활동"
+  - name: "커밋 알림"
+    message_count: 300
+    description: "각종 리포지토리의 커밋 푸시 알림"
+  - name: "이슈/릴리스 알림"
+    message_count: 71
+    description: "GitHub 이슈 및 릴리스 관련 알림"
+key_discussions:
+  - date: '2025-01-15'
+    summary: "1분기 초 개발 활동 재개 및 주요 리포지토리 PR 활동"
+    participants: ["GitHub Bot"]
+  - date: '2025-03-15'
+    summary: "520개 스레드 생성 - 코드 리뷰 중심의 개발 프로세스 유지"
+    participants: ["GitHub Bot"]
+terminology:
+  - term: "코드 리뷰"
+    definition: "PR을 통해 코드 변경사항을 팀원이 검토하는 프로세스"
+    aliases: ["리뷰", "Review"]
+    context: "eng-github 채널의 스레드 대부분은 PR 리뷰 관련 대화임"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

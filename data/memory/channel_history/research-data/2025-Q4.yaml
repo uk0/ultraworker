@@ -1,0 +1,58 @@
+channel:
+  id: C09CRS3HWTV
+  name: research-data
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 66
+  total_threads: 18
+  active_users: 13
+  avg_messages_per_day: 4.4
+summary: |
+  2025-Q4에는 삼성 TV(S95F OLED, Neo QLED 8K) 매뉴얼 기반 CS 챗봇 평가 데이터셋 구축 작업이 집중적으로 이루어졌다. 추석 연휴 이후 10월 13일부터 작업이 재개되었으며, 4명의 파트타임 작업자가 삼성 TV 두 모델(QN82Q800TAF, QN85QN900FF)의 매뉴얼을 파트별로 분담하여 표/그림 요소 질문(A), 모델 간 차이 구분 질문(B), 트러블슈팅 멀티턴 시나리오(C), 할루시네이션 확인 질문(D) 유형의 데이터셋을 영어로 작성했다. 스톰 에이전트와 OpenAI 워크플로우 성능 비교 평가가 최종 목표였다.
+topics:
+  - name: "삼성 TV 매뉴얼 기반 QA 데이터셋 구축"
+    mention_count: 25
+    description: "S95F OLED/Neo QLED 8K 두 모델 매뉴얼을 파트별 분담, A(표/그림 요소)/B(모델 간 차이)/C(트러블슈팅 멀티턴)/D(할루시네이션 확인) 4가지 유형 데이터셋 영어로 구축"
+  - name: "스톰 에이전트 성능 평가"
+    mention_count: 10
+    description: "스톰 에이전트(dev.sionicstorm.ai)와 OpenAI 워크플로우 성능 비교. 작업자가 직접 스톰 에이전트에 쿼리 입력 후 답변 스프레드시트에 기록"
+  - name: "작업 일정 및 출입증 반납"
+    mention_count: 8
+    description: "추석 연휴 이후 10/13 작업 재개, 출입증 반납 일정 조율(화/수 중), 작업 마감 및 zoom 미팅"
+  - name: "AI 윤리 온라인 교육"
+    mention_count: 3
+    description: "10/31까지 AI 윤리 온라인 교육 이수 및 수료증 제출 요청. 배속 수강 금지, 정속 수강 요청"
+key_discussions:
+  - thread_ts: '1761279600.000000'
+    date: '2025-10-24'
+    reply_count: 5
+    text_preview: "증권 L열에 회사이름 추가(2000개씩), 보험 스프레드시트 추가 작업. 오늘 5시까지 마감"
+  - thread_ts: '1761532800.000000'
+    date: '2025-10-28'
+    reply_count: 9
+    text_preview: "삼성 TV 두 모델(QN82Q800TAF, QN85QN900FF) 대상 QA 데이터셋 작업 가이드라인"
+  - thread_ts: '1761619200.000000'
+    date: '2025-10-29'
+    reply_count: 12
+    text_preview: "스톰 에이전트 vs OpenAI 워크플로우 성능 비교 평가 가이드라인. dev.sionicstorm.ai 테스트 방법"
+terminology:
+  - term: "성능평가 에이전트-CS 챗봇"
+    definition: "사이오닉AI 스톰 플랫폼(dev)에 구축된 삼성 TV CS 챗봇 에이전트. 평가 데이터셋을 활용한 성능 테스트에 사용"
+    aliases: []
+    context: "삼성 TV 매뉴얼 기반 QA 데이터셋 구축 및 평가에 사용"
+  - term: "QN82Q800TAF"
+    definition: "2020 QLED 8K Smart TV (Q800T) 모델. 삼성 TV CS 챗봇 평가 대상 구형 모델"
+    aliases: ["Q800T", "2020 QLED 8K Smart TV"]
+    context: "삼성 TV 매뉴얼 기반 데이터셋 구축 작업 대상"
+  - term: "QN85QN900FF"
+    definition: "Neo QLED 8K Vision AI Smart TV (QN900F) 모델. 삼성 TV CS 챗봇 평가 대상 신형 모델"
+    aliases: ["QN900F", "Neo QLED 8K Vision AI Smart TV"]
+    context: "삼성 TV 매뉴얼 기반 데이터셋 구축 작업 대상"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

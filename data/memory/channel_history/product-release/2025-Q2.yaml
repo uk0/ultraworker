@@ -1,0 +1,66 @@
+channel:
+  id: C06DDJKKJPQ
+  name: product-release
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 98
+  total_threads: 34
+  active_users: 8
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q2에는 Stargate API가 v0.37.5에서 v0.38.6까지, WEB이 v2.9.0에서 v2.28.1까지 메이저 버전 2.x로
+  전환되며 빠른 배포 주기를 보였다. 배포 봇이 자동화되어 릴리즈 노트가 봇 형태로 채널에 공유되기 시작했다.
+  워크플로우(Workflow) 기능이 대규모로 출시되어 그래프 기반 에이전트 편집, 노드 관리,
+  엣지 삭제 UI, 피쳐 토글링이 구현되었다. 피드백 시스템이 청크 레벨로 세분화되어
+  테스트/로그 페이지에서 피드백 조회/수정이 가능해졌고, FSD(Feature Sliced Design) 파일 구조로
+  전면 리팩토링이 이루어졌다.
+  Pylon은 v1.8.5에서 v1.9.1로 업그레이드되며, Sparse Vector(BGE-M3-Splade) 검색 로직,
+  GraphRAG 엔진 연결(LightRAG Graph), 머징 파이프라인 전면 개편, 아이센텍 고객 대응이 진행되었다.
+  Carrier는 v1.2.3에서 v1.4.1로 성장하며, S3 기능 추가, if/else 노드 elseif 지원,
+  오더시트 연동이 완성되었다.
+  다국어 지원이 일본어 가이드, 윤정님 일어 번역 검수 등으로 강화되었다.
+topics:
+  - Stargate WEB v2.x 메이저 전환
+  - 워크플로우(Workflow) 그래프 기반 에이전트 편집
+  - 피드백 시스템 청크 레벨 세분화
+  - FSD(Feature Sliced Design) 파일 구조 리팩토링
+  - Pylon Sparse Vector (BGE-M3-Splade) 검색
+  - GraphRAG 엔진 연결 (LightRAG)
+  - 머징 파이프라인 전면 개편
+  - Carrier S3 기능 및 오더시트 연동
+  - 배포 봇 자동화
+  - 아이센텍 고객 대응
+key_discussions:
+  - thread_ts: '1748260800.000000'
+    date: '2025-05-27'
+    topic: Stargate WEB v2.14.0 - Workflow API/Style 대규모 출시
+  - thread_ts: '1749600000.000000'
+    date: '2025-06-11'
+    topic: Pylon v1.8.9 - 머징 파이프라인 전면 개편, Sparse Vector 지원
+  - thread_ts: '1750060800.000000'
+    date: '2025-06-23'
+    topic: Pylon v1.9.0 - Sparse Vector Collection, 복수 GraphRAG 엔진
+terminology:
+  - term: "Workflow"
+    definition: "그래프 기반 에이전트 동작 흐름을 시각적으로 편집하는 기능"
+    aliases: ["워크플로우"]
+  - term: "GraphRAG"
+    definition: "그래프 기반 RAG, 지식 그래프를 활용한 검색 증강 생성"
+    aliases: ["LightRAG"]
+  - term: "BGE-M3-Splade"
+    definition: "Sparse Vector 기반 검색을 위한 임베딩 모델"
+    aliases: ["Sparse Vector"]
+  - term: "FSD"
+    definition: "Feature Sliced Design - 기능 단위로 파일을 구조화하는 아키텍처 패턴"
+    aliases: ["Feature Sliced Design"]
+  - term: "아이센텍"
+    definition: "Sionic AI의 고객사 중 하나"
+    aliases: []
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

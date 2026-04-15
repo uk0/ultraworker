@@ -1,0 +1,64 @@
+channel:
+  id: C07BJQDM8BV
+  name: product-asmr
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 28
+  total_threads: 22
+  active_users: 10
+  avg_messages_per_day: 1.6
+summary: |
+  2025년 Q1은 ASMR 서비스의 본격적인 리팩토링 계획 수립 및 기능 강화가 이루어진 분기이다.
+  "ASMR 이대로 괜찮은가"라는 주제로 현 상황과 향후 방향성 공유 세션이 계획되었다.
+  주요 활동으로는 Azure 리전 접근 권한 추가, health check 엔드포인트 정리(/_health만 남기기),
+  Vertex AI에서 claude-3-5-sonnet-20241022 모델 추가 지원, ASMR 지원 모델 관리 체계 정비,
+  Apidog 활용 전체 모델 일괄 테스트 체계 구축, Upstage 엔진 추가(solar-pro, solar-mini),
+  vLLM + Upstage Function Call 지원, Spring AI vs LangChain 도입 비교 세미나,
+  o3-mini 모델 출시 공유, OpenAI 사용량 쿼타 초과 이슈, ASMR 버그 리포트 및 우선순위 상향 등이 있었다.
+topics:
+  - ASMR 리팩토링 계획 및 방향성 공유
+  - Apidog 기반 전체 모델 일괄 테스트 구축
+  - Upstage 엔진 추가 (solar-pro, solar-mini)
+  - Function Call 지원 (vLLM + Upstage)
+  - Spring AI vs LangChain 도입 비교
+  - health check 엔드포인트 정리
+  - Azure o1 시리즈 배포 대기 등록
+  - OpenAI 사용량 쿼타 초과 이슈
+key_discussions:
+  - date: '2025-01-17'
+    summary: health check 엔드포인트 정리 - /_health만 남기고 나머지 404 처리 (21 replies)
+  - date: '2025-01-24'
+    summary: '"ASMR 이대로 괜찮은가" 리팩토링 세션 공지'
+  - date: '2025-02-05'
+    summary: ASMR 이슈 리포트 - 리팩토링이 아닌 버그 레벨로 우선순위 상향 요청 (10 replies)
+  - date: '2025-02-10'
+    summary: Apidog 활용 전체 모델 테스트 작성 완료 및 사용 가이드 공유
+  - date: '2025-02-10'
+    summary: Function Call 파라미터(tools) Apidog에 추가 - OpenAI 규격 동일 (28 replies)
+  - date: '2025-02-12'
+    summary: Upstage 엔진 추가 및 dev 배포 완료 (solar-pro, solar-mini)
+  - date: '2025-02-14'
+    summary: vLLM + Upstage Function Call 지원 dev 배포 (118 replies)
+  - date: '2025-03-04'
+    summary: Spring AI vs LangChain 비교 세미나 공지
+terminology:
+  - term: Apidog
+    definition: API 문서화 및 테스트 도구. ASMR의 모델 테스트 및 외부 고객 대상 API 문서 제공에 활용
+  - term: OpenGateway
+    definition: ASMR의 외부 서비스명. 외부 고객 대상 LLM API 통합 서비스
+    aliases:
+      - opengateway
+  - term: Function Call
+    definition: LLM이 외부 함수를 호출할 수 있는 기능. OpenAI의 tools 파라미터를 통해 구현
+    aliases:
+      - 펑션콜
+  - term: Spring AI
+    definition: Spring 프레임워크 기반 AI 통합 라이브러리. ASMR 도입 검토 대상
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: claude-opus-4-6

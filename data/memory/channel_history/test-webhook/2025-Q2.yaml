@@ -1,0 +1,54 @@
+channel:
+  id: C08S9EL0REX
+  name: test-webhook
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 614
+  total_threads: 2
+  active_users: 8
+  avg_messages_per_day: 22.7
+summary: |
+  2025년 2분기 test-webhook 채널은 5월 15일에 처음 생성된 웹훅 테스트 채널로, 8명이 참여하여 614개의 메시지가 발생하였다. 채널 생성 초기에는 chopper 빌드/배포 알림 테스트가 주를 이루었으며, shuttle 빌드 성공/실패 및 Argo CD 애플리케이션 패치 성공 알림 메시지 포맷 개발이 집중적으로 이루어졌다. 스레드가 2개뿐인 것은 대부분의 메시지가 자동화 봇 알림이었기 때문이다.
+topics:
+  - name: "웹훅 메시지 포맷 개발"
+    mention_count: 100
+    description: "빌드/배포 알림 메시지의 포맷을 반복 수정하며 최적의 형태 도출"
+  - name: "chopper 빌드/배포 알림"
+    mention_count: 200
+    description: "chopper 서비스의 BUILD Requested/Started/Succeeded/Failed 알림 테스트"
+  - name: "shuttle 빌드 알림"
+    mention_count: 150
+    description: "shuttle 서비스의 빌드 및 Push 성공/실패 알림 테스트"
+  - name: "Argo CD 패치 알림"
+    mention_count: 50
+    description: "Argo CD 애플리케이션 패치 성공 알림 - Check out 링크 포함"
+key_discussions:
+  - thread_ts: '1747280196.000000'
+    date: '2025-05-15'
+    reply_count: 0
+    text_preview: "채널 생성 및 incoming-webhook 통합 추가, chopper common BUILD 테스트 시작"
+  - thread_ts: '1747920000.000000'
+    date: '2025-05-22'
+    reply_count: 0
+    text_preview: "shuttle BUILD/DEPLOY 알림 메시지 포맷 반복 수정 - Push Failed 이슈 해결"
+terminology:
+  - term: "chopper"
+    definition: "사이오닉 AI의 내부 서비스 컴포넌트"
+    aliases: []
+    context: "test-webhook 채널에서 빌드/배포 알림 포맷 테스트 대상"
+  - term: "shuttle"
+    definition: "사이오닉 AI의 배포 워크플로우 서비스"
+    aliases: []
+    context: "빌드 및 Argo CD 패치 알림 테스트 대상"
+  - term: "incoming-webhook"
+    definition: "Slack에 외부 시스템에서 메시지를 전송하기 위한 웹훅 통합"
+    aliases: []
+    context: "test-webhook 채널의 메시지 수신 메커니즘"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

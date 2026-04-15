@@ -1,0 +1,34 @@
+channel:
+  id: C09DQ30H3FG
+  name: alarm-dev-error-apis
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 5
+  total_threads: 0
+  active_users: 4
+  avg_messages_per_day: 2.5
+summary: |
+  2025-Q3에 alarm-dev-error-apis 채널이 신설되어 초기 멤버 초대 및 채널 설명 설정이 이루어졌다.
+  채널 설명은 apis-manager와 apis-parse-router 서비스의 개발 환경 에러 알림 목적으로 설정되었으며, 실질적인 에러 알림은 Q4부터 본격적으로 시작되었다.
+topics:
+  - name: "채널 초기화"
+    mention_count: 5
+    description: "채널 개설, 멤버 초대, 모니터링 대상 서비스(apis-manager, apis-parse-router) 설명 설정"
+key_discussions: []
+terminology:
+  - term: "apis-manager"
+    definition: "API 관리 서비스 - alarm-dev-error-apis 채널의 주요 모니터링 대상"
+    aliases: []
+    context: "채널 설명에 명시된 첫 번째 모니터링 대상 서비스"
+  - term: "apis-parse-router"
+    definition: "API 파싱 및 라우팅 서비스 - alarm-dev-error-apis 채널의 모니터링 대상"
+    aliases: []
+    context: "채널 설명에 명시된 두 번째 모니터링 대상 서비스"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

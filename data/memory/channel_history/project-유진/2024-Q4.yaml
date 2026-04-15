@@ -1,0 +1,72 @@
+channel:
+  id: C083SBRRCKH
+  name: project-유진
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 16
+  total_threads: 7
+  active_users: 4
+  avg_messages_per_day: 2.7
+summary: |
+  2024년 4분기 project-유진 채널은 유진투자증권과의 협업 프로젝트를 위해 12월 개설되었다.
+  회의록 자동 요약 및 분석 에이전트 설계가 핵심 과제였으며, 클로바노트 녹취 데이터를 활용한 회의록 품질 개선, 키워드 레이블링, 액션아이템 추출 등을 아이디에이션하고 초기 테스트가 진행되었다.
+  DT전략팀 자료를 활용한 테스트 결과 공유 및 피드백 루프도 시작되었다.
+topics:
+  - name: "회의록 자동 요약·분석 에이전트"
+    mention_count: 8
+    description: "클로바노트 STT 데이터를 활용한 회의록 요약, 키워드 레이블링, 액션아이템 추출 에이전트 설계"
+  - name: "STT 후처리"
+    mention_count: 3
+    description: "유진투자증권 도메인 특화 단어 리스트 확보 및 STT 후처리 개선 논의"
+  - name: "품질 평가 및 테스트"
+    mention_count: 4
+    description: "DT전략팀 테스트 데이터로 회의록 초안 품질 테스트 및 피드백 수집"
+  - name: "프롬프트 설계"
+    mention_count: 3
+    description: "유진투자증권 회의록 자동 작성 프롬프트 공유 및 개선 아이디에이션"
+key_discussions:
+  - thread_ts: '1733709540.000000'
+    date: '2024-12-09'
+    reply_count: 3
+    text_preview: "유진투자증권 협업 채널 개설, 회의록 요약·분석 과업 정의 및 진행 방식 논의"
+  - thread_ts: '1733902560.000000'
+    date: '2024-12-11'
+    reply_count: 0
+    text_preview: "현재 유진 계정 회의록 에이전트 템플릿 공유 및 프롬프트 디벨롭 제안"
+  - thread_ts: '1734314820.000000'
+    date: '2024-12-16'
+    reply_count: 19
+    text_preview: "금일 회의: 유진 예시 녹취 파일 공유, 회의록 요약 풍부화 방안 아이디에이션"
+  - thread_ts: '1734916380.000000'
+    date: '2024-12-23'
+    reply_count: 4
+    text_preview: "DT전략팀 테스트 자료 공유 및 중간 과정 공유"
+  - thread_ts: '1734932640.000000'
+    date: '2024-12-23'
+    reply_count: 11
+    text_preview: "테스트 중간 과정 공유: 키워드 레이블링, 액션아이템(발화자/기한) 추출 결과"
+terminology:
+  - term: "유진투자증권"
+    definition: "Sionic AI와 회의록 자동화 에이전트 협업 프로젝트를 진행 중인 금융 기관"
+    aliases: ["유진", "project-유진"]
+    context: "클로바노트 기반 회의록 요약·분석 에이전트 개발 고객사"
+  - term: "클로바노트"
+    definition: "NAVER의 AI 음성 인식(STT) 기반 회의록 자동 작성 서비스"
+    aliases: []
+    context: "유진투자증권이 회의 데이터 수집을 위해 활용 중인 STT 도구"
+  - term: "DT전략팀"
+    definition: "유진투자증권 내 디지털 트랜스포메이션 전략을 담당하는 팀"
+    aliases: []
+    context: "회의록 에이전트 테스트 데이터를 제공한 유진 내부 팀"
+  - term: "액션아이템"
+    definition: "회의에서 도출된 실행 과제, 담당자와 기한을 포함"
+    aliases: ["Action Item"]
+    context: "회의록 에이전트의 핵심 추출 항목 중 하나"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

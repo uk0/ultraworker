@@ -1,0 +1,69 @@
+channel:
+  id: C09L22URRRQ
+  name: qna-ai
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 555
+  total_threads: 520
+  active_users: 38
+  avg_messages_per_day: 8.4
+summary: |
+  2025년 4분기 qna-ai 채널은 10월 12일 Slack QA 웹훅 봇(@U09L23QRA8J)이 런칭되면서 STORM 플랫폼, 프로젝트, 사람, 인프라 등에 대한 자연어 질의응답 서비스가 본격 운영된 채널이다. 38명의 팀원이 참여하여 하루 평균 8.4건의 질문 스레드가 생성되었으며, 총 520개의 독립적인 QA 스레드가 이루어졌다. 회사 내부 정보, 서비스 아키텍처, 담당자 확인, 인프라 구성 등 다양한 주제에 걸쳐 AI 봇이 자동으로 답변을 제공하는 내부 지식 허브 역할을 하였다.
+topics:
+  - name: "STORM 플랫폼 질의"
+    mention_count: 150
+    description: "Carrier, Pylon, Supply 등 STORM 플랫폼 구성요소에 대한 기능 및 사용 방법 질문"
+  - name: "프로젝트 정보 조회"
+    mention_count: 120
+    description: "현재 진행 중인 프로젝트 현황, 담당자, 일정 등에 대한 자연어 질문"
+  - name: "인프라 구성 확인"
+    mention_count: 80
+    description: "OCI, EKS, onprem 등 인프라 구성 및 서비스 배포 현황 질의"
+  - name: "사람/담당자 조회"
+    mention_count: 90
+    description: "특정 기능이나 서비스의 담당자, 전문가 확인을 위한 질문"
+  - name: "회사 내부 정보"
+    mention_count: 60
+    description: "정책, 프로세스, 온보딩 정보 등 회사 내부 지식 질의"
+key_discussions:
+  - thread_ts: '1728691200.000000'
+    date: '2025-10-12'
+    reply_count: 3
+    text_preview: "Slack QA 봇 런칭 공지: 자연어로 회사 정보를 질문하세요"
+  - thread_ts: '1729987200.000000'
+    date: '2025-10-27'
+    reply_count: 2
+    text_preview: "Carrier 워크플로우 노드 종류와 각 노드의 용도가 뭐예요? - 봇 자동 답변"
+  - thread_ts: '1732665600.000000'
+    date: '2025-11-27'
+    reply_count: 1
+    text_preview: "OCI 클러스터에 어떤 서비스들이 배포되어 있나요? - 인프라 현황 질의"
+  - thread_ts: '1734048000.000000'
+    date: '2025-12-13'
+    reply_count: 2
+    text_preview: "carrier-supply 담당자가 누구인가요? - 담당자 조회 질의"
+terminology:
+  - term: "QA 봇"
+    definition: "qna-ai 채널에서 자연어 질문에 자동으로 답변하는 Slack 웹훅 봇 (@U09L23QRA8J)"
+    aliases: ["@U09L23QRA8J", "Slack QA bot", "AI 질의응답 봇"]
+    context: "2025년 10월 12일 런칭된 내부 지식 베이스 AI 봇"
+  - term: "STORM"
+    definition: "Sionic AI의 핵심 AI 플랫폼. Carrier(워크플로우), Pylon(RAG), Supply(인덱서), ASMR(LLM 프록시) 등으로 구성"
+    aliases: ["스톰", "STORM platform"]
+    context: "qna-ai 채널에서 가장 많이 질문을 받은 플랫폼"
+  - term: "qna-ai"
+    definition: "AI 봇을 통해 회사 내부 정보를 자연어로 질의응답할 수 있는 Slack 채널"
+    aliases: ["QnA AI", "AI Q&A 채널"]
+    context: "2025년 Q4 가장 많은 사용자(38명)가 참여한 채널 중 하나"
+  - term: "자연어 질의"
+    definition: "프로그래밍 언어나 특정 형식 없이 일상 언어로 정보를 검색하는 방식"
+    aliases: ["NLQ", "natural language query"]
+    context: "qna-ai 봇의 핵심 기능. 팀원 누구나 쉽게 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

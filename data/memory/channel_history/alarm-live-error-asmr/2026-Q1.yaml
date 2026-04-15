@@ -1,0 +1,92 @@
+channel:
+  id: C07F2EFA76K
+  name: alarm-live-error-asmr
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:54'
+statistics:
+  total_messages: 1020
+  total_threads: 13
+  active_users: 7
+  avg_messages_per_day: 23.7
+key_discussions:
+- thread_ts: '1769482935.422429'
+  date: '2026-01-27'
+  reply_count: 35
+  text_preview: 궁금해서 라이브에 제가 요청해보았습니다 &gt;&gt;
+- thread_ts: '1769702925.230219'
+  date: '2026-01-30'
+  reply_count: 34
+  text_preview: This message was deleted.
+- thread_ts: '1768887652.523469'
+  date: '2026-01-20'
+  reply_count: 13
+  text_preview: Openllm API Error
+- thread_ts: '1770137633.824819'
+  date: '2026-02-04'
+  reply_count: 9
+  text_preview: ':warning: ASMR-V2 API Error <@U06EG12UUMV> *Environment:*
+
+    `live` *Status:*
+
+    `503` *Timestamp:*
+
+    `2026-'
+- thread_ts: '1769615877.255399'
+  date: '2026-01-29'
+  reply_count: 9
+  text_preview: ':warning: ASMR-V2 API Error <@U06EG12UUMV> *Environment:*
+
+    `live` *Status:*
+
+    `500` *Timestamp:*
+
+    `2026-'
+- thread_ts: '1768867212.560429'
+  date: '2026-01-20'
+  reply_count: 6
+  text_preview: Openllm API Error
+- thread_ts: '1769614155.622779'
+  date: '2026-01-29'
+  reply_count: 5
+  text_preview: ':warning: ASMR-V2 API Error <@U06EG12UUMV> *Environment:*
+
+    `live` *Status:*
+
+    `500` *Timestamp:*
+
+    `2026-'
+- thread_ts: '1769508391.608339'
+  date: '2026-01-27'
+  reply_count: 5
+  text_preview: ':warning: ASMR-V2 API Error <@U06EG12UUMV> *Environment:*
+
+    `live` *Status:*
+
+    `500` *Timestamp:*
+
+    `2026-'
+- thread_ts: '1769793191.438469'
+  date: '2026-01-31'
+  reply_count: 3
+  text_preview: ':warning: ASMR-V2 API Error <@U06EG12UUMV> *Environment:*
+
+    `live` *Status:*
+
+    `500` *Timestamp:*
+
+    `2026-'
+- thread_ts: '1768312587.895599'
+  date: '2026-01-13'
+  reply_count: 3
+  text_preview: Openllm API Error
+- thread_ts: '1769787283.890059'
+  date: '2026-01-31'
+  reply_count: 2
+  text_preview: <@U07LV0VA9AM> 이거 혹시 괜찮은건가요?!
+metadata:
+  created_at: '2026-02-13T16:29:54'
+  synced_by: sync_fast.py

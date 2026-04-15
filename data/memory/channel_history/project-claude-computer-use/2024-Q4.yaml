@@ -1,0 +1,38 @@
+channel:
+  id: C07U07Y2LQY
+  name: project-claude-computer-use
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 15
+  total_threads: 1
+  active_users: 4
+  avg_messages_per_day: 5.0
+summary: |
+  Claude Computer Use Docker 데모 환경 구축 및 테스트 진행. Anthropic의 Claude Computer Use 기능을 활용한
+  화면 캡처, 마우스/키보드 제어 자동화 실험. YouTube 검색 시연 등 다양한 컴퓨터 사용 시나리오 테스트.
+  Docker 기반 격리 환경에서 안전한 실행 검증. Noah 주도로 4명 참여, 15개 메시지.
+topics:
+  - Claude Computer Use
+  - Docker 데모 환경
+  - 화면 캡처/제어 자동화
+  - YouTube 검색 시연
+key_discussions:
+  - topic: Claude Computer Use Docker 데모 테스트
+    participants: [Noah]
+    summary: Claude의 컴퓨터 사용 기능을 Docker 환경에서 테스트. 화면 캡처, 마우스 클릭, 키보드 입력 등 자동화 시나리오 검증
+  - topic: YouTube 검색 자동화 시연
+    participants: [Noah]
+    summary: Claude Computer Use를 활용한 YouTube 검색 자동 수행 데모
+terminology:
+  - term: Claude Computer Use
+    definition: Anthropic이 제공하는 Claude의 컴퓨터 제어 기능. 화면을 보고 마우스/키보드를 조작하여 작업 수행
+  - term: Docker 데모
+    definition: Claude Computer Use를 안전하게 실행하기 위한 Docker 컨테이너 기반 격리 환경
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

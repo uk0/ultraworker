@@ -1,0 +1,49 @@
+channel:
+  id: C07NQH3U7SN
+  name: noti-linear
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1254
+  total_threads: 5
+  active_users: 7
+  avg_messages_per_day: 14.9
+summary: |
+  Linear 이슈 트래커 알림 채널. 1254개 알림으로 Q2 대비 크게 감소했지만 꾸준한 개발이 이루어졌다.
+  주요 활동자는 최병현, 백은주, 조하담, 신희수, 양호진, 권혜선(Jada), 김수원, 이재준 등이다.
+  Infra & DevOps 팀과 Project-IBK 팀의 이슈도 등장하여 다양한 팀의 작업이 트래킹되고 있다.
+  주요 이슈로는 APIS_CREDIT_HISTORY 조회 API 구현(STM-3932), LNB 팀 스위처 회사 이름 표시(STM-3941),
+  검색 모델 파인튠 화면 추가(STM-3898), Microsoft Teams 연동 사전 작업(STM-3475),
+  GoCD 보안 강화(IOPS-491), 국세청 유틸리티 모음(IOPS-494), parse-router onprem 임시대응(STM-3905) 등이 있었다.
+  분기말에 대규모 이슈 정리(Done/Canceled)가 이루어졌다.
+topics:
+  - APIS 크레딧 관리 시스템
+  - UI/UX 개선 (LNB 팀 스위처)
+  - 검색 모델 파인튜닝
+  - Microsoft Teams 연동
+  - GoCD 보안 강화
+  - parse-router onprem 대응
+  - Infra & DevOps 이슈 관리
+key_discussions:
+  - title: APIS 크레딧 히스토리 API (STM-3932)
+    summary: 최병현이 APIS_CREDIT_HISTORY 조회 API 구현과 credit_history description 추가(STM-3929)를 진행.
+  - title: 검색 모델 파인튠 화면 추가 (STM-3898)
+    summary: 백은주, 권혜선(Jada)이 검색 모델 파인튜닝 화면을 추가하는 작업을 논의.
+  - title: GoCD 보안 강화 (IOPS-491)
+    summary: 이재준이 GoCD 보안 강화 작업을 수행하고 국세청 유틸리티 모음(IOPS-494) 이슈도 처리.
+terminology:
+  - term: APIS
+    definition: Storm 플랫폼의 API 서비스 시스템
+  - term: LNB
+    definition: Left Navigation Bar. 좌측 네비게이션 바 UI 컴포넌트
+  - term: GoCD
+    definition: Sionic AI에서 사용하는 CI/CD 파이프라인 도구
+  - term: parse-router
+    definition: 문서 파싱 요청을 라우팅하는 서비스
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

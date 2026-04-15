@@ -1,0 +1,99 @@
+channel:
+  id: C07EJLJSVUG
+  name: product-supply
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 142
+  total_threads: 113
+  active_users: 13
+  avg_messages_per_day: 3.0
+summary: |
+  2025-Q2는 Supply 파일시스템 적용 프로젝트가 본격 추진되고, IBK(기업은행) 온프레미스 환경 대응이 핵심이었던 분기이다.
+  Supply가 LEGACY 모드에서 INDEXER/RUNNER 모드로 전환되었으며, indexer-runner 자동화 파이프라인이 구축되었다.
+  최병현(Hyune-c)이 Supply 운영 개선을 주도하며, indexer 성능을 대폭 개선했다(30만 벡터 10분→2분20초,
+  710만 벡터 24분 컷). runner 모드의 부트타임 개선과 대규모 벡터(710만) 지원을 위한 유사도 계산 로직 개선이 진행되었다.
+  IBK 현장 지원이 다수 이루어졌으며(6/12, 6/18, 6/25), 8코어에서 실패하여 16코어로 상향 운영했다.
+  Supply 부하테스트, 렉시컬(BM25) 모델 후보군 미반환 이슈 해결, Qdrant 로딩 개선,
+  carrier-supply 재기동 시 청크 사라짐 현상 해결, deploy(dhashes 필터링) 기능 QA,
+  runtime 중 agent 추가/parquet 갱신 방안 논의 등이 진행되었다.
+  Supply 운영 역할이 최병현과 조하담(Joy)에게 이관되는 논의도 있었다.
+topics:
+  - Supply LEGACY→INDEXER/RUNNER 모드 전환
+  - indexer 성능 대폭 개선 (병렬 처리, 세마포어 최적화)
+  - IBK 온프레미스 환경 대규모 벡터 지원 (710만 벡터)
+  - runner 부트타임 및 유사도 계산 로직 개선
+  - Supply 파일시스템 적용 프로젝트 (3개 마일스톤)
+  - 렉시컬(BM25) 후보군 미반환 이슈 해결
+  - deploy(dhashes 필터링) 기능 QA
+  - carrier-supply 재기동 시 청크 사라짐 현상 해결
+  - Supply 운영 역할 이관 논의 (최병현, 조하담)
+  - runtime 중 agent 추가/parquet 갱신 방안 논의
+  - k8sMaster 호출 실패 및 SSL disable 처리
+  - OTEL(OpenTelemetry) 적용 시작
+key_discussions:
+  - date: '2025-05-14'
+    summary: supply-indexer/runner 기동 코드 개발 완료 및 dev 머지 - 5만개 올리기 방법론 논의 필요 (1 reply)
+  - date: '2025-05-20'
+    summary: indexer-runner 자동화 계획 허들 - k8s cronjob 20분 주기, SG 디펜던시 논의
+  - date: '2025-05-23'
+    summary: Supply 파일시스템 적용 3개 마일스톤 진행 상황 공유 - dev 테스트 0602 목표 (1 reply)
+  - date: '2025-05-27'
+    summary: 렉시컬 모델 후보군 미반환 이슈 발견 - 키워드 일치해도 못찾는 문제 (117 replies)
+  - date: '2025-05-27'
+    summary: carrier-supply 재기동 시 청크 사라짐 현상 - 원인 분석 및 해결 (84 replies)
+  - date: '2025-06-04'
+    summary: dev supply-indexer/runner 기동 테스트 - 4시간 반 소요, 계획 완료 (15 replies)
+  - date: '2025-06-12'
+    summary: 60만 벡터 부하테스트 진행 - indexer RAM 터짐, 힙 메모리 128GB 증설 (90 replies)
+  - date: '2025-06-16'
+    summary: indexer 병렬 처리 적용 - 30만 벡터 10분→2분20초 성능 개선
+  - date: '2025-06-17'
+    summary: runtime 중 agent 추가/parquet 갱신 방법 논의 (77 replies)
+  - date: '2025-06-18'
+    summary: IBK 현장 지원 - 16코어 성공, 8코어 원인불명 실패, LEGACY 모드 파일 제거 (2 replies)
+  - date: '2025-06-19'
+    summary: 710만 벡터 indexer 24분 컷 성공 - Qdrant 배치 5000, 세마포어 20 최적값 확인
+  - date: '2025-06-20'
+    summary: runner 710만 벡터 테스트 실패 - 유사도 계산 로직 버그, 서비스 불가 수준 (85 replies)
+  - date: '2025-06-24'
+    summary: IBK 중간 보고 - indexer 성공, runner 유사도 로직 개선 필요, 26w 재시도 계획 (2 replies)
+  - date: '2025-06-27'
+    summary: runner 속도 최적화 논의 (30 replies)
+terminology:
+  - term: Indexer
+    definition: Supply의 배치 모드. Qdrant에서 벡터를 읽어 parquet 파일로 변환하는 인덱싱 프로세스
+    aliases:
+      - supply-indexer
+      - indexer 모드
+  - term: Runner
+    definition: Supply의 서빙 모드. indexer가 생성한 파일을 로드하여 실시간 검색을 처리
+    aliases:
+      - supply-runner
+      - runner 모드
+  - term: IBK
+    definition: 기업은행(Industrial Bank of Korea). Supply의 온프레미스 배포 대상 고객
+    aliases:
+      - 짭bk
+      - 짭비케이
+  - term: Qdrant
+    definition: 벡터 데이터베이스. Supply에서 임베딩 벡터 저장 및 조회에 활용
+  - term: k8sMaster
+    definition: Kubernetes 마스터 API. indexer 완료 후 runner 재기동 트리거에 활용
+  - term: dhashes
+    definition: 문서 해시값. Supply deploy 시 변경된 문서만 필터링하는 데 활용
+  - term: Corsair
+    definition: Sionic AI 내부 서비스. Qdrant와 연동되며 Supply indexer의 메시지 크기 제한에 영향
+    aliases:
+      - 커세어
+  - term: Carrier
+    definition: Sionic AI의 서비스 프레임워크. Supply, Pylon 등의 상위 프로젝트
+    aliases:
+      - 캐리어
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

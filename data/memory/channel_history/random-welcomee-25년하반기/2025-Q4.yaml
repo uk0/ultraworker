@@ -1,0 +1,43 @@
+channel:
+  id: C094Y8ST71V
+  name: random-welcomee-25년하반기
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 2
+  active_users: 8
+  avg_messages_per_day: 2.8
+summary: |
+  2025년 하반기 신규 입사자 밍글링 채널에서 10월 이후 추가 입사자들을 초대하고 채널 활용도에 대한 간단한 논의가 있었다.
+  채널 관리자가 7월 이후 입사한 신입 멤버들을 대거 초대하였으며, 제품 설명 미팅 일정 조율 및 손 압력기 테스트 관련 문의 스레드가 진행되었다.
+  채널 활용도가 낮다면 유사 채널을 더 이상 만들지 않겠다는 의견이 공유되는 등 채널 운영 방향에 대한 논의가 이루어졌다.
+topics:
+  - name: "신입사원 온보딩"
+    mention_count: 5
+    description: "2025년 하반기 신규 입사자들의 채널 초대 및 소개"
+  - name: "채널 운영"
+    mention_count: 3
+    description: "채널 활용도 및 운영 방향 논의"
+  - name: "제품 설명 미팅"
+    mention_count: 2
+    description: "신규 입사자 대상 제품 설명 일정 조율"
+key_discussions:
+  - thread_ts: '1729581499.000000'
+    date: '2025-10-22'
+    reply_count: 8
+    text_preview: "채널 활용도 논의 및 신규 입사자 대거 초대, 제품 설명 미팅 일정 조율"
+  - thread_ts: '1729591600.000000'
+    date: '2025-10-22'
+    reply_count: 5
+    text_preview: "손 압력기(힘 측정 기구) 테스트 여부 문의"
+terminology:
+  - term: "손 압력기"
+    definition: "힘 측정을 위한 손 압력 측정 기구, 신입사원 온보딩 관련 장비"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

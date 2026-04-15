@@ -1,0 +1,67 @@
+channel:
+  id: C09MNMM7E15
+  name: project-삼성이엔에이
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 57
+  total_threads: 31
+  active_users: 20
+  avg_messages_per_day: 2.4
+summary: |
+  삼성 E&A 문서 파싱 PoC 프로젝트 채널로, 2025-Q4에 본격적인 준비와 설치 작업이 이루어졌다. 오프라인 환경(온프렘)에서 Mac Studio 장비에 parse-router, Templar Archives, Grafana, MinIO, PostgreSQL, Redis 등 전체 서비스 스택을 구성하는 작업이 진행되었으며, qwen3-vl-30b-a3b-instruct-mlx@8bit 모델이 최종 선정되었다. 계약 체결 및 투입 일정이 여러 차례 연기된 끝에 12월 말 최종 승인이 이루어졌다.
+topics:
+  - name: "Mac Studio 장비 반입 및 세팅"
+    mention_count: 12
+    description: "삼성 E&A 현장 반입을 위한 Mac Studio 설정 및 서비스 재기동 테스트"
+  - name: "온프렘 서비스 스택 구성"
+    mention_count: 8
+    description: "PostgreSQL, Redis, MinIO, Grafana, parse-router 등 오프라인 환경 구성"
+  - name: "모델 속도 테스트"
+    mention_count: 5
+    description: "qwen3-vl-30b-a3b-instruct-mlx@8bit vs pepper-mlx 성능 비교"
+  - name: "계약 및 투입 일정"
+    mention_count: 7
+    description: "솔트룩스-사이오닉 계약서 작성 및 반복된 투입 일정 조율"
+  - name: "파서 아키텍처 공유"
+    mention_count: 3
+    description: "삼성 측 파서 아키텍처 구조 문서 공유 요청 대응"
+key_discussions:
+  - thread_ts: '1761196796.000000'
+    date: '2025-10-23'
+    reply_count: 13
+    text_preview: "삼성E&A 반입을 위한 현황 보고: PostgreSQL, Redis, MinIO, Grafana 정상 기동 및 전체 요청 흐름 확인"
+  - thread_ts: '1761199691.000000'
+    date: '2025-10-23'
+    reply_count: 1
+    text_preview: "qwen3-vl-30b-a3b-instruct-mlx@8bit 모델 속도 테스트 결과: pepper-mlx 대비 약 4배 빠름"
+  - thread_ts: '1762801020.000000'
+    date: '2025-11-11'
+    reply_count: 10
+    text_preview: "삼성이엔에이 PoC 관련 내용 공유"
+  - thread_ts: '1764381229.000000'
+    date: '2025-11-29'
+    reply_count: 28
+    text_preview: "삼성 ENA용 Mac Studio 최신 릴리즈로 재세팅 논의, parse-router/TA/Grafana/vllm/polaris 구성 요소 정비"
+  - thread_ts: '1765279200.000000'
+    date: '2025-12-24'
+    reply_count: 15
+    text_preview: "Mac Studio 현장 도착 및 미팅 내용 공유"
+terminology:
+  - term: "삼성 E&A"
+    definition: "삼성엔지니어링앤아키텍처, 사이오닉AI가 문서 파싱 PoC를 수행한 고객사"
+  - term: "qwen3-vl-30b-a3b-instruct-mlx"
+    definition: "삼성 E&A PoC에 채택된 비전 언어 모델, Mac Studio(MLX) 환경에서 실행"
+  - term: "Templar Archives (TA)"
+    definition: "사이오닉AI의 문서 파싱 결과 저장 및 관리 서비스"
+  - term: "parse-router"
+    definition: "사이오닉AI의 문서 파싱 요청 라우팅 서비스"
+  - term: "솔트룩스"
+    definition: "삼성 E&A 프로젝트의 파트너사, 계약 주체"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

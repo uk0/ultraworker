@@ -1,0 +1,73 @@
+channel:
+  id: C08CXC8E72A
+  name: eng-inging
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 202
+  total_threads: 150
+  active_users: 15
+  avg_messages_per_day: 3.2
+summary: |
+  2025년 4분기 eng-inging 채널은 Claude Code와 Opus 모델의 지속적인 활용과 함께 OCI 인프라 전환 과정의 기술적 난관이 주요 화제였다. dragoon 서비스의 메모리 누수 문제, SIGTERM 핸들러 구현 이슈, TypeScript 지시어(directive) 관련 팀 내 논쟁 등이 활발하게 논의되었다. Toss(토스) 결제 통합의 마무리와 함께 Go 언어와 TypeScript의 비교 논의도 이루어졌다. 15명의 팀원이 분기 말 마무리 작업과 함께 기술적 회고를 나누었다.
+topics:
+  - name: "OCI 인프라 전환 난관"
+    mention_count: 50
+    description: "Oracle Cloud Infrastructure 전환 과정에서 발생한 네트워크, 권한, 설정 이슈들"
+  - name: "메모리 누수 이슈"
+    mention_count: 30
+    description: "dragoon 서비스의 메모리 누수 원인 분석 및 해결 과정"
+  - name: "SIGTERM 핸들링"
+    mention_count: 20
+    description: "서비스 종료 시 SIGTERM 신호 처리 및 Graceful shutdown 구현 논의"
+  - name: "TypeScript 지시어 논쟁"
+    mention_count: 15
+    description: "TypeScript directive 사용에 대한 팀 내 코딩 스타일 논쟁"
+  - name: "Go vs TypeScript"
+    mention_count: 18
+    description: "백엔드 서비스 언어 선택에 대한 Go와 TypeScript 비교 토론"
+key_discussions:
+  - thread_ts: '1728086400.000000'
+    date: '2025-10-05'
+    reply_count: 10
+    text_preview: "OCI 클러스터 네트워크 정책 설정 오류로 인한 서비스 간 통신 장애 디버깅"
+  - thread_ts: '1730764800.000000'
+    date: '2025-11-05'
+    reply_count: 12
+    text_preview: "dragoon 서비스 메모리 누수 원인 분석: Go goroutine leak vs 외부 라이브러리"
+  - thread_ts: '1733443200.000000'
+    date: '2025-12-06'
+    reply_count: 8
+    text_preview: "SIGTERM 핸들러 구현 방식 논의: 타임아웃 처리 및 정리 작업 순서"
+  - thread_ts: '1734307200.000000'
+    date: '2025-12-16'
+    reply_count: 9
+    text_preview: "TypeScript 지시어 사용 정책 논쟁: @ts-ignore vs @ts-expect-error 선택 기준"
+terminology:
+  - term: "dragoon"
+    definition: "Sionic AI 내부 서비스. Q4에 메모리 누수 이슈가 발생하여 집중 디버깅"
+    aliases: []
+    context: "Q4 주요 장애 대응 서비스"
+  - term: "SIGTERM"
+    definition: "Unix/Linux 시스템의 프로세스 종료 신호. Graceful shutdown 구현의 핵심"
+    aliases: ["graceful shutdown", "그레이스풀 셧다운"]
+    context: "Q4에 서비스 안정적 종료를 위한 구현 방식 논의"
+  - term: "OCI"
+    definition: "Oracle Cloud Infrastructure. Sionic AI가 AWS/EKS 대체로 전환 중인 클라우드 플랫폼"
+    aliases: ["Oracle Cloud", "오라클 클라우드"]
+    context: "Q4에도 전환 과정에서 지속적인 기술적 난관이 발생"
+  - term: "Claude Code"
+    definition: "Anthropic Claude 기반 코드 자동화 CLI 도구. 팀 표준 AI 코딩 도구"
+    aliases: ["CC", "클로드 코드"]
+    context: "Q4에도 팀 전반에서 지속 활용"
+  - term: "TypeScript directive"
+    definition: "TypeScript 컴파일러에 특수 지시를 내리는 주석. 예: @ts-ignore, @ts-expect-error"
+    aliases: ["TS 지시어", "@ts-ignore"]
+    context: "Q4에 팀 내 코딩 스타일 정책 논쟁 주제"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

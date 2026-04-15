@@ -57,8 +57,17 @@ class ExecutorConfig(BaseModel):
     default_executor: str = "claude"  # "claude" or "codex"
     timeout_seconds: int = 300
     agentic_timeout_seconds: int = Field(
-        default_factory=lambda: int(os.environ.get("ULTRAWORK_AGENTIC_TIMEOUT", "1800"))
-    )  # 30 minutes default for agentic tasks
+        default_factory=lambda: int(os.environ.get("ULTRAWORK_AGENTIC_TIMEOUT", "86400"))
+    )  # 24 hours default for agentic tasks
+    heartbeat_interval_seconds: int = Field(
+        default_factory=lambda: int(os.environ.get("ULTRAWORK_HEARTBEAT_INTERVAL_SECONDS", "15"))
+    )
+    fork_max_age_seconds: int = Field(
+        default_factory=lambda: int(os.environ.get("ULTRAWORK_FORK_MAX_AGE_SECONDS", "1800"))
+    )
+    stalled_threshold_seconds: int = Field(
+        default_factory=lambda: int(os.environ.get("ULTRAWORK_STALLED_THRESHOLD_SECONDS", "600"))
+    )
 
 
 class WorkflowConfig(BaseModel):
@@ -111,6 +120,18 @@ class LanguageConfig(BaseModel):
         return v
 
 
+class MemoryConfig(BaseModel):
+    """Memory search configuration."""
+
+    search_binary: str = ""  # memory-search binary path (empty = auto-detect)
+    auto_index_on_save: bool = True  # Auto-index records via Rust CLI on save/delete
+
+    @field_validator("search_binary", mode="before")
+    @classmethod
+    def convert_none_to_empty(cls, v: str | None) -> str:
+        return v if v is not None else ""
+
+
 class UltraworkConfig(BaseModel):
     """Main configuration for Ultrawork."""
 
@@ -122,6 +143,7 @@ class UltraworkConfig(BaseModel):
     workflow: WorkflowConfig = Field(default_factory=WorkflowConfig)
     cronjob: CronjobConfig = Field(default_factory=CronjobConfig)
     language: LanguageConfig = Field(default_factory=LanguageConfig)
+    memory: MemoryConfig = Field(default_factory=MemoryConfig)
 
     @classmethod
     def load(cls, config_path: Path | None = None) -> "UltraworkConfig":

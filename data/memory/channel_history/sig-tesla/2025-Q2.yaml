@@ -1,0 +1,39 @@
+channel:
+  id: C08LM0ABGH2
+  name: sig-tesla
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 2
+  active_users: 7
+  avg_messages_per_day: 3.7
+summary: |
+  테슬라 오너 채널 개설 분기. Noah(고석현)가 4월 초에 채널을 만들고 테슬라 추천 링크(ts.la/ko30329)를
+  공유. 김덕현(Dekay)이 대신 구매를 진행해주는 에피소드 발생. 테슬라 오너들 간의 문자 대화가 28개
+  답글로 가장 활발한 스레드를 형성. 양호진은 아버지 차를 타본 후 모델 Y가 아른거린다고 언급.
+  김수원, 이재준, 송명하, 정세민 등이 채널에 합류함.
+topics:
+  - 테슬라 차량 구매/추천
+  - 테슬라 오너 문화
+  - 모델 Y 관심
+key_discussions:
+  - thread_ts: '1743653686.304479'
+    date: '2025-04-03'
+    reply_count: 28
+    text_preview: 'Noah - 테슬라 오너들간의 문자'
+  - thread_ts: '1744450436.399409'
+    date: '2025-04-12'
+    reply_count: 1
+    text_preview: '양호진 - 아버지 차를 타보니 모델 Y가 아른거려요'
+terminology:
+  - term: "ts.la"
+    definition: "테슬라 추천 링크(referral link)"
+    context: "Noah가 테슬라 추천 링크를 채널에 공유"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

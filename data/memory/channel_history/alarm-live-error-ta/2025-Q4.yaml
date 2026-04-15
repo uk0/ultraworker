@@ -1,0 +1,42 @@
+channel:
+  id: C09PCV2JFS6
+  name: alarm-live-error-ta
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 7
+  total_threads: 1
+  active_users: 7
+  avg_messages_per_day: 1.4
+summary: |
+  2025년 4분기 alarm-live-error-ta 채널은 라이브 환경의 TA(텍스트 어낼리틱스) 서비스 오류를 모니터링하는 알람 채널로, 10월에 채널이 초기 구성되고 다수의 팀원들이 합류하였다.
+  11월 12일에 live-ta-event-collector-api 서비스에서 500 오류(TA_500에러발생) 1건이 New Relic을 통해 감지되어 알람이 발생하였으며, 2개의 답글이 달려 확인 처리되었다.
+  이 분기는 채널 설정 초기 단계로, 실제 알람은 1건에 그쳤다.
+topics:
+  - name: "TA 서비스 500 오류"
+    mention_count: 1
+    description: "live-ta-event-collector-api의 TA_500에러발생 조건 위반 알람"
+  - name: "채널 멤버 합류"
+    mention_count: 5
+    description: "초기 채널 설정 시 팀원들의 채널 참여"
+key_discussions:
+  - thread_ts: '1763064000.000000'
+    date: '2025-11-12'
+    reply_count: 2
+    text_preview: "live-ta-event-collector-api TA_500에러발생 - TA_공통정책 위반, Critical 알람"
+terminology:
+  - term: "TA"
+    definition: "텍스트 어낼리틱스(Text Analytics) - 텍스트 분석 서비스"
+  - term: "live-ta-event-collector-api"
+    definition: "라이브 환경에서 TA 이벤트를 수집하는 API 서비스"
+  - term: "TA_공통정책"
+    definition: "TA 서비스 전반에 적용되는 New Relic 알람 정책"
+  - term: "New Relic"
+    definition: "사이오닉AI에서 사용하는 APM 및 인프라 모니터링 플랫폼"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

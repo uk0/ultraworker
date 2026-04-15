@@ -1,0 +1,42 @@
+channel:
+  id: C07TMG88HMW
+  name: sig-lol
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 10
+  total_threads: 2
+  active_users: 7
+  avg_messages_per_day: 2.5
+summary: |
+  sig-lol은 리그 오브 레전드(LoL)를 즐기는 팀원들의 관심사 그룹 채널이다. 2025년 4분기에는 7명의 멤버가 참여하였으며, 게임 닉네임 공유 스레드와 연말 칼바람(ARAM) 모임 제안 등 게임 관련 가벼운 소통이 이루어졌다.
+topics:
+  - name: "게임 닉네임 공유"
+    mention_count: 1
+    description: "채널 참여 멤버들의 LoL 게임 닉네임 공유 스레드"
+  - name: "칼바람 모임"
+    mention_count: 1
+    description: "연말 방학 전 칼바람(ARAM) 모드 게임 모임 제안"
+key_discussions:
+  - thread_ts: '1746428520.000000'
+    date: '2025-11-05'
+    reply_count: 38
+    text_preview: "채널 참여 기념 닉네임 공유 스레드"
+  - thread_ts: '1748822400.000000'
+    date: '2025-12-02'
+    reply_count: 0
+    text_preview: "방학 전 칼바람 하러 가실분 - 22일 또는 23일 퇴근 이후 제안"
+terminology:
+  - term: "LoL"
+    definition: "리그 오브 레전드(League of Legends), 팀원들이 즐기는 온라인 게임"
+  - term: "칼바람"
+    definition: "LoL의 ARAM(All Random All Mid) 게임 모드"
+  - term: "sig-lol"
+    definition: "LoL 관심사 그룹(SIG: Special Interest Group) 채널"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

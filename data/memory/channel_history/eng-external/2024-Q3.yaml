@@ -1,0 +1,44 @@
+channel:
+  id: C05JQPUNYTT
+  name: eng-external
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 5
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 2.5
+summary: |
+  2024-Q3은 eng-external 채널이 외부 엔지니어(천성님/Cheonseong Kang) 업무 배정 용도로 활용된 분기. Sigrid Jin이 Cheonseong Kang에게 Unstructured.IO(USIO) 관련 2개 이슈를 배정: (1) STM-1211: Pylon에서 USIO를 통한 파일 업로드 시 암호화된 PDF의 에러 핸들링 구현, (2) STM-1212: USIO에서 비암호화 파일을 암호화로 잘못 감지하는 버그(USIO 팀 인지 중), (3) STM-1218: 1천 페이지 PDF 복수건 동시 요청 시 stuck/메모리 릭 문제 원인 파악. 온프렘 쿠버네티스에 배포된 USIO API 사용 중.
+topics:
+  - Unstructured.IO (USIO) 이슈 관리
+  - PDF 암호화 에러 핸들링
+  - USIO 대용량 PDF 파싱 메모리 릭
+  - 외부 엔지니어 업무 배정
+key_discussions:
+  - thread_ts: '1721033930.289219'
+    date: '2024-07-15'
+    title: 'STM-1211: Pylon USIO 암호화 PDF 에러 핸들링'
+    summary: 'Sigrid Jin이 Cheonseong Kang에게 암호화된 PDF 파일의 USIO 에러 핸들링 태스크 배정'
+  - thread_ts: '1721263792.334329'
+    date: '2024-07-18'
+    title: 'STM-1212/1218: USIO 버그 및 대용량 PDF 성능 이슈'
+    summary: 'Sigrid Jin이 USIO 암호화 오탐 버그와 1천 페이지 PDF 동시 요청 시 stuck/메모리 릭 문제를 Cheonseong Kang에게 배정. 3개 답글'
+terminology:
+  - term: 'USIO'
+    definition: 'Unstructured.IO - 오픈소스 문서 파싱 API. Sionic AI에서 온프렘 쿠버네티스에 배포하여 Pylon의 파일 업로드 처리에 활용'
+  - term: 'Cheonseong Kang (천성님)'
+    definition: '외부 엔지니어. USIO 관련 이슈 해결 업무 담당'
+  - term: 'STM-1211'
+    definition: 'Jira 티켓 - Pylon USIO 암호화 PDF 에러 핸들링'
+  - term: 'STM-1212'
+    definition: 'Jira 티켓 - USIO 비암호화 파일 암호화 오탐 버그'
+  - term: 'STM-1218'
+    definition: 'Jira 티켓 - USIO 대용량 PDF 동시 요청 시 stuck/메모리 릭'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

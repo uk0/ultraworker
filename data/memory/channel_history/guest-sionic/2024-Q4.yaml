@@ -1,0 +1,29 @@
+channel:
+  id: C058FGC6DK2
+  name: guest-sionic
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 12
+  total_threads: 2
+  active_users: 10
+  avg_messages_per_day: 1.7
+summary: |
+  2024-Q4 guest-sionic 채널 데이터 수집 완료. 12개 메시지, 10명 참여, 2개 스레드.
+  사이오닉 양양 워케이션(11/24-29) 게스트 초대 공지. 데스커 워케이션 센터에서 2인실 8개, 4인실 2개 확보. 게스트도 참여 가능하도록 개방. 이재준(Leo), Cheonseong Kang, 김태진 등 신규 게스트 합류. 노진우, 신희수 등 채널 참여.
+topics:
+  - "양양 워케이션 게스트 초대"
+  - "신규 게스트 합류"
+key_discussions:
+  - title: "양양 워케이션 공지"
+    summary: "11/24-29 양양 데스커 워케이션 센터에서 진행. 업무 절반, 휴식 절반 컨셉. 게스트 참여 개방"
+terminology:
+  - term: "데스커 워케이션 센터"
+    definition: "강원 양양군 현남면 소재 워케이션 공간"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

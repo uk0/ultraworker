@@ -1,0 +1,92 @@
+channel:
+  id: C07K034UHNE
+  name: research-parse
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:30:08'
+statistics:
+  total_messages: 40
+  total_threads: 29
+  active_users: 11
+  avg_messages_per_day: 0.9
+key_discussions:
+- thread_ts: '1770162822.253569'
+  date: '2026-02-04'
+  reply_count: 86
+  text_preview: pypdf4llm 테스트
+- thread_ts: '1769671128.273629'
+  date: '2026-01-29'
+  reply_count: 85
+  text_preview: '<@U095HKJPKTK> <@U08DJL0LXL0> <@U09M73LM65R> cc <@U093DG8SMD1>
+
+    지금 스톰파스 gemini vlm 호출할때 파라미터 셋팅 몇인지 알'
+- thread_ts: '1769156360.876919'
+  date: '2026-01-23'
+  reply_count: 68
+  text_preview: qwen3-vl-32b-instruct를 띄워서 운영하는데에 저희 서버 운영 비용이 얼마나 들까요? <@U095HKJPKTK>
+    <@U08DJL0LXL0> <!subteam^S06V
+- thread_ts: '1768931523.187759'
+  date: '2026-01-21'
+  reply_count: 51
+  text_preview: storm parse SaaS 모델 교체를 위한 스레드 &gt;&gt;
+- thread_ts: '1768282377.401339'
+  date: '2026-01-13'
+  reply_count: 43
+  text_preview: <@U095HKJPKTK> 혹시 qwen 8b 랑 30BA3B 파스 성능 비교해주실 수 있으실까요...?
+- thread_ts: '1769073812.643969'
+  date: '2026-01-22'
+  reply_count: 38
+  text_preview: '<@U095HKJPKTK> 이거 스톰파스 모델 교체해서 성능 비교할수있을까요/
+
+    • gemini 3 flash 프리뷰
+
+    • ~gpt 5.2~'
+- thread_ts: '1770098137.790309'
+  date: '2026-02-03'
+  reply_count: 35
+  text_preview: 퀸즈 가드 자산 운용 작업
+- thread_ts: '1770096545.545799'
+  date: '2026-02-03'
+  reply_count: 28
+  text_preview: <http://huggingface.co/zai-org/GLM-OCR>
+- thread_ts: '1770182478.620049'
+  date: '2026-02-04'
+  reply_count: 21
+  text_preview: glm-ocr 테스트
+- thread_ts: '1768461896.356209'
+  date: '2026-01-15'
+  reply_count: 21
+  text_preview: '<https://huggingface.co/stepfun-ai/Step3-VL-10B|https://huggingface.co/stepfun-ai/Step3-VL-10B>
+
+
+    10B'
+- thread_ts: '1770081034.123289'
+  date: '2026-02-03'
+  reply_count: 19
+  text_preview: 오늘 파싱 오라클 부스 시연 중 파싱 오류
+- thread_ts: '1768469502.866819'
+  date: '2026-01-15'
+  reply_count: 17
+  text_preview: 영어 데이터셋 후보군 살펴보다가 찾은 문서
+- thread_ts: '1769582623.409709'
+  date: '2026-01-28'
+  reply_count: 16
+  text_preview: 오늘 opendataXai 챌린지 발표 중에 받은 챌린지 <!subteam^S07MRM7NLAC> 스톰파스 집중.
+- thread_ts: '1767665576.493449'
+  date: '2026-01-06'
+  reply_count: 15
+  text_preview: <@U095HKJPKTK> 예전에 스톰파스 자동평가 시스템 만드시는것 본것같은데 그거 혹시 저도 쓸수있나요?
+- thread_ts: '1769133090.141039'
+  date: '2026-01-23'
+  reply_count: 14
+  text_preview: '질문요)
+
+    문서 업로드하고 파싱할 때 변환 결과가 에이전트 세팅 언어로 생성되나요? 아니면 원본 문서의 언어로 생성되나요?
+
+    즉, 예를 들어 일본어 에이전트에 영어 자료를 업로드하면 '
+metadata:
+  created_at: '2026-02-13T16:30:08'
+  synced_by: sync_fast.py

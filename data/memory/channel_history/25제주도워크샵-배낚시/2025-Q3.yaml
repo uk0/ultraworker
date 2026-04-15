@@ -1,0 +1,38 @@
+channel:
+  id: C096NCHT1M5
+  name: 25제주도워크샵-배낚시
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 53
+  total_threads: 4
+  active_users: 16
+  avg_messages_per_day: 7.6
+summary: |
+  2025년 8월 제주도 워크샵 배낚시 활동 채널. 정세민(Sem)이 주도하여 제주 세화포구 동부2호 선상 배낚시를 기획함.
+  원래 동부2호 선장님 건강 이슈로 스텔라 2호(차로 10분 거리)로 변경됨. 1시 출항 5시 입항, 인당 대여비 포함 8만원. 참여자 모집 및 멀미약(아네론) 추천 등 준비 사항 공유.
+  당일(8/26) 점심으로 이여도산아(도민 맛집) 방문 후 항구로 택시 이동. 최병현, 권혜선, 정석현 등이 참여. Noah(고석현)가 바리깡을 가져온 에피소드도 있었음.
+topics:
+  - 제주 워크샵
+  - 배낚시
+  - 팀 빌딩
+  - 선상 낚시
+key_discussions:
+  - title: 배낚시 예약 및 변경
+    summary: 동부2호에서 스텔라2호로 배 변경 (선장 건강 이슈), 1시 출항 5시 입항, 인당 8만원
+  - title: 점심 식사 조율
+    summary: 이여도산아(도민 맛집)에서 식사 후 항구로 이동
+terminology:
+  - term: 동부2호
+    definition: 제주 세화포구의 선상 배낚시 전문 업체
+  - term: 스텔라2호
+    definition: 동부2호 대체로 이용한 낚시배
+  - term: 이여도산아
+    definition: 제주 도민 맛집으로 추천된 식당
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

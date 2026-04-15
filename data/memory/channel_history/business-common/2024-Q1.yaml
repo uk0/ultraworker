@@ -1,0 +1,82 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 165
+  total_threads: 88
+  active_users: 16
+  avg_messages_per_day: 3.6
+summary: |
+  2024-Q1에는 일본 AI Expo와 Gen AI Korea 2024 전시회 준비가 핵심 화두였으며, 브로셔/명함/가상오피스 등 일본 시장 진출을 위한 인프라를 구축했다.
+  고객 영업 측면에서는 누리미디어 견적(호출당 200원→140원), KT/하나은행 PoC, 현대차 연구소 대면미팅, SG그룹 RAG 과제 등 다양한 B2B 딜이 진행되었다.
+  홈페이지 개편과 상품소개서 작성이 병행되었고, 초창패 서류 합격 및 DST Global 투자사 미팅 등 펀딩/지원사업 활동도 활발했다.
+topics:
+  - 일본 시장 진출 (AI Expo, 가상오피스, 소프트뱅크 미팅)
+  - Gen AI Korea 2024 전시 준비
+  - 누리미디어 견적 및 가격 협상
+  - KT/하나은행 PoC
+  - 현대차 연구소 미팅
+  - SG그룹 RAG 과제
+  - 홈페이지 개편 및 상품소개서 작성
+  - 초창패 합격
+  - DST Global 투자사 미팅
+  - 매일경제 데이터셋 및 기사 자동생성
+key_discussions:
+  - thread_ts: '1710484735.005559'
+    date: '2024-03-15'
+    reply_count: 69
+    text_preview: 게임사 마코빌 케릭터 대화및 게임 도입으로 POC 해보기로 논의
+  - thread_ts: '1710831890.631479'
+    date: '2024-03-19'
+    reply_count: 56
+    text_preview: about us에 관해 의견 수렴합니다. 전체적인 흐름
+  - thread_ts: '1709181744.402759'
+    date: '2024-02-29'
+    reply_count: 52
+    text_preview: 누리미디어에 초기 견적 전달하려고 합니다. 호출당 200원인데 30% 할인하여 140원 제안
+  - thread_ts: '1711349042.087739'
+    date: '2024-03-25'
+    reply_count: 39
+    text_preview: 한국, 일본 엑스포 관련 진행 현황을 한번 정리해볼까 합니다
+  - thread_ts: '1710213367.628589'
+    date: '2024-03-12'
+    reply_count: 39
+    text_preview: 상품소개서 작성이 필요하다고 하셔서 일단 초안 잡아둔거 공유드려요
+  - thread_ts: '1710224475.253199'
+    date: '2024-03-12'
+    reply_count: 25
+    text_preview: 홈페이지 관련 회의하셨던데 혹시 어느정도 진행되셨나용?
+  - thread_ts: '1710238251.785169'
+    date: '2024-03-12'
+    reply_count: 20
+    text_preview: SaaS GSIP 저희 전시회 비용이나 일본 진출 비용의 75%를 지원받을 수 있다
+  - thread_ts: '1710143284.644419'
+    date: '2024-03-11'
+    reply_count: 19
+    text_preview: 하나은행(KT) 미팅 내용 공유
+terminology:
+  - term: Storm Answer
+    definition: 사이오닉AI의 문서 기반 AI 질의응답 제품
+    aliases: [앤서]
+    context: 고객사 데모 및 PoC에 주로 활용
+  - term: Storm Write
+    definition: 사이오닉AI의 AI 기반 문서/보고서 자동 작성 제품
+    aliases: [롸이트]
+    context: 매일경제 기사 자동생성 등에 활용 논의
+  - term: 초창패
+    definition: 중소벤처기업부 초기창업패키지 지원사업
+    aliases: []
+    context: 서류 합격하여 자금 지원 확보
+  - term: SG그룹
+    definition: KT-업스테이지-사이오닉 컨소시엄으로 대응한 RAG 과제 고객
+    aliases: []
+    context: 대규모 문서 벡터화 및 RAG 기반 질의응답 구축 요건
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

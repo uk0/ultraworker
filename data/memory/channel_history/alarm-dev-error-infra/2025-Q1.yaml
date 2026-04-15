@@ -1,0 +1,42 @@
+channel:
+  id: C087Z7CKB0U
+  name: alarm-dev-error-infra
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 1938
+  total_threads: 1916
+  active_users: 10
+  avg_messages_per_day: 32.8
+summary: |
+  개발 환경(dev namespace) 인프라 에러 알림 채널. New Relic InfraAlert(dev) 정책 기반으로 Pod 재시작, Pending 상태 등의 알림이 자동 발송됨.
+  주요 알림 대상 Pod: overmind(최다 빈도), carrier-supply, auto-order-sheet, hello-kang-test, carrier-storm-parse.
+  대부분 "Pod has restarted" 유형이며, 일부 "Pod is in a Pending state" 알림 포함.
+  sionicai-onprem-cluster의 dev 네임스페이스에서 발생하는 인프라 이슈를 모니터링하는 채널.
+  일평균 32.8건의 알림이 발생하여 비교적 높은 빈도의 Pod 불안정성이 관찰됨.
+topics:
+  - Pod 재시작 알림
+  - Pending 상태 감지
+  - New Relic InfraAlert
+  - dev 네임스페이스 모니터링
+  - overmind 서비스 불안정
+  - carrier-supply 재시작
+  - auto-order-sheet 오류
+key_discussions: []
+terminology:
+  - term: "overmind"
+    definition: "개발 환경에서 가장 빈번하게 재시작되는 서비스 Pod"
+    context: "2025-Q1 기준 전체 알림의 과반수 차지"
+  - term: "InfraAlert(dev)"
+    definition: "New Relic에서 설정된 개발 환경 인프라 알림 정책"
+    context: "Pod 재시작, Pending 상태 등 감지 시 Slack으로 자동 알림"
+  - term: "sionicai-onprem-cluster"
+    definition: "Sionic AI의 온프레미스 Kubernetes 클러스터"
+    context: "dev/live 네임스페이스를 포함하는 메인 클러스터"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

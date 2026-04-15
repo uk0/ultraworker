@@ -1,0 +1,53 @@
+channel:
+  id: C0A4X56PM98
+  name: comsat-evaluation-alarm
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 94
+  total_threads: 48
+  active_users: 7
+  avg_messages_per_day: 15.7
+summary: |
+  2025-Q4 말기인 12월 21일에 comsat-evaluation-alarm 채널이 신설되어 COMSAT 평가 자동화 봇이 집중 운영되었다.
+  평가 봇(U0A5RE3J95W)이 1~48개 질문 단위로 수십 차례 평가를 실행하며 결과를 채널에 알림으로 전송하였고, 팀원들이 실시간으로 평가 진행 상황을 모니터링하였다.
+  12월 21일부터 30일까지 약 10일간 집중적으로 평가가 진행되었으며, 연속적인 평가 실행과 결과 스레드가 대부분의 메시지를 차지한다.
+topics:
+  - name: "COMSAT 자동 평가"
+    mention_count: 60
+    description: "평가 봇이 자동으로 평가 세션을 시작하고 결과를 알림으로 전송"
+  - name: "평가 세션 모니터링"
+    mention_count: 15
+    description: "팀원들이 실시간으로 평가 진행 상황을 확인하고 반응"
+  - name: "채널 설정"
+    mention_count: 5
+    description: "채널 이름 변경(comsat-evaluation--alarm → comsat-evaluation-alarm) 및 초기 멤버 초대"
+key_discussions:
+  - thread_ts: '1766250600.000000'
+    date: '2025-12-21'
+    reply_count: 1
+    text_preview: "평가 시작: 15 질문 - COMSAT 첫 번째 대규모 평가 세션 시작"
+  - thread_ts: '1766276400.000000'
+    date: '2025-12-22'
+    reply_count: 6
+    text_preview: "평가 시작했뇽! 39 질문 - 대규모 배치 평가 세션 진행"
+  - thread_ts: '1766769600.000000'
+    date: '2025-12-28'
+    reply_count: 7
+    text_preview: "평가 시작했뇽! 19 질문 - 반복 평가 세션 및 40 질문 배치 평가"
+terminology:
+  - term: "COMSAT"
+    definition: "Sionic AI의 평가 자동화 시스템으로 다수의 질문에 대해 자동으로 응답 품질을 평가"
+    aliases: ["comsat"]
+    context: "comsat-evaluation-alarm 채널에서 평가 봇을 통해 자동 실행 및 결과 알림"
+  - term: "평가 봇"
+    definition: "지정된 질문 수만큼 자동으로 평가를 실행하고 Slack에 결과를 알리는 봇"
+    aliases: ["meow_bongo_ban 봇"]
+    context: "평가 시작 메시지와 종료 알림을 채널에 자동 전송"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

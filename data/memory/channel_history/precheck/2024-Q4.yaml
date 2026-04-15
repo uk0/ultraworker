@@ -1,0 +1,39 @@
+channel:
+  id: C07SGNCLYMV
+  name: precheck
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 11
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 5.5
+summary: |
+  배포 전 사전 점검(precheck) 알림 채널. Sionic Deploy Bot이 GoCD와 Vault 간의 연동 상태를 자동으로 확인하고 결과를 보고한다.
+  10월 22일에 채널이 생성되었으며, 이재준(Leo)과 Sionic Deploy Bot이 초기 참여자이다.
+  Vault 접근 성공 및 GoCD 토큰 획득 성공 메시지가 반복적으로 기록되었다.
+  초기 설정 과정에서 GO_SERVER_URL 환경변수가 미설정된 상태의 메시지도 있었으나 이후 정상 URL로 수정되었다.
+  Noah(고석현)가 11월에 채널에 합류했다.
+topics:
+  - GoCD 배포 사전 점검
+  - Vault 토큰 관리
+  - CI/CD 인프라 모니터링
+key_discussions:
+  - title: GoCD-Vault 연동 초기 설정
+    summary: Sionic Deploy Bot이 GoCD에서 Vault 토큰을 정상적으로 획득하는지 확인하는 사전 점검 알림이 시작됨. 초기에 GO_SERVER_URL 환경변수 미설정 이슈가 있었으나 곧 해결됨.
+terminology:
+  - term: GoCD
+    definition: Sionic AI에서 사용하는 CI/CD 파이프라인 서버
+  - term: Vault
+    definition: HashiCorp Vault. 시크릿/토큰 관리 도구
+  - term: Sionic Deploy Bot
+    definition: 배포 자동화를 위한 Slack 봇
+  - term: precheck
+    definition: 배포 전 사전 점검 프로세스
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

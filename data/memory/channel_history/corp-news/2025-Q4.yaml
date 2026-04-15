@@ -1,0 +1,45 @@
+channel:
+  id: C09V8GHTYG7
+  name: corp-news
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 33
+  total_threads: 0
+  active_users: 7
+  avg_messages_per_day: 2.2
+summary: |
+  2025-Q4 corp-news 채널은 Sionic-News-Bot이 자동으로 수집한 회사 관련 뉴스 기사들을 공유하는 채널이다.
+  가장 주목할 소식은 사이오닉에이아이가 네이버클라우드 등으로부터 250억 원 규모의 시리즈 A 투자를 유치했다는 것으로, 12월 초에 AI타임스, MSN 등 여러 매체에서 보도되었다.
+  중기부의 AI 스타트업 정책과제 관련 뉴스와 다양한 스타트업 생태계 관련 소식도 정기적으로 공유되었으며, 11월 하순에 채널이 개설되어 멤버들이 참여하였다.
+topics:
+  - name: "사이오닉에이아이 투자 유치"
+    mention_count: 5
+    description: "네이버클라우드 참여 포함 250억 원 시리즈 A 투자 유치 관련 뉴스가 복수 매체에서 보도됨"
+  - name: "AI 스타트업 생태계"
+    mention_count: 8
+    description: "중기부 정책과제, AI SaaS 데이, 스타트업 투자 유치 등 국내외 AI 스타트업 관련 동향"
+  - name: "뉴스봇 운영"
+    mention_count: 3
+    description: "Sionic-News-Bot이 사이오닉 키워드 포함 기사를 자동으로 수집·공유하는 방식으로 운영"
+key_discussions:
+  - thread_ts: '1733090013.000000'
+    date: '2025-12-01'
+    reply_count: 0
+    text_preview: "사이오닉에이아이, LLM 운영 솔루션으로 250억원 시리즈A 투자 유치 - AI타임스"
+  - thread_ts: '1733349600.000000'
+    date: '2025-12-04'
+    reply_count: 0
+    text_preview: "뉴스봇 필터링 개선: 페이지 자체에 사이오닉 키워드가 없으면 수집하지 않도록 수정"
+terminology:
+  - term: "Sionic-News-Bot"
+    definition: "사이오닉 관련 뉴스를 자동으로 수집하여 채널에 공유하는 봇 서비스"
+  - term: "시리즈 A"
+    definition: "사이오닉에이아이가 2025년 12월에 네이버클라우드 등으로부터 유치한 250억 원 규모의 투자 라운드"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

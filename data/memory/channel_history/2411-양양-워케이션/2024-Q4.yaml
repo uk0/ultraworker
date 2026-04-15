@@ -1,0 +1,41 @@
+channel:
+  id: C082YNZG9CG
+  name: 2411-양양-워케이션
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 211
+  total_threads: 68
+  active_users: 17
+  avg_messages_per_day: 23.4
+summary: |
+  2024년 11월 말(11/26~11/29) 강원도 양양에서 진행된 팀 워케이션 채널. 약 17명의 팀원이 참여하여 데스커(DESKER) 리조트 가든에 숙박하며 업무와 레저 활동을 병행함.
+  주요 활동으로 주문진 회 구매, 자전거 라이딩, 수영장, 클라이밍, 불꽃놀이, 요가 세션 등이 진행됨. 숙소 방 배정, 법인카드 관리, 식당 예약(고향집맛집, 양양 막국수 등), 차량 이동 조율 등 로지스틱스 논의가 활발했음.
+  타회사 참여자(정효주)도 포함된 교류형 워케이션으로, 보드게임(달무티) 등 친목 활동도 이루어짐. 마지막 날 퇴실 및 서울 복귀 조율로 마무리됨.
+topics:
+  - 양양 워케이션
+  - 팀 빌딩
+  - 데스커 리조트
+  - 주문진 회
+  - 레저 활동
+key_discussions:
+  - title: 저녁 식사 논의 및 주문진 회 구매
+    summary: 주문진에서 회 구매, 저녁 식당 예약(고향집맛집 갈비탕/메밀전병) 등 식사 일정 조율
+  - title: 자전거 라이딩 및 레저 활동
+    summary: 자전거 라이딩(초심자 가능), 수영장, 클라이밍, 불꽃놀이 등 다양한 레저 활동 참여 모집
+  - title: 숙소 관리 및 퇴실 조율
+    summary: 가든 방 배정, 비밀번호 공유, 퇴실 확인 및 서울 복귀 차량 조율
+terminology:
+  - term: 데스커(DESKER)
+    definition: 양양 워케이션에 사용된 리조트/숙박 시설
+  - term: 가든
+    definition: 워케이션 숙소 내 공용 공간/오피스 영역
+  - term: 법카
+    definition: 법인카드의 줄임말, 팀 경비 지출에 사용
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

@@ -1,0 +1,25 @@
+channel:
+  id: C06DZP8HASV
+  name: kims-bakery
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 3분기에는 Noah님이 "다들 굽는다는 표현을 좋아하시네요"라는 코멘트를 남겼으며,
+  Notion AI 봇이 채널에 참여한 정도로 활동이 매우 적었다. 모델 학습을 "굽는다"고 표현하는 문화가
+  사내에서 확산되고 있음을 간접적으로 보여주었다.
+topics:
+  - 모델 학습 은어 문화
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

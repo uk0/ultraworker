@@ -1,0 +1,56 @@
+channel:
+  id: C07T22TQZT9
+  name: storm-admin-signup
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 88
+  total_threads: 45
+  active_users: 14
+  avg_messages_per_day: 2.2
+summary: |
+  2025-Q1에 신규 가입 유입이 본격적으로 증가하기 시작한 분기이다. Noah가 가입 추세 분석 데이터를 공유하며 유입 상승을 확인하였고, 김혜원은 "묘하게 인플로우가 점점 늘어나는 느낌"이라고 관찰하였다. 최병현(Hyune-c)이 팀명/회사명 어뷰징 가능성 문제를 제기하고 사업자번호 인증, 승인제 운영, 기업 이메일 인증 등 해결 방안을 논의하였다. 또한 팀명을 입력하지 않는 사용자 존재 문제, 오가닉 유입 고객 관리 방침(테스트 유저로 간주하고 관찰만), 리마인드 봇(28일 후 알림) 설정 등이 주요 논의사항이었다. Noah가 중소기업 대표 단톡방에서 광고하여 유입 증가에 기여하였다.
+topics:
+  - 신규 가입 유입 추세 분석
+  - 팀명/회사명 어뷰징 방지
+  - 오가닉 유입 고객 관리 방침
+  - 리마인드 봇 설정
+  - 트라이얼 고객 대응
+key_discussions:
+  - thread_ts: '1739861068.178099'
+    date: '2025-02-18'
+    title: 팀명/회사명 어뷰징 방지 방안 논의
+    summary: 최병현이 팀/회사명 없이 가입하는 사례와 어뷰징 가능성을 지적하고, 사업자번호 인증/승인제/기업이메일 인증 등 3가지 해결 방안 제시 (18개 답글)
+  - thread_ts: '1739456337.774669'
+    date: '2025-02-13'
+    title: 인플로우 증가 추세 관찰
+    summary: 김혜원이 가입 유입 증가를 관찰하고 팀원들과 스위스프렌즈/스페이스웨이비 등 신규 고객 사용 현황 분석 (37개 답글)
+  - thread_ts: '1740123495.004299'
+    date: '2025-02-21'
+    title: 유입 추세 상승 분석 및 광고 효과
+    summary: Noah가 유입추세 상승을 보고하고 중소기업 단톡방 광고 효과 논의 (18개 답글)
+  - thread_ts: '1739586768.814379'
+    date: '2025-02-15'
+    title: 비메인 타겟 소규모 기업 대응 방침
+    summary: Noah가 소규모 기업 유입 관찰의 중요성을 강조하면서도 메인 타겟이 아닌 점 명확화 (6개 답글)
+  - thread_ts: '1739501065.879249'
+    date: '2025-02-14'
+    title: 가입 어뷰징 대응 방안
+    summary: 최병현이 팀/회사명 어뷰징 사례를 보고하고 사업자번호 검증 등 방안 논의 (6개 답글)
+terminology:
+  - term: 오가닉 유입
+    definition: 별도 마케팅 없이 자연적으로 유입되는 신규 가입 고객
+    aliases: [organic inflow]
+  - term: 리마인드 봇
+    definition: 이모지 클릭 후 28일 경과 시 자동으로 알림을 보내는 슬랙 봇 (트라이얼 만료 추적용)
+    aliases: [자명종시계]
+  - term: templar-archives
+    definition: Grafana에서 고객별 사용량을 조회할 수 있는 대시보드
+    aliases: [ta]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,36 @@
+channel:
+  id: C05TNDBU38X
+  name: product-storm-analyze
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 2
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 0.02
+summary: >
+  2025년 1분기는 product-storm-analyze 채널이 보관(archive) 처리된 시기이다. 김혜원이 2025년 2월 14일에
+  "해당 채널 정리합니다 바이바이" 메시지와 함께 채널을 보관 처리했다. 이로써 2023년 9월 27일 개설된
+  이래 약 1년 5개월간 운영되었던 Storm Analyze 프로덕트 채널이 종료되었다.
+topics:
+  - name: "채널 보관 처리"
+    count: 2
+    summary: "김혜원이 채널 정리 및 보관 처리. 2023-09-27 개설 이후 약 1년 5개월간 운영 후 종료."
+key_discussions:
+  - thread_ts: '1739503593.253389'
+    date: '2025-02-14'
+    title: "채널 정리 및 보관"
+    summary: "김혜원이 '해당 채널 정리합니다 바이바이' 메시지와 함께 채널 보관 처리. Storm Analyze 채널 운영 종료."
+    participants: ["U05T2RW7PE2"]
+    decisions: ["채널 보관(archive) 처리"]
+    action_items: []
+    keywords: ["채널 보관", "정리", "종료"]
+    relevance_score: 0.5
+terminology: []
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-manual

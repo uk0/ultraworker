@@ -1,0 +1,41 @@
+channel:
+  id: C07CLR2TCRZ
+  name: project-rag-wrtn
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 6
+  active_users: 9
+  avg_messages_per_day: 2.2
+summary: |
+  2024-Q4에는 뤼튼 프로젝트가 라이브 배포 대기 상태에서 예상치 못한 트래픽이 발생하는 등 불확실한 상황이 지속되었다.
+  최병현(Hyune-c)이 뤼튼의 뜬금없는 OpenLLM 호출을 발견하고 과금 및 향후 방향성을 확인했다. 뤼튼이 Anthropic Claude를
+  활용한 캐릭터 채팅 서비스를 런칭한 것이 확인되었고, OpenLLM 사용 의향에 대한 의문이 제기되었다. 김혜원은 "뤼튼은 언제
+  라이브를 하는 것일까..2"라며 라이브 지연에 대한 답답함을 표현했다. 12월에는 뤼튼에서의 실제 호출이 감지되어 과금,
+  데이터 보호, 향후 방향성에 대한 긴급 논의(27개 답글)가 진행되었다.
+topics:
+  - 뤼튼 라이브 배포 지연 지속
+  - 예상치 못한 OpenLLM 호출 감지
+  - 과금 및 방향성 논의
+  - 뤼튼 Claude 기반 캐릭터 채팅 서비스
+key_discussions:
+  - title: "뤼튼 OpenLLM 호출 감지 및 긴급 논의"
+    date: "2024-12-02~03"
+    participants: ["최병현(Hyune-c)", "김혜원"]
+    summary: "TA 모니터링 중 뤼튼에서 OpenLLM 호출 발견. 과금 대상 여부 및 향후 방향성 논의. 내부 첩보를 통한 상황 파악."
+  - title: "뤼튼 라이브 상태 확인"
+    date: "2024-10-15~23"
+    participants: ["김혜원", "Sigrid Jin", "Noah(고석현)"]
+    summary: "뤼튼 라이브 배포 상태 불명확. 뤼튼이 Anthropic 활용 중인 점, OpenLLM 사용 의향 불투명."
+terminology:
+  - term: "TA"
+    definition: "Traffic Analysis, 트래픽 분석 모니터링"
+    aliases: ["트래픽 분석"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

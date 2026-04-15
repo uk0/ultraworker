@@ -1,0 +1,88 @@
+channel:
+  id: C05QCGG1E5V
+  name: business-contact
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 50
+  total_threads: 27
+  active_users: 14
+  avg_messages_per_day: 2.4
+summary: |
+  2024-Q2는 business-contact 채널이 본격 운영되기 시작한 시기이다. 채널명이 "contact-typeform"에서
+  "business-contact"로 변경(4월 17일)되었고, Typeform 및 Zapier를 통한 문의 자동 수집 체계가
+  구축되었다. 총 50건의 메시지가 접수되었으며 14명이 참여하였다.
+
+  주요 문의 유형은 크게 4가지로 분류된다:
+  1) STORM Answer 대기자 신청 및 데모 요청 (NAVER, 서울데이케어센터, 디윅스 등)
+  2) STORM Platform 도입 문의 (핑거, 로지스나, KTDS, 질링스 등)
+  3) 일본 기업의 전시회/이벤트 초대 (日本経済新聞社 GenAI/SUM, RUTILEA GPU 서비스, 오픈이노베이션EXPO)
+  4) 투자 논의 (알바트로스인베스트먼트)
+
+  주목할 만한 문의로는 진평회계법인의 세무 상담 자동화 챗봇 문의, 한길씨앤씨의 군 폐쇄망 적용
+  문의, 홈앤쇼핑의 오픈이노베이션 프로그램 제안, xionic-ko-llama-3-70b 모델 사용 관련 학생
+  문의가 있었다. 김덕현(Dekay)이 채널을 세팅하고, 김혜원이 문의 대응 프로세스(스프레드시트 연동,
+  이모티콘 표시 규칙)를 정립하였다.
+topics:
+  - STORM Answer 데모/대기자 신청
+  - STORM Platform 도입 문의
+  - 일본 시장 전시회/이벤트 초대
+  - 투자 문의
+  - xionic-ko-llama-3-70b 모델 사용
+  - 군 폐쇄망 AI 적용
+  - 세무/회계 챗봇 자동화
+  - 문의 대응 프로세스 정립
+  - OpenGateway 테스트
+key_discussions:
+  - thread_ts: '1713698540.024429'
+    date: '2024-04-21'
+    reply_count: 22
+    text_preview: 'NAVER 권오준 - STORM Answer 대기자 신청'
+  - thread_ts: '1717136198.579309'
+    date: '2024-05-31'
+    reply_count: 12
+    text_preview: '홈앤쇼핑 오픈이노베이션 프로그램 제안 검토 (박우명)'
+  - thread_ts: '1718586316.282509'
+    date: '2024-06-17'
+    reply_count: 10
+    text_preview: '시안 - LINE 어카운트 답변 자동화 상담 요청'
+  - thread_ts: '1713754485.608289'
+    date: '2024-04-22'
+    reply_count: 9
+    text_preview: '최윤정 - business-contact 관리 현황 논의'
+  - thread_ts: '1718787445.445519'
+    date: '2024-06-19'
+    reply_count: 8
+    text_preview: '진평회계법인 - 세무 기장 상담 자동화 챗봇 문의'
+  - thread_ts: '1718946126.840329'
+    date: '2024-06-21'
+    reply_count: 6
+    text_preview: '네이버 주환 - STORM Answer 파트너 솔루션 체험 요청'
+terminology:
+  - term: "STORM Answer"
+    definition: "Sionic AI의 문서 기반 AI 답변 서비스. RAG 기술을 활용하여 문서에 기반한 정확한 답변 제공"
+    aliases: ["스톰 앤서"]
+    context: "대기자 신청 및 데모 요청이 가장 많은 제품이었음"
+  - term: "STORM Platform"
+    definition: "Sionic AI의 LLM 서빙 플랫폼. 상용/오픈 LLM을 활용한 AI 서비스 구축 지원"
+    aliases: ["스톰 플랫폼"]
+    context: "온프레미스 구축 가능 여부, 가격 정책 등이 주요 문의 사항이었음"
+  - term: "xionic-ko-llama-3-70b"
+    definition: "Sionic AI가 공개한 한국어 특화 LLM 모델. 오픈소스로 상업적 이용 가능"
+    aliases: ["xionic 모델"]
+    context: "학생, 개발자들의 모델 사용 및 API 접근 관련 문의 있었음"
+  - term: "OpenGateway"
+    definition: "Sionic AI의 비즈니스 컨택 관련 서비스/도구"
+    aliases: []
+    context: "김덕현(Dekay)이 테스트한 문의 접수 경로 중 하나"
+  - term: "Zapier"
+    definition: "자동화 워크플로우 도구. 웹 폼 문의를 Slack 채널로 자동 전달하는 데 사용됨"
+    aliases: []
+    context: "2024-Q2 중반부터 Typeform과 함께 문의 자동 수집에 활용"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

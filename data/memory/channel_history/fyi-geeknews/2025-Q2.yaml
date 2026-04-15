@@ -1,0 +1,83 @@
+channel:
+  id: C057PUSB1S8
+  name: fyi-geeknews
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1111
+  total_threads: 221
+  active_users: 12
+  avg_messages_per_day: 12.2
+summary: |
+  2025년 2분기에는 AI CLI 도구 경쟁이 본격화되었다. Google Gemini CLI 공개가 최대 화제였고,
+  Claude Code for VSCode, Claude 앱 빌드 기능(무료 LLM+호스팅) 등 AI 개발 도구가 급속히 진화했다.
+  ECMAScript 2025가 공식 표준으로 승인되었고, Spring Boot 4.0 프리뷰(API 버전 관리, GraalVM 지원 강화),
+  Kotlin Multiplatform(KMP) 성숙화 등 주요 프레임워크 업데이트가 있었다.
+  "Context Engineering" 개념이 Karpathy에 의해 제시되며 AI 시대 개발 패러다임 논의가 활발했다.
+  최병현님의 Spring Boot 4.0 분석, KMP 전망, 올리브영 기술블로그 리뷰, Redis 캐시 전략,
+  정세민님의 RAGflow 리서치, Gemini CLI 속보, Claude Artifacts 분석,
+  Sigrid Jin님의 LangConnect MCP, uv/PEP 723 활용법 등 팀원들의 기술 공유가 역대급으로 활발했다.
+topics:
+  - AI CLI 도구 경쟁 (Gemini CLI, Claude Code VSCode)
+  - Context Engineering 개념 등장
+  - ECMAScript 2025 표준 승인
+  - Spring Boot 4.0 프리뷰와 백엔드 진화
+  - Kotlin Multiplatform(KMP) 성숙화
+  - RAG 기술 발전 (RAGflow, LangConnect MCP)
+  - 클라우드/인프라 (Cloudflare Containers, Let's Encrypt IP 인증서)
+  - AI 기업 동향 (OpenAI o3/o4 API 공개, Meta 대규모 인수)
+key_discussions:
+  - thread_ts: '1750996285.554179'
+    date: '2025-06-27'
+    topic: 'Kotlin Multiplatform(KMP) 전망'
+    summary: '최병현님의 KMP 활용 분석. 앱 영역에서 RN/Flutter 대안으로 성장, 웹/데스크톱은 백엔드 겸직 수준 (23개 답글)'
+  - thread_ts: '1750826398.054879'
+    date: '2025-06-25'
+    topic: 'uv와 PEP 723으로 Python 스크립트 활용'
+    summary: 'Python 패키지 관리 도구 uv 활용법에 대한 활발한 토론 (8개 답글)'
+  - thread_ts: '1750924209.078409'
+    date: '2025-06-26'
+    topic: 'IntelliJ 대안 성능 측정 도구'
+    summary: '네이버 D2 기술블로그의 성능 측정 도구에 대한 논의 (8개 답글)'
+  - thread_ts: '1750875443.255279'
+    date: '2025-06-25'
+    topic: 'Google Gemini CLI 공개'
+    summary: '정세민님의 Gemini CLI 속보와 팀원들의 반응 (7개 답글)'
+  - thread_ts: '1750774071.075609'
+    date: '2025-06-24'
+    topic: 'RAGflow - RAG 특화 워크플로우'
+    summary: '정세민님의 RAGflow 리서치 공유와 팀 활용 방안 논의 (7개 답글)'
+  - thread_ts: '1751284375.082959'
+    date: '2025-06-30'
+    topic: '올리브영 AWS Summit Recap'
+    summary: '최병현님의 백엔드 개발자를 위한 올리브영 기술블로그 공유 (6개 답글)'
+  - thread_ts: '1750654022.127499'
+    date: '2025-06-23'
+    topic: 'LangConnect - RAG용 MCP 도구'
+    summary: 'Sigrid Jin님의 LangConnect Client 오픈소스화와 RAG MCP 연동 활용법 공유'
+terminology:
+  - term: "Gemini CLI"
+    definition: "Google에서 공개한 AI 코딩 CLI 도구. Claude Code의 경쟁 제품"
+    aliases: []
+  - term: "Context Engineering"
+    definition: "Karpathy가 제시한 개념. AI에게 효과적으로 컨텍스트를 제공하는 엔지니어링 방법론"
+    aliases: []
+  - term: "KMP"
+    definition: "Kotlin Multiplatform. 하나의 코드베이스로 iOS, Android, 웹, 데스크톱 앱 개발 가능한 프레임워크"
+    aliases: ["Kotlin Multiplatform"]
+  - term: "RAGflow"
+    definition: "LangFlow의 RAG 특화 버전. 벡터 검색 기반 지식 DB 구축 및 활용 도구"
+    aliases: []
+  - term: "Spring Boot 4.0"
+    definition: "Spring 프레임워크 7.0 기반. 헤더 기반 API 버전 관리, GraalVM 23, Kotlin 2.x 필수 등 주요 변화 포함"
+    aliases: []
+  - term: "ECMAScript 2025"
+    definition: "2025년 6월 공식 승인된 JavaScript 표준"
+    aliases: ["ES2025"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

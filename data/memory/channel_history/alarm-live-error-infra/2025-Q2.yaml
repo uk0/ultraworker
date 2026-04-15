@@ -1,0 +1,42 @@
+channel:
+  id: C082JL1EV71
+  name: alarm-live-error-infra
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 196
+  total_threads: 176
+  active_users: 13
+  avg_messages_per_day: 6.5
+summary: |
+  운영 환경 인프라 에러 알림 채널. 196건, 참여자 13명으로 대응 인력 증가.
+  live 네임스페이스 84건 중심. bge-m3-reranker(24건)와 pylon(22건)이 가장 빈번한 알림 대상.
+  qdrant-v2 벡터 DB(8건), carrier-storm-parse(7건), stargate(5건) 등도 관찰됨.
+  corsair 관련 Pod(corsair-qdrant, corsair-controller) 알림이 새로 등장하여 Corsair 서비스 배포 시작을 시사.
+  "Pod has restarted"(71건), "Pod is in a Pending state"(13건) 비율.
+  송명하, 최병현(Hyune-c), Noah(고석현) 등이 대응 참여.
+topics:
+  - bge-m3-reranker 재시작 빈발 (최다)
+  - pylon 지속적 불안정
+  - qdrant-v2 벡터 DB 이슈
+  - corsair 서비스 신규 배포
+  - carrier-storm-parse 반복 오류
+  - opengateway PostgreSQL 이슈
+key_discussions: []
+terminology:
+  - term: "qdrant-v2"
+    definition: "Qdrant 벡터 데이터베이스 v2 인스턴스"
+    context: "벡터 검색을 위한 DB, live 환경에서 간헐적 이슈"
+  - term: "corsair"
+    definition: "Sionic AI의 신규 서비스 컴포넌트"
+    context: "Q2부터 live 환경에 배포 시작, Qdrant 연동"
+  - term: "opengateway"
+    definition: "API 게이트웨이 서비스"
+    context: "PostgreSQL 인스턴스 관련 이슈 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

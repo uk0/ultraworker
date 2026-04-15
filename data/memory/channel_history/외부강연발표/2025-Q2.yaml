@@ -1,0 +1,69 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 82
+  total_threads: 55
+  active_users: 12
+  avg_messages_per_day: 1.7
+summary: |
+  2025년 2분기는 채널 역사상 가장 활발한 발표 활동이 이루어진 분기로, 무신사 사내 특강(Storm 플랫폼 소개), GDG 인천/Build With AI 발표, SOPT 50명 만원 LLM 커리큘럼 세션, 코드스쿼드 온라인 세미나, 하담님 Spring AI 밋업 발표, 도쿄 AI 발표(TAI, GDG Tokyo Diffusion LLM), 메가존 발표 영상 촬영, 이데일리 AI 컨버전스 포럼 등이 진행되었다. 일본 발표 활동이 본격화되었으며, StormPass 홍보를 목적으로 한 발표가 증가했다.
+topics:
+  - name: "무신사 사내 특강"
+    mention_count: 12
+    description: "무신사 AI 세미나 - Storm 플랫폼 소개 및 StormParse 데모, 현장 20명·온라인 200명 참여"
+  - name: "일본 발표 활동"
+    mention_count: 10
+    description: "TAI Tokyo AI 발표, GDG Tokyo Diffusion LLM 발표, 일본 LT 행사 참여"
+  - name: "Spring AI 밋업"
+    mention_count: 8
+    description: "하담님 Spring AI 밋업 발표 - 다양한 LLM 벤더를 일관되게 처리하는 방법"
+  - name: "StormPass 홍보 발표"
+    mention_count: 8
+    description: "메가존 StormPass 촬영, 하담님 Storm 설명 세션, 브로셔 배포"
+  - name: "대학/커뮤니티 세미나"
+    mention_count: 8
+    description: "SOPT LLM 커리큘럼, 코드스쿼드 세미나, 파이썬 심포지움 발표"
+key_discussions:
+  - thread_ts: '1746940800.000000'
+    date: '2025-05-09'
+    reply_count: 14
+    text_preview: "하담님 Storm RAG 파이프라인 외부 발표 - Storm 가입 과제 진행"
+  - thread_ts: '1747523160.000000'
+    date: '2025-05-16'
+    reply_count: 6
+    text_preview: "발표 내용 구상 피드백 요청 - Spring AI vs LangChainJS 비교"
+  - thread_ts: '1748415000.000000'
+    date: '2025-05-27'
+    reply_count: 16
+    text_preview: "무신사 발표 준비 - StormParse 데모 시나리오 및 발표 자료 공유"
+  - thread_ts: '1748685600.000000'
+    date: '2025-05-31'
+    reply_count: 4
+    text_preview: "무신사 발표 후기 - AI 조직 온도, 정량화 논의 상세 공유"
+  - thread_ts: '1749484800.000000'
+    date: '2025-06-09'
+    reply_count: 5
+    text_preview: "이데일리 AI 컨버전스 포럼 발표"
+terminology:
+  - term: "StormParse"
+    definition: "Sionic AI의 Storm 플랫폼 문서 파서 - 표·그래프 등 복잡한 PDF 처리 특화"
+    aliases: ["스톰파스", "Storm Parse"]
+    context: "외부 발표 핵심 데모 소재로 활용"
+  - term: "TAI"
+    definition: "Tokyo AI - 도쿄 AI 커뮤니티 밋업 행사"
+    aliases: ["Tokyo AI"]
+    context: "진형님 도쿄 AI 발표 - STORM Framework RAG Ops 시스템 소개"
+  - term: "GDG Tokyo"
+    definition: "Google Developer Groups Tokyo - 도쿄 구글 개발자 그룹"
+    aliases: []
+    context: "Diffusion LLM 주제 발표"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,73 @@
+channel:
+  id: C099MU6530R
+  name: business-common-japan
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 167
+  total_threads: 70
+  active_users: 11
+  avg_messages_per_day: 4.4
+summary: |
+  2025-Q3 일본 비즈니스 채널은 채널 개설(기존 ext-jp-biz에서 business-common-japan으로 채널명 변경) 이후 일본 시장 GTM 전략 수립, STORM 플랫폼 소개 자료 준비, 주요 잠재 고객사(ZeeVaa·Recruit·ACCESS·DATT Japan·NEC 등)와의 초기 미팅 조율이 활발히 이루어졌다.
+  도쿄 주재 한국인 IT 인재 커뮤니티(50명 이상 참석) 행사 후기 공유, STORM 일본 서버 구성 진행 안내, 파트너십 계약(ZeeVaa) 초안 검토 등 다양한 비즈니스 개발 활동이 기록되었다.
+  제품 소개 덱 개선, SaaS 가격 정책 협의, DATT Japan·Recruit·Zeevaa와의 PoC 및 파트너십 논의가 이 분기의 핵심 업무였다.
+topics:
+  - name: "일본 시장 GTM 전략"
+    mention_count: 8
+    description: "일본 시장 진출 전략 수립, 잠재 고객 리스트 및 리드 확보 방법 논의"
+  - name: "ZeeVaa 파트너십"
+    mention_count: 10
+    description: "ZeeVaa Communication과의 파트너 계약 초안 검토 및 JTB·OKI Electronics 등 고객사 제안 논의"
+  - name: "STORM 제품 소개 덱"
+    mention_count: 8
+    description: "일본어 STORM 플랫폼 소개 자료 업데이트 및 일본 현지 피드백 반영"
+  - name: "고객사 미팅"
+    mention_count: 12
+    description: "Recruit(SUUMO), ACCESS, DATT Japan, NEC, Zeevaa, aiESG 등과의 초기 미팅 조율"
+  - name: "STORM 일본 서버"
+    mention_count: 3
+    description: "STORM 일본 버전을 일본 현지 서버에서 100% 운영하기 위한 서버 리전 구성"
+  - name: "SaaS 가격 정책"
+    mention_count: 5
+    description: "일본 시장용 STORM SaaS 가격 책정 및 무료 트라이얼 운영 방안 논의"
+  - name: "한국인 IT 커뮤니티"
+    mention_count: 3
+    description: "도쿄 한국인 IT 인재 모임(50명 이상) 주최 및 채용·연계 기회 소개"
+key_discussions:
+  - thread_ts: '1754714400.000000'
+    date: '2025-08-07'
+    reply_count: 6
+    text_preview: "ACCESS, ZeeVaa 등 다음 주 일본 미팅 스케줄 및 어젠다 공유"
+  - thread_ts: '1754864400.000000'
+    date: '2025-08-07'
+    reply_count: 10
+    text_preview: "SaaS 가격 정책 및 잠재 고객 리드 관련 질의응답"
+  - thread_ts: '1755200000.000000'
+    date: '2025-08-18'
+    reply_count: 11
+    text_preview: "NEC PoC 미팅 요청 및 일정 조율"
+  - thread_ts: '1755500000.000000'
+    date: '2025-08-19'
+    reply_count: 5
+    text_preview: "ZeeVaa 파트너 계약 초안 제공 요청 및 검토"
+  - thread_ts: '1754547033.000000'
+    date: '2025-08-06'
+    reply_count: 6
+    text_preview: "도쿄 한국인 IT 인재 커뮤니티 첫 행사 후기 및 향후 계획 공유"
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 엔터프라이즈 AI 워크플로우 플랫폼"
+  - term: "ZeeVaa"
+    definition: "일본 파트너사, JTB·OKI Electronics 등 대형 고객사 연결 제안"
+  - term: "DATT Japan"
+    definition: "일본 파트너사, CS 데모용 FAQ 데이터 제공 예정"
+  - term: "GTM"
+    definition: "Go-To-Market 전략, 일본 시장 진출 전략"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

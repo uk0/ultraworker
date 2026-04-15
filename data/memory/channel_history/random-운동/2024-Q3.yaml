@@ -1,0 +1,59 @@
+channel:
+  id: C0620SP7YJW
+  name: random-운동
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 36
+  total_threads: 22
+  active_users: 8
+  avg_messages_per_day: 1.5
+summary: |
+  2024년 3분기는 여름철 야외 운동이 활발했다. Noah가 자전거(광교 한바퀴 20km, 퇴근 자전거),
+  수영, 로라(롤러) 등 다양한 운동을 이어갔고, 올림픽공원 잠수풀 모임을 다시 기획했다(11개 답글).
+  김덕현은 주 2회 요가를 지속하면서 생존 요가라 표현할 정도로 힘들어했고, 프렌젤 연습 영상도 공유했다.
+  신희수가 크로스핏 WOD(핸드스탠드 워크)와 러닝으로 활동을 시작했고, hstereo는 EMS 운동,
+  데드리프트, 보수볼 운동 등을 다양하게 시도했다. 송명하는 러닝 기록을 공유했고,
+  김덕현이 강릉 스노클링 포인트를 발견하여 14개 답글의 큰 관심을 받았다.
+  Noah가 남산 러닝과 야간 자전거도 다녀왔다(13개 답글 스레드).
+topics:
+  - 수영/잠수풀 (올림픽공원 잠수풀 모임, 주말 자유수영)
+  - 자전거 (광교 야간 라이딩, 퇴근 자전거, 남산)
+  - 요가 (주 2회, 생존 요가)
+  - 러닝 (러닝 기록, 남산 러닝)
+  - 크로스핏 (WOD, 핸드스탠드 워크)
+  - EMS 운동 (전기충격 운동)
+  - 스노클링 (강릉 포인트 발견)
+key_discussions:
+  - thread_ts: '1723012877.605739'
+    date: '2024-08-07'
+    title: '강릉 스노클링 포인트 발견'
+    summary: '김덕현이 강릉에서 좋은 스노클링 포인트를 발견하여 공유. 14개 답글로 큰 관심.'
+  - thread_ts: '1720462712.671889'
+    date: '2024-07-08'
+    title: 'Noah 야간 자전거 광교 한바퀴'
+    summary: 'Noah가 잠이 안 와서 자전거 타고 광교 한바퀴(20km). 13개 답글로 화제.'
+  - thread_ts: '1723350643.519169'
+    date: '2024-08-11'
+    title: '일요일 아침 운동 (더위 속 운동)'
+    summary: 'Noah의 일요일 아침 운동 인증. 더운 날씨 속 운동에 14개 답글.'
+  - thread_ts: '1721043680.808089'
+    date: '2024-07-15'
+    title: '올림픽공원 잠수풀 모임 모집'
+    summary: 'Noah가 올림픽공원 잠수풀 금요일 모임 모집. 2~4명 내외, 11개 답글.'
+terminology:
+  - term: '프렌젤'
+    definition: '프리다이빙에서 사용하는 이퀄라이징(이압) 기술. 혀를 이용하여 압력을 조절.'
+  - term: 'EMS'
+    definition: 'Electrical Muscle Stimulation. 전기 자극을 이용한 근육 운동.'
+  - term: 'WOD'
+    definition: 'Workout of the Day. 크로스핏에서 당일 수행할 운동 프로그램.'
+  - term: '로라'
+    definition: '롤러스케이트/인라인스케이트의 줄임말.'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

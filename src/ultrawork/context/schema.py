@@ -8,6 +8,19 @@ import frontmatter
 import yaml
 
 from ultrawork.models import TaskRecord, ThreadRecord
+from ultrawork.models.ltm import (
+    Discovery,
+    HowStep,
+    LinkRelation,
+    RequestRecord,
+    ShallowLink,
+    WhyHypothesis,
+    WorkAction,
+    WorkRecord,
+    WorkWhere,
+    WorkWhy,
+    WorkWhyKind,
+)
 
 
 def _datetime_representer(dumper: yaml.Dumper, data: datetime) -> yaml.ScalarNode:
@@ -194,6 +207,181 @@ def frontmatter_to_thread(file_path: Path) -> ThreadRecord:
         message_count=post.metadata.get("message_count", 0),
         summary=_extract_section(post.content, "Thread Summary"),
         messages_markdown=_extract_section(post.content, "Message History"),
+    )
+
+
+def request_to_frontmatter(record: RequestRecord) -> str:
+    """Convert a RequestRecord to Markdown with YAML frontmatter."""
+    metadata: dict[str, Any] = {
+        "id": record.id,
+        "type": record.type,
+        "who": record.who,
+        "when": record.when,
+        "where": record.where,
+        "created_at": record.created_at,
+        "updated_at": record.updated_at,
+        "facet_keys": record.facet_keys,
+    }
+    if record.why:
+        metadata["why"] = [h.model_dump(mode="json") for h in record.why]
+    if record.how:
+        metadata["how"] = [s.model_dump(mode="json") for s in record.how]
+    if record.discoveries:
+        metadata["discoveries"] = [d.model_dump(mode="json") for d in record.discoveries]
+    if record.links:
+        metadata["links"] = [lnk.model_dump(mode="json") for lnk in record.links]
+
+    # Build markdown body with facet keys on first line for search stability
+    body_parts = [f"# {' '.join(record.facet_keys[:10])}"]
+
+    body_parts.append("\n## What")
+    body_parts.append(record.what or "[No description]")
+
+    if record.why:
+        body_parts.append("\n## Why")
+        for h in record.why:
+            body_parts.append(f"- **{h.hypothesis}** (confidence: {h.confidence})")
+            for e in h.evidence:
+                body_parts.append(f"  - {e}")
+
+    if record.how:
+        body_parts.append("\n## How (Steps)")
+        for step in record.how:
+            check = "x" if step.done else " "
+            body_parts.append(f"- [{check}] `{step.step_id}`: {step.goal}")
+
+    if record.discoveries:
+        body_parts.append("\n## Discoveries")
+        for disc in record.discoveries:
+            body_parts.append(f"- {disc.description}")
+
+    content = "\n".join(body_parts)
+    post = frontmatter.Post(content, **metadata)
+    return frontmatter.dumps(post)
+
+
+def frontmatter_to_request(file_path: Path) -> RequestRecord:
+    """Parse a Markdown file with YAML frontmatter into a RequestRecord."""
+    post = frontmatter.load(file_path)
+    meta = post.metadata
+
+    why = [WhyHypothesis(**h) for h in meta.get("why", [])]
+    how = [HowStep(**s) for s in meta.get("how", [])]
+    discoveries = [Discovery(**d) for d in meta.get("discoveries", [])]
+    links = [
+        ShallowLink(
+            target_id=lnk["target_id"],
+            relation=LinkRelation(lnk.get("relation", "related")),
+            weight=lnk.get("weight", 0.5),
+        )
+        for lnk in meta.get("links", [])
+    ]
+
+    # Extract "what" from body if not in metadata
+    what = meta["what"] if "what" in meta else _extract_section(post.content, "What")
+
+    return RequestRecord(
+        id=meta["id"],
+        who=meta.get("who", ""),
+        when=meta.get("when", datetime.now()),
+        where=meta.get("where", ""),
+        what=what,
+        why=why,
+        how=how,
+        discoveries=discoveries,
+        facet_keys=meta.get("facet_keys", []),
+        links=links,
+        created_at=meta.get("created_at", datetime.now()),
+        updated_at=meta.get("updated_at", datetime.now()),
+    )
+
+
+def work_to_frontmatter(record: WorkRecord) -> str:
+    """Convert a WorkRecord to Markdown with YAML frontmatter."""
+    metadata: dict[str, Any] = {
+        "id": record.id,
+        "type": record.type,
+        "who": record.who,
+        "when": record.when,
+        "created_at": record.created_at,
+        "updated_at": record.updated_at,
+        "facet_keys": record.facet_keys,
+        "why": record.why.model_dump(mode="json"),
+        "where": record.where.model_dump(mode="json"),
+    }
+    if record.what:
+        metadata["what"] = [a.model_dump(mode="json") for a in record.what]
+    if record.evidence:
+        metadata["evidence"] = record.evidence
+    if record.links:
+        metadata["links"] = [lnk.model_dump(mode="json") for lnk in record.links]
+
+    body_parts = [f"# {' '.join(record.facet_keys[:10])}"]
+
+    body_parts.append("\n## Purpose")
+    body_parts.append(f"Kind: {record.why.kind.value}")
+    if record.why.step_ref:
+        body_parts.append(f"Step ref: {record.why.step_ref}")
+    if record.why.immediate_goal:
+        body_parts.append(f"Goal: {record.why.immediate_goal}")
+
+    if record.what:
+        body_parts.append("\n## Actions")
+        for action in record.what:
+            body_parts.append(f"- **{action.action}**")
+            if action.output:
+                body_parts.append(f"  Output: {action.output}")
+
+    if record.evidence:
+        body_parts.append("\n## Evidence")
+        for e in record.evidence:
+            body_parts.append(f"- {e}")
+
+    content = "\n".join(body_parts)
+    post = frontmatter.Post(content, **metadata)
+    return frontmatter.dumps(post)
+
+
+def frontmatter_to_work(file_path: Path) -> WorkRecord:
+    """Parse a Markdown file with YAML frontmatter into a WorkRecord."""
+    post = frontmatter.load(file_path)
+    meta = post.metadata
+
+    why_data = meta.get("why", {})
+    why = WorkWhy(
+        kind=WorkWhyKind(why_data.get("kind", "advance_step")),
+        step_ref=why_data.get("step_ref"),
+        immediate_goal=why_data.get("immediate_goal", ""),
+    )
+
+    where_data = meta.get("where", {})
+    where = WorkWhere(
+        inputs=where_data.get("inputs", []),
+        outputs=where_data.get("outputs", []),
+    )
+
+    what = [WorkAction(**a) for a in meta.get("what", [])]
+    links = [
+        ShallowLink(
+            target_id=lnk["target_id"],
+            relation=LinkRelation(lnk.get("relation", "related")),
+            weight=lnk.get("weight", 0.5),
+        )
+        for lnk in meta.get("links", [])
+    ]
+
+    return WorkRecord(
+        id=meta["id"],
+        who=meta.get("who", ""),
+        when=meta.get("when", datetime.now()),
+        why=why,
+        where=where,
+        what=what,
+        evidence=meta.get("evidence", []),
+        facet_keys=meta.get("facet_keys", []),
+        links=links,
+        created_at=meta.get("created_at", datetime.now()),
+        updated_at=meta.get("updated_at", datetime.now()),
     )
 
 

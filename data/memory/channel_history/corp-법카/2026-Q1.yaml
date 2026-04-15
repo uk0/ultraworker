@@ -1,0 +1,86 @@
+channel:
+  id: C070D27FPEE
+  name: corp-법카
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:29:11'
+statistics:
+  total_messages: 49
+  total_threads: 14
+  active_users: 4
+  avg_messages_per_day: 1.1
+key_discussions:
+- thread_ts: '1767611966.034199'
+  date: '2026-01-05'
+  reply_count: 16
+  text_preview: '• 사용자 : <@U08GLL0SK2S>
+
+    • 사용일 : 2026-01-05
+
+    • 사용목적 : 식사
+
+    • 사용한 사람들 : 리서치팀 일부'
+- thread_ts: '1770789742.966949'
+  date: '2026-02-11'
+  reply_count: 4
+  text_preview: '• 사용자 : <@U0A6R62B58S>
+
+    • 사용일 : 2026-02-11
+
+    • 사용목적 : 커피챗
+
+    • 사용한 사람들 : 김수원'
+- thread_ts: '1770003653.421159'
+  date: '2026-02-02'
+  reply_count: 4
+  text_preview: '법카 미타에 있네용 <@U057PR1ADCL> '
+- thread_ts: '1769485155.350069'
+  date: '2026-01-27'
+  reply_count: 4
+  text_preview: '이엔에이 출장 건으로 인해 공용 법카 잠시 가져가겠습니다. :죄송하고감사합니다:'
+- thread_ts: '1770376643.549999'
+  date: '2026-02-06'
+  reply_count: 2
+  text_preview: '• 사용자 : <@U06EG12UUMV>
+
+    • 사용일 : 2026-02-06
+
+    • 사용목적 : 식사
+
+    • 사용한 사람들 : 조하담 외 6명 저녁 식사'
+- thread_ts: '1770018776.542749'
+  date: '2026-02-02'
+  reply_count: 2
+  text_preview: '• 사용자 : <@U08MN6VN9PA>
+
+    • 사용일 : 2026-02-02
+
+    • 사용목적 : 기타(스레드에 남겨주세요)
+
+    • 사용한 사람들 : 정기연'
+- thread_ts: '1768369944.806639'
+  date: '2026-01-14'
+  reply_count: 2
+  text_preview: '• 사용자 : <@U08MN6VN9PA>
+
+    • 사용일 : 2026-01-14
+
+    • 사용목적 : 기타(스레드에 남겨주세요)
+
+    • 사용한 사람들 : 정기연'
+- thread_ts: '1767867486.537309'
+  date: '2026-01-08'
+  reply_count: 2
+  text_preview: '• 사용자 : <@U0A5FK3E7JT>
+
+    • 사용일 : 2026-01-08
+
+    • 사용목적 : 기타(스레드에 남겨주세요)
+
+    • 사용한 사람들 : 권혜선, 백은주, 김주원, 서맹관'
+metadata:
+  created_at: '2026-02-13T16:29:11'
+  synced_by: sync_fast.py

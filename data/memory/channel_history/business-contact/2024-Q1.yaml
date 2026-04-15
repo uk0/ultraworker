@@ -1,0 +1,31 @@
+channel:
+  id: C05QCGG1E5V
+  name: business-contact
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q1 기간에는 business-contact 채널에 Typeform을 통한 외부 문의가 1건 접수되었다.
+  교사 직군의 사용자가 과금방식에 대한 문의를 남겼으며, 채널 활동은 매우 제한적이었다.
+  이 시기는 채널이 아직 본격적으로 운영되기 전 단계로, Typeform 기반 문의 수집 체계가
+  작동하고 있었으나 유입량은 미미했다.
+topics:
+  - 과금 문의
+  - Typeform 문의 연동
+key_discussions: []
+terminology:
+  - term: "Typeform"
+    definition: "웹사이트 문의 폼 서비스. business-contact 채널의 초기 문의 수집 도구로 사용됨"
+    aliases: []
+    context: "2024-Q1에는 Typeform을 통해 외부 문의가 채널에 자동 전달되는 구조였음"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

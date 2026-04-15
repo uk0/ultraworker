@@ -1,0 +1,44 @@
+channel:
+  id: C07NQH3U7SN
+  name: noti-linear
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 281
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 46.8
+summary: |
+  Linear 이슈 트래커 알림 채널. Storm 팀의 이슈 생성, 상태 변경, 코멘트 등의 알림이 자동으로 전달된다.
+  이 분기에는 281개의 알림이 발생했으며, 주요 활동자는 최병현, 노진우, 신희수, 백은주, 김혜원, Sigrid Jin, Cheonseong Kang 등이다.
+  주요 이슈로는 service-statuscheck 적용, Openllm 로드 테스트, GCP vertex quota 신청, Openllm Anthropic SDK 인터페이스 지원, openApi 문서 에러코드 수정 등이 있었다.
+  GitHub 연동을 통한 자동 상태 변경(In Review, Merged)도 활발히 이루어졌다.
+topics:
+  - Storm 팀 이슈 관리
+  - service-statuscheck 개발
+  - Openllm 로드 테스트 및 Anthropic SDK 지원
+  - GCP vertex quota 관리
+  - stargate-api 배포 관련 작업
+key_discussions:
+  - title: Openllm 로드 테스트 (STM-1670)
+    summary: 노진우, 최병현이 Openllm 로드 테스트를 진행하며 다수의 코멘트를 남김. 성능 테스트 및 최적화 작업.
+  - title: Openllm Anthropic SDK 인터페이스 지원 (STM-1668)
+    summary: 노진우가 Openllm에서 Anthropic SDK 인터페이스를 지원하기 위한 개발 작업을 수행. GitHub PR을 통한 리뷰 및 머지 진행.
+  - title: service-statuscheck stargate-api 적용 (STM-1674)
+    summary: 최병현, Sigrid Jin이 stargate-api 배포 시 service-statuscheck가 작동하도록 적용하는 작업을 진행.
+terminology:
+  - term: STM
+    definition: Storm 팀의 Linear 이슈 프리픽스
+  - term: Openllm
+    definition: Sionic AI의 LLM 서빙/관리 시스템
+  - term: stargate-api
+    definition: Sionic AI의 검색 API 서비스
+  - term: service-statuscheck
+    definition: 서비스 상태 확인 시스템
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

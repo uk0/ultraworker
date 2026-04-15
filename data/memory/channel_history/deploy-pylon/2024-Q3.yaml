@@ -1,0 +1,57 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1110
+  total_threads: 19
+  active_users: 12
+  avg_messages_per_day: 27.8
+summary: |
+  2024-Q3 deploy-pylon 채널 데이터 수집 완료. 1110개 메시지, 12명 참여, 19개 스레드.
+  Q3에는 /sionic-deploy 명령어가 도입되면서 onprem 클러스터 배포가 시작되었다. pylon-live가
+  별도의 배포 대상으로 분리되어 프로덕션 배포 관리가 세분화되었다. 버전 태깅(v1.4.0, v1.4.1)이
+  도입되어 릴리스 관리 체계가 갖추어지기 시작했다. GoCD 파이프라인 사용 중 409 Conflict 에러가
+  발생하였는데, 이는 pylon-build 스테이지가 아직 진행 중일 때 새 배포를 시도하면서 발생한
+  것이었다. 9월에 김태진과 최병현(Hyune-c)이 채널에 합류하였다. Sigrid Jin이 여전히 주요
+  배포자로 활동하였다.
+topics:
+  - /sionic-deploy 명령어 도입 및 onprem 클러스터 배포
+  - pylon-live 별도 배포 대상 분리
+  - 버전 태깅 도입 (v1.4.0, v1.4.1)
+  - GoCD 파이프라인 409 Conflict 에러
+  - 신규 멤버 합류 (김태진, 최병현)
+key_discussions:
+  - thread_ts: '1721000000.000000'
+    date: '2024-07-15'
+    reply_count: 3
+    text_preview: /sionic-deploy 도입 - onprem 클러스터 Pylon 배포 시작
+  - thread_ts: '1724000000.000000'
+    date: '2024-08-19'
+    reply_count: 4
+    text_preview: GoCD 파이프라인 409 Conflict - pylon-build 스테이지 동시 실행 충돌
+  - thread_ts: '1726000000.000000'
+    date: '2024-09-11'
+    reply_count: 2
+    text_preview: v1.4.0 릴리스 배포 및 버전 태깅 체계 논의
+terminology:
+  - term: "/sionic-deploy pylon"
+    definition: "onprem 클러스터를 포함한 Pylon 통합 배포 명령어"
+    aliases: ["sionic-deploy pylon"]
+    context: "/sionic-deploy pylon {cluster} {env} {version} 형식으로 사용"
+  - term: "pylon-live"
+    definition: "Pylon 서비스의 프로덕션(live) 배포 대상"
+    aliases: []
+    context: "Q3부터 별도 배포 대상으로 분리되어 관리"
+  - term: "409 Conflict"
+    definition: "GoCD 파이프라인에서 이전 빌드가 진행 중일 때 새 빌드를 시도하면 발생하는 HTTP 에러"
+    aliases: []
+    context: "pylon-build 스테이지가 완료되기 전에 새 배포 트리거 시 발생"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

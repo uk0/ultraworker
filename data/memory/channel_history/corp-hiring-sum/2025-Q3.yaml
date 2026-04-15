@@ -1,0 +1,26 @@
+channel:
+  id: C09G19P0RD3
+  name: corp-hiring-sum
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 4
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 4.0
+summary: |
+  2025년 3분기 corp-hiring-sum 채널이 신규 개설되었으며, 3명의 멤버가 합류하였다.
+  채용 관련 요약 정보를 공유하는 채널로 초기 세팅 단계로, 아직 실질적인 채용 공지나 내용 공유는 이루어지지 않은 상태이다.
+topics:
+  - name: "채널 초기 개설"
+    mention_count: 4
+    description: "corp-hiring-sum 채널 신규 생성, 3명 멤버 합류"
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

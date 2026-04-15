@@ -1,0 +1,62 @@
+channel:
+  id: C0A1LTJL5M5
+  name: sig-creep-colony-research-skills
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 37
+  total_threads: 11
+  active_users: 19
+  avg_messages_per_day: 5.3
+summary: |
+  2025년 4분기에 sig-creep-colony-research-skills 채널이 신설되어 Creep Colony GPU 컨테이너 플랫폼과 research-skills 레포가 통합되었다. 19명의 멤버가 채널에 참여하여 Claude Code 통합, 커스텀 Docker 이미지, GPU 할당 대시보드 개선, 컨테이너 시작 오류 등 플랫폼 운영 이슈를 논의하였다. Sub-agent 시스템(연구노트 조언 역할)이 추가되었고, GPU 공유 할당 문제 및 Docker 이미지 공유 기능 요청 등 실용적인 개선 의견이 활발히 제안되었다.
+topics:
+  - name: "Creep Colony 플랫폼 운영"
+    mention_count: 15
+    description: "GPU 컨테이너 할당, 버그 제보, Docker 이미지 관리 등 플랫폼 운영 관련 논의"
+  - name: "Claude Code 통합"
+    mention_count: 8
+    description: "Claude Code를 Creep Colony 환경에 통합하고 skills 레지스트리 자동 설치 구현"
+  - name: "Sub-agent 시스템"
+    mention_count: 5
+    description: "연구노트를 읽고 조언을 제공하는 sub-agent 시스템 추가"
+  - name: "GPU 할당 이슈"
+    mention_count: 7
+    description: "GPU 할당 충돌, 공유 GPU 메모리 문제, 대시보드 개선 요청"
+key_discussions:
+  - thread_ts: '1733561100.000000'
+    date: '2025-12-07'
+    reply_count: 9
+    text_preview: "Claude Code 전용 터미널 창, skills 레지스트리 자동 설치, wandb API 활용 등 하고 싶은 사항 메모"
+  - thread_ts: '1733644800.000000'
+    date: '2025-12-08'
+    reply_count: 19
+    text_preview: "sub-agent systems 추가 - 연구노트를 읽고 조언을 해주는 역할"
+  - thread_ts: '1733905200.000000'
+    date: '2025-12-11'
+    reply_count: 6
+    text_preview: "runpod처럼 Docker container 띄울 때 자동으로 실행할 명령어 기능 제안"
+  - thread_ts: '1734925860.000000'
+    date: '2025-12-23'
+    reply_count: 1
+    text_preview: "크립 콜로니에 도커 올라가지 않는 문제 문의"
+terminology:
+  - term: "Creep Colony"
+    definition: "사이오닉 AI의 GPU 컨테이너 플랫폼으로 연구자들이 GPU 리소스를 할당받아 모델 실험을 수행하는 내부 시스템"
+    aliases: ["크립 콜로니"]
+    context: "GPU 할당, Docker 컨테이너 관리, 모델 학습 실험에 사용"
+  - term: "research-skills"
+    definition: "연구 관련 스킬을 정의한 레포지토리로 Creep Colony와 통합됨"
+    aliases: []
+    context: "2025년 12월 11일 채널명 변경과 함께 통합"
+  - term: "Sub-agent"
+    definition: "연구노트를 읽고 조언을 제공하는 AI 에이전트 역할"
+    aliases: []
+    context: "Claude Code와 연동하여 연구 지원"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

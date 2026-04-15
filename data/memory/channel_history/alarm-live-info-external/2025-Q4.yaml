@@ -1,0 +1,43 @@
+channel:
+  id: C08S9TC8DAN
+  name: alarm-live-info-external
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 511
+  total_threads: 0
+  active_users: 6
+  avg_messages_per_day: 7.6
+summary: |
+  2025년 4분기 외부 서비스 라이브 알림 채널에서는 Claude(Anthropic)와 OpenAI 서비스의 장애 및 복구 상태 알림이 지속적으로 수신되었다.
+  Claude.ai Connectors/MCP 접속 장애, OpenAI의 Android 구글 로그인 오류, Codex/GPTs/Agent 비활성화, ChatGPT 검색 기능 장애 등 다양한 외부 AI 서비스 인시던트 알림이 포함되어 있다.
+  하루 평균 7.6건의 알림이 자동 수신되었으며, 스레드 없이 순수 알림 메시지만으로 구성된 모니터링 전용 채널이다.
+topics:
+  - name: "Claude 서비스 상태"
+    mention_count: 50
+    description: "Anthropic Claude.ai 서비스 장애 감지, 조치 및 복구 알림"
+  - name: "OpenAI 서비스 상태"
+    mention_count: 120
+    description: "OpenAI ChatGPT, Codex, GPTs, Agent 등 서비스 인시던트 알림"
+  - name: "외부 AI 서비스 모니터링"
+    mention_count: 340
+    description: "외부 AI 서비스 공급자의 실시간 상태 페이지 알림 수신"
+key_discussions: []
+terminology:
+  - term: "Claude Status"
+    definition: "Anthropic Claude AI 서비스 상태 모니터링 알림 (B05HH3ADPS4 봇)"
+  - term: "OpenAI Status"
+    definition: "OpenAI 서비스 상태 모니터링 알림 (B07QV7HH1T9 봇)"
+  - term: "MCP"
+    definition: "Model Context Protocol, Claude.ai Connectors에서 사용하는 프로토콜"
+  - term: "Probe Alert"
+    definition: "서비스 가용성 모니터링 프로브의 이상 감지 알림"
+  - term: "Codex"
+    definition: "OpenAI의 코드 생성 AI 서비스"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,41 @@
+channel:
+  id: C06R492MCSJ
+  name: deploy-pylon
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 268
+  total_threads: 262
+  active_users: 4
+  avg_messages_per_day: 5.0
+summary: |
+  2025-Q2 deploy-pylon 채널은 이전 분기 대비 배포 빈도가 대폭 증가하여, 분기 중 가장 활발한 배포 활동이 이루어진 기간이다. 총 268개의 메시지 중 262개가 스레드를 보유하여, 각 배포 이벤트마다 자동화 봇의 결과 메시지가 스레드로 달렸음을 알 수 있다. 4명의 팀원이 주도적으로 배포를 진행하였으며, 특히 5월에는 단 하루에 수십 회의 배포가 이루어지는 집중적인 개발 및 배포 사이클이 관찰되었다. live 환경 배포도 이 분기에 활발하게 진행되었으며, 일부 배포 이벤트에 대해 최대 79개의 스레드 응답이 달린 것으로 보아 배포 자동화 시스템이 상세한 단계별 상태를 보고하는 방식으로 운영되었음을 확인할 수 있다.
+topics:
+  - name: "Pylon dev 환경 배포"
+    mention_count: 210
+    description: "/sionic-deploy pylon dev [hash] onprem 커맨드를 통한 개발 환경 집중 배포"
+  - name: "Pylon live 환경 배포"
+    mention_count: 40
+    description: "/sionic-deploy pylon live [hash] onprem 커맨드를 통한 운영 환경 배포"
+  - name: "배포 옵션 사용"
+    mention_count: 18
+    description: "--skip-build 옵션을 통한 빌드 생략 배포"
+key_discussions:
+  - thread_ts: '1747237031.000000'
+    date: '2025-05-14'
+    reply_count: 79
+    text_preview: "/sionic-deploy pylon live 07494fe onprem - 대규모 스레드 응답을 가진 라이브 배포 이벤트"
+terminology:
+  - term: "deploy-pylon"
+    definition: "Pylon 서비스 배포 자동화 알람 채널"
+  - term: "/sionic-deploy"
+    definition: "Sionic AI 내부 배포 슬래시 커맨드"
+  - term: "pylon"
+    definition: "Sionic AI의 문서 파싱 및 처리 서비스"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

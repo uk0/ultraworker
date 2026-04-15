@@ -1,0 +1,43 @@
+channel:
+  id: C072ZMLPG3A
+  name: project-logic-ja
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 21
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 7.0
+summary: |
+  2024-Q3에는 LogicJa 프로젝트의 구체적인 추진 방향에 대한 논의가 이루어졌다. Sigrid Jin이 일본어 LLM 관련 Nejumi 리더보드 자료를
+  공유했고, 9월에 Noah(고석현)가 프로젝트 추가 진행 여부를 문의하면서 본격적인 논의가 재개되었다. 데이터 번역이 완료되어 주요 모델
+  평가를 시작할 수 있는 상태가 되었으며, 리더보드 공개 시기를 일본 법인 설립이나 일본 외부 고객 유치 시점 1달 전으로 설정하는 전략이
+  논의되었다. 프론트엔드 화면 개발에 대한 실습생 활용 방안도 검토되었다.
+topics:
+  - LogicJa 데이터 번역 완료
+  - 리더보드 공개 전략
+  - 일본 시장 진출 타이밍
+  - 주요 모델 평가 계획
+key_discussions:
+  - title: "LogicJa 추진 방향 논의"
+    date: "2024-09-26"
+    participants: ["Noah(고석현)", "Sigrid Jin", "박우명"]
+    summary: "데이터 번역 완료 후 주요 모델 평가 및 리더보드 공개 전략 논의. 일본 법인 설립 시점에 맞춰 공개하는 방안 검토. 내부용으로 먼저 점수를 쌓아가는 것이 제안됨."
+  - title: "Nejumi LLM 리더보드 공유"
+    date: "2024-07-02"
+    participants: ["Sigrid Jin"]
+    summary: "일본 W&B의 Nejumi LLM 리더보드 3 자료 공유."
+terminology:
+  - term: "Nejumi"
+    definition: "W&B Japan에서 운영하는 일본어 LLM 리더보드"
+    aliases: ["Nejumi LLM Leaderboard"]
+  - term: "maywell"
+    definition: "LogicKor 원작자, 외부 협력자"
+    aliases: ["메웰"]
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

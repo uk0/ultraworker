@@ -1,6 +1,7 @@
 """Tests for installer checks module."""
 
 from ultrawork.installer.checks import (
+    MCP_DEFINITIONS,
     SetupState,
     generate_env_file,
     generate_mcp_json,
@@ -82,6 +83,23 @@ class TestSetupState:
         assert "SLACK_BOT_TOKEN" in env
         assert "SLACK_TOKEN" in env
 
+    def test_env_vars_include_memory_search_bin_when_selected(self) -> None:
+        state = SetupState(mcps_to_install=["memory-search"])
+        env = state.get_env_vars()
+        assert "MEMORY_SEARCH_BIN" in env
+        assert env["MEMORY_SEARCH_BIN"].endswith("/memory-search/target/release/memory-search")
+
+    def test_env_vars_memory_search_prefers_project_vendored_source(self, tmp_path) -> None:
+        vendored = tmp_path / "vendor" / "memory-search"
+        vendored.mkdir(parents=True)
+        (vendored / "Cargo.toml").write_text('[package]\nname="memory-search"\nversion="0.1.0"\n')
+
+        state = SetupState(project_dir=tmp_path, mcps_to_install=["memory-search"])
+        env = state.get_env_vars()
+
+        expected = vendored / "target" / "release" / "memory-search"
+        assert env["MEMORY_SEARCH_BIN"] == str(expected)
+
 
 class TestGenerateEnvFile:
     def test_bot_token_env(self) -> None:
@@ -105,6 +123,8 @@ class TestGenerateUltraworkYaml:
         content = generate_ultrawork_yaml(state)
         assert "bot_user_id: U123ABC" in content
         assert 'trigger_pattern: "<@U123ABC>"' in content
+        assert "memory:" in content
+        assert 'search_binary: "' in content
 
     def test_keyword_mode(self) -> None:
         state = SetupState(
@@ -114,6 +134,7 @@ class TestGenerateUltraworkYaml:
         )
         content = generate_ultrawork_yaml(state)
         assert 'trigger_pattern: "!ultra"' in content
+        assert "auto_index_on_save: true" in content
 
 
 class TestGenerateMcpJson:
@@ -147,7 +168,42 @@ class TestGenerateMcpJson:
         assert "playwright" in config["mcpServers"]
         assert "context7" in config["mcpServers"]
 
+    def test_memory_search_mcp(self) -> None:
+        state = SetupState(mcps_to_install=["memory-search"])
+        config = generate_mcp_json(state)
+        assert "memory-search" in config["mcpServers"]
+        entry = config["mcpServers"]["memory-search"]
+        assert entry["command"].endswith("/memory-search/target/release/memory-search")
+        assert entry["args"][0] == "serve"
+        assert "--data-dir" in entry["args"]
+
+    def test_memory_search_mcp_uses_project_vendored_path(self, tmp_path) -> None:
+        vendored = tmp_path / "vendor" / "memory-search"
+        vendored.mkdir(parents=True)
+        (vendored / "Cargo.toml").write_text('[package]\nname="memory-search"\nversion="0.1.0"\n')
+
+        state = SetupState(project_dir=tmp_path, mcps_to_install=["memory-search"])
+        config = generate_mcp_json(state)
+        entry = config["mcpServers"]["memory-search"]
+
+        expected_bin = vendored / "target" / "release" / "memory-search"
+        assert entry["command"] == str(expected_bin)
+        assert entry["args"][-1] == str((tmp_path / "data").resolve())
+
+    def test_agent_browser_is_install_only(self) -> None:
+        state = SetupState(mcps_to_install=["agent-browser"])
+        config = generate_mcp_json(state)
+        assert "agent-browser" not in config["mcpServers"]
+
     def test_no_tokens(self) -> None:
         state = SetupState()
         config = generate_mcp_json(state)
         assert len(config["mcpServers"]) == 0
+
+
+class TestMcpDefinitions:
+    def test_memory_search_install_cmd_bootstraps_rust(self) -> None:
+        cmd = MCP_DEFINITIONS["memory-search"]["install_cmd"]
+        assert "command -v cargo" in cmd
+        assert "https://sh.rustup.rs" in cmd
+        assert "--profile minimal" in cmd

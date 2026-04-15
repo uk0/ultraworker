@@ -1,0 +1,120 @@
+channel:
+  id: C06C7N3U4TY
+  name: product-storm-platform
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-26T00:00:00'
+statistics:
+  total_messages: 18
+  total_threads: 8
+  active_users: 8
+  avg_messages_per_day: 0.2
+summary: |
+  플랫폼 설계 본격화 단계. VESSL AI 참고, 클라우드 환경 설정값 리스팅, Figma 기획 시작 등 구체적 설계 진행.
+  핵심 결정으로 "올인원 플랫폼 포기, Answer 내에서 자유도 제공" 방향 확정. 김혜원이 전체 기능 리스팅 및 우선순위 매기기 완료.
+  이미지 생성/변환 도구 초벌 디자인. Flowise 리서치 공유 후 Storm + Flowise(알맹이) 결합 방안 논의.
+  Langflow는 운영안정성 문제로 탈락, Flowise 채택. dify.ai도 리서치하여 라이트한 플랫폼 방향 참고.
+  Pylon 분리 계획 수립(Open LLM 교체 -> 프롬프팅 분리 -> RAG만 남김 -> 오케스트레이션 개발).
+  Carrier 모듈 별도 분리 결정(명하님 선장).
+topics:
+  - name: 올인원 포기 결정
+    description: 범용 플랫폼 포기하고 Answer 안에서 자유도 열어주기로 결정
+    message_count: 2
+    participants:
+      - 김혜원
+      - 한시형
+  - name: Flowise 리서치 및 채택
+    description: Flowise 리서치 후 Storm + Flowise 결합 방안 논의. Langflow 대비 운영안정성으로 Flowise 선택.
+    message_count: 4
+    participants:
+      - 김혜원
+      - 정세민
+      - 송명하
+  - name: 플랫폼 기능 설계
+    description: 클라우드 환경 설정, 이미지 생성/변환 도구, Figma 기획 등 구체적 플랫폼 설계
+    message_count: 5
+    participants:
+      - 김혜원
+      - 한시형
+      - kozistr833
+      - 정세민
+      - 송명하
+  - name: Pylon 분리 계획
+    description: Pylon에서 LLM/프롬프팅/RAG를 단계적으로 분리하는 개발 순서 수립
+    message_count: 2
+    participants:
+      - 김혜원
+      - 송명하
+  - name: dify.ai 리서치
+    description: dify.ai를 리서치하여 라이트한 버전의 플랫폼 방향 탐색
+    message_count: 1
+    participants:
+      - 김혜원
+key_discussions:
+  - thread_ts: '1717573996.295909'
+    title: 플랫폼 큰 그림 싱크 미팅 제안
+    summary: 김혜원이 플랫폼 큰 그림이 그려졌다며 월요일 전체 싱크 미팅 제안. 33개 답글.
+    participants:
+      - 김혜원
+      - 한시형
+      - kozistr833
+      - 송명하
+    reply_count: 33
+  - thread_ts: '1719470542.919419'
+    title: Flowise 리서치 공유
+    summary: 김혜원이 Flowise 리서치를 Notion으로 공유. Storm + Flowise 결합 방안 및 연동 고려사항 논의. 22개 답글.
+    participants:
+      - 김혜원
+    reply_count: 22
+    decision: Flowise 채택 (Langflow 운영안정성 문제로 탈락)
+  - thread_ts: '1717487243.288629'
+    title: 클라우드 환경 설정값 논의
+    summary: 김혜원이 송명하에게 플랫폼에서 설정 가능한 값(AWS/GCP, 프로세서, 스토리지 등) 질문. 13개 답글.
+    participants:
+      - 김혜원
+      - 송명하
+    reply_count: 13
+  - thread_ts: '1718007704.111309'
+    title: 이미지 생성/변환 도구 초벌 디자인
+    summary: 정세민 설명을 토대로 플랫폼 이미지 생성/변환 일반화 도구 초벌 Figma 디자인 공유. 6개 답글.
+    participants:
+      - 김혜원
+      - 정세민
+      - 한시형
+      - kozistr833
+      - 송명하
+    reply_count: 6
+  - thread_ts: '1717404401.153079'
+    title: 플랫폼 기능 전체 리스팅 및 우선순위
+    summary: 김혜원이 플랫폼 관점에서 필요한 스펙 전부 리스팅하고 우선순위 매긴 Google Sheets 공유. 6개 답글.
+    participants:
+      - 김혜원
+      - 한시형
+    reply_count: 6
+terminology:
+  - term: Flowise
+    definition: 오픈소스 LLM 워크플로우 빌더. Storm Platform의 알맹이(워크플로우 엔진)로 채택됨.
+  - term: Langflow
+    definition: 오픈소스 LLM 파이프라인 빌더. 운영안정성 문제로 채택 안됨.
+  - term: dify.ai
+    definition: 경량 LLM 앱 빌더 플랫폼. 라이트한 버전의 플랫폼 방향 참고 자료로 리서치됨.
+  - term: VESSL AI
+    definition: MLOps 플랫폼. 플랫폼 설계 시 참고 자료로 공유됨.
+  - term: Pylon (파일론)
+    definition: RAG 엔진 서버. LLM 호출, 프롬프팅, RAG, 파싱 기능을 모두 담고 있어 단계적 분리 계획 수립.
+    aliases:
+      - 파일론
+  - term: Carrier (캐리어)
+    definition: 주문서 기반 워크플로우 실행 엔진. Stargate와 별도로 분리하기로 결정.
+    aliases:
+      - 캐리어
+  - term: 마크스폰
+    definition: 고객사. Flowise 검증 케이스로 활용.
+  - term: 한국자산평가
+    definition: 고객사. Flowise 검증 케이스로 활용.
+metadata:
+  created_at: '2026-02-26T00:00:00'
+  synced_by: claude-channel-history-sync

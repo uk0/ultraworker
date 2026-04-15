@@ -1,0 +1,33 @@
+channel:
+  id: C07HFMS1MD5
+  name: deploy-dekay-test
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 9
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 9.0
+summary: |
+  2024년 3분기 deploy-dekay-test 채널은 채널 초기 개설 시기로, 2024년 8월 21일에 2명의 사용자가 참여하여 테스트 메시지를 주고받은 기록이 남아있다.
+  실제 배포 알림보다는 채널 설정 및 연결 테스트 목적의 메시지(하이, ㅇㄹㅇㄹ, 테스트 코드 등)가 대부분이며, 스레드 2개가 생성되었다.
+  채널이 처음 만들어져 기능 검증 단계에 있었던 것으로 보인다.
+topics:
+  - name: "채널 개설 및 연결 테스트"
+    mention_count: 9
+    description: "채널 초기 설정 및 연결 확인을 위한 테스트 메시지 송수신"
+key_discussions:
+  - thread_ts: '1724244000.000000'
+    date: '2024-08-21'
+    reply_count: 10
+    text_preview: "채널 개설 초기 테스트 메시지 교환 (1121212, ㅇㄹㅇㄹ 등 테스트 내용)"
+terminology:
+  - term: "Dekay"
+    definition: "사이오닉의 내부 서비스 또는 프로젝트로, 테스트 환경 배포 알림을 별도 채널에서 관리"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,43 @@
+channel:
+  id: C085HPG2GEQ
+  name: sig-zootopia
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 13
+  total_threads: 7
+  active_users: 6
+  avg_messages_per_day: 6.5
+summary: |
+  sig-zootopia(반려동물) 채널이 2024년 12월에 개설된 분기. 김수원이 채널을 만들며 "개설기념 오늘 몽자"라고 반려견 몽자를 소개했다. Noah(고석현)는 자신의 고양이들 사진을, 김혜원은 "야무진 산도"(고양이)를, 정세민은 고양이 사진을 공유하며 반려동물 자랑 채널로 시작되었다. 크리스마스 시즌에 반려동물 사진 교환도 있었다.
+topics:
+  - 채널 개설
+  - 반려견 (몽자)
+  - 반려묘 (산도, Noah의 고양이들)
+key_discussions:
+  - thread_ts: '1735026589.290359'
+    date: '2024-12-24'
+    topic: 메리크리스마스 반려동물 사진
+    reply_count: 4
+  - thread_ts: '1734430582.871289'
+    date: '2024-12-17'
+    topic: Noah 고양이 사진 공유
+    reply_count: 4
+  - thread_ts: '1734429844.392319'
+    date: '2024-12-17'
+    topic: 정세민 고양이 사진 공유
+    reply_count: 4
+terminology:
+  - term: "몽자"
+    definition: "김수원의 반려견 이름"
+    context: "sig-zootopia 채널의 대표 반려견"
+  - term: "산도"
+    definition: "김혜원의 반려묘 이름"
+    context: "하늘색 눈이 특징"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

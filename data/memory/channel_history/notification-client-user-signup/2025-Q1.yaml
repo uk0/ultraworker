@@ -1,0 +1,36 @@
+channel:
+  id: C08HBTDCGUC
+  name: notification-client-user-signup
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 3
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.5
+summary: |
+  2025-Q1에 notification-client-user-signup 채널이 설정되었으며, ta-notification-bot 봇 연동이 완료되었다. 3월 24일 첫 번째 신규 사용자 가입 알림이 발송되었으며, Sionic Company 소속 사용자 Dan의 가입이 기록되었다. 이 채널은 엔터프라이즈 클라이언트의 신규 사용자 가입 이벤트를 실시간으로 팀에 전달하는 알림 목적으로 운영된다.
+topics:
+  - name: "신규 사용자 가입 알림"
+    mention_count: 1
+    description: "ta-notification-bot을 통한 엔터프라이즈 클라이언트 신규 사용자 가입 이벤트 알림"
+  - name: "봇 연동 설정"
+    mention_count: 1
+    description: "채널에 ta-notification-bot 통합 완료"
+key_discussions:
+  - thread_ts: '1742818680.000000'
+    date: '2025-03-24'
+    reply_count: 0
+    text_preview: "새 사용자 가입: Dan (dan@sionic.ai), Sionic Company, 팀 ID: 9f6abf735f7e4787aceeb20d816cc0cd"
+terminology:
+  - term: "ta-notification-bot"
+    definition: "신규 사용자 가입 이벤트를 Slack 채널에 알림으로 전달하는 자동화 봇"
+  - term: "User ID"
+    definition: "가입한 사용자의 고유 식별자"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

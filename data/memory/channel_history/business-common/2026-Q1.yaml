@@ -1,0 +1,84 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:27:11'
+statistics:
+  total_messages: 138
+  total_threads: 114
+  active_users: 15
+  avg_messages_per_day: 3.2
+key_discussions:
+- thread_ts: '1767600415.493429'
+  date: '2026-01-05'
+  reply_count: 60
+  text_preview: 강원랜드 관련 질문 &gt;&gt;
+- thread_ts: '1768193739.052229'
+  date: '2026-01-12'
+  reply_count: 58
+  text_preview: 'nvidia inception 관련
+
+    inception id라는게 존재한다는게 이거 확인 가능하신분 계실까요?
+
+
+    외부 GPU 구매 견적시 해당 id 유무로 할인률이 달라지는 이유입니'
+- thread_ts: '1768541835.409119'
+  date: '2026-01-16'
+  reply_count: 49
+  text_preview: 현대엔지니어링 유선 논의 &gt;&gt;
+- thread_ts: '1768889028.986789'
+  date: '2026-01-20'
+  reply_count: 39
+  text_preview: DSRV MOU &gt;&gt;
+- thread_ts: '1768289500.304439'
+  date: '2026-01-13'
+  reply_count: 39
+  text_preview: 강원랜드 본격 제안작업 (비즈 전원 리소스 조각모음 필요할 듯) &gt;&gt;
+- thread_ts: '1768378896.470989'
+  date: '2026-01-14'
+  reply_count: 35
+  text_preview: DSRV OpenGateway 결제 인프라 협업 논의
+- thread_ts: '1768453400.032679'
+  date: '2026-01-15'
+  reply_count: 34
+  text_preview: 티플리스(파트너) 에서 구축형(최소최소사양) 견적을 요청주셨고, 관련 이야기를 해보는 스레드 &gt;&gt;
+- thread_ts: '1768897388.039399'
+  date: '2026-01-20'
+  reply_count: 31
+  text_preview: 주주간담회 인풋 요청 &gt;&gt;
+- thread_ts: '1769074182.156199'
+  date: '2026-01-22'
+  reply_count: 27
+  text_preview: 서울대 정보화 본부
+- thread_ts: '1768528834.030879'
+  date: '2026-01-16'
+  reply_count: 27
+  text_preview: SKAX 소개로 참여하게된 SK하이닉스 비정형데이터처리 사업 RFP &gt;&gt;
+- thread_ts: '1770789669.185419'
+  date: '2026-02-11'
+  reply_count: 25
+  text_preview: '*[사이오닉/현대차/DSRV] AI 에이전트-로봇 협력 경제 인프라 구축 PoC &gt;*'
+- thread_ts: '1770117879.724709'
+  date: '2026-02-03'
+  reply_count: 23
+  text_preview: 현대엔지니어링 솔루션 구축 견적 논의 &gt;&gt;
+- thread_ts: '1769136692.196949'
+  date: '2026-01-23'
+  reply_count: 21
+  text_preview: 설 선물 취합 스레드 &gt;&gt;
+- thread_ts: '1767768716.184029'
+  date: '2026-01-07'
+  reply_count: 21
+  text_preview: STORM Parse SaaS 버전 관련 구조 질문 &gt;&gt;
+- thread_ts: '1770695426.437009'
+  date: '2026-02-10'
+  reply_count: 19
+  text_preview: 정확하진 않은데, (추정) 세민님이 만드신 간단한 데이터 처리 쪽 관리화면이 있었던것 같은데 아시는분을 찾습니다.. 삼성
+    본사업 이야기할때 그거 캡쳐 이미지들이 좀 급히 필요해서요
+metadata:
+  created_at: '2026-02-13T16:27:11'
+  synced_by: sync_fast.py

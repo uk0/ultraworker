@@ -1,0 +1,52 @@
+channel:
+  id: C099HHQC7B5
+  name: business-random
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 20
+  total_threads: 14
+  active_users: 8
+  avg_messages_per_day: 1.2
+summary: |
+  2025-Q4 business-random 채널에서는 AI 산업 동향 관련 아티클 및 리포트 공유가 주를 이루었다. CEATEC 참관 후기, AI 에이전트 시대의 HR 혁신 관련 BCG 보고서, OpenAI 종량제 요금제, AI 기본법 시행 등 주요 AI 비즈니스 뉴스가 공유되었다.
+  FalkorDB와의 미팅 추진, KT 내부에서 Sionic AI를 벤치마크 대상으로 인식한다는 긍정적인 소식 공유, 삼성SDS의 ChatGPT Enterprise 리셀러 계약 등 경쟁사 동향도 논의되었다.
+topics:
+  - name: "AI 산업 동향"
+    mention_count: 8
+    description: "AI 에이전트, OpenAI 종량제, BCG AI HR 혁신 보고서, AI 기본법 등 업계 뉴스 공유"
+  - name: "경쟁사 분석"
+    mention_count: 4
+    description: "FalkorDB 미팅, KT의 Sionic AI 벤치마크 인식, 삼성SDS ChatGPT Enterprise 리셀러 등"
+  - name: "비즈니스 인사이트"
+    mention_count: 4
+    description: "CB Insights AI 에이전트 마켓맵, a16z 엔터프라이즈 플랫폼 분석, Bain 기술 리포트 공유"
+key_discussions:
+  - thread_ts: '1766700000.000000'
+    date: '2025-12-11'
+    reply_count: 16
+    text_preview: "FalkorDB와의 미팅 일정 추진"
+  - thread_ts: '1766400000.000000'
+    date: '2025-12-15'
+    reply_count: 4
+    text_preview: "AI 기본법 2026년 1월 22일 시행 관련 논의"
+  - thread_ts: '1761270000.000000'
+    date: '2025-10-21'
+    reply_count: 4
+    text_preview: "OpenAI 종량제 요금제(Rate Card) 내용 공유 및 분석"
+  - thread_ts: '1765100000.000000'
+    date: '2025-12-06'
+    reply_count: 1
+    text_preview: "BCG 보고서: AI 에이전트 시대의 HR 혁신 및 투트랙 운영 모델"
+terminology:
+  - term: "FalkorDB"
+    definition: "그래프 데이터베이스 기업, Sionic AI와 미팅 추진"
+  - term: "AI 기본법"
+    definition: "한국 AI 기본법, 2026년 1월 22일 시행"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

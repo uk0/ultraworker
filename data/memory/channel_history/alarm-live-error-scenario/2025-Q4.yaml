@@ -1,0 +1,47 @@
+channel:
+  id: C0A2UHPMB29
+  name: alarm-live-error-scenario
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 33
+  total_threads: 1
+  active_users: 21
+  avg_messages_per_day: 4.7
+summary: |
+  2025년 4분기 alarm-live-error-scenario 채널은 12월 11일에 신규 개설되어 STORM 플랫폼의 라이브 시나리오 자동화 테스트 알림 허브로 운영되었다. Apidog를 활용한 STORM 라이브 에러 시나리오 테스트가 자동화되어 83%에서 95%까지 통과율이 향상되었으며, 테스트 결과가 이 채널로 실시간 알림으로 전달되었다. 21명의 팀원이 참여하여 라이브 서비스 품질 모니터링 체계를 구축하였다.
+topics:
+  - name: "STORM 라이브 시나리오 테스트"
+    mention_count: 20
+    description: "Apidog 기반 STORM 플랫폼 라이브 에러 시나리오 자동화 테스트 실행 및 결과 알림"
+  - name: "테스트 통과율 개선"
+    mention_count: 8
+    description: "라이브 시나리오 테스트 통과율 83%에서 95%로 점진적 향상"
+  - name: "모니터링 채널 구성"
+    mention_count: 5
+    description: "자동화 테스트 결과 알림을 위한 Slack 채널 연동 및 설정"
+key_discussions:
+  - thread_ts: '1733875200.000000'
+    date: '2025-12-11'
+    reply_count: 1
+    text_preview: "alarm-live-error-scenario 채널 개설 및 STORM 라이브 시나리오 테스트 자동화 소개"
+terminology:
+  - term: "alarm-live-error-scenario"
+    definition: "STORM 플랫폼 라이브 환경의 에러 시나리오 자동화 테스트 결과 알림 채널"
+    aliases: ["라이브 에러 알림", "시나리오 테스트 채널"]
+    context: "2025년 12월 11일 신규 개설된 QA 자동화 모니터링 채널"
+  - term: "Apidog"
+    definition: "API 테스트 자동화 및 문서화 도구. STORM 라이브 시나리오 테스트에 활용"
+    aliases: ["api dog", "아피독"]
+    context: "STORM 플랫폼 자동화 테스트 실행 도구"
+  - term: "STORM 라이브 시나리오"
+    definition: "STORM 플랫폼의 실제 사용 패턴을 모사한 엔드투엔드 테스트 시나리오"
+    aliases: ["live scenario", "라이브 시나리오"]
+    context: "Apidog로 자동화되어 정기 실행 및 결과 알림"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,59 @@
+channel:
+  id: C06UTL9DK6G
+  name: corp-vacation
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 147
+  total_threads: 61
+  active_users: 2
+  avg_messages_per_day: 2.5
+summary: |
+  2025년 3분기 corp-vacation 채널은 147건의 메시지로 연중 가장 활발한 휴가 사용 시기였다.
+  8월 여름 휴가 시즌에 메시지가 집중되었으며, 강성우(8/28~9/18 장기 휴가), 최병현
+  (9/22~10/14 장기 휴가, 8/25~8/29), 김수원(9/29~10/13 장기 휴가) 등 2주 이상
+  장기 휴가 신청이 다수 있었다. 추석 연휴(10/3~10/6) 전후로 10월 10일 임시공휴일에
+  맞춰 홍성아, 김혜원, 박진형, 양호진, 박우명, 최윤정, 원성준, 김부교, 조하담 등
+  다수가 휴가를 신청했다. 고석현(Noah)이 "사우디에 쇼핑할 회사 M&A 리스트업 하러
+  가셨다는게 사실인지"라는 유머러스한 코멘트를 남기기도 했다. 신규 멤버인 김부교,
+  백승현, 박정환, 안진혁, 김덕현 등이 휴가 채널에 처음 등장했다.
+topics:
+  - 여름 휴가 시즌
+  - 장기 휴가 (2주 이상)
+  - 추석 연휴 전후 휴가
+  - 10월 10일 임시공휴일 연계 휴가
+  - 신규 멤버 휴가 사용
+  - 휴가 취소 및 변경
+key_discussions:
+  - thread_ts: '1755610729.537019'
+    date: '2025-08-19'
+    reply_count: 20
+    text_preview: '[강성우] 8월 22일 휴가 - 매우 활발한 스레드'
+  - thread_ts: '1754897235.879039'
+    date: '2025-08-11'
+    reply_count: 12
+    text_preview: '[김수원] 9/29~10/13 장기 휴가 - 스레드 논의'
+  - thread_ts: '1755126505.702449'
+    date: '2025-08-13'
+    reply_count: 11
+    text_preview: '[강성우] 8월 14일 오후 반차 - 스레드 논의'
+  - thread_ts: '1757801016.925759'
+    date: '2025-09-13'
+    reply_count: 9
+    text_preview: '[박진형] 9/15~16 휴가 - 스레드 논의'
+  - thread_ts: '1758515804.851849'
+    date: '2025-09-22'
+    reply_count: 9
+    text_preview: '[강성우] 9월 23일 휴가 - 스레드 논의'
+terminology:
+  - term: "임시공휴일"
+    definition: "정부가 지정하는 임시 공휴일. 2025년 10월 10일이 임시공휴일로 지정되어 다수 구성원이 연계 휴가를 사용함."
+    aliases: []
+    context: "10월 10일 임시공휴일 전후로 휴가 신청 집중"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

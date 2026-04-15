@@ -1,0 +1,66 @@
+channel:
+  id: C097T0S2PRR
+  name: ext-yjcorp
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 52
+  total_threads: 11
+  active_users: 12
+  avg_messages_per_day: 3.5
+summary: |
+  YJ Corp(일본 현지 파트너사)와의 협업 채널. 2025년 7월에 한시형(Kevin)이 개설. yjkrjp(YJ Inc.
+  대표, 한국인)와 miyu(Yj Solutions)가 외부 파트너로 참여. 주요 활동:
+  (1) Marble Corp(1974년 설립, 8,700명 규모 대기업)과의 미팅 조율 - 의사결정자 참여 온라인 미팅,
+  디지털 트랜스포메이션에 Storm AI 활용 제안,
+  (2) Kaga Electronics(카가전자)와의 NDA 체결 - 오승희/최윤정 도쿄 출장(8/11-14)시 직접 서명,
+  (3) SSP와의 미팅 조율 - miyu를 통한 일정 확인 및 Storm 플랫폼 워크스루 제안,
+  (4) Avant Consulting 진행 상황 확인,
+  (5) yjkrjp의 서울 방문 시 Sionic AI 사무실 미팅,
+  (6) 일본 스타트업 이벤트 소개. YJ 측이 "전형적인 일본 대기업은 진행이 느리므로
+  공격적 접근보다 경청 우선" 전략을 조언함.
+topics:
+  - YJ Corp 일본 파트너십
+  - Marble Corp 비즈니스 미팅
+  - Kaga Electronics NDA 체결
+  - SSP 미팅 조율
+  - 일본 비즈니스 전략
+key_discussions:
+  - thread_ts: '1754557237.421759'
+    date: '2025-08-07'
+    reply_count: 22
+    text_preview: "Marble Corp 미팅 조율 - 의사결정자 참여 확인"
+  - thread_ts: '1754211347.612549'
+    date: '2025-08-03'
+    reply_count: 14
+    text_preview: "Kaga Electronics NDA 서명을 위한 방문 일정 조율"
+  - thread_ts: '1755566763.290649'
+    date: '2025-08-19'
+    reply_count: 9
+    text_preview: "yjkrjp 서울 방문 미팅 조율"
+  - thread_ts: '1754021708.737769'
+    date: '2025-08-01'
+    reply_count: 9
+    text_preview: "도쿄 출장 일정(8/11-13) 확인"
+terminology:
+  - term: "YJ Corp"
+    definition: "YJ Inc. 일본 현지 비즈니스 파트너. 대표는 한국인(yjkrjp)"
+    aliases: ["YJ Inc.", "YJ Solutions"]
+    context: "Sionic AI 일본 시장 진출을 위한 현지 연결 파트너"
+  - term: "Marble Corp"
+    definition: "1974년 설립, 8,700명 규모 일본 대기업. DX 추진 중"
+    context: "Storm 플랫폼 잠재 고객. YJ를 통해 연결"
+  - term: "Kaga Electronics"
+    definition: "카가전자(加賀電子). 일본 전자부품 유통 기업"
+    aliases: ["카가전자", "カガ電子"]
+    context: "NDA 체결 진행 중인 파트너 후보"
+  - term: "SSP"
+    definition: "일본 기업. miyu를 통해 연결된 잠재 파트너"
+    context: "Storm 플랫폼 워크스루 미팅 대상"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

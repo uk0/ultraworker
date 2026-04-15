@@ -1,0 +1,37 @@
+channel:
+  id: C06USMT72DB
+  name: noti-figma
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 158
+  total_threads: 8
+  active_users: 5
+  avg_messages_per_day: 3.9
+summary: |
+  Figma 디자인 파일 변경 알림 채널. 'Storm 기획' 파일이 이 분기에 가장 활발하게 편집되었다(158개 메시지, Q2 이후 최고 수준).
+  11~12월에 걸쳐 거의 매일 대규모 편집이 이루어졌으며, 특히 11월 12일, 12월 1일, 12월 15~16일, 12월 23일에 집중적인 작업이 있었다.
+  8개 스레드가 생성되어 디자인 관련 활발한 논의가 진행되었다.
+  김혜원이 박상욱에게 "피그마 코멘트 놓치는 경우 많아서 쓰는 채널"이라고 안내한 점에서, 이 채널이 Figma 코멘트 알림 모니터링 용도로 활용됨을 확인할 수 있다.
+  김주원, 박상욱, ai-crawler 봇 등이 새로 합류했다.
+topics:
+  - Storm 기획 대규모 디자인 작업
+  - Figma 코멘트 알림 모니터링
+  - Figma 파일 변경 알림
+key_discussions:
+  - title: Storm 기획 12월 대규모 디자인 스프린트
+    summary: 12월 1일, 15~16일, 23일에 걸쳐 대규모 디자인 편집이 이루어짐. 연말 제품 업데이트를 위한 집중 디자인 작업으로 추정.
+  - title: Figma 코멘트 모니터링 채널 용도 확인
+    summary: 김혜원이 신규 멤버 박상욱에게 "피그마 코멘트 놓치는 경우 많아서 쓰는 채널"이라고 안내. 이 채널의 주요 용도가 Figma 디자인 코멘트 알림 추적임을 확인.
+  - title: Storm 기획 디자인 논의 스레드
+    summary: 11월 17일(6개 답글), 12월 16일(5개 답글 x2), 12월 17일(5개 답글) 등 여러 스레드에서 디자인 관련 논의가 활발히 이루어짐.
+terminology:
+  - term: noti-figma
+    definition: Figma 파일의 코멘트/변경 알림을 수신하는 Slack 채널. 디자인 코멘트를 놓치지 않기 위한 모니터링 용도
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

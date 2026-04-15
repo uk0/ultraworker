@@ -1,0 +1,47 @@
+channel:
+  id: C06SQS126NM
+  name: project-military-service-vendor
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 10
+  total_threads: 3
+  active_users: 3
+  avg_messages_per_day: 1.7
+summary: |
+  전문연 1차 미선정 이후 재도전 전략을 수립한 분기.
+  10월에 전문연 1차 미선정 통보를 받았으며(커트라인 63점에 맞췄으나 올해 소폭 상승), 2026년 6월 선정 목표로 재전략을 수립했다.
+  콘탁 담당자 김수현팀장 퇴사로 이예빈 대표와 직접 컨택으로 전환했다.
+  이노비즈/메인비즈 인증 검토, R&D 과제 수주 전략, 기업부설연구소 인력 충원(학사 이상 12~16명) 등을 논의했다.
+  12월까지 현재 연구소 인원(2명)을 유지하고, 1월 이후 인력 충원 예정.
+  연구개발비 사용 총액 5억 이상 여부 확인도 진행 중.
+topics:
+  - 전문연 미선정 후속 대응
+  - R&D 과제 수주 전략
+  - 이노비즈/메인비즈 인증
+  - 기업부설연구소 인력 충원
+  - 콘탁 담당자 변경
+key_discussions:
+  - thread_ts: '1763005196.459659'
+    date: '2025-11-13'
+    summary: '전문연 재도전 전략 수립 (2026년 6월 목표, 추가인력 12~16명 필요)'
+  - thread_ts: '1767150576.445779'
+    date: '2025-12-31'
+    summary: '기업부설연구소 참여인력 추가 계획 (학사 이상, 1월 이후 등록)'
+  - thread_ts: '1763105095.468419'
+    date: '2025-11-14'
+    summary: '산기요 채용 관련 콘탁 측 문의 (학사 선호 여부)'
+terminology:
+  - term: '이노비즈'
+    definition: 'INNOBIZ. 기술혁신형 중소기업 인증 제도'
+  - term: '메인비즈'
+    definition: 'MAINBIZ. 경영혁신형 중소기업 인증 제도'
+  - term: '산기요'
+    definition: '산업기능요원의 줄임말'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

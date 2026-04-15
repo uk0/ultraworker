@@ -1,0 +1,108 @@
+channel:
+  id: C06HUFQ8EKA
+  name: noti-spec-review
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 18
+  total_threads: 17
+  active_users: 2
+  avg_messages_per_day: 1.1
+summary: |
+  2025년 Q2에는 Carrier 워크플로우 고도화, Pylon 검색/임베딩 확장, Stargate 운영 개선이
+  주요 테마였다. Carrier 측에서는 Carrier Storm Parse 엑셀 파일 처리, E2E 테스트 코드
+  작성, Supply 실시간 문서 캐시 업데이트, 오더시트 리팩토링, Carrier LLM 청크 판단 등의
+  스펙이 공유되었다. Pylon에서는 Pylon Graph PoC 구현(한국아이센틱 요구사항), 부하테스트,
+  Cohere Embed V4 vs V3 비교(결론: V4 이관 보류), IBK 청킹된 data 수신, enlarge size
+  재지원, Reranker Supply 예외 처리 등이 다루어졌다. Stargate에서는 PDF 뷰어 성능 개선,
+  버킷 삭제 기능 복구, Node Scheduler 기반 문서 등록 check job, stargate-api 설정 정보
+  수정, 트렁크 기반 개발을 위한 피쳐 토글링, presigned URL 기반 문서 업로드 API 등이
+  논의되었다. 프론트엔드에서 트렁크 기반 개발 전환이 결정된 시기이기도 하다.
+topics:
+  - Carrier Storm Parse 엑셀 파일 처리 및 E2E 테스트
+  - Pylon Graph PoC 구현
+  - Cohere Embed V4 vs V3 비교 분석
+  - PDF 뷰어 성능 개선
+  - 버킷 삭제 기능 복구
+  - 트렁크 기반 개발 및 피쳐 토글링
+  - Supply 실시간 문서 캐시 업데이트
+  - IBK 청킹 데이터 수신
+  - Pylon 부하테스트
+  - Node Scheduler 문서 등록 check job
+key_discussions:
+  - thread_ts: '1745978059.911869'
+    date: '2025-04-30'
+    title: 'Carrier Storm Parse 엑셀 파일 처리'
+    summary: '캐리어 스톰 파스에 엑셀 파일 지원. 53개 답글.'
+    reply_count: 53
+  - thread_ts: '1750036191.207089'
+    date: '2025-06-16'
+    title: 'IBK에서 이미 청킹된 data를 받을 수 있도록'
+    summary: 'IBK에서 사전 청킹된 데이터 수신 기능. 38개 답글.'
+    reply_count: 38
+  - thread_ts: '1746770522.768739'
+    date: '2025-05-09'
+    title: 'Pylon Graph PoC 구현'
+    summary: '한국아이센틱 요구사항을 위한 Graph PoC. 33개 답글.'
+    reply_count: 33
+  - thread_ts: '1744121217.979639'
+    date: '2025-04-08'
+    title: 'PDF가 초느린 건에 관하여'
+    summary: 'PDF 뷰어 성능 개선을 위한 새 컴포넌트 작성 계획. 30개 답글.'
+    reply_count: 30
+  - thread_ts: '1751279592.523219'
+    date: '2025-06-30'
+    title: 'Carrier LLM 청크 판단'
+    summary: 'LLM에게 유효한 출처 문서 판단 기능. 27개 답글.'
+    reply_count: 27
+  - thread_ts: '1748826728.701879'
+    date: '2025-06-02'
+    title: 'Cohere Embed V4 vs multi-lingual V3'
+    summary: 'V4 이관 애매, 보류 결론. 21개 답글.'
+    reply_count: 21
+  - thread_ts: '1745904812.915649'
+    date: '2025-04-29'
+    title: '버킷 삭제'
+    summary: '버킷 삭제 기능 재사용 가능하게. 20개 답글.'
+    reply_count: 20
+  - thread_ts: '1743502167.184559'
+    date: '2025-04-01'
+    title: 'Pylon Reranker Supply 예외 처리'
+    summary: 'Reranker 적용 시 Supply 예외 처리. 17개 답글.'
+    reply_count: 17
+  - thread_ts: '1745562173.116609'
+    date: '2025-04-25'
+    title: 'Supply 실시간 문서 캐시 업데이트'
+    summary: '문서 변경 시 실시간 캐시 선택적 업데이트. 16개 답글.'
+    reply_count: 16
+  - thread_ts: '1744972740.832189'
+    date: '2025-04-18'
+    title: '트렁크 기반 개발을 위한 피쳐 토글링'
+    summary: '프론트엔드 트렁크 기반 개발 전환 및 피쳐 토글 도입. 15개 답글.'
+    reply_count: 15
+terminology:
+  - term: "Supply"
+    definition: "Carrier의 문서 공급/캐싱 시스템. 실시간 문서 캐시 업데이트 담당."
+    aliases: []
+  - term: "Graph PoC"
+    definition: "Pylon에서 그래프 기반 검색을 구현하는 PoC(Proof of Concept)."
+    aliases: []
+  - term: "피쳐 토글링"
+    definition: "Feature Toggling. 배포된 코드의 기능을 설정으로 켜고 끌 수 있는 기법."
+    aliases: ["Feature Toggle", "피쳐 플래그"]
+  - term: "트렁크 기반 개발"
+    definition: "Trunk-based development. 짧은 수명의 브랜치로 메인 브랜치에 자주 통합하는 개발 방식."
+    aliases: ["TBD"]
+  - term: "enlarge size"
+    definition: "Pylon에서 청크 크기를 확대하는 기능. 재지원 논의."
+    aliases: []
+  - term: "Cohere Embed"
+    definition: "Cohere사의 임베딩 모델. V3 multi-lingual과 V4 비교 분석 진행."
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,78 @@
+channel:
+  id: C06HUFQ8EKA
+  name: noti-spec-review
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 46
+  total_threads: 39
+  active_users: 9
+  avg_messages_per_day: 1.6
+summary: |
+  2024-Q3 noti-spec-review 채널은 검색 인프라 고도화와 Pylon 리팩토링이 집중적으로 리뷰된 분기였다. Redis 캐싱
+  도입, Reranker Recipe 설계, Hybrid Search(벡터+키워드 결합) 아키텍처, QSPM Proxy/Pool 설계, BM25 Lexical
+  Search 도입 등 검색 품질 향상을 위한 다수의 테크스펙이 제출되었다. 에러 코드 체계 정의, Qdrant Collection
+  Topology 재설계, Chunk Padding 전략도 리뷰되었다. 특히 Pylon 코드베이스의 DI(Dependency Injection) 패턴
+  적용을 포함한 대규모 리팩토링 테크스펙이 여러 건 리뷰되어, 시스템 아키텍처 개선에 대한 팀의 의지가 드러났다.
+  9명 참여, 39개 스레드로 분기 중 가장 활발한 리뷰 활동을 보였다.
+topics:
+  - Redis 캐싱 도입
+  - Reranker Recipe 설계
+  - Hybrid Search 아키텍처
+  - QSPM Proxy/Pool
+  - BM25 Lexical Search
+  - 에러 코드 체계 정의
+  - Qdrant Collection Topology 재설계
+  - Chunk Padding 전략
+  - Pylon DI 패턴 리팩토링
+key_discussions:
+  - thread_ts: '1720000000.000000'
+    date: '2024-07-03'
+    reply_count: 8
+    text_preview: Redis 캐싱 도입 테크스펙 - 검색 성능 향상을 위한 캐싱 레이어 설계
+  - thread_ts: '1722000000.000000'
+    date: '2024-07-27'
+    reply_count: 7
+    text_preview: Hybrid Search 아키텍처 - 벡터 검색과 키워드 검색 결합 설계
+  - thread_ts: '1724000000.000000'
+    date: '2024-08-19'
+    reply_count: 6
+    text_preview: Pylon DI 패턴 리팩토링 - 의존성 주입 패턴 적용 코드 구조 개선
+  - thread_ts: '1726000000.000000'
+    date: '2024-09-11'
+    reply_count: 5
+    text_preview: Qdrant Collection Topology 재설계 - 벡터DB 컬렉션 구조 최적화
+terminology:
+  - term: Reranker Recipe
+    definition: 검색 결과를 재정렬하는 모델의 설정 및 파이프라인 구성 방법
+    aliases: []
+    context: 검색 정확도 향상을 위한 Reranker 모델 적용 전략
+  - term: Hybrid Search
+    definition: 벡터 검색(semantic)과 키워드 검색(lexical)을 결합한 검색 방식
+    aliases: []
+    context: 단일 검색 방식의 한계를 극복하기 위한 아키텍처 설계
+  - term: QSPM
+    definition: Qdrant Shard Proxy Manager. Qdrant 벡터DB의 샤드 관리 프록시 시스템
+    aliases: []
+    context: 대규모 벡터 데이터 처리를 위한 프록시/풀 아키텍처 설계
+  - term: BM25
+    definition: 정보 검색에서 사용되는 대표적인 키워드 기반(lexical) 랭킹 알고리즘
+    aliases:
+      - Lexical Search
+    context: Hybrid Search의 키워드 검색 컴포넌트로 도입
+  - term: Chunk Padding
+    definition: 문서를 청크로 분할할 때 인접 청크의 컨텍스트를 겹쳐서 포함하는 전략
+    aliases: []
+    context: RAG 검색 품질 향상을 위한 청킹 전략 개선
+  - term: DI 패턴
+    definition: Dependency Injection. 의존성 주입 디자인 패턴으로 코드의 테스트 가능성과 유연성을 높임
+    aliases:
+      - 의존성 주입
+    context: Pylon 코드베이스 리팩토링에서 핵심 아키텍처 패턴으로 적용
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

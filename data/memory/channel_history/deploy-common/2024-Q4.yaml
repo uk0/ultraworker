@@ -1,0 +1,69 @@
+channel:
+  id: C07A18SADUP
+  name: deploy-common
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 476
+  total_threads: 201
+  active_users: 18
+  avg_messages_per_day: 8.7
+summary: |
+  2024년 4분기 deploy-common 채널은 document-ai-api, xionic-mini, thingsflow-demo, stargate-wrtn-live, qspm 등 핵심 서비스의 초기 배포 자동화가 확립된 시기였다. /sionic-deploy 봇 기반의 배포 워크플로우가 정착되었으며, EKS 클러스터 중심의 운영이 이루어졌다. 18명의 팀원이 참여하여 하루 평균 8.7건의 배포 활동이 이루어졌고, stargate-wrtn-live 서비스의 안정적인 운영을 위한 배포 관리가 집중적으로 논의되었다.
+topics:
+  - name: "stargate-wrtn-live 배포"
+    mention_count: 60
+    description: "WRTN 협업용 Stargate 검색 서비스 라이브 배포 및 운영"
+  - name: "qspm 서비스 배포"
+    mention_count: 45
+    description: "qspm 서비스의 EKS 환경 배포 및 운영 관리"
+  - name: "document-ai-api"
+    mention_count: 35
+    description: "문서 AI API 서비스 배포 및 버전 관리"
+  - name: "xionic-mini 배포"
+    mention_count: 30
+    description: "xionic-mini 모델 서비스 배포 및 업데이트"
+  - name: "thingsflow-demo"
+    mention_count: 20
+    description: "Thingsflow 고객사 데모 환경 배포 관리"
+key_discussions:
+  - thread_ts: '1727913600.000000'
+    date: '2024-10-03'
+    reply_count: 4
+    text_preview: "stargate-wrtn-live EKS 배포 및 트래픽 전환 논의"
+  - thread_ts: '1730592000.000000'
+    date: '2024-11-03'
+    reply_count: 5
+    text_preview: "qspm 서비스 신규 버전 배포 후 안정성 확인"
+  - thread_ts: '1733270400.000000'
+    date: '2024-12-04'
+    reply_count: 3
+    text_preview: "document-ai-api 연말 배포 및 버전 태깅 관리"
+terminology:
+  - term: "stargate-wrtn-live"
+    definition: "WRTN 서비스와 협업하는 Stargate 검색 엔진의 라이브 운영 배포본"
+    aliases: ["stargate wrtn", "스타게이트 rtn"]
+    context: "2024년 주요 파트너사 협업 서비스"
+  - term: "qspm"
+    definition: "Sionic AI의 쿼리-서비스 프로세싱 매니저 서비스"
+    aliases: []
+    context: "EKS 클러스터에서 운영되는 핵심 서비스"
+  - term: "document-ai-api"
+    definition: "문서 분석 및 AI 처리를 위한 API 서비스"
+    aliases: ["doc-ai"]
+    context: "2024년 Q4 주요 배포 대상 서비스"
+  - term: "xionic-mini"
+    definition: "Sionic AI의 경량화된 언어 모델 서비스"
+    aliases: []
+    context: "2024년 Q4 모델 서비스 배포"
+  - term: "thingsflow-demo"
+    definition: "Thingsflow 고객사를 위한 데모 환경 서비스"
+    aliases: []
+    context: "파트너사 데모 목적의 전용 배포 환경"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

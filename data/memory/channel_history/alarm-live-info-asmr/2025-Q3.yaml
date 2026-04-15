@@ -1,0 +1,47 @@
+channel:
+  id: C093ML01X98
+  name: alarm-live-info-asmr
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 10
+  total_threads: 2
+  active_users: 5
+  avg_messages_per_day: 5.0
+summary: |
+  2025년 3분기 초 ASMR Live Apidog 테스트가 실제로 실행되어 64개 테스트 케이스 전체 통과(100% 패스율) 결과가 채널에 공유되었다.
+  이후 채널을 별도로 유지하는 대신 기존 info 채널과 통합하자는 논의가 이루어졌고, notification-bot 연동이 제거되었다.
+  최종적으로 이 채널을 더 이상 사용하지 않고 기존 채널(C091ST3TSDC)에 통합하기로 결정되었으며, 신규 멤버 참여 외 추가 활동은 없었다.
+topics:
+  - name: "ASMR 테스트 결과"
+    mention_count: 3
+    description: "Apidog 테스트 64개 케이스 100% 통과 결과 공유"
+  - name: "채널 통합 논의"
+    mention_count: 4
+    description: "별도 채널 유지 대신 기존 info 채널로 통합 결정"
+  - name: "알림 봇 설정 변경"
+    mention_count: 2
+    description: "notification-bot 연동 해제 및 채널 비활성화"
+key_discussions:
+  - thread_ts: '1751363820.000000'
+    date: '2025-07-01'
+    reply_count: 8
+    text_preview: "채널 통합 논의 - 기존 info 채널 사용 제안 및 통합 결정"
+  - thread_ts: '1751365560.000000'
+    date: '2025-07-01'
+    reply_count: 2
+    text_preview: "채널 통합 확인 및 C091ST3TSDC 채널로 이동 안내"
+terminology:
+  - term: "ASMR"
+    definition: "Sionic AI의 AI Search & Match Results 서비스"
+  - term: "Apidog"
+    definition: "API 테스트 자동화 도구, ASMR 서비스 Live 환경 시나리오 테스트에 사용"
+  - term: "Sionic Opengateway"
+    definition: "ASMR 서비스가 속한 Sionic AI의 오픈 게이트웨이 프로젝트"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,35 @@
+channel:
+  id: C06UTL9DK6G
+  name: corp-vacation
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 82
+  total_threads: 10
+  active_users: 21
+  avg_messages_per_day: 3.3
+summary: |
+  2024-Q2는 corp-vacation 채널이 처음 개설된 분기로, 기존 "vacation" 채널에서 "corp-vacation"으로 이름이 변경되었으며 Flex 연동 휴가 관리 정책이 도입되었다. 21명의 팀원이 참여하여 활동이 가장 활발했으며, 5월에는 호진님과 세민님의 SF 원격 근무 계획(6/3~6/24)이 공유되었고, 이후 세민님의 캘리포니아 재택 근무(6/17~7/4)로 이어졌다. 6월 7일 현충일에는 다수 팀원의 휴가 등록 및 취소가 반복되는 패턴이 관찰되었다.
+topics:
+  - name: "채널 개설 및 정책 도입"
+    mention_count: 5
+    description: "corp-vacation 채널 신규 개설 및 Flex 연동 휴가 관리 정책 안내"
+  - name: "해외 원격 근무"
+    mention_count: 6
+    description: "호진님·세민님의 미국 샌프란시스코 원격 근무 계획 공유"
+  - name: "공휴일 전후 휴가"
+    mention_count: 10
+    description: "현충일(6/7) 전후 다수 팀원 휴가 등록 및 취소"
+key_discussions: []
+terminology:
+  - term: "Flex"
+    definition: "사내 HR 시스템으로 휴가 신청 및 관리를 담당하며, 슬랙 채널과 연동되어 자동 알림을 발송"
+  - term: "corp-vacation"
+    definition: "Flex 휴가 등록 시 자동 알림이 전송되는 전사 휴가 공유 채널 (기존 vacation 채널에서 변경)"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

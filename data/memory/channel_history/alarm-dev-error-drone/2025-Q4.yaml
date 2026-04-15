@@ -1,0 +1,34 @@
+channel:
+  id: C09FMVDUHQX
+  name: alarm-dev-error-drone
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 7
+  total_threads: 0
+  active_users: 7
+  avg_messages_per_day: 2.3
+summary: |
+  2025년 4분기 alarm-dev-error-drone 채널은 개발 환경의 drone 서비스 오류를 모니터링하는 알람 채널로, 채널 초기 설정 및 멤버 합류 활동이 주를 이루었다.
+  10월에 하담 테스트 메시지와 함께 여러 팀원들이 채널에 참여하였으며, 11월에도 추가 멤버가 합류하였다.
+  이 분기에는 실제 오류 알람보다는 채널 구성 및 멤버 세팅 활동이 중심이었다.
+topics:
+  - name: "채널 멤버 합류"
+    mention_count: 6
+    description: "새 멤버들의 채널 참여 활동"
+  - name: "테스트 메시지"
+    mention_count: 1
+    description: "채널 알람 설정 확인을 위한 테스트"
+key_discussions: []
+terminology:
+  - term: "drone"
+    definition: "개발 환경에서 사용하는 CI/CD 또는 서비스 배포 관련 시스템"
+  - term: "alarm-dev-error"
+    definition: "개발(dev) 환경의 오류 알람 채널 계열"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

@@ -1,0 +1,62 @@
+channel:
+  id: C0A3SBU8QSC
+  name: research-patent
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 24
+  total_threads: 3
+  active_users: 14
+  reply_count: 0
+  avg_messages_per_day: 4.0
+summary: |
+  2025년 4분기 research-patent 채널은 특허 아이디어를 공유하고 변리사 미팅 전 피드백을 나누기 위해 신설된 채널로, 12월에 채널이 처음 개설되어 14명의 멤버가 참여하였다.
+  주요 활동으로는 모델 머징 관련 특허 아이디어 공유, 딥리서치를 활용한 특허 발굴 보고서 검토, 그리고 opendataXai 챌린지 과제와 연계한 특허화 논의가 이루어졌다.
+  TRIZ 및 SAO 방식을 통한 기술적 난제의 특허화 전략, 개발/리서치 과정에서의 특허 아이디어 발굴 방법론에 대한 논의가 활발히 진행되었다.
+topics:
+  - name: "특허 아이디어 공유"
+    mention_count: 8
+    description: "변리사 미팅 전 팀원들과 특허 아이디어 및 명세서 공유"
+  - name: "모델 머징 특허"
+    mention_count: 3
+    description: "모델 머징(Model Merging) 관련 특허 출원 아이디어"
+  - name: "딥리서치 활용 특허 발굴"
+    mention_count: 4
+    description: "딥리서치 도구로 특허화 가능한 기술 난제 발굴 보고서"
+  - name: "opendataXai 챌린지 특허"
+    mention_count: 2
+    description: "정부 opendataXai 챌린지 과제 수행 중 특허화 가능성 검토"
+  - name: "TRIZ/SAO 특허 방법론"
+    mention_count: 3
+    description: "기술적 문제 해결 방법론을 통한 특허화 접근 방식"
+key_discussions:
+  - thread_ts: '1733900400.000000'
+    date: '2025-12-11'
+    reply_count: 2
+    text_preview: "모델 머징 특허 아이디어 공유 - Notion 링크로 세부 내용 공유"
+  - thread_ts: '1734566400.000000'
+    date: '2025-12-19'
+    reply_count: 4
+    text_preview: "특허 미팅 전 전달할 특허 내용 공유"
+  - thread_ts: '1734825600.000000'
+    date: '2025-12-22'
+    reply_count: 3
+    text_preview: "딥리서치로 특허 발굴 보고서 - TRIZ/SAO 방식, 기술적 챌린지의 특허화"
+terminology:
+  - term: "TRIZ"
+    definition: "러시아어 창의적 문제 해결 이론(발명 문제 해결 이론)의 약어, 특허 발굴에 활용"
+  - term: "SAO"
+    definition: "Subject-Action-Object 구조 기반 특허 발굴 방법론"
+  - term: "모델 머징"
+    definition: "여러 AI 모델을 병합하는 기법으로 특허화 검토 대상"
+  - term: "opendataXai"
+    definition: "정부 주관 공공데이터와 AI 결합 챌린지 프로그램"
+  - term: "변리사"
+    definition: "특허 출원을 대행하는 전문 자격사"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

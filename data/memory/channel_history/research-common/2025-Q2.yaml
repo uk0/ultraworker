@@ -1,0 +1,71 @@
+channel:
+  id: C078JJHPC1W
+  name: research-common
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 57
+  total_threads: 36
+  active_users: 8
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 2분기 research-common 채널에서는 임베딩 모델 성능 평가, 그래프 기반 RAG 연구, VLM 학습 및 검색 고도화가 주요 주제로 논의되었다.
+  STORM 임베딩이 OpenAI 임베딩 대비 Recall@k 기준 75.56% vs 66.36%로 우수한 성능을 보였으며, STORM 리랭커도 86.57% vs 71.81%로 높은 성능을 기록하였다.
+  GraphRAG, LightRAG 등 그래프 기반 검색 연구와 함께 SentenceTransformers v4.1.0의 ONNX/OpenVINO 백엔드 도입, Sparse Encoder 지원 등 최신 라이브러리 동향이 공유되었다.
+topics:
+  - name: "임베딩/리랭커 성능 평가"
+    mention_count: 10
+    description: "MTEB Korean Retrieval Benchmark 기반 STORM vs OpenAI 임베딩·리랭커 성능 비교"
+  - name: "GraphRAG 연구"
+    mention_count: 8
+    description: "LightRAG, GraphRAG 등 그래프 기반 RAG 기술 연구 및 아이티센엔틱 연동 작업"
+  - name: "VLM 학습"
+    mention_count: 7
+    description: "VL 모델 RL 학습, FNGuide PDF GRPO 데이터셋 구축 및 HuggingFace 업로드"
+  - name: "검색 고도화"
+    mention_count: 6
+    description: "숫자/고유어 검색 정확도 개선, Dense retriever 편향 분석, Sparse retrieval 연구"
+  - name: "Late Chunking"
+    mention_count: 4
+    description: "Late Chunking 기반 임베딩 생성 전략 실험 및 기존 청킹과 비교"
+key_discussions:
+  - thread_ts: '1743808800.000000'
+    date: '2025-04-04'
+    reply_count: 81
+    text_preview: "KURE 프로젝트 기반 STORM vs OpenAI 임베딩/리랭커 성능 평가 결과 공유"
+  - thread_ts: '1744162923.000000'
+    date: '2025-04-09'
+    reply_count: 28
+    text_preview: "그래프 기반 RAG 태스크 논의 - 도균님 메인으로 아이티센엔틱 연동 작업 계획"
+  - thread_ts: '1747044120.000000'
+    date: '2025-05-12'
+    reply_count: 0
+    text_preview: "SentenceTransformers v4.1.0 ONNX/OpenVINO 백엔드 도입으로 서빙 속도 2~3배 향상"
+  - thread_ts: '1748261286.000000'
+    date: '2025-05-26'
+    reply_count: 0
+    text_preview: "Cohere Embed 4 출시 - 기업용 멀티모달 검색 지원"
+terminology:
+  - term: "KURE"
+    definition: "한국어 임베딩 모델 검색 성능 자동 측정 툴킷, MTEB Korean Retrieval Benchmark 활용"
+    aliases: []
+    context: "STORM과 OpenAI 임베딩 성능 비교에 사용"
+  - term: "LightRAG"
+    definition: "그래프 기반 경량 RAG 프레임워크, GraphRAG의 대안"
+    aliases: []
+    context: "GraphRAG 연구의 레퍼런스 구현체"
+  - term: "Late Chunking"
+    definition: "전체 문서를 먼저 인코딩한 후 청크별 풀링을 수행하는 임베딩 생성 기법"
+    aliases: []
+    context: "기존 청킹 방식 대비 문맥 손실을 줄이는 임베딩 전략"
+  - term: "GRPO"
+    definition: "Group Relative Policy Optimization, 강화학습 기반 모델 학습 기법"
+    aliases: []
+    context: "VL 모델 학습에 적용한 RL 방법론"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

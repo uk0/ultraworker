@@ -1,0 +1,96 @@
+channel:
+  id: C06R0LPHHLJ
+  name: project-gov-subsidy
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:15'
+statistics:
+  total_messages: 54
+  total_threads: 43
+  active_users: 8
+  avg_messages_per_day: 1.3
+key_discussions:
+- thread_ts: '1769000185.865839'
+  date: '2026-01-21'
+  reply_count: 89
+  text_preview: '*[Opendata X Ai 챌린지](~1/23, 15시)* <@U09QEFWEQ3W>
+
+    안녕하세요. 소상공인시장진흥공단 빅데이터실 최현용 대리입니다.
+
+    사전에 안내드린 정량평가 관련'
+- thread_ts: '1768529010.904799'
+  date: '2026-01-16'
+  reply_count: 68
+  text_preview: '[OpenData X AI 챌린지][소상공인시장진흥공단] 일정안내 <@U09QEFWEQ3W> |'
+- thread_ts: '1767676187.751609'
+  date: '2026-01-06'
+  reply_count: 62
+  text_preview: '[OpenData X AI 경진대회] 진행경과 보고 작성 요청(~1/7 수) <@U09QEFWEQ3W>'
+- thread_ts: '1768985575.864959'
+  date: '2026-01-21'
+  reply_count: 57
+  text_preview: '[Opendata X Ai 챌린지]
+
+    • *본선평가 : 26.01.28(14:10, 발표시간 15분전 도착), 팁스타운 S5, 2층 평가장*
+
+    • *결과보고서 : ~26.01.26(1'
+- thread_ts: '1767933095.427829'
+  date: '2026-01-09'
+  reply_count: 45
+  text_preview: 「첨단 GPU 활용 지원 사업」 사업설명회(1/9, 13:30~)
+- thread_ts: '1768954725.761439'
+  date: '2026-01-21'
+  reply_count: 42
+  text_preview: '[Opendata x AI 챌린지] 정량평가 관련 산출물 제출 요청 (1/21, 17:30분까지) <@U09QEFWEQ3W>
+
+    안녕하세요. 소상공인시장진흥공단 빅데이터실 최현용 대리'
+- thread_ts: '1768362123.609929'
+  date: '2026-01-14'
+  reply_count: 33
+  text_preview: '[신규 과제] Graph RAG &amp; Agentic RAG 관련 &gt;&gt; <@U09QEFWEQ3W>'
+- thread_ts: '1770029532.191549'
+  date: '2026-02-02'
+  reply_count: 23
+  text_preview: 딥테크 챌린지 프로젝트 / 200억 지원금 / 대우건설 컨소시엄 &gt;&gt;
+- thread_ts: '1769581193.927139'
+  date: '2026-01-28'
+  reply_count: 23
+  text_preview: "<@U09QEFWEQ3W> (cc <@U057PR1ADCL> <@U08MN6VN9PA>)\n안녕하세요, CDO님 어제\
+    \ 연락드렸던 IITP의 이세연입니다. \n\n말씀드린 바와 같이, 국"
+- thread_ts: '1770095195.249529'
+  date: '2026-02-03'
+  reply_count: 22
+  text_preview: '[사업설명회] 딥테크 챌린지 프로젝트(DCP) 사업설명회_생태계혁신형'
+- thread_ts: '1767681305.745999'
+  date: '2026-01-06'
+  reply_count: 21
+  text_preview: '[검토요청] 아래와 같이 협업사업 관련 회의참석 요청이 왔습니다. 검토 요청드립니다. <!subteam^S07MRM7NLAC>
+
+    안녕하세요, 과학기술인공지능혁신담당관실 윤희정 주무관'
+- thread_ts: '1769404730.362659'
+  date: '2026-01-26'
+  reply_count: 18
+  text_preview: 정부사업 관련 문서 통합 관리 건의 &gt;&gt;
+- thread_ts: '1769084342.964889'
+  date: '2026-01-22'
+  reply_count: 17
+  text_preview: '*[신규과제] 「첨단 GPU 활용 지원 사업」사용자 모집 공고 (25-1차)*
+
+    • 접수기간 : 2025.12.22~*2026.01.28 15:00*
+
+    '
+- thread_ts: '1768289717.763539'
+  date: '2026-01-13'
+  reply_count: 17
+  text_preview: '[초거대AI] 최종보고회는 1월 29일 오후 2시, NIA 서울사무소 근처에서 진행될 예정 공식적인 안내 메일이 오면
+    공유할 예정 <@U058A971Z8R>'
+- thread_ts: '1770879267.961069'
+  date: '2026-02-12'
+  reply_count: 16
+  text_preview: '초초초초초격차 1 차 합격 '
+metadata:
+  created_at: '2026-02-13T16:28:15'
+  synced_by: sync_fast.py

@@ -1,0 +1,101 @@
+channel:
+  id: C05BUTMULMD
+  name: product-storm
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 204
+  total_threads: 170
+  active_users: 15
+  avg_messages_per_day: 3.4
+summary: |
+  2024년 4분기 product-storm 채널에서는 IBK 기업은행 온프레미스 요건 대응, 민감정보 감지/마스킹 기능 기획, 캐리어 노드 고도화가 핵심 주제였다.
+  캐리어의 API 호출 노드, 후처리 노드 개발이 진행되었고 GUI 도구 기획과 오더시트 화면 설계가 이루어졌다.
+  OpenAI 장애 대응을 위한 fallback 전략 강화, LLM 모델 리스트 정비(벤더/모델/리전 조합 검증), 업스테이지 Document Parse 테스트 등 LLM 인프라 안정성이 강조되었다.
+  다국어 지원 확대(태국어, 영어, 프랑스어, 베트남어), 이용약관 웹사이트 게시, 마크스폰/띵플 등 신규 고객사 온보딩 대응도 활발하게 진행되었다.
+topics:
+  - name: "IBK 기업은행 요건 대응"
+    count: 20
+    description: "민감정보 마스킹, 하이라이팅, 펑션콜 지원, 스톰파스 적용 등 IBK 전용 요건"
+  - name: "민감정보 감지/마스킹"
+    count: 12
+    description: "문서 등록 시 민감정보(주민번호, 휴대폰번호 등) 감지 기능 기획 및 프로덕 스펙 작성"
+  - name: "캐리어 노드 고도화"
+    count: 15
+    description: "API 호출 노드, 후처리 노드 개발, 스트림 처리, 오더시트 GUI 도구 기획"
+  - name: "LLM 모델 관리"
+    count: 12
+    description: "벤더별 모델 리스트 정비, Azure/OpenAI 조합 검증, fallback 옵션 구현"
+  - name: "OpenAI 장애 대응"
+    count: 8
+    description: "OpenAI API 장애 감지(Statuspage 연동), fallback 전략, 라이브 서비스 영향 분석"
+  - name: "다국어 지원 확대"
+    count: 8
+    description: "태국어, 영어(CES 대응), 프랑스어, 베트남어 지원 및 i18n 파일 관리"
+  - name: "고객사 온보딩"
+    count: 10
+    description: "마크스폰, 띵플, 유진투자증권, 현대엔지니어링 등 신규 고객 대응"
+  - name: "프론트엔드 UX 개선"
+    count: 10
+    description: "사이드바 UI 개선, 변수 입력 UI, 에이전트명 표시, 디자인 시스템 적용"
+key_discussions:
+  - thread_ts: '1733964807.788079'
+    date: '2024-12-12'
+    reply_count: 75
+    text_preview: "openai가 nginx 503을 반환 중 - OpenAI 장애 대응 및 fallback 전략"
+  - thread_ts: '1733894036.907809'
+    date: '2024-12-11'
+    reply_count: 60
+    text_preview: "스타게이트 DB를 보다가 드는 여러 생각들 - 좋아요/안좋아요 데이터 분석"
+  - thread_ts: '1734598115.989959'
+    date: '2024-12-19'
+    reply_count: 58
+    text_preview: "{{변수}} 입력 UI 바꿔봤습니다 - 프롬프트 변수 입력 UI 개선"
+  - thread_ts: '1731398986.949799'
+    date: '2024-11-12'
+    reply_count: 50
+    text_preview: "todo 고급 업로드 말고 더 나은 이름 없는지 - UX 용어 고민"
+  - thread_ts: '1731560069.019959'
+    date: '2024-11-14'
+    reply_count: 48
+    text_preview: "1시경 석현님 시연할 때에 장애 또 발생 - 라이브 장애 재발 방지"
+  - thread_ts: '1734947719.058289'
+    date: '2024-12-23'
+    reply_count: 46
+    text_preview: "민감정보/하이라이팅 기능 텤 스펙 작성 시작 - 차기 개발 사이클 기획"
+  - thread_ts: '1734340439.644789'
+    date: '2024-12-16'
+    reply_count: 43
+    text_preview: "유진투자증권 에이전트 답변생성 안됨 - LLM 모델 조합 이슈 디버깅"
+terminology:
+  - term: "StormParse"
+    definition: "Sionic AI의 문서 파싱 서비스. PDF, HWP 등 다양한 문서 형식을 처리"
+    aliases: ["스톰파스"]
+    context: "IBK 요건을 위해 별도 적용 준비"
+  - term: "Function Calling"
+    definition: "LLM이 외부 함수를 호출할 수 있는 기능. IBK에서 Solar 모델과 함께 요청"
+    aliases: ["펑션콜"]
+    context: "Open LLM에서 펑션콜 지원을 위한 스키마 통합 개발 필요"
+  - term: "Assimil"
+    definition: "Open LLM의 새 이름. 다양한 LLM 벤더를 통합 관리하는 내부 서비스"
+    aliases: ["어시밀", "Open LLM", "오픈엘엠"]
+    context: "GPT, Claude, Solar, HyperCLOVA X 등 모델의 통합 라우팅"
+  - term: "Clarity"
+    definition: "Microsoft의 무료 웹 분석 도구. 사용자 행동 추적, 히트맵, 세션 리플레이 제공"
+    aliases: []
+    context: "외부 유저 행동 분석을 위해 도입 제안됨"
+  - term: "Document AI"
+    definition: "문서 분석 및 처리를 위한 AI 기능. 민감정보 감지, 하이라이팅 등 포함"
+    aliases: []
+    context: "IBK 요건 중 문서 내 민감정보 감지 및 마스킹 기능"
+  - term: "Statuspage"
+    definition: "서비스 상태 모니터링 및 알림 도구. OpenAI API 상태를 Slack에 자동 전파"
+    aliases: []
+    context: "Q4에 product-storm 채널에 OpenAI 상태 알림 봇 연동"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

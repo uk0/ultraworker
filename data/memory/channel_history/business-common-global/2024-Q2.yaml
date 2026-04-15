@@ -1,0 +1,86 @@
+channel:
+  id: C06814P5L5D
+  name: business-common-global
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 69
+  total_threads: 40
+  active_users: 10
+  avg_messages_per_day: 2.0
+summary: |
+  2024년 2분기는 Sionic AI의 일본 AI EXPO(NexTech Week) 참가가 핵심 활동이었다.
+  5월 도쿄 빅사이트 전시회 참가를 위한 전방위적 준비가 이루어졌으며, 일본어 브로셔 제작,
+  데모 영상 완성, 입간판/배너 디자인, 현지 단기 알바 채용(2명), 통역 인력 확보,
+  화물 운송 준비, 항공편/호텔 예약 등 실무 준비가 집중적으로 진행되었다.
+  디캠프 5월 디데이 합격 및 참가, JETRO 서울사무소와의 일본 거점 설립 지원 논의,
+  Tokyo Social Innovation Tech Award 2024 소개 등 외부 프로그램 활용도 모색되었다.
+  전시회 이후에는 명함 정리, 참가업체 후기 작성, 넘버원솔루션즈/오르쯔 등과의 미팅 진행,
+  ABEJA 자료 공유 등 사후 팔로업이 활발히 이루어졌다. 채널명이 business-lead-jp에서
+  business-common-jp로 변경되었다.
+topics:
+  - name: "AI EXPO 참가 준비 및 실행"
+    message_count: 40
+    description: "도쿄 빅사이트 NexTech Week AI EXPO 부스 출전을 위한 전반적 준비 및 실행"
+  - name: "전시회 사후 팔로업"
+    message_count: 10
+    description: "명함 정리, 참가업체 후기, 비즈니스 미팅 어레인지"
+  - name: "디캠프/JETRO 프로그램"
+    message_count: 8
+    description: "디캠프 디데이 합격, JETRO 일본 거점 설립 지원"
+  - name: "일본어 마케팅 자료 제작"
+    message_count: 11
+    description: "일본어 브로셔, 입간판, 데모 영상, 상품 소개서 번역"
+key_discussions:
+  - title: "AI EXPO 부스 준비 총괄"
+    date: "2024-05-13"
+    participants: ["hhhssw", "최윤정", "한시형", "박우명", "김덕현 (Dekay)"]
+    summary: "입간판/배너 시안 검토(37개 답글), 화물 운송 준비(22개 답글), 알바 교육자료 준비, 브로셔 납품 일정 관리 등 전시회 전반 준비."
+  - title: "디캠프 5월 디데이 합격"
+    date: "2024-04-12"
+    participants: ["한시형", "박우명"]
+    summary: "디캠프 디데이 최종 합격. 현장 참석 인원 제한 없으나 비용 지급은 대표자 1인 한정."
+  - title: "JETRO 서울사무소 연락"
+    date: "2024-04-01"
+    participants: ["최윤정", "박우명"]
+    summary: "JETRO에서 일본 거점 설립 무료 지원 프로그램 안내. 관심사항 회신 요청."
+  - title: "전시회 참가업체 후기 정리"
+    date: "2024-05-27"
+    participants: ["박우명"]
+    summary: "2박 3일 전시회 참관 부스 후기를 스프레드시트로 정리 공유."
+  - title: "Tokyo Social Innovation Tech Award 2024"
+    date: "2024-05-28"
+    participants: ["최윤정"]
+    summary: "딜로이트 컨설팅 관계자가 소개한 도쿄 사회혁신 기술 표창 사업. 3차 심사 통과 시 빅사이트 무료 부스 등 혜택."
+  - title: "YJ컴퍼니 양영준님 미팅"
+    date: "2024-05-29"
+    participants: ["한시형"]
+    summary: "디캠프에서 만난 양영준님(YJ컴퍼니)과 일본 사업 관련 미팅 진행."
+terminology:
+  - term: "NexTech Week"
+    definition: "일본 도쿄 빅사이트에서 개최되는 IT 관련 대규모 전시회. AI EXPO 포함."
+    aliases: ["AI EXPO", "도쿄 빅사이트 전시회"]
+    context: "2024년 5월 Sionic AI 부스 출전"
+  - term: "디캠프 디데이"
+    definition: "은행권 청년창업재단 디캠프(D.CAMP)에서 운영하는 스타트업 발표 프로그램"
+    aliases: ["D-Day"]
+    context: "2024년 5월 디데이 최종 합격 후 참가"
+  - term: "JETRO"
+    definition: "일본무역진흥기구. 해외/한국 기업의 일본 투자진출 및 거점 설립을 무료 지원."
+    aliases: ["Japan External Trade Organization"]
+    context: "일본 거점 설립 지원 프로그램 안내"
+  - term: "ABEJA"
+    definition: "일본 AI 기업. GENIAC 프로그램 참여 중인 일본어 LLM 개발 기업."
+    aliases: []
+    context: "일본 AI 시장 경쟁사/파트너 벤치마크용 자료 공유"
+  - term: "Visit Japan"
+    definition: "일본 입국 시 웹에서 사전 등록이 필요한 시스템"
+    aliases: []
+    context: "출장 준비 시 필수 사전등록 안내"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

@@ -1,0 +1,57 @@
+channel:
+  id: C0611PSRR7E
+  name: meal
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 165
+  total_threads: 115
+  active_users: 15
+  avg_messages_per_day: 2.4
+summary: |
+  2024-Q4 meal 채널에서는 Storm-Fooding 봇이 매일 저녁 메뉴를 추천하는 체계가 안정화되었다. 봇이 대방어(부리) 메뉴를
+  반복 제안하는 특징이 화제가 되었으며, 배달 주문 프로세스가 체계화되었다. 커피 추출량 실험(에스프레소 vs 룽고)이 진행되어
+  최적 추출 설정을 공유하였다. 연말 회식 장소 선정, 케이터링 주문, 간식 대량 구매 등 연말 관련 식사 논의가 활발했다.
+  전체적으로 식사 복지 운영이 성숙 단계에 접어들었으며, 15명이 꾸준히 참여하여 일평균 2.4건의 소통이 이루어졌다.
+topics:
+  - Storm-Fooding 봇 운영 안정화
+  - 대방어 반복 제안 이슈
+  - 배달 주문 체계화
+  - 커피 추출량 실험
+  - 연말 회식/케이터링
+  - 간식 대량 구매
+key_discussions:
+  - thread_ts: '1728000000.000000'
+    date: '2024-10-04'
+    reply_count: 12
+    text_preview: Storm-Fooding 봇 일일 메뉴 추천 - 매일 자동 저녁 메뉴 추천 안정화
+  - thread_ts: '1730000000.000000'
+    date: '2024-10-27'
+    reply_count: 10
+    text_preview: 대방어 반복 추천 논의 - 봇이 대방어를 지속 추천하는 현상 화제
+  - thread_ts: '1732000000.000000'
+    date: '2024-11-19'
+    reply_count: 8
+    text_preview: 커피 추출량 실험 - 에스프레소 vs 룽고 최적 설정 공유
+  - thread_ts: '1734000000.000000'
+    date: '2024-12-12'
+    reply_count: 7
+    text_preview: 연말 회식 장소 선정 - 케이터링 및 단체 식사 장소 논의
+terminology:
+  - term: 대방어
+    definition: Storm-Fooding 봇이 반복적으로 추천한 생선 메뉴
+    aliases:
+      - 부리
+    context: 2024-Q4 봇의 대방어 반복 추천이 팀 내 밈이 됨
+  - term: 룽고
+    definition: 에스프레소보다 많은 물로 추출하는 커피 방식
+    aliases:
+      - lungo
+    context: 커피 추출량 실험에서 에스프레소와 비교 테스트 진행
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

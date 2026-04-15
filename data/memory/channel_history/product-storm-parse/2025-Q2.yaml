@@ -1,0 +1,69 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 147
+  total_threads: 123
+  active_users: 15
+  avg_messages_per_day: 2.9
+summary: |
+  2025년 2분기 product-storm-parse 채널은 15명이 참여하여 147개의 메시지와 123개의 스레드가 발생하였으며, 스톰파스의 핵심 기능 개선이 집중적으로 논의되었다. 주요 내용은 Gemini 2.5 적용 검토, 엑셀 파일 처리 로직 개발(LLM 기반 자연어 변환), PDF 학습 실패 이슈, Qwen 32B vs 72B 성능 비교, PPT/DOC의 PDF 변환 처리 방식 논의, PyMuPDF4LLM 법률 검토, 캐리어 스톰파스 스펙 최적화 등이었다. 스톰파스 성능평가 셋 구축도 진행되었다.
+topics:
+  - name: "Gemini 2.5 적용"
+    mention_count: 15
+    description: "Gemini 1에서 Gemini 2.5로 업그레이드 검토 및 성능 비교"
+  - name: "엑셀 파일 처리"
+    mention_count: 25
+    description: "엑셀 파일을 마크다운으로 변환 후 LLM으로 자연어 처리하는 로직 개발"
+  - name: "Qwen 모델 비교"
+    mention_count: 10
+    description: "Qwen 32B와 72B 모델의 성능 비교 및 적용 논의"
+  - name: "PDF 대량 처리"
+    mention_count: 8
+    description: "PDF 대량 업로드 시 타임아웃 및 학습 실패 이슈 해결"
+  - name: "스톰파스 성능평가 셋"
+    mention_count: 6
+    description: "미타 평가셋 구축 - 20여 가지 문서 유형에 대한 파싱 품질 벤치마크"
+key_discussions:
+  - thread_ts: '1744340460.000000'
+    date: '2025-04-11'
+    reply_count: 25
+    text_preview: "Storm Parse live로 PDF 대량으로 보내기 관련 타임아웃 조정 논의"
+  - thread_ts: '1745992680.000000'
+    date: '2025-04-30'
+    reply_count: 3
+    text_preview: "dev carrier-storm-parse 스펙을 live에 준하게 올림"
+  - thread_ts: '1746519660.000000'
+    date: '2025-05-07'
+    reply_count: 115
+    text_preview: "스톰파스 뭔가 달라진게 있는지? 결과가 묘하게 달라짐 - 대규모 디버깅 시작"
+  - thread_ts: '1746612720.000000'
+    date: '2025-05-08'
+    reply_count: 49
+    text_preview: "혜원님이 만들어주신 엑셀 유형 노션 결과 정리 - 유형별 파싱 성능 분석"
+terminology:
+  - term: "미타"
+    definition: "사이오닉 AI 내부 테스트/평가 환경 또는 기관(IBK와 별도)"
+    aliases: []
+    context: "스톰파스 성능 평가셋 테스트에 활용"
+  - term: "아비케"
+    definition: "IBK 기업은행 또는 관련 엔터프라이즈 고객사 환경"
+    aliases: ["IBK"]
+    context: "스톰파스 파싱 모델 반입 및 성능 검증 대상 환경"
+  - term: "캐리어"
+    definition: "사이오닉 AI의 내부 서비스 오케스트레이션 시스템"
+    aliases: ["carrier"]
+    context: "캐리어-스톰파스: 캐리어 내에 통합된 스톰파스 서비스"
+  - term: "Dragoon (DP)"
+    definition: "PDF를 마크다운으로 변환하는 문서 처리 파서"
+    aliases: ["드라군"]
+    context: "스톰파스의 핵심 파싱 컴포넌트로 성능 이슈 논의 대상"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

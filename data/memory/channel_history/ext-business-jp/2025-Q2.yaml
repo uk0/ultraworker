@@ -1,0 +1,38 @@
+channel:
+  id: C08D8A83BN1
+  name: ext-business-jp
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 22
+  total_threads: 12
+  active_users: 6
+  avg_messages_per_day: 2.0
+summary: |
+  일본 비즈니스 진행 지속. 주요 활동: (1) heena의 Boeki 데모 완성 - 데이터셋 및 프롬프트 작성,
+  Claude 3.7 모델로 일본어 테스트 수행, (2) Japan IT Week 전시업체 리스트 정리 및 접근 전략 수립,
+  (3) 일본어 PPT 최종본 완성 - 스크린샷 교체 작업, (4) heena의 Storm 플랫폼 사용 지원(사용 어려움
+  호소), (5) 한시형(Kevin)이 4/19 도쿄 방문 시 heena와 미팅 조율.
+  Capgemini New Grads 조직이 5월에 채널에서 자신을 제거함.
+topics:
+  - Boeki 데모 완성
+  - Japan IT Week 참가
+  - 일본어 PPT 최종화
+  - Storm 플랫폼 사용 지원
+key_discussions:
+  - thread_ts: '1744203495.009049'
+    date: '2025-04-09'
+    reply_count: 16
+    text_preview: "heena의 Boeki 데모 완성 보고 및 피드백"
+  - thread_ts: '1744876756.765479'
+    date: '2025-04-17'
+    reply_count: 3
+    text_preview: "일본어 PPT 최종 버전 공유"
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

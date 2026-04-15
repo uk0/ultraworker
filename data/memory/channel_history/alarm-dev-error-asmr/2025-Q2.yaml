@@ -1,0 +1,49 @@
+channel:
+  id: C07GMQK7V8W
+  name: alarm-dev-error-asmr
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 465
+  total_threads: 5
+  active_users: 5
+  avg_messages_per_day: 12.2
+summary: |
+  2025년 2분기 alarm-dev-error-asmr 채널에서는 하루 평균 12.2건, 총 465건의 알림이 발생하였다. Openllm API Error가 대다수를 차지하였으며, 4월 21일·28일·30일, 5월 10~23일에 집중적으로 대량 발생하였다. 5월 21일에는 약 20건의 연속 오류 발생 후 팀원(U08DJL0LXL0)이 직접 스레드에 참여하여 "3.7 소넷이 없나보군" 등의 코멘트와 함께 모델 가용성 이슈를 확인하였다.
+topics:
+  - name: "Openllm API Error 대량 발생"
+    mention_count: 460
+    description: "ASMR dev 서비스 OpenLLM API 오류 — 4월 21일, 5월 10~23일에 특히 집중 발생"
+  - name: "Claude 모델 가용성 이슈"
+    mention_count: 2
+    description: "5월 10일 연속 오류 발생 시 팀원이 'claude-3.7-sonnet이 없나보군' 코멘트로 모델 미지원 상황 파악"
+  - name: "신규 멤버 참여"
+    mention_count: 1
+    description: "5월 13일 신규 멤버(U08DJL0LXL0) 채널 참여"
+key_discussions:
+  - thread_ts: '1747133820.000000'
+    date: '2025-05-10'
+    reply_count: 0
+    text_preview: "연속 Openllm API Error 발생 — 팀원 댓글 '3.7 소넷이 없나보군'으로 Claude 모델 미지원 원인 파악"
+  - thread_ts: '1747797300.000000'
+    date: '2025-05-21'
+    reply_count: 20
+    text_preview: "대량 연속 API 오류 발생 — 약 20건 이상 연속 발생 후 스레드에서 대응"
+  - thread_ts: '1746010260.000000'
+    date: '2025-04-30'
+    reply_count: 0
+    text_preview: "4월 30일 집중 오류 — 오후 2~3시 약 18건 연속 Openllm API Error 발생"
+terminology:
+  - term: "ASMR"
+    definition: "Sionic AI의 AI 서비스 — OpenLLM API를 통해 LLM 추론을 제공; dev 환경 오류가 이 채널로 전송됨"
+  - term: "Openllm API Error"
+    definition: "OpenLLM API 호출 실패 알림 — 모델 미존재, 서버 과부하 등 다양한 원인으로 발생"
+  - term: "claude-3.7-sonnet"
+    definition: "Anthropic Claude 3.7 Sonnet 모델 — 5월 10일 당시 ASMR 서비스에서 해당 모델이 미지원되어 오류 발생"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

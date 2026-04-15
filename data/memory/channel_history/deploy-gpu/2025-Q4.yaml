@@ -1,0 +1,92 @@
+channel:
+  id: C06F1LR1UKF
+  name: deploy-gpu
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 600
+  total_threads: 86
+  active_users: 12
+  avg_messages_per_day: 7.5
+summary: |
+  2025년 4분기 deploy-gpu 채널은 GPU 스케줄링 시스템 "Creep Colony" 도입과 함께 역대 가장 높은 활동량을 보였다.
+  10월 말부터 자체 개발 GPU 컨테이너 스케줄링 플랫폼(Creep Colony)의 베타 테스트가 시작되었으며, 컨테이너 생성/종료 알림 봇(B09CJ0NGFME)이 실시간으로 모든 GPU 사용 이벤트를 기록하였다. GPU 번호 표기 방식(0-7 vs 1-8)을 0-7로 통일하는 합의도 이루어졌다.
+  11월에는 Creep Colony에 웹 기반 VSCode 지원, NAS 캐시 마운트, 컨테이너 레이블 검색 등 신기능이 추가되었으며, Dense Retriever 학습, Cross Encoder 데이터 라벨링, nanochat 훈련 등 다양한 ML 실험이 진행되었다. GPU 사용 충돌 및 조율 이슈도 빈번하게 발생하였다.
+  12월에는 Creep Colony 인프라가 VESSL AI(vessl-a100-sxm-01/02 노드)로 마이그레이션되었으며, 신규 입사자(sangho) 환경 셋업, 커스텀 Dockerfile 관리 등 AI 연구 환경 표준화가 진행되었다.
+topics:
+  - name: "Creep Colony GPU 스케줄링"
+    mention_count: 50
+    description: "자체 개발 GPU 컨테이너 스케줄링 플랫폼. 사용자별 컨테이너 생성/종료 자동 알림 및 웹 VSCode 지원"
+  - name: "컨테이너 생성/종료 알림"
+    mention_count: 400
+    description: "봇(B09CJ0NGFME)을 통한 GPU 컨테이너 생성/종료 실시간 알림"
+  - name: "ML 모델 학습 실험"
+    mention_count: 30
+    description: "Dense Retriever, Cross Encoder, nanochat, Deepseek OCR 등 다양한 ML 모델 학습 및 실험"
+  - name: "VESSL 노드 마이그레이션"
+    mention_count: 10
+    description: "12월 Creep Colony 인프라가 기존 gpu-node-01/02에서 vessl-a100-sxm-01/02 노드로 이전"
+  - name: "GPU 사용 조율"
+    mention_count: 25
+    description: "여러 사용자 간 베슬1/2번 GPU 사용 현황 공유 및 순번 조율"
+  - name: "RunPod 일일 현황"
+    mention_count: 30
+    description: "RunPod 일일 12시 자동 현황 보고 (대부분 실행 중인 Pod 없음)"
+  - name: "Creep Colony 기능 개선"
+    mention_count: 8
+    description: "웹 VSCode, NAS 캐시 마운트(/mnt/nas/cache), 컨테이너 레이블 검색 등 신기능 추가"
+key_discussions:
+  - thread_ts: '1761386580.000000'
+    date: '2025-10-07'
+    reply_count: 22
+    text_preview: "Vessel 1번 GLM KD 실험 8장 GPU 사용 중 (4시간 예정)"
+  - thread_ts: '1761545018.000000'
+    date: '2025-10-27'
+    reply_count: 12
+    text_preview: "Creep Colony GPU 스케줄링 베타 테스트 참여자 모집"
+  - thread_ts: '1761886684.000000'
+    date: '2025-10-31'
+    reply_count: 29
+    text_preview: "GPU 컨테이너 할당 방식 논의, Sam Altman 계정 테스트 등 베타 테스트 이슈"
+  - thread_ts: '1762405064.000000'
+    date: '2025-11-06'
+    reply_count: 18
+    text_preview: "vessel 2번 GPU 풀 사용 중 선공유 없이 점유한 건에 대한 이슈 제기 및 협의"
+  - thread_ts: '1762587460.000000'
+    date: '2025-11-08'
+    reply_count: 5
+    text_preview: "Creep Colony 신기능: 웹 VSCode 지원, NAS 캐시 마운트, 컨테이너 레이블 검색 기능 추가"
+  - thread_ts: '1762751328.000000'
+    date: '2025-11-09'
+    reply_count: 7
+    text_preview: "Creep Colony 이슈 보고 및 개선안 논의"
+  - thread_ts: '1766108400.000000'
+    date: '2025-12-19'
+    reply_count: 5
+    text_preview: "Creep Colony 커스텀 Dockerfile 및 CLAUDE.md 세팅 환경 구성, sionic-research-skills 통합"
+terminology:
+  - term: "Creep Colony"
+    definition: "사이오닉 자체 개발 GPU 컨테이너 스케줄링 플랫폼. 사용자별 GPU 컨테이너 생성/종료를 슬랙으로 실시간 알림하며, 웹 VSCode 등 개발 편의 기능 제공"
+  - term: "베슬 (VESSL AI)"
+    definition: "사이오닉이 사용하는 AI 인프라 플랫폼. A100 GPU x8 서버 2대 (vessl-a100-sxm-01, vessl-a100-sxm-02) 운영"
+  - term: "RunPod"
+    definition: "GPU 클라우드 서비스. 온프렘 자원 부족 시 H100, RTX A4000 등을 시간 단위로 임대"
+  - term: "Dense Retriever"
+    definition: "밀집 벡터 기반 문서 검색 모델. 데이터 라벨링 및 학습 작업 진행"
+  - term: "Cross Encoder"
+    definition: "검색 재순위화(Re-ranking)를 위한 쌍방향 인코더 모델. 데이터 라벨링 및 학습 작업 진행"
+  - term: "nanochat"
+    definition: "사이오닉 내부 소형 대화 모델 프로젝트"
+  - term: "Deepseek OCR"
+    definition: "Deepseek 기반 OCR(광학 문자 인식) 모델 실험"
+  - term: "NAS"
+    definition: "Network Attached Storage. 팀 공유 스토리지로 데이터셋, 체크포인트, 캐시 등 저장"
+  - term: "vLLM"
+    definition: "대규모 언어 모델 고성능 추론 라이브러리"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

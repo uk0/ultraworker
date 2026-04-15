@@ -1,0 +1,30 @@
+channel:
+  id: C06L6H4DB2R
+  name: noah-thinks
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:28:04'
+statistics:
+  total_messages: 1
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 0.0
+key_discussions:
+- thread_ts: '1768291598.769639'
+  date: '2026-01-13'
+  reply_count: 4
+  text_preview: '클로드 스킬 유심히 보다가 gpt 사용해서 제 생각을 정리시킨 문서
+
+
+    우리는 고객 맞춤 AI를 만드는게 핵심임
+
+
+    기존 우리의 접근
+
+    하지만 고객데이터가 별로임 -> 그걸 RAG와 피'
+metadata:
+  created_at: '2026-02-13T16:28:04'
+  synced_by: sync_fast.py

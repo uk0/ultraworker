@@ -1,0 +1,56 @@
+channel:
+  id: C06UTL9DK6G
+  name: corp-vacation
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 95
+  total_threads: 35
+  active_users: 2
+  avg_messages_per_day: 2.0
+summary: |
+  2025년 1분기 corp-vacation 채널은 flex 봇을 통한 자동 휴가 알림이 주를 이뤘다.
+  총 95건의 메시지가 발생했으며, 주요 휴가 사용자로는 이강욱, 박진형, 신희수, 홍성아,
+  송명하, 김수원, 김수진, 양호진, 최병현, 백은주, 조하담, 임예원, 박우명(Max) 등이 있었다.
+  1월 말~2월 초 설 연휴 전후로 휴가 신청이 집중되었으며, 박진형은 1월 15일~2월 14일
+  장기 휴가를 신청했다가 2월 3일까지로 변경하였다. 휴가 취소 및 재등록 건도 다수
+  발생하였다(홍성아, 송명하, 고석현, 박우명 등). 권혜선(Jada)은 flex 봇 외에
+  직접 메시지로 "효도이슈(아부지 병원 동행)으로 급반차 사용" 사유를 공유하기도 했다.
+topics:
+  - 연차/휴가 신청
+  - flex 봇 자동 알림
+  - 휴가 취소 및 변경
+  - 설 연휴 전후 휴가 집중
+key_discussions:
+  - thread_ts: '1741059982.520699'
+    date: '2025-03-04'
+    reply_count: 9
+    text_preview: '[이강욱] 3월 24일~26일 휴가 - 스레드에서 일정 조율 논의'
+  - thread_ts: '1740380086.070579'
+    date: '2025-02-24'
+    reply_count: 17
+    text_preview: '[김혜원] 3월 6일 휴가 - 활발한 스레드 논의'
+  - thread_ts: '1740543550.701529'
+    date: '2025-02-26'
+    reply_count: 10
+    text_preview: '[김혜원] 3월 25일 오전 반차 - 스레드 논의'
+  - thread_ts: '1738380601.162569'
+    date: '2025-02-01'
+    reply_count: 9
+    text_preview: '[정세민] 2월 7일 휴가 - 스레드 논의'
+  - thread_ts: '1738298893.828349'
+    date: '2025-01-31'
+    reply_count: 7
+    text_preview: '[조하담] 2월 19일 휴가 - 스레드 논의'
+terminology:
+  - term: "flex"
+    definition: "사이오닉 AI에서 사용하는 HR/근태관리 서비스. 휴가 신청 시 자동으로 Slack에 알림을 보냄."
+    aliases: ["플렉스"]
+    context: "모든 휴가 알림이 flex 봇을 통해 자동 게시됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

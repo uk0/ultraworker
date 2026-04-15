@@ -1,0 +1,33 @@
+channel:
+  id: C06EEMDQEKV
+  name: geek4
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 8
+  total_threads: 4
+  active_users: 5
+  avg_messages_per_day: 1.0
+summary: |
+  긱사 이용 관련 소통이 지속됨. Noah, 양호진이 긱사 숙박 알림을 주로 게시.
+  ye(신규 참여자)가 긱사에 두고 온 시계 분실물 문의. 양호진이 사용하던 방의
+  세탁 이불 행방 문의(7개 답글). 강성우, 오승희 신규 채널 참여.
+topics:
+  - 긱사 숙박 알림
+  - 분실물 문의
+  - 이불/비품 관리
+key_discussions:
+  - title: 긱사 이불 행방 문의
+    date: '2025-06-29'
+    summary: 양호진이 사용하던 방의 세탁 이불 위치 문의, 7개 답글
+  - title: 분실물(시계) 문의
+    date: '2025-05-05'
+    summary: ye가 긱사에 두고 온 시계 문의
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

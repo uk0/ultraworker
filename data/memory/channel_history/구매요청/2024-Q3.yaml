@@ -1,0 +1,63 @@
+channel:
+  id: C05CNTSLW57
+  name: 구매요청
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 55
+  total_threads: 52
+  active_users: 7
+  avg_messages_per_day: 1.6
+summary: |
+  2024-Q3 구매요청 채널에서는 사무용품 및 인프라 장비 구매가 활발하였다. USB C타입 허브 21개 대량 구매(312,900원), 통신실 에어컨 설치(121만원+설치비 38.5만원), 오피스 방화벽 라우터용 미니 UPS 해외 직구, AI 가속기 프로그래밍 수강권 2인분(180만원) 등 규모 있는 지출이 있었다. 사이오닉 종이봉투 500매, 주주총회용 스탠다드 키트, 한글/영어 브로셔 제작 등 회사 홍보물 관련 구매도 다수 이루어졌다.
+topics:
+  - name: "인프라 장비 구매"
+    mention_count: 6
+    description: "USB C타입 허브 대량 구매, 통신실 에어컨, 방화벽 라우터용 UPS, 온습도계"
+  - name: "간식 및 음료 정기 구매"
+    mention_count: 8
+    description: "월별 간식 정기 구매, 음료, 디카페인 원두 등"
+  - name: "재택 장비"
+    mention_count: 5
+    description: "모니터, 키보드, 마우스, 노트북 거치대 등 재택 근무 장비"
+  - name: "회사 홍보물"
+    mention_count: 4
+    description: "사이오닉 종이봉투, 주주총회 키트, 한글/영어 브로셔/포스터 제작"
+  - name: "교육 및 구독 서비스"
+    mention_count: 3
+    description: "AI 가속기 프로그래밍 수강권, OpenRouter API 충전"
+key_discussions:
+  - thread_ts: '1721982600.000000'
+    date: '2024-07-29'
+    reply_count: 59
+    text_preview: "2024 가속기 프로그래밍 수강권 2인 180만원 계좌이체 요청"
+  - thread_ts: '1723111200.000000'
+    date: '2024-08-08'
+    reply_count: 7
+    text_preview: "USB C타입 허브 21개 대량 구매(312,900원) 요청"
+  - thread_ts: '1723532400.000000'
+    date: '2024-08-13'
+    reply_count: 10
+    text_preview: "사이오닉 종이봉투 500매(693,740원) 발주 요청"
+  - thread_ts: '1724641200.000000'
+    date: '2024-08-26'
+    reply_count: 18
+    text_preview: "통신실 에어컨 설치 비용(385,000원) 계좌이체 요청"
+  - thread_ts: '1725334800.000000'
+    date: '2024-09-03'
+    reply_count: 9
+    text_preview: "한글/영어 브로셔+포스터 제작비(2,508,000원) 처리 요청"
+terminology:
+  - term: "UPS"
+    definition: "무정전 전원 공급 장치(Uninterruptible Power Supply), 정전 시 서버 보호용"
+  - term: "OpenRouter"
+    definition: "다양한 LLM API를 통합 제공하는 서비스"
+  - term: "주주총회 키트"
+    definition: "주주총회용 물품 세트(스탠다드 키트 15개)"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

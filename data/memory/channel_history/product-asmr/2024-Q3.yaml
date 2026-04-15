@@ -1,0 +1,64 @@
+channel:
+  id: C07BJQDM8BV
+  name: product-asmr
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 48
+  total_threads: 31
+  active_users: 15
+  avg_messages_per_day: 1.7
+summary: |
+  2024년 Q3는 product-asmr(당시 product-openllm) 채널 생성 초기로, OpenLLM 서비스의 기능 확장과 안정화에 집중한 분기이다.
+  주요 활동으로는 Claude 모델 지원 확인, vLLM을 통한 Xionic 모델 호출 이슈 해결, 토큰 사용량 로깅 기능 완성(모든 chat_engine 대상),
+  CORS 정책 논의, Anthropic Prompt Caching 소개, GCP Vertex 쿼타 상향 요청, Function Call 지원 검토 등이 있었다.
+  Anthropic API 불안정으로 인해 Vertex API 쪽 사용 권고가 있었으며, Vertex 지원 모델 리스트 및 벤더별 모델명 치환 관련 논의가 진행되었다.
+  팀별 토큰 사용량 추출 요청도 발생하여 데이터 분석 니즈가 확인되었다.
+topics:
+  - OpenLLM 모델 지원 확대 (Claude, Xionic, Vertex 등)
+  - 토큰 usage 로깅 완성 (모든 chat_engine 대상)
+  - Anthropic Prompt Caching 소개
+  - GCP Vertex 쿼타 상향 요청
+  - Function Call 지원 검토
+  - CORS 정책 논의
+  - Anthropic API 불안정 및 Vertex 대안 논의
+key_discussions:
+  - date: '2024-07-26'
+    summary: OpenLLM에서 토큰 수 계산 API 제공 여부 논의 (14 replies)
+  - date: '2024-08-15'
+    summary: Anthropic Prompt Caching 발표 공유 - 비용 90%, 지연시간 85% 절감 가능 (11 replies)
+  - date: '2024-08-20'
+    summary: 모든 chat_engine에 대한 토큰 usage 로깅 완성 공유 (Hyperclova, Azure, Upstage 포함)
+  - date: '2024-08-21'
+    summary: OpenLLM 에러 케이스 정리 및 체크 (19 replies)
+  - date: '2024-08-28'
+    summary: OpenLLM CORS 정책 논의 - 프론트에서 직접 호출 차단 여부 (20 replies)
+  - date: '2024-09-02'
+    summary: OpenLLM staging 배포 요청 및 진행 (25 replies)
+  - date: '2024-09-13'
+    summary: GCP Vertex 쿼타 상향 요청 공유 - gemini-1.5-pro, llama3-405b 관련 (1 reply)
+  - date: '2024-09-13'
+    summary: OpenLLM Function Call 지원 가능 여부 논의 (37 replies)
+  - date: '2024-09-19'
+    summary: Xionic 모델 버전 업데이트 및 인증키 설정 작업 논의 (54 replies)
+terminology:
+  - term: OpenLLM
+    definition: Sionic AI의 LLM 통합 API 서비스. 여러 벤더(OpenAI, Claude, Vertex 등)의 LLM을 단일 엔드포인트로 제공
+    aliases:
+      - 오픈엘엠
+      - open-llm
+  - term: chat_engine
+    definition: OpenLLM에서 사용하는 LLM 벤더/엔진 구분 단위 (OpenAI, Hyperclova, Azure, Upstage, vLLM 등)
+  - term: Vertex AI
+    definition: Google Cloud의 AI 플랫폼. Gemini, Llama 등 다양한 모델을 서빙
+  - term: Xionic
+    definition: Sionic AI 자체 개발 LLM 모델 (xionic-1-72b 등)
+  - term: Prompt Caching
+    definition: Anthropic이 도입한 API 호출 간 자주 사용되는 컨텍스트를 캐시하는 기능
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: claude-opus-4-6

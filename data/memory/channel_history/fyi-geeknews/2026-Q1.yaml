@@ -1,0 +1,81 @@
+channel:
+  id: C057PUSB1S8
+  name: fyi-geeknews
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:26:07'
+statistics:
+  total_messages: 552
+  total_threads: 51
+  active_users: 12
+  avg_messages_per_day: 12.8
+key_discussions:
+- thread_ts: '1770251672.641089'
+  date: '2026-02-05'
+  reply_count: 20
+  text_preview: '[GeekNews] Google의 공식 MCP 서버 모음'
+- thread_ts: '1769566040.566379'
+  date: '2026-01-28'
+  reply_count: 19
+  text_preview: '[GeekNews] Moonshot AI, Kimi K2.5 모델 공개'
+- thread_ts: '1769388647.676929'
+  date: '2026-01-26'
+  reply_count: 14
+  text_preview: '[GeekNews] Clawdbot - 모든 OS와 플랫폼에서 작동하는 개인용 AI 비서'
+- thread_ts: '1767662040.972289'
+  date: '2026-01-06'
+  reply_count: 10
+  text_preview: '[GeekNews] 이동 중에도 클로드 코드 쓰기 - Claude Code On-The-Go'
+- thread_ts: '1769391120.412009'
+  date: '2026-01-26'
+  reply_count: 8
+  text_preview: <https://news.hada.io/topic?id=25999> <@U06CLS6E694>
+- thread_ts: '1770253190.004099'
+  date: '2026-02-05'
+  reply_count: 7
+  text_preview: '[GeekNews] 2026년, 그냥 Postgres를 쓰자 (It''s 2026. Just Use Postgres) '
+- thread_ts: '1769563430.446689'
+  date: '2026-01-28'
+  reply_count: 6
+  text_preview: '[GeekNews] 구글 클라우드, 공식적으로 요금 인상 발표… 북미는 2배 인상'
+- thread_ts: '1768867957.186739'
+  date: '2026-01-20'
+  reply_count: 6
+  text_preview: 저희가 쓰는 <https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fplatum%2Ekr%2Farchives%2F279700&a
+- thread_ts: '1770079921.621609'
+  date: '2026-02-03'
+  reply_count: 5
+  text_preview: '[GeekNews] 에이전틱 결제 프로토콜 지도: 왜 난립하는가'
+- thread_ts: '1769479668.882659'
+  date: '2026-01-27'
+  reply_count: 5
+  text_preview: '[GeekNews] Qwen3-Max-Thinking 모델 공개'
+- thread_ts: '1768444585.139849'
+  date: '2026-01-15'
+  reply_count: 5
+  text_preview: '[GeekNews] 나는 GitHub Actions가 정말 싫어요'
+- thread_ts: '1767857048.239909'
+  date: '2026-01-08'
+  reply_count: 5
+  text_preview: <https://www.linkedin.com/posts/yingjun-wu_were-living-in-the-wildest-era-today-the-activity-7414840
+- thread_ts: '1769909632.044409'
+  date: '2026-02-01'
+  reply_count: 4
+  text_preview: '[GeekNews] Kimi K2.5 기술 보고서 [PDF] - 시각적 에이전트 지능을 향한 오픈 멀티모달 모델'
+- thread_ts: '1769576151.974459'
+  date: '2026-01-28'
+  reply_count: 4
+  text_preview: '<https://toss.tech/article/software-3-0-era>
+
+
+    개발자 모두에게 해당하는 글 같습니다.'
+- thread_ts: '1770515630.899109'
+  date: '2026-02-08'
+  reply_count: 3
+  text_preview: '[GeekNews] Monty - AI 생성 코드를 안전하게 실행하는 경량 Python 인터프리터 '
+metadata:
+  created_at: '2026-02-13T16:26:07'
+  synced_by: sync_fast.py

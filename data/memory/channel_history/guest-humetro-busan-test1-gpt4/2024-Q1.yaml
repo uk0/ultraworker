@@ -1,0 +1,52 @@
+channel:
+  id: C06MPF7EG9Y
+  name: guest-humetro-busan-test1-gpt4
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 12
+  total_threads: 5
+  active_users: 4
+  avg_messages_per_day: 4.0
+summary: |
+  부산교통공사(Humetro) Storm Answer GPT-4 테스트 채널. 2024년 3월 초에 채널이 생성되어
+  김혜원, 한시형, 김덕현(Dekay) 등이 참여하였고, Storm 봇을 통해 문서를 등록한 후
+  철도/교통 도메인 관련 질의응답 테스트를 수행함. PBS, 교정시스템 가용도, 운행 가용도
+  계산법, 구매 단가 계산 등 부산교통공사 업무 관련 질문들을 테스트함.
+  채널명을 "guest-humetro-busan-test1"에서 "guest-humetro-busan-test1-gpt4"로 변경하여
+  GPT-4 모델 기반 테스트임을 명시함.
+topics:
+  - 부산교통공사 Storm Answer 테스트
+  - 철도 도메인 QA 테스트
+  - GPT-4 모델 성능 검증
+key_discussions:
+  - thread_ts: '1709618085.801479'
+    date: '2024-03-05'
+    reply_count: 2
+    text_preview: "운행 가용도 계산법 - Storm Answer 질의응답 테스트"
+  - thread_ts: '1709617838.696899'
+    date: '2024-03-05'
+    reply_count: 2
+    text_preview: "교정시스템가용도는 어떻게 구하나요? - 도메인 전문 질의 테스트"
+  - thread_ts: '1709617776.790469'
+    date: '2024-03-05'
+    reply_count: 1
+    text_preview: "PBS가 뭐야? - 용어 정의 질의 테스트"
+terminology:
+  - term: "Humetro"
+    definition: "부산교통공사. 부산 도시철도를 운영하는 공기업"
+    aliases: ["부산교통공사"]
+    context: "Storm Answer 고객사 테스트 대상"
+  - term: "PBS"
+    definition: "Product Breakdown Structure. 제품 분류 체계로, 고장모드 분석에 사용"
+    context: "부산교통공사 철도 유지보수 도메인에서 사용"
+  - term: "Storm Answer"
+    definition: "Sionic AI의 AI 기반 질의응답 서비스"
+    context: "고객사 문서 기반 QA 테스트에 활용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

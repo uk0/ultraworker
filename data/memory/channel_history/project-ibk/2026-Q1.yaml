@@ -1,0 +1,78 @@
+channel:
+  id: C07LHF65Z6E
+  name: project-ibk
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:30:11'
+statistics:
+  total_messages: 18
+  total_threads: 14
+  active_users: 5
+  avg_messages_per_day: 0.4
+key_discussions:
+- thread_ts: '1768908894.724179'
+  date: '2026-01-20'
+  reply_count: 184
+  text_preview: '<@U07RASZTPFA> 수원님 서플라이 기동 후 쿼리시 나오는 마지막 로그 입니다
+
+    ```2026-01-20 11:33:27 [DefaultDispatcher-worker-7] '
+- thread_ts: '1767748757.779189'
+  date: '2026-01-07'
+  reply_count: 42
+  text_preview: 쿼리익스팬션을 서플라이뿐만 아니라 파일런에도 적용할 수 있도록 캐리어 단에서 제어하는 작업 &gt;&gt;
+- thread_ts: '1770671906.814239'
+  date: '2026-02-10'
+  reply_count: 41
+  text_preview: 02/10 방문 기록 (예정)
+- thread_ts: '1767847298.480019'
+  date: '2026-01-08'
+  reply_count: 31
+  text_preview: 금주 방문시 체크할 목록 리스트 &gt;&gt;
+- thread_ts: '1770102359.352029'
+  date: '2026-02-03'
+  reply_count: 27
+  text_preview: 피드백이 많은 에이전트 배포시 배포 실패하는 이슈 >>
+- thread_ts: '1770670550.812519'
+  date: '2026-02-10'
+  reply_count: 18
+  text_preview: '*[IBK 생성형AI 인프라 추가도입 작업 계획으로 인한 지원요청] >>*'
+- thread_ts: '1769992955.269569'
+  date: '2026-02-02'
+  reply_count: 17
+  text_preview: <@U07RE9XKXPV> 혹시 ibk db 백업 세팅이 마지막에 되어있었는지 기억 나시나요? 혹은 마지막 히스토리 기억나시는지
+- thread_ts: '1770111842.303589'
+  date: '2026-02-03'
+  reply_count: 14
+  text_preview: 'IBK "AI&Tech센터" 가입 완료
+
+    <https://sionicai.slack.com/archives/C07T22TQZT9/p1770096630886369>'
+- thread_ts: '1768898324.111899'
+  date: '2026-01-20'
+  reply_count: 7
+  text_preview: 01/20 방문 기록
+- thread_ts: '1769494718.632449'
+  date: '2026-01-27'
+  reply_count: 6
+  text_preview: '오늘 IBK 방문 무산됨: 개발계 WAS CPU 나감 ㅋㅋㅋㅋㅋ'
+- thread_ts: '1770026338.976229'
+  date: '2026-02-02'
+  reply_count: 3
+  text_preview: Aux bucket 플랫폼에서 스톰으로 보낼때 하나도담아보내지않는경우가있다. 재로그인시 정상동작한다.
+- thread_ts: '1767936060.808619'
+  date: '2026-01-09'
+  reply_count: 3
+  text_preview: '[질문] 현재 ibk에 납품된 플랫폼에서는 에이전트를 추가로 생성하는게 불가한 형태로 들어갔는지 궁금합니다'
+- thread_ts: '1770719926.019089'
+  date: '2026-02-10'
+  reply_count: 2
+  text_preview: <@U08GLL0SK2S> pylon 쿼리익스펜션 구조 어떻게 만들었어요?
+- thread_ts: '1770110267.838069'
+  date: '2026-02-03'
+  reply_count: 2
+  text_preview: 임베딩 모델 관련 문의 &gt;&gt;
+metadata:
+  created_at: '2026-02-13T16:30:11'
+  synced_by: sync_fast.py

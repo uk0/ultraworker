@@ -1,0 +1,61 @@
+channel:
+  id: C06SUBV2Q0M
+  name: fyi-summary
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 133
+  total_threads: 1
+  active_users: 2
+  avg_messages_per_day: 2.1
+summary: |
+  2024-Q4에는 요약봇이 business-common 채널의 일일 대화 요약을 지속 게시했으며, 주요 내용으로는 IBK 제안서 검토 및 설명회, dcamp CVC 밋업·금융권 미팅(하나·신한·NH 농협·우리금융 등), 대우건설 정부과제 자료, 패스워드 변경 및 API 키 리셋, 업스테이지 계정 생성 및 사용량 모니터링, 유진투자증권 POC 연장 확정, IMM 방문 준비, Flex 커피챗 미팅 등이 있었다. IBK 프로젝트 관련 단계 정리(WBS) 및 킥더허들 계약 입금 완료도 보고되었다.
+topics:
+  - name: "IBK 프로젝트"
+    mention_count: 20
+    description: "IBK 본사업 제안 설명회 참석, 프로젝트 단계(WBS) 정리, 박성화 차장 미팅, 데이터 템플릿 작성 논의"
+  - name: "금융권 미팅"
+    mention_count: 12
+    description: "dcamp CVC 밋업(10/23), VISA 미팅(10/30), 하나은행·신한벤처투자·NH농협은행·KB금융지주 등 다수 금융사 미팅"
+  - name: "업스테이지 계정 운영"
+    mention_count: 5
+    description: "업스테이지 공용 계정(team@sionic.ai) 생성, 사용량 모니터링(채팅수, 토큰수, 마크스폰 청구 49,896원)"
+  - name: "유진투자증권 POC"
+    mention_count: 6
+    description: "2월 말까지 POC 연장 확정, 고객사 피드백 확인 중, 2월 20일 사업부 세미나 예정"
+  - name: "계정 보안 조치"
+    mention_count: 3
+    description: "아이엔지스토리 API 키 삭제 및 계정 정지(1년 이상 요금 체납), 패스워드 변경 및 API 키 리셋"
+key_discussions:
+  - thread_ts: '1730217600.000000'
+    date: '2024-10-29'
+    reply_count: 0
+    text_preview: "IBK 제안 설명회 참석, 에이전트별 채팅 수 집계 SQL 쿼리 작성"
+  - thread_ts: '1730044800.000000'
+    date: '2024-10-28'
+    reply_count: 0
+    text_preview: "업스테이지 계정 생성 및 사용량 모니터링 - 마크스폰 청구 49,896원"
+  - thread_ts: '1730649600.000000'
+    date: '2024-11-03'
+    reply_count: 0
+    text_preview: "킥더허들 계약 입금 완료, 파트너십 생태계 구축 논의"
+terminology:
+  - term: "IBK"
+    definition: "IBK기업은행. 사이오닉AI의 주요 엔터프라이즈 고객으로 STORM 플랫폼 도입 프로젝트 진행 중"
+    aliases: ["IBK기업은행", "IBK투자증권"]
+    context: "본사업 제안, WBS 정리, 현장 반입 작업 등 대형 프로젝트 진행"
+  - term: "킥더허들"
+    definition: "사이오닉AI 고객사 중 하나. 스톰플랫폼 계약 및 입금 완료, POC 진행"
+    aliases: ["Kick the Hurdle"]
+    context: "2024년 4분기 계약 완료 고객사"
+  - term: "업스테이지"
+    definition: "한국 AI 스타트업. 사이오닉AI가 공용 계정을 통해 API 사용량을 모니터링하는 파트너사"
+    aliases: []
+    context: "API 사용량 모니터링 및 마크스폰 청구 관련"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

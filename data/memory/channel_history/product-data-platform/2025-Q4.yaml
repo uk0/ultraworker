@@ -1,0 +1,67 @@
+channel:
+  id: C09R379B8QN
+  name: product-data-platform
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 46
+  total_threads: 18
+  active_users: 19
+  avg_messages_per_day: 2.9
+summary: |
+  2025-Q4 product-data-platform 채널은 Sionic AI의 데이터 플랫폼 신규 제품 개발을 위해 11월에 개설된 채널이다. 채널 개설 직후부터 Text2SQL, DB 연동, 파싱 결과 웹 뷰어 개발 등의 초기 기능 탐색이 이루어졌다. 12월에는 데이터 플랫폼 MVP 초안, Control Plane 기능 정의, 아키텍처 설계(경량화 vs 확장성) 논의가 활발하게 진행되었으며, 주간 미팅(Weekly)이 정기적으로 진행되었다. STORM의 기존 기능을 데이터 플랫폼 초기 형상의 베이스로 활용하는 방향이 논의되었고, 19명의 팀원이 참여하는 대규모 채널로 성장하였다.
+topics:
+  - name: "데이터 플랫폼 MVP 설계"
+    mention_count: 10
+    description: "데이터 플랫폼 MVP 초안 작성, Control Plane 기능 정의, 경량화 vs 확장성 아키텍처 방향 논의"
+  - name: "Text2SQL 및 DB 연동"
+    mention_count: 6
+    description: "STORM에 Text2SQL 및 DB 연동 기능을 먼저 적용하고, 이를 데이터 플랫폼 초기 형상으로 발전시키는 방향 검토"
+  - name: "파싱 결과 웹 뷰어 개발"
+    mention_count: 5
+    description: "파싱 결과를 웹으로 보여주는 뷰어 개발 요청 및 구현 완료"
+  - name: "주간 미팅 운영"
+    mention_count: 5
+    description: "데이터 플랫폼 Weekly 미팅 정기 진행 및 회의록 작성"
+  - name: "보안 및 인프라 고려사항"
+    mention_count: 3
+    description: "데이터 플랫폼 보안 관련 참고 자료 공유, 쿠버네티스 없는 온프레미스 환경 배포 가능성 검토"
+key_discussions:
+  - thread_ts: '1746508095.000000'
+    date: '2025-11-06'
+    reply_count: 76
+    text_preview: "text2sql, db연동 먼저 스톰에 잘 적용해보고 데이터플랫폼 초기 형상으로 만들어보는 방향 논의"
+  - thread_ts: '1748088483.000000'
+    date: '2025-11-24'
+    reply_count: 5
+    text_preview: "데이터 플랫폼 방향성 싱크 미팅 진행"
+  - thread_ts: '1748094840.000000'
+    date: '2025-11-24'
+    reply_count: 40
+    text_preview: "파싱 결과 웹으로 보여주는 뷰어 개발 요청"
+  - thread_ts: '1749343920.000000'
+    date: '2025-12-08'
+    reply_count: 19
+    text_preview: "경량화 설계 vs 확장성 설계 - 온프레미스 배포 가능한 컴포넌트 최소화 방향 논의"
+  - thread_ts: '1749723090.000000'
+    date: '2025-12-12'
+    reply_count: 12
+    text_preview: "데이터 플랫폼 아키텍처 문서 초벌 작성 및 리뷰 요청"
+terminology:
+  - term: "product-data-platform"
+    definition: "Sionic AI의 데이터 플랫폼 신제품 개발을 위한 채널. Text2SQL, DB 연동, 파싱 등의 기능을 포함한 엔터프라이즈 데이터 플랫폼 개발"
+  - term: "Text2SQL"
+    definition: "자연어 질의를 SQL 쿼리로 변환하는 AI 기능. STORM에 먼저 적용 후 데이터 플랫폼으로 확장 예정"
+  - term: "Control Plane"
+    definition: "데이터 플랫폼의 관리/제어 컴포넌트. 데이터 파이프라인 및 에이전트 오케스트레이션을 담당"
+  - term: "MVP"
+    definition: "Minimum Viable Product. 핵심 기능만을 포함한 최소 기능 제품"
+  - term: "파싱"
+    definition: "문서를 구조화된 데이터로 변환하는 처리. Pylon 서비스와 연계"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

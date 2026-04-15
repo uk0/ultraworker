@@ -1,0 +1,50 @@
+channel:
+  id: C09CRS3HWTV
+  name: research-data
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 196
+  total_threads: 58
+  active_users: 14
+  avg_messages_per_day: 7.8
+summary: |
+  2025-Q3는 research-data 채널이 처음 개설된 분기로, 사이오닉AI 데이터 작업 진행 공유 공간으로 설정되었다. 9월 1일 파트타임 작업자 4명(재현, 재욱, 현준, 석기)이 참여하여 증권(NH증권, 외부 증권) 및 보험(미래에셋생명, 외부 보험) 데이터 정제 작업을 시작했다. 주요 작업으로는 상품 데이터 정제 및 중복 제거, QA 데이터셋 검수, hallucination 여부 확인, AI 윤리 온라인 교육 이수 등이 있었으며, 스프레드시트 기반 협업으로 진행되었다.
+topics:
+  - name: "증권/보험 데이터 정제"
+    mention_count: 30
+    description: "NH증권, 외부 증권, 미래에셋생명, 외부 보험 상품 데이터 정제. 중복 제거, 회사명 통일 작업(띄어쓰기 없음, 공식 사명 기준)"
+  - name: "QA 데이터셋 검수"
+    mention_count: 25
+    description: "PDF/PNG 기반 질문·답변 hallucination 여부 확인, 정보 범위 조정, 이상 질문 수정(작업자별 1~90, 91~180, 181~270 구간 배분)"
+  - name: "작업 온보딩 및 일정 관리"
+    mention_count: 15
+    description: "추석 연휴 이후(10/13~) 작업 재개, 출입증 반납 일정 조율, AI 윤리 온라인 교육 이수 요청"
+  - name: "AI 윤리 교육"
+    mention_count: 5
+    description: "R&D Mgt 정기연님 주관 AI 윤리 온라인 교육 이수 요청, 배속 수강 금지, 수료증 제출"
+key_discussions:
+  - thread_ts: '1759468200.000000'
+    date: '2025-09-01'
+    reply_count: 0
+    text_preview: "채널 개설: 사이오닉AI 데이터 작업 진행 공유 공간. 작업자 4명(재현, 재욱, 현준, 석기) 온보딩"
+  - thread_ts: '1760436867.000000'
+    date: '2025-09-01'
+    reply_count: 0
+    text_preview: "증권/보험 데이터 정제 작업 시작 - NH증권, 외부 증권, 미래에셋생명, 외부 보험"
+terminology:
+  - term: "research-data"
+    definition: "사이오닉AI 데이터 작업 진행 공유 공간. 파트타임 데이터 작업자들이 증권/보험 데이터 정제 및 QA 데이터셋 검수 작업을 진행하는 채널"
+    aliases: []
+    context: "2025년 9월 1일 개설, 단기 데이터 작업 관리"
+  - term: "hallucination 검수"
+    definition: "AI가 생성한 QA 데이터에서 사실과 다른 정보(hallucination)가 포함되었는지 사람이 직접 확인하는 작업"
+    aliases: []
+    context: "증권/보험 QA 데이터셋 품질 관리에 사용"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

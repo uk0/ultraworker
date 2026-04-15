@@ -1,0 +1,65 @@
+channel:
+  id: C08H8PU7VAQ
+  name: eng-frontend
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 209
+  total_threads: 111
+  active_users: 16
+  avg_messages_per_day: 3.7
+summary: |
+  2025-Q2 eng-frontend 채널은 매우 활발했다. 주요 활동:
+  1) 워크플로우 GUI 도구 개발 - react-flow 라이브러리 도입, 노드/엣지 스타일링, 드래그앤드롭 구현,
+     오더시트 v2 작업, if-else 노드 겹침 이슈 수정.
+  2) 프로젝트 구조 개선 - FSD(Feature-Sliced Design) 구조 도입, 상태관리 zustand 전환,
+     피처토글 활용 강화, 릴리즈 노트 정리.
+  3) PDF 뷰어 개선 - psi-lense 레포, 확대/축소 렌더링 개선, @sionic-ai/pdf-viewer v3.0.0 퍼블리시.
+  4) 인프라/도구 - Sentry 도입, pnpm 패키지 매니저 전환 논의, CI 수정, 프로덕션 빌드 실패 대응.
+  5) 온프렘(IBK) - tailwind 설정 불일치 이슈 대응, 아비케(IBK) 테스트 프로세스 개선 제안.
+  6) Next.js/Vercel 벤더 락인 우려 공유, Astro/React Router 대안 검토.
+  권혜선(Jada)과 백은주가 핵심 기여자, QA 환경 구축 요청(이재준 Leo) 등 타팀 협업도 활발.
+topics:
+  - 워크플로우 GUI 개발 (react-flow)
+  - FSD 구조 도입
+  - zustand 상태관리 전환
+  - PDF 뷰어 개선 (psi-lense)
+  - Sentry 에러 모니터링 도입
+  - pnpm 패키지 매니저 전환
+  - 피처토글 관리
+  - IBK 온프렘 배포 프로세스
+  - Next.js/Vercel 벤더 락인 이슈
+key_discussions:
+  - thread_ts: '1748516392.942849'
+    date: '2025-05-29'
+    topic: react-flow 라이브러리 도입 결정 및 워크플로우 GUI 개발 시작
+  - thread_ts: '1749813550.322009'
+    date: '2025-06-13'
+    topic: Next.js/Vercel 벤더 락인 우려 및 대안(Astro, React Router) 검토
+  - thread_ts: '1749618395.158109'
+    date: '2025-06-11'
+    topic: IBK 온프렘 tailwind 설정 불일치 이슈 및 테스트 프로세스 개선
+  - thread_ts: '1749024247.621369'
+    date: '2025-06-04'
+    topic: pnpm 패키지 매니저 전환 논의
+  - thread_ts: '1750670632.142749'
+    date: '2025-06-23'
+    topic: Storm Parse 데모 사이트 프론트엔드 현황
+terminology:
+  - term: FSD (Feature-Sliced Design)
+    definition: 프론트엔드 아키텍처 방법론. 기능 단위로 코드를 분리하는 구조
+  - term: react-flow
+    definition: React 기반 플로우차트/워크플로우 에디터 라이브러리
+  - term: psi-lense
+    definition: Sionic AI의 PDF 뷰어 컴포넌트 레포지토리
+  - term: 아비케
+    definition: IBK(기업은행) 온프렘 환경의 별칭
+  - term: 피처토글
+    definition: 기능을 코드에 포함하되 설정으로 활성/비활성화하는 릴리즈 관리 기법
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

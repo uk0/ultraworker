@@ -1,0 +1,65 @@
+channel:
+  id: C06067P9ZJ7
+  name: 외부강연발표
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 54
+  total_threads: 37
+  active_users: 12
+  avg_messages_per_day: 1.5
+summary: |
+  2025년 3분기에는 테디노트 유튜브 라이브(StormPass 홍보 이벤트), 파이콘 2025 튜토리얼 강연(성우님 대타), 인스트럭트KR 행사, OCI와 공동 이벤트 주최 논의, 현대차 AI 강연 요청, 도쿄 AI and ME 행사, 노정석 대표 팟캐스트 출연, 클로드 커뮤니티 행사 등이 진행되었다. GopherCon Korea 2025 발표 준비, 한-쿠웨이트 디지털 전환 포럼 패널, NVIDIA AI Day Seoul 참여 논의도 이루어졌다.
+topics:
+  - name: "테디노트 유튜브 라이브"
+    mention_count: 10
+    description: "테디노트 채널 StormPass 홍보 라이브 - 설문 이벤트, 치킨 경품 진행"
+  - name: "파이콘 2025 튜토리얼"
+    mention_count: 6
+    description: "파이콘 2025 튜토리얼 - 성우님 대타 진행, StormPass API Key 활용"
+  - name: "OCI 공동 이벤트"
+    mention_count: 8
+    description: "OCI와 이벤트 공동 주최 논의 및 준비"
+  - name: "팟캐스트 및 미디어 출연"
+    mention_count: 6
+    description: "노정석 대표 팟캐스트 출연, 유튜브 출연 제의 검토"
+  - name: "해외 발표 활동"
+    mention_count: 5
+    description: "도쿄 AI and ME 행사, Try Everything Panel, 서울 투자자 포럼 IR 피칭"
+key_discussions:
+  - thread_ts: '1754003400.000000'
+    date: '2025-07-29'
+    reply_count: 46
+    text_preview: "테디노트 유튜브 라이브 사전 요청사항 - StormPass 홍보 전략 논의"
+  - thread_ts: '1754700000.000000'
+    date: '2025-08-06'
+    reply_count: 3
+    text_preview: "테디노트 남은 작업 - StormPass API 점검, 설문조사 및 치킨 경품 이벤트"
+  - thread_ts: '1755302940.000000'
+    date: '2025-08-14'
+    reply_count: 7
+    text_preview: "도쿄 AI and ME 행사 참여 논의"
+  - thread_ts: '1757735400.000000'
+    date: '2025-09-09'
+    reply_count: 87
+    text_preview: "OCI와 이벤트 공동 주최 논의"
+  - thread_ts: '2025-09-25'
+    date: '2025-09-25'
+    reply_count: 43
+    text_preview: "한-쿠웨이트 디지털 전환 포럼 토론세션 패널 참석 논의"
+terminology:
+  - term: "테디노트"
+    definition: "테디(Teddy) 유튜버가 운영하는 AI/LLM 기술 유튜브 채널 - 구독자 대형 채널"
+    aliases: ["TeddyNote"]
+    context: "StormPass 홍보를 위한 유튜브 라이브 협업"
+  - term: "파이콘 2025"
+    definition: "파이콘 한국 2025 - 8월 15일 파이썬 개발자 컨퍼런스"
+    aliases: ["PyCon KR 2025"]
+    context: "튜토리얼 강연 - 성우님이 진형님 대타로 진행"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

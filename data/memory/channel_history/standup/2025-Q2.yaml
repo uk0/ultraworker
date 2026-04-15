@@ -1,0 +1,86 @@
+channel:
+  id: C058VN1LUKE
+  name: standup
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2482
+  total_threads: 662
+  active_users: 34
+  avg_messages_per_day: 30.6
+summary: |
+  2025-Q2 standup 채널은 팀원 34명으로 확대되어 일평균 30.6개 메시지가 교환되었다.
+  신규 멤버 합류가 눈에 띄며(still3028, janettt16354, 정기연(Kay), 임주희 등), 팀 규모가 성장하는 시기였다.
+  IBK 프로젝트 파견 근무가 지속되었으며(이재준, 송명하 등), 아비케(강남 거점) 근무도 활발했다.
+  최병현이 치앙마이에서 원격 근무하는 등 해외 원격 근무 사례가 등장했다.
+  넥스트라이즈 행사 참관(양호진, 오승희), Databricks 행사 참여(송명하), GUG 세션/그래프 밋업(Sigrid Jin, 양호진) 등
+  외부 컨퍼런스 및 기술 행사 참석이 활발했다.
+  바이트댄스 LLM/vLLM 테스트 요청 대응, 온보딩 커피챗(still3028-최병현) 등 신규 협업 활동이 있었다.
+  운동 문화(수영, 복싱, 탁구 레슨, 러닝 등)가 팀 전반에 정착되어 운동 후 복귀/재전 패턴이 일상화되었다.
+  아이티센엔텍 미팅, 여의도 외부 일정 등 영업 활동이 이어졌으며, 정기연(Kay)이 경영지원/사업 관련 업무를 수행했다.
+topics:
+  - name: "IBK 프로젝트 지속"
+    count: 40
+    description: "기업은행 프로젝트 파견 근무 지속. 이재준, 송명하 중심"
+  - name: "외부 행사/컨퍼런스"
+    count: 15
+    description: "넥스트라이즈, Databricks, GUG 그래프 밋업 등 외부 기술 행사 참석"
+  - name: "신규 멤버 온보딩"
+    count: 10
+    description: "still3028, janettt16354 등 신규 멤버 합류 및 온보딩 커피챗"
+  - name: "해외 원격 근무"
+    count: 5
+    description: "최병현 치앙마이 원격 근무"
+  - name: "바이트댄스 협업"
+    count: 3
+    description: "바이트댄스 요청 LLM/vLLM 테스트 결과 대응"
+  - name: "마케팅 성과"
+    count: 5
+    description: "김덕현 마케팅 결과 홍보 등 대외 활동"
+key_discussions:
+  - thread_ts: '1750939972.806289'
+    date: '2025-06-26'
+    reply_count: 43
+    text_preview: "GUG 세션 라이트래그 이야기 참석. 그래프 밋업 참여(양호진, 세민, 진형)"
+  - thread_ts: '1745992227.259689'
+    date: '2025-04-30'
+    reply_count: 29
+    text_preview: "신희수 독박 육아 전 장보기. 팀원들 간 일상 공유 활발"
+  - thread_ts: '1751275349.408369'
+    date: '2025-06-30'
+    reply_count: 16
+    text_preview: "양호진 빠른 칼퇴 후 공부. 워라밸 관련 팀 내 대화"
+  - thread_ts: '1750985961.177549'
+    date: '2025-06-27'
+    reply_count: 10
+    text_preview: "강성우 아비케 근무. 로그 확인 업무 관련 대화"
+  - thread_ts: '1750982061.892059'
+    date: '2025-06-26'
+    reply_count: 10
+    text_preview: "김수원 재택 근무 관련 대화"
+terminology:
+  - term: "넥스트라이즈"
+    definition: "대규모 스타트업 전시/네트워킹 행사"
+    aliases: []
+  - term: "GUG"
+    definition: "Graph User Group. 그래프 데이터베이스/RAG 관련 밋업"
+    aliases: ["그래프 밋업"]
+  - term: "디캠프"
+    definition: "은행권청년창업재단 운영 공유 오피스 (D.CAMP). 사이오닉 AI 거점 중 하나"
+    aliases: ["디캠"]
+  - term: "칼퇴"
+    definition: "정시 퇴근의 비격식 표현"
+    aliases: []
+  - term: "재전"
+    definition: "재택 전환. 외출/운동 등 후 재택으로 돌아와 업무 재개"
+    aliases: []
+  - term: "점디"
+    definition: "점심 후 디캠프 출근 패턴"
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

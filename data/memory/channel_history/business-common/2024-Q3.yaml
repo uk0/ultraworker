@@ -1,0 +1,47 @@
+channel:
+  id: C06944CCC9W
+  name: business-common
+  type: public
+period:
+  quarter: 2024-Q3
+  start_date: '2024-07-01'
+  end_date: '2024-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 415
+  total_threads: 229
+  active_users: 14
+  avg_messages_per_day: 5.8
+summary: |
+  2024-Q3에는 유진투자증권 프로젝트 플로우 공유와 유즈케이스 대응, RAG API 가격 책정 등 제품 상품화 및 가격 전략 논의가 활발했다.
+  계약 전환율 8% 분석과 openllm RAG 무상 제공/유료 플랜 구상 등 SaaS 비즈니스 모델 정립이 진행되었으며, 로앤굿 계약 체결 등 실질적 매출 전환이 이루어졌다.
+  회의록 프롬프트 개선과 같은 제품 품질 향상 논의도 함께 진행되었다.
+topics:
+  - 유진투자증권 프로젝트 플로우 및 유즈케이스 대응
+  - RAG API 가격 책정 및 과금 체계 논의
+  - 계약 전환율(8%) 분석 및 고객 관리
+  - openllm RAG 무상 제공 및 유료 플랜 구상
+  - 로앤굿 계약 체결
+  - 회의록 프롬프트 개선
+  - 고객사 계정 발급 및 관리
+key_discussions:
+  - thread_ts: '1727690869.384139'
+    date: '2024-09-30'
+    reply_count: 10
+    text_preview: 계약 전환율 분석 - 스톰 계정 발급 고객 대비 계약 전환율 8%로 확인
+  - thread_ts: '1727692203.750089'
+    date: '2024-09-30'
+    reply_count: 5
+    text_preview: RAG API 호출당 가격 책정 논의 - 인바운드가 아니라 가격 책정 어려움
+terminology:
+  - term: openllm
+    definition: 사이오닉AI의 오픈소스 LLM 기반 RAG 서비스
+    aliases: []
+    context: RAG 무상 제공 후 유료 플랜(월 기본료 + 호출량/데이터 과금) 구상
+  - term: 로앤굿
+    definition: 법률 분야 고객사로 사이오닉AI와 계약 체결
+    aliases: []
+    context: 계약 전환율 분석 시 기준이 된 최근 계약 건
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

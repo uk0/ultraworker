@@ -1,0 +1,58 @@
+channel:
+  id: C07F2EFA76K
+  name: alarm-live-error-asmr
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 90
+  total_threads: 10
+  active_users: 11
+  avg_messages_per_day: 6.0
+summary: |
+  2024년 4분기 alarm-live-error-asmr 채널에서는 OpenLLM 라이브 API 오류 알림과 함께 Azure 엔진 관련 모델 호환성 이슈가 주요하게 다루어졌다. Azure 엔진 선택 시 gpt-4-turbo-2024-04-09 외의 모델에서 응답이 오지 않는 문제가 확인되었으며, 11월에는 다수의 OpenLLM API 오류가 집중적으로 발생하였다. 또한 OpenLLM의 AI 프로바이더(req/res)에 대한 DB 기록 제거 작업이 진행되었고, 뉴렐릭 traceId 연동 요청이 있었다. 채널 초기에는 팀원들의 참여와 테스트 알림 설정이 이루어졌다.
+topics:
+  - name: "OpenLLM API 오류 알림"
+    mention_count: 60
+    description: "라이브 환경 OpenLLM API 호출 실패 알림. 10월, 11월, 12월에 걸쳐 간헐적으로 발생"
+  - name: "Azure 엔진 모델 호환성 이슈"
+    mention_count: 5
+    description: "Azure 엔진 사용 시 gpt-4-turbo-2024-04-09 외 모델에서 응답 없음 문제 확인"
+  - name: "DB 기록 제거 작업"
+    mention_count: 3
+    description: "OpenLLM AI 프로바이더 req/res DB 기록 제거 작업 완료. 향후 dev에서만 진행"
+  - name: "뉴렐릭 traceId 연동"
+    mention_count: 2
+    description: "슬랙 오류 알림에 뉴렐릭 traceId를 포함시켜 한번에 추적 가능하도록 요청"
+key_discussions:
+  - thread_ts: '1731637200.000000'
+    date: '2024-11-15'
+    reply_count: 18
+    text_preview: "OpenLLM 오류 대량 발생 - 메모리 90% 초과 뉴렐릭 알림 및 failover 실패율 증가 경보"
+  - thread_ts: '1734487200.000000'
+    date: '2024-12-18'
+    reply_count: 2
+    text_preview: "AI 프로바이더 req/res DB 기록 제거 작업 완료 및 traceId 포함 요청"
+  - thread_ts: '1734249600.000000'
+    date: '2024-12-16'
+    reply_count: 0
+    text_preview: "Azure 엔진 선택 시 gpt-4-turbo-2024-04-09 외 전부 응답 없는 이슈 확인"
+terminology:
+  - term: "OpenLLM"
+    definition: "Sionic AI 내부 LLM API 게이트웨이. 다양한 AI 프로바이더로의 failover 지원"
+    aliases: ["openllm"]
+    context: "라이브 오류 알림의 주 발원 시스템"
+  - term: "failover"
+    definition: "주 AI 프로바이더 실패 시 대체 프로바이더로 자동 전환하는 메커니즘"
+    aliases: []
+    context: "OpenAI -> Azure -> Xionic 순으로 failover 시도"
+  - term: "뉴렐릭"
+    definition: "Sionic AI에서 사용하는 APM/모니터링 도구. 메모리 사용률, 에러율 등 알림 설정"
+    aliases: ["New Relic", "newrelic"]
+    context: "서비스 모니터링 및 장애 탐지에 활용"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

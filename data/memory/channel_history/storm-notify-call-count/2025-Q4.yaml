@@ -1,0 +1,35 @@
+channel:
+  id: C080M9RBHRC
+  name: storm-notify-call-count
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 161
+  total_threads: 2
+  active_users: 5
+  avg_messages_per_day: 40.2
+summary: |
+  2025-Q4에는 12월 8일에 "월간 호출 사용량 초과" 알림이 폭발적으로 발생하였다(약 100건 이상, 일평균 40.2건). 김혜원이 team ID "d1de06c56e8046e2a2f86080"이 Sionic AI Testbed(자사 내부 테스트 계정)임을 확인하고 "누가 왜 월간 호출수를 800으로 제한했는지" 문의하였다. sql 봇을 활용하여 팀 정보를 즉시 조회하는 등 빠른 대응이 이루어졌다. 고객 서비스 확대에 따라 사용량 초과 알림이 크게 증가한 분기였다.
+topics:
+  - 대규모 사용량 초과 알림 발생 (12월)
+  - 내부 테스트 계정 한도 설정 문제
+  - 고객 팀 정보 실시간 조회
+key_discussions:
+  - thread_ts: '1765165667.405769'
+    date: '2025-12-08'
+    title: 내부 테스트 계정 한도 설정 문제 확인
+    summary: 김혜원이 사용량 초과된 팀이 자사 Testbed임을 확인하고, sql 봇으로 팀 정보 조회 (12개 답글)
+terminology:
+  - term: Sionic AI Testbed
+    definition: 사이오닉 AI의 내부 테스트용 Storm 계정 (team ID d1de06c56e8046e2a2f86080)
+    aliases: [testbed]
+  - term: sql
+    definition: 슬랙 내에서 팀/고객 정보를 실시간으로 조회할 수 있는 봇
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

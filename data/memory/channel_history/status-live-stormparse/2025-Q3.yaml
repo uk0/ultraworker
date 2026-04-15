@@ -1,0 +1,32 @@
+channel:
+  id: C083U6JJ928
+  name: status-live-stormparse
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 14
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 4.7
+summary: |
+  2025년 3분기 status-live-stormparse 채널은 주로 9월 말에 집중적으로 Storm Parse 알림이 발생하였다.
+  9월 29일과 30일에 봇(B084EFA1R0Q)으로부터 다수의 "Storm Parse Alert"가 연속으로 전송되었으며, 7월에 신규 사용자 1명이 채널에 합류하였다.
+  전체적으로 활동이 적었으며, 자동화된 모니터링 알림 위주로 채널이 운영되었다.
+topics:
+  - name: "Storm Parse Alert"
+    mention_count: 13
+    description: "봇이 발송한 StormParse 서비스 이상 알림 메시지"
+  - name: "신규 채널 합류"
+    mention_count: 1
+    description: "신규 사용자의 채널 참여 이벤트"
+key_discussions: []
+terminology:
+  - term: "Storm Parse Alert"
+    definition: "StormParse 파싱 서비스의 이상 상태를 알리는 자동화 모니터링 알림"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

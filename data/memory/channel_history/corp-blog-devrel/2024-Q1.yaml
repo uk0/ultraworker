@@ -1,0 +1,77 @@
+channel:
+  id: C069LUW24JH
+  name: corp-blog-devrel
+  type: public
+period:
+  quarter: 2024-Q1
+  start_date: '2024-01-01'
+  end_date: '2024-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 44
+  total_threads: 24
+  active_users: 12
+  avg_messages_per_day: 2.0
+summary: |
+  2024년 1분기 corp-blog-devrel(당시 corp-blog) 채널은 Sionic AI의 일본어 블로그(sionic.jp) 런칭과 한국어 데이터셋 공개 작업이 주요 활동이었다.
+  1월에 StrategyQA 한국어 번역 데이터셋 공개, 일본어 블로그 멤버 소개 및 문화 페이지 일본어 번역, 일본어 전용 도메인(sionic.jp) 확보 등이 이루어졌다.
+  2월에는 sionic.jp 도메인이 정식 공개되었으며, LLM Trustworthiness 논문(TrustLLM) 공유, KoSuperNI 데이터 저장소 구조 논의 등이 진행되었다.
+  3월에는 한국어 의료 데이터셋(KorMedMCQA), MTEB 한국어 평가 지원, Gemma MoE 등 AI/ML 연구 트렌드가 활발히 공유되었으며, 채널 설명이 "주로 회사 홈페이지, 홍보물 및 기술 블로그에 관한 내용을 논의합니다"로 공식 설정되었다.
+topics:
+  - name: "일본어 블로그 런칭 (sionic.jp)"
+    mention_count: 14
+    description: "일본어 전용 도메인 확보, 멤버/문화 페이지 번역, 2월 정식 공개"
+  - name: "한국어 데이터셋 공개 (KoSuperNI)"
+    mention_count: 8
+    description: "StrategyQA, XSum, task226 등 한국어 번역 데이터셋 순차 공개"
+  - name: "AI/ML 연구 동향 공유"
+    mention_count: 8
+    description: "TrustLLM 논문, Gemma 7B Groq TPU 인퍼런스, 한국어 의료 데이터셋, MTEB 한국어 지원 등"
+  - name: "데이터 지원 사업 신청"
+    mention_count: 2
+    description: "한국데이터산업진흥원 데이터바우처 지원 사업 검토"
+key_discussions:
+  - thread_ts: '1704124200.000000'
+    date: '2024-01-02'
+    reply_count: 9
+    text_preview: "StrategyQA 한국어 번역 데이터셋 공개 계획 및 GitHub 정리"
+  - thread_ts: '1705554000.000000'
+    date: '2024-01-18'
+    reply_count: 13
+    text_preview: "일본어 블로그 멤버 사진 요청 및 번역 작업 진행 상황 공유"
+  - thread_ts: '1707825000.000000'
+    date: '2024-02-13'
+    reply_count: 9
+    text_preview: "sionic.jp 도메인 공개 - 야후재팬 유입 10% 차지하는 신선한 통계"
+  - thread_ts: '1704682800.000000'
+    date: '2024-01-09'
+    reply_count: 0
+    text_preview: "XSum 번역 데이터 검수 - 중복 번역 278개, 400 오류 3개 수정 필요"
+  - thread_ts: '1710209700.000000'
+    date: '2024-03-12'
+    reply_count: 0
+    text_preview: "채널 설명 공식 설정 - 홈페이지, 홍보물, 기술 블로그 논의 채널"
+terminology:
+  - term: "sionic.jp"
+    definition: "Sionic AI의 일본어 전용 블로그 도메인"
+    aliases: ["jp.blog.sionic.ai", "일본어 블로그"]
+    context: "2024년 2월 정식 공개, Yahoo Japan에서 10% 유입 확인"
+  - term: "KoSuperNI"
+    definition: "Sionic AI가 구축한 한국어 번역 NLP 데이터셋 저장소"
+    aliases: ["Data_KoSuperNI"]
+    context: "StrategyQA, XSum, task226 등 여러 데이터셋을 GitHub에 공개"
+  - term: "TrustLLM"
+    definition: "LLM 신뢰성(Trustworthiness)을 평가하는 논문 및 벤치마크, 40개 기관 113페이지"
+    aliases: ["LLM Trustworthiness"]
+    context: "arXiv:2401.05561, 2024년 1월 공유된 핫 논문"
+  - term: "MTEB"
+    definition: "Massive Text Embedding Benchmark, 임베딩 모델 평가 벤치마크"
+    aliases: []
+    context: "2024년 2월 v1.1.2부터 한국어 retrieval task 지원 시작"
+  - term: "Groq TPU"
+    definition: "Groq의 고속 추론 칩(LPU), Gemma 7B 모델을 매우 빠르게 실행"
+    aliases: ["Groq LPU"]
+    context: "문장 입력 전에 답변이 완성될 정도로 빠른 인퍼런스 속도"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

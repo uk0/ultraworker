@@ -1,0 +1,56 @@
+channel:
+  id: C09FMVDUHQX
+  name: alarm-dev-error-drone
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:23'
+statistics:
+  total_messages: 70
+  total_threads: 0
+  active_users: 3
+  avg_messages_per_day: 17.5
+summary: |
+  2025년 3분기 alarm-dev-error-drone 채널은 개발 환경의 payment-service와 drone 서비스에서 발생한 오류를 자동으로 알림하는 채널로, 하루 평균 17.5건의 높은 빈도로 오류 알람이 발생하였다.
+  주요 오류 유형은 TossPayments 결제 승인 실패, 결제 정합성 불일치(DB와 API 상태 불일치), TossPayments 5xx 서버 오류, Spring 서비스의 NoResourceFoundException 등이었다.
+  9월에 결제 서비스(payment-service)와 drone 서비스 모두에서 집중적인 오류가 발생하였으며, 특히 결제 정합성 불일치 및 헬스체크 엔드포인트 오류가 반복되었다.
+topics:
+  - name: "TossPayments 결제 오류"
+    mention_count: 20
+    description: "결제 승인 실패(EXPIRED_CARD 등) 및 TossPayments 5xx 서버 오류"
+  - name: "결제 정합성 불일치"
+    mention_count: 15
+    description: "DB 결제 상태와 TossPayments API 상태가 불일치하는 자동 취소 이벤트"
+  - name: "Spring NoResourceFoundException"
+    mention_count: 12
+    description: "헬스체크 및 정적 리소스 엔드포인트 미설정으로 인한 404 오류"
+  - name: "drone 서비스 오류"
+    mention_count: 8
+    description: "drone 서비스의 HttpRequestMethodNotSupportedException 등 API 오류"
+key_discussions:
+  - thread_ts: '1726732800.000000'
+    date: '2025-09-19'
+    reply_count: 0
+    text_preview: "TossPayments 결제 승인 실패(EXPIRED_CARD) - team_test_456, payment_id 660e8400"
+  - thread_ts: '1726819200.000000'
+    date: '2025-09-19'
+    reply_count: 0
+    text_preview: "결제 정합성 불일치 - DB(DONE) != API(CANCELED), 자동 취소 시도"
+  - thread_ts: '1726992000.000000'
+    date: '2025-09-22'
+    reply_count: 0
+    text_preview: "drone 서비스 NoSuchMethodError - ControllerAdviceBean 초기화 실패"
+terminology:
+  - term: "TossPayments"
+    definition: "한국의 결제 PG사 토스페이먼츠의 결제 API 서비스"
+  - term: "결제 정합성 불일치"
+    definition: "DB에 저장된 결제 상태와 TossPayments API의 실제 결제 상태가 다른 경우"
+  - term: "NoResourceFoundException"
+    definition: "Spring MVC에서 요청한 정적 리소스나 엔드포인트를 찾지 못할 때 발생하는 예외"
+  - term: "drone"
+    definition: "결제 관련 백엔드 서비스 중 하나 (개발 환경)"
+metadata:
+  created_at: '2026-02-24T13:18:23'
+  synced_by: sync-channel-history

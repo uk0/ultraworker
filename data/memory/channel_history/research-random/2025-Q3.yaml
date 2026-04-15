@@ -1,0 +1,63 @@
+channel:
+  id: C08CAM2830E
+  name: research-random
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:31:12'
+statistics:
+  total_messages: 236
+  total_threads: 146
+  active_users: 12
+  avg_messages_per_day: 2.7
+summary: |
+  2025-Q3 research-random 채널에서는 검색·임베딩·리랭킹 분야의 최신 논문 및 모델 공유가 매우 활발하였다.
+  SentenceTransformers v5.0 Sparse Encoder 지원, Seismic(Rust 기반 희소 임베딩 검색), Layered Ranking for RAG, NVIDIA RTX Pro 6000 등이 주목받았으며, Qwen3-VL, KARMo-10B, 다양한 한국어 VLM 벤치마크도 공유되었다.
+  분기 내 에이전트 시대의 SLM 우위에 대한 Nvidia 논문, DRO 관련 토론, 실무 인퍼런스 최적화 코드 공유 등이 이루어졌다.
+topics:
+  - name: "희소(Sparse) 임베딩 및 검색"
+    mention_count: 20
+    description: "SentenceTransformers v5.0 SparseEncoder, Seismic Rust 라이브러리, SPLADE 계열"
+  - name: "리랭킹 모델"
+    mention_count: 18
+    description: "Layered Ranking for RAG, Vespa 랭킹 레이어, DistillVsContrastive for Rerankers"
+  - name: "멀티모달 및 VLM"
+    mention_count: 22
+    description: "Qwen3-VL-30B, DocVLM CVPR 2025, StreamingVLM, Token Pruning, FP4 시대"
+  - name: "소형 언어 모델(SLM)"
+    mention_count: 10
+    description: "에이전트 시대에 SLM이 더 적합하다는 Nvidia 논문 및 토론"
+  - name: "GPU 및 인프라"
+    mention_count: 12
+    description: "NVIDIA RTX Pro 6000, QwQ-32B-AWQ on 5090 성능 테스트, H100 vs RTX 비교"
+key_discussions:
+  - thread_ts: '1751421600.000000'
+    date: '2025-07-02'
+    reply_count: 14
+    text_preview: "DRO 논의 - SLM이 에이전트 시대에 더 적합하다는 Nvidia 논문, 비용·속도·유연성 강점"
+  - thread_ts: '1751453544.000000'
+    date: '2025-07-02'
+    reply_count: 7
+    text_preview: "NVIDIA RTX Pro 6000 Family 발표 - 온프렘 운영 적합성 논의"
+  - thread_ts: '1753084800.000000'
+    date: '2025-07-21'
+    reply_count: 6
+    text_preview: "QwQ-32B-AWQ on RTX 5090 인퍼런스 성능 - 동시 100 요청 시 924 token/sec"
+terminology:
+  - term: "SparseEncoder"
+    definition: "SentenceTransformers v5.0에서 추가된 희소 임베딩 인코더 지원 기능"
+    aliases: ["Sparse Encoder"]
+    context: "v5.0 릴리즈에서 encode_query, encode_document 메서드와 함께 도입"
+  - term: "Seismic"
+    definition: "Rust로 작성된 고성능 희소 임베딩 검색 데이터 구조 라이브러리"
+    aliases: []
+    context: "학습된 희소 표현(learned sparse embeddings)에 대한 빠른 검색을 지원"
+  - term: "DRO"
+    definition: "Distributionally Robust Optimization - 분포 변화에 강건한 최적화 기법"
+    aliases: []
+    context: "검색/임베딩 모델 학습에서 언급된 최적화 접근법"
+metadata:
+  created_at: '2026-02-13T07:31:12'
+  synced_by: sync-channel-history

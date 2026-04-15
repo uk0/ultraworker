@@ -1,0 +1,77 @@
+channel:
+  id: C06R0LPHHLJ
+  name: project-gov-subsidy
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 87
+  total_threads: 48
+  active_users: 9
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 4분기에는 도메인특화 LLM 사업계획서(대우건설·경희대 컨소시엄 포함)를 10월 13일 최종 접수하는 것이 가장 큰 과제였으며, NIA 초거대AI 과제의 2차 현장점검 대응 및 최종보고 준비가 집중적으로 이루어졌다. OpenDataXAI 챌린지(소상공인진흥공단)가 11월 신규 접수 완료되어 Storm 플랫폼 기반 서비스 개발이 시작되었다. 엔업 최종보고가 12월 성과발표로 마무리되었으며, 2026년 창업지원사업 통합공고 및 2026 초격차 스타트업 프로젝트(DIPS) 공모가 연말 공유되었다.
+topics:
+  - name: "도메인특화 LLM 사업계획서"
+    mention_count: 20
+    description: "대우건설·경희대 컨소시엄 포함 최종 제출(10/13) - 여러 차례 취합본 버전 작업"
+  - name: "NIA 초거대AI 현장점검 및 최종보고"
+    mention_count: 18
+    description: "2차 현장점검(11/12), 투이 폭탄 대응, 최종보고서 작성"
+  - name: "OpenDataXAI 챌린지"
+    mention_count: 12
+    description: "소상공인시장진흥공단 주관 경진대회 접수 완료, Storm 기반 서비스 개발"
+  - name: "엔업 최종보고"
+    mention_count: 8
+    description: "엔비디아 글로벌 기업 협업 프로그램 최종보고서 작성 및 성과발표"
+  - name: "2026년 정부지원사업 공고"
+    mention_count: 6
+    description: "2026년 창업지원사업 통합공고 및 초격차 스타트업 DIPS 공모 안내"
+key_discussions:
+  - thread_ts: '1760278380.000000'
+    date: '2025-10-13'
+    reply_count: 0
+    text_preview: "도메인특화 LLM 사업계획서 접수 완료 - 모두 수고 많으셨습니다"
+  - thread_ts: '1761851400.000000'
+    date: '2025-10-30'
+    reply_count: 47
+    text_preview: "초거대AI 2차 현장점검 일정 안내 - 11월 12일 오후 2시"
+  - thread_ts: '1762141700.000000'
+    date: '2025-11-03'
+    reply_count: 82
+    text_preview: "추가 컨소 참여 제안 검토 - 행정 부담 등 고려"
+  - thread_ts: '1762483500.000000'
+    date: '2025-11-05'
+    reply_count: 33
+    text_preview: "OpenDataXAI 챌린지 사전설명회 참여"
+  - thread_ts: '1766357640.000000'
+    date: '2025-12-11'
+    reply_count: 31
+    text_preview: "OpenDataXAI 챌린지 킥오프 - Storm 플랫폼 기반 서비스 개발 계획"
+  - thread_ts: '1766558580.000000'
+    date: '2025-12-23'
+    reply_count: 31
+    text_preview: "OpenDataXAI 경진대회 클라우드 인스턴스 사용법 설명회 및 향후 일정"
+terminology:
+  - term: "도메인특화 LLM"
+    definition: "특화 파운데이션 모델 프로젝트 - 금융·안전 도메인 특화 LLM 개발"
+    aliases: ["특화 파운데이션 모델 프로젝트", "AI 특화"]
+    context: "10월 13일 최종 접수, 대우건설·경희대·디노티시아·노타·bhsn·젠젠에이아이·큐팁 컨소시엄"
+  - term: "OpenDataXAI 챌린지"
+    definition: "소상공인시장진흥공단 주관 오픈데이터 활용 AI 경진대회"
+    aliases: ["OpenData X AI 챌린지", "OpenData X AI 경진대회"]
+    context: "11월 20일 접수 완료, Storm 플랫폼 기반 서비스 개발, 2월 쇼케이스 예정"
+  - term: "DIPS"
+    definition: "2026년 초격차 스타트업 프로젝트 - 창업기업 대상 정부 지원 사업"
+    aliases: ["초격차 스타트업 프로젝트"]
+    context: "2025.12.29~2026.01.23 접수"
+  - term: "2차 현장점검"
+    definition: "NIA 초거대AI 과제 2차 현장점검 - 11월 12일 진행, 투이 주관"
+    aliases: []
+    context: "각 수행기관별 발표 및 데이터 현황 보고"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

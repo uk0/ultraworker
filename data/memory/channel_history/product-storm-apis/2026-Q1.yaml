@@ -1,0 +1,62 @@
+channel:
+  id: C07RCDTGW9E
+  name: product-storm-apis
+  type: public
+period:
+  quarter: 2026-Q1
+  start_date: '2026-01-01'
+  end_date: '2026-03-31'
+  last_synced: '2026-02-13T16:30:24'
+statistics:
+  total_messages: 9
+  total_threads: 9
+  active_users: 5
+  avg_messages_per_day: 0.2
+key_discussions:
+- thread_ts: '1767770577.336169'
+  date: '2026-01-07'
+  reply_count: 59
+  text_preview: <@U09M73LM65R> 혹시 txt파일도 받아줄수있나요? txt파일은 바이패스하도록
+- thread_ts: '1767598204.684439'
+  date: '2026-01-05'
+  reply_count: 36
+  text_preview: (라이브) 엑셀 파일에서 엔트리(도형)이 1000개 넘는 경우 파싱 실패 &gt;&gt;
+- thread_ts: '1769672759.805339'
+  date: '2026-01-29'
+  reply_count: 22
+  text_preview: '<@U06EG12UUMV> parse-router 도 꺽죠. 캐리어 원샷으로 되서 이거도 될거 같음. 전환 계획 세워주세요.
+
+    • 파라미터 지원 안되는거 있던가요? 없다면 이론상 당'
+- thread_ts: '1768283746.698039'
+  date: '2026-01-13'
+  reply_count: 22
+  text_preview: '[혜윰ICT 문의] API Key 별로 사용량을 제한할 수 있나요?'
+- thread_ts: '1770266261.798619'
+  date: '2026-02-05'
+  reply_count: 17
+  text_preview: eml 확장자 파싱구현 고민들 타래>>
+- thread_ts: '1768987846.586049'
+  date: '2026-01-21'
+  reply_count: 16
+  text_preview: stormAPIs 웹페이지 관련) 크레딧 페이지에서 `월 사용 기록에` 페이지네이션 기능이 빠져있는 것 같아요. storm
+    페이지네이션 기능 QA중에 발견하여 확인차 글 남깁니다.
+- thread_ts: '1767767781.597779'
+  date: '2026-01-07'
+  reply_count: 14
+  text_preview: <@U09M73LM65R> 혹시 parser도 에러 알림 채널 있나용?
+- thread_ts: '1769671551.742789'
+  date: '2026-01-29'
+  reply_count: 7
+  text_preview: '이앤에이 작업 진행하면서 rag-ready한 형태로 파싱하는 것 외에
+
+    마크다운 형태로도 결과가 나오는 엔드포인트를 추가하려는데
+
+
+    이거 saas환경에 parse api로도 공개할까요'
+- thread_ts: '1769352055.609809'
+  date: '2026-01-25'
+  reply_count: 7
+  text_preview: <@U07RASZTPFA> 요청으로 parse-router 에 carrier service-key 추가 하겠습니다. <@U09M73LM65R>
+metadata:
+  created_at: '2026-02-13T16:30:24'
+  synced_by: sync_fast.py

@@ -1,0 +1,46 @@
+channel:
+  id: C06AR8W6H8E
+  name: eng-github
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2089
+  total_threads: 879
+  active_users: 5
+  avg_messages_per_day: 23.5
+summary: |
+  2025년 3분기 eng-github 채널은 참여 인원이 5명으로 크게 줄었으나 개발 활동은 높은 수준을 유지하였다.
+  총 2089개 메시지, 879개 스레드가 발생하여 전 분기와 유사한 활동량을 보였다.
+  일 평균 23.5개 메시지를 기록하였으며, 5명의 소수 핵심 개발자가 집중적으로 활동하였다.
+  879개 스레드는 전체 기간 중 최다 스레드 수로, 인당 평균 175개 이상의 스레드에 관여한 셈이다.
+  소수 정예 팀 체제로 전환되면서 각 개발자의 코드 리뷰 참여 비중이 크게 증가하였다.
+  개발 효율성과 코드 품질 관리가 강화된 시기로 보인다.
+topics:
+  - name: "소수 정예 PR 리뷰"
+    message_count: 1600
+    description: "5명의 핵심 개발자에 의한 집중적인 PR 리뷰 활동 (879개 스레드)"
+  - name: "코드 품질 관리"
+    message_count: 350
+    description: "높은 스레드/인원 비율 - 심도 있는 코드 리뷰 문화"
+  - name: "커밋/이슈 알림"
+    message_count: 139
+    description: "리포지토리 커밋 및 이슈 관련 자동 알림"
+key_discussions:
+  - date: '2025-07-01'
+    summary: "3분기 시작 - 소수 핵심 개발자 중심 체제로 전환"
+    participants: ["GitHub Bot"]
+  - date: '2025-09-15'
+    summary: "분기 내 879개 스레드 달성 - 역대 최다 스레드 기록"
+    participants: ["GitHub Bot"]
+terminology:
+  - term: "소수 정예 체제"
+    definition: "적은 인원으로 높은 생산성을 유지하는 개발 운영 방식"
+    aliases: []
+    context: "2025-Q3에 5명이 879개 스레드를 관리하며 높은 코드 리뷰 밀도를 기록"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

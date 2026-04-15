@@ -1,0 +1,23 @@
+channel:
+  id: C05UZB4MSSE
+  name: eng-ko-sllm
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q1은 eng-ko-sllm 채널에 신규 멤버만 참여한 비활성 분기. 양호진(Hojin Yang)과 김수원이 채널에 새로 참여했으나, 실질적인 기술 논의는 없었음. sLLM 관련 연구 활동이 다른 채널이나 프로젝트로 이동한 것으로 보임.
+topics:
+  - 채널 멤버 추가
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

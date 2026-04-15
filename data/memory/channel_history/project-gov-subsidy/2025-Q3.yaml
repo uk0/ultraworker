@@ -1,0 +1,73 @@
+channel:
+  id: C06R0LPHHLJ
+  name: project-gov-subsidy
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 137
+  total_threads: 87
+  active_users: 12
+  avg_messages_per_day: 2.4
+summary: |
+  2025년 3분기는 정부지원사업 채널 역대 가장 활발한 분기로, NIA 초거대AI 데이터 구축과제(투이컨설팅 컨소시엄) 착수보고 및 본격 수행이 시작되었다. WBL(AI 스타트업 LLM 챌린지) 서류를 팀 총력으로 7월 21일 제출하였으며, AI 챔피언 대회도 접수 완료하였다. 투이컨설팅과의 데이터 스키마 협의 및 분쟁이 이어졌고, 도메인특화 LLM 사업계획서 작성을 위한 컨소시엄 구성(사이오닉·디노티시아·노타·bhsn·경희대·젠젠에이아이·큐팁·대우건설 등)이 9월 말 시작되었다.
+topics:
+  - name: "NIA 초거대AI 데이터 구축과제"
+    mention_count: 45
+    description: "투이컨설팅 컨소시엄 초거대AI 과제 착수보고, 주간보고, 현장점검 준비, 투이 데이터 분쟁"
+  - name: "WBL(AI 스타트업 LLM 챌린지)"
+    mention_count: 18
+    description: "diffusion LLM 주제로 7월 21일 서류 제출 완료"
+  - name: "도메인특화 LLM 사업계획서"
+    mention_count: 15
+    description: "특화 파운데이션 모델 프로젝트 컨소시엄 구성 및 사업계획서 착수"
+  - name: "AI 챔피언 대회"
+    mention_count: 8
+    description: "2025 인공지능 챔피언 대회 접수 완료(7/23)"
+  - name: "엔업 중간보고"
+    mention_count: 7
+    description: "엔비디아 글로벌 기업 협업 프로그램 중간보고서 제출"
+key_discussions:
+  - thread_ts: '1752557700.000000'
+    date: '2025-07-15'
+    reply_count: 168
+    text_preview: "WBL 서류 긴급 준비 - diffusion LLM 주제, 7/21 데드라인"
+  - thread_ts: '1753838400.000000'
+    date: '2025-07-30'
+    reply_count: 25
+    text_preview: "NIA 초거대AI 과제 착수보고 일정 및 주간보고서 관련 논의"
+  - thread_ts: '1754276407.000000'
+    date: '2025-08-04'
+    reply_count: 139
+    text_preview: "AI 스타트업 LLM 챌린지(WBL) 신규 접수 안내"
+  - thread_ts: '1755379860.000000'
+    date: '2025-08-21'
+    reply_count: 95
+    text_preview: "투이컨설팅 스키마 확정 관련 데이터 분쟁 시작"
+  - thread_ts: '1758780900.000000'
+    date: '2025-09-25'
+    reply_count: 130
+    text_preview: "도메인특화 LLM 사업계획서 작성 시작 - 컨소시엄 구성 확정"
+terminology:
+  - term: "초거대AI"
+    definition: "NIA 주관 초거대AI 확산 생태계 조성 사업 - 투이컨설팅 컨소시엄 참여"
+    aliases: ["NIA 초거대AI", "초거대AI 데이터 구축"]
+    context: "상품·증권·보험 데이터 구축 담당(NH투자증권, 미래에셋생명 데이터)"
+  - term: "WBL"
+    definition: "AI 스타트업 LLM 챌린지 - GPU 및 데이터 지원 과제, diffusion LLM 주제 신청"
+    aliases: ["AI 스타트업 LLM 챌린지"]
+    context: "7월 21일 서류 제출 완료"
+  - term: "투이컨설팅"
+    definition: "NIA 초거대AI 과제 주관기관 - 사이오닉AI는 상품 데이터 파트 담당"
+    aliases: ["투이"]
+    context: "데이터 스키마 협의 및 분쟁 상대방, 주간보고 관리"
+  - term: "도메인특화 LLM"
+    definition: "특화 파운데이션 모델 프로젝트 - 금융·안전 도메인 특화 LLM 개발"
+    aliases: ["특화 파운데이션 모델 프로젝트"]
+    context: "사이오닉·디노티시아·노타·bhsn·경희대·젠젠에이아이·큐팁·대우건설 컨소시엄"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

@@ -1,0 +1,44 @@
+channel:
+  id: C08J57KKCLD
+  name: random-welcomee-25년상반기
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 16
+  total_threads: 9
+  active_users: 10
+  avg_messages_per_day: 2.7
+summary: |
+  2025-Q2 random-welcomee-25년상반기 채널은 2025년 3월~4월 신규 입사자들의 친목 채널로 운영되었다. 신규 입사자들이 식사 메뉴 조사, 업무 스타일 테스트(Big5 검사, 일하는 스타일 테스트), STORM 제품 소개 등을 통해 서로 알아가는 활동이 이루어졌다.
+  채널명이 "random-welcomee-25년0304월"에서 "random-welcomee-25년상반기"로 변경되었으며, 입사 동기들 간의 자유로운 잡담과 소소한 친목 도모가 주를 이루었다.
+topics:
+  - name: "신규 입사자 밍글링"
+    mention_count: 8
+    description: "3~4월 신규 입사자들의 자기소개, 잡담, 친목 활동"
+  - name: "업무 스타일 테스트"
+    mention_count: 3
+    description: "일하는 스타일 폼 조사 및 Big5 검사 참여, 사이오닉 구성원 결과와 비교"
+  - name: "STORM 제품 소개"
+    mention_count: 2
+    description: "신규 입사자 대상 STORM 플랫폼 간략 소개"
+key_discussions:
+  - thread_ts: '1743914969.000000'
+    date: '2025-04-09'
+    reply_count: 25
+    text_preview: "업무 스타일 및 Big5 검사 링크 공유, 사이오닉 구성원 결과와 비교"
+  - thread_ts: '1743290090.000000'
+    date: '2025-03-26'
+    reply_count: 49
+    text_preview: "채널 설명 내 입사 동기 아닌 분들도 많다는 유쾌한 지적과 잡담"
+  - thread_ts: '1743150000.000000'
+    date: '2025-04-04'
+    reply_count: 43
+    text_preview: "신규 입사자 선호 메뉴 조사"
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

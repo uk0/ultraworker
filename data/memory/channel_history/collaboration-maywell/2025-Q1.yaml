@@ -1,0 +1,44 @@
+channel:
+  id: C06L40SQFJ6
+  name: collaboration-maywell
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 67
+  total_threads: 11
+  active_users: 9
+  avg_messages_per_day: 3.5
+summary: |
+  Maywell 고등학교 졸업(모범상 수상) 및 KAIST 입학 준비. LogicKor-V(VLM 버전) 제작 논의. LogicJa(일본어 벤치마크) 퍼블리시 계획 공유(song 주도). DeepSeek R1 대중화 화제. Gemini 2.0 Flash Thinking 성능 화제(O1 pro 7분 문제를 11.6초에 해결). 사이오닉 방문 및 미국 특허 출원 준비, GCP 네트워크 비용 이슈(Cloud SQL $0.19/GB) 등 인프라 경험 공유. 구버(goover.ai) AI 검색 서비스 평가.
+topics:
+  - Maywell 고등학교 졸업 및 모범상 수상
+  - LogicKor-V (VLM 버전) 제작 논의
+  - LogicJa 일본어 벤치마크 퍼블리시 계획
+  - DeepSeek R1 대중 반응
+  - Gemini 2.0 Flash Thinking 성능 평가
+  - 미국 특허 출원 준비
+  - GCP Cloud SQL 네트워크 비용 이슈
+  - instructkr 유튜브 첫 영상
+key_discussions:
+  - title: "LogicJa 일본어 벤치마크 퍼블리시 계획"
+    summary: "LogicKor 문제 삭제/추가, 평가 방식 변경, 일본어 번역을 통한 확장. 페이퍼 공저자로 maywell, 다솔님 포함 계획"
+  - title: "Maywell 졸업 및 모범상 수상"
+    summary: "2월 7일 고등학교 졸업식에서 모범상 수상. 사이오닉 팀원들이 축하 및 졸업식 참석"
+  - title: "GCP 비용 이슈와 OCI 전환 고려"
+    summary: "GCP Cloud SQL 네트워크 비용이 SQL 컴퓨팅 비용의 5-10배. OCI 전환 고려"
+terminology:
+  - term: "LogicKor-V"
+    definition: "LogicKor의 VLM(Vision Language Model) 버전. 한국어 TextVQA 평가 목적"
+  - term: "LogicJa"
+    definition: "LogicKor의 일본어 확장 버전. 주관식 다분야 벤치마크"
+  - term: "instructkr"
+    definition: "maywell 관련 한국어 AI 교육/연구 커뮤니티. 유튜브 채널도 운영"
+  - term: "구버 (goover.ai)"
+    definition: "AI 기반 뉴스/정보 브리핑 서비스. 레퍼런스 표시 기능이 특징"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

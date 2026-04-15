@@ -1,0 +1,65 @@
+channel:
+  id: C06ETGRBN5P
+  name: product-storm-parse
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 76
+  total_threads: 67
+  active_users: 13
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 1분기 product-storm-parse 채널은 13명이 참여하여 76개의 메시지와 67개의 스레드가 발생하였다. 스톰파스 라이브 인프라 안정화, OOM 문제 해결 방안(파서 수 증설, 캐리어로 이관), 파서 동시처리 성능 한계 논의, 파이썬 스톰파스에서 캐리어 스톰파스로의 이관 결정, Gemini API 5XX/429 에러 대응, 스톰파스 demo 페이지와 stargate 파싱 결과 불일치 이슈가 주요 내용이었다. 파이썬 스톰파스의 구조적 한계(메모리 이슈)를 인식하고 캐리어 군으로 이관하는 방향이 결정되었다.
+topics:
+  - name: "스톰파스 인프라 안정화"
+    mention_count: 20
+    description: "OOM 방지, 파서 수 증설(30개→70개), 메모리 이슈 해결 방안 논의"
+  - name: "파이썬→캐리어 이관"
+    mention_count: 15
+    description: "파이썬 스톰파스의 메모리 이슈로 캐리어 기반 스톰파스로 전환 결정"
+  - name: "파서 동시처리 성능"
+    mention_count: 10
+    description: "parsr의 동시처리 미지원으로 인한 성능 병목 문제 및 개선 방향 논의"
+  - name: "Gemini API 에러"
+    mention_count: 8
+    description: "1월 10일~Gemini 5XX/429 에러 빈발 이슈 대응 - 재시도 로직 추가 검토"
+  - name: "파싱 결과 불일치"
+    mention_count: 5
+    description: "storm parse demo와 stargate storm parse의 파싱 결과 차이 이슈"
+key_discussions:
+  - thread_ts: '1736304540.000000'
+    date: '2025-01-08'
+    reply_count: 59
+    text_preview: "스톰파스 라이브 배포 관련 논의 - 라이브 오픈 가능 여부 검토"
+  - thread_ts: '1736392740.000000'
+    date: '2025-01-09'
+    reply_count: 41
+    text_preview: "스톰파스 라이브 인프라 - 파서 30개/70개 기준 처리량 테스트"
+  - thread_ts: '1736397060.000000'
+    date: '2025-01-09'
+    reply_count: 16
+    text_preview: "스톰파스 현황과 문제점들 정리 - 파이썬 스톰파스 OOM 이슈, 캐리어 이관 계획 상세 설명"
+  - thread_ts: '1736733480.000000'
+    date: '2025-01-13'
+    reply_count: 69
+    text_preview: "파서 이대로 괜찮은가? 미팅 - parsr 동시처리 성능 한계 및 개선 방향 논의"
+terminology:
+  - term: "parsr"
+    definition: "PDF를 페이지 단위로 마크다운 변환하는 외부 파서 라이브러리"
+    aliases: ["파서"]
+    context: "동시처리 성능이 낮아 병목이 발생, 개선 또는 교체 필요성 논의"
+  - term: "파이썬 스톰파스"
+    definition: "파이썬으로 구현된 초기 버전 스톰파스 - 메모리 이슈로 캐리어로 이관됨"
+    aliases: []
+    context: "1분기에 캐리어 군 스톰파스로 교체 결정"
+  - term: "캐리어 스톰파스"
+    definition: "캐리어 오케스트레이션 시스템에 통합된 스톰파스 - Redis 외부 저장소 사용으로 메모리 효율적"
+    aliases: ["carrier storm parse"]
+    context: "파이썬 스톰파스 대체 버전으로 1분기에 전환 결정"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

@@ -1,0 +1,52 @@
+channel:
+  id: C0620SP7YJW
+  name: random-운동
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 44
+  total_threads: 23
+  active_users: 13
+  avg_messages_per_day: 1.5
+summary: |
+  2024년 2분기에는 채널 활동이 한동안 침체되었다가('운동 채널이 많이 죽었네요' 반성 메시지)
+  6월부터 다시 활기를 되찾았다. 채널 이름이 sig-운동에서 random-운동으로 변경되었다.
+  hhhssw(한성수)가 다이어트를 본격 시작하여 88.2kg에서 85.3kg으로 감량 중이라고 선언했으며,
+  16:8 간헐적 단식, 저탄고지 식단, F45 체험, 따릉이 출퇴근 등 적극적으로 운동했다.
+  김덕현과 조하담이 요가 원데이 클래스를 다녀오고, 김혜원은 수영에서 돌핀킥을 배웠다.
+  Noah는 수영 페이스를 50m 29~31초로 기록하며 꾸준히 수영을 이어갔고,
+  Sigrid Jin은 뉴욕 Chelsea Pier에서 3km 러닝을 공유했다. 송명하의 러닝 기록도 이어졌다.
+topics:
+  - 다이어트 (간헐적 단식, 저탄고지, 체중 감량 도전)
+  - 수영 (돌핀킥, 페이스 기록, 수영장 정보)
+  - 요가 (원데이 클래스, 주 2회 요가)
+  - 러닝/자전거 (따릉이 출퇴근, 한강 러닝)
+  - F45/헬스 (F45 유산소 체험, 오운완 인증)
+  - 채널 활성화 (CPR 시도, 반성 메시지)
+key_discussions:
+  - thread_ts: '1717563789.543159'
+    date: '2024-06-05'
+    title: '요가 원데이 클래스 후기'
+    summary: '김덕현과 조하담이 요가 원데이 클래스 참석. 17개 답글로 요가에 대한 관심 확대.'
+  - thread_ts: '1718702808.063189'
+    date: '2024-06-18'
+    title: '프리다이빙 레벨 질문'
+    summary: '김덕현이 프리다이빙 레벨 관련 질문. 19개 답글로 프다 경험자들의 정보 교류.'
+  - thread_ts: '1712397500.511889'
+    date: '2024-04-06'
+    title: 'Noah 수영 1km 도전'
+    summary: 'Noah가 수영 1km 도전을 선언하고 입수 전 다짐을 남김. 8개 답글로 응원.'
+terminology:
+  - term: 'CPR'
+    definition: '채널 활성화를 위한 메시지. 죽은 채널을 되살리려는 시도.'
+  - term: 'F45'
+    definition: '기능적 피트니스 운동 프로그램. 45분간 고강도 인터벌 트레이닝.'
+  - term: '따릉이'
+    definition: '서울시 공공자전거 대여 서비스.'
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

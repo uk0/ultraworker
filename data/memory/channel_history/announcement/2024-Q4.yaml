@@ -1,0 +1,127 @@
+channel:
+  id: C057M6QCGNP
+  name: announcement
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 81
+  total_threads: 54
+  active_users: 11
+  avg_messages_per_day: 1.8
+summary: |
+  2024년 4분기 announcement 채널은 워케이션, 연말 회고, 팀 빌딩 등 조직 활동이 집중된 시기였다.
+
+  11월 24일~29일 양양 데스커 워케이션 센터에서 전사 워케이션이 진행되었으며, 업무 50% + 휴식 50%
+  또는 스핀오프 프로젝트를 목표로 했다. 122개 답글이 달릴 정도로 높은 관심과 참여가 있었다.
+  11월 21일에는 조직문화 세미나(팀 빌딩 세션)가 외부 회의실(워크토크 역삼점)에서 진행되었고,
+  기질/일하는스타일 측정 설문이 사전에 실시되었다.
+
+  10월 29일 워크샵이 카페&와인바 십앤칠에서 열렸으며, 사이오닉 방향성과 마일스톤 공유가 이루어졌다.
+  파이콘 한국(10/26-27, 수원컨벤션센터)에 후원사 부스를 운영했고 다수 멤버가 참여했다.
+  12월 24일 전사 회고 미팅이 식사를 곁들여 진행되었고, 피그마 보드를 활용한 좋았던 것/배운 것/놀랐던 것/
+  부족했던 것 회고가 이루어졌다.
+
+  신규 멤버로 홍성아(재무/운영), 이재준(DevOps), 임예원(AI/ML 인턴), 송현우(FE 실습생),
+  이강욱(DevOps), 최다솔(AI/ML 인턴) 등 6명이 합류하여 팀이 크게 확장되었다.
+
+  연말 코드 프리즈(12/25~1/1) 겨울 방학이 공지되었고, 인프런 강의 지원 교육 제도가 홍보되었다.
+  영문 홍보영상 short 버전이 완성되었으며, IBK 프로젝트 진행을 위한 외부 인력(대훈님) 상주가 시작되었다.
+  블로그 글 작성 독려, 오더시트 세션, 캐리어 프로젝트 설명 등 기술/제품 관련 공유도 활발했다.
+  슬랙 프로필 정책 정리, 1password/linear 계정 한글명 통일 등 운영 표준화도 이루어졌다.
+topics:
+  - name: "양양 워케이션"
+    mention_count: 8
+    context: "11/24~29 양양 데스커 워케이션 센터, 업무 50% + 휴식/스핀오프 50%"
+  - name: "신규 멤버 합류"
+    mention_count: 6
+    context: "홍성아, 이재준, 임예원, 송현우, 이강욱, 최다솔 등 6명 합류"
+  - name: "연말 회고"
+    mention_count: 4
+    context: "12/24 전사 회고 - 피그마 보드 활용 (좋았던 것/배운 것/놀랐던 것/부족했던 것)"
+  - name: "워크샵"
+    mention_count: 5
+    context: "10/29 카페&와인바 십앤칠에서 방향성/마일스톤 공유"
+  - name: "파이콘 한국"
+    mention_count: 3
+    context: "10/26-27 수원컨벤션센터, 후원사 부스 운영"
+  - name: "팀 빌딩 세미나"
+    mention_count: 4
+    context: "11/21 워크토크 역삼점, 기질/일하는스타일 측정 기반 세션"
+  - name: "코드 프리즈/겨울 방학"
+    mention_count: 2
+    context: "12/25~1/1 전사 휴식, 스팟성 대응(마크스폰, IBK)만 유지"
+  - name: "IBK 프로젝트"
+    mention_count: 3
+    context: "기업은행 프로젝트, 외부 인력(대훈님) 상주, 제안서 제출"
+  - name: "블로그 활성화"
+    mention_count: 3
+    context: "기술 블로그 글 작성 독려, 핸즈온/트러블슈팅 경험 공유 요청"
+key_discussions:
+  - thread_ts: "1731286801.215819"
+    date: "2024-11-11"
+    reply_count: 122
+    text_preview: "양양 워케이션 공지 - 11/24~29 데스커 워케이션 센터, 2인실 8개 + 4인실 1개"
+  - thread_ts: "1730879102.086629"
+    date: "2024-11-06"
+    reply_count: 23
+    text_preview: "양양 워케이션 간이 수요조사 - 50% 할인 프로모션, 스핀오프/휴식 목적"
+  - thread_ts: "1728030577.867379"
+    date: "2024-10-04"
+    reply_count: 18
+    text_preview: "워크샵 일정 조율 - 사이오닉 방향성 및 마일스톤 논의"
+  - thread_ts: "1734612299.415809"
+    date: "2024-12-19"
+    reply_count: 13
+    text_preview: "24년 마무리 전사 회고 예고 - 피그마 보드로 한해 되돌아보기"
+  - thread_ts: "1732154172.371259"
+    date: "2024-11-21"
+    reply_count: 19
+    text_preview: "조직문화 세미나 안내 - 워크토크 역삼점에서 1차/2차 진행"
+  - thread_ts: "1733283183.349149"
+    date: "2024-12-04"
+    reply_count: 19
+    text_preview: "블로그 글 작성 독려 - 핸즈온, 트러블슈팅 경험 공유 요청"
+  - thread_ts: "1730105869.399079"
+    date: "2024-10-28"
+    reply_count: 13
+    text_preview: "워크샵 후 저녁 회식 참여 설문조사"
+  - thread_ts: "1730019432.371779"
+    date: "2024-10-27"
+    reply_count: 7
+    text_preview: "파이콘 행사 마무리 보고 및 사진 공유"
+terminology:
+  - term: "데스커 워케이션 센터"
+    definition: "양양에 위치한 워케이션 전용 시설"
+    aliases: ["양양 워케이션"]
+    context: "2024-11-24~29 전사 워케이션 장소, 해변 앞 위치"
+  - term: "코드 프리즈"
+    definition: "연말 코드 변경 금지 기간 및 전사 휴식 기간"
+    aliases: ["겨울 방학"]
+    context: "12/25~1/1, 스팟성 대응만 유지"
+  - term: "캐리어"
+    definition: "사이오닉AI의 서비스/프로젝트 중 하나"
+    aliases: ["Carrier"]
+    context: "혜원님/수원님이 테크세미나에서 설명, 백엔드 코틀린 기반"
+  - term: "오더시트"
+    definition: "사이오닉AI 제품의 주문/설정 관리 시트"
+    aliases: ["Order Sheet"]
+    context: "혜원님이 오더시트 정복하기 세션(5시) 진행, 포스트맨 활용"
+  - term: "FinanceRAG Challenge"
+    definition: "금융 도메인 RAG 관련 외부 챌린지/대회"
+    aliases: []
+    context: "임예원님이 테크세미나에서 참여 결과 발표"
+  - term: "IBK"
+    definition: "기업은행 (Industrial Bank of Korea) 프로젝트"
+    aliases: ["기업은행"]
+    context: "B2B 프로젝트, 외부 인력 상주, 제안서 제출"
+  - term: "파이콘"
+    definition: "한국 파이썬 커뮤니티 컨퍼런스"
+    aliases: ["PyCon Korea"]
+    context: "10/26-27 수원컨벤션센터, 사이오닉 후원사 부스 운영"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

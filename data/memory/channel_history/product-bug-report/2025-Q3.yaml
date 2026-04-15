@@ -1,0 +1,92 @@
+channel:
+  id: C08PNQ7QNR2
+  name: product-bug-report
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 66
+  total_threads: 65
+  active_users: 13
+  avg_messages_per_day: 1.9
+summary: |
+  2025년 3분기 product-bug-report 채널은 STORM 플랫폼의 워크플로우, RAG 노드, 에이전트 관리 등 다양한 기능 이슈가 지속적으로 제보되었다. 주요 이슈로는 오더시트 저장 불가, if/else 노드 오동작, 피드백 삭제 불가, 워크플로우 삭제 시 흰화면 전환, 리랭커 top-k 설정 오동작 등이 있었다. 특히 PoC 고객사 계정에서 에이전트 JSON 저장 불가 이슈가 장기간 이슈로 다루어졌으며, 13명이 활발하게 버그를 제보하고 논의하였다.
+topics:
+  - name: "워크플로우 저장/편집 버그"
+    mention_count: 12
+    description: "오더시트 저장 불가, 워크플로우 노드 삭제 시 흰화면, JSON 에디터 저장 실패 등"
+  - name: "if/else 노드 오동작"
+    mention_count: 5
+    description: "조건 분기 노드가 의도한대로 동작하지 않는 문제"
+  - name: "피드백 기능"
+    mention_count: 3
+    description: "GOOD 피드백 삭제 불가, 피드백 폴더 수정 불가"
+  - name: "RAG/검색"
+    mention_count: 4
+    description: "리랭커 top-k 설정 오동작, 출처 청크 표시 이슈"
+  - name: "에이전트 관리"
+    mention_count: 5
+    description: "에이전트 JSON 복사 후 저장 불가, 에이전트 생성 이슈"
+  - name: "UI 버그"
+    mention_count: 6
+    description: "노드 정렬 오류, 스크롤 이상, 언어 표시 오류, 로그인 세션 만료"
+  - name: "로그 조회"
+    mention_count: 3
+    description: "로그 조회 불가, 로그 검색 시 에러"
+  - name: "스트림/응답 오류"
+    mention_count: 3
+    description: "스트림 에러, 시스템 에러 메시지 응답 시 로그 빈값"
+key_discussions:
+  - thread_ts: '1753930320.000000'
+    date: '2025-07-23'
+    reply_count: 66
+    text_preview: "캐리어 오더시트 테스트 중 if else 노드가 의도한대로 동작하지 않는 현상"
+  - thread_ts: '1753929540.000000'
+    date: '2025-07-23'
+    reply_count: 23
+    text_preview: "워크플로우 오더시트 수정 불가 이슈 (스웹 ibk.25.30w 버전)"
+  - thread_ts: '1757663431.000000'
+    date: '2025-09-12'
+    reply_count: 49
+    text_preview: "[대응필요] PoC 고객사 스톰 계정 에이전트 JSON 저장 불가"
+  - thread_ts: '1754646720.000000'
+    date: '2025-08-08'
+    reply_count: 18
+    text_preview: "PDF 압축 후 업로드 시 학습 실패 이슈"
+  - thread_ts: '1754719200.000000'
+    date: '2025-08-14'
+    reply_count: 54
+    text_preview: "아크에서는 안되는데 크롬에서는 되는 브라우저 호환성 이슈"
+  - thread_ts: '1754719080.000000'
+    date: '2025-08-14'
+    reply_count: 44
+    text_preview: "DEV 테스트 페이지에서 쿼리 입력 후 답변이 안오는 이슈"
+  - thread_ts: '1754548740.000000'
+    date: '2025-08-12'
+    reply_count: 37
+    text_preview: "스트림 에러 발생 - 에셈알/캐리어/스게 중 담당자 확인 필요"
+  - thread_ts: '1754719800.000000'
+    date: '2025-08-20'
+    reply_count: 33
+    text_preview: "무한 로딩 이슈 원인 분석"
+terminology:
+  - term: "STORM"
+    definition: "Sionic AI의 AI 에이전트 플랫폼 서비스"
+  - term: "오더시트"
+    definition: "STORM 워크플로우의 JSON 기반 설정 편집 도구"
+  - term: "리랭커"
+    definition: "RAG 검색 결과를 재정렬하는 모듈, top-k 파라미터로 반환 개수 제어"
+  - term: "스웹"
+    definition: "Storm Web의 약어, STORM 플랫폼 웹 서비스"
+  - term: "캐리어"
+    definition: "특정 고객사 또는 서비스 연동 에이전트"
+  - term: "에셈알"
+    definition: "내부 서비스명 약어 (SMR 등)"
+  - term: "PoC"
+    definition: "Proof of Concept, 고객사 파일럿 테스트"
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: sync-channel-history

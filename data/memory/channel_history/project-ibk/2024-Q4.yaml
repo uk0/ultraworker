@@ -1,0 +1,80 @@
+channel:
+  id: C07LHF65Z6E
+  name: project-ibk
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 122
+  total_threads: 87
+  active_users: 12
+  avg_messages_per_day: 2.4
+summary: |
+  IBK PoC 종료 보고 및 본사업 제안/계약 단계. PoC 결과를 기반으로 제안서 작성(기술/성능 장표),
+  제안발표회(10/31) 진행. 경쟁사(얼거나이즈, 코난) 참전 첩보에 따른 차별화 전략 수립.
+  기술협상 3차까지 진행되며 4대 과제 중 상품추천 과제 제거, 책시(책임자시험) RAG 구성 협의.
+  가격협상은 비교적 유리하게 진행. Document AI API 구축(parsr+sglang+vllm 패키징),
+  IBK 인프라 구성(SAN/GDS 스토리지, A-A/A-S 이중화), 온프렘 환경변수 등록 작업 수행.
+  투입인력 계획 수립(12/1 투입 예정), 외주 SI 파트너(대훈님) 화면개발 협의, WBS 1차 드래프트
+  작성. 양자화 모델(72B 4bit, 7B 튜닝) 테스트, 민감정보 감지/필터링 기능 요건 확인.
+  유지보수 항목 작성 및 프로젝트룸 자리 확보를 위한 프로필 정보 수집 등 계약 준비 진행.
+topics:
+  - PoC 종료 보고 및 제안발표
+  - 기술협상 및 가격협상
+  - Document AI 구축 (parsr/sglang/vllm)
+  - IBK 인프라 구성 (SAN/GDS/K8s)
+  - 투입인력 계획 및 WBS
+  - 양자화 모델 테스트 (72B/7B)
+  - 민감정보 감지 기능 요건
+  - 본사업 계약 준비
+key_discussions:
+  - thread_ts: '1729587638.010309'
+    date: '2024-10-22'
+    title: 'IBK PoC 시연 성능 검증 논의'
+    summary: 'PoC 결과보고 및 시연 대비 성능 검증 필요요소 구두 논의'
+  - thread_ts: '1729717250.162739'
+    date: '2024-10-23'
+    title: 'Document AI API 구축 설명서'
+    summary: 'IBK용 Document AI 구성 모듈(parsr, sglang, vllm) 패키징 및 연동 문서'
+  - thread_ts: '1730687858.677329'
+    date: '2024-11-04'
+    title: 'IBK Document AI 트러블슈팅'
+    summary: '108개 리플라이. 문서 파싱 시스템 구축 중 발생한 다양한 이슈 대응'
+  - thread_ts: '1730769973.457149'
+    date: '2024-11-05'
+    title: 'IBK 성능 개선 진행상황'
+    summary: '54개 리플라이. 짧은 질의 검색 실패, 항목조 프롬프트 개선 등 성능 이슈 대응'
+  - thread_ts: '1731475680.743479'
+    date: '2024-11-13'
+    title: '3차 기술협상 내용 공유'
+    summary: '24개 리플라이. 4대 과제 조정, 책시 RAG, 사업기간 등 기술협상 결과'
+  - thread_ts: '1733277671.837439'
+    date: '2024-12-04'
+    title: '업스테이지 기술협상 진행상황'
+    summary: '4번 과제 제거, 책시 RAG 구성, 가격협상 시작 등 협상 경과 공유'
+  - thread_ts: '1734005762.282139'
+    date: '2024-12-12'
+    title: 'IBK 인프라 구성 싱크'
+    summary: 'K8s 마스터, WAS, DB, 벡터DB 서버별 스토리지 할당 및 이중화 구성 논의'
+terminology:
+  - term: '책시'
+    definition: '책임자시험. IBK 내부 직원 역량 평가 시험. RAG 기반 문제풀이 과제로 포함됨'
+    aliases: ['책임자시험']
+  - term: 'Document AI'
+    definition: 'parsr + sglang + vllm 기반 문서 파싱/변환 시스템. IBK 온프렘용으로 구축'
+    aliases: ['DocAI']
+  - term: 'parsr'
+    definition: '사이오닉 AI의 문서 파서 컴포넌트. PDF/문서를 마크다운으로 변환'
+    aliases: ['악사파서', '스톰파스의 파서']
+  - term: 'RFP'
+    definition: 'Request for Proposal. IBK에서 발행한 생성형 AI 플랫폼 구축 제안요청서'
+    aliases: []
+  - term: 'WBS'
+    definition: 'Work Breakdown Structure. 사업수행계획서 기준 세부 일정 및 항목 분류'
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

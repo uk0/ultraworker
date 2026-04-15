@@ -1,0 +1,49 @@
+channel:
+  id: C06S36PSHRT
+  name: research-japanese-rag
+  type: public
+period:
+  quarter: 2024-Q2
+  start_date: '2024-04-01'
+  end_date: '2024-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 19
+  total_threads: 2
+  active_users: 6
+  avg_messages_per_day: 4.8
+summary: |
+  2024-Q2에 일본어 RAG 연구 채널이 개설되어 일본어 문서 기반 RAG 시스템 구축 실험이 활발히 진행되었다. 라쿠텐 모델과 AutoRAG, Pylon을 활용한 일본어 RAG 파이프라인을 테스트하였으며, NTT 문서 및 지자체 안내 문서에 대한 다국어 질의응답 실험이 수행되었다. Claude Haiku, DBRX, c4ai-command-r-plus-GPTQ 등 다양한 LLM의 일본어 응답 품질을 비교 분석하였다.
+topics:
+  - name: "일본어 RAG 파이프라인 구축"
+    mention_count: 5
+    description: "라쿠텐 모델 + Pylon/AutoRAG를 활용한 일본어 문서 RAG 시스템 구축 및 하이퍼파라미터 탐색"
+  - name: "LLM 일본어 응답 품질 비교"
+    mention_count: 6
+    description: "Rakuten, Claude Haiku, DBRX, c4ai-command-r-plus-GPTQ 등의 일본어 질의응답 성능 비교"
+  - name: "일본어 문서 처리"
+    mention_count: 4
+    description: "NTT, 후나바시시 체육시설 안내 등 일본어 문서를 RAG 소스로 활용한 실험"
+key_discussions:
+  - thread_ts: '1711951320.000000'
+    date: '2024-04-01'
+    reply_count: 6
+    text_preview: "NTT 문서로 라쿠텐 모델 테스트 - 아무말 대잔치 결과. Claude Haiku로 NTT 개요 질의 정상 응답 확인"
+  - thread_ts: '1712055543.000000'
+    date: '2024-04-09'
+    reply_count: 3
+    text_preview: "c4ai-command-r-plus-GPTQ로 生涯スポーツ課 질의 - DBRX 대비 영어 혼입 적고 속도 빠름"
+terminology:
+  - term: "일본어 RAG"
+    definition: "일본어 문서를 소스로 활용하는 Retrieval-Augmented Generation 시스템. 일본어 임베딩 및 LLM 선택이 핵심 과제"
+  - term: "Pylon"
+    definition: "Sionic AI의 RAG 엔진. 일본어 RAG 실험의 첫 번째 테스트 대상으로 사용됨"
+  - term: "AutoRAG"
+    definition: "적절한 RAG 하이퍼파라미터를 자동으로 탐색하는 프레임워크"
+  - term: "라쿠텐 모델"
+    definition: "일본어 특화 LLM. 초기 일본어 RAG 실험에서 기반 모델로 채택"
+  - term: "DBRX"
+    definition: "Databricks에서 공개한 132B MoE 모델. 일본어 응답 품질이 우수하여 실험에 활용됨"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

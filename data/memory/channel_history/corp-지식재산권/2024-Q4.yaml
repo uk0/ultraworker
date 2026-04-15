@@ -1,0 +1,32 @@
+channel:
+  id: C06T556UPU5
+  name: corp-지식재산권
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 1
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2024-Q4 corp-지식재산권 채널에서는 연구원이 진행 중인 연구 아이디어에 대해 논문 제출 이전 특허 출원을 먼저 진행할 것을 제안하고 신고서 작성 요청이 이루어졌다.
+  활동량은 매우 적었으며, 특허 발명자 및 지분 확정을 위한 내부 협의가 진행되었다.
+topics:
+  - name: "특허 출원 선행 제안"
+    mention_count: 2
+    description: "논문 제출 이전 연구 아이디어에 대한 특허 선출원 권장 및 신고서 작성 요청"
+key_discussions:
+  - thread_ts: '1729732800.000000'
+    date: '2024-10-24'
+    reply_count: 12
+    text_preview: "연구 아이디어에 대해 논문 제출 이전 특허 출원 선행 제안, 발명자 및 지분 결정 요청"
+terminology:
+  - term: "특허 신고서"
+    definition: "발명자, 발명 내용, 지분 등을 기재하여 변리사에게 제출하는 특허 출원 기초 문서"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

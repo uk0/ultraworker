@@ -1,0 +1,39 @@
+channel:
+  id: C083Z9S9Y9M
+  name: sionicai-relate
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 6
+  total_threads: 2
+  active_users: 2
+  avg_messages_per_day: 1.2
+summary: |
+  2025년 3분기 sionicai-relate 채널은 활동이 매우 저조하였다. 7월 초에 Relate 도큐먼트 기능의 총방문횟수와 고유방문횟수 차이에 대한 문의가 있었고, Relate/Spread 팀에서 Engage 재활용 온보딩을 제안하였다. 7월 중순에는 Spread 2.0 출시(실행 속도 개선, 단계별 오픈/클릭 수 확인, 이메일 템플릿 보관 기능, 커스텀 필드 일괄 수정) 안내가 공유되었다. 8월에는 Campaign 과금 기준 변경(구독자 중심, 예약 시점 발송 대상 확정, 반송률 높으면 자동 중단) 업데이트 공지가 수신되었다.
+topics:
+  - name: "Spread 2.0 출시"
+    mention_count: 2
+    description: "Spread 2.0 주요 기능: 실행 속도 개선, 인게이지 단계별 오픈/클릭 수 확인, 이메일 템플릿 보관, 커스텀 필드 일괄 수정"
+  - name: "Campaign 과금 기준 변경"
+    mention_count: 1
+    description: "구독자 중심 과금, 예약 시점 발송 대상 확정, 반송률 높을 시 자동 중단, 위험 연락처 발송 차단"
+  - name: "Engage 재활용 온보딩 제안"
+    mention_count: 1
+    description: "Relate 팀에서 우명님 대상 Engage 재활용 온보딩 미팅 제안"
+key_discussions:
+  - thread_ts: '1751871360.000000'
+    date: '2025-07-07'
+    reply_count: 2
+    text_preview: "도큐먼트 총방문횟수와 고유방문횟수의 차이 문의"
+terminology:
+  - term: "Spread 2.0"
+    definition: "Relate의 이메일 마케팅 플랫폼 대규모 업그레이드 버전. 속도 개선, 통계 강화"
+    aliases: []
+    context: "2025년 7월 중순 출시"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

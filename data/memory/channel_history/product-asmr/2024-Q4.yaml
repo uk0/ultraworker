@@ -1,0 +1,57 @@
+channel:
+  id: C07BJQDM8BV
+  name: product-asmr
+  type: public
+period:
+  quarter: 2024-Q4
+  start_date: '2024-10-01'
+  end_date: '2024-12-31'
+  last_synced: '2026-02-13T07:27:41'
+statistics:
+  total_messages: 30
+  total_threads: 12
+  active_users: 13
+  avg_messages_per_day: 2.5
+summary: |
+  2024년 Q4는 OpenLLM에서 ASMR(Assimilator)로의 리브랜딩이 이루어진 분기이다.
+  채널명이 product-openllm에서 product-assimilator를 거쳐 product-asmr로 변경되었다.
+  주요 활동으로는 OpenLLM 인수인계 QnA 준비, GCP 계정 쿼타 파악, Azure API 키 관련 모델 사용 제어 논의,
+  Azure fallback 테스트, o1 API 공개 및 테스트, claude-3-5-sonnet-20241022 모델 추가 지원,
+  grok 2 API 지원 요청, gemini-pro-1.5 출력 토큰 이슈 등이 있었다.
+  새로운 담당자(하담)로의 인수인계가 진행되었으며, 스타크래프트 네이밍 컨벤션에 맞춘 이름 변경 논의도 있었다.
+topics:
+  - OpenLLM에서 ASMR로 리브랜딩 (채널명 변경)
+  - 인수인계 및 새 담당자(하담) 전환
+  - Azure API 키 관리 및 fallback 테스트
+  - OpenAI o1 API 공개 및 테스트
+  - claude-3-5-sonnet-20241022 모델 추가
+  - GCP 계정 쿼타 파악
+  - grok 2 API 지원 요청
+key_discussions:
+  - date: '2024-11-22'
+    summary: OpenLLM 인수인계 QnA 노션 페이지 준비 (1 reply)
+  - date: '2024-12-16'
+    summary: OpenLLM 네이밍 스타크래프트 컨벤션 맞추기 논의 (12 replies)
+  - date: '2024-12-16'
+    summary: Azure API 키 관련 모델 사용 제어 및 fallback 테스트 (9 replies)
+  - date: '2024-12-18'
+    summary: OpenAI o1 API 공개 및 ASMR 지원 논의 (34 replies)
+  - date: '2024-12-19'
+    summary: 채널명을 product-assimilator에서 product-asmr로 최종 변경
+  - date: '2024-12-20'
+    summary: grok 2 API 지원 요청 (4 replies)
+terminology:
+  - term: ASMR
+    definition: Assimilator의 약칭. Sionic AI의 외부 LLM 연동 통합 서비스 (구 OpenLLM)
+    aliases:
+      - Assimilator
+      - 어시밀레이터
+      - 어시밀
+      - 에셈알
+  - term: fallback
+    definition: 특정 LLM 벤더 요청 실패 시 다른 벤더로 자동 전환하는 기능
+  - term: o1
+    definition: OpenAI의 추론(reasoning) 모델 시리즈
+metadata:
+  created_at: '2026-02-13T07:27:41'
+  synced_by: claude-opus-4-6

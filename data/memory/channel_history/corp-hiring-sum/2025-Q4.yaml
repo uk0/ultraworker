@@ -1,0 +1,23 @@
+channel:
+  id: C09G19P0RD3
+  name: corp-hiring-sum
+  type: public
+period:
+  quarter: 2025-Q4
+  start_date: '2025-10-01'
+  end_date: '2025-12-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 1
+  total_threads: 0
+  active_users: 1
+  avg_messages_per_day: 1.0
+summary: |
+  2025년 4분기 corp-hiring-sum 채널은 사실상 비활성 상태로, 신규 멤버 입장 메시지 1건만 기록되었다.
+  채용 요약 정보를 공유하는 채널로서 해당 분기에는 별다른 채용 관련 논의나 공지가 없었다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

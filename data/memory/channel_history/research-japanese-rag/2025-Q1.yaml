@@ -1,0 +1,22 @@
+channel:
+  id: C06S36PSHRT
+  name: research-japanese-rag
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2
+  total_threads: 0
+  active_users: 2
+  avg_messages_per_day: 1.0
+summary: |
+  2025-Q1 기간 동안 research-japanese-rag 채널에 2명의 신규 멤버가 합류하였다. 실질적인 연구 활동 메시지는 기록되지 않았으며, 채널은 멤버 보강 후 대기 상태로 유지되었다. 이전 분기의 일본어 RAG 연구 기반 위에 새로운 팀원이 합류하여 향후 연구 확장 가능성이 열렸다.
+topics: []
+key_discussions: []
+terminology: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

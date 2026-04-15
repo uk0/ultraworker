@@ -1,0 +1,45 @@
+channel:
+  id: C0922U1U1RB
+  name: mmlm-onboarding
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 12
+  total_threads: 1
+  active_users: 6
+  avg_messages_per_day: 6.0
+summary: |
+  2025년 2분기 mmlm-onboarding 채널은 SNU M.IN.D Lab의 석현님(외부 협력자)이 채널에 합류하면서 개설되었다.
+  서울대 연구팀과의 협업을 위한 온보딩 채널로, 멀티모달 LLM 파인튜닝 관련 업무 미팅 일정 조율과 참고 문서 공유 준비가 이루어졌다.
+  팀의 주요 관심 태스크 파악 및 조기 미팅 세션 수립이 주요 내용이었다.
+topics:
+  - name: "외부 협력자 온보딩"
+    mention_count: 6
+    description: "SNU M.IN.D Lab 석현님 온보딩, 참고 문서 정리 및 공유 준비"
+  - name: "미팅 일정 조율"
+    mention_count: 4
+    description: "온보딩 미팅 세션 일정 조율(6월 25일 또는 26일)"
+  - name: "Multimodal LLM 튜닝"
+    mention_count: 2
+    description: "회사의 주요 MMLM 튜닝 태스크 파악 요청"
+key_discussions:
+  - thread_ts: '1750647600.000000'
+    date: '2025-06-23'
+    reply_count: 8
+    text_preview: "도균님, 석현님 온보딩 미팅 세션 조율 - 수요일(25일) 또는 목요일(26일) 오후 가능 여부 확인"
+terminology:
+  - term: "MMLM"
+    definition: "Multi-Modal Language Model, 텍스트와 이미지 등 여러 모달리티를 처리하는 언어 모델"
+    aliases: ["Multimodal LLM", "멀티모달 LLM"]
+    context: "SNU M.IN.D Lab과의 협업 주제, 회사 주요 튜닝 태스크"
+  - term: "SNU M.IN.D Lab"
+    definition: "서울대학교 Machine Intelligence and NLP & Data Lab, 외부 협력 연구팀"
+    aliases: []
+    context: "멀티모달 LLM 파인튜닝 협업을 위해 채널에 합류"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

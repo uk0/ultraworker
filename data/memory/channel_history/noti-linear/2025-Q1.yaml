@@ -1,0 +1,48 @@
+channel:
+  id: C07NQH3U7SN
+  name: noti-linear
+  type: public
+period:
+  quarter: 2025-Q1
+  start_date: '2025-01-01'
+  end_date: '2025-03-31'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 2543
+  total_threads: 17
+  active_users: 6
+  avg_messages_per_day: 33.9
+summary: |
+  Linear 이슈 트래커 알림 채널. 2543개 알림으로 Q4에 이어 활발한 개발이 지속되었다.
+  주요 활동자는 최병현, 김혜원, 백은주, 신희수, 양호진, 박진형, 조하담, 권혜선(Jada), 김수원 등이다.
+  주요 프로젝트로는 Supply 파일시스템 고도화(Parquet 적용 리서치 및 부하 테스트), IBK 생성형 AI 프로젝트,
+  Pylon apidog 정리, 청크 하이라이팅/사이즈 개선, 문서 뷰어 오프라인 환경 예외처리, SG 민감정보 전수조사 인터페이스 등이 있었다.
+  Linear 프로젝트 업데이트 기능도 활용되어 supply 파일시스템 고도화와 IBK 프로젝트의 진행 상황이 상세히 공유되었다.
+topics:
+  - Supply 파일시스템 고도화 (Parquet)
+  - IBK 생성형 AI 프로젝트
+  - Pylon API 문서화
+  - 문서 뷰어 오프라인 환경 지원
+  - 청크 검색/하이라이팅 개선
+  - SG(Stargate) 문서/피드백 분리
+key_discussions:
+  - title: Supply 파일시스템 고도화 - Parquet 도입 (프로젝트 업데이트)
+    summary: 최병현이 Supply 파일시스템 고도화 프로젝트를 리드. TensorFlow 작업이 병목임을 프로파일러로 확인하고 방법론 2를 폐기, 대안 접근 방식을 검토함. Parquet 부하 테스트(STM-2719)를 진행.
+  - title: IBK 생성형 AI 프로젝트 종료
+    summary: 실증용 프로젝트로 더 이상 필요하지 않아 삭제됨. Supply 파일시스템 고도화 일정(준비 3/28~3/31, 개발 4/1~4/4, QA 4/7~4/11) 공유.
+  - title: Contextual Retrieval (STM-2652)
+    summary: 박진형이 Contextual Retrieval 관련 이슈에 코멘트. 검색 품질 향상을 위한 기술 연구.
+terminology:
+  - term: Supply
+    definition: Storm 플랫폼의 문서 인메모리 적재 및 검색 엔진
+  - term: Parquet
+    definition: 컬럼 기반 데이터 저장 포맷. Supply 파일시스템 고도화에 도입 검토
+  - term: Pylon
+    definition: Storm 플랫폼의 API/파이프라인 서비스
+  - term: SG (Stargate)
+    definition: Sionic AI의 검색 게이트웨이 서비스
+  - term: IBK
+    definition: IBK기업은행 생성형 AI 프로젝트 (고객사 프로젝트)
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

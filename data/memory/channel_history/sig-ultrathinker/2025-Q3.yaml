@@ -1,0 +1,84 @@
+channel:
+  id: C096C3V2RFS
+  name: sig-ultrathinker
+  type: public
+period:
+  quarter: 2025-Q3
+  start_date: '2025-07-01'
+  end_date: '2025-09-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 104
+  total_threads: 41
+  active_users: 18
+  avg_messages_per_day: 2.4
+summary: |
+  2025-Q3 sig-ultrathinker 채널은 7월 신규 개설된 AI 코딩 에이전트 특별 관심 그룹(SIG)으로, Claude Code, Codex, Gemini CLI 등의 성능 비교와 실험 결과를 활발히 공유하였다. Kent Beck의 CLAUDE.md 작성 방식, vibe-kanban, Serena MCP, Conductor, Claude Code Router 등 새로운 AI 개발 도구들이 탐색되었다.
+  8월 말에는 Claude Code 성능 이슈가 부각되어 Codex 전환 논의가 촉발되었고, 9월에는 Codex의 MCP 지원 추가, codex --resume 기능, Codex의 18분 이상 자율 실행 등 Codex 우위 논쟁이 활발히 이루어졌다.
+topics:
+  - name: "Claude Code vs Codex 논쟁"
+    mention_count: 20
+    description: "Claude Code 성능 이슈, 전사 Codex 전환 주장, 모델별 장단점 비교"
+  - name: "새로운 AI 도구 탐색"
+    mention_count: 15
+    description: "vibe-kanban, Serena MCP, Conductor, Claude Code Router, OpenHands 등 탐색"
+  - name: "CLAUDE.md 작성 방법"
+    mention_count: 5
+    description: "Kent Beck 방식의 CLAUDE.md, 코드베이스 분석을 통한 CLAUDE.md 생성"
+  - name: "Gemini CLI"
+    mention_count: 8
+    description: "Gemini CLI가 Claude Code를 대체할 미래라는 주장, Gemini를 20배 똑똑하게 사용하는 방법"
+  - name: "AI 모델 평가"
+    mention_count: 6
+    description: "Claude Code statusline 설정, subagent 비용, Gemini 3 Ultra 출시 기대"
+key_discussions:
+  - thread_ts: '1753430000.000000'
+    date: '2025-07-25'
+    reply_count: 28
+    text_preview: "claude code 망할듯, gemini cli가 미래다 주장 및 토론"
+  - thread_ts: '1753610000.000000'
+    date: '2025-07-27'
+    reply_count: 10
+    text_preview: "Claude Code 시스템 프롬프트 공유 및 분석"
+  - thread_ts: '1754500000.000000'
+    date: '2025-08-01'
+    reply_count: 8
+    text_preview: "Serena MCP 테스트 결과 공유"
+  - thread_ts: '1755660000.000000'
+    date: '2025-08-17'
+    reply_count: 16
+    text_preview: "ViberRank 앱 공유 및 진형님 상위권 예측"
+  - thread_ts: '1756650000.000000'
+    date: '2025-08-30'
+    reply_count: 13
+    text_preview: "Claude Code 한계 도달, Codex 전환 논의 시작"
+  - thread_ts: '1757600000.000000'
+    date: '2025-09-18'
+    reply_count: 31
+    text_preview: "전사 Claude Code 폐지 및 Codex 전환 강제 주장과 반론"
+  - thread_ts: '1757700000.000000'
+    date: '2025-09-18'
+    reply_count: 18
+    text_preview: "Claude Code 성능 이슈 원인 분석 및 OpenAI와의 동일 문제 가능성 토론"
+  - thread_ts: '1757950000.000000'
+    date: '2025-09-24'
+    reply_count: 6
+    text_preview: "codex 0.40.0 신규 auto compact 기능 안내"
+terminology:
+  - term: "CLAUDE.md"
+    definition: "Claude Code에 프로젝트 컨텍스트를 제공하는 설정 파일, Kent Beck 방식 참조"
+  - term: "vibe-kanban"
+    definition: "AI 기반 칸반 도구 (BloopAI 오픈소스)"
+  - term: "Serena MCP"
+    definition: "AI 코딩 에이전트용 MCP 서버"
+  - term: "Conductor"
+    definition: "AI 개발 도구 (conductor.build)"
+  - term: "ViberRank"
+    definition: "AI 바이브 코딩 랭킹 앱"
+  - term: "subagent"
+    definition: "Claude Code의 서브에이전트 기능, 비용 절감 효과 관련 논의"
+  - term: "ultrathink"
+    definition: "당근마켓 사내세미나에 소개될 정도로 퍼진 Sionic AI의 깊은 사고 프롬프트 기법"
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history

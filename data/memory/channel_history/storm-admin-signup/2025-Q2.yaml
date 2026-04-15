@@ -1,0 +1,48 @@
+channel:
+  id: C07T22TQZT9
+  name: storm-admin-signup
+  type: public
+period:
+  quarter: 2025-Q2
+  start_date: '2025-04-01'
+  end_date: '2025-06-30'
+  last_synced: '2026-02-24T13:18:24'
+statistics:
+  total_messages: 151
+  total_threads: 50
+  active_users: 6
+  avg_messages_per_day: 3.3
+summary: |
+  2025-Q2에는 가입 알림 시스템이 업그레이드되어 기존 "Admin 가입 완료 알림"에 더해 "Admin 가입 요청 완료, 이메일 발송" 단계가 추가되었다. 가입 프로세스가 요청-이메일발송-완료의 2단계로 분리되면서 알림 메시지가 대폭 증가하였다(151건). Noah와 최병현이 유입 증가를 지속 관찰하며, 특히 5월 22-23일에 집중적인 가입 러시가 발생하였다. 최병현이 templar-archives 대시보드에서 근 2일간 chat_completion 사용량 증가를 보고하였다. 메일 주소에 + 기호를 사용한 가입 사례가 처음 관찰되었다.
+topics:
+  - 가입 알림 2단계 프로세스 도입
+  - 가입 유입 급증 관찰
+  - 고객 사용량 모니터링
+  - 이메일 기반 가입 검증
+key_discussions:
+  - thread_ts: '1747990062.959119'
+    date: '2025-05-23'
+    title: 대량 가입 발생 및 사용량 분석
+    summary: 5월 22-23일 집중적인 가입 러시에 대해 최병현이 chat_completion 사용량 증가를 보고 (15개 답글)
+  - thread_ts: '1748409897.769949'
+    date: '2025-05-28'
+    title: 신규 고객 가입 후 대응
+    summary: 가입 후 고객 상태 확인 및 대응 논의 (16개 답글)
+  - thread_ts: '1748443249.091139'
+    date: '2025-05-28'
+    title: 연속 가입 건 모니터링
+    summary: 동일 시간대 다수 가입 발생에 대한 관찰 및 대응 (10개 답글)
+  - thread_ts: '1748327595.871919'
+    date: '2025-05-27'
+    title: 신규 가입 고객 분석
+    summary: 신규 가입 고객 정보 분석 및 유효 고객 여부 판단 (10개 답글)
+terminology:
+  - term: Admin 가입 요청 완료
+    definition: 가입 신청 후 이메일 발송까지 완료된 첫 번째 단계 알림
+    aliases: []
+  - term: chat_completion
+    definition: Storm 서비스에서 고객이 실제로 챗봇 응답을 사용한 횟수
+    aliases: []
+metadata:
+  created_at: '2026-02-24T13:18:24'
+  synced_by: sync-channel-history
